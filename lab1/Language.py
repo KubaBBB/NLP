@@ -2,6 +2,8 @@ import re
 import operator
 import collections
 
+# datasets      learning / (learning+testing)
+quot = 0.8;
 
 class Language:
     def __init__(self, path, ngram_len, encoding='default'):
@@ -11,16 +13,20 @@ class Language:
         self.ngram_dict = dict();
         self.encoding = encoding;
         self.norm = None;
+        self.testing_set = None;
+        self.training_set = None;
+        self.recall = 0;
+        self.precision = 0;
 
     def open_and_remove_bad_chars(self, fname):
         fullpath = self.path + fname;
         if self.encoding is not 'default':
             with open(fullpath, 'r', encoding='utf-8') as f:
-                if f != '/n':
+                if f != '\n':
                     content = f.readlines();
         else:
             with open(fullpath) as f:
-                if f != '/n':
+                if f != '\n':
                     content = f.readlines();
         content = [x for x in content if x != '\n']
 
@@ -29,6 +35,12 @@ class Language:
             rows.append(re.sub('[\\\n--,.\t]', '', row).lower())
 
         self.context += rows;
+
+    def share_dataset(self):
+        len = self.context.__len__()*quot;
+        self.training_set = self.context[0:int(len)];
+        self.testing_set = self.context[int(len):self.context.__len__()];
+        return;
 
     def get_dict(self):
         return self.ngram_dict;

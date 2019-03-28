@@ -26,3 +26,6 @@ class Finnish(Language):
 
     def calculate_cos_norm(self, input_ngram):
         return self.core.calculate_cos_norm(input_ngram);
+
+    def share_dataset(self):
+        return self.core.share_dataset();
