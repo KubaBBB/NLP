@@ -2,8 +2,6 @@ import re
 import operator
 import collections
 
-# datasets      learning / (learning+testing)
-quot = 0.8;
 
 class Language:
     def __init__(self, path, ngram_len, encoding='default'):
@@ -35,12 +33,6 @@ class Language:
             rows.append(re.sub('[\\\n--,.\t]', '', row).lower())
 
         self.context += rows;
-
-    def share_dataset(self):
-        len = self.context.__len__()*quot;
-        self.training_set = self.context[0:int(len)];
-        self.testing_set = self.context[int(len):self.context.__len__()];
-        return;
 
     def get_dict(self):
         return self.ngram_dict;

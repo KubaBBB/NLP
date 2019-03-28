@@ -8,14 +8,14 @@ from Italian import Italian
 from Polish import Polish
 from Spanish import Spanish
 
-n = 3;
+N = [2, 3, 4, 5];
 path_to_test_file = "./data/test/";
 test_files = ["engt.txt", "fin.txt", "ger.txt", "ita.txt", "pol.txt", "spa.txt"];
 
 lang_collection = ["English", "Finnish", "German", "Italian", "Polish", "Spanish"]
 
 num_of_right_lan = 12;
-num_of_invalid = 5;
+num_of_invalid = 6;
 
 def create_ngram(input, n):
     vector = input.replace(" ", '');
@@ -51,78 +51,64 @@ def load_testing_set(file):
     return test_set;
 
 if __name__ ==  '__main__':
-    start = time.time();
 
-    ### Initialize
-    eng = English(n);
-    fin = Finnish(n);
-    ger = German(n);
-    ita = Italian(n);
-    pol = Polish(n);
-    spa = Spanish(n);
+    for n in N:
+        start = time.time();
 
-    languages = [];
-    languages.append(eng);
-    languages.append(fin);
-    languages.append(ger);
-    languages.append(ita);
-    languages.append(pol);
-    languages.append(spa);
+        ### Initialize
+        eng = English(n);
+        fin = Finnish(n);
+        ger = German(n);
+        ita = Italian(n);
+        pol = Polish(n);
+        spa = Spanish(n);
 
-    ### INPUT TEXT
-    #input = input("What is your age? ")
-    # print("You entered " + str(input))
+        languages = [];
+        languages.append(eng);
+        languages.append(fin);
+        languages.append(ger);
+        languages.append(ita);
+        languages.append(pol);
+        languages.append(spa);
 
-    ### TEST TEXT
-    input = "Oh, che ti succede amico? Hai fatto tutto come dovrebbe essere? Fuori piove";
-    input_ngram = create_ngram(input,n);
-    collection = collections.Counter(input_ngram);
+        for lang in languages:
+            lang.calculate_n_grams();
+            lang.create_dictionary();
 
-    ### TEST SET
-    test_set = load_testing_set(test_files[0]);
+        true_positive = 0;
+        false_positive = 0;
+        true_negative = 0;
+        false_negative = 0;
 
+        for i in range(lang_collection.__len__()):
+            actual_lang = lang_collection[i];
+            test_set = load_testing_set(test_files[i]);
+            #print(f'testing language: {actual_lang}')
+            index = 0;
+            for row in test_set:
+                ngram = create_ngram(row, n);
+                for lang in languages:
+                    lang.calculate_cos_norm(ngram)
+                recognized_lang = get_lang_from_best_norm(languages);
+                #print(recognized_lang)
+                if index < num_of_right_lan:
+                    if recognized_lang == actual_lang:
+                        true_positive +=1;
+                    else:
+                        false_positive+=1;
+                elif index <= num_of_right_lan + num_of_invalid:
+                    if recognized_lang == actual_lang:
+                        false_negative +=1;
+                    else:
+                        true_negative +=1;
+                index+=1;
+            #print("")
 
-    for lang in languages:
-        lang.calculate_n_grams();
-        #lang.share_dataset()
-        lang.create_dictionary();
+        precision = true_positive / (true_positive+false_positive);
+        recall = true_positive/(true_positive+false_negative);
+        print(f'N: {n}')
+        print(f'Precision: {precision}')
+        print(f'Recall: {recall}')
 
-    true_positive = 0;
-    false_positive = 0;
-    true_negative = 0;
-    false_negative = 0;
-
-    for i in range(lang_collection.__len__()):
-        actual_lang = lang_collection[i];
-        test_set = load_testing_set(test_files[i]);
-        print(f'testing language: {actual_lang}')
-        index = 0;
-        for row in test_set:
-            ngram = create_ngram(row, n);
-            for lang in languages:
-                lang.calculate_cos_norm(ngram)
-            recognized_lang = get_lang_from_best_norm(languages);
-            print(recognized_lang)
-            if index < num_of_right_lan:
-                if recognized_lang == actual_lang:
-                    true_positive +=1;
-                else:
-                    false_positive+=1;
-            elif index <= num_of_right_lan + num_of_invalid:
-                if recognized_lang == actual_lang:
-                    false_negative +=1;
-                else:
-                    true_negative +=1;
-            index+=1;
-        print("")
-
-    precision = true_positive / (true_positive+false_positive);
-    recall = true_positive/(true_positive+false_negative);
-    print(f'Precision: {precision}')
-    print(f'Recall: {recall}')
-
-    ### 10 record for each languag: eng, fin, ger, ita, pol, spa
-
-    # recognized_lang = get_lang_from_best_norm(languages);
-    end = time.time()
-    print("I took me: " + str(end-start) + " seconds");
+        end = time.time()
+        print("I took me: " + str(end-start) + " seconds");
