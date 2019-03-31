@@ -1,4 +1,3 @@
-import collections
 import time
 import re
 from English import English
@@ -7,15 +6,16 @@ from German import German
 from Italian import Italian
 from Polish import Polish
 from Spanish import Spanish
+import random
 
-N = [2, 3, 4, 5];
+N = [2, 3, 4, 5, 6, 7];
 path_to_test_file = "./data/test/";
 test_files = ["engt.txt", "fin.txt", "ger.txt", "ita.txt", "pol.txt", "spa.txt"];
 
 lang_collection = ["English", "Finnish", "German", "Italian", "Polish", "Spanish"]
 
 num_of_right_lan = 12;
-num_of_invalid = 6;
+num_of_invalid = 7;
 
 def create_ngram(input, n):
     vector = input.replace(" ", '');
@@ -54,7 +54,6 @@ if __name__ ==  '__main__':
 
     for n in N:
         start = time.time();
-
         ### Initialize
         eng = English(n);
         fin = Finnish(n);
@@ -95,10 +94,10 @@ if __name__ ==  '__main__':
                     if recognized_lang == actual_lang:
                         true_positive +=1;
                     else:
-                        false_positive+=1;
+                        false_negative+=1;
                 elif index <= num_of_right_lan + num_of_invalid:
                     if recognized_lang == actual_lang:
-                        false_negative +=1;
+                        false_positive +=1;
                     else:
                         true_negative +=1;
                 index+=1;
@@ -106,9 +105,11 @@ if __name__ ==  '__main__':
 
         precision = true_positive / (true_positive+false_positive);
         recall = true_positive/(true_positive+false_negative);
+
         print(f'N: {n}')
         print(f'Precision: {precision}')
         print(f'Recall: {recall}')
 
         end = time.time()
         print("I took me: " + str(end-start) + " seconds");
+        print("");
