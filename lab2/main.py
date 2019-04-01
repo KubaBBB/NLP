@@ -3,11 +3,20 @@ from BookProcessor import BookProcessor
 import time
 import operator
 import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+from numpy  import array
+import numpy as np
 
 pathToDict = "./data/odm.txt"
 pathToBook = "./data/potop.txt"
 
 axisLen = 50;
+
+def mandelbrot_func(x, P, d, B):
+    return P/((x+d)**B)
+
+def zipf_func(x,k):
+    return k/x;
 
 def sort_dict_by_value(dict):
     return sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
@@ -29,40 +38,46 @@ if __name__ ==  '__main__':
     print(f'invalid words: {book.invalidWords}')
 
 
-    ### ZIPF
+    ### Ocurrance
 
     sorted_ranking = book.sorted_ranking()
     zipf = sorted_ranking[0:axisLen]
-
+    zipf_vec = []
     zipf_ranking = dict();
     for item in zipf:
         zipf_ranking[item[0]] = item[1];
+        zipf_vec.append(item[1])
 
     plt.figure(figsize=(15,10))
-    plt.plot(zipf_ranking.keys(), zipf_ranking.values(), 'bo-')
+    plt.plot(zipf_ranking.keys(), zipf_ranking.values(),  'bo-',markersize=3, label = 'In text')
     plt.xticks(rotation=90)
 
-    #plt.show()
+
+    ### Zipf
+    x = [_+1 for _ in range(axisLen)]
+    popt, pcov = curve_fit(zipf_func, x, zipf_vec)
+    y_zipf = [zipf_func(_, popt) for _ in x];
+    plt.plot(x, y_zipf, 'ro-', markersize=3, label='Zipf k/x')
+
+    ### Mandelbrot
+
+    mandt, mandcov  = curve_fit(mandelbrot_func, x, zipf_vec, p0=[0, 0, 0])
+    y_mandel = [mandelbrot_func(_, mandt[0], mandt[1], mandt[2]) for _ in x];
+    plt.plot(x, y_mandel, 'yo-', markersize=3, label='Mandelbrot')
+
+    mandel_array = array(y_mandel)
+    zipf_array = array(y_zipf)
+    real_array = array(zipf_vec)
+    mse_mandel = np.square(np.subtract(mandel_array, real_array)).mean()
+    mse_zipf = np.square(np.subtract(zipf_array, real_array)).mean()
+
+    print(f'MSE Mandelbrot: {mse_mandel}')
+    print(f'MSE Zipf: {mse_zipf}')
+
+    plt.legend()
+    plt.show()
     plt.savefig('Zipf1.png');
     plt.close()
-
-    sumOfWords = sum(zipf_ranking.values())
-    zipf2 = {k: 100* v / sumOfWords for total in (sum(zipf_ranking.values()),) for k, v in zipf_ranking.items()}
-
-    sorted_zipf2 = sorted(zipf2.items(), key=operator.itemgetter(1))
-    zipf2_ranking=dict()
-    for item in sorted_zipf2:
-        zipf2_ranking[item[0]] = item[1];
-
-    plt.figure(figsize=(15,10))
-    plt.plot(zipf2_ranking.keys(), zipf2_ranking.values(), 'mo-')
-    plt.xticks(rotation=90)
-    #plt.show()
-    plt.savefig('Zipf2.png')
-
-
-    ### MANDELBROT
-
 
     ### HAPAX * 50%
 
@@ -81,21 +96,20 @@ if __name__ ==  '__main__':
 
     digram_rank = dict()
     trigram_rank = dict()
-    for item in digram:
-        digram_rank[item[0]] = item[1];
-    for item in trigram:
-        trigram_rank[item[0]] = item[1];
+    for index in range(axisLen):
+        digram_rank[digram[index][0]] = digram[index][1];
+        trigram_rank[trigram[index][0]] = trigram[index][1];
 
-    # digram_list = []
-    # for key, value in digram_rank.iteritems():
-    #     temp = [key, value]
-    #     digram_list.append(temp)
-    #
-    # digram_statistic = digram_rank[0:axisLen]
     plt.figure(figsize=(15,10))
-    plt.plot(digram[0:axisLen].keys(), digram[0:axisLen].values(), 'bo-')
+    plt.plot(digram_rank.keys(), digram_rank.values(), 'bo-', markersize=3)
     plt.xticks(rotation=90)
     plt.show()
+
+    plt.figure(figsize=(15,10))
+    plt.plot(trigram_rank.keys(), trigram_rank.values(), 'bo-', markersize=3)
+    plt.xticks(rotation=90)
+    plt.show()
+
     end = time.time()
     print(f'It took me: {end-start}')
     a =5.0
