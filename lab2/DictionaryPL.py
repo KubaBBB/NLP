@@ -1,5 +1,3 @@
-import re
-
 class DictionaryPL:
     def __init__(self, path):
         self.pathToFile = path;
