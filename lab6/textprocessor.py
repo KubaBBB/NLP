@@ -17,7 +17,6 @@ class TextProcessor:
         self.pap = []
 
     def create_dictionary(self, path_to_file, form_file):
-        polish_lang_values = list(polish_lang_mapper.values())
         with open(f'{path_to_file}/{form_file}', 'r') as f:
             if f != '\n':
                 for row in f.readlines():

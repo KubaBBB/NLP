@@ -33,12 +33,12 @@ if __name__ == '__main__':
 
     ### Document-term matrix
 
+    stop_list = get_stop_list()
     ct_vectorizer = CountVectorizer(min_df=1, stop_words=stop_list)
     tdtf = TfidfVectorizer()
 
     dtm = ct_vectorizer.fit_transform(lineWords)
     feature_names = ct_vectorizer.get_feature_names()[:10]
-    print(feature_names)
 
     ### Singular value decomposition and LSA - could use arpack algorithm
     lsa = TruncatedSVD(100, algorithm='randomized')
