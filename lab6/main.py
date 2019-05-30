@@ -31,6 +31,10 @@ if __name__ == '__main__':
         if not read_line.isdigit():
             lineWords.append(textProcessor.preprocess(read_line))
 
+    textProcessor.create_frequency_dict(lineWords)
+    preprocessed = []
+    textProcessor.pre_process_vol_2(lineWords)
+
     ### Document-term matrix
 
     stop_list = get_stop_list()
