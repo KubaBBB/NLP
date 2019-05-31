@@ -66,12 +66,10 @@ class TextProcessor:
             for word in words:
                 try:
                     occur = self.frequency[word.lower()]
-                    if(occur > self.min_freq and occur < self.max_freq):
+                    if self.min_freq < occur < self.max_freq:
                         row_res.append(word)
                 except Exception:
-                    a =3
-                    #if len(row_res) > 0:
-                        #result.append(' '.join(word for word in row_res).strip(' '))
+                    a = 3
             if len(row_res) > 0:
                 result.append(' '.join(word for word in row_res).strip(' '))
         return result

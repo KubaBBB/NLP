@@ -12,7 +12,7 @@ def get_stop_list():
                 'com', 'eu', 'pl', 'telfax', 'office', 'burg', 'poland']
 
 fileName = "./data/pap.txt"
-note_idx = 155
+note_idx = 98
 
 
 #https://www.datascienceassn.org/sites/default/files/users/user1/lsa_presentation_final.pdf?fbclid=IwAR3ax6JNemqmWzfau24-UwePT7isOEDP5mAE3jbCQG92dITVVwV9ZS7CYiA
