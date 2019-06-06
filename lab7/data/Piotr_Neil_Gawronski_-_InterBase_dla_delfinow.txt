@@ -1,0 +1,2577 @@
+Piotr Neil Gawroński
+
+
+
+InterBase dla "delfinów"
+
+
+
+
+
+
+
+Helion 2001
+Wstęp
+Celem niniejszej książki jest przybliżenie użytkownikom Delphi serwera bazy danych InterBase i biblioteki IBX. Publikacja ta nie jest podręcznikiem SQL-a, lecz zawiera opis obiektów po stronie serwera i sposobu dostępu do nich z Delphi za pomocą biblioteki IBX.
+
+
+Rozdział 1. Typy danych
+W niniejszym rozdziale zostaną przedstawione typy danych, z jakich można korzystać podczas tworzenia bazy danych. Znajomość ich jest niezbędna w fazie projektowania i pisania oprogramowania. Omówiony także zostanie sposób korzystania z tych typów danych 
+w Delphi.
+W InterBase występują następujące typy danych:
+* znakowe - CHAR i VARCHAR,
+* zmiennoprzecinkowe - FLOAT i DOUBLE PRECISSION,
+* całkowite - INTEGER i SMALLINT,
+* stałoprzecinkowe - NUMERIC i DECIMAL,
+* dotyczące daty i czasu - DATE, TIME i TIMESTAMP,
+* binarne - BLOB.
+
+Wszystkie typy danych, z wyjątkiem BLOB, mogą tworzyć tablice (arrays) o wymiarach 
+od l do 16.
+
+Tabela 1.1 zawiera krótką charakterystykę ww. typów danych.
+
+Tabela 1.1. 
+Typy danych w InterBase
+Nazwa
+Rozmiar
+zakres dokładności
+Opis
+BLOB
+Zmienny 
+(w definicji wiersza 8 bajtów)
+Rozmiar segmentu typu BLOB
+ jest ograniczony do 64 kB
+Rozmiar pól tego typu może się zmieniać dynamicznie w zależności od aktualnych potrzeb. Idealnie nadaje się do przechowywania grafiki, dźwięku czy dokumentów (np. MS Office)
+CHAR(n)
+CHARACTER(n)
+n znaków
+n może przyjąć wartość z zakresu 
+od l do 32767, przy czym n pomnożone przez rozmiar znaku nie może przekroczyć 32767 (w niektórych zestawach rozmiar jest większy od 1)
+Odpowiednie do przechowywania
+tekstów o stałej długości
+
+DATE
+8 bajtów (64 bity)
+od l stycznia 100r.n.e. 
+do 29 lutego 32768 r.
+
+DECIMAL
+(precyzja, skala)
+
+2,4 lub 8 bajtów (l6, 32 lub 64 bity)
+
+Precyzja od l do 18; minimalna liczba cyfr do przechowania w polu Skala od O do 18; liczba cyfr do przechowania po przecinku. Wartość ta musi być mniejsza lub równa precyzji
+liczby stałoprzecinkowe DECIMAL(8.2) przechowuje liczby w formacie pppppp.ss
+
+DOUBLE PRECISION
+8 bajtów (64 bity1)
+Od 2,225x10-308  do 1,797x10308
+Liczba zmiennoprzecinkowa podwójnej precyzji - 15 cyfr
+FLOAT
+4 bajty (32 bity)
+Od 1,175x10-38  do 3,402x1038
+Liczba zmiennoprzecinkowa
+pojedynczej precyzji - 7 cyfr
+INTEGER
+4 bajty (32 bity)
+0d -2147483648 do 2147483647
+Liczby całkowite ze znakiem
+NCHAR
+[VARYING](n)
+NATIONAL CHAR [VARYING]
+NATIONAL CHARACTER [VARYING]
+n znaków
+n może przyjąć wartość z zakresu od l 
+do 327672, przy czym n pomnożone przez rozmiar znaku nie może przekroczyć 32767 (w niektórych zestawach rozmiar jest większy od 1)
+Teksty lub łańcuchy znaków o stałej (zmiennej dla VARYING) długości. Różnią się od CHAR i VARCHAR jedynie zestawem znaków 
+- ISO 8859-1
+NUMERIC
+(precyzja skala)
+2,4 lub 8 bajtów (16,32 lub 64 bity)
+Precyzja: 1 do 18; dokładnie liczba cyfr do przechowania w polu. Skala: 0 do 18; liczba cyfr do przechowania po przecinku. Wartość ta musi być mniejsza lub równa precyzji
+Liczby stałoprzecinkowe, NUMERIC(8,2) przechowuje liczby w formacie pppppp.ss
+SMALLINT
+2 bajty (16 bitów)
+od -32768 do 32767
+"Krótka" (short) liczba całkowita 
+ze znakiem
+TIME
+8 bajtów (64 bity)
+Czas od godziny 0:00:00.000 
+do 23:59:59.999
+
+TIMESTAMP
+8 bajtów (64 bity)
+1 stycznia 100r.n.e. do 29 lutego 32768r. wraz z godziną z dokładnością jak 
+ TIME
+Przechowuje zarówno datę, jak 
+i godzinę
+VARCHAR(n)
+CHAR VARYING
+CHARACTER VARYING
+n znaków
+n może przyjąć wartość z zakresu od 1 do 32765, przy czym n pomnożone przez rozmiar znaku nie może przekroczyć 32765 (w niektórych zestawach rozmiar jest większy od 1)
+Teksty lub łańcuchy znaków 
+o zmiennej długości
+
+
+Typy znakowe
+W InterBase programista ma do dyspozycji następujące typy znakowe:
+* typ znakowy o stałej długości, nazywany CHAR(n)3 lub CHARACTER(n),
+* typ znakowy o zmiennej długości, nazywany VARCHAR(n), CHAR VARYING(n) 
+lub CHARACTER VARYING(n),
+* typ o stałej długości wykorzystujący zestaw znaków ISO 8859-1 (CHARSET IS08859_1), o nazwie NCHAR(n), NATIONAL CHAR(n) lub NATIONAL CHARACTER(n),
+* typ będący połączeniem typów z dwóch poprzednich punktów, nazywany
+* NCHAR VARYING(n), NATIONAL CHARACTER VARYING(n) lub NATIONAL CHAR VARYING(n).
+
+Typ CHAR
+Ten typ danych, podobnie jak NCHAR, służy do przechowywania tekstów o stałej długości. Warto pamiętać o tym, że deklarując kolumnę CHAR(n), otrzymamy łańcuch znaków o długości dokładnie n. Jeśli do bazy zapisano krótszy tekst, w miejsce brakujących znaków zostaną wpisane spacje, które nie będą pakowane i przechowywane w tabeli. Pozwala to na pewną oszczędność miejsca na dysku.
+W trakcie tworzenia kolumny tekstowej można zdefiniować zestaw znaków i sposób porównywania, z jakiego można korzystać w przypadku tej kolumny. Podając zestaw znaków, należy zwrócić uwagę na to, aby nie przekroczyć rozmiaru pola 32 767 bajtów - w niektórych wypadkach jeden znak może zająć więcej niż jeden bajt4. Zagadnienie to zostanie omówione nieco dalej.
+Do utworzenia tabeli zawierającej kolumnę tekstową można użyć następującej konstrukcji:
+
+CREATE TABLE TEST (
+TEKST CHAR(8O) CHARACTER SET WIN1250 COLLATE	PXW_PLK
+)
+	
+Jak można się domyślić, do manipulacji takim polem w Delphi najodpowiedniejszy jest typ STRING. Aby pobrać dane z pola w celu dalszego ich przetwarzania, można użyć jednej 
+z konstrukcji5:
+
+IBTablel.FieldByName('TEKST').AsString := 'Ala';
+If Length(IBQuery1.FieldByName('TEKST'.AsString) then ...
+
+Typ VARCHAR
+
+Ten typ przechowuje tekst o zmiennej długości. W deklaracji VARCHAR(n) liczba n określa maksymalny rozmiar łańcucha znaków. Ale w przeciwieństwie do CHAR, w miejsce brakujących znaków nie są wpisywane spacje. Pomaga to zaoszczędzić miejsce na dysku. Ponieważ łańcuchy mają różną długość, na stronie bazy mieści się ich więcej, dzięki czemu dostęp do danych następuje przy mniejszej liczbie odczytów z dysku. Z drugiej jednak strony, aktualizacje mogą przebiegać wolniej niż w przypadku użycia typu znakowego o stałej długości.
+Tak samo jak ma to miejsce w przypadku typu CHAR, definiuje się zestaw znaków i sposób porównywania. Jeśli chodzi o VARCHAR, rozmiar pola nie może przekroczyć 32 765 bajtów.
+Aby dodać kolumnę tekstową o zmiennej długości do tabeli TEST, należy skorzystać 
+z konstrukcji:
+
+alter table test add ZMIENNY VRCHAR(120) 
+
+Typ VARCHAR obsługiwany jest w Delphi tak samo jak CHAR.
+
+Typ BLOB stosowany do danych tekstowych
+
+Na ogół typ BLOB służy do przechowywania danych binarnych, ale równie dobrze można się nim posłużyć do przechowywania tekstu. Jego zaletą - w porównaniu 
+do wymienionych wcześniej typów danych - jest brak ograniczenia rozmiaru do 32 kB tekstu. Można określić zestaw znaków, jaki będzie przechowywany, ale nie można określić sposobu porównywania dla kolumny BLOB. Definiując typ BLOB, można określić jego podtyp6 
+- w przypadku danych tekstowych należy podać, że jest to typ 1.
+W Delphi do przetwarzania tekstowego pola BLOB wykorzystuje się string. Pola obsługuje typ TMemoField - można je połączyć z TDBMemo lub TDBRichEdit. Należy pamiętać, że taka obsługa ma sens jedynie dla podtypu l.
+
+Zestawy znaków
+
+W przypadku typów znakowych można określić zestaw znaków, z jakiego będzie 
+korzystać dana kolumna. Zdefiniowanie takiego zestawu podczas deklaracji kolumny powoduje nadpisanie standartowego zestawu znaków, jaki został określony w trakcie tworzenia tabeli. Można także określić sposób porównywania, jaki ma być wykorzystany, jeśli jest on inny niż domyślny - niektóre zestawy znaków mogą mieć ich kilka. A kiedy najczęściej wykorzystujemy porównywanie? Oczywiście podczas sortowania. Chcąc dodać powyższe informacje do deklaracji kolumny, użyjemy następującej składni:
+
+<NAZWA KOLUMNY> <TYP TEKSTOWY> [CHARACTER SET nazwa_zestawu] ... [COLLATE porządek]
+
+np.:
+ALTER TABLE TEST ADO POLSKI_EKST CHAR(40) CHARACTER SET WIN1250 NOT NULL COLLATE PXW_PLK
+
+W poniższej tabeli znajduje się lista dostępnych zestawów znaków.
+
+Tabela 1.2. 
+Lista dostępnych zestawów znaków
+Zestaw znaków
+Min/Max rozmiar znaku w bajtach
+Sposoby porównywania
+ASCII
+
+BIG_5
+
+CYRL
+
+
+
+DOS437
+
+
+
+
+
+
+
+
+
+
+
+
+
+DOS852
+
+
+
+
+
+
+
+
+DOS850
+
+
+
+
+
+
+
+
+
+
+
+DOS857
+
+
+DOS860
+
+
+DOS861
+
+
+DOS863
+
+
+DOS865
+
+
+
+
+EUCJ_0208
+
+GB_2312
+
+ISO8859_1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KSC_5601
+
+
+NEXT
+
+
+
+
+
+
+NONE
+
+OCTETS
+
+SJIS_0208
+
+UNICODE_FSS
+
+WIN1250
+
+
+
+
+
+WIN1251
+
+
+WIN1252
+
+
+
+
+
+
+WIN1253
+
+
+WIN1254
+1/1
+
+1/2
+
+1/1
+
+
+
+1/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+1/1
+
+
+
+
+
+
+
+
+1/1
+
+
+
+
+
+
+
+
+
+
+
+1/1
+
+
+1/1
+
+
+1/1
+
+
+1/1
+
+
+1/1
+
+
+
+
+1 /2
+
+1 /2
+
+1/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 /2
+
+
+1/1
+
+
+
+
+
+
+1/1
+
+1/1
+
+1 /2
+
+1 /3
+
+1/1
+
+
+
+
+
+1/1
+
+
+1/1
+
+
+
+
+
+
+1/1
+
+
+1/1
+
+ASCII
+
+BIG_5
+
+CYRL
+DB_RUS
+PDQX_CYRL
+
+DOS437
+DB_DEU437
+DB_ESP437
+DB_FIN437
+DB_FRA437
+DB_ITA437
+DB_NLD437
+DB_SVE437
+DB_UK437
+DB_US437
+PDOX_ASCII
+PDOX_INTL
+PDOX_SWEDFIN
+
+DOS852
+DB_CSY
+DB_PLK
+DB_SLO
+PDOX_CSY
+PDOX_HUN
+POOX_PLK
+PDOX_SLO
+
+DOS850 
+DB_DEU850    
+D8_ESP850
+DB_RA850
+DB_FRC850
+OB_ITA850
+DB_NLD850
+DB_PTB850
+DB_SVE850
+DB_UK850
+DB_US850
+
+DOS857 
+DB_TRK
+
+DOS860 
+DB_PTG860
+
+DOS861 
+POOX_ISL
+
+DOS863 
+DB_FRC863 :
+
+DOS865 
+DB_DAN865 
+DB_NOR865 
+PDOX_NORDAN4
+
+EUCJ_0208
+
+GB_2312
+
+IS08859_1
+DA_DA
+DE_DE
+DU_NL
+EN_UK
+EN_US
+ES_ES
+FI_FI
+FR_CA
+FR_FR
+IS_IS
+IT_IT
+NO_NO
+PT_PT
+SV_SV
+
+KSC_5601 
+KSC_DICTIONARY 
+
+NEXT
+NXT_DEU
+NXT_FRA
+NXT_ITA
+NXT_ESP
+NXT_US
+
+NONE 
+
+OCTETS 
+
+SJIS_0208 
+
+UNICODE_FSS    
+
+WIN1250
+PXW_CSY
+PXW_HUNDC
+PXW_PLK
+PXW_SLOV
+
+WIN1251 
+PXW_CYRL
+
+WIN1252
+PXW_INTL
+PXW_INTL850
+PXW_NORDAN4
+PXW_SPAN
+PXW_SWEDFIN
+
+WIN1253 
+PXW_GREEK
+
+WIN1254 
+PXW_TURK
+
+W tabeli wyróżnione zostały te zbiory znaków, które najbardziej odpowiadają polskiemu użytkownikowi. WIN1250 jest stosowany w Windows, a DOS852 to stara, dobra strona kodowa 852 z DOS-a.
+Jeśli podczas definicji kolumny nie określimy sposobu porównywania, to będzie stosowany sposób domyślny - czyli pierwszy wymieniony przy odpowiednich zbiorach znaków 
+w powyższej tabeli. Czasem możemy chcieć porównać dane inaczej, niż by to wynikało 
+z definicji kolumny czy z domyślnego sposobu dla danego zestawu znaków. Stosując zapytanie SELECT z klauzulą ORDER BY lub GROUP BY, można określić, w jaki sposób InterBase ma porównać dane w kolumnach. Np.:
+
+Select TEKST From TEST Order By TEKST COLLATE PXW_SLOV:
+
+Sposób porównywania można określić także w przypadku... operacji porównania 
+- np. w klauzuli WHERE instrukcji SELECT:
+
+Select * from Test Where Tekst COLLATE PXW_PLK = :tekst
+
+
+W stosunku do wersji 5 InterBase nastąpiła zmiana w nazwie jednego ze sposobów porównania -
+ PXW_SLO zmieniono na PXW_SLOV. Jeśli chcemy zobaczyć, jakie zestawy znaków 
+i odpowiadające im sposoby porównania są zdefiniowane w bazie danych, musimy przyjrzeć się następującym tabelom systemowym:
+* ROB$CHARACTER_SETS dla zbiorów znaków (kolumna RDB$CHARACTER_SET_NAME),
+* RDB$COLLATIONS dla porównań (kolumna RDBSCOLLATION_NAME).
+
+
+Typy liczbowe
+InterBase pozwala na przechowywanie danych typów całkowitych, stałoprzecinkowych 
+i zmiennoprzecinkowych. Poniżej można znaleźć informacje na ich temat.
+
+Typy całkowite
+
+Do deklarowania kolumn danych typów całkowitych służą następujące słowa kluczowe:
+* SMALLINT - liczby całkowite ze znakiem z przedziału od -32 768 do 32 767. Typ w Delphi - dowolny typ całkowity, ale najlepiej oczywiście... SmallInt. Przy próbie przypisania wartości spoza zakresu zostanie zgłoszony wyjątek EDatabaseError z komunikatem 
+o przekroczeniu zakresu.
+* INTEGER - liczby całkowite ze znakiem z przedziału od -2 147 483 648 do 2 147 483 647. W Delphi oczywiście obsługiwane przez Integer, ale wraz z wprowadzaniem kolejnych wersji Delphi zwiększono zakres typu Integer, dlatego dla pewności lepiej korzystać 
+z Longint.
+* NUMERIC - wykorzystuje się do liczb stałoprzecinkowych, ale jeśli podamy skalę równą zeru, to możemy uzyskać liczbę z przedziału od -1019 +1 do 1019-1. Taki efekt można uzyskać jedynie przy wykorzystaniu dialektu 3 bazy danych. W przeciwnym razie pola NUMERIC o precyzji zawierającej się w przedziale 10- 18 zostaną zamienione na DOUBLE PRECISI0N7. Do obsługi tych kolumn należy wykorzystać typ Int64 (w Delphi 5) lub Comp we wcześniejszych wersjach.
+
+O ile w zasadzie nie ma problemu z dostępem do pól typu SMALLINT i INTEGER    
+- wykorzystujemy właściwość komponentu TFieldAsInteger,  np.:
+ IBTable1.FieldByName('SI").AsInteger := 2000;
+to może być problem w przypadku przekroczenia zakresu 10 cyfr w typie NUMERIC. 
+W komponencie TField brakuje właściwości AsInt64 lub podobnego. Na szczęście mamy do dyspozycji potomka TField o nazwie TLargeIntField. Umożliwia on dostęp do 64-bitowych liczb całkowitych, trzeba jednak stworzyć obiekt tego typu najłatwiej to zrobić korzystając z edytora pól8 (field editor) w Delphi.
+
+Typy stałoprzecinkowe
+W InterBase mamy do dyspozycji dwa typy danych pozwalające na przechowywanie liczb ze stałą liczbą miejsc po przecinku - NUMERIC i DECIMAL Najczęściej są stosowane do przechowywania informacji o kwotach pieniężnych. W przypadku obu tych typów można (ale nie trzeba) zdefiniować precyzję i skalę.
+Precyzja określa liczbę cyfr, z których będzie składała się liczba. Dopuszczalne są wartości z przedziału od l do 18.
+Skala to dopuszczalna liczba cyfr po przecinku (część ułamkowa). Może przyjmować wartości z zakresu od 0 do precyzji.
+Jeśli nie określimy żadnej z nich, to przyjmowane są wartości: 9 dla precyzji i 0 dla skali 
+- odpowiada to deklaracji kolumny typu INTEGER. Różnica pomiędzy typem DECIMAL i NUMERIC polega na interpretacji precyzji. W pierwszym przypadku precyzja dopuszcza przechowanie co najmniej p cyfr i dokładnie s cyfr po przecinku. Natomiast w przypadku NUMERIC precyzja p określa dokładną liczbę cyfr przechowywanych przez kolumnę i dokładną liczbę s cyfr po przecinku.
+Jeśli chodzi o wykorzystanie tych typów w Delphi, to zależnie od wybranej precyzji i skali mogą to być: comp lub int64 oraz wszystkie typy całkowite (pod warunkiem zachowania zgodności zakresów), przy korzystaniu ze skali większej od zera - typy zmiennoprzecinkowe, jak np. double. Trzeba jednak zachować ostrożność, gdyż podczas konwersji między stałym a zmiennym przecinkiem może dojść do utraty dokładności.
+Do przeprowadzania operacji na zmiennych przechowujących wartości pieniężne Delphi proponuje typ Currency (jedyny typ stałoprzecinkowy). Bez problemów można zdefiniować precyzję równą 18 i skalę równą 4: Numeric(18,4).
+
+Typy zmiennoprzecinkowe
+W InterBase programista ma do dyspozycji dwa typy zmiennoprzecinkowe;
+* FLOAT - zakres wartości od l,175xl0-38 do 3,402xl038, z dokładnością 7 cyfr dziesiętnych; w Delphi typ single,
+* DOUBLE PRECISSON - liczby z przedziału od 2,225xl0-308 do 1,797xl0308, 
+z dokładnością 15 cyfr dziesiętnych; typ double w Delphi.
+Przy wpisywaniu wartości warto pamiętać o dokładności podanej powyżej. Jeśli po przecinku znajdzie się więcej cyfr, to najmniej znaczące zostaną odrzucone. Z drugiej strony, należy zwrócić uwagę na to, że nie każda liczba ma dokładną reprezentację binarną. Stąd jeśli np. 
+w pole float wstawimy 0,2, to pobierając dane z kolumny otrzymamy 0.200000002980232. Trzeba o tym pamiętać, żeby uniknąć niemiłych niespodzianek.
+
+Czas i data
+InterBase udostępnia następujące typy służące do deklarowania kolumn obsługujących czas i datę:
+* DATE - przechowuje datę z zakresu od l stycznia 100 r.n.e. do 29 lutego 32768 r.n.e,
+* TIME - przechowuje informację o czasie - od godziny 0:00:00.000 do 23:59:59.999,
+* TIMESTAMP - stanowi kombinację dwóch powyższych typów.
+
+Format daty i czasu jest następujący: 'DD.MM.YYYY hh:nmi:ss.ttt' lub 'DD-MMM-YYYY hh:mm:ss.ttt', gdzie:
+* DD - dzień miesiąca,
+* MM - numer miesiąca,
+* MMM - trzyliterowy, angielski skrót nazwy miesiąca,
+* YYYY - rok,
+* hh - godzina,
+* mm - minuty,
+* ss - sekundy,
+* ttt - tysięczne części sekundy.
+W przypadku typu TIMESTAHP podanie informacji dotyczących czasu nie jest wymagane 
+-wszystkie odpowiednie elementy przyjmą wtedy wartość zero. Jeśli zastosujemy zapytanie 
+(z poziomu konsoli lub Delphi):
+Select czas from test order by czas
+i będziemy się spodziewali zobaczyć ułamkowe części sekundy, to możemy się zdziwić. Znajdziemy za sekundami zero albo... nic9. Chcąc uzyskać taką dokładność musimy dokonać konwersji tej kolumny np. na typ znakowy. Poniższe zapytanie zadziała już zgodnie z naszymi oczekiwaniami:
+Select Cast(czas as char(13)) as czas from test order by czas
+W powyższym kodzie SQL-a widzimy funkcję CAST, która w InterBase służy do konwersji typów, a jej składnia jest następująca:
+CAST(<wyrażenie> as <nazwa_typu>)
+gdzie <nazwa_typu> jest jednym z typów InterBase wymienionych w typ rozdziale lub nazwą domeny. Należy pamiętać, że nie wszystkie konwersje mają sens - np., konwersja daty na typ BLOB spowoduje wystąpienie błędu.
+Stosując zapytania SQL-owe można skorzystać z następujących funkcji:
+* 'Date' - zwraca bieżącą datę,
+* ' Now' - zwraca datę i godzinę,
+* 'Today' - jak 'Date',
+* 'Tomorrow' - data jutrzejsza,
+* 'Yesterday' - data wczorajsza.
+Stosując te funkcje w zapytaniach, należy wpisywać je w apostrofach i dokonać konwersji na typ DATE, np.:
+Select Cast ('now' as time), czas from test;
+Update test set czas = 'now';
+W Delphi występuje typ TDateTime, który tak naprawdę jest typem double. W części całkowitej przechowuje informacje o dacie, a w ułamkowej o godzinie. Data powinna mieścić się w przedziale od 30 grudnia 1899 roku do końca roku 9999. Informacje o godzinie można przechowywać z dokładnością do tysięcznych części sekund. Przy okazji TDateTime warto zwrócić uwagę na funkcje EncodeDate, DecodeDate, EncodeTime, DecodeTime i FormatDateTime. Pozwalają one na wydzielenie bądź zapisanie w dacie informacji o latach, miesiącach itd. np.:
+
+Var
+R. M.  D  :  word; 
+Begin
+DecodeDate(IBQry.FieldByName('Czas').AsDateTime, R, M, D); 
+... 
+{ W R, M, D mamy rok, miesiąc i dzień z pola w bazie danych } 
+end;
+I następna rzecz, o której czasami się zapomina - różnica dwóch dat daje w wyniku liczbę dni występujących pomiędzy nimi10.
+
+Pola Blob
+Pola BLOB (Binary Large Objects) służą do przechowywania danych binarnych, takich jak grafika, dźwięk czy po prostu pliki. Ilość informacji przechowywanych w takim polu może zmieniać się dynamicznie - w samej kolumnie jest identyfikator pola. Natomiast dane znajdują się w innym miejscu bazy danych i podzielone są na segmenty. Maksymalny rozmiar segmentu wynosi 32 kB. Definiując pole BLOB, można podać jego podtyp, który umożliwia określenie charakteru przechowywanych danych.
+Do dyspozycji użytkownika są: 
+* typ 0 - dowolne dane binarne,       
+* typ l - tekst.
+Pozostałe typy - od 2 do 6 - są zarezerwowane do wewnętrznego użytku InterBase. Użytkownik może w razie potrzeby zdefiniować własne podtypy, które będą miały wartości ujemne. Aby zadeklarować pole BLOB należy użyć konstrukcji:
+<KOLUMNA> BLOB [SUB_TYPE n] [SEGMENT SIZE size] 
+np.:
+Alter Table Test Add B BLOB SEGMENT SIZE 1024;
+Jak wykorzystać podtyp l, wyjaśniono w części poświęconej typom znakowym. Poniższy przykład pokazuje, jak wczytać plik do bazy danych:. 
+if OpenDialog1.Execute
+  then with IBTable1 do begin 
+  Edit;
+  IBTable1Blob1.LoadFromFile(OpenDialog1.FIleName);
+  Post;  
+  end;   
+end;        
+Jeśli w pole Blob1 wczytamy bitmapę i podłączymy do niego TDBImage, to będziemy mogli ją obejrzeć11.
+
+Tablice
+InterBase umożliwia tworzenie tablic danych. Deklarujemy je następująco:
+<nazwa_pola> <nazwa_typu> [<rozmiar>|<min>:<max>]
+np.:
+Alter Table Test Add Tablica Integer[0:9];
+
+Chcąc stworzyć tablicę wielowymiarową, rozmiary kolejnych wymiarów rozdzielamy przecinkami.
+Nie będziemy tutaj poruszać głębiej tematu tablic z prostego powodu - w aktualnej wersji 
+IBX-y nie obsługują tablic. Ta funkcja powinna zostać dodana w Delphi 6. Próby z BDE także skazane są na niepowodzenie.
+
+
+Domeny
+W przypadku tworzenia bazy danych, w której tabele zawierają wiele takich samych kolumn, wygodnie jest zdefiniować domenę. Można ją porównać do definicji własnego typu danych, z czym mamy do czynienia w innych językach programowania. Składnia polecenia tworzącego domenę jest następująca:
+CREATE DOMAIN domain [AS] <typ> 
+[DEFAULT { wartosc  |  NULL  |  USER}] 
+[NOT NULL] [CHECK ( <warunek>)] 
+[COLLATE collation]:
+Można zdefiniować warunek, jaki będą musiały spełniać wprowadzane dane. Składnia klauzuli warunek jest następująca:
+<warunek> ={
+VALUE <operator> <val>
+| VALUE [NOT] BETWEEN <wartosc> AND <wartosc>
+| VALUE [NOT] LIKE <wartosc> [ESCAPE <wartosc>]
+| VALUE [NOT] IN (<wartosc> [ ... <wartosc> ...])
+| VALUE IS [NOT] NULL
+| VALUE [NOT] CONTAINING <wartosc>
+| VALUE [NOT] STARTING [WITH] <wartosc>
+|(<warunek>)
+| NOT <warunek>
+| <warunek> OR <warunek>
+| <warunek> AND <warunek>
+}
+<operator> ={=|<|>|<=|>=|!<|!>|<>|!=}
+
+Dla przykładu, zdefiniujmy kolumnę mającą przechowywać informacje o płci:
+create domain piec as char(1)
+not null check (value in ('K',  'M'))
+Jako typ można wybrać dowolny z wymienionych w tym rozdziale, także tablice. Po zdefiniowaniu domeny kolumnę definiuje się tak samo, jak ma to miejsce w przypadku każdego innego typu:
+Alter table test add osoba plec; 
+W Delphi z takich kolumn korzysta się tak samo, jak z kolumn typu typ.
+
+
+
+Rozdział 2. O UDF-ach
+
+Nieraz, gdy tworzymy jakąś bazę danych lub procedurę składowaną okazuje się, że brakuje jakiejś potrzebnej funkcji po stronie bazy. Wtedy możemy przenieść część kodu do aplikacji użytkownika, ale lepszym rozwiązaniem mogłoby być rozbudowanie możliwości serwera. Takie rozwiązanie umożliwiają nam UDF-y (User Defined Functions) w InterBase, a funkcje takie można bez problemu napisać w Delphi.
+
+Od strony InterBase
+Funkcje użytkownika deklarujemy w InterBase następująco:
+DECLARE EXTERNAL FUNCTION <nazwa> [<typ_danych>| CSTRING (int)
+[,<typ_danych> | CSTRING (int) ]]
+RETURNS {datatype [BY VALUE]  | CSTRING (int)} [FREE_IT]
+ENTRY_POINT '<funkcja>'
+MODULE_MAME  '<moduł>'
+Funkcji można przekazać maksymalnie 10 parametrów -jeśli jednym z nich ma być BLOB, to 9. Parametry są przekazywane do UDF-ów przez referencję. Typ zmiennej przekazywanej do funkcji musi odpowiadać dokładnie1 typowi danych dla języka, w którym jest ona pisana. Jeśli np. do Delphi przekazywany jest typ DOUBLE PRECISSION, to w funkcji musi być wykorzystany typ double.
+W przypadku typów tekstowych, są one przekazywane jako ciągi znaków zakończone zerem. Służy do tego typ CSTRING, na który są konwertowane typy CHAR i VARCHAR. CSTRING jest zgodny z PChar w Delphi.
+Także obsługę dat realizuje się nieco inaczej. InterBase przechowuje informację o dacie w formie 64-bitowej liczby mapowanej na rekord TM zdefiniowany w pliku IBExternals.pas z pakietu IBX.
+Programiści piszący w języku C na pewno rozpoznają poniższy typ jako strukturę time_t:
+TM = record
+tm_sec : integer;    // Sekundy
+tm_min : integer;    // Minuty
+tm_hour :  integer; // Godzina
+tm_mday : integer; // Dzień miesiąca od   l do 31
+tm_mon  :  integer;    // Miesiąc od O do 11
+tm_year : integer; // Rok - 1900
+tm_wday : integer; // Dzień tygodnia od O-niedziela do 6-poniedziałek
+tm_yday :  integer; // Nr dnia w roku od O do 365
+tm_isdst : integer; 
+end;
+Zdefiniowany jest także wskaźnik na tę strukturę, jak PTM i struktura przechowująca informację o dacie i o godzinie:
+ISC_TIMESTAMP = record
+timestamp_date : Long;  
+timestamp_time : ULong; 
+end;
+Typy Long i ULong są 32-bitowymi liczbami całkowitymi. InterBase przekazując informacje o dacie, przekazuje zmienną typu Long lub ULong lub zmienną jako strukturę ISC_TIMESTAMP w przypadku TIMESTAMP. Typy te zdefiniowane są w IB Header.pas. InterBase udostępnia zestaw procedur służących do konwersji dat na wygodniejszy rekord TM:
+isc_encode_timestamp(tm_date : PTM; ib_date : P ISC_TIMESTAMP) 
+isc_decode_timestamp(ib_date : PISC_TIMESTAMP; tm_date : PTM) 
+isc_decode_sql_date(var ib_date : Long; tm_date : PTM) 
+isc_encode_sql_date(tm_date: PTM; var ib_date: Long) 
+isc_decode_sql_time(var ib_date: ULong; tm_date: PTM) 
+isc_encode_sql_time(tm_date: PTM; var ib_date: ULong)
+Procedury te są zdefiniowane w bibliotece gds32.dll. Deklaracje nagłówków funkcji można znaleźć w module IBIntf.pas z pakietu IBX lub można oczywiście zadeklarować je samodzielnie, np.:
+procedurę isc_decode_sql_date (var ib_date: Longint; tm_date: PTM); stdcall; 
+external 'gds32.dll';
+
+Standardowe rezultaty funkcji przekazywane są przez referencję, ale w przypadku typów numerycznych może się to odbywać także przez wartość. Służy do tego klauzula BY VALUE. Należy uważać podczas przekazywania łańcuchów tekstowych, gdyż może to prowadzić do wycieków pamięci. Jeśli programista w jakiś sposób sam o to nie zadba podczas pisania funkcji, to w trakcie deklaracji wyniku należy użyć klauzuli FREE_IT.
+Aby usunąć funkcję z bazy, należy użyć polecenia:
+DROP LXTERNAL FUNCTION <nazwa>
+UDF-y można wywołać z dowolnego miejsca polecenia SQL-owego. Można z nich korzystać zarówno w funkcjach przechowywanych na serwerze, jak i zapytaniach. Biblioteki DLL z funkcjami użytkownika należy umieścić w jednym z poniższych katalogów2:
+* w podkatalogu UDFkatalogu domowego InterBase: interbase_home\UDF,
+* w katalogu wymienionym w pliku ibconfig (Windows) lub isc_config (INIX) w zmiennej EXTERNAL_FUNCTION_DIRECTORY.
+
+Od strony Delphi
+UDF jest najzwyklejszą funkcją w bibliotece DLL. W Delphi z menu New należy wybrać opcję dotyczącą utworzenia nowej biblioteki DLL. Tworzenie funkcji przeanalizujemy na przykładzie.
+
+Przykład: Funkcja Silnia(Liczba)
+Zadaniem funkcji będzie policzenie n!, gdzie n jest zadanym parametrem. Do projektu należy dodać moduł i zadeklarować w nim następującą funkcję:
+function Silnia(var N : integer)  : integer; cdecl; export:
+Parametry przekazywane są przez referencję - stąd należy pamiętać o słowie kluczowym var. Wyjątkiem jest PChar, który sam w sobie jest już wskaźnikiem (do znaku). Cdecl określa sposób przekazywania parametrów - po szczegóły warto zajrzeć do pomocy Delphi. Słowo export mówi nam, że funkcja będzie eksportowana z biblioteki.
+W kodzie źródłowym biblioteki projektu (menu Project/View Source) należy dodać klauzulę exports:
+exports Silnia; 
+
+Niech funkcja silnia zostanie zdefiniowana następująco:     
+function Silnia(var N : integer) : integer; cdecl; export; 
+var 
+I :  integer;
+ begin 
+   Result := 1;
+     if N > l then 
+       for I := l to N do
+        Result:= Result * I;
+ end;     
+Projekt należy skompilować i uzyskaną w ten sposób bibliotekę umieścić w jednym z katalogów wymienionych wyżej.
+
+Teraz powinniśmy zadeklarować w InterBase korzystanie z funkcji biblioteki.
+DECLARE EXTERNAL FUNCTION EF_SILNIA
+INTEGER                                                                                                 RETURNS INTEGER BY VALUE                                                ENTRY_POINT 'Silnia' MODULE_NAME 'gawudf.dll':
+
+Powyższe polecenie można wykonać z poziomu ISQL-a lub skryptu tworzącego bazę danych. EF_SILNIA jest nazwą, pod jaką funkcja będzie widziana w bazie. I to w zasadzie wszystko - w ramach testu można zastosować poniższe zapytanie:
+Select EF_Silnia(5) From RDBSDATABASE;
+Oczekiwany wynik to oczywiście 120.
+
+Bardziej uważni musimy być w trakcie tworzenia UDF-ów zwracających łańcuchy znaków. Istnieje wtedy ryzyko wystąpienia wycieków pamięci (memory leaks), ponieważ pamięć przydzielana przez jeden proces (biblioteka z funkcją) nie jest nigdzie zwalniana. Można do tego problemu podejść na kilka sposobów: 
+* Można zwracać wskaźnik do zmiennej przechowującej tablicę znaków:
+Wynik: array[0. .100] of char;
+Function ZwrocWynik : PChar; 
+Begin                                                       
+ Result:= Wynik; 
+End; 
+Problem pojawia się jednak w momencie wywoływania funkcji przy pracy z kilkoma połączeniami. Wynik zawsze będzie wskazywał na to samo miejsce w pamięci i w czasie pracy kilku użytkowników łatwo może dojść do konfliktu interesów - co będzie zawierała zmienna?
+* Można zmienną Wynik zadeklarować jako zmienną lokalną wątku (threadvar) i rozpoznawać wtedy, kiedy InterBase tworzy i kończy wątki. Wymaga to napisania części inicjującej bibliotekę i funkcji wejścia.
+* Chyba najprostszą metodą jest dynamiczne przydzielenie pamięci dla tekstu i zwrócenie go do InterBase. Do alokowania pamięci zaleca się korzystanie z funkcji ib_util 3_malloc z modułu ib_utif.  Funkcję wykorzystującą tę technikę należy koniecznie zadeklarować z klauzulą FREE_IT. Spowoduje to, że odpowiedzialność za zwolnienie pamięci przejmie InterBase. W starszych wersjach InterBase (przed 5.5) należało skorzystać z malloc z biblioteki msvcrt.dll.
+Ostatni sposób zostanie pokazany na przykładzie funkcji zwracającej fragment łańcucha znaków o zadanej długości od podanej pozycji.
+
+Przykład: Funkcja Substr1(Tekst, Od, ile)
+Wymaganą funkcjonalność zapewnia w Delphi funkcja Copy. W funkcji będzie rezerwowane dokładnie tyle pamięci, ile potrzeba na przechowanie wyniku. Nie należy zapominać o znaku końca tekstu #0.
+Funkcja Substr1 może wyglądać następująco:
+function Substr1 (Tekst: PChar; var Od, ile : integer) : PChar;
+var S : string;
+begin
+  S:= Copy (Tekst, Od, Ile);
+  Result:= ib_util_malloc(Length(S) + 1);
+  StrCopy(Result, PChar(S));
+end;
+
+Do zadeklarowania funkcji w InterBase posłuży poniższe polecenie:
+DECLARE EXTERNAL FUNCTION F_SUBSTR1
+CSTRING(64, INTEGER, INTEGER
+RETURNS CSTRING(64) FREE_IT
+ENTRY_POINT 'Substrl' MODULE_NAME 'gawudf.dll';
+Jak widać, jest to bardzo prosta metoda - programista korzystający z funkcji musi tylko pamiętać o klauzuli FREE_IT.
+
+Przykład: Funkcja Year(Data)
+Funkcja zwróci liczbę całkowitą będącą numerem roku znajdującego się w dacie przekazanej w parametrze. W Delphi funkcja będzie wyglądała następująco:
+function Year(var ib_date: Long): Integer;
+var tm_date: TM;
+begin
+ isc_decode_sql_date(ib_date.PM(@tm_date));
+ result:= tm_date.tm_year + 1900;
+end;
+W bazie danych deklaracja wygląda następująco:
+DECLARE EXTERNAL FUNCTION F_YEAR
+DATE
+RETURNS INTEGER BY VALUE
+ENTRY_POINT 'Year' MODULE_NAME 'gawudf.dll':
+
+Do przetestowania może posłużyć następujące zapytanie:
+select f_Year(cast('7/11/00' as date)) from rdb$database
+
+W rezultacie powinniśmy otrzymać 2000.
+
+Rozdział 3. IBX - InterBase
+
+Delphi umożliwia dostęp do bazy danych na kilka sposobów. Są to:   
+* ADO,
+* BDE,    
+* IBX.
+Pierwsze dwa korzystają ze sterowników dostarczanych do każdej bazy. Natomiast IBX oferuje rodzimy dostęp do InterBase, Daje to największą wydajność dostępu i operacji na bazie kosztem przenośności oprogramowania. Poniżej znajduje się krótki opis komponentów wraz z informacją o możliwości ich zastosowania.
+W przypadku istotnych właściwości są one wymieniane także w komponentach potomnych.
+
+TIBDatabase, moduł  IBDatabase.
+Ten komponent jest odpowiedzialny za połączenie z bazą danych. Wszystkie komponenty dziedziczące po TIBCustomDataSet oraz TIBSQL wykorzystują TIBDatabase w celu uzyskania dostępu do bazy danych. Jest on odpowiednikiem TDatabase z zakładki Data Access.
+Aby podłączyć się do bazy danych, należy we właściwości Params ustawić następujące parametry:
+* user_name - nazwa logującego się użytkownika,   
+* password - hasło użytkownika,    
+* sql_role_name - nazwa przywileju z jakim loguje się użytkownik,
+* lc_type - zestaw znaków wykorzystywany przy połączeniu.
+Dla celów testowych można te parametry ustawić w środowisku Delphi dwukrotnie klikając komponent. Na poziomie kodu parametry ustawia się w Params, która jest typu TStringList. W celu nawiązania połączenia z bazą konieczne jest jeszcze ustawienie ścieżki dostępu we właściwości DatabaseName. Ścieżka ta jest bezwzględną ścieżką wskazującą na plik z bazą danych. W przypadku zdalnego dostępu do serwera z wykorzystaniem protokołu TCP/IP, na początku ścieżki należy podać nazwę serwera i dwukropek, np.:
+* dostęp lokalny: C:\Bazy\baza.gdb,
+* dostęp zdalny: serwer: C:\Bazy\baza.gdb.
+
+Pozostałe właściwości
+Connected - określa czy podłączenie do InterBase jest aktywne, czy nie. Zmiana Connected na True uaktywnia połączenie, na False - powoduje odłączenie.
+DefaultTransaction - domyślna transakcja, z jaką będą odbywać się operacje na bazie danych, o ile nie określono innej.
+IdleTimer - czas w milisekundach, po jakim baza danych zostanie odłączona w przypadku, gdy połączenie nie jest aktywne. Rozłączenie po tym czasie nie wywołuje zdarzeń OnAfterDisconnect i OnBeforeDisconnect.
+LoginPrompt - określa czy ma się pojawiać standartowe okienko logowania.
+SQLDialect - zwraca dialekt SQL-a wykorzystywany przez klienta. Realnie nie można skorzystać z większego niż dialekt bazy danych.
+TraceFlags - umożliwia wybór operacji, które mają być śledzone przy pomocy SQL Monitora w trakcie ich wykonywania.
+
+Zdarzenia
+OnAfterConnect, OnAfterDisconnect, OnBeforeConnect, OnBeforeDisconnect - są to zdarzenia wywoływane odpowiednio po (przed) podłączeniem (odłączeniem) od bazy danych.
+OnDialectDowngradeWarning - zdarzenie wywoływane jest, jeśli dialekt aplikacji jest ustawiony na większą wartość niż dialekt bazy danych.
+OnIdleTimer - jeśli minie czas określony w IdleTimer, wywoływane jest zdarzenie
+OnIdleTimer.
+OnLogin - występuje w momencie podłączenia do bazy danych. W parametrze Login Params przekazywane są user_name i password pobrane z Params komponentu. 
+Kończąc obsługę zdarzenia, należy w LoginParams ustawić, w razie potrzeby, odpowiednie wartości tych parametrów. Można umieścić tutaj wywołanie np. własnego okienka logowania. LoginPrompt musi być ustawione na True.
+
+Ważne metody
+AddTransaction(TR: TIBTransaction) - podłącza kolejny komponent transakcji do bazy danych.
+ApplyUpdates(const DataSets: array of TDataSet) - jako parametr podajemy listę komponentów potomnych TDataset. Metoda zapisuje zmiany z buforów do bazy danych. Wywołanie tej metody ma znaczenie wtedy, gdy odpowiedni komponent zawierający dane1 ma ustawiona właściwość CachedUpdates na True,
+CloseDataSets - zamyka wszystkie zbiory danych podłączone do tego komponentu bez zakończenia połączenia z bazą danych.
+CreateDatabase - tworzy bazę danych na podstawie parametrów ustawionych w Params 
+i DatabaseName. Funkcjonalnie odpowiada to wykonaniu polecenia SQL-a Create Database
+DropDatabase - usuwa całkowicie bazę danych z serwera. 
+FlndTransaction(TR: TIBTransaction): Integer - zwraca indeks transakcji TR podłączonej do bazy danych.
+ForceClose - wymusza zakończenie połączenia z bazą danych.
+GetFieldNames(const TableName: string; List: TStrings) - dla zadanego pierwszego parametru TableName zwraca w List listę pól dla danej tabeli.
+GetTableNames(List: TStrings; SystemTables: Boolean = False) - zwraca w List listę tabel w bazie danych. Parametr SystemTables określa, czy mają być zwrócone nazwy tabel systemowych2.
+IndexOfDBConst(st: String): Integer - funkcja podaje jako rezultat indeks parametru określonego jako st z listy Params. Jeśli parametr nie jest znany, wynikiem jest -l.
+RemoveTransaction(Idx: Integer) - odłącza komponent transakcji o podanym 
+indeksie od bazy danych.
+RemoveTransactions - odłącza wszystkie transakcje od bazy danych.
+TestConnected - zwraca True, jeśli komponent jest połączony z bazą danych. Jeśli właściwość Connected jest ustawiona na True, to następuje próba pobrania informacji z serwera, aby sprawdzić aktywność połączenia.
+
+Komentarz
+Komponent TIBDatabase powinien być wykorzystywany pojedynczo na każde niezbędne połączenie z bazą danych. Ze względu na raczej globalny (dla aplikacji) charakter TIBDatabase, najlepiej jest umieścić go w module zawierającym dane3. Dobrze jest podobnie postąpić z domyślną transakcją dla bazy danych - umieścić jaw globalnie dostępnym module.
+
+TIBTransaction, moduł IBDatabase
+Komponent ten pozwala na kontrolowanie transakcji w jednej lub więcej bazach danych. Nie ma on swojego odpowiednika w komponentach opartych na BDE. Wszystkie komponenty pracujące na danych muszą wykorzystywać TIBTransaction. Jeśli nie będą miały określonej swojej transakcji, to będą korzystały z tej, która jest ustawiona jako DefaultTransaction komponentu TIBDatabase, InterBase pozwala na wygodne przeprowadzanie kilku transakcji w ramach pojedynczego połączenia.
+
+Właściwości
+Active - określa czy transakcja jest aktywna i pozwala na zmianę jej stanu. 
+DatabaseCount - przechowuje liczbę baz danych biorących udział w transakcji.
+Databases - zwraca bazę danych (TIBDatabase) o zadanym indeksie związaną z danym komponentem.
+DefaultAction - określa akcję wykonywaną, gdy skończy się czas przeznaczony na transakcję określony w IdleTimer. Możliwości są następujące:
+* taRollback - cofa transakcję,
+* taCommit - zatwierdza transakcję (domyślne),
+* taRollbackRetaining - cofa transakcję z zachowaniem kontekstu,
+* taCommitRetaining - zatwierdza transakcję z zachowaniem jej kontekstu.
+DefaultDatabase - pozwala na ustawienie bądź pobranie domyślnej bazy danych związanej z transakcją.
+IdleTimer - określa czas bezczynności, po jakim transakcja powinna automatycznie wykonać domyślną akcję (zapisanie bądź cofnięcie zmian) ustawioną w DefaultAction.
+InTransaction - zwraca informację, czy transakcja jest w trakcie wykonywania. Stan właściwości zmienia na True wywołanie metody StartTransaction, natomiast wywołanie Commit bądź Rollback przestawia go na False.
+Params - lista parametrów transakcji. Tutaj należy ustawić poziom izolowania transakcji, który może być następujący:
+* Snapshot - pozwala na odczyt z bazy danych bez prawa zapisu w kontekście danej transakcji,
+* ReadCominitted - umożliwia transakcji odczyt zmian zatwierdzonych przez inne transakcje. Nie zatwierdzone zmiany pozostają niewidoczne.
+
+Zdarzenia
+OnIdleTimer - zdarzenie wywoływane po tym, gdy czas bezczynności transakcji przekroczy czas ustawiony w IdleTimer.
+
+Ważne metody
+AddDatabase(db: TIBDatabase) - dodaje do transakcji połączenie z bazą danych.
+Commit - wykonuje zatwierdzenie i zakończenie transakcji. Wszelkie zmiany w rekordach, nowe rekordy i rekordy skasowane od momentu wywołania StartTransaction zostają zapisane na stałe w bazie danych. Przed wywołaniem Commit dobrze jest sprawdzić przy pomocy InTransaction, czy transakcja jest w toku. Jeśli nie jest, to Commit zgłosi wyjątek.
+CommitRetaining - zatwierdza transakcję i zachowuje jej kontekst. Funkcjonalnie wygląda to na zatwierdzenie i nie zamknięcie zbioru danych. Z CommitRetaining należy korzystać z rozwagą, gdyż zwiększa się ilość pamięci używanej na serwerze.
+FindDatabase(db: TIBDatabase): Integer - zwraca numer indeksu bazy danych podanej jako parametr.
+RemoveDatabase (Idx: Integer) - odłącza od transakcji bazę danych o podanym numerze.
+RemoveDatabases - odłącza wszystkie bazy danych od transakcji.
+Rollback - cofa wszelkie zmiany wykonane w bazie danych od momentu wywołania StartTransaction. Przed wywołaniem Rollback dobrze jest sprawdzić stan transakcji przy pomocy InTransaction. Jeśli transakcja nie jest w toku, to wywołanie Rollback zgłosi wyjątek.
+RollbackRetaining - cofa wszelkie zmiany wykonane w bazie danych od momentu wywołania StartTransaction z zachowaniem kontekstu transakcji.
+StartTransaction - rozpoczyna nową transakcję na serwerze. Jeśli transakcja jest już w toku, to wywołanie tej metody zgłosi wyjątek.
+
+Komentarz
+W przypadku TIBTransaction, wygodnie jest umieścić komponent odpowiedzialny za domy siną transakcję w tym samym module co główny komponent TIBDatabase. W przypadku pozostałych, najlepiej jest umieścić je razem z komponentami TIBQuery itp. Umieszczając je razem na jednym formularzu bądź w ramce4, można stworzyć repozytorium łatwe do wykorzystania.
+Rozpoczęciu modyfikacji danych powinno towarzyszyć rozpoczęcie transakcji np.:
+TForml.ButtonDeleteClIcktSender: TObject); 
+Begin
+  with IBTransaction1 do
+    if not InTransaction then
+    StartTransaction;
+  IBTable1.Delete;
+end.
+
+Dając użytkownikowi do dyspozycji przycisk Zapisz zmiany, wystarczy wywołać metodę Commit dla transakcji.
+Pisząc aplikacje wykorzystujące technologię MIDAS, należy do każdego zapytania wykorzystywać osobną transakcję.
+
+TIBStoredProc, moduł IBStoredProc
+Ten komponent pozwala na wykorzystanie procedur składowanych w bazie danych. Idealnie nadaje się do obsługi procedur wywoływanych przez Execute. W przypadku tych procedur, które zwracają zbiory danych (Select), należy skorzystać z TIBQuery lub TIBDataSet. Parametry przekazywane do procedury i zwracane przez nią wymienia się we właściwości Params.
+
+Właściwości
+Database - określa komponent bazy danych zawierający procedurę. 
+ParamCount - zwraca liczbę parametrów procedury.
+Params - przechowuje parametry wejściowe i wyjściowe procedury. Należy z niej skorzystać wtedy, gdy chcemy ustawić wartości wejściowe. Po wywołaniu ExecProc, w razie potrzeby można z niej pobrać wartości parametrów wyjściowych.
+Prepared - określa czy procedura jest przygotowana, czy nie. Procedura musi być przygotowana przed jej wykonaniem. InterBase automatycznie wykonuje operację przygotowania, jeśli programista sam tego nie zrobił. Dobrą praktyką jest samodzielne wywoływanie metod Prepare i Unprepare. Przestawiają one właściwość Prepared w odpowiedni stan.
+StoredProcedureNames - przechowuje listę procedur składowanych na serwerze jako TStringList.
+StoredProcName - nazwa procedury związanej z tym komponentem. Jeśli nazwa nie odpowiada żadnej z procedur dostępnych w bazie danych, to przed jej wykonaniem zostanie zgłoszony wyjątek.
+Transaction - wskazuje na komponent transakcji wykorzystywany przez procedurę.
+
+Zdarzenia
+AfterDatabaseDisconnect - zdarzenie wywoływane po rozłączeniu z bazą danych
+AfterTransactionEnd - zdarzenie wywoływane po zakończeniu transakcji związanej z procedurą.
+BeforeDatabaseDisconnect - zdarzenie wywoływane tuż przed rozłączeniem z bazą danych.
+BeforeTransactionEnd - zdarzenie wywoływane tuż przed zakończeniem transakcji związanej z procedurą,
+DatabaseFree - zdarzenie wywoływane po tym, gdy baza danych zostanie usunięta z pamięci.
+TransactionFree - zdarzenie wywoływane po tym, gdy transakcja zostanie zwolniona z pamięci.
+Ważne metody
+CopyParams(Value: TParams) - kopiuje parametry między zmiennymi typu TParams. Może być wykorzystywana do kopiowania wartości parametrów pomiędzy procedurami.
+ExecProc - wykonuje procedurę składowaną na serwerze. Przed wywołaniem metody należy ustawić wymagane parametry wejściowe przy pomocy właściwości Params i wywołać metodę Prepare. Po wywołaniu ExecProc parametry wyjściowe (jeśli są) można odczytać z Params. Właściwości dostępne są według kolejnych numerów bądź przy pomocy funkcji ParamByName.
+ParamByName(const Value: string): TParam - zwraca parametr o zadanej nazwie. Aby uzyskać dostęp do wartości parametru, należy skorzystać z AsInteger, AsString itp.
+Prepare - przygotowuje procedurę do wykonania. Wywołanie tej metody spowoduje związanie parametrów procedury i następnie alokację zasobów na serwerze. Pozwala to na zoptymalizowanie wykonywanych operacji.
+Unprepare - zwalnia zasoby zaalokowane na serwerze i kliencie podczas przygotowania procedury.
+
+TIBTable, moduł IBTable
+Ten komponent pozwala na uzyskanie dostępu do pojedynczej tabeli bądź perspektywy. Funkcjonalnie odpowiada to zastosowaniu zapytania Select * From <nazwa>. Zestaw rekordów można ograniczyć wykorzystując filtry (właściwości Filter i Filtered lub zdarzenie OnFilterRecord). Ponieważ TIBTable jest mało elastyczne, lepiej jest pracować z TIBQuery lub TIBDataset.
+
+Właściwości
+Active - jak to jest w przypadku wszystkich zbiorów rekordów, określa czy jest on otwarty.
+BufferChunks - określa wartość, o jaką będzie zwiększany bufor (w liczbie wierszy). Dotyczy trybu CachedUpdates.
+CachedUpdates - umożliwia włączenie trybu CachedUpdates (buforowane uaktualnienia). Jeśli ten tryb pracy jest włączony, to wszystkie modyfikacje wierszy, kasowanie i wstawianie odbywają się w buforze po stronie aplikacji klienta. Po zakończeniu pracy wszystkie zmiany mogą zostać wysłane na serwer w ramach jednej transakcji.
+Constraints - opis więzów integralności na poziomie rekordu. Tutaj można utworzyć więzy bazujące na wartościach kilku pól. W razie wystąpienia potrzeby wykorzystania więzów na poziomie pojedynczej kolumny, należy je stworzyć w odpowiednim komponencie TField.
+DefaultIndex - pokazuje czy po otwarciu tabeli wiersze mają być posortowane przy użyciu domyślnego indeksu, czy nie. Domyślnie jest ustawiona wartość True - w zapytaniu będzie dodana klauzula ORDER BY po kluczu głównym.
+Exists - ta właściwość decyduje czy dana tabela istnieje w bazie danych. Jeśli jest False, to na podstawie definicji pól zawartych w FieldsDef metoda Create Table utworzy tabelę.
+Filter - przechowuje warunek określający, które wiersze mają znaleźć się w zbiorze danych. Składnia dla tego warunku jest bardzo podobna do wyrażenia występującego w klauzuli WHERE, Można korzystać ze znaków specjalnych SQL-a, takich jak '%' czy '_' przy korzystaniu z warunku LIKE, np.
+Filter := 'Country Like "P*" ';
+Chcąc sprawdzać wartości na okoliczność wystąpienia wartości NULL, należy skorzystać z IS:
+Filter  :=  'Country IS NOT NULL';
+Filtered - określa czy filtr jest aktywny. Przełącza stan korzystania z filtru we właściwości Filtered i obsłudze zdarzenia OnFilterRecord.
+ForcedRefresh - określa czy dane mają być odświeżone po wykonaniu zapisu (metoda Post), czy nie.
+IndexDefs -przechowuje informacje o definicjach indeksów tabeli w formie tablicy. IndexFieldCount - liczba pól składających się na obecny klucz.
+IndexFieldNames - przechowuje listę pól, które mają być wykorzystane przez indeks. Nazwy pól rozdzielane są średnikami. Ustawienie tej właściwości czyści Index Name.
+IndexFields - pozwala na odczyt lub ustawienie pól wykorzystywanych w kluczu. Tablica przechowuje komponenty typu TField.
+IndexName - określa indeks wykorzystywany w tabeli. Jeśli właściwość nie jest zdefiniowana, to do określenia sortowania wierszy wykorzystywany jest klucz główny.
+MasterFields - przechowuje listę pól z tabeli nadrzędnej wykorzystywanych przy tworzeniu relacji master-detail między tabelami. Tę właściwość należy zdefiniować po wypełnieniu MasterSource.
+MasterSource - przechowuje DataSource związaną z tabelą nadrzędną przy korzystaniu z relacji master-detail.
+ReadOnly - określa czy tabela ma zostać otwarta w trybie tylko do odczytu.
+StoredDefs - ustawiona na True oznacza, że definicje pól z FieldDefs i indeksów z IndexDefs wypełnione przy projektowaniu aplikacji mają zostać zapisane razem z modułem bądź formą. Pozwoli to na tworzenie tabeli w bazie danych przez proste wywołanie metody CreateTable.
+TableName - przechowuje nazwę tabeli lub perspektywy reprezentowanej przez ten komponent.
+TableNames - przechowuje listę tabel i perspektyw dostępnych w bazie danych.
+UniDirectional - określa czy dla danej tabeli uaktywnione są kursory dwukierunkowe. Jeśli właściwość ma wartość True, to możliwe jest poruszanie się po zbiorze danych w dwóch kierunkach.
+UpdateObject - przechowuje wskaźnik do komponentu typu TIBUpdateSQL. Ten komponent pozwali na aktualizowanie danych, które są zwracane jako tylko do odczytu, lub w trybie CachedUpdates.
+
+Zdarzenia
+W komponencie TIBTable wprowadzane są te same zdarzenia, które zostały wymienione podczas omawiania komponentu TIBStoredProc. Poza tym komponent ten dziedziczy standartowe zdarzenia komponentu TDataset.
+
+Ważne metody
+AddIndex(const Name, Fields: string; Options: TIndexOptions const DescFields: string = ' ') - tworzy nowy indeks o podanej nazwie. Na klucz składają się pola z Fields porozdzielane średnikami. Opcje określają czy indeks ma utworzyć klucz główny (ixPrimary), czy unikalny (ixUnique).
+CreateTable - tworzy nową tabelę w bazie danych na podstawie informacji zawartych w FleldDefs i IndexDefs.
+Deletelndex(const Name: string) - kasuje indeks o podanej nazwie.
+DeleteTable - usuwa tabelę ze wszystkimi danymi z bazy. Tabela musi być zamknięta.
+EmptyTable - usuwa wszystkie wiersze z tabeli (jeśli użytkownik posiada odpowiednie uprawnienia).
+GetIndexNames(List: TStrings) - zwraca listę nazw indeksów tabeli.
+
+
+GotoCurrent(Tble: TIBTable) - synchronizuje pozycję bieżącego rekordu tabeli z rekordem z tabeli podanej jako parametr. Wartości właściwości Database i TableName dla obu komponentów powinny być identyczne, w przeciwnym razie zostanie zgłoszony wyjątek. Metoda może być użyteczna w sytuacji, gdy w aplikacji są dwa komponenty odwołujące się do tej samej tabeli.
+
+TIBQuery, moduł IBQuery
+TIBQuery jest funkcjonalnym odpowiednikiem komponentu TQuery. Wykonuje on zapytanie SQL-a przechowywane we właściwości SQL. Mogą być to zapytania zwracające dane (SELECT) lub modyfikujące tabelę (DELETE, INSERT, UPDATE). Wyższość tego komponentu nad TIBTable polega na możliwości uzyskania dostępu do kilku tabel z jednego zapytania (złączenia) i automatycznego dodania warunków ograniczających liczbę zwracanych wierszy i kolumn.
+
+Właściwości
+Active - określa czy zapytanie jest otwarte (aktywne).
+BufferChunks - określa wartość, o jaką będzie zwiększany bufor (w liczbie wierszy). Dotyczy pracy w trybie CachedUpdates.
+CachedUpdates - pozwala na włączenie trybu CachedUpdates (buforowane uaktualnienia). Jeśli ten tryb pracy jest włączony, to wszystkie modyfikacje wierszy, kasowanie i wstawianie odbywają się w buforze po stronie aplikacji klienta. Po zakończeniu pracy wszystkie zmiany mogą zostać wysłane na serwer w ramach jednej transakcji.
+Constraints - opis więzów integralności na poziomie rekordu. Tutaj można utworzyć więzy bazujące na wartościach kilku pól. W razie wystąpienia potrzeby wykorzystania więzów na poziomie pojedynczej kolumny, należy je stworzyć w odpowiednim komponencie TField.
+DataSource - wskazuje na komponent źródła danych, z którego będą pobierane pola do wypełnienia parametrów o takiej samej nazwie w zapytaniu. Jest to szczególnie wygodne w sytuacji tworzenia relacji master-detail. Wartości parametrów są ustawiane natychmiast po zmianie wartości odpowiednich pól w źródle danych. Komponent DataSource musi zostać utworzony i uaktywniony przed otwarciem zapytanie szczegółowego.
+ForcedRefresh - określa czy dane mają być odświeżone po wykonaniu zapisu (metoda Post), czy nie.
+GenerateParamNames - ustawienie właściwości na True wymusza na komponencie wygenerowanie listy nazw parametrów.
+GeneratorField - właściwość pozwalająca na automatyczne pobieranie wartości z określonego generatora i wstawianie do wybranego pola.
+ParamCheck - określa czy lista parametrów powinna być generowana ponownie po każdej zmianie treści zapytania (SQL) w czasie wykonywania programu. Ta właściwość jest wygodna w przypadku korzystania z języka definiowania danych (DDL), gdzie parametry są elementami języka, a nie dla TIBQuery - np. definicja procedury składowanej.
+ParamCount - zwraca liczbę parametrów zapytania. 
+Params - ta właściwość przechowuje wszystkie parametry zapytania. Znając nazwy parametrów, wygodniej jest skorzystać z funkcji ParamByName. Z kolei Params pozwala na zmianę typu parametrów i ich nazw.
+Prepared - określa czy zapytanie zostało przygotowane. Wiąże się to z alokacją zasobów po stronie klienta i serwera. Przygotowanie często wykonywanych zapytań pozwala na wydajniejsze korzystanie z zapytania. Zapytanie jest automatycznie przygotowywane przed wykonaniem, jeśli nie zrobił tego sam programista. Dobrą praktyką jest samodzielne kontrolowanie wywołań metod Prepare i Unprepare.
+RowsAffected - ta właściwość zwraca liczbę wierszy, na których zostało wykonane ostatnie zapytanie. Jeśli zwracana jest wartość -l, to ani jeden wiersz nie został uaktualniony, ani skasowany.
+StatementType - pozwala na określenie rodzaju zapytania - czy jest to DDL, zapytanie typu Select, Update itp.
+SQL - właściwość przechowująca treść zapytania w formie tekstowej jako typ TStringList.
+StmtHandle - określa uchwyt wyrażenia zapytania. Jest to przydatne w sytuacji, gdy korzystamy z funkcji InterBase API w celu uzyskania bezpośredniego dostępu do serwera.
+Text - przechowuje bieżące zapytanie w formie tekstu. Parametry są zastąpione znakiem zapytania '?'. Do sprawdzenia aktualnej treści zapytania lepiej jest korzystać z właściwości SQL.
+Transaction - określa transakcję w kontekście której dane zapytanie będzie wykonane.
+UniDirectional - określa czy dla wyniku zapytania będą uaktywnione kursory dwukierunkowe. Jeśli nie jest nam potrzebna możliwość poruszania się po wyniku w dwóch kierunkach, to ustawienie tej właściwości na True zmniejszy zużycie pamięci i poprawi wydajność wykonania.
+UpdateObject - przechowuje wskaźnik do komponentu typu TIBUpdateSQL. Ten komponent pozwoli aktualizować dane, które są zwracane jako dane tylko do odczytu, czy w trybie CachedUpdates.
+
+Zdarzenia
+W komponencie TIBTable wprowadzane są te same zdarzenia, które zostały wymienione przy komponencie TIBStoredProc. Poza tym dziedziczy standartowe zachowanie komponentu TDataset.
+
+Ważne metody
+BatchInput(InputObject: TIBBatchInput) - wykonuje sparametryzowane zapytanie z danymi wejściowymi określonymi w zadanym obiekcie wejściowym (np. TIB InputRawFile).
+Batch0utput(0utput0bject: TIBBatchOutput) - wykonuje zapytanie i przesyła wyniki do zadanego obiektu wyjściowego (np. TIBOutputRawFil)}.
+ExecSQL - wykonuje zapytanie zapisane we właściwości SQL nie zwracające danych, np. Insert, Update, Delete. Dla zapytań zwracających dane należy skorzystać z metody Open lub ustawić właściwość Active na True.
+GetDetailLinkFields(MasterFields, DetailFields: TList) - tworzy listy zawierające pola tworzące relację master-detail.
+ParamByNarne(const Va1ue: string) - zwraca parametr o nazwie podanej jako parametr.
+Prepare - przygotowuje zapytanie do wykonania - wysyła zapytanie na serwer w celu zoptymalizowania go przed jego wykonaniem i zaalokowania niezbędnych zasobów.
+UnPrepare - zwalnia zasoby zaalokowane podczas przygotowania zapytania do wykonania. Dobrą praktyką jest wywołanie tej metody wtedy, gdy zapytanie nie musi być już dłużej wykorzystywane.
+
+TIBUpdateSQL, moduł IBUpdateSQL
+Komponent TIBUpdateSQL pozwala modyfikować dane przeznaczone tylko do odczytu przy wykorzystaniu trybu CachedUpdates. Dla zbioru danych, który wykorzystuje IBUpdateSQL, należy określić wyrażenia SQL odpowiedzialne za wstawianie, kasowanie i modyfikację. Połączenie komponentów, np. TIBQuery i TIBUpdateSQL, następuje przez ustawienie właściwości UpdateObject komponentu pierwszego. Odpowiednie zapytania wywoływane są wtedy automatycznie.
+
+Właściwości
+Dataset - wskazuje na zbiór danych (np. TIBQuery) z którym jest połączony dany komponent.
+DeleteSQL - przechowuje zapytanie kasujące SQL-a wykorzystywane do usuwanie wierszy przy włączonym trybie CachedUpdates. W trakcie projektowania aplikacji najwygodniej jest użyć edytora UpdateSQL do utworzenia odpowiednich wyrażeń SQL.
+InsertSQL - ta właściwość powinna zawierać treść zapytania odpowiedzialnego za wstawianie wierszy przy zatwierdzaniu zmian wykonanych w trybie CachedUpdates.
+ModifySQL - przechowuje zapytanie SQL Update, wykorzystywanego do modyfikowania danych w trybie CachedUpdates.
+Query[UpdateKind: TUpdateKind] - zwraca komponent typu TIBQuery dla operacji określonej w parametrze - ukInsert, ukDelete, ukUpdate. Jeśli brak jest odpowiedniego wyrażenia SQL, to właściwość ta zwróci wartość nil.
+RefreshSQL - określa zapytanie odpowiedzialne za odświeżenie danych z bazy.
+SQL[UpdateK-nd: TUpdateKind] - właściwość zwraca treść zapytania SQL wykorzystywanego w określonej operacji w formie obiektu TStringList.
+
+Zdarzenia
+Brak.
+
+Ważne metody
+Apply(UpdateKind: TUpdateKind) - ustawia parametry dla aktualizacji określonej w parametrze i następnie wykonuje odpowiednie zapytanie dla bieżącego wiersza. Jeśli zapytanie nie wymaga parametrów, lepiej jest skorzystać z metody ExecSQL.
+ExecSQL(UpdateKind: TUpdateKind) - wywołuje zapytanie aktualizacyjne dla operacji określonej w parametrze. Jeśli zapytanie wymaga ustawienia parametrów, to wcześniej należy wywołać metodę SetParams lub skorzystać z metody Apply.
+SetParams(UpdateKind: TUpdateKind) - ustawia parametry dla zapytania określonego w parametrze.
+Komentarz
+Do tworzenia komponentu w fazie projektowania wygodnie jest skorzystać z edytora właściwości UpdateSQL. W razie wystąpienia potrzeby uzyskania dostępu do poprzedniej wartości któregoś z pól, należy odwołać się do parametru o nazwie OLD + nazwa pola. Komponent TIBUpdateSQL w połączeniu z TIBQuery pozwala na szybkie i wygodne utworzenie aplikacji korzystającej z bazy danych.
+
+TIBDataSet, moduł IBCustomDataSet
+TIBDataset pozwala na wykonywanie poleceń SQL-a. Komponent ten buforuje wynik zapytania Select i umożliwia jego pełne przewijanie w dwóch kierunkach oraz edycję. Może on stanowić funkcjonalny i wygodny odpowiednik TIBQuery i TIBUpdateSQL w jednym komponencie. Ponieważ TIBDataset dziedziczy po TDataSet, to bardzo dobrze współpracuje ze standartowymi kontrolkami służącymi do obsługi baz danych. Do ustawiania zapytań w trakcie tworzenia aplikacji wygodnie jest skorzystać z Dataset Editor.
+
+Właściwości
+Active - określa czy zapytanie jest aktywne.
+AutoCalcFields - jeśli ta właściwość ma wartość True, to zdarzenie OnCalcFields, pozwalające na ustawienie wartości pól wyliczeniowych, jest wywoływane w następujących przypadkach:
+* po otwarciu zbioru danych,
+* po przejściu w tryb edycji,
+* przy zmianie aktywnej kontrolki bazodanowej na skojarzoną z inną kolumną, jeśli dane uległy zmianie,
+* po odczycie wiersza z bazy danych.
+Jeśli właściwość ma wartość False, to zdarzenie nie jest wywoływane podczas zmiany kolejnych wartości kolumn w wierszu.
+BufferChunks - określa wartość, o jaką będzie zwiększany bufor (w liczbie wierszy). Dotyczy pracy w trybie CachedUpdates.
+CachedUpdates - pozwala na włączenie trybu CachedUpdates (buforowane uaktualnienia). Jeśli ten tryb pracy jest włączony, to wszystkie modyfikacje wierszy, kasowanie, wstawianie odbywają się w buforze po stronie aplikacji klienta. Po zakończeniu pracy wszystkie zmiany mogą zostać wysłane na serwer w ramach jednej transakcji.
+Database - komponent bazy danych, który kontroluje połączenie zapytania z serwerem.
+DataSource - wskazuje na komponent źródła danych, z którego będą pobierane pola do wypełnienia parametrów o takiej samej nazwie w zapytaniu. Jest to szczególnie wygodne w sytuacji tworzenia relacji master-detail. Wartości parametrów są ustawiane natychmiast po zmianie wartości odpowiednich pól w źródle danych. Komponent DataSource musi zostać utworzony i uaktywniony przed otwarciem zapytania szczegółowego.
+DeleteSQL - przechowuje zapytanie odpowiedzialne za usuwanie wierszy z bazy.
+ForcedRefresh - określa czy dane mają być odświeżone po wykonaniu zapisu (metoda Post), czy nie.
+GeneratorField - bardzo wygodna właściwość umożliwiająca automatyczne pobieranie wartości z określonego generatora i wstawianie do wybranego pola.
+InsertSQL - przechowuje zapytanie odpowiedzialne za wstawianie wierszy do tabeli.
+ModifySQL - przechowuje zapytanie służące do aktualizacji wierszy w tabeli.
+ParamCheck - określa czy lista parametrów powinna być generowana ponownie po każdej zmianie treści zapytania (SQL) w czasie wykonywania programu. Ta właściwość jest wygodna w przypadku korzystania z języka definiowania danych (DDL), gdzie parametry są elementami języka, a nie dla TIBQuery - np. definicja procedury składowanej.
+Params - umożliwia ustawienie wartości parametrów zapytania.
+Prepared - określa czy zapytanie zostało przygotowane. Wiąże się to z alokacją zasobów po stronie klienta i serwera. Przygotowanie często wykonywanych zapytań pozwala na wydajniejsze korzystanie z zapytania. Zapytanie jest automatycznie przygotowywane przed wykonaniem, jeśli nie zrobił tego programista. Dobrą praktyką jest samodzielne kontrolowanie wywołań metod Prepare i Unprepare.
+QDelete - umożliwia bezpośredni dostęp do obiektu zawierającego zapytanie SQL odpowiedzialnego za usuwanie danych.
+QInsert - umożliwia bezpośredni dostęp do obiektu zawierającego zapytanie SQL odpowiedzialnego za dodawanie danych.
+QModify - umożliwia bezpośredni dostęp do obiektu zawierającego zapytanie SQL odpowiedzialnego za modyfikowanie danych.
+QRefresh - umożliwia bezpośredni dostęp do obiektu zawierającego zapytanie SQL odpowiedzialnego za odświeżanie danych w wierszu lub całym zbiorze.
+QSelect - umożliwia bezpośredni dostęp do obiektu zawierającego zapytanie SQL odpowiedzialnego za pobieranie danych z bazy.
+RefreshSQL - przechowuje zapytanie służące do odświeżania danych. 
+SelectSQL - przechowuje zapytanie służące do pobierania danych z bazy.
+Transaction - wskazuje na komponent transakcji, w kontekście której będą wykonywane zapytania.
+UniDirectional - określa czy dla wyniku zapytania będą uaktywnione kursory dwukierunkowe. Jeśli nie jest nam potrzebna możliwość poruszania się po wyniku w dwóch kierunkach, to ustawienie tej właściwości na True zmniejszy zużycie pamięci i poprawi wydajność wykonania.
+UpdateObject - przechowuje wskaźnik do komponentu typu TlBUpdateSQL. Ten komponent pozwala aktualizować dane, które są zwracane jako dane tylko do odczytu, lub w trybie CachedUpdates.
+
+Zdarzenia
+W komponencie TIBDataset wprowadzane są te same zdarzenia, które zostały wymienione przy komponencie TIBStoredProc. Poza tym dziedziczy on standartowe zachowanie komponentu TDataset.
+
+Ważne metody
+BatchInput(InputObject: TIBBatchInput) - wykonuje sparametryzowane zapytanie zdanymi wejściowymi określonymi W zadanym obiekcie wejściowym (np. TIBIn-putRawFile).
+BatchOutput(OutputObject: TIBBatchOutput) - wykonuje zapytanie i przesyła wyniki do zadanego obiektu wyjściowego (np. TIBOutputRawFile)
+ExecSQL - wykonuje zapytanie zapisane we właściwości SQL nie zwracające danych, np. Insert, Update, Delete. Dla zapytań zwracających dane należy skorzystać z metody Open lub ustawić właściwość Active na True.
+Prepare - przygotowuje zapytanie do wykonania - wysyła zapytanie na serwer w celu zoptymalizowania go przed jego wykonaniem.
+UnPrepare - zwalnia zasoby zaalokowane podczas przygotowania zapytania do wykonania. Dobrą praktyką jest wywołanie tej metody, gdy zapytanie nie musi być już dłużej wykorzystywane.
+
+TIBSQL, moduł IBSQL
+Komponent TIBSQL jest najbardziej elementarnym narzędziem służącym do wywoływania wyrażeń SQL-owych. Ponieważ nie dziedziczy on po TDataset, to nie można go podłączyć do standartowych kontrolek bazodanowych. Dodatkowo należy pamiętać, że otrzymany rezultat jest zbiorem jednokierunkowym (jest to widoczne z powodu braku metody Prior lub podobnej).
+
+Właściwości
+Bof - określa czy bieżący wiersz znajduje się początku zbioru danych.
+Database - połączenie z bazą danych, w której mają zostać wykonane polecenia SQL-a.
+DBHandle - uchwyt do bazy danych.
+Eof - określa czy bieżący wiersz znajduje się na końcu zbioru danych.
+FieldIndex - zwraca indeks pola o zadanej nazwie.
+Fields - zwraca pola o zadanym indeksie. Zwracany typ nie jest zgodny z TField (jest to typ TIBXSQLVAR).
+GenerateParamNames - ustawienie tej właściwości na True spowoduje, że zostanie wygenerowana list nazw parametrów.
+GoToFirstRecordOnExecute - wartość True oznacza, że po otwarciu zapytania bieżący rekord zostanie ustawiony jako pierwszy w zbiorze.
+Handle - uchwyt do zapytania.
+Open - określa czy zapytanie jest otwarte.
+ParamCheck - określa czy lista parametrów powinna być generowana ponownie po każdej zmianie treści zapytania (SQL) w czasie wykonywania programu. Ta właściwość jest wygodna w przypadku korzystania z języka definiowania danych (DDL), gdzie parametry są elementami języka, a nie dla TIBSQL - np. definicja procedury składowanej.
+Params - przechowuje listę parametrów zapytania.
+Plan - zwraca plan zapytania po tym, gdy zapytanie zostało przygotowane przez wywołanie metody Prepare.
+Prepared - określa czy zapytanie jest przygotowane.
+RecordCount - zwraca liczbę wierszy przetworzonych w zapytaniu. Właściwość zostaje ustawiona po tym, gdy kolejny wiersz w zbiorze danych zostanie odwiedzony. Jeśli zwrócone zostało 200 rekordów, to na początku RecordCount ma wartość l, po wejściu na następny 2 itd.
+RowsAffected - zwraca liczbę wierszy, na których wykonano operacje Insert, Update, Delete.
+SQL - treść zapytania SQL w formie TStringList. 
+SQLType - zwraca rodzaj wykonanego zapytania.
+Transaction - zwraca transakcję bądź pozwala na ustawienie transakcji, w kontekście której będzie wykonane zapytanie.
+TRHandle - zwraca uchwyt do transakcji zapytania.
+UniqueRelationName - określa unikalną nazwę relacji dla zapytania wykonywanego na jednej tabeli.
+
+Zdarzenia
+OnSQLChanging - zdarzenie jest wywoływane wtedy, gdy zostaje zmienione wyrażenie SQL-a.
+
+Metody
+Batchlnput(InputObject: TIBBatchlnput) - wykonuje sparametryzowane zapytanie z danymi wejściowymi określonymi w zadanym obiekcie wejściowym (np. TIB InputRawFile).
+BatchOutput(OutputObject: TIBBatchOutput) - wykonuje zapytanie i przesyła wyniki do zadanego obiektu wyjściowego (np. TIBOutputRawFile).
+Call(ErrCode: ISC_STATUS; RaiseError: Boolean): ISC_STATUS - zwraca komunikat o błędzie dla podanego numeru błędu. Umożliwia też, opcjonalnie, zgłoszenie wyjątku.
+CheckClosed - sprawdza czy zbiór danych jest zamknięty. Jeśli zapytanie nie jest zamknięte, to zgłasza wyjątek.
+CheckOpen - sprawdza czy zbiór jest otwarty. Jeśli jest zamknięty, to zostaje zgłoszony wyjątek.
+CheckValidStatement - zgłasza wyjątek, jeśli zapytanie zawiera prawidłowe wyrażenie.
+Close - zamyka zapytanie.
+Current: TIBXSQLDA - zwraca bieżący wiersz. Dostęp do pól odbywa się za pomocą funkcji ByName wywoływanych na rzecz TIBXSQLDA.
+ExecQuery - wykonuje zapytanie SQL.
+FieldByName(FieldName:   String):  TIBXSQLVAR - zwraca pole o zadanej nazwie. Dostęp do wartości pola odbywa się tak, jak w przypadku TField - właściwości AsLong, AsString itd.
+FreeHandle - zwalnia zasoby InterBase skojarzone z tym zapytaniem. 
+Next - zwraca wskaźnik do następnego wiersza. 
+Prepare - przygotowuje zapytanie do wykonania.
+
+TIBDatabaselnfo, moduł IBDatabaselnfo
+Ten komponent zwraca informacje na temat podłączonej bazy danych, takie jak numer wersji, struktury zapisu, liczbę zapisanych stron itp. W celu uzyskania tych danych musi być uaktywnione połączenie z bazą.
+
+Właściwości
+Allocation - zwraca liczbę zaalokowanych stron bazy danych.
+BackoutCount - określa ile razy usunięto rekord z informacją o wersji bazy danych.
+BaseLevel - zwraca numer wersji bazy danych (obecnie będzie to 6). 
+CurrentMemory - określa ile pamięci wykorzystuje serwer (w bajtach).
+Database - służy do określenia bazy danych, z której mają zostać pobrane informacje.
+DBFi1eName - zwraca nazwę pliku z bazy danych. 
+DBImplementationClass -zwraca numer klasy implementacji bazy. 
+DBImplementationNo - zwraca numer implementacji bazy. 
+DBSiteName - zwraca nazwę komputera, na którym znajduje się baza danych. 
+DBSQLDialect - zwraca dialekt SQL-a danej bazy danych.
+DeleteCount - zwraca informację o liczbie skasowań, które wystąpiły w bazie danych od czasu ostatniego podłączenia.
+ExpungeCount - zwraca informację o liczbie usunięć rekordu oraz wszystkich jego poprzedników, których usunięcie zostało zatwierdzone.
+Fetches - zwraca liczbę odczytów z pamięci podręcznej.
+ForcedWrites - zwraca informację o trybie, w jakim odbywają się zapisy bazy danych. 
+0 -określa tryb asynchroniczny, l - synchroniczny.
+Marks - zwraca liczbę zapisów do pamięci podręcznej.
+MaxMemory - zwraca maksymalną ilość wykorzystanej pamięci od czasu pierwszego podłączenia do bazy danych.
+NoReserve - określa czy na stronach bazy danych jest zarezerwowane miejsce na przechowanie zapasowych kopii starszych wersji modyfikowanych rekordów. 0 oznacza, że jest, l -że nie jest zarezerwowane.
+NumBuffers - zwraca liczbę aktualnie zaalokowanych buforów pamięci.
+ODSMajorVersion - zwraca starszy numer wersji fizycznej struktury pliku bazy danych. Próba podłączanie się do bazy o innej wersji struktury jest niemożliwa i zgłaszany jest błąd.
+ODSMinorVersion - zwraca nowszy numer wersji fizycznej struktury pliku bazy danych. Jeśli numer ulega zmianie, to w obrębie jednego starszego numeru nadal możliwy jest dostęp do bazy danych.
+PageSize - zwraca rozmiar strony w bajtach.
+PurgeCount - zwraca liczbę usunięć wszystkich zbędnych wersji rekordów.
+ReadIdxCount - zwraca liczbę odczytów z bazy danych wykonanych za pomocą indeksów od momentu ostatniego podłączenia do bazy.
+ReadOnly - zwraca informację, czy baza jest bazą tylko do odczytu. 0 - tylko do odczytu, l - zapis/odczyt.
+Reads - zwraca liczbę odczytów ze stron bazy od momentu ostatniego podłączenia do bazy.
+ReadSeqCount - zwraca liczbę odczytów wykonanych z każdej tabeli od momentu ostatniego podłączenia do bazy.
+SweepInterval - zwraca liczbę transakcji, które mają zostać zatwierdzone przed automatycznym przeprowadzeniem porządkowania bazy danych.
+UpdateCount - zwraca liczbę uaktualnień bazy danych od momentu ostatniego podłączenia do bazy danych.
+UserNames - zwraca nazwy wszystkich użytkowników aktualnie podłączonych do bazy danych.
+Version - zwraca łańcuch zawierający informację o wersji implementacji bazy danych.
+Writes - zwraca liczbę zapisów wykonanych na stronach bazy danych.
+
+Zdarzenia
+Brak.
+
+
+Metody
+Call(ErrCode:ISC_STATUS;RaiseError:Boolean): ISC_STATUS - zwraca komunikat o błędzie dla podanego numeru błędu. Umożliwia też, opcjonalnie, zgłoszenie
+wyjątku.
+
+TIBSQLMonitor, moduł IBSQLMonitor
+TIBSQLMonitor umożliwia monitorowanie komunikacji zapytań SQL-owych przesyłanych do serwera. We właściwości TraceFlags należy wybrać, którymi akcjami jest zainteresowany użytkownik i w zdarzeniu OnSQL obsłużyć informację o zdarzeniu.
+
+Właściwości
+Enabled - określa czy monitor SQL-ajest aktywny.
+TraceFlag - zbiór znaczników określający, jakie zdarzenia mająbyć monitorowane:
+* tfQPrepare - przygotowanie zapytania,
+* tfQExecute - wykonanie,
+* tfQFetch - pobranie wierszy,
+* tfError - informacje o błędach,
+* tfStmt - przesyłane wyrażenia,
+* tfConnect - podłączenia do baz,
+* tfTransact - informacje o transakcjach,
+* tfBlob - informacje o BLOB-ach,
+* tfService - informacje o usługach,
+* tfMisc - informacje dodatkowe.
+
+Zdarzenia
+OnSQL - zdarzenie otrzymuje jako parametr łańcuch znaków zawierający informację
+pochodzącą z monitora.
+
+Metody
+Ten komponent nie wprowadza nowych metod.
+
+
+TIBEvents, moduł IBEvents
+Komponent TIBEvents udostępnia prowadzenie przez aplikację obsługi zdarzeń wywoływanych w bazie danych. Umożliwia to nawiązanie swoistej komunikacji bazy danych z programem. Same zdarzenia wywołuje się najczęściej w wyzwalaczach. Pozwala to na reagowanie np. na zmiany danych wykonywane przez inne aplikacje.
+
+Właściwości
+Database - baza danych, z której będą odbierane zdarzenia.
+Events - lista nazw zdarzeń, na które ma reagować komponent. W nazwach rozróżniane są duże i małe litery. Pojedynczy IBEvent może obsłużyć do 15 zdarzeń.
+Queued - wskazuje, że zdarzenia oczekują w kolejce.
+Registered - określa czy zdarzenia są zarejestrowane. Przełączenie tej właściwości na True powoduje wywołanie metody RegisterEvents, która rejestruje zdarzenia wymienione w Events. Komponent reaguje na zarejestrowane zdarzenia.
+
+Zdarzenia
+OnError - zdarzenie jest wywoływane, jeśli wystąpi błąd w trakcie kolejkowania bądź obsługi zdarzeń. Kod błędu jest przekazywany jako parametr ErrorCode.
+OnEventA1ert(Sender; TObject; EventName: Strlng; EventCount: longint; var CancelAlerts: Boolean) - zdarzenie ma miejsce w chwili odebrania zdarzenia. EventName zawiera nazwę ostatnio odebranego zdarzenia. EventCount zawiera liczbę zdarzeń EventName otrzymanych od ostatniego wywołania tej procedury zdarzenia.
+Ustawienie CancelAlerts na True powoduje zakończenie przyjmowania zdarzeń przez komponent. Aby rozpocząć ponowny odbiór zdarzeń, należy wywołać metodę QueueEvents.
+Z procedury obsługi nie można wywołać RegisterEvents, UnRegister Events, Queue Events ani CancelEvents. OnEventAlert jest wywoływane w osobnym wątku, dzięki czemu obsługa zdarzeń jest asynchroniczna, przy czym zapewnia synchronizację, aby mieć pewność, że wywołana jest tylko jedna kopia procedury obsługi zdarzenia.
+
+Metody
+CancelEvents - przerywa obsługę zdarzeń przez komponent. Zdarzenia nie zostają wyrejestrowane - aby ponownie umożliwić ich obsługę, należy wywołać Queue Events.
+QueueEvents - włącza obsługę zdarzeń zarejestrowanych przez RegisterEvents. Jeśli zdarzenia nie zostały zarejestrowane, to zostanie zgłoszony wyjątek.
+RegisterEvents - rejestruje zdarzenia, które mają być obsługiwane przez komponent.
+UnRegisterEvents - kończy rejestrację zarejestrowanych zdarzeń. Automatycznie wywołuje CancelEvents i tym samym żadne zdarzenia nie są już obsługiwane.
+
+TIBExtract, moduł IBExtract
+Komponent jest użyteczny w przypadku, gdy chcemy wygenerować kod SQL-a, który posłuży do utworzenia obiektów w bazie danych. Można uzyskać dostęp do kodu tworzącego tablice systemowe, tablice użytkownika, generatory, indeksy itd. Metody udostępniane przez ten komponent mogą być też przydatne podczas tworzenia własnych generatorów kodu.
+
+Właściwości
+Database - baza danych, z której mająbyć generowane wyrażenia SQL-a.
+DatabaseInfo - komponent TIBDatabaseInfo przechowuje informacje o bazie danych. Są one m.in. wykorzystywane podczas podejmowania decyzji na temat tego, które dane mogą być dostępne (np. na podstawie numeru wersji itp.).
+Items - przechowuje wydzielone polecenia DDL.
+ShowSystem - określa czy mają być generowane informacje o obiektach systemowych. Transaction - transakcja, w kontekście której ma być przeprowadzona ekstrakcja.
+
+Zdarzenia
+Ten komponent nie wprowadza żadnych nowych zdarzeń.
+
+Metody
+GetArrayField(FieldName: String): String - funkcja zwraca informacje o polu tablicowym o zadanej nazwie w formacie: [granica dolna. gran1ca_ górna] GetField Type(FieldType, FieldSubType, FieldScale. FieldSize, FieldPrec, FieldLen: Integer): String - metoda tworzy opis zadanego typu pola w DDL na podstawie podanych parametrów. Funkcja może być użyteczna w przypadku tworzenie systemu generującego kod SQL-a. Wartości dla zmiennej FieldType są zdefiniowane w module IBHeader i są przedstawione w tabeli 3.1.
+Wymienione zostały wartości dające jakiś efekt. Więcej stałych można znaleźć w źródłach. Pozostałe parametry to podtyp pola (np. w BLOB-ach), skala, rozmiar, precyzja i długość.
+
+Tabela 3.1. 
+Wartości dla zmiennej FieldType
+Nazwa stałej
+Wartość
+Odpowiadający typ
+blr_blob
+blr_blob_id
+blr_cstring
+blr_double
+blr_float
+blr_int64
+blr_long
+blr_quad
+blr_short
+blr_sql_date
+blr_sql_time
+blr_text
+blr_timestamp
+blr_varying
+261
+45
+40
+27
+10
+16
+8
+9
+7
+12
+13
+14
+35
+37
+BLOB
+BLOB_ID
+CSTRING
+DOUBLE_PRECISION
+FLOAT
+INT64
+INTEGER
+QUAD
+SMALLINT
+DATE
+TIME
+CHAR
+TIMESTAMP
+VARCHAR
+
+GetCharacterSets(CharSetId, Collaion: Short; CollateOnly: Boolean): String - metoda zwraca łańcuch opisujący typ zestawu znaków i rodzaj sortowania dla podanych starych parametrów. Parametr CollateOnly określa czy ma być zwrócona informacja jedynie o sortowaniu, czy także o zestawie znaków. Dane pobierane są z tabel systemowych RDB$COLLATIONS oraz RDB$CHARACTER_SETS.
+ExtractObject(ObjectType: TExtractObjectTypes; ObjectName: String=''; ExtractTypes: TExtractTypes= []) - dokonuje ekstrakcji kodu SQL-a dla zadanego typu obiektu o podanej nazwie (obiektem może być baza danych). Wygenerowany kod można pobrać z właściwości Items.
+Typ TExtractObjectTypes określa następujące wartości (tabela 3.2):
+
+Tabela 3.2. 
+Wartości określone przez typ TExtractObjectType
+Nazwa stałej
+Opis
+eoDatabase
+eoDomain
+eoTable
+eoView
+eoProcedure
+eoFunction
+eoGenerator
+eoException
+eoBLOBFilter
+eoRole
+eoTrigger
+eoForeign
+eolndexes
+eoChecks
+eoData
+baza danych
+domeny
+tabele
+perspektywy
+procedury
+funkcje użytkownika
+generator
+wyjątki
+filtry BLOB
+role
+wyzwalacze
+klucze obce
+indeksy
+więzy sprawdzające wartości
+dane
+
+TExtractTypes jest zbiorem wartości TExtractType:
+Tabela 3.3. 
+Wartości określone przez typ TExtractType
+Nazwa wartości
+Opis
+etDomain
+etTable
+etRole
+etTrigger
+etForeign
+etlndex
+etData
+etGrant
+etCheck
+etAlterProc
+domeny
+tabele
+Role
+wyzwalacze
+klucze obce
+indeksy
+dane
+nadawanie praw
+więzy sprawdzające wartości
+zmiany procedur
+
+
+
+
+Rozdział 4. IBX - dodatki
+Oprócz komponentów odpowiedzialnych za dostęp do bazy danych i serwisów (są to komponenty widoczne na zakładkach), często trzeba skorzystać z dodatkowych klas biblioteki. W niniejszym rozdziale wymienione zostaną niektóre z klas, te które mogą być najbardziej przydatne.
+
+TIBXSQLVAR, moduł IBSQL
+TIBXSQLVAR jest klasą wykorzystywaną w celu umożliwienia dostępu do pól w wyniku zapytania wykonanego za pomocą komponentu TIBSQL. Od strony funkcjonalności podobny jest do komponentu TField. Pole wewnętrznie reprezentowane jest jako struktura programu InterBase XSQLVAR.
+
+Właściwości
+AsCurrency - umożliwia odczyt bądź zapis wartości pola jako typ pieniężny. 
+AsDate - umożliwia odczyt bądź zapis daty z pola.
+AsDateTime - pozwala odczytać lub zapisać kompletną informację o czasie - datę i godzinę.
+AsDouble - pozwala na odczyt lub zapis liczby zmiennoprzecinkowej podwójnej precyzji z pola.
+AsFloat - umożliwia odczyt i zapis liczby zmiennoprzecinkowej z pola. 
+AsInt64 - pozwala odczytać wartość z pola jako 64-bitową liczbę całkowitą. 
+AsInteger - umożliwia dostęp do 32-bitowej liczby zapisanej w polu. 
+AsLong - w praktyce funkcjonuje tak samo jak AsInteger. 
+AsPointer - pozwala na odczyt i zapis wartości wskaźnika z pola tabeli. 
+AsQuad - w chwili obecnej w praktyce funkcjonuje tak samo jak AsInt64.
+AsShort - umożliwia odczyt i zapis krótkiej (16-bitowej) liczby całkowitej.
+AsString - umożliwia dostęp do tekstu zapisanego w polu.
+AsVariant - przedstawia wartość pola jako typ Variant.
+AsXSQLVAR - zwraca wartość pola jako XSQLVAR.
+Data -właściwość umożliwia dostęp do struktury InterBase XSQLVAR.
+Index - określa pozycję aktualnego XSQLVAR (opisującego pole) w strukturze XSQLDA (opisującej wiersz). 
+IsNull - wartość True oznacza, że pole ma wartość NULL, False informuje, że została przypisana jakaś inna wartość.
+IsNullable - określa czy pole może przyjmować wartość NULL.
+Modified - wartość True oznacza, że wrartość pola została zmieniona. W przeciwnym razie jest wartość False.
+Name - zwraca nazwę struktury XSQLVAR (nazwa pola).
+Size - określa maksymalny rozmiar danych przechowywanych w polu sqldata struktury XSQLVAR.
+SQLType - właściwość wskazuje na typ przechowywanych danych.        
+Value - zwraca wartość pola XSQLVAR jako typ Variant.
+
+Metody
+AssIgn(Source:   TIBXSQLVAR) - przypisują inną strukturę XSQLVAR. Obie struktury muszą przechowywać pola tego samego typu.
+LoadFromFile(const FileName: String) - wczytuje zawartość pliku do pola typu BLOB.
+LoadFromStream(Stream: TStream) - wczytuje strumień do pola typu BLOB. SaveToFi1e(const FileName: String) - zapisuje pole typu BLOB do pliku. SaveToStream (Stream: TStream) - zapisuje pole typu BLOB do strumienia.
+
+TIBXSQLDA, moduł IBSQL
+Klasa jest wykorzystywana przez komponent TIBSQL. Reprezentuje on struktury InterBase XSQLDA - rozszerzonych deskryptorów obszarów. Struktury deskryptorów są odpowiedzialne za komunikację pomiędzy programem użytkownika a bazą danych.
+
+Właściwości
+AsXSQLDA - właściwość umożliwia pobranie lub ustawienie wartości pola danych struktury XSQLDA.
+Count - zwraca liczbę pól XSQLDA.
+Modified - określa czy pole zostało zmodyfikowane.
+Names - zwraca nazwy pól XSQLDA.
+RecordSize - zwraca rozmiar rekordu XSQLDA.
+UniqueRelationName - zwraca nazwę unikalnej relacji, jeśli w zapytaniu stosowana jest tylko jedna relacja. W przeciwnym wypadku zwracana nil.
+Vars : [Idx: Integer] - zwraca klasę opisującą strukturę XSQLVAR dla pola o zadanym indeksie.
+
+Metody
+AddName(FieldName: String; Idx; Integer) - dodaje nazwę FieldName do struktury XSQLDA na pozycji Idx.
+ByName(Idx: Strlng): TIBXSQLVAR - zwraca pole XSQLVAR o zadanej nazwie.
+Biblioteka IBX udostępnia kilka klas umożliwiających wsadowe przetwarzanie danych. Klasą wyjściową dla nich jest TIBBatch. Klasami potomnymi przewidzianymi do praktycznego zastosowania są: TIBInputDelimitedFile, TIBOutputDelimitedFile, TIBOutputRawFile i TIBInputRawFile. Wszystkie wymienione klasy są dostępne w module IBSQL.
+
+TBBBatch
+TIBBatch jest abstrakcyjną klasą bazową dla klas przeprowadzających operacje wsadowe TIBBatchinput i TIBBatchOutput. Teoretycznie klasy te pozwalają na wczytywanie i zapisywanie danych w dowolnym formacie.
+
+Właściwości
+Columns - zwraca kolumny danych z pliku w postaci struktury TIBXSQIDA.
+FileName - umożliwia pobranie lub ustawienie nazwy pliku, na którym ma być przeprowadzona operacja.
+Params - zwraca parametry w postaci struktury TIBXSQLDA.
+
+Metody
+ReadyFile - przygotowuje plik do odczytu lub zapisu, Wywoływana jest bezpośrednio przed wykonaniem operacji.
+
+TIBBatchInput
+Ta klasa jest klasą abstrakcyjną dla wsadowych operacji wejściowych. W przypadku tworzenia własnej klasy "wejściowych" najlepiej jest wyprowadzić ją właśnie z TIBBatchInput.
+Właściwości
+Ta klasa nie wprowadza nowych właściwości.
+
+Metody
+ReadParameters: Boolean - wczytuje parametry wejściowe do wewnętrznej struktury XSQLDA. False oznacza, że określenie wszystkich parametrów nie było możliwe.
+
+TIBBatchOutput
+TIBBatchOutput jest abstrakcyjną klasą bazową przy operacjach wyjściowych i operacjach wsadowych. W przypadku tworzenia własnej klasy "wyjściowych" najlepiej jest wyprowadzić ją właśnie z TIBBatchOutput.
+
+Właściwości
+Ta klasa nie wprowadza nowych właściwości.
+
+Metody
+WriteColumns: Boolean - metoda zapisuje pola z wewnętrznej struktury XSQLDA do pliku. Wynik True oznacza, że operacja zapisu powiodła się.
+
+TIBInputDelimitedFile
+Klasa umożliwia odczyt danych z plików, w których kolumny są zdefiniowane przy pomocy separatorów takich, jak np. tabulator czy przecinek.
+
+Właściwości
+ColDelimiter - ustawia ogranicznik kolumny w pliku wejściowym, np. tabulator, przecinek, '|'.
+ReadBlanksAsNull - wartość True oznacza, że pola wypełnione jedynie spacjami mają być interpretowane jako NULL.
+RowDelimiter - ustawia ogranicznik wiersza w pliku wejściowym, np. znak #0, koniec linii itp. Warto zwrócić uwagę, że ogranicznikiem może być dowolna sekwencja znaków - np. 'abc'.
+SkipTitles - wartość True oznacza, że pierwszy wiersz w pliku zawiera tytuły kolumn i ma zostać pominięty przy odczycie.
+
+TIBOutputDelimitedFile
+Ta klasa umożliwia zapis danych do plików w postaci kolumn rozdzielonych za pomocą separatorów, takich jak przecinek, tabulator itp.
+
+Właściwości
+ColDelimiter - ustawia ogranicznik kolumn w pliku wyjściowym, np. tabulator, przecinek itp.
+OutputTitles - wartość True oznacza, że w pierwszej linii pliku mają zostać umieszczone tytuły kolumn (w tym przypadku będą to nazwy pól).
+RowDelimiter - ustawia ogranicznik wiersza w pliku wynikowym.
+
+TIBInputRawFile
+Klasa umożliwia odczyt plików w takim formacie, w jakim zapisywane są zewnętrzne pliki baz danych InterBase.
+
+Właściwości
+Klasa nie wprowadza nowych właściwości.
+
+Metody
+Klasa nie wprowadza nowych metod.
+
+
+TIBOutputRawFile
+Ta klasa umożliwia zapis plików w formacie zewnętrznych plików baz danych InterBase.
+
+Właściwości
+Klasa nie wprowadza nowych właściwości.
+
+Metody
+Klasa nie wprowadza nowych metod.
+
+Przykład
+Poniższy przykład ilustruje, w jaki sposób zapisać wynik zapytania w pliku zawierającym kolumny rozdzielone separatorami. Przykład wykorzystuje bazę employee.gdb dostarczaną razem z InterBase.
+
+var
+Filename: String;
+RawOutput: TIBOutputDelimitedFIle;
+ begin
+   IBSQLl.Sq1.Text:='Select contact_first, contact_last from customer';
+   Fllename:= 'output.txt';
+   RawOutput:= TIBOutputDelimitedFile.Create;
+   try
+     RawOutput.FileName:= FileName;
+     RawOutput.ColDelimiter:= '|';
+     RawOutput.RowDelimiter:= #13#10;
+     IBSQL1.BatchOutput(RawOutput);
+  finally                                                              
+    RawOutput.Free;
+ end;
+end.
+
+
+Rozdział 5. IBX - serwisy
+Oprócz komponentów odpowiedzialnych za dostęp do danych, biblioteka IBX udostępnia zestaw komponentów pozwalających na przeprowadzenie szeregu zadań konfiguracyjnych serwera. Dostęp do serwisów, bo o nich mowa, obecnie jest możliwy jedynie w przypadku instalacji programu InterBase w systemie Windows.
+
+TIBCustomService, moduł IBSemces
+Wszystkie komponenty usług dziedziczą po tym komponencie. Wprowadza on podstawowe właściwości i metody wykorzystywane w klasach potomnych.
+
+Właściwości
+Active - przełącza serwis ze stanu aktywnego na nieaktywny (i odwrotnie). 
+Handle - uchwyt do bazy danych.
+LoginPrornpt - włącza lub wyłącza funkcję wyświetlania okienka logowania przy podłączaniu do bazy danych.
+Params - ustawia parametry przekazywane do bazy danych. Przede wszystkim nie należy zapominać o ustawieniu 'user_name' i 'password'.
+Protocol - umożliwia wybranie protokołu podłączenia do bazy danych. Do wyboru są wartości: TCP, SPX, NamedPipe, Local.
+ServerName - nazwa serwera, na którym ma zostać uruchomiony serwis. W przypadku maszyny lokalnej - 'localhost'.
+ServiceParamBySPB - zwraca i ustawia parametry SPB1 o podanym indeksie. Są to parametry wykorzystywane podczas podłączania do serwisu i przechowywane są we właściwości Params.
+
+Metody
+Attach - dokonuje podłączenia do menadżera serwisów na serwerze bazy danych. 
+Detach - odłącza usługę od menedżera na serwerze.
+
+Zdarzenia
+OnAttach - zdarzenie jest wywoływane podczas podłączania do serwera. Jeśli w procedurze obsługi wystąpi wyjątek, to podłączenie zostanie przerwane.
+OnLogin - zdarzenie ma miejsce podczas logowania do bazy danych.
+
+TIBControlService, moduł IBServices
+TIBControlService jest klasą, po której dziedziczą wszystkie komponenty serwisów. Sam komponent dziedziczy bezpośrednio po TIBCustomService.
+
+Właściwości
+IsServiceRunning - umożliwia sprawdzenie czy serwis jest aktualnie wykonywany. Przy wywoływaniu kilku metod na rzecz jednej usługi można dopisać między kolejnymi wywołaniami następującą małą pętlę:
+while IBConfigService1.IsServiceRunning do Sleep(5);
+
+Metody
+ServiceStart - uruchamia usługę.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+TIBConfigService, moduł IBSemces
+Ten komponent umożliwia ustawienie parametrów bazy danych.
+
+Właściwości
+DatabaseNarne - umożliwia ustawienie i pobranie nazwy bazy danych, która ma być konfigurowana przez serwis.
+
+Metody
+ActivateShadow - uaktywnia opcję pozwalającą na korzystanie z pliku cienia bazy danych, jeśli ten plik został wcześniej utworzony. Korzystanie z cieni umożliwia odzyskanie bazy danych w razie awarii sieci czy dysków.
+BringDatabaseOnline - przywraca bazę danych w tryb on-line.
+SetAsyncMode(Value: Boolean) - pozwala na zmianę trybu zapisu danych na dysk. W trybie asynchronicznym (true) zapis wszelkich zmian jest buforowany w pamięci, co jest metodą szybszą. Z kolei w trybie synchronicznym (false) wymuszany jest zapis danych na dysk, co zwiększa bezpieczeństwo danych.
+SetDBSqlDialect(Value: Integer) - ustawia dialekt SQL-a w bazie danych. Dopuszczalne wartości to 1, 2 i 3.
+SetPageBuffers(Value: Integer) - ustawia liczbę buforów stron bazy danych. W buforach przechowywane są strony bazy, do których następują odwołania klientów, co powoduje zwiększenie szybkości pracy.
+SetReadOnly(Value: Boolean) - pozwala na włączenie bazy danych w tryb tylko do odczytu. W tym trybie nie można w ramach transakcji dopisywać, aktualizować i usuwać danych.
+SetReserveSpace(Value; Boolean) - wartość True powoduje zarezerwowanie miejsca na stronach bazy danych na zapis kolejnych wersji danych.
+SetSweepInterval (Value: Integer) - pozwala na określenie liczby transakcji, po której ma nastąpić "sprzątanie" bazy danych. Wartość zero wyłącza opcję sprzątania.
+ShutdownDatabase(Options: TShutdownMode; Walt: Integer) - powoduje zaniknięcie bazy danych po czasie Wait określonym w sekundach.
+Opcje (Options) mogą przyjąć następujące wartości: 
+* Forced - wymuszone zamknięcie bazy danych po określonym czasie. Wartość zero w Wait spowoduje natychmiastowe zamknięcie bazy.
+* DenyTransaction - nie pozwala na utworzenie nowych transakcji w określonym czasie. Jeśli po czasie wymienionym w Wait jakieś transakcje będą jeszcze aktywne, to zamknięcie bazy nie powiedzie się.
+* DenyAttachment - nie pozwala na nowe podłączenia do bazy danych w określonym czasie. Jeśli po czasie określonym w Wait będą jeszcze istniały aktywne połączenia z bazą, to zamknięcie bazy zakończy się porażką.
+
+TIBBackupRestoreService, moduł IBServices
+Komponent wprowadza bazową funkcjonalność dla klas odpowiedzialnych za tworzenie i odzyskiwanie kopii zapasowych bazy danych. Bezpośrednio po tej klasie dziedziczą TIBBackupService i TIBRestoreService.
+Właściwości
+Verbose - przełącza tryb przekazywania informacji o postępie przy tworzeniu /odzyskiwaniu kopii. Jeśli ustawiona jest na True, to przy pomocy metody GetNextLine można pobierać informacje o etapach przeprowadzanego backupu.
+
+Metody
+Komponent nie wprowadza nowych metod.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+TIBBackupService, moduł IBServices
+Ten komponent umożliwia tworzenie kopii zapasowej bazy danych.
+BackupFile - przechowuje listę nazw plików backupu w postaci TStrings.
+BlockingFactor - określa współczynnik blokowania dla backupu dla urządzeń taśmowych.
+DatabaseName - ścieżka dostępu do bazy danych, dla której ma zostać zrobiona kopia zapasowa.
+Options - opcje dla backupu:
+* IgnoreChecksums - przy tworzeniu kopii sumy kontrolne na stronach bazy danych mają być ignorowane. W normalnych warunkach InterBase nie pozwala na wykonanie backupu, gdy sumy kontrolne są błędne - oznacza to uszkodzenie danych.
+* IgnoreLimbo - transakcje limbo mają być ignorowane. Powstają one z reguły w wyniku niepowodzeń transakcji zatwierdzanych dwufazowo. Jeśli zostanie wybrana ta opcja, to zostaną zignorowane wszystkie wersje rekordów utworzone w ramach błędnych transakcji i zarchiwizowane zostaną jedynie ostatnie zatwierdzone wersje.
+* MetadataOnly - tworzony backup zawiera jedynie metadane - kopia nie będzie zawierała danych.
+* NoGarbageCollection - miejsce zajmowane do tej pory przez starsze wersje rekordów zostają przeznaczone do ponownego wykorzystania.
+* OldMetadataDesc - metadane zostają zapisane w starszym formacie.
+* NonTransportable - wybranie tej opcji powoduje utworzenie kopii, której nie można przenieś na komputer, na którym zainstalowany jest inny system operacyjny. Jeśli ta opcja będzie ustawiona na False, to kopia zostanie utworzona w ogólnym formacie, i będzie można przenieść ją na dowolną platformę.
+* ConvertExtTables - True umożliwia zapis zewnętrznych tabel w backupie jako tabeli wewnętrznych.
+
+Metody
+Klasa nie wprowadza nowych metod.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Przykład:
+Chcąc przeprowadzić backup z własnego programu, można wykorzystać poniższy kod:
+with IBBackupService1 do begin 
+ ServerName:= 'localhost';
+ LoginPrompt:= False;
+ Params.Add('user_name=sysdba'};
+ Params.Add('password=masterkey');
+ Active:= True;
+ try
+  Verbose:= True;
+  Options:=[NonTransportable.IgnoreLimbo];
+  DatabaseName:='C:\Program
+      Files\Borland\InterBase\examples\Database\enployee.gdb';     
+  BackupFile.Add('c:\tmp\ernployee1.gbk');
+  ServiceStart;
+  While not Eof do
+    Memo1.Lines.Add(GetNextLine);
+  finally
+    Active:= False;
+  end; 
+end;
+
+TIBRestoreService, moduł IBSemces
+Komponent pozwala na odtworzenie bazy danych na podstawie utworzonej wcześniej kopii zapasowej.
+
+Właściwości
+BackupFile - właściwość umożliwia ustalenie listy plików składających się na backup, z których ma zostać odtworzona baza danych.
+DatabaseName - ustawia nazwę bazy danych do odzyskania w postaci listy łańcuchów tekstowych.
+Options - opcje, jakie mają zostać wykorzystane przy odzyskiwaniu bazy danych:
+* DeactivateIndexes - w normalnych warunkach podczas odzyskiwania bazy danych InterBase odbudowuje indeksy. Jeśli z tabelą skojarzony jest unikalny indeks, a tabela zawiera duplikaty, to operacja się nie powiedzie. Wybranie tej opcji spowoduje tymczasowe wyłączenie indeksów i typ samym umożliwienie wprowadzenia duplikatów do bazy.
+* NoShadow - w normalnych warunkach InterBase odtwarza cienie bazy danych. Wybranie tej opcji spowoduje, że nie będą one odzyskiwane.
+* NoValidityCheck - opcja pozwala na odzyskanie danych, które zgodnie z nowo zdefiniowanymi więzami integralności, mogą być nieprawidłowe. Po rekonstrukcji danych należy je przetworzyć w celu osiągnięcia zgodności z nowymi więzami, Następnie należy ponownie utworzyć metadane.
+* OneRelationAtATime - wybranie tej opcji spowoduje, że tabele wraz z danymi będą odzyskiwane pojedynczo. Może się to okazać przydatne, gdy dane są uszkodzone lub naruszaj ą więzy integralności.
+* Replace - program odzyskujący bazy danych nie będzie mógł nadpisać istniejącego pliku bazy,  jeśli ta opcja będzie miała wartość False.
+* CreateNew - ta opcja umożliwia odzyskanie backupu do nowego pliku bazy danych.
+* UseAllSpace - podczas odzyskiwania bazy danych InterBase wypełnia kolejne strony danymi w 80%. Wybranie tej opcji spowoduje wypełnianie kolejnych stron w całości.
+PageBuffers - ustawia rozmiar bufora strony (w kilobajtach). 
+PageSize - ustala rozmiar strony (w kilobajtach).
+
+Metody
+Klasa nie wprowadza nowych metod.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Przykład:
+Poniżej pokazano, w jaki sposób odzyskać bazę danych zachowaną we wcześniejszym przykładzie.
+with IBRestoreService1 do begin
+  ServerName := 'localhost';
+  LoginPrompt := False;
+  Params.Add{'user_name=sysdba');
+  Params.Add('password=masterkey');
+  Active:= True;
+  try
+    Verbose:= True;
+    Options:= [Replace, UseAllSpace];
+    PageBuffers:= 3000;
+    PageSize:= 4096;
+    BackupFile.Add('c:\tmp\employee1.gbk');
+    DatabaseName. Add('c:\tmp\employee.gdb');
+    ServiceStart;
+    While not Eof do
+    Memo1.ines.Add(GetNextLine);
+  finally
+   Active:=False;
+  end;
+end;
+
+
+TIBValidationService, moduł IBServices
+Ten komponent, dziedziczący po TIBControlAndQueryService, implementuje dostęp do usługi sprawdzenie poprawności bazy danych i rozwiązanie problemów związanych z transakcjami.
+
+Właściwości
+DatabaseName - nazwa bazy danych, która ma zostać sprawdzona i naprawiona.
+GlobalAction - pozwala na zdefiniowanie globalnej akcji dla nie zakończonych transakcji. Istnieją następujące możliwości:
+* CommitGlobal - transakcje mają być zatwierdzane. 
+* RollbackGlobal -transakcje mają być wycofane.
+* RecoverTwoPhaseGlobal - transakcje będą objęte dwufazowym zatwierdzaniem.
+* NoGlobalAction - nie będzie podejmowana żadna akcja.
+LimboTransactionInfo - ta właściwość zwraca informacje o kolejnych zaginionych transakcjach w postaci rekordu o następującej strukturze:
+TLImboTransactionInfo=record
+  MultiDatabase: Boolean;      //Transakcja na wielu bazach 
+  ID: Integer;                 // Identyfikator transakcji
+  HostSite: String;            // Nazwa maszyny 
+  RemoteSite: String;          // Nazwa zdalnej maszyny 
+  RemoteDatabasePath: String;  // Ścieżka do bazy danych
+  State: TTransactionState:    // Stan transakcji 
+  Advise; TTransactionAdvise;  // Zalecana akcja
+  Action: TTransactionAction:  // Akcja 
+end:
+Transakcja może znajdować się w jednym z następujących stanów:
+* LimboState - zaginiony.
+* CommitState - zatwierdzony.
+* RollbackState - wycofany.
+* UnknownState - nieznany.
+Zalecane akcje mogą być następujące: 
+* CommitAdvise - zalecane zatwierdzenie transakcji.
+* RollbackAdvise - zalecane cofnięcie.
+* UnknownAdvise - nieustalone zalecenie. 
+Z kolei akcją przeprowadzaną na zaginionej transakcji może być:
+* CommitAction - zatwierdzenie.
+* RollbackAction - cofnięcie.
+LimboTransactionInfoCount - właściwość zwraca liczbę transakcji w tablicy LimboTransactlonlnfo.
+Options - umożliwia ustawienie opcji dla operacji sprawdzania bazy danych:
+* LimboTransactions - ma być zwrócona lista zaginionych transakcji.
+* CheckDB - sprawdza bazę, ale nie dokonuje napraw. Opcja wykorzystywana  w połączeniu z ValidateDB.
+* IgnoreChecksum - błędy sum kontrolnych mają być ignorowane.
+* KillShadows - usuwa niedostępne pliki cienie bazy danych.
+* MendDB - przygotowuje uszkodzoną bazę danych do backupu.
+* SweepDB - przeprowadza czyszczenie bazy danych.
+* ValidateDB - sprawdza poprawność struktury bazy danych.
+* ValidateFull - naprawia fragmenty rekordów.
+
+with IBValidationService1 do begin
+if CheckBoxl.Checked then Options:= Options + [LiniboTransactlons];
+1f CheckBox2.Checked then Options:= Options + [CheckDB];
+If CheckBox3.Checked then Options:= Options + [IgnoreChecksum];
+If CheckBox4.Checked then Options:= Options + [KillShadows]:
+If CheckBox5.Checked then Options:= Options + [MendDB]:
+if CheckBox5.Checked then Opticns:= Options + [SweepDB];
+If CheckBox7.Checked then Dptions:= Options + [ValidateDB]:
+If CheckBox8.Checked then Options:= Options + [ValidateFull];
+end:
+
+Metody
+FetchLimboTransactionInfo - pobiera informacje o zaginionych transakcjach z bazy danych. Następnie umożliwia odczytanie tych danych z LimboTransactionInfo.
+FixLimboTransactionErrors -naprawia zaginione transakcje.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+TIBStatisticalService, moduł IBServices
+Komponent umożliwia uzyskanie informacji statystycznych z bazy danych, takich jak zajęte strony itp. Pobranie informacji najlepiej wykonać za pomocą metody GetNextLine.
+
+Właściwości
+DatabaseName - nazwa bazy danych, z której należy pobrać informacje statystyczne. 
+Options - opcje umożliwiające wybór informacji, które mają być pobierane:
+* HeaderPages - przestaje zwracać informacje po otrzymaniu danych dotyczących stron nagłówka.
+* DbLog - kończy raportowanie po pobraniu informacji o stronach logu bazy.
+* IndexPages - mają zostać pobrane dane dotyczące stron indeksów bazy danych.
+* DataPages - żądanie pobrania statystyk dotyczących tabel z danymi.
+* SystemRelations - do statystyk zostaną dołączone informacje o indeksach i tabelach systemowych.
+Metody
+Komponent nie wprowadza nowych metod.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Przykład
+Pobieranie informacji statystycznych z bazy danych wykonuje poniższy kod:
+with IBStatisticalService1 do begin 
+  ServerName:= 'localhost';
+  DatabaseName:= 'C:\Program
+  Fi1es\Borland\InterBase\examples\Database\employee.gdb';
+  LoginPronipt:= False;
+  Params.Add('user_name=sysdba'):
+  Params.Add('password=masterkey');
+  Active:= True;
+  ServiceStart;
+  try
+   Options:= [DataPages, DbLog];
+   While not Eof do
+     Memo1.Lines.Add(GetNextLine); 
+  finally
+  Active:= False;
+  end;
+end;
+
+TIBLogService, moduł IBServices
+Klasa TIBLogService umożliwia dostęp do logu bazy danych z pliku interbase.log z serwera bazy danych. Komponent dziedziczy po TIBControlAndQueryService i nie wprowadza nowych właściwości, metod ani zdarzeń.
+
+Przykład
+with IBLogSeryice1 do begin
+  ServerName:='localhost';
+  LoginPrompt:= False;
+  Params.Add('user_name=sysdba');
+  Params.Add('password=masterkey');
+  Active := True;
+  ServiceStart; 
+  try 
+    While not Eof do
+      Memo1.Lines.Add(GetNextLine);
+  finally
+  Active:= False;
+  end;
+end;
+
+TIBSecurityService, moduł IBServices
+Komponent umożliwia zarządzanie dostępem użytkowników do serwera InterBase, Należy pamiętać o tym, że przy standartowej instalacji i konfiguracji do większości tych funkcji należy korzystać z konta z uprawnieniami administratora (SYSDBA). O ile nie powiedziano inaczej, operacje przeprowadzane są na użytkowniku i identyfikatorze zapisanym we właściwości UserName.
+
+Właściwości
+FirstName - umożliwia wprowadzenie lub pobranie imienia użytkownika.
+GroupID - umożliwia ustalenie identyfikatora grupy, do której należy użytkownik.
+LastName - nazwisko użytkownika z bazy danych.
+MiddleName - drugie imię użytkownika.
+Password - właściwość umożliwiająca zmianę hasła użytkownika.
+SecurityAction - akcja, jaka ma zostać przeprowadzona na użytkowniku. Dostępne możliwości to:
+* ActionAddUser - dodanie nowego użytkownika.
+* ActionDeleteUser - usunięcie użytkownika.
+* ActionDisplayUser - pobranie informacji o użytkowniku celem wyświetlenia.
+* ActionModifyUser - zmiana informacji o użytkowniku.
+SQLRole - nazwa roli, za pomocą której następuje podłączenie do bazy bezpieczeństwa: isc4.gdb.
+UserID - umożliwia podanie numeru identyfikacyjnego użytkownika,
+UserInfo - zwraca informacje o użytkownikach w postaci tablicy rekordów TuserInfo. Liczbę elementów tablicy zwraca właściwość UserInfoCount.
+TUserlnfo = record 
+  UserName: string;
+  FirstName: string;
+  MiddleName: string;
+  LastName: string;
+  GroupID: Integer;
+  UserlD:Integer;
+end;
+
+Aby uzyskać listę użytkowników z bazy danych, można posłużyć się poniższym przykładem:
+with IBSecurityService1 do begin
+  Active:=True;
+  DisplayUsers;
+   For I:=0 to UserInfoCount - l do
+    Memo1.Lines.Add(UserInfo[I].UserName);
+end;
+
+UserInfoCount - liczba użytkowników bazy danych - liczba elementów tablicy UserInfo.
+UserName - nazwa użytkownika, na którym należy przeprowadzić operację.
+Metody
+AddUser - dodaje użytkownika o parametrach podanych we właściwościach do bazy danych.
+DeleteUser - usuwa użytkownika UserName z bazy danych.
+DisplayUser - pobiera informacje o użytkowniku UserName i tworzy rekord TUserlnfo w tablicy UserInfo.
+DisplayUsers - pobiera informacje o wszystkich użytkownikach z bazy danych i wstawia do tablicy UserInfo.
+ModifyUser - zmienia informacje o użytkowniku UserName.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Przykład
+Często nasuwa się pytanie - w jaki sposób umożliwić użytkownikowi zmianę hasła lub wpisanie na nowo np. nazwiska? Standardowo taką możliwość posiada jedynie administrator bazy danych SYSDBA.
+Aby odpowiedzieć na to pytanie, należy przyjrzeć się bazie isc4.gdb nazywanej też bazą bezpieczeństwa serwera. W tabeli o nazwie USERS znajduje się lista użytkowników InterBase: identyfikator, hasło (zaszyfrowane), imię, nazwisko itd. Możliwość modyfikacji tych tabel posiada jedynie administrator. Użytkownik, który chce dokonać zmian w swoich danych, musi otrzymać do tego prawa:
+GRANT UPDATE(FIRST_NAME, MIDDLE_NAME, LAST_NAME, PASSWD, UID, GID,
+GROUP_NAME)ON USERS TO PUBLIC:
+Od tego momentu użytkownik może zmieniać swoje hasło i podstawowe dane - nie jest to jednak najbezpieczniejsze rozwiązanie.
+Można usprawnić to rozwiązanie przez dodanie wyzwalacza przed aktualizacją. Jego zadaniem byłoby sprawdzenie, czy użytkownik modyfikuje swoje dane, czy też "dobiera się" do cudzych. Taki wyzwalacz proponuje np. Ivan Prenosil:
+CREATE EXCEPTION E_Security
+  'Nie masz uprawnień do modyfikacji tego użytkownika.';
+SET TERM  !!;
+CREATE TRIGGER TUser_Modify FOR USERS BEFORE UPDATE
+AS 
+ BEGIN
+  IF (NOT (USER ='SYSDBA'  OR USER = OLD.USER_NAME))
+   THEN EXCEPTION E_Security;
+ END !!
+SET TERM; !!
+Poniżej pokazano, w jaki sposób dodać użytkownika do InterBase:
+with IBSecurityService1 do begin
+  ServerName:='localhost';
+  LoginPrompt:=False;
+  Params.Add('user_name=sysdba');
+  Params.Add('password=masterkey');
+  Active:=True;
+  try
+    UserName:=Edit1.Text:
+    FlrstName:= Edit2.Text;
+    MiddleName:= Edit3.Text;
+    LastName:=Ed1t4.Text;
+    UserID:=StrToInt(Edit5.Text);
+    GroupID:=StrToInt(Edit6.Text);
+    Password:=Edit7.Text;
+    AddUser;
+  finally
+    Active:=False;
+    end;
+  end;
+end;
+
+TIBServerProperties, moduł IBServices
+Komponent umożliwia odczytanie informacji o parametrach, konfiguracji, wersji i licencji serwera bazy danych.
+
+Właściwości
+ConfigParams - ta właściwość zwraca informacje o konfiguracji serwera. Wśród nich można znaleźć takie dane, jak lokalizacja pliku z blokadami, wiadomościami, położeniem bazy danych użytkowników itp. Parametry konfiguracyjne zwracane są jako klasa o następujących polach:
+TConfigParams=class
+public
+ConfigFileData: TConfigFileData;  // Informacja o konfiguracji pliku danych
+ConfigFileParams: array of string; 
+BaseLocation: string;             // Lokalizacja InterBase-a 
+LockFileLocation: string;         // Lokalizacja pliku z blokadami
+MessageFileLocation: string;      // Lokalizacja pliku z komunikatami
+SecurityDatabaseLocation: string: // Lokalizacja bazy isc4.gdb
+end;
+
+TConfigFileData przechowuje informacje w postaci dwóch tablic2, w których (ConfigFi1eValue) zapamiętuje wartość klucza (ConfigFileKey).
+TConfigFileData=class;
+public
+ ConfigFileValue: array of integer;
+ ConfigFileKey: array of integer;
+end;
+DatabaseInfo - właściwość zwraca informacje o bazie danych w postaci klasy TdatabaseInfo o następujących polach:
+* NoOfAttachments - liczba podłączeń. 
+* NoOfDatabases - liczba baz danych. 
+* DbName - tablica nazwy baz danych.
+LicenseInfo - zwraca informacje o licencji serwera - klucz, ID, liczbę licencjonowanych użytkowników:
+TLicenseInfo=class
+ Key: array of string;
+ Id: array of string;
+ Desc: array of string;
+ LicensedUsers: Integer;
+end
+LicenseMaskInfo - właściwość umożliwia uzyskanie masek bitowych z informacją o licencji i właściwościach serwera (serwer lokalny, TCP/IP itp.): 
+TLicenseMasklnfo=class 
+public
+ LicenseMask: Integer;
+ CapabilityMask: Integer;
+end
+Options - umożliwia określenie, które opcje serwera mają być ustawione lub pobrane:
+* Database - klasa TDatabaseInfo z informacjami o bazie danych. 
+* License - klasa TLicenseInfo z informacjami o licencjach.
+* ConfigParameters - klasa TConfigParams z informacjami o konfiguracji serwera.
+* Version - klasa TVersionInfo z informacjami o wersji serwera.
+VersionInfo - właściwość zwraca informacje o wersji serwera bazy danych w postaci poniższej klasy:
+TVersionInfo=class
+ ServerVersion: String;
+ ServerImplementation: string;
+ ServiceVersion: Integer;
+end;
+gdzie:
+* ServerVersion - numer wersji serwera (np. 6.0.1.6).
+* ServerImplementation - tekst z implementacją (InterBase, Windows). 
+* ServiceVersion - numer wersji serwisu..
+
+Metody
+Fetch - pobiera informacje z serwera InterBase.
+FetchConfigParams - pobiera z serwera parametry konfiguracyjne bazy danych.
+FetchDatabaseInfo - pobiera informacje o bazie danych.
+FetchLicenseInfo - pobiera informacje o licencji.
+FetchLicenseMaskInfo - pobiera z serwera maski z informacjami o licencji.
+FetchVersionInfo - pobiera informacje o wersji serwera.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Przykład:
+Poniższy przykład pokazuje, w jaki sposób pobrać informacje o numerze wersji serwera:
+with IBServerProperties1 do begin
+  ServerName:='localhost';
+  LoginPrompt:=False;
+  Params.Add('user_name=sysdba');
+  Params.Add('password=masterkey');
+  Active:=True;
+  try
+    Options:= [Version];
+    FetchVersionInfo;
+    Label1.Caption:='Server Version =' + VersionInfo.ServerVersion;
+    Label2.Caption:='Server Implementation =' +
+    Versionlnfo.ServerImp1ementation;
+    Label3.Caption:= 'Service Version =' +
+    IntToStr(VersionInfo.ServiceVersion);
+  finally
+    Active:= False;
+  end;
+end;
+Aby pobrać informacje o podłączonych bazach danych, można posłużyć się kodem z poniższego przykładu:
+var
+I: Integer;
+begin
+  with IBServerProperties1 do begin
+  SeryerName:='localhost';
+  LoginPrompt:=False;
+  Params.Add('user_name=sysdba');
+  Params.Add('password=masterkey');
+  Active:= True;
+  try
+    Options:=[Database];
+    FetchDatabaseInfo;
+    Label1.Caption:='Liczba podliczeń =' +
+    IntToStr(DatabaseInfo.NoOfAttachfments);
+    Label2.Caption:='Liczba baz danych =' +
+    IntToStr(DatabaseInfo.NoOfDatabases);
+    For I:=0 to High(DatabaseInfo.DBName) do
+      Memo1.Lines.Add(DatabaseInfo.DbName[i]);
+  finally
+   Active:=False;
+  end;
+end;
+
+Rozdział 6. Instalacja programu InterBase
+Dwa komponenty z biblioteki IBX umożliwiają zainstalowanie i odinstalowanie serwera InterBase. Wymagają one, aby w ścieżce znajdowała się biblioteka ibinstalldll. Dziedziczą one bezpośrednio po komponencie TIBSetup.
+
+TIBSetup, moduł IBInstall
+Komponent TIBSetup jest komponentem bazowym dla komponentów implementujących instalację i odinstalowanie serwera InterBase.
+
+Właściwości
+ErrorContext - ustawia lub pobiera kontekst błędu. Wykorzystywane podczas przekazywania danych użytkownika do funkcji obsługi błędu.
+MsgFilePath - właściwość umożliwia zdefiniowanie ścieżki dostępu do pliku z komunikatami plik.msg. Z reguły jest to ten sam katalog, w którym jest instalowany InterBase. Podmiana pliku na własny umożliwia wprowadzenie własnych komunikatów podczas instalacji lub np. na stworzenie wersji wielojęzycznej - kilka plików .msg, każdy w innym języku.
+Plik z komunikatami zawiera:
+* komunikaty o błędach, 
+* nazwy opcji wraz z opisami,
+* opisy przeprowadzanych akcji i komunikaty, które są logowane do pliku ibinstall.log.
+Progress - właściwość ta zwraca informację o postępie procesu instalacji w procentach - od 0 do 100%. Wartość ta jest aktualizowana przez zdarzenie OnStatusChange.
+RebootToComplete - właściwość jest ustawiana na True wtedy, gdy do zakończenia instalacji konieczny jest restart komputera. Domyślnie właściwość ma wartość False.
+StatusContext - ustawia lub pobiera kontekst statusu. Właściwość ta jest wykorzystywana podczas przekazywaniu danych użytkownika do funkcji statusu.
+
+Metody
+Komponent nie wprowadza nowych metod.
+
+Zdarzenia
+OnError(Sender: TObject; IscCode: MSG_NO; ErrorMessage, ErrorComment: String): TErrorResult - zdarzenie jest zgłaszane wtedy, gdy podczas instalacji wystąpił jakiś błąd. Ta procedura pozwala na umieszczenie własnej obsługi błędu. Parametrami są: kod błędu oraz komunikat o błędzie. Procedura obsługi zdarzenia powinna zwrócić jednąz wartości;
+* erContinue - kontynuacja instalacji, 
+* erAbort - przerwanie instalacji, 
+* erRetry - ponowna próba instalacji.
+OnStatusChange (Sender: TObject, StatusComment: string): TStatusResult - zdarzenie ma miejsce wtedy, gdy następuje zmiana stanu instalacji. Zdarzenie jest generowane co pewien czas po wywołaniu funkcji InstallExecute. Parametr StatusComment przechowuje informację o stanie instalacji, którą można np. wyświetlić. Informację o postępie aplikacji można uzyskać korzystając z właściwości Progress. Wartości zwracane przez procedurę obsługi zdarzenia to:
+srAbort - przerwanie procesu, 
+srContinue - kontynuacja procesu.
+W instalatorze InterBase obsługa tego zdarzenia mogłaby wyglądać następująco:
+function TInstallForm.IBInstall1StatusChange(Sender: TObject;
+StatusComment: String): TStatusResult;
+begin
+  Result:= srContinue;
+  ProgressBar1.Position:=IBInstall1.Progress;
+  Label1.Caption:=StatusComment;
+  if AbortInstall then begin
+   if Application.MessageBox(PChar('Przerwanie'), PChar('Na pewno
+      chcesz przerwać ?'), MB_YESNO ) = IDYES then Result:=srAbort;
+  end
+  else
+    Application.ProcessMessages;
+end;
+gdzie AbortInstall jest zmienną formularza ustawianą np. przez wciśnięcie przycisku Przerwij instalację.
+OnWarning(Sender: TObject; WarningCode: TIscError; WarningMessage: string): TWarningResult - zdarzenie zachodzi wtedy, gdy podczas instalacji zostanie zgłoszone ostrzeżenie. Kod ostrzeżenia jest przekazywany przez WarningCode, a wiadomość przez WarningMessage. Procedura obsługi powinna zwrócić jedną z poniższych wartości:
+* wrAbort - należy przerwać instalację, 
+* wrContinue - kontynuować instalację.
+
+TlnstallOptions, moduł IBInstall
+Klasa przechowuje informacje o możliwych opcjach instalacji.
+
+Właściwości
+CmdLineTools - opcje umożliwiające zainstalowanie narzędzi uruchamianych z linii poleceń (isql, gbak, gsec). Dopuszczalne są wartości typu TCmdOption:
+* cmDBMgmt - narzędzia służące do zarządzania bazą danych: gbak i gfix. Jeśli ta opcja jest wybrana, a w opcjach głównych nie jest wybrany Client, to zostanie zgłoszone ostrzeżenie.
+* cmDBQuery - zostaną zainstalowane narzędzia isql, gdef, and qli.
+* cmUsrMgmt - zainstalowane zostanie narzędzie gsec służące do zarządzania użytkownikami.
+ConnectivityClients - opcje umożliwiające zainstalowanie sterowników podłączeń do InterBase:
+* cnODBC - klient połączenia przez ODBC, 
+* cnOLEDB - sterownik OLE DB, 
+* cnJDBC - sterownik JDBC.
+Examples - wybór opcji do zainstalowania przykładowych baz danych oraz przykładów API InterBase:
+* exDB - instalowane będą przykładowe bazy danych. Wymagana jest obecność opcji Serwer - w przeciwnym razie zostanie zgłoszone ostrzeżenie.
+* exAPI - do instalacji zostaną dodane przykłady wykorzystania API InterBase, SQL-a, DSQL-a. Do instalacji należy dodać opcje Cl i ent i Devel opment.
+MainComponents - główne elementy InterBase:
+* moClient - część klienta InterBase. W skład jej wchodzi biblioteka, plik z licencją i komunikatami.
+* moConServer - serwer połączeń (jak dotąd niezaimplementowany).
+* moDevelopment - narzędzia dla programistów - gpre, pliki nagłówkowe i biblioteki.
+* moDocumentation - dokumentacja dotycząca InterBase z plikami PDF i indeksami.
+* moGuiTools - narzędzia graficzne - IBConsole.
+* moServer - główna część serwera - serwer, licencja, Guardian, plik z komunikatami, pliki pomocy, narzędzia konfiguracyjne i informacyjne, biblioteka UDF.
+
+TIBInstall. moduł IBInstall
+Komponent TIBInstall dziedziczy po TIBSetup i implementuje proces instalacji serwera InterBase. Dzięki niemu można napisać własny program instalacyjny dla InterBase,
+
+Właściwości
+DestinationDirectory - właściwość określa katalog, w którym ma zostać zainstalowany InterBase. Domyślnie wartość jest taka sama, jak wartość właściwości 
+SuggestedDestination.
+InstallOptions - umożliwia określenie opcji instalacji - czyli tego, które komponenty serwera mają zostać zainstalowane. Szczegółowy opis znajduje się przy opisie typu TInstallOptions.
+SourceDirectory - ścieżka dostępu do katalogu z plikami przeznaczonymi do zainstalowania. Najczęściej jest to katalog zawierający InterBase na płycie kompaktowej.
+SuggestedDestination - ta właściwość zwraca proponowaną ścieżkę dostępu do katalogu, w którym powinien zostać zainstalowany InterBase.
+UninstallFile - korzystając z tej właściwości można odczytać katalog i nazwę pliku potrzebnego do odinstalowania InterBase. Plik przechowuje zapis wszystkich opcji instalacyjnych i jest niezbędny dla komponentu TIBUninstall.
+
+Metody
+GetOptionDescnption(Option; TCmdOption): String
+GetOptionDescriptlon(Option): TConnectivityOption): String
+GetOptionDescriptionOption: TExamplesOption): String
+GetOptionDescription(Option: TMainOption): String - metoda zwraca opis opcji instalacji.
+GetOptionName(Option: TCmdOption): String
+GetOptionName(Option: TConnectivityOption): String
+GetGptionName(Option: TExamplesOption): String
+GetOptionName(Option: TMainOption): String - funkcje te zwracają nazwę wybranej opcji.
+GetOptionSpaceRequired (Option: TCmdOption): Longword
+GetOptionSpaceRequired (Option: TConnectivityOption): Longword
+GetOptionSpaceRequired (Option: TExamplesOption): Longword
+GetOpti onSpaceRequired (Option: TMainOption): Longword - metody zwracają ilość wymaganej przestrzeni na dysku (w kilobajtach) potrzebnej do zainstalowania
+danej opcji.
+InstallCheck - sprawdza czy proces instalacji jest gotowy do przeprowadzenia. W razie problemów zostanie zgłoszony wyjątek EIBInstallError.
+InstallExecute - wywołanie metody powoduje rozpoczęcie procesu instalacji.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+TIBUninstall, moduł IBInstall
+Ten komponent umożliwia odinstalowanie serwera InterBase. Do tego niezbędny jest plik utworzony podczas instalacji.
+
+Właściwości
+UnInstallFile - określa ścieżkę dostępu do pliku z informacjami o zainstalowanych opcjach InterBase. Jest on niezbędny podczas odinstalowywania serwera.
+
+Metody
+UnInstallCheck - metoda sprawdza czy odinstalowanie serwera jest możliwe do wykonania.
+UnlnstallExecute - przeprowadza proces odinstalowywania serwera.
+
+Zdarzenia
+Komponent nie wprowadza nowych zdarzeń.
+
+Rozdział 7. Obiekty występujące w InterBase 
+Przede wszystkim należy pamiętać o tym, że InterBase nie jest obiektową bazą danych. Określenia "obiektowy", podobnie jak przymiotnik "wirtualny", są obecnie dosyć modne (zwłaszcza "wirtualny"). Pod pojęciem "obiektu" będziemy rozumieć w tym przypadku wszystko to, co możemy umieścić w bazie.
+
+Generatory
+Generator umożliwia utworzenie w InterBase unikalnych liczb, które można umieścić w kolumnach tabeli np. celem uzyskania klucza. Wykorzystuje się je najczęściej podczas wypełniania klucza głównego (PRIMARY KEY). Generator umożliwia i, utworzenie liczb z przedziału od -264 do 264-1.
+
+Składnia poleceń
+Aby utworzyć generator, należy posłużyć się następującą składnią:
+CREATE GENERATOR nazwa;
+gdzie nazwa jest unikalną nazwą generatora w bazie danych. Próba zduplikowania nazwy zakończy się komunikatem podobnym do "Unsuccessful metadata update DEFINE GENERATOR failed attempt to store dupllcate value". W celu utworzenia generatora ID_OSOBY należy skorzystać z polecenia:
+CREATE GENERATOR ID_OSOBY;
+Domyślną wartością dla nowo utworzonych generatorów jest wartość zero. Można j ą zmienić za pomocą polecenia: 
+SET GENERATOR nazwa TO liczba_calk;
+gdzie nazwa jest nazwą istniejącego generatora, a liczba_ca1k liczbą całkowitą z podanego wyżej zakresu. Jeśli obiekt o podanej nazwie nie istnieje, zostanie zgłoszony błąd "generator nazwa not defined". Aby przypisać generatorowi ID_OSOBY wartość 1000, wykonamy polecenie:
+SET GENERATOR ID_OSOBY TO 1000:
+Aby pobrać wartość generatora i zmienić jego wartość pewną liczbę należy skorzystać z poniższej funkcji: 
+gen_id(nazwa_generatora, krok)
+Jako wynik funkcja wygeneruje liczbę będącą wartością generatora nazwa_generatora powiększoną o krok. Drugi parametr może być dowolną liczbą całkowitą. Warto zapamiętać, że dla kroku różnego od zera każde wywołanie funkcji zwróci różną wartość. Umożliwia to generowanie naprawdę unikalnych wartości nawet wtedy, gdy w danej chwili wielu użytkowników pracuje na bazie danych. Z tej funkcji można skorzystać w dowolnym zapytaniu (Insert, Select czy Delete), w procedurach składowanych lub w wyzwalaczach (triggers).
+Chcąc usunąć generator nie znajdziemy żadnego polecenia w rodzaju polecenia Drop. Zamiast tego należy posłużyć się tabelą systemową RDB$GENERATORS. Stąd w celu usunięcia generatora należy wykonać poniższe zapytanie:
+DELETE EROM RDB$GENERATORS WHERE RDB$GENERATORS_NAME='<nazwa_generatora>'
+
+Wartości generatora w Delphi
+Jeśli chodzi o Delphi, przez pewien czas istniał problem związany z uzyskiwaniem wartości pól typu autoincrement. Obecnie możemy w komponencie TField ustawić właściwość AutoGenerateValue na arAutoInc lub arDefault (domyślnie arNone). Umożliwia to uzyskanie wartości domyślnych z bazy danych. Jeśli jednak chodzi o komponenty IBX, to w wersji 4.42 w komponentach potomnych pojawiła się po TIBCustomDataSet właściwość GeneratorField. Umożliwia ona przypisanie wybranemu polu wartości z dowolnie wybranego generatora (z zadanym krokiem). Można określić, kiedy liczba ma zastać skopiowana. Ta akcja może zostać wykonana w momencie:
+* wystąpienie zdarzenia OnNewRecord,
+* tuż przed wystąpieniem zdarzenia OnBeforePost,
+* na serwerze - funkcjonalnie można to porównać do przypisania wartości} w wyzwalaczu (trigger).
+W przypadku edycji danych w relacji master-detail, konieczne jest przypisanie wartości klucza w tabeli podrzędnej i najlepiej jest skorzystać z pierwszej opcji. Jeśli w trakcie dodawania nowego pola użytkownikowi (programiście) w ogóle nie zależy na nowej wartości - dobrym rozwiązaniem jest rozwiązanie trzecie. Wersja ze zdarzeniem OnBeforePost może być wygodna wtedy, gdy zbiór danych po zapisie ma być w całości odświeżony, a w interfejsie użytkownika chcemy zaimplemento-wać zaznaczenie ostatnio dodanego sektora.
+Zanim pojawiła się ta wersja IBX, trzeba było sobie radzić inaczej:
+* wykonać z 2Delphi zapytanie (np. w tymczasowym IBQuery) zwracające wartość generatora - można je wywołać w dowolnym, odpowiadającym nam, momencie:
+Select gen_id(<generator>. <krok>) From RDBSDatabase
+i następnie: 
+TLargeIntField(TempIBQuery.Fields.Fields[0]) Value
+* wykorzystać procedurę na serwerze podobną np. do następującej (jest to podobne do rozwiązania drugiego)
+CREATE PROCEDURĘ <nazwa_procedury> 
+(
+<lista_parametrów> 
+)
+RETURNS 
+(
+<wartość_generatora_dla_wstawioneo_wiersza> INTEGER
+)
+AS
+BEGIN
+<wartość_generatora_d1a_wstawianego_wiersza> = gen_id(<generator>, <krok>);
+Insert Into OSOBY (<pole_kluczowe>, <pozostałe_pola>)
+Values(:<wartość_generatora_dla_wstawianego_wiersza>, :<lista_parametrów>);
+End
+* wykorzystać wyzwalacz - na serwerze zaimplementować trigger następującej postaci (odpowiada to rozwiązaniu trzeciemu):
+CREATE TRIGGER <nazwa_trigger'a> FOR <nazwa_tabeli>
+ACTIVE BEFORE INSERT POSITION 0
+as begin 
+new.<pole> = gen_id(<generator>, 1);
+end;
+
+Indeksy
+Indeksy pozwalają przyśpieszyć operacje pobierania wierszy z bazy przy zadanym porządku sortowania (np. klauzula ORDER BY) lub przy określonych kryteriach zawężających liczbę rekordów (np. klauzula WHERE). Zasada ich działania polega na przechowywaniu wartości poindeksowanych kolumn w pewnym logicznym porządku, określonym przy tworzeniu indeksu, wraz z informacją o fizycznej lokalizacji wierszy w bazie. Jego prawidłowe przygotowanie może bardzo poprawić wydajność zapytań wykonywanych na bazie danych.
+InterBase umożliwia użytkownikowi utworzenie do 64 indeksów dla każdej tabeli.
+Polecenia
+Do utworzenie indeksu służy następujące polecenie:
+CREATE [UNIQUE] [ASC[ENDING]  | DESC[ENDING]]
+INDEX <nazwa_indeksu> ON <nazwa_tabeli> ( kolumna [, kolumna       ]);
+Nazwa indeksu powinna być unikalna w obrębie bazy danych. Indeksy tworzą się automatycznie, jeśli definicja kolumny tabeli zawiera deklarację kluczy1 lub klauzulę Unique.
+Założenie indeksu z klauzulą Unique nie pozwala na umieszczenie w kolumnie dwóch identycznych wartości. Jeśli okaże się konieczne założenie takiego indeksu na już istniejącą tabelę, to należy upewnić się, że kolumna nie zawiera powtarzających się danych.
+Klauzule ASCENDING i DESCENDING określają sposób sortowania indeksów - odpowiednio: rosnący i malejący.
+Chcąc utworzyć indeks wielokolumnowy, listę kolumn należy rozdzielić przecinkami, np. unikalne imię i nazwisko w tabeli:
+Create Unique Index Imie_Nazwisko on DaneOsobowe (Nazwisko, Imię),
+Indeks można wyłączyć i włączyć do użycia. Jego wyłączenie powoduje, że nie jest on więcej aktualizowany. Przy ponownym włączeniu indeksu następuje jego przebudowa. Do przełączania służy następująca konstrukcja:
+Alter Index <nazwa_indeksu> {Active | Inactive}
+Do czego może się przydać wyłączanie indeksu? W przypadku np. wystąpienia potrzeby wstawienia większej ilości wierszy, warto wyłączyć indeks, gdyż po wywołaniu każdego polecenia Insert następuje aktualizacja indeksu. W przypadku dezaktywacji, wstawianie odbędzie się szybciej, a później jednorazowe odbudowanie.
+Przy dłuższej pracy z bazą danych - wiele zmian, uaktualnień, skasowań, indeks może się "zaśmiecić". W takim wypadku przebudowa może poprawić wydajność pracy.
+Do usunięcia indeksu służy poniższe polecenie: 
+Drop Index <nazwa_indeksu>
+Nie można usunąć indeksu ani go zmienić, jeśli jest aktualnie wykorzystywany w innej transakcji. Jeśli chcemy usunąć któryś z indeksów utworzonych automatycznie podczas definiowania kolumn, musimy usunąć odpowiednią kolumnę.
+
+Korzystanie z indeksów
+Indeks jest wykorzystywany zawsze wtedy, gdy w zapytaniu następuje odwołanie do kolumny, na której on bazuje. W przypadku indeksu wielokolumnowego należy przemyśleć budowę zapytania, ponieważ nie zawsze będzie możliwe skorzystanie z tego indeksu. Aby optymalizator poprawił wykonanie takiego zapytania, musi się ono odwoływać do kolumn w definicji indeksu w kolejności ich występowania w definicji. Poniższy przykład ilustruje tę zasadę:
+Istnieje tabela osoby, zawierająca między innymi następujące pola:
+* Imie - typu znakowego, 
+* Nazwisko - typu znakowego,
+* Miejsce_ur - typu znakowego (zawiera informacje o miejscu urodzenia).
+Do tej tabeli utworzono poniższy indeks:
+CREATE INDEX lOsoby
+ON Osoby (Nazwisko,   Imie, Miejsce_ur), 
+Optymalizator zapytań wykorzysta indeks Iosoby w natępujących przypadkach:
+Select * from osoby order by nazwisko;
+Select * from osoby order by nazwisko.imie
+ponieważ kolumny w klauzuli Order By wy stępują w takiej kolejności, jak w definicji indeksu. Przy wykonaniu zapytania:
+Select * from osoby order by imie 
+indeks IOsoby nie będzie w ogóle wykorzystany.
+
+Procedury
+Stosowanie procedur przechowywanych na serwerze SQL-owym może odciążyć stacje klientów i zmniejszyć ruch w sieci. Jeśli możliwe jest przeniesienie niektórych obliczeń, zwłaszcza tych, które operują na dużych ilościach danych, na serwer, to może to poprawić wydajność pracy aplikacji w sieci. Dodatkową zaletą jest uzyskanie możliwości zmiany procedury tylko w jednym miejscu (baza danych), co spowoduje wystąpienie zmian na wszystkich stacjach pracujących z tą bazą. A w przypadku utworzenia kilku różnych aplikacji pracujących z jedną bazą, nie ma problemu związanego ze współdzieleniem takiej procedury.
+
+Polecenia
+Procedury składowane na serwerze (stored procedures) tworzy się przy pomocy poniższego polecenia: 
+CREATE PROCEDURE <nazwa_procedury>
+[( <parametr> <typ_danych> [, <parametr> <typ_danych> ])]
+[RETURNS ( <parametr> <typ_danych> [. <parametr> <typ_danych> ])]
+AS
+<procedura>;
+<procedura>=[<deklaracje_zmiennych>]
+<blok>
+<deklaracje_zmiennych>=
+DECLARE VARIABLE <zitnenna> <typ_danych>;
+[DECLARE VARIABLE <zimenna> <typ_danych>; ]
+<blok>=
+BEGIN 
+<instrukcja>
+[<instrukcja>]
+END;
+
+<instrukcja>={<blok> | instrukcja;}
+W bloku ciała procedury wykorzystuje się instrukcje służące do manipulowania danymi (Insert, Select, Update), funkcje użytkownika (UDF) i rozszerzone polecenia języka SQL. Wykaz wszystkich poleceń można znaleźć w InterBase 6 Language Reference. Listę elementów rozszerzających język SQL stosowany w procedurach i wyzwalaczach przedstawiono poniżej:
+Polecenie
+Opis
+Begin
+...
+End
+
+Zmienna = wyrażenie
+
+
+
+
+/* komentarz */
+
+Exception <nazwa_wyjątku>
+
+
+EXECUTE PROCEDURE
+<nazwa_procedury>
+[<zmienna> [,<zmienna>...]]
+[RETURNING_VALUES
+<zmienna> [,<zmienna>...]]
+
+Exit
+
+
+FOR <select> DO
+<instrukcja>
+
+<instrukcja>
+
+
+
+IF (<warunek>)
+THEN <instrukcja>
+[ELSE <instrukcja>]
+
+
+
+POST_EVENT <zdarzenie>
+
+Suspend
+
+
+
+
+WHILE (<warunek>)
+DO <instrukcje>
+
+WHEN
+{błąd [,błąd...] | ANY}
+
+Definiuje blok kodu w podobny sposób, jak begin ... end w Delphi
+
+
+Operacja przypisania wyrażenia do zmiennej, działająca na tej samej zasadzie, co operator := w Pascalu. Zmienną może być zmienna lokalna, parametr wejściowy bądź wyjściowy
+
+Dowolny komentarz - może być wielowierszowy
+
+Wywołuje wyjątek o podanej nazwie. Wyjątki są obsługiwane przez instrukcję When
+
+Wywołuje procedurę o zadanej nazwie z podanymi parametrami. Dokładniejszy opis znajduje się w podrozdziale Stosowanie
+
+
+
+Wyjście z procedury. Dokładniej - wykonuje skok do słowa End na końcu procedury
+
+Powtarza instrukcję lub blok instrukcji po słowie Do dla każdego wiersza zwróconego przez instrukcję Select
+
+Pojedyncza instrukcja lub blok instrukcji znajdujący się między Begin i End
+
+Instrukcja warunkowa. Jeśli warunek jest prawdziwy (wartość True), wykonuje instrukcję lub blok instrukcji występujący po Then. W przeciwnym razie (wartość Fal se) wykona instrukcje występujące po Else, jeśli zostały uwzględnione
+
+Wywołuje zdarzenie o podanej nazwie
+
+W procedurach zwracających zbiory danych (Select)
+Zawiesza wykonanie procedury do wywołania następnej, instrukcji Fetch przez aplikację użytkownika, zwraca wartości wyjściowe jeśli jakieś występują
+
+Sprawdza wartość warunku. Jeśli jest on prawdziwy, wykonywane są instrukcje występujące po słowie Do
+
+Instrukcja służąca do obsługi błędów. Gdy wystąpi jeden z wymienionych błędów, nastąpi wywołanie instrukcji wymienionych po słowie Do. Jeśli ma być wykorzystana instrukcja End, to powinno się ją umieścić tuz przed End kończącym procedurę
+Jako błąd rozumie się tutaj: Exception <nazwa_wyjątku>, SqlCode <nr_błędu> lub GdsCode <numer>
+
+
+Raz utworzoną procedurę można zmienić przy pomocy polecenia Alter Procedure o składni podobnej do polecenia tworzącego:
+ALTER PROCEDURE <nazwa>
+[( <zmienna> <typ> [, <zmienna> <typ> ])]
+[RETURNS ( <zmienna> <typ> [, <zmienna> <typ> ])]
+AS
+<tresc_procedury>
+Do usuwania procedur z bazy służy polecenie Drop Procedure. Gdy próbujemy skasować procedurę, warto pamiętać o kilku rzeczach:
+* Operację może przeprowadzić administrator bazy lub właściciel procedury.
+* Nie można usunąć procedury, do której istnieje odniesienie z innej procedury lub wyzwalacza.
+* Jeśli procedura jest aktualnie wykorzystywana w innych transakcjach, to przed jej skasowaniem należy je zakończyć.
+Składnia polecenia jest następująca:
+Drop Procedurę <nazwa>, 
+
+Zastosowanie
+Do wywołania procedury składowanej z poziomu SQL-a służy polecenie Execute Procedure. Jest ono przydatne w sytuacji, gdy konieczne jest wywołanie jednej procedury z innej procedury. Polecenie to wygląda następująco:
+EXECUTE PROCEDURE <nazwa_procedury> [<parametr> [,<parametr>]] 
+{RETURNING_VALUES <parametr> [, <parametr>]]
+Wywołanie procedury może też stanowić część zapytania Select. Występuje ono wtedy jako element klauzuli From, np.:
+select * from SUB_TOT_BUDGET(100)
+Do wywołania procedury składowanej z poziomu Delphi za pomocą komponentów IBX służy komponent TIBStoredProc. Wywołanie jej następuje za pomocą metody ExecSQL.
+Aby uzyskać dostęp do wyników, należy skorzystać z właściwości Params, np.
+IBStoredProc.Params[l].AsString; 
+da dostęp do drugiego parametru - trzeba pamiętać o tym, że indeksuje się od zera.
+W przypadku stosowania procedury mającej zwrócić nie pojedynczą wartość, a zbiór danych, najlepiej jest użyć albo komponentu TIBQuery, albo TIBDataset i wywołać metodę Open. Parametry zawierające wartości będą dostępne tak, jak normalne pola.
+
+Błędy
+W każdym programie mogą wystąpić błędy. I nie chodzi tutaj o błędy powstałe z winy programisty. Błędem może być np. nie zwrócenie żadnego wiersza czy też próba wstawienia drugiego wiersza o tym samym kluczu. Oczywiście programista powinien obsłużyć te błędy. Do tego służy instrukcja When <bląd> do .... Źródła błędów mogą być następujące:
+* Wyjątek wywołany przez instrukcję Exception w innym fragmencie kodu lub w zagnieżdżonej procedurze (może być utworzony przez programistę).
+* Błąd SQL-a zwracany w SQLCode.     
+* Błąd InterBase zgłaszany w GDSCode.
+
+Wyjątki
+Aby utworzyć własny wyjątek, należy użyć poniższej instrukcji: 
+Create Exception <nazwa> '<komunikat>'
+np.:
+Create Exception NieJan 'Nie wstawiaj Jana do tabeli'
+Do zmiany komunikatu skojarzonego z wyjątkiem służy polecenie Alter Exception:
+Alter Exception NieJan 'Nie wstawiaj w ogóle Jana do tabeli'
+Wyjątki usuwa się z bazy danych instrukcją Drop Exception:
+Drop Exception NieJan;
+Nie uda się usunąć wyjątku, który jest wykorzystywany w którejś z procedur, w jakimś wyzwalaczu lub jest obecnie używany. Wyjątek może skasować tylko osoba, która go utworzyła.
+Teraz, aby skorzystać z tak zadeklarowanego wyjątku, należy go wywołać w poniższy sposób:
+Exception <nazwa_wyjątku>
+np.: 
+If (Imię = 'Jan') then
+Exception NieJan;
+
+Błędy SQL-a (SQLCode)
+Każde polecenie SQL-owe wykonywane przez InterBase określa wartość specjalnej zmiennej o nazwie SQLCODE. Dokładną listę błędów można znaleźć w Language Ref-rence. Warto wiedzieć, które niosą ze sobą na pewno informacje o błędzie:
+
+Wartości
+Komunikat
+Znaczenie
+< 0
+
+0
+
+1-99
+
+100
+SQLError
+
+Success
+
+SQLWarning
+
+Not Found
+Błąd. Wykonanie polecenia nie zostało zakończone.
+
+Polecenie zostało zakończone sukcesem
+
+Ostrzeżenie lub informacja
+
+Zapytanie nie zwróciło wierszy lub wystąpił koniec pliku
+
+Błędy InterBase (GDSCode)
+W procedurze można przechwytywać i obsługiwać błędy zgłaszane w pewnych sytuacjach przez InterBase. Najlepszym przykładem będzie w tym przypadku konflikt występujący podczas blokowania rekordów - procedura próbuje uaktualnić wiersz właśnie zmieniany z innego miejsca. Listę błędów można znaleźć w Language Reference. Wartości GDSCode stanowią podzbiór numerów błędów SOJLCode.
+
+Obsługa błędów
+W celu obsługi opisanych rodzajów błędów należy skorzystać z instrukcji When opisanej w tabeli znajdującej się kilka stron wcześniej. Sposób przechwytywania błędów pokazuje poniższy przykład:
+CREATE PROCEDURĘ Wstawiaj (LiczbaP INTEGER)
+RETURNS (Komunikat CHAR(50)) AS
+BEGIN
+INSERT INTO L_Pierwsze VALUES (:LiczbaP);
+WHEN SQLCODE -803 DO
+Komunikat = 'Nie można wstawić tej samej liczby 2 razy !'
+END;
+Błąd o numerze -803 jest związany z próbą wstawienia tej samej wartości i naruszeniem unikalnego klucza w tabeli. W tym przykładzie tabela przechowuje liczby pierwsze - i siłą rzeczy nie ma sensu przechowywać dwukrotnie tej samej wartości.
+
+Przykłady procedur
+Procedura nie zwracająca zbioru danych
+Poniższy przykład pokazuje, jak wstawić nowy wiersz do tabeli i w wyniku uzyskać wartość klucza nowego wiersza. Szablon tej procedury zamieszczony jest w rozdziale dotyczącym generatorów.
+W bazie danych mamy tabelę Osoby, zawierającą następujące pola: 
+* ID - unikalny identyfikator,
+* Imie - tekst,
+* Nazwisko - tekst,
+* Plec - znak.
+Mamy też do dyspozycji generator GOsoba służący do nadawania wartości klucza. Procedura zdefiniowana na podstawie szablonu może wyglądać następująco: 
+SET TERM ^:
+CREATE PROCEDURE NOWA_OSOBA
+(
+  PImie Char(15),
+  PNazwisko Char(30),
+  PPlec Char(l)
+)
+RETURNS
+(
+  RID INTEGER
+)
+AS
+BEGIN
+/* Pobierz wartość z generatora */
+  RID = gen_id(GOsoba. 1);
+/* Wstaw wiersz do tabeli */
+  Insert Into Osoby (ID, Imie, Nazwisko, Plec)
+     Values( :RID, :PImie, :PNazwisko, :PPlec):
+END ^
+SET TERM; ^
+Jak widać, procedura jest prosta, a w sytuacji, gdy nie były jeszcze dostępne komponenty IBX, oddawała wielkie usługi. Jeśli dostęp do bazy był realizowany za pomocą tradycyjnych komponentów TQuery, to chcąc po wstawieniu odświeżyć listę wierszy np. w komponencie DBGrid i zaznaczyć wiersz ostatnio wstawiony, musieliśmy znać jego unikalny klucz. Nie można polegać na kombinacji nazwisko + imię, a nie zawsze będzie możliwe skorzystanie z numeru PESEL. Wstawienie wiersza przeprowadzano za pomocą TStoredProc i w parametrze wyjściowym otrzymywano numer klucza. Teraz na szczęście dostępna jest w IBX właściwość GeneratorField...
+Parę słów na temat konwencji zastosowanej w nazwach zmiennych w procedurze. Nazwy parametrów mają nazwę odpowiadającego pola z tabeli plus litera P na początku. Z tej konwencji korzystają funkcje DBSetTypParams z modułu PNGSql.pas. Wykorzystywane były w okresie, gdy nie było jeszcze IBX i później, gdy brak było wsparcia dla generatorów. Dzięki tej konwencji i tym funkcjom, można było usprawnić przepisywanie parametrów z TQuery do TStoredProc.
+Z poziomu Delphi procedurę można wywołać wpisując poniższy kod:
+with IBStoredProc1 do begin
+  ParamByName('PIMIE').AsString:= 'Jan';
+  ParamByName('PNazwisko').AsString:= 'Kowalski';
+  ParamByName('PPlec').AsString := 'M';
+  ExecProc;
+  ShowMessage(ParamByName('RID').AsString);
+end:
+
+Procedura zwracająca zbiór danych
+Poniższy przykład jest zaczerpnięty z bazy danych employee.gdb dołączanej standardowo do instalacji InterBase. Służy ona do zwrócenia informacji o budżecie departamentu:
+CREATE PROCEDURĘ SUB_TOT_BUDGET
+(
+  HEAD_DEPT CHAR(3)
+)
+RETURNS
+(
+  TOT_BUDGET NUMERIC(15,2);
+  AVG_BUDGET NUMERIC(15,2);
+  MIN_BUDGET NUMERIC(15,2);
+  MAX_BUDGET NUMERIC(15,2);
+)
+AS
+BEGIN
+  SELECT SUM(budget), AVG(budget), MIN(budget), MAX(budget)
+  FROM department
+  WHERE head_dept = :head_dept
+  INTO :tot_budget,  :avg_budget,  :min_budget, :max_budget;
+  SUSPEND;
+END
+W przypadku zwracania zbiorów danych należy pamiętać o tym, by skorzystać z instrukcji Suspend. Jeśli o niej zapomnimy, może nas spotkać niespodzianka w postaci otrzymania w wyniku wartości Null.
+Do wywołania tej procedury wykorzystujemy instrukcję Select:
+Select * From Sub_Tot_Budget(100);
+W Delphi takie zapytanie wywołać można przy pomocy komponentów TIBQuery, TIBDataSet. Bez korzystania z instrukcji Select - należy sięgnąć oczywiście po TIBStoredProc. Wyniki procedury będą dostępne poprzez parametry, podobnie jak to było w poprzednim przykładzie.
+
+Tabele
+Są to chyba najważniejsze elementy bazy danych - w końcu trzeba te dane gdzieś przechowywać. Definiując kolumny tabeli, należy pamiętać o tym, że:
+* rozmiar wiersza jest ograniczony do 64 kilobajtów2,
+* liczba tabel w bazie ograniczona jest do 2147483647 (liczba 32-bitowa ze znakiem). 
+Wiedząc, jakie dane chcemy przechowywać (lista kolumn i typy) i wiedząc, jakim ograniczeniom chcemy je poddać (unikalność, dopuszczalne wartości), do utworzenia tabeli możemy wykorzystać polecenie Create Table. Jego ogólna postać wygląda następująco:
+CREATE TABLE <nazwa_tabeli> [EXTERNAL [FILE]  '<plik>']
+( <def_kolumny> [, <def_kolumny> | <więzy> ...]);
+
+ Nazwa tabeli musi być unikalna dla bazy danych. Jak już to widać po składni polecenia - tabela może być przechowywana w osobnym pliku3 (poza bazą danych).
+Przykłady zamieszczone w niniejszym rozdziale opierać się na tabelach utworzonych za pomocą poniższego polecenia:
+CREATE TABLE OSOBY 
+(
+  ID INTEGER NOT NULL,
+  IMIE CHAR(15),
+  NAZWISKO CHAR(30),
+  PLEC CHAR(l),
+)
+CREATE TABLE TELEFONY
+(
+  NR CHAR(20),
+  OSOBA_ID INTEGER
+)
+
+Kolumny
+Definiowaniem kolumn zajmowaliśmy się już w rozdziale dotyczącym typów danych. InterBase dopuszcza tworzenie kolumn bazujących na pewnych wyrażeniach - są to kolumny wyliczeniowe. Składnia służąca do ich tworzenia jest następująca:
+<nazwa_kolumny> COMPUTED [BY] (<wyrażenie>)
+
+Więzy integralności i ograniczenia
+Oprócz kolumn można zdefiniować w tabeli więzy integralności (integrity constraints), nazywane także kluczami, oraz zestaw ograniczeń (constraints) co do wartości kolumn. Więzy mogą zostać nałożone na wybraną kolumnę (kolumny) lub na całą tabelę. Każdy z kluczy lub ograniczeń jest widoczny dla wszystkich transakcji w systemie i zarządzany automatycznie przez bazę. W InterBase można skorzystać z następujących opcji:
+* klucze główne: Primary Key,
+* klucze obce - zapewniające referencję do innej tabeli: Foreign Key,
+* wymuszenie unikalności: Unique,
+* sprawdzanie wartości kolumn: Check.
+Więzy można zakładać już podczas definicji kolumny, której mają dotyczyć (na poziomie kolumny), bądź na poziomie tabeli. Najogólniej mówiąc, do tworzenia ograniczeń występujących przy kolumnie służy polecenie:
+<wiezy_ko1umny> = [CONSTRAINT nazwa] <wiezy_def>
+[ <wiezy_kolumny>...]
+<wiezy_def> = (UNIQUE |PRIMARY KEY
+| CHECK (<warunek>)
+| REFERENCES nazwa_tabeli [( kolumna_1 [. kolumna_n ])]
+[ON DELETE {NO ACTION |CASCADE|SET DEFAULT|SET NULL}] 
+[ON UPDATE {NO ACTION |CASCADE |SET DEFAULT|SET NULL}]}  
+
+Podczas definicji więzów na poziomie tabeli różnica w poleceniu jest nieznaczna:
+<wiezy_tab> = [CONSTRAINT nazwa] <wiezy_tab_def>
+[< wiezy_tab>...]
+<wiezy_tab_def> = {{PRIMARY KEY | UNIQUE} ( kolumna_1 [. kolumna_n])
+| FOREIGN KEY ( kolumna_1 [.kolumna_n]) REFERENCES nazwa_tabeli
+[ON DELETE {NO ACTION | CASCADE | SET DEFAULT|SET NULL}]
+[ON UPDATE {NO ACTION |CASCADE|SET DEFAULT|SET NULL}]
+| CHECK (<warunek>)} 
+Jak widać, nazywanie więzów jest opcjonalne, jednak nadawanie nazw jest dobrym zwyczajem. Przede wszystkim - w razie modyfikacji wiadomo, jaki klucz usunąć i łatwiej jest obsłużyć błędy wynikające z naruszenia tych więzów. System posługuje się wtedy nazwą nadaną przez programistę, a nie kolejnym numerem.
+
+Klucz główny i unikalność
+Założenie jednego z tych kluczy na kolumnę nie pozwala na wprowadzenie do kolumny (kolumn) powtarzających się wartości. Próba wstawienia duplikatu spowoduje wystąpienie błędu4 SQL-a o numerze - 803. Należy pamiętać, żeby dla kolumn, które są wykorzystane w kluczach unikalnych, określić klauzulę NOT NULL.
+W przykładowej tabeli Osoby dodanie klucza głównego będzie wyglądało w taki sposób:
+...
+PLEC Char(1),
+Primary Key(ID) 
+);
+Pole ID w tym momencie też będzie przyjmować unikalne wartości. Chcąc dodać sam unikalny klucz, można to zrobić albo tak: 
+Constraint Nazwisko_UNQ Unique(Nazwisko)
+albo podczas definicji kolumny:
+nazwisko Char(30) not null unique
+
+Referencje do innych tabel
+Do utworzenie połączenie między tabelami (relacja master-detail) służą klucze obce. Tworząc referencję do innej tabeli, InterBase będzie pilnował, żeby istniał wiersz nadrzędny (zawierający opisany klucz).
+Przykładowa tabela Telefony zawierać będzie listę numerów telefonów do konkretnej osoby. Taki klucz dodać można posługując się następującym poleceniem:
+Alter Table Telefony add Constraint FRG_Osoby
+Foreign Key (osoba_id) references osoby
+Tak utworzony klucz nie pozwoli na usunięcie osoby posiadającej jakiekolwiek telefony. Jeśli chcemy automatycznie usuwać informacje szczegółowe, musimy zmodyfikować polecenie następująco:
+Alter Table Telefony add Constraint FRG_Osoby
+Foreign Key (osoba_id) references osoby
+ On Delete Cascade
+Należy posługiwać się tą klauzulą z rozwagą, gdyż mimo wielkiej wygody można z jej pomocą łatwo i szybko pozbyć się danych.
+Klauzula On Delete Set Null w przypadku usunięcia wiersza nadrzędnego wyczyści wartość klucza w tabeli podrzędnej.
+Podobne zachowanie można uzyskać, gdy uaktualniamy dane korzystając z klauzuli On
+Update.
+
+Klauzula Check
+Check pozwala na ograniczenie zakresu wartości, jakie mają zostać wprowadzone do tabeli. Przy tworzenie więzów tego rodzaju należy pamiętać, że nie można znieść ograniczeń zdefiniowanych na poziomie domeny i każda kolumna może mieć najwyżej jedno takie ograniczenie.
+
+Perspektywy
+Perspektywy są obiektami, które umożliwiają utworzenie wirtualnej tablicy pobierającej pewien podzbiór danych z jednej lub kilku innych tabel. Widok jest definiowany przez zapytanie, które jest wykonywane przy zapytaniach odwołujących się do perspektywy.
+Użytkownikowi można nadać prawa do korzystania z perspektywy bez posiadania niezbędnych praw służących do korzystania z tabel wchodzących w jej skład.
+Do utworzenia perspektywy służy następujące polecenie:
+CREATE VIEW <nazwa>
+[( <kolumna_widoku> [, <kolumna_widoku> ])]
+AS <zapytanie_select> [WITH CHECK OPTION];
+np.:
+CREATE VIEW USA_EMPLOYEES AS
+SELECT * FROM EMPLOYEE
+WHERE JOB_COUNTRY = 'USA':
+
+Wyzwalacze
+Procedury wyzwalane umożliwiają wykonanie określonych instrukcji SQL-a podczas wystąpienia określonych akcji - takich jak modyfikacja, wstawienie, usunięcie danych. Wyzwalacz może zostać wykonany przed lub po określonym zdarzeniu.
+Za pomocą wyzwalaczy można przeprowadzić logowanie operacji wykonywanych na bazie danych lub wysłanie zdarzeń z informacjami o zmianach danych.
+Wyzwalacz tworzy się za pomocą poniższego polecenia:  
+CREATE TRIGGER <nazwa> FOR { tabela | perspektywa }
+[ACTIVE | INACTIVE]
+{BEFORE | AFTER} {DELETE | INSERT | UPDATE}
+[POSITION <numer>]
+AS <tresc>
+gdzie tresc jest taka sama, jak w procedurach składowanych. Numer określa kolejność, w której będą wywoływane wyzwalacze, jeśli zdefiniowano ich kilka. Jest to liczba z przedziału od 0 do 32768, a wyzwalacze uruchamiane są od najmniejszego do największego. Poniższy przykład pokazuje, jak powiadamiać aplikacje o nowych zamówieniach:
+SET TERM !!;
+CREATE TRIGGER POST_NEW_ORDER FOR SALES AFTER INSERT AS
+BEGIN
+  POST_EVENT 'Nowe_zamowienie';
+END !! 
+SET TERM ; !!
+
+Zdarzenia
+Zdarzenia są bardzo ciekawym mechanizmem, który umożliwia wysyłanie komunikatów do aplikacji użytkownika. Aplikacja musi zarejestrować zdarzenia, na które ma reagować i w ten sposób można zaimplementować np. mechanizm automatycznego powiadamiania o nowych danych, modyfikacjach itp. Najczęściej ze zdarzeń korzysta się na poziomie wyzwalaczy.
+Do obsługi zdarzeń można wykorzystać komponent TIBEvents z pakietu IBX. Do wysyłania zdarzenia służy poniższa instrukcja:
+Post_Event <nazwa> 
+Nazwa zdarzenia może być łańcuchem tekstowym lub zmienną:
+Post_Event 'Zmiany'
+1 Rozmiar typu DOUBLE PRECISION zależy od platformy, na której działa InterBase. Obecnie w większości przypadków są to 64 bity
+2 Dla VARYING ograniczenie wynosi 32765
+3 W niniejszej książce będą stosowane krótkie nazwy typów znakowych: CHAR, NCHAR i VARCHAR
+4 Np. Unicode
+5 Więcej informacji o TIBTable i TIBQuery znajduje się w dalszych rozdziałach
+6 Szczegóły w rozdziale dotyczącym BLOB
+7 Dalej można znaleźć informację o konwersji do typu INT64 dla dialektu 3. mimo, że pojawia się on w metadanych, to trzeba go tworzyć za pomocą NUMERIC
+8 Edytor pól otwieramy klikając dwa razy na komponencie TQuery lub TIBTable
+9 Przynajmniej będzie tak w wersji 6.0.0.627.
+10 Dotyczy SQL-a i Delphi
+11 TDBImage nawet po dołączeniu modułu Jpeg nie obsługuje plików jpg. Trzeba wykorzystać TImage i "ręcznie" przenosić grafikę z pola BLOB do TImage
+1 Wyjątkami są typy dotyczące daty i łańcuchy znaków
+2 We wcześniejszych wersjach InterBase dopuszczone były też katalogi ze zmiennej systemowej PATH
+3 Moduł jest instalowany razem z programem InterBase. Można go znaleźć w katalogu interbase\SDK\include
+1 Np. TIBQuery
+2 W InterBase zaczynające się od RDB$
+3 DataModule
+4 TFrame
+1 Service Parameter Buffer/Block - bufor/blok parametrów usługi
+2 W celu określenia rozmiaru tablicy należy posłużyć się standardową funkcją High
+1 Primary Key lub Foregin Key
+2 Patrz rozdział dotyczący typów danych
+3 O tym dalej
+4 Patrz część o błędach w rozdziale o procedurach

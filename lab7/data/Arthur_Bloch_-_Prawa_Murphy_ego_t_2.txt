@@ -1,0 +1,1116 @@
+ARTHUR BLOOCH
+
+
+
+Prawa Murphy'ego
+i dalsze powody, dla których sprawy idą źle.
+
+KSIĘGA DRUGA
+Tłumaczył: Jerzy Łoziński
+
+SPIS TEŚCI
+
+
+Przedmowa
+
+Wstęp
+
+Wyższa murphologia
+
+Murphologia stosowana
+
+Teoria hierarchii i komisjologii
+
+Murphologia biur i warsztatów
+
+ Murphologia badawcza
+
+Murphologia polityki i ekonomii
+
+Murphologia ekspertyz i ekspertów
+
+Systematyka 
+
+Akademiologia 
+
+Murphologia medyczna
+
+Murphologia sportu
+
+Szosomurphologia 
+
+Murphologia konsumpcji i sprzedaży
+
+Murphologia gospodarstwa domowego
+
+Socjomurphologia (murphologia stosunków międzyludzkich)
+
+Metaprawa 
+
+Gdybym tak zgodnie z życzeniem Fortuny 
+Dzielnie po tęczy zsunął się skłonie, 
+Murphy tam czekałby na mnie czupumy, 
+By rzec: "Łakocie po drugiej stronie".
+
+Bert Whitney, łaskawy czytelnik
+
+
+PRZEDMOWA
+
+Łaskawi czytelnicy
+Po2ycja ta stanowi hołd wszystkim tym, którzy odpowiedzieli na moją prośbę, aby pierwszą księgę Praw Murphy'ego wzbogacić nowymi prawami. Od czasu publikacji tamtej księgi zostałem stałem  l i t e r a l n i e  wręcz zarzucony przenikliwymi obserwacjami dotyczącymi rzeczywistego świata (tzn. tego, w którym żyją ludzie).
+Problem, z którym przyszło mi się zmierzyć, antycypował już jeden z czytelników z Ann Abór, który znienacka zadzwonił do mnie, aby zaproponować prawo Digiovanniego: "Liczba praw będzie nieprzerwanie rosnąć do chwili, gdy w pełni wszelką dostępną przestrzeń publikacyjną".
+Kolejna zapowiedź przybrała postać: "Leo Rogersa zachęta do tomu drugiego: Gdzie dobry zamiar, tam dobry też nadmiar".
+Zobaczycie, że książka ta jest bardziej róźnorodna niż jakikolwiek z opublikowanych dotąd podobnych kompendiów. Tylko niewielka jej część powstała za sprawą autora tych słów, jako że lwia i - co tu dużo mówić - lepsza część prezentowanych praw pochodzi od normalnych ludzi, takich jak wy, tylko że mniej wrażliwych, którzy czytając księgę pierwszą, bardzo przejęli się piątą (i jedyną) regułą: "Traktujesz siebie zbyt serio".
+
+Berkeley, 
+Kalifornia styczeń 1980
+Arthur Bloch
+
+
+Wstęp
+
+W październiku roku 1977, kiedy ukazała się pierwsza nasza pozycja Prawa Murphy'ego i inne powody, dla których sprawy idą źle, niczego się nie spodziewającej publiczności został zaprezentowany w pełni rozwinięty, chociaż wcześniej nie ucieleśniony drukiem korpus teorii zwanej murphologią. Od tego momentu ujawniły się setki domorosłych murphologów z zapałem wspierających zasadnicze tezy i dorzucających swoje dwa grosze, ale o prawdziwym miejscu murphologii w dziejach nurtów filozoficznych najlepiej zaświadczyło natychmiastowe pojawienie się zapalczywych dysydentów, zajadłych rywali i zadomowionych w wielkim świecie prześmiewców.
+Niewielu było tych, którzy wystąpili przeciw prawu Murphy'ego z tej racji, iż przeczy ono uświęconej przez czas wierze w znakomitość myślenia pozytywnego. W moim odczuciu wszelkie próby identyfikowania prawa Murphy'ego z pesymizmem i negatywizmem jest w najlepszym razie krótkowzroczne, a w najgorszym (i najprawdopodobniejszym) - wyrazem głębokiego niezrozumienia.
+Po pierwsze, jeśli chce się zrozumieć nas, murphologów, nie można szukać naszej pozycji na skali optymizm-pesymizm. Na przekór pierwszemu wrażeniu prawa nie skłaniają się ku żadnemu z tych stanowisk. Klucz do filozoficznego sedna ich przesłania kryje się w pojęciu rzeczy "idących źle", albowiem z owej werbalnej konstrukcji nie należy wnosić, iż "źle" czy "dobrze" to jakieś istności obiektywne, a nie subiektywne.
+Zawiły charakter stanowiska murphologicznego najlepiej wyraził się w tezie kardynalnej zwanej też paradoksem optymizmu:
+
+Optymista sądzi, że żyjemy w najlepszym z możliwych światów. Pesymista obawia się, że to prawda.
+
+W pierwszej księdze, ulegle poddając się panującej terminologii, jeden z rozdziałów nazwałem "Murphologią stosowaną", szybko jednak doszedłem do wniosku, że to nazwa dość myląca i moją intencję lepiej wyrażają takie określenia jak "Murphologią życia codziennego" czy - jeśli ktoś woli - "Murphologią sytuacyjna". Chociaż w pierwszej chwili różnica może wydawać się nieistotna, to jednak wyrasta z głębokiego przeświadczenia, że prawa Murphy'ego z samej swej natury nie mają i nie mogą mieć żadnych praktycznych zastosowań. Znaczy to, iż jeśli ktoś stara się je wykorzystać, to opierając się na tym, jak dotąd funkcjonowały, przestają funkcjonować.
+Niepodobna na to przytoczyć jakikolwiek ścisły dowód. Wydaje się, że jeśli kolejka, w której stoicie, posuwa się na pozór wolno, to można przenieść się do innej, aby wykazać, że wraz z tym manewrem kolejna, do której teraz należycie, dostrzegalnie zwalnia swoje tempo. Podobnie można zabrać się do mycia samochodu z jawną intencją spowodowania deszczu. Niestety sam fakt, iż poczynania takie podejmujecie w celach eksperymentalnych, a nie z racji szczerego, bezpretensjonalnego zamiaru osiągnięcia określonego efektu, sprawia, iż w dostatecznie już zawiłą maszynerię murphologiczną wpychacie blokujący ją kij.
+Jerry Silverman, doświadczony murpholog z Berkeley, który dawno już uchwycił istotę całej sprawy, bardzo zwięźle zamknął to w swoim paradoksie:
+
+Jeśli prawo Murphy'ego może pójść źle, to z pewnością pójdzie.
+
+Aby umiejscowić murphologię w szerszym kontekście społecznym, dobrze jest zauważyć, że większość praw należy do jednej z dwóch grup: a) prawa administracji, biznesu i innych konspiracyjnych ludzkich grup lub b) prawa przyrody.
+Przedstawiane tutaj prawa fundamentalnie różnią się od oficjalnych ustanowień, prawnych regulacji i innych "ludzkich praw" tym przede wszystkim, iż nikt (z wyjątkiem autora niniejszych słów) nie może w żaden sposób skorzystać na ogłoszeniu praw tego typu. Nasze prawa bardziej pod tym względem pokrewne są prawom przyrody, do których formułowania aspirują zwyczajowo dwunożne istoty używające narzędzi, poszukujące zasobów i ostrzące siekiery. Prawa te są wyrazem klęski metody naukowej, jeśli chodzi o wyjaśnienie świata ludzkiego doświadczenia.
+Jak już wspomnieliśmy, główna różnica między prawami murphologii a prawami "rzetelnych" nauk (tzn. takich, które pozwalają zarobić) polega na względnej stosowalności tych ostatnich, co nazywa się także ich zdolnością prognostyczną. Otóż w przypadku Murphy'egó zdolność owa równa jest zeru.
+Prawa przyrody, czy jak się je czasami nazywa prawa naturalne, które rządzą fizycznymi przyczynami i wywołują zjawiska, z pożytkiem przewidują efekty fizycznych interakcji i dlatego cieszą się w społeczeństwie powszechnym uznaniem. Prawa nienaturalne, których najogólniejszą formułę podaje prawo Murphy'ego, traktują o intencjach i zamiarach, a zatem czynnikach, które nie mają natury fizycznej. Jeśli więc pytać o społeczną wartość tych praw, to nie ma co się zastanawiać nad ich ścisłością prognostyczną. Gdzie zatem się zwrócić, skoro zawodzą przewidywania, jeśli nie do wspomnień. "Nauka ścisła to retrospekcja" - przypomina nam reguła Fagina.
+Czy dokucza nam żal (z powodu tego, czego nie zrobiliśmy), czy męczą nas wyrzuty sumienia (z powodu tego, co zrobiliśmy), za każdym razem, gdy sprawy zaczynają iść źle, powitamy to z uśmiechem, uśmiech bowiem jest ważniejszy od spraw. I już samo to wystarczyłoby, abyśmy mieli za co być 'wdzięczni Murphy'emu.
+Na koniec - aby zapobiec temu, iż odtąd, czy sprawy toczą się dobrze, "świetnie" czy źle, "fatalnie", my trwać będziemy w spokojnej pewności siebie - pozwolę sobie poddać wam pod rozwagę metaprawo:
+
+Prawo końcowe
+Jeśli pewne sprawy, które powinny były pójść źle, potoczyły się dobrze, to ostatecznie okaże się, iż byłoby znacznie lepiej, gdyby potoczyły się źle.
+
+WYŻSZA MURPHOLOGIA
+
+Prawo Murphy'ego
+Jeśli coś może pójść źle, to z pewnością pójdzie.
+
+Schnatterly'ego synteza wątków ubocznych
+Jeśli coś nie może pójść źle, to z pewnością pójdzie.
+
+Paradoks Silvermana
+Jeśli prawo Murphy'ego może pójść źle, to z pewnością pójdzie.
+
+Uogólnienie prawa Murphy'ego
+Jeśli ciąg wydarzeń może potoczyć się niedobrze, to stanie się to w najgorszy z możliwych sposobów.
+
+Uzupełnienie Famsdicka do uszczegółowienia piątego
+Gdy rzeczy ze złych zrobiły się okropne, cykl zaczyna się od początku.
+
+Gattusa uogólnienie prawa Murphy'ego
+Nic nie jest tak złe, aby nie mogło się pogorszyć.
+
+Prawo Lyncha
+Kiedy robi się ciężko, wszyscy znikają.
+
+Prawo Evansa i Bjorna
+Cokolwiek pójdzie źle, zawsze jest ktoś, kto przewidział to.
+
+Zasada Benedicta
+Natura zawsze bierze stronę ukrytych braków.
+
+Prawo odsłaniania
+Ukryte braki nigdy nie pozostają takie do końca.
+
+Prawa Langsama
+1. Wszystko zależy.
+2. Nic nie trwa wiecznie.
+3. Wszystko się kiedyś przytrafia.
+
+Prawo Hellrunga
+Jeśli poczekasz, przejdzie. 
+Uzupełnienie Shavelsona
+...narobiwszy szkody. 
+Dodatek Grelba
+Jeśli naprawdę było niemiłe, to wróci.
+
+Prawo Flugga
+Kiedy chcesz zastukać w niemalowane drewno, okazuje się, że świat składa się wyłącznie z aluminium i winylu.
+
+
+Grossmana błędny cytat z H.L. Menckena
+Złożone problemy mają proste i łatwe do zrozumienia złe rozwiązania.
+
+Zasada Duchanne'a
+Sposobność zawsze puka do drzwi w najmniej odpowiedniej chwili.
+
+Imbesiego prawo zachowania brudu
+Aby jedno mogło stać się czyste, inne musi się zabrudzić. 
+Uogólnienie Freemana
+Można wszystko zabrudzić, niczego nie czyszcząc.
+
+Pierwszy postulat izomurphizmu
+Rzeczy, którym nic nie dorównuje, są równe samym sobie.
+
+Prawo Booba
+Rzecz szukaną znajdujesz zawsze na ostatku.
+
+Prawo poszukiwań
+Miejsce, gdzie przede wszystkim należałoby poszukać, jest ostatnim, o którym byś pomyślał.
+
+Definicja Fergusona
+Kryzys to sytuacja, gdy nie możesz powiedzieć: "Dobra, dajmy sobie z tym spokój".
+
+Prawo Maryanna
+Zawsze możesz znaleźć to, czego nie szukasz.
+
+Reguła Rune'a
+Nie przejmuj się, gdzie jesteś, a nie zginiesz.
+
+Zasada niestosowalności
+Mycie auta w celu wywołania deszczu nie skutkuje.
+
+Coita-Murphy'ego formuła potęgi myślenia negatywnego
+Optymisty nie sposób mile zaskoczyć.
+
+Memento Murphy'ego
+Gorsze jest wrogiem złego.
+
+Teza kardynalna
+Optymista sądzi, że żyjemy w najlepszym  możliwych światów. Pesymista obawia się, że to prawda.
+
+Prawo Neasera
+Można się zabezpieczyć przed awariami, ale nie przed durniami.
+
+MURPHOLOGIA STOSOWANA
+
+Drazena prawo reperacji
+Czas potrzebny na naprawienie sytuacji jest odwrotnie proporcjonalny do czasu potrzebnego na zepsucie. 
+Przykład l
+Dłużej skleja się wazę, niż się ją tłucze. 
+Przykład 2 
+Dłużej się traci x kilogramów, niż zyskuje.
+
+Prawo cukierni
+Ciastko, z którego nie spuszczasz oka od chwili wejścia do cukierni, kupi osoba przed tobą.
+
+Obserwacja Ettorego
+Inne kolejki posuwają się szybciej.
+
+0'Briena komentarz do obserwacji Ettorego
+Jeśli zmienisz kolejkę, dawna zacznie się posuwać szybciej niż obecna. 
+Uzupełnienie Kentona
+Jeśli spróbujesz wrócić, z obu kolejek zaczną na ciebie krzyczeć, że wszystko psujesz.
+
+Zasada ogonka
+Im dłużej stoisz w kolejce, tym większe prawdopodobieństwo, że jest niewłaściwa. 
+Reguła Flugga
+Najwolniejsza kasjerka zawsze jest w kolejce ekspresowej.
+
+Prawo Wittena
+Ilekroć obetniesz paznokcie, tylekroć godzinę później bardzo by się przydały.
+
+Prawa wielebnego Chichestera
+1. Jeśli pogoda będzie bardzo zła, to w kościele zjawi się mało wiernych.
+2. Jeśli pogoda będzie bardzo dobra, to w kościele zjawi się mało wiernych.
+3. Kiedy nie starcza poduszek na krzesła, wierni stawią się w kościele liczniej nad wszelkie spodziewanie.
+
+Prawo Hutchisona
+Jeśli sytuacja wymaga niepodzielnej uwagi, to pojawi się wraz z czynnikiem silnie rozpraszającym.
+
+Fullera prawo dziennikarskie
+Im odleglejszy wypadek, tym więcej trzeba zabitych i rannych, aby informacja trafiła na pierwsze strony gazet.
+
+Reguły prawdy reporterskiej
+1. Im bliżej jesteś danej sytuacji, tym oczywistsze są przekłamania we wszystkich informacjach prasowych.
+2. Im odleglejsza sytuacja, tym bardziej skłonny jesteś wierzyć wszystkim informacjom prasowym jej dotyczących.
+
+
+Prawo epistolografii
+Świeżym myślom najlepiej sprzyja zaklejenie listu.
+
+Jonesa prawo ogrodów zoologicznych i muzeów
+Najbardziej interesujący okaz nie będzie opisany.
+
+Jonesa prawo wydawnicze
+Pewne błędy ujawnią się dopiero po oddaniu książki do druku. 
+Uzupełnienie Błocka
+Na pierwszej stronie, na której autor otworzy egzemplarz okazowy, znajdzie się najgorszy błąd.
+
+Wallace'a reguły kreślarskie
+1. Nie kreśl tego, co możesz odrysować.
+2. Nie odrysowuj tego, co możesz skopiować.
+3. Nie kopiuj tego, co możesz przedrukować.
+
+Prawa fotografii
+1. Niektóre najlepsze kadry pojawiają się w chwili, gdy skończył się film.
+2. Inne najlepsze kadry usiłuje się uchwycić przy zakrytym obiektywie.
+3. Cała reszta znajduje się na filmie, w trakcie wywoływania którego ktoś nieoczekiwanie otwiera drzwi ciemni.
+
+Prawo Dedery
+W trzypiętrowym budynku z jedną windą dziewięć razy na dziesięć jest ona na innym niż ty piętrze.
+
+Prawo sir Waltera
+Tendencja dymu z papierosa, z grilla, ogniska itd. do tego, by wionąć w twarz konkretnej osoby, jest odwrotnie proporcjonalna do jej wrażliwości na dym.
+
+Kauffmana pierwsze prawo lotniskowe
+Odległość do stanowiska odpraw jest odwrotnie proporcjonalna do czasu pozostałego do odlotu.
+
+Prawo Rogersa
+Ledwie stewardesa rozniesie kawę, zaczynają się dziury powietrzne.
+Davisa wyjaśnienie prawa Rogersa
+Podawanie kawy w samolocie powoduje dziury powietrzne.
+
+Podstawowa reguła bagażu
+Niezależnie od tego, którą taśmę wybierzesz, twój bagaż będzie na drugiej.
+
+Angusa zasada walutowa
+Gdy wyjeżdżasz za granicę, stopa walutowa spada gwałtownie w dzień po zakupieniu obcej waluty. 
+Uzupełnienie
+Gdy wrócisz do domu, stopa spadnie gwałtownie dzień po sprzedaniu pozostałej waluty.
+
+
+Teoria hierarchii i komisjologia
+
+Postulat Perkinsa
+Im są więksi, tym mocniej walą.
+
+Postulat Harrisona
+Każde działanie spotyka się z równą, lecz nieprzyjazną krytyką.
+
+Reguła Rogersa
+Projekt zostaje zatwierdzony wtedy i tylko wtedy, gdy w razie porażki będzie można obwinić któregoś z autorów, lub gdy sukces będą mogli zapisać na swoje konto wszyscy zatwierdzający.
+
+Mollisona hipoteza biurokracji
+Jeśli jakiś pomysł może przetrwać biurokratyczne nicowanie i zostać potem wprowadzony w życie, to nie był wart realizacji.
+
+Bachmana twierdzenie o nieuchronności
+Im większe koszty wprowadzenia planu w życie, tym mniejsze możliwości jego poniechania, nawet jeśli z czasem okaże się figę wart.
+Uzupełnienie
+Im większy prestiż ludzi związanych z planem, tym mniejsze szansę jego poniechania.
+
+Prawo Conwaya
+W każdej organizacji jest jedna osoba, która wie, o co chodzi. 
+Tę trzeba zwolnić.
+
+Stewarta prawo reakcji
+Łatwiej uzyskać przebaczenie niż pozwolenie.
+
+Loftusa teoria zatrudnienia
+1. Cudzoziemskie talenty zawsze wydają się lepsze od rodzimych.
+2. Skład zatrudnionego personelu jest świadectwem triumfu nadziei nad doświadczeniem.
+
+Loftusa piąte prawo kierowania
+Niektórzy kierują zgodnie z instrukcją, chociaż nie wiedzą, kto ją ustalił, a nawet co to za instrukcja.
+
+Pierwsza reguła niższości zwierzchników
+Nigdy nie pozwól zwierzchnikom zorientować się, że jesteś od nich lepszy.
+
+Prawo Whistlera
+Nigdy nie wiadomo, kto ma rację, ale zawsze wiadomo, kto ma władzę.
+
+Spencera prawa danych
+1. Każdy może podjąć decyzję, mając odpowiednią ilość danych.
+2. Dobry kierownik podejmuje decyzję, nie mając odpowiednich danych.
+3. Znakomity kierownik podejmuje decyzję przy całkowitej nieznajomości danych.
+
+Reguła GottHeba
+Szef, który stara się zaimponować podwładnym dokładną znajomością szczegółów, przestał się orientować, co jest zasadniczym celem.
+
+Pierwsza reguła antycypacji negatywnej
+Oszczędziłbyś sobie wielu niepotrzebnych kłopotów, gdybyś nie palił mostów dopiero po ich pokonaniu.
+
+Naczelna zasada socjoekonomii
+W systemach hierarchicznych wysokość pensji jest odwrotnie proporcjonalna do uciążliwości i trudności wykonywanej pracy.
+
+Drewa prawo zamówień
+Klient, który płaci najmniej, ma najwięcej pretensji.
+
+Prawo Cohna
+W każdej instytucji biurokratycznej coraz więcej czasu trzeba poświęcać na pisanie raportów z coraz bardziej skąpej pracy. Punkt stabilności zostaje uzyskany w chwili, gdy cały czas jest poświęcony na raporty o nierobieniu niczego.
+
+Drugie prawo MacDonalda
+Konsultanci to tajemniczy osobnicy, którzy żądają od firmy podania im liczb, a potem je zwracają.
+
+Prawo Dingle'a
+Rzecz upuszczoną wszyscy będą odkopywać na bok, ale nikt jej nie podniesie.
+
+Prawo Kushnera
+Prawdopodobieństwo tego, że ktokolwiek coś zrobi, jest odwrotnie proporcjonalne do liczby osób, które również mogłyby to wykonać.
+
+Zasada Pfeifera
+Nigdy nie podejmuj decyzji, jeśli ktoś inny może to zrobić za ciebie. 
+Uzupełnienie
+Nikt nie zapisuje decyzji, których nie podjąłeś, chociaż mógłbyś. 
+Wszyscy odnotowują twoje złe decyzje.
+
+Prawo Thala
+Każdej wizji odpowiada równa i negatywna rewizja.
+
+Prawo Joego
+Osoba w firmie, na zacieśnienie kontaktów z którą poświęciłeś najwięcej wysiłków, zostanie pierwsza zwolniona przy reorganizacji.
+
+Pierwsze prawo MacDonalda
+Trudno zostać przeniesionym na nowe stanowisko, gdy jest się zbytecznym.
+
+Prawo prawdopodobieństwa rozrzutu
+Cokolwiek walnie w wentylator, nie będzie równo rozrzucone.
+
+Luposchainsky'ego zasada "śpiesz się powoli"
+Jeśli przyjedziesz wcześniej, spotkanie się nie odbędzie.
+Jeśli z językiem u pasa zdążysz na czas, trzeba będzie poczekać. 
+Jeśli się spóźnisz, będzie za późno.
+
+Aksjomat Gourda
+Narada to spotkanie, podczas którego szanuje się minuty, a traci godziny.
+
+Matildy prawo tworzenia komisji nadzwyczajnej
+Wyjdź, a zostaniesz wybrany.
+
+Wellingtona prawo dowodzenia
+Śmietanka zbiera się na wierzchu. Podobnie jak łajno.
+
+MURPHOLOGIA BIUR I WARSZTATÓW
+
+Prawo Hardina
+Niepodobna zająć się tylko jedną rzeczą.
+
+Czwarte prawo Hechta
+Obecna chwila jest najlepsza, by odłożyć na później to, czego nie chce ci się zrobić.
+
+Dylemat Grossmana
+Jeśli coś warto zrobić, to warto było wczoraj.
+
+Knagga konsekwencja prawa Murphy'ego
+Im bardziej zawiły i rozległy plan, tym większe prawdopodobieństwo porażki.
+
+Aksjomat Dehaya
+Proste czynności odkłada się na potem, bo zawsze będzie na nie jeszcze czas.
+
+Wetherna prawo zawieszenia sądu
+Przesłanka jest matką fiaska.
+
+Einsteina uogólnienie prawa Parkinsona
+Zadanie do wykonania rozrasta się na całą dostępną przestrzeń.
+Uszczegółowienie
+Niezależnie od ilości przestrzeni, jeśli dwa zadania trzeba realizować w tym samym czasie, to będą potrzebować tego samego miejsca.
+
+Cztery reguły warsztatowe
+1. Gwałtownie potrzebnego klucza czy wiertła nie ma w narzędziowni.
+2. Realizacja większości projektów wymaga trzech rąk.
+3. Liczba pozostałych nakrętek nigdy nie pokrywa się z liczbą pozostałych śrub.
+4. Im staranniej przygotujesz projekt, tym większa konfuzja, gdy coś pójdzie nie tak.
+
+Raya reguły precyzji
+Mierz mikrometrem. 
+Zaznaczaj kredą. 
+Tnij siekierą.
+
+Pierwsze prawo napraw
+Nie można zreperować tego, co się nie zepsuło.
+
+Pierwsza reguła rozsądku technicznego
+Żadnej części nie wyrzucaj.
+
+Smitha prawo naprawy komputerów
+Otwory są o 1/2 cala za małe.
+Uzupełnienie
+Jeśli otwory są odpowiedniej wielkości, to znajdują się po złej stronie.
+
+
+
+Drugie prawo Jaruka
+Jeśli taniej będzie kupić nowy egzemplarz, to kierownictwo zażąda naprawy starego.
+Uzupełnienie
+Jeśli taniej będzie naprawić stary egzemplarz, to kierownictwo będzie się upierać przy najnowszym modelu.
+
+Gore'a prawo projektów technicznych
+1. Naczelną funkcją projektu jest uczynienie wszystkiego trudniejszym dla wykonawcy, a niemożliwym dla serwisu.
+2. W każdym układzie element o najmniejszej żywotności znajdzie się w najtrudniej dostępnym miejscu.
+3. W każdym projekcie musi się znaleźć jeden element już nie wytwarzany, dwa brakujące na rynku i trzy, które są dopiero w stadium eksperymentów.
+Uzupełnienia
+l. Projektant wprowadzi do projektu zmiany uwzględniające najświeższe nowinki techniczne.
+2. Żadna z tych zmian nie zostanie wspomniana w instrukcji użytkowania.
+
+Sześć praw murphologii biurowej
+1. W listach ważnych, a napisanych bez błędów, błędy pojawiają się w trakcie wysyłki.
+Uzupełnienie
+Pod okiem szefa błędy ujawniają się w dwójnasób.
+2. Urządzenia biurowe funkcjonujące znakomicie w czasie pracy psują się, gdy po godzinach chcesz je wykorzystać do celów prywatnych.
+3. Zepsute urządzenie działa bez zarzutu, gdy pojawia się specjalista od napraw.
+4. Koperty i znaczki, które polizane nie zamierzają się zaklejać i przyklejać, znakomicie przywierają tam, gdzie są niepotrzebne.
+5. Dokumenty o żywotnym znaczeniu dowodzą swojej żywotności, przenosząc się z miejsca, gdzie je odkładasz, w miejsce, gdzie nie można ich znaleźć.
+6. Osoba, która ostatnia wymówiła pracę lub została wyrzucona, będzie odpowiedzialna za wszystkie szkody do czasu, aż zwolni się lub zostanie zwolniony ktoś następny.
+
+Dylemat Devriesa
+Jeśli naciśniesz naraz dwa klawisze, to zawsze pojawi się niewłaściwy znak.
+
+Teoria nadzoru selektywnego
+Tę jedyną podczas całego dnia chwilę, którą wybierzesz na to, żeby się w spokoju odprężyć, szef wybierze na kontrolę pracowników.
+
+MURPHOLOGIA BADAWCZA
+
+Pierwsze prawo prac laboratoryjnych
+Gorąca probówka wygląda dokładnie tak samo jak zimna.
+
+Podstawowa rada dla laborantów
+Jeśli nie wiesz, co robisz, rób to czysto.
+
+Ósma reguła Finagle'a
+Ważna jest praca w zespole. Dzięki temu jest na kogo zrzucić winę.
+
+Memento Finagle'a
+Nauka ma rację. Nie daj zwieść się faktom
+
+Wygodny przewodnik po nauce współczesnej
+1. Jeśli jest zielone albo się wije - to biologia
+2. Jeśli cuchnie - to chemia
+3. Jeśli nie działa - to fizyka
+
+Prawo Muencha
+Nic tak nie upiększa innowacji jak brak kontroli.
+
+Maya prawo stratygrafii
+Jakość korelacji jest odwrotnie proporcjonalna do dokładności kontroli.
+
+Velilinda prawa eksperymentów
+l. Jeśli może być problem z powtarzalnością wyników, zbadaj tylko raz.
+2. Jeśli najlepiej pasowałaby linia prosta, uzyskaj tylko dwie dane.
+
+Lermana prawo technologii
+Każdy problem techniczny jest rozwiązywalny, jeśli tylko starczy czasu i pieniędzy. 
+Uzupełnienie Lermana
+Zawsze brakuje czasu i pieniędzy.
+
+Rocky'ego dylemat zapobiegania innowacjom
+Jeśli wyniki nie są znane z góry, to nikt nie, będzie chciał sfinansować projektu.
+
+Pierwszy postulat Thumba
+Lepiej rozwiązać problem w przybliżeniu i poznać prawdę z dokładnością do ą10%, niż domagać się rozwiązania ścisłego i nie poznać prawdy w ogóle.
+
+Drugi postulat Thumba
+Łatwo zrozumiały i wykonalny fałsz jest pożyteczniejszy od zawiłej, niezrozumiałej prawdy.
+
+Pierwsze prawo Jonesa
+Każdy, kto wniósł istotny wkład do jakiejś dziedziny i trwa w niej dostatecznie długo, staje na przeszkodzie jej rozwojowi i to w stopniu wprost proporcjonalnym do wagi tego wkładu.
+
+
+
+Prawo Manna (uogólnione)
+Gdy naukowiec odkrywa fakt nadający się do publikacji, znajdzie się on w centrum jego teorii.
+Uzupełnienie
+Jego teoria z kolei znajdzie się w centrum całej myśli naukowej.
+
+Reguła linijki
+Nie ma niczego takiego jak linia prosta.
+
+Grelba prawo błędów
+W każdym ciągu obliczeń błędy mają tendencję do kumulowania się na końcu przeciwnym do tego, od którego rozpoczynasz sprawdzanie.
+
+Aksjomat Robertsa
+Istnieją tylko błędy. 
+Bermana uzupełnienie aksjomatu Robertsa
+Błąd jednej osoby staje się wiarygodną daną dla innej.
+
+Piąte prawo niewiarygodności
+Błądzić jest rzeczą ludzką, ale żeby coś kompletnie spieprzyć - do tego trzeba już komputera.
+
+Trzecie prawo Greera
+Program komputerowy wykona to, co mu polecisz, a nie to, czego chcesz.
+
+Leo Beisera pierwszy aksjomat komputerowy
+Kiedy umieszczasz coś w pamięci, pamiętaj gdzie.
+
+Steinbacha wskazówka do projektowania systemów
+Nigdy nie ustalaj warunków pojawienia się błędu, z którym nie potrafiłbyś sobie poradzić.
+
+MURPHOLOGIA POLITYKI I EKONOMII
+
+Prawo Liebermana
+Nic nie szkodzi, że wszyscy kłamią, bo i tak nikt nie słucha.
+
+Zasada parówki
+Ci, którzy Lubią parówki i szanują prawo, nie powinni oglądać, jak one powstają.
+
+Tooda dwie pierwsze zasady polityki
+1. Cokolwiek ci mówią, nie mówią prawdy.
+2. O czymkolwiek mówią, mówią o pieniądzach.
+
+Zasada Watergate
+O wykroczeniach rządu mówi się zawsze w czasie przeszłym.
+
+Alinsky'ego teza o radykałach
+Najwięksi moraliści znajdują się najdalej od problemu.
+
+Prawo Milesa
+To, przy czym obstajesz, zależy od tego, gdzie zasiadasz.
+
+Prawo Lee
+We wszelkich bliższych kontaktach ze zorganizowanymi grupami okazuje się, że ludzie są bardziej drażliwi, niż można oczekiwać.
+
+Prawo Evansa
+Jeśli możesz zachować spokojną głowę, kiedy wszyscy dookoła ją tracą, znaczy to, że nie zrozumiałeś, w czym rzecz.
+
+Prawo ubywania treści faktycznej
+Informacja pogarsza się w drodze wzwyż hierarchii biurokratycznej.
+
+Ruska prawo delegacji uprawnień
+Tam, gdzie wielką wagę przywiązuje się do delegacji uprawnień, odpowiedzialność - podobnie jak muł - osadza się na dnie.
+
+Prawo chomików
+Jeśli kolosalne wydatki podzieli się odpowiednio zmyślnie, to opinia publiczna nie będzie miała powodu, by sprzeciwiać się którejkolwiek ze składowych. 
+Uzupełnienie
+Odpowiednio liczna grupa chomików może unicestwić dowolnie wielki majątek.
+
+Gooda reguła postępowania z biurokracją
+Jeśli formy pomocy rządowej nie pasują do problemu, to zmień problem, a nie źródło pomocy.
+
+Merksa prawo monetarnych związków
+Głupiec i twoje pieniądze szybko wchodzą w konszachty.
+
+
+Heisenberga zasada inwestycji
+Możesz wiedzieć, w jakim kierunku zmierza rynek, ale nie jak zachowa się potem.
+
+Obserwacja Homgrena
+Dla ekonomistów świat realny jest często przypadkiem szczególnym.
+
+Spencera prawa rachunkowości
+1. Próbne bilanse nie wychodzą.
+2. Kapitału obrotowego brakuje.
+3. Płynność wysycha.
+4. Amortyzacji nie będzie.
+
+Prawa Price'a
+1. Czego nie chcą wszyscy, tego nikt nie dostaje.
+2. Masowe społeczeństwo wymaga masowych środków. 
+3. Wszystko ulega zepsuciu.
+
+Prawo 0'Briena
+Niczego nie zrobiono z właściwej przyczyny.
+
+Glyme'a formuła sukcesu
+Tajemnicą sukcesu jest uczciwość. Wystarczy tylko innym wmówić, że jest twoją cechą.
+
+MURPOHOLGIA EKSPERTYZ I EKSPERTÓW
+
+Reguła Marsa
+Ekspertem jest każda osoba z zewnątrz.
+
+Definicja Webera
+Ekspert to osoba, która wie coraz więcej o coraz węższej dziedzinie, aż wreszcie wie absolutnie wszystko o niczym.
+
+Reguła Warrena
+Szukając eksperta, wybierz tego, który zakłada najdłuższy czas pracy i najwyższe koszty.
+
+Reguła Wingera
+Jeśli jakaś sprawa pozostaje na twoim biurku dłużej niż 15 minut, to jesteś już w niej ekspertem.
+
+Prawo Schroedera
+Niezdecydowanie jest podstawą elastyczności.
+
+Greena prawo dyskusji
+Wszystko jest możliwe, kiedy nie wiesz, o czym mówisz.
+
+Reguła Burke'a
+Nigdy nie podnoś problemu, którego nie potrafisz rozwiązać. 
+Uzupełnienie
+Podnoś tylko takie problemy, których rozwiązanie znasz.
+
+Maksyma Matza
+Konkluzja następuje wtedy, gdy masz już dość myślenia.
+
+Fagina reguła przeszłych prognoz
+Nauka ścisła to retrospekcja.
+
+Naczelna reguła historii
+To nie historia się powtarza, to historycy powtarzają po sobie.
+
+Dunlapa prawa fizyki
+1. Fakt to utrwalona opinia.
+2. Pod wpływem wzrostu temperatury i ciśnienia fakty mogą mięknąć.
+3. Prawda jest elastyczna.
+
+Maksyma Merkina
+W razie wątpliwości prognozuj utrzymanie się trendu.
+
+Rozwiązanie Halgrena
+W tarapatach ściemniaj.
+
+Hawkinsa teoria postępu
+Postęp nie polega bynajmniej na tym, że teoria błędna zostaje zastąpiona przez słuszną, lecz na tym, że miejsce błędnej zajmuje teoria błądząca w subtelniejszy sposób.
+
+Prawo Meyera
+Prostym zadaniem jest rzeczy komplikować, skomplikowanym - upraszczać.
+
+Prawo Hlade'a
+Jeśli masz trudne zadanie do rozwiązania, to zleć je leniuchowi, on już znajdzie jakiś łatwy sposób.
+
+Prawo Hunta
+Każda wielka idea ma pewną wadę dorównującą jej wielkości, albo też ją przewyższającą.
+
+Brzytwa Hanlona
+Nigdy złej woli nie przypisuj tego, co znacznie łatwiej wytłumaczyć głupotą.
+
+
+SYSTEMANTYKA
+
+W wieku zawrotnej ekspansji techniki oraz coraz bardziej zawiłych i wyalienowanych struktur biurokratycznych młody fizyk i nauczycie z Michigan znacznie pomógł nam zrozumieć z jakimi problemami przyjdzie nam się zmierzyć jeśli mamy wszystko to przetrwać. John Gall w swej książce Systemantics (New York 1977) szkicuje swą filozofię, czerpiąc z zasobów teorii systemów, współczesnych badań nad wielkim organizacjami oraz z ponadczasowej mądrości szyderstwa. Podajemy kilka przykładów.
+
+Twierdzenie podstawowe
+Nowy system rodzi nowe problemy. 
+Uzupełnienie
+Systemów nie należy mnożyć bez potrzeby.
+
+Uogólniona zasada niepewności
+Systemy charakteryzuje tendencja do wzrostu który nie zna granic. 
+Formuły alternatywne
+1. Skomplikowane systemy przynoszą nieoczekiwane korzyści.
+2. Całościowe zachowanie wielkich systemów jest nieprzewidywalne.
+Uzupełnienie: twierdzenie o niesumaryczności zachowań systemowych 
+Duży system powstały z powiększenia rozmiarów mniejszego systemu zachowuje się odmiennie niż pierwotny.
+
+Fałsz funkcjonalny
+Ludzie w obrębie systemu robią co innego, niż on utrzymuje.
+
+Fałsz operacyjny
+System robi co innego, niż utrzymuje.
+
+Piętnaste prawo systemantyki
+Jeśli skomplikowany system funkcjonuje, to zawsze okazuje się, że powstał z funkcjonującego systemu prostego.
+
+Szesnaste prawo systemantyki
+Skomplikowany system zaprojektowany w pracowni nigdy nie działa i nie ma sposobu na jego usprawnienie. Trzeba zacząć od zbudowania funkcjonującego systemu prostego.
+
+Zasadnicze postulaty wyższej teorii systemów
+1. Wszystko jest systemem.
+2. Wszystko jest częścią większego systemu.
+3. Wszechświat daje się systematyzować w nieskończoność: i w górę (systemy coraz większe), i w dół (systemy coraz mniejsze).
+5. Złożoność wszystkich systemów jest nieskończona (złudzenie prostoty powstaje wtedy, gdy uwagę skupiamy na jednej zmiennej lub co najwyżej na kilku).
+
+Zasada Le Chateliera
+Złożone systemy mają tendencję do udaremniania swej właściwej funkcji.
+
+AKADEMIOLOGIA
+
+Prawa zajęć seminaryjnych
+1. Jeśli seminarium, na którym najbardziej ci zależy, odbywa się w sali przeznaczonej dla n studentów, to zgłosisz się jako n+1.
+2. Rozkład zajęć pomyślany jest tak, aby było między nimi jak najwięcej okienek.
+Uzupełnienie
+Jeśli dwa wykłady następują jeden po drugim, to będą się odbywać na przeciwnych krańcach kampusu.
+3. Kurs przygotowawczy do potrzebnego ci seminarium będzie prowadzony w semestrze po nim następującym.
+
+Prawa terroru stosowanego
+1. Przeglądając notatki w wieczór przed egzaminem, stwierdzisz, że najważniejsze gdzieś się zapodziały.
+2. Im więcej studiujesz przed egzaminem, tym mniej jesteś pewny, do których pytań pasują które odpowiedzi.
+3. 80% pytań egzaminacyjnych dotyczyć będzie opuszczonego przez ciebie wykładu, który traktował o nie przeczytanej przez ciebie książce.
+4. W dzień przed semestralnym kolokwium z prawa o zobowiązaniach etyk każe przeczytać dwieście stron o poczynaniach korporacji. 
+Uzupełnienie
+Każdy z prowadzących zajęcia uważa, że cały czas możesz poświęcić tylko na jego przedmiot.
+5. Jeśli na egzaminie będzie można korzystać z podręcznika, to zostawisz go w domu.
+Uzupełnienie
+Jeśli egzamin będzie polegał na napisaniu pracy w domu, to zapomnisz, gdzie mieszkasz.
+6. Pod koniec semestru przypomnisz sobie, że zapisałeś się na seminarium, na którym nigdy nie byłeś.
+
+Seitsa prawo wyższej uczelni
+Z przedmiotu potrzebnego ci do uzyskania absolutorium nie będzie zajęć w trakcie ostatniego roku.
+
+Romingera reguły dla studentów
+1. Im bardziej ogólna nazwa zajęć, tym mniej z nich skorzystasz.
+2. Im bardziej szczegółowa nazwa zajęć, tym mniej będziesz miał z nich pożytku potem.
+
+Duggana prawo poszukiwań naukowych
+Najwartościowszy jest cytat, którego źródła nie potrafisz ustalić.
+Uszczegółowienie
+Źródło, którego nie udało ci się ustalić, zostanie wskazane w najbardziej nieprzyjaznej recenzji.
+
+Whittingtona pierwsze prawo komunikowania
+Jeśli ktoś sporządzi tekst na temat, którego nie rozumie, to zostanie zrozumiany tylko przez tych, którzy na ten temat wiedzą więcej od niego.
+Uzupełnienie
+Teksty sporządzone bez zrozumienia tematu nie mogą spełnić swego zasadniczego celu: oświecić niewiedzących.
+
+Romingera reguły dla wykładowców
+1. Jeśli student po raz drugi się dopytuje, czy przeczytałeś jego recenzję książki, to nie czytał książki.
+2. Jeśli wykład był obowiązkowy, to w dzień egzaminu będzie wiele usprawiedliwionych nieobecności. Jeśli wykład był nieobowiązkowy, w dzień egzaminu sporo osób zobaczysz po raz pierwszy.
+
+MURPHOLOGIA MEDYCZNA
+
+Sześć reguł dla pacjentów
+1. Z tego, że lekarz potrafi nazwać twój stan, nie wynika, że wie, co to jest.
+2. Im nudniejsze i starsze czasopisma w poczekalni, tym dłużej przyjdzie czekać na umówioną wizytę.
+3. Tylko dorośli mają kłopoty z otwarciem fiolek zabezpieczonych przed dziećmi.
+4. W ostatnim dniu przepisanego okresu zażywania pastylek zawsze ich braknie.
+5. Pastylki, które trzeba zażywać podczas posiłków, są najwstrętniejsze.
+Uzupełnienie
+Nawet woda jest wstrętna, jeśli przepisze ją lekarz.
+6. Jeśli zaczyna ci się poprawiać, najpewniej to lekarz zachorował.
+
+Ostrzeżenie Matza
+Strzeż się lekarzy sławnych z tego, że potrafią wywikłać się z tarapatów.
+
+Matza reguła środków leczniczych
+Lekarstwo to substancja, która zaaplikowana szczurowi owocuje komunikatem naukowym.
+
+Aforyzm Cochrane'a
+Zanim zarządzisz badanie, zastanów się, co zrobisz, jeśli wynik będzie: a) pozytywny, b) negatywny. Jeśli obie odpowiedzi są takie same, to daj sobie spokój.
+
+Komentarz lorda Cohena
+Wykonalność operacji wcale jeszcze nie przemawia za koniecznością jej przeprowadzenia.
+
+Telesca prawa pielęgniarskie
+1. Wszystkie komplety do kroplówek są po drugiej stronie korytarza.
+2. Umiejętności lekarza są odwrotnie proporcjonalne do jego dostępności. 
+3. Są dwa rodzaje plastrów: te, które się nie chcą trzymać, i te, które nie chcą puścić.
+4. Wszyscy chcą zastrzyku przeciwbólowego w tej samej chwili.
+5. Wszyscy, którzy nie chcieli zastrzyku przeciwbólowego, kiedy je robiłaś, zażyczą go sobie, gdy będziesz roznosiła pigułki nasenne.
+
+Reguła Baracha
+Alkoholik to osoba, która pije więcej od swego lekarza.
+
+MURPHOLOGIA SPORTU
+
+Skarga mądrego kibica
+Głupcy pędzą na łeb na szyję - i mają lepsze miejsca.
+
+Reguła Bredy
+Najpóźniej przychodzą widzowie, którzy mają miejsca najdalej od przejścia.
+
+Mosera prawo widowisk sportowych
+Najciekawsze zagrywki następują wtedy, gdy podliczasz punkty albo kupujesz hot doga.
+
+Knoxa zasada gwiazdorstwa
+Ilekroć twój ukochany klub kupuje gwiazdę, ta zawodzi; ilekroć sprzedaje bezwartościowego gracza, ten bezzwłocznie staje się gwiazdą.
+
+Lavii prawo tenisa
+Przeciętny gracz dostosowuje się do gorszego partnera.
+
+Reguła rajdowa
+Jeśli się zgubiłeś, to postaraj się przynajmniej o dobry czas.
+
+Hertzberga pierwsze prawo chodzenia po linie
+Trzymaj mocno, dopóki nie chwycisz się czegoś innego.
+
+Deala prawa żeglarstwa
+1. Siła wiatru zmienia się odwrotnie proporcjonalnie do liczby pasażerów i ich doświadczenia.
+2. Wiatr niezależnie od jego siły w chwili, kiedy opuszczasz przystań, ustanie, gdy znajdziesz się najdalej od portu.
+
+Porkinghama prawa wędkarskie
+l. Czasu na ryby jest coraz mniej, im bliżej rozpoczęcia sezonu.
+2. Najmniej doświadczony wędkarz zawsze łapie największą rybę. 
+Uzupełnienie
+Im bardziej wyrafinowany i kosztowny sprzęt, tym większe prawdopodobieństwo, że w drodze do domu trzeba będzie odwiedzić targ rybny.
+3. Im bardziej splącze ci się żyłka, tym lepsze łowienie odchodzi dookoła.
+
+Michehla reguła wycieczek górskich
+Im bliżej, tym góra bardziej stroma. 
+Uzupełnienie Frothinghama
+Szczyt zawsze wydaje się bliżej, niż naprawdę jest.
+
+Shedenhelma prawo turystyki pieszej
+Na wszystkich trasach więcej się podchodzi niż schodzi i idzie po prostym.
+
+Smitha prawa brydżowe
+1. Jeśli masz na ręku singla lub renons, to partner będzie uparcie licytował ten kolor.
+2. Jeśli masz na ręku króla, waleta i dziewiątkę karo oraz asa pik, to w dziadku po lewej stronie zobaczysz asa, damę i dziesiątkę karo oraz króla pik.
+3. Jeśli rozgrywasz, kolor atutowy nigdy się nie dzieli równo.
+
+Prawo Thomasa
+Wygra ten, komu najmniej chce się grać.
+
+Prawo G. Davida
+Nieważne: wygrasz czy przegrasz, chyba 2 przegrasz.
+
+SZOSOMURPHOLOGIA
+
+Olivera prawo umiejscowienia
+Nieważne dokąd zmierzasz, ważne gdzie jesteś.
+
+Pierwsze prawo podróży
+Zawsze dłużej się dokądś jedzie, niż wraca.
+
+Prawo autostrady życia
+Jeśli ciągle musisz ustępować z drogi, to jesteś na złym pasie.
+
+Atheny reguły uprzejmości na drodze
+Jeśli kogoś przepuścisz na szosie, to:
+a) będzie to ostatni pojazd, który zdąży przejechać przez opadnięciem szlabanu, po którym nastąpi przejazd bardzo długiego i bardzo powolnego pociągu;
+b) będziecie zmierzać pod ten sam adres, a on zajmie ostatnie wolne miejsce na parkingu.
+
+Lemara postulat parkowania
+Jeśli zaparkujesz sześć przecznic dalej, to się okaże, że tuż przed budynkiem są dwa wolne miejsca parkingowe.
+
+Graya prawo autobusowe
+Spóźniony autobus pojawi się w chwili, gdy niedoszły pasażer zajdzie już tak daleko, że nie warto będzie wsiadać.
+
+Prawo McKee
+Kiedy ci się nie spieszy, światło zmieni się na zielone, ledwie tylko zatrzymasz samochód.
+
+Prawo Quigleya
+Samochód osobowy i ciężarówka nadjeżdżające z przeciwnych kierunków opustoszałej drogi spotkają się na wąskim moście.
+
+Drugie prawo Reece'a
+Prędkość pojazdu jadącego z przeciwka jest wprost proporcjonalna do długości odcinka pozostałego na wymijanie.
+
+Drewa pierwsze prawo biologii autostradowej
+Na czyściutkiej szybie pierwszy owad rozbryzguje się dokładnie na wysokości twoich oczu.
+
+Campbella prawa napraw samochodowych
+1. Jeśli możesz się dostać do zepsutej części, to nie masz odpowiednich narzędzi.
+2. Jeśli jest miejsce na wyjęcie części, to okaże się, że trzeba to zrobić z drugiej strony.
+3. Jeśli masz część zapasową, to wymiana okaże się niepotrzebna.
+
+Bromberga prawa napraw samochodowych
+1. W razie potrzeby każde narzędzie i każdy obiekt w zasięgu ręki okazuje się młotkiem.
+2. Niezależnie od błahości sprawy zawsze kończysz upaćkany w smarach i oleju.
+3. Narzędzia calowe i metryczne okazują się wymienne, gdy zażąda tego potrzeba.
+
+Fema prawo naprawy silników samochodowych
+Jeśli coś zgubisz, to nigdy nie spadnie na ziemię.
+
+MURPHOLOGIA KONSUMPCJI I SPRZEDAŻY
+
+Prawo Herblocka
+Jeśli coś ci się spodoba, wnet przestaną to produkować.
+
+Prawo Golda
+Wygodny but jest za to obrzydliwy.
+
+Hadleya prawa zakupu odzieży
+1. Jeśli ci się podoba, to nie mają twojego rozmiaru.
+2. Jeśli ci się podoba i mają twój rozmiar, to i tak źle leży.
+3. Jeśli ci się podoba i dobrze leży, to i tak cię nie stać.
+4. Jeśli ci się podoba, dobrze leży i stać cię, to rozpruje się przy pierwszym włożeniu.
+
+Finmana zasada przeceny
+To, co ci się najbardziej podoba, nie jest objęte przeceną.
+
+Zasady Hershisera
+l. Informacje "Nowość" i (lub) "Udoskonalona wersja" kłamią.
+2. Informacje "Nowość" i (lub) "Udoskonalę na wersja" oznaczają podwyżkę ceny.
+3. Informacje "Same nowości" i (lub) "Tylko udoskonalone wersje" oznaczają generalną zwyżkę cen.
+
+McGowana reguła Madison Avenue
+Jeśli towar jest reklamowany "Poniżej $50", możesz iść o zakład, że cena nie wynosi $19,95
+
+Sintetosa pierwsze prawo konsumenckie
+Gwarancja na sześćdziesiąt dni oznacza, że produkt sam się rozpadnie w sześćdziesiątym pierwszym dniu.
+
+Prawo Beryla
+Odpowiedni "Raport konsumenta" ukaże się tydzień po nabyciu przez ciebie towaru. Uszczegółowienia
+1. Produkt przez ciebie nabyty będzie oceniony jako "Poniżej krytyki".
+2. Produkt niemal nabyty będzie opatrzony uwagą "Kupuj!!!".
+
+Savignana prawo sprzedaży wysyłkowej
+Jeśli nie napiszesz zażalenia, to zamówienie nie zostanie zrealizowane.
+Jeśli napiszesz zażalenie, to otrzymasz zamówiony towar, zanim twój list dojdzie do adresata.
+
+Younta prawa sprzedaży wysyłkowej
+1. Zapas najważniejszego z zamówionych produktów się wyczerpie.
+2. Na produkt drugi pod względem ważności trzeba składać zamówienia z wyprzedzeniem półrocznym.
+3. W trakcie owego pół roku zamówiony produkt będzie można taniej i szybciej kupić w innych miejscach.
+4. Ledwie produkt zamówiony z wyprzedzeniem przejdzie do kategorii "Więcej nie wytwarzany", nie będzie go można dostać nigdzie i za żadną cenę.
+
+
+Prawo Lewisa
+Ludzie kupią wszystko, co sprzedaje się tylko po jednej sztuce na osobę.
+
+MURPHOLOGIA GOSPODARSTWA DOMOWEGO
+
+0'Reilly'ego prawo kuchenne
+"Czystość" to pojęcie zbliżone do "niemożliwość".
+
+Siedem praw kuchennych zgryzot
+1. Sprzęty wielofunkcyjne żadnej z funkcji nie wykonują właściwie. 
+Uzupełnienie
+Im droższy sprzęt, tym rzadziej używany.
+2. Im prostsze polecenia przy rozpakowywaniu (np. "Naciśnij tutaj"), tym trudniejsze do wykonania.
+3. W rodzinnym przepisie odnalezionym w starej książce podstawowy składnik będzie nie do odczytania. 
+Uzupełnienie
+Przekonasz się o tym dopiero po zmieszaniu wszystkich innych składników.
+4. Jeśli potrawa się nie udała, to wszelkie próby zaradzenia temu tylko pogorszą sprawę.
+5. Pochwalą cię za to, co wymagało najmniej wysiłku.
+Przykład
+Jeśli zrobiłeś kaczkę w pomarańczach, to pochwalą cię za upieczone kartofle.
+6. Składnik, którego najdłużej szukałeś po sklepach, będzie właśnie tym, na który gość jest uczulony.
+7. Im więcej czasu i energii poświęcisz na przygotowanie potrawy, tym większe prawdopodobieństwo, że goście cały posiłek spędzą na opowieściach o dawniej jedzonych specjałach.
+
+Alice Hammond prawa kuchenne
+1. Ciasto ładnie rośnie, a piana się ubija tylko dla rodziny i dla gości, których wcale nie chciałaś zapraszać.
+2. Zepsute jest to jedyne jajko, którego nie sprawdzisz.
+3. Każdy sprzęt kuchenny włożony do zmywarki po jej włączeniu natychmiast okazuje się niezbędny. Każdy sprzęt służący jako miarka po użyciu do składników płynnych okazuje się niezwłocznie potrzebny do składników suchych.
+4. Czas poświęcony na spożycie potrawy jest odwrotnie proporcjonalny do czasu potrzebnego na jej przygotowanie.
+5. Cokolwiek podasz, ktoś jadł to już na obiad.
+
+Prawa doświadczonego kuchmistrza
+1. Jeśli zastanawiasz się, czy wyjąłeś mięso do rozmrożenia, to nie wyjąłeś.
+2. Jeśli zastanawiasz się, czy zostawiłeś czajnik na gazie, to zostawiłeś.
+3. Jeśli zastanawiasz się, czy trzeba w drodze do domu kupić chleb i masło, to trzeba.
+4. Jeśli zastanawiasz się, czy starczy ci pieniędzy, żeby wyskoczyć z rodziną na kolację do miasta, to nie starczy.
+
+Hamiltona reguła mycia szklanych naczyń
+Plamka jest zawsze po innej stronie, niż trzesz. 
+Uzupełnienie
+Kiedy plamka jest po twojej stronie, nie ma do niej dostępu.
+
+Prawo Yeagera
+Pralki psują się tylko w trakcie prania. 
+Uzupełnienia
+1. Wszelkie awarie następują wtedy, gdy hydraulik ma dzień wolny.
+2. Koszt naprawy równy jest wartości nowego płaszcza przemnożonej przez 1,75 lub wartości nowej pralki przemnożonej przez 0,75.
+
+Walkera prawo pralni
+Brudnych pralni zawsze jest więcej niż czystych. 
+Clive'a zastrzeżenie wobec prawa Walkera
+Jeśli jest czysto, to nie pralnia.
+
+Prawo Skoffa
+Dziecko nie siusia na brudną podłogę.
+
+Prawo Van Roya
+Niepsująca się zabawka świetnie nadaje się do psucia innych zabawek.
+
+Witzlinga prawa występów potomstwa
+1. Z dziecka, które w domu gada jak najęte, nie da się publicznie wydusić ani słowa.
+2. Dziecko wstydliwe i introwersyjne dopiero w zatłoczonym miejscu pochwali się świeżo wyuczonymi słowami ("cholera "kutas" itd.).
+
+C.H. Fisha prawa zachowań zwierzęcych
+1. Prawdopodobieństwo, że kot zje podaną mu potrawę, nie ma nic wspólnego z jej ceną.
+2. Prawdopodobieństwo, że domowe zwierzątko zacznie się domagać wpuszczenia czy wypuszczenia, jest wprost proporcjonalna do liczby i znaczenia właśnie przyjmowanych gości.
+
+Iske'a uszczegółowienie prawa Parkinsona w odniesieniu do nastolatków
+Żołądek dostosowuje się do dostępnej ilość niezdrowego jedzenia.
+
+Ballance'a prawo względności
+Długość minuty zależy od tego, po której stronie drzwi do łazienki jesteś.
+
+Reguła bananów
+Jeśli kupisz niedojrzałe banany czy awokado, to znikną, zanim dojrzeją. Jeśli kupisz dojrzałe, to zgniją, nim zostaną zjedzone.
+
+Britta prawo biologii roślin domowych
+Długość życia roślin domowych jest odwrotnie proporcjonalna do ich ceny, a wprost proporcjonalna do ich brzydoty.
+
+Prawo powtórzeń
+Jeśli widziałeś tylko jeden odcinek serialu, to przy ponownej projekcji trafisz na ten sam odcinek.
+
+Jonesa prawa programów telewizyjnych
+1. Jeśli są tylko dwie audycje warte obejrzenia, to będą w tym samym czasie.
+2. Jedyny program wart obejrzenia zostanie odwołany.
+3. Program, na który czekasz przez cały tydzień, zostanie bez uprzedzenia pokazany wcześniej.
+
+Uniwersalne zasady Bessa
+1. Telefon dzwoni w chwili, gdy nie może znaleźć kluczy do domu.
+2. Do aparatu dobiegniesz w chwili, gdy umilknie dzwonek.
+
+Teza generalna Kovaca
+Zły numer nigdy nie jest zajęty.
+
+Ryana uszczegółowienie prawa Parkinsona
+Ilość sprzętu wzrasta tak, aby pochłonąć całą dostępną przestrzeń.
+
+SOCJOMURPHOLOGIA (MRPHOLOGIA STOSUNKÓW MIĘDZYLUDZKICH)
+
+Prawo Shirleya
+Większość ludzi jest siebie nawzajem warta.
+
+Arthura prawa miłości
+1. Osobom, które cię pociągają, niezmiennie przypominasz kogoś innego.
+2. Kiedy się wreszcie ośmieliłeś wysłać list miłosny, dotrze on do adresata(-ki) dopiero po tym, kiedy dojdziesz do przekonania, że to jednak idiota(-ka).
+3. Romantyczne gesty w wydaniu innych są świeże i podniecające. W twoim wydaniu są nudne i zniechęcające.
+
+Thomsa reguła długości pożycia małżeńskiego
+Długotrwałość małżeństwa jest odwrotnie proporcjonalna do kosztowności ślubu.
+
+Zasada wspólnoty sypialnianej
+Pierwszy zasypia ten, kto chrapie.
+
+Gillensona prawa oczekiwań
+l. Nigdy nie spodziewaj się zbyt wiele po randce w ciemno tylko dlatego, że rozmówca (rozmówczyni) ma miły głos.
+2. Nie podniecaj się ekscytującym widokiem osoby widzianej z tyłu.
+
+Logiczne prawidło Colvarda
+Szansę są zawsze pół na pół: coś się zdarzy albo nie.
+Bezwględny komentarz Colvarda
+Jest to szczególnie prawdziwe w związku z kobietami.
+Grelba komentarz do prawidła Colvarda
+Tak czy inaczej, twoje szansę zawsze są jak l do 10.
+
+Skarga Cheita
+Jeśli pomożesz przyjacielowi w potrzebie, to możesz liczyć na jego wdzięczną pamięć... kiedy znowu znajdzie się w potrzebie.
+
+Ruby'ego zasada spotykania znajomych
+Prawdopodobieństwo spotkania znajomego jest tym większe, im bardziej nie chcesz, żeby cię zobaczono z osobą, która ci towarzyszy.
+
+Prawo Dennistona
+Cnota sama jest dla siebie karą. 
+Uzupełnienie Dennistona
+Jeśli zrobisz coś dobrze, to ktoś znowu cię o to poprosi.
+Komentarz Blocha
+Uzupełnienie Dennistona znakomicie się stosuje do maksymy "Cnotliwy czyn nigdy nie pozostanie bez kary". Prawo Dennistona ma znacznie szersze implikacje.
+
+Masona pierwsze prawo synergii
+Tego dnia, gdy się wreszcie zdecydujesz sprzedać za coś duszę, dusz będzie co niemiara.
+
+Rona obserwacje dotyczące nastolatków
+1. Pryszcze pojawiają się dopiero godzinę przed randką.
+2. Rysa na płycie jest zawsze na twojej najbardziej ulubionej piosence.
+
+Fundamentalna zasada socjogenetyki
+Wybitność jest cechą recesywną.
+
+Motto profesora Blocka
+Przebacz i pamiętaj.
+
+Pierwszy postulat Parda
+Wszystko, co dobre w życiu, jest nielegalne, niemoralne lub tuczy.
+
+Steinkopffa uogólnienie pierwszego postulatu Parda
+To, co dobre w życiu... powoduje także raka u myszy laboratoryjnych i jest niesłychanie opodatkowane.
+
+Prawo Jacobsa
+Błądzić to rzecz ludzka. Zrzucać błąd na kogoś innego to rzecz jeszcze bardziej ludzka.
+
+Rada Edelsteina
+Nie przejmuj się tym, co ludzie myślą o tobie: nazbyt są zaprzątnięci strapieniem, co ty myślisz o nich.
+
+Prawo Meadera
+Cokolwiek się przytrafi, przydarzyło się już komuś ze znajomych, ale w mniejszym stopniu.
+
+Prawo Bocklage'a
+Ten, kto śmieje się ostatni, prawdopodobnie nie zrozumiał dowcipu.
+
+METAPRAWA
+
+Prawo Digiovanniego
+Liczba praw będzie nieprzerwanie rosnąć do chwili, gdy wypełni wszelką dostępną przestrzeń publikacyjną.
+
+Leo Rogersa zachęta do tomu drugiego
+Gdzie dobry zamiar, tam dobry też nadmiar.
+
+Rogersa obserwacja dotycząca praw
+Im wyższy szczebel w hierarchii organizacyjnej, tym mniej osób poważnie traktuje prawo Murphy'ego, prawo Parkinsona itd.
+
+Oaksa reguły prawodawstwa
+1. Prawo rozbudowuje się stosownie do środków na jego ochronę.
+2. Zła norma prędzej zostanie uzupełniona niż uchylona.
+3. Prawodawstwo społeczne nie może uchylić praw fizyki.
+
+Maksyma Jaffe'a
+Są rzeczy niewiadome, ale właśnie nie wiadomo które.
+
+Prawo Muira
+Ilekroć chcemy rozważyć coś w izolacji, tylekroć się okazuje, iż powiązane jest z całą resztą wszechświata.
+
+Aksjomat Ducharma
+Wystarczy dokładnie przyjrzeć się problemowi, by zobaczyć, że samemu jest się jego częścią.
+
+Prawo arbitralności podziałów
+Każdą rzecz można podzielić na dowolnie wiele części.
+Komentarz
+W powyższej formule określenie "każda rzecz" jest równoznaczne ze "wszystko".
+
+Prawo końcowe
+Jeśli pewne sprawy, które powinny były pójść źle, potoczyły się dobrze, to ostatecznie okaże się, iż byłoby znacznie lepiej, gdyby potoczyły się źle.
+

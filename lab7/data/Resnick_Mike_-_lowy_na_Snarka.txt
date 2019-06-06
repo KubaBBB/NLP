@@ -1,0 +1,880 @@
+Autor: MIKE RESNICK
+Tytuł: łowy na Snarka
+
+(Hunting the Snark)
+
+Z "NF" 10
+
+
+Uwierzcie mi, spodziewaliśmy się znaleźć tam wszystko, tylko nie Snarka. 
+I jestem równie pewien, że on także spodziewał się spotkać wszystko, tylko nie nas.
+Chciałbym powiedzieć, że zareagowaliśmy w połowie tak dobrze, jak on. Ale może lepiej zacznę od początku. Nie bójcie się - do Snarka dotrę wystarczająco szybko.
+Nazywam się Karamojo Bell. (No, naprawdę to Daniel Mathias Bellman. Nigdy nie byłem bliżej okręgu Karamojo na Ziemi niż pięć tysięcy lat świetlnych. Ale kiedy odkryłem, że jestem dalekim potomkiem legendarnego myśliwego, postanowiłem przyjąć jego imię - pracuję w tym samym zawodzie i liczyłem na to, że imię zrobi wrażenie na klientach. Okazało się, że nie miałem racji - spotkałem tylko trzy osoby, które w ogóle o nim słyszały i żadna nie pojechała ze mną na safari. Imię jednak zatrzymałem. Danielów kręci się wszędzie masa, ja jestem jedynym Karamojo.)
+ Pracowałem wtedy dla firmy Silinger & Mahr, najstarszej i najbardziej znanej z firm organizujących safari. Silinger zmarł wprawdzie sześćdziesiąt trzy lata temu, a Mahr poszedł za nim sześć lat później i teraz firmą zarządza anonimowa korporacja z Delurosa VIII, ale mieli z tą nazwą więcej szczęścia niż ja z moją, więc nigdy jej nie zmienili.
+Byliśmy najdroższą firmą w tej branży, jednak byliśmy warci tej ceny. Całe tysiąclecia polowano na setkach światów, ale ludzie z forsą zawsze zapłacą, żeby zostać  pierwszymi na terenach, na których nikt nie postawił stopy.  Kilka lat temu firma wykupiła koncesję myśliwską na dziesięć planet w nowo otwartym skupisku Albion i tylu naszych klientów chciało być pierwszymi myśliwymi na dziewiczych światach, że musieliśmy urządzić loterię. Firma zgodziła się wysłać jednego zawodowego myśliwego na każdy świat z czteroosobową wyprawą, a opłata wynosiła (uwaga!) dwadzieścia milionów kredytów. Albo osiem milionów dolarów Marii Teresy, jeśli ktoś niezbyt wierzy w kredyty - a tam, na Pograniczu, niewielu w nie wierzy.
+My, zawodowcy, pragnęliśmy polować na dziewiczych światach równie mocno jak klienci. Planety przydzielano nam zgodnie ze starszeństwem, więc, jako siódmego w kolejności, wysłano mnie na Dodgsona IV, świat nazwany na cześć kobiety, która pierwsza sporządziła jego mapę kilkanaście lat temu. Dziewięciu z nas miało kompletne wyprawy. Dziesiąty miał jednoosobową - niezwykle bogatego faceta, który nie lubił się dzielić.
+O jednym trzeba pamiętać - nie prowadziłem tego safari sam. Oczywiście, ja tam rządziłem, ale miałem przy sobie ekipę dwunastu błękitnoskórych, humanoidalnych Dabihów z Kakkaba Kastu IV. Czterech nosiło za klientami strzelby (ja nie miałem takiego - nikomu nie powierzam mojej broni). Był jeszcze wśród nich kucharz, trzech oprawiaczy skór (a do obdarcia ze skóry nieznanego zwierzęcia tak, by jej nie uszkodzić, trzeba dużo większej wprawy, niż mogłoby się zdawać) i trzech obozowych posługaczy. Dwunasty był moim stałym tropicielem, którego imię - Chajinka - brzmiało dla mnie zawsze jak kichnięcie.
+Nie potrzebowaliśmy właściwie pilota - przecież komputer nawigacyjny statku mógłby wystartować z drugiej połowy galaktyki i wylądować na jednym nowokenijskim szylingu - ale nasi klienci płacili za luksus, więc Silinger & Mahr im go zapewniali. Dlatego oprócz Dabihów mieliśmy również pilota, kapitana Kosha Mbele, który przez dwadzieścia lat pilotował jednoosobowe myśliwce w wojnie z Settem.
+Sama wyprawa łowiecka składała się z czterech partnerów w interesach. Każdy z nich miał więcej forsy, niż mógłbym wyśnić, a może nawet więcej. Byli to: Willard Marx, magnat handlu nieruchomościami, który w pojedynkę zagospodarował system planetarny Roosevelta; Jaxon Pollard, właściciel sieci tanich supermarketów i eleganckich piekarni, który handlował na ponad tysiącu światów; Philemon Desmond, szef największego banku na Dalekim Londynie z filiami w pewnie dwustu systemach, i jego żona, Ramona, sędzia Sądu Najwyższego tej planety.
+Nie wiem, jak się ta czwórka spotkała, ale najwyraźniej wszyscy pochodzili z jednej planety i znali się od bardzo dawna. Od początku łączyli swoje kapitały w interesach i szli od sukcesu do sukcesu. Ich ostatnim szczęśliwym trafieniem stał się Silverstrike, odległy świat pełen kopalń. Marx był zapalonym myśliwym, który nazbierał już trofeów na kilkunastu różnych światach, Desmondowie zawsze chcieli pojechać na safari, a Pollard, który wolałby spędzić parę tygodni na Calliope lub jakiejś innej rozrywkowej planecie, zgodził się w końcu dołączyć do wycieczki, by mogli razem świętować zdobycie ostatniego miliarda.
+Poczułem natychmiastową niechęć do Marxa, który zdecydowanie zbyt ostentacyjnie odgrywał prawdziwego mężczyznę. Ale to nie był żaden problem - nie płacono mi za rozkoszowanie się jego towarzystwem, tylko za znalezienie dla niego paru efektownych trofeów, które miały się ładnie prezentować na jego ścianie. Zresztą wydawał się raczej kompetentny.
+Desmondowie stanowili interesującą parę. Ona była ładną kobietą, która starała się, jak mogła, by wyglądać na nieładną i surową; wciąż cytowała wszystko, co przeczytała (a była bardzo oczytana) - zacząłem się zastanawiać, co sprawia jej większą przyjemność, prywatna lektura czy publiczne cytowanie. Philemon, jej mąż, mały, myszowaty facecik, który za dużo pił, za dużo ćpał, za dużo palił, wyglądał na stłamszonego przez żonę i nosił maleńki medal, który wygrał na szkolnych zawodach przed trzydziestu laty - pewnie próbując w ten sposób zaimponować pani Desmond, na której najwyraźniej nie robiło to żadnego wrażenia. 
+Pollard był po prostu cichym, skromnym człowiekiem, który miał szczęście i zdobył pieniądze. Nie udawał, że jest bardziej wyrafinowany niż był w istocie - co dla mnie czyniło go dużo bardziej wyrafinowanym niż jego partnerzy. Wydawał się być ogromnie zaskoczony tym, że zdołali namówić go na tę wyprawę. Zabrał ze sobą środki chroniące przed słońcem, środki na biegunkę, ukąszenia owadów i na pięćset różnych innych rzeczy, które mogły mu się przytrafić, i żartował na temat utraty - jak to nazywał - swojej więziennej bladości.
+Spotkaliśmy się w naszej filii na Braxtonie II, po czym ruszyliśmy w sześciodniową podróż na Dodgsona IV. Cała czwórka zdecydowała się na Głęboki Sen, więc zapakowaliśmy ich z kapitanem Mbele do kokonów zaraz po wejściu w nadświetlną i obudziliśmy jakieś dwie godziny przed lądowaniem.
+Padali z głodu - znam to uczucie. Głęboki Sen zwalnia metabolizm do ślimaczego tempa, ale nie zatrzymuje go całkiem, bo to byłaby śmierć. Pierwsze, o czym się myśli po przebudzeniu, to jedzenie - dlatego Mbele wyrzucił Dabihów z kambuza, gdzie zazwyczaj przesiadywali, i kazał kucharzowi przygotować posiłek zjadliwy dla ludzi. Gdy tylko skończyli jeść, zaczęli zadawać pytania na temat Dodgsona IV.
+- Jesteśmy na orbicie od godziny. Przez ten czas komputer statku tworzył szczegółową mapę topograficzną planety - wyjaśniłem. - Wylądujemy, gdy tylko znajdę odpowiednie miejsce na główny obóz.
+- No to jaki jest ten świat? - zapytał Desmond, który najwyraźniej nie przeczytał wszystkich tych danych, które mu przesłaliśmy. 
+- Nigdy na nim nie byłem - odparłem. - Nikt nie był. - Uśmiechnąłem się. - Dlatego tyle płacicie.
+- Skąd więc wiadomo, że jest tam jakaś zwierzyna? - rzucił zaczepnie Marx.
+- Jest zwierzyna - zapewniłem go. - Pionierka, która opisała świat, twierdzi, że jej czujniki wyróżniły cztery gatunki drapieżników i dużo gatunków roślinożernych, w tym jeden o osobnikach ważących jakieś cztery tony.
+- Ale nie lądowała? 
+- Nie miała powodu. Nie było oznak rozumnego życia, a do zbadania zostały miliony światów.
+- Cholera, lepiej, żeby miała rację co do zwierząt - mruczał Marx. - Nie płacę takiej forsy za oglądanie kwiatków i drzew.
+- Polowałem na trzech tlenowych światach opisanych przez Karen Dodgson - powiedziałem. - Jej obietnice zawsze się spełniały.
+- Czy ludzie naprawdę polują na chlorowych i amoniakowych światach? - zapytał Pollard.
+- Parę osób. To bardzo specjalistyczna impreza. Jeśli po safari będziecie chcieli dowiedzieć się o tym czegoś więcej, skontaktuję was z odpowiednią osobą w firmie. 
+- Polowałem na paru chlorowych światach - wtrącił Marx.
+Jasne, pomyślałem.
+- Znakomity sport - dodał.
+Kiedy trzeba spędzić z klientem parę tygodni czy też miesięcy, nie jest wskazane nazywanie go chwalipiętą i kłamcą, ale zapamiętuje się takie informacje na przyszłość.
+- Karen Dodgson - to na jej cześć nazwano planetę? - zapytała Ramona Desmond.
+- Taka jest zasada w Korpusie Pionierów. Ten, kto pierwszy opisze świat, może go nazwać, jak tylko zechce. - Uśmiechnąłem się. - Nie słyną ze skromności. Zazwyczaj nazywają je na swoją cześć.
+- Dodgson... - powtórzyła. - Może znajdziemy tam Dżabbersmoka albo Kota z Cheshire, albo nawet Snarka.
+- Słucham?! - zdziwiłem się.
+- To było prawdziwe nazwisko Lewisa Carrolla - Charles Dodgson.
+- Nigdy o nim nie słyszałem.
+- Napisał "Dżabbersmoka", "Polowanie na Snarka" i książki o Alicji. - Wpatrywała się we mnie. - Musiał pan je czytać.
+- Obawiam się, że nie.
+- Mniejsza z tym. - Wzruszyła ramionami. - To tylko żart. Niezbyt zabawny.
+Teraz żałuję, że nie spotkaliśmy raczej Dżabbersmoka.
+
+"Wytropimy tu Snarka!", Bosman ozwał się żwawo,
+Wysadzając na brzeg swą załogę;
+Aby stóp nie zmoczyli, niósł ich sam, z wielką wprawą
+Łapiąc w garść włosy, kark albo nogę.
+
+Dodgson IV był bujny i zielony, z wielkimi sawannami, gęstymi lasami, w których drzewa rosły na setki metrów w górę, wieloma wielkimi jeziorami, trzema słodkowodnymi oceanami, atmosferą odrobinę gęstszą, a grawitacją odrobinę lżejszą niż Galaktyczna Standardowa.
+Gdy Dabihowie organizowali obóz i wznosili obok statku Bąble, wysłałem Chajinkę, by nazbierał wszystkiego, co mogło być jadalne, i zaniósł do pokładowego laboratorium do analizy. Okazało się, że rzeczywistość przerosła me nadzieje.
+- Mam nowiny - ogłosiłem, kiedy wyszedłem wreszcie ze statku. - Jest tu przynajmniej siedemnaście jadalnych gatunków roślin. Kora tych drzew ze złocistymi kwiatami też jest jadalna. Woda nie jest stuprocentowo bezpieczna, ale niewiele jej brakuje, więc jeśli ją napromieniujemy, będzie w porządku. 
+- Nie przyjechałem tu, żeby jeść owoce i jagódki, czy co tam ten Niebieski znalazł - warknął Marx. - Chodźmy na polowanie.
+- Moim zdaniem lepiej będzie, jeśli zostaniecie państwo dzisiaj w obozie. Ja z Chajinką zbadamy teren i sprawdzimy, co tam jest. Proszę odprężyć się po podróży, przywyknąć do atmosfery i grawitacji.
+- Dlaczego? - zapytał Desmond. - Co za różnica, czy wyruszymy dzisiaj, czy jutro?
+- Kiedy zorientuję się, z czym mamy do czynienia, będę mógł orzec, jaką należy zabrać broń. Zresztą chociaż wiemy, że są tu drapieżniki, nie mamy pojęcia, czy są aktywne w dzień, w nocy, czy może przez całą dobę. Nie ma sensu tracić całego dnia na szukanie zdobyczy, która wychodzi tylko nocą.
+- Nie pomyślałem o tym. - Desmond wzruszył ramionami. - Pan jest tu szefem.
+Wziąłem kapitana Mbelego na stronę i obgadaliśmy jak  zapewnić im rozrywkę - miał opowiedzieć parę historyjek z innych safari, dać im po drinku, zająć ich czymkolwiek, podczas gdy z Chajinką rozejrzymy się po okolicy.
+- Moim zdaniem wszystko wygląda całkiem normalnie - orzekł Mbele. - Typowy prymitywny świat.
+- Czujniki wykazują obecność ogromnej biomasy trzy kilometry na zachód - powiedziałem. - Przy takim mięsie musi być sporo drapieżników. Chcę wiedzieć, na co je stać, zanim zabiorę czterech żółtodziobów na wyprawę.
+- Marx wciąż opowiada o safari, na których był. Dlaczego więc nie zabierzesz Wielkiego Białego Myśliwego ze sobą?
+- Niezła próba. - Uśmiechnąłem się. - Ale kiedy jesteśmy na ziemi, ja decyduję. Nie pozbędziesz się go tak łatwo.
+- Dzięki.
+- Może i był już na safari, ale na Dodgsonie IV jest nowicjuszem i tylko to się dla mnie liczy.
+- Ty też jesteś tu pierwszy raz.
+- Mnie płacą za narażanie życia. On płaci mi za to, że dostanie swoje trofea bez ryzyka. - Rozejrzałem się. - A dokąd, u diabła, wymknął się Chajinka?
+- Chyba pomaga kucharzowi.
+- Ma własne jedzenie. - Zirytowałem się. - Nie potrzebuje naszego. - Odwróciłem się w stronę kuchennego Bąbla i zawołałem: - Chajinka, weź niebieską dupę w troki i chodź tutaj!
+Dabih podniósł wzrok słysząc mój głos, skrzywił twarz w uśmiechu i wskazał swoje uszy.
+- No to łap cholernego tłumacza! - krzyknąłem. - Mamy robotę!
+Uśmiechnął się znowu, poszedł gdzieś i po chwili wrócił ze swoją włócznią i swoim tłumaczem - mechanizmem pozwalającym człowiekowi i Dabihowi (właściwie to człowiekowi i czemukolwiek innemu) na prowadzenie swobodnej rozmowy w terrańskim.
+- Małe brzydactwo - mruknął  Mbele, wskazując Chajinkę.
+- Nie wybrałem go dla urody.
+- Naprawdę jest taki dobry?
+- Mały drań wytropiłby kulę bilardową na zatłoczonej autostradzie. I ma więcej odwagi niż większość znanych mi ludzi.
+- Nie gadaj... - ton Mbelego sugerował, że nadal uważa Dabihów za stojących tylko o szczebel wyżej niż zwierzęta, na które mieliśmy tu polować, a może nawet i to nie.
+
+"Choć ma umysł idioty, powierzchowność łamagi",
+Bosman wtrącać się zwykł w te pogwarki,
+"Jednak nikt nie odmówi mu szaleńczej odwagi:
+Tego trzeba nam w łowach na Snarki!"
+
+Nie jestem zwolennikiem snucia się na piechotę, kiedy jest pod ręką transport, ale złożenie do kupy pojazdu na safari zajęłoby Dabihom co najmniej dzień, a nie było sensu siedzieć w obozie i czekać. Wyruszyliśmy więc z Chajinką na zachód, w stronę wodopoju, który komputer zaznaczył na mapie. Nie zamierzaliśmy do niczego strzelać, tylko zobaczyć, co tu właściwie jest i jaką broń nasi klienci powinni zabrać jutro na łowy.
+Dotarcie do wodopoju zajęło nam trochę ponad godzinę. Schowaliśmy się za krzakiem jakieś pięćdziesiąt metrów od niego. Niewielkie stadko brązowo-białych roślinożerców gasiło właśnie pragnienie, a kiedy odeszły, przyszła się napić para olbrzymich, czerwonych zwierzaków, ważących po cztery-pięć ton. Potem przyszło jeszcze kilka stadek różnych gatunków trawożerców. Kiedy usadowiłem się wreszcie wygodnie, usłyszałem ciche skrobanie. Obejrzałem się i zobaczyłem, jak Chajinka podnosi z ziemi oślizgłego, piętnastocentymetrowego, zielonego, wijącego się robaka, przygląda mu się przez chwilę, po czym wkłada go do ust i połyka. Przez chwilę wyglądał na zamyślonego, jakby rozkoszował się smakiem, po czym skinął głową z aprobatą i zaczął szukać kolejnych.
+Kiedyś poczułbym obrzydzenie, ale znałem Chajinkę od ponad dziesięciu lat i przywykłem do jego upodobań kulinarnych. Rozglądałem się za drapieżnikami i w końcu spytałem, czy on jakieś zauważył.
+Poczekał, aż tłumacz przełoży pytanie, i pokręcił głową.
+- Może żerują w nocy - odszepnął.
+- Nie widziałem jeszcze świata, na którym wszyscy drapieżcy żerowaliby w nocy. Muszą być jacyś dzienni myśliwi i tu właśnie powinni się zbierać.
+- No to gdzie są?
+- Ty jesteś tropicielem. Ty mi powiedz.
+Chajinka westchnął głęboko - wydobył z siebie dźwięk przerażający dla kogoś nie przyzwyczajonego do Dabihów. Kilka zwierząt przy wodopoju spłoszyło się i odbiegło na jakieś czterdzieści czy pięćdziesiąt metrów, wzbijając ogromną chmurę czerwonawego pyłu. Skoro jednak nie zdołały określić, skąd dobiegał dźwięk, ostrożnie wróciły, by dokończyć picie.
+- Zaczekaj tu - szepnął. - Znajdę drapieżniki.
+Skinąłem głową. Widziałem Chajinkę w akcji na setkach światów i wiedziałem, że tylko bym mu przeszkadzał. Umiał poruszać się równie cicho, jak każdy drapieżca, znaleźć kryjówkę w miejscu, gdzie ja za nic nie mogłem żadnej dostrzec. Jeśli musiał znieruchomieć, potrafił stać lub kucać bez drgnienia przez piętnaście minut. Kiedy jakiś owad łaził mu po twarzy, nie zamykał oczu, nawet jeśli znajdowały się na drodze insekta. Może i uważał robaki i owady za przysmaki i miał tylko bardzo ogólne pojęcie o higienie osobistej, ale w swoim żywiole - a w nim się właśnie znajdowaliśmy - był gatunkiem najlepiej przystosowanym.
+Usiadłem, przestawiłem soczewki na Widzenie Teleskopowe i rozglądałem się po horyzoncie przez jakieś dziesięć minut, wypalając przy okazji parę bezdymnych papierosów. Wiele zwierząt przyszło do wodopoju - sami roślinożercy. Niemal zbyt wiele - uznałem, gdyż w tym tempie wodopój za kilka dni zmieni się w dziurę pełną błota.
+Właśnie zamierzałem zapalić trzeciego papierosa, gdy Chajinka pojawił się obok i dotknął mojego ramienia.
+- Chodź ze mną! - rzucił.
+- Znalazłeś coś?
+Nie odpowiedział. Wyprostował się i wyszedł z kryjówki, nie starając się ukryć swojej obecności. Zwierzęta przy wodopoju zaczęły beczeć i ryczeć w panice, po czym uciekły, niektóre pochylając się przy tym aż do ziemi, inne zmieniając kierunek z każdym susem, jeszcze inne olbrzymimi skokami. Niedługo wszystkie znikły w gęstym obłoku pyłu, który wzbiły.
+Szedłem za nim jakiś kilometr, aż dotarliśmy do celu - leżało tu martwe, kotopodobne zwierzę, najwyraźniej drapieżne. Pokryte było jasnobrązowym futrem, a jego wagę oceniłem na jakieś sto pięćdziesiąt kilo. Miało zęby zabójcy, pazury na przednich i tylnych nogach były z pewnością stworzone do rozrywania ciała ofiary. Jego szeroki ogon pokrywały kościste kolce. Było zbyt muskularne, by mogło długo utrzymywać wysoką prędkość, ale potężne barki i zad musiały umożliwiać mu śmiertelnie skuteczny atak na dystansie jakichś stu metrów.
+- Nie żyje od siedmiu godzin - powiedział Chajinka. - Może ośmiu.
+Nie martwiło mnie to, że zwierzę jest martwe. Martwiło mnie, że jego czaszka i ciało zostały zmiażdżone. A jeszcze bardziej martwiło mnie to, że najwyraźniej nikt nie próbował go zjeść.
+- Odczytaj ślady - poleciłem. - Powiedz mi, co się stało.
+- Brązowy kot - Chajinka wskazał martwe zwierzę - zabił dzisiaj rano. Jego brzuch jest ciągle pełny. Szukał miejsca, by się położyć, gdzieś w cieniu. Coś go zabiło.
+- Co go zabiło?
+Wskazał jakieś podłużne ślady, niewiele większe od ludzkich.
+- To jest zabójca.
+- Dokąd poszedł, kiedy zabił brązowego kota?
+Jeszcze raz zbadał ziemię, po czym wskazał na północny wschód.
+- Tam.
+- Możemy go odnaleźć przed zmrokiem?
+Chajinka pokręcił głową.
+- Odszedł dawno temu. Cztery, pięć, sześć godzin.
+- Wróćmy do wodopoju - zadecydowałem. - Chcę sprawdzić, czy zostawił tam jakieś ślady.
+Nasza obecność spłoszyła kolejne stado roślinożerców. Chajinka schylił się i zaczął badać  ziemię.
+W końcu wyprostował się.
+- Za dużo zwierząt tędy przechodziło.
+- Zrób krąg wokół wodopoju. Na jakieś pół kilometra. Zobacz, czy znajdziesz jakieś ślady.
+Spełnił moje polecenie, a ja ruszyłem za nim. Zatoczyliśmy już półkole, kiedy zatrzymał się nagle.
+- Ciekawe... - mruknął.
+- Co takiego?
+- Wcześnie rano były tu brązowe koty - wyjaśnił, wskazując na ziemię. - Potem przyszedł zabójca brązowego kota... widzisz, jego ślady nakładają się na kocie... a one uciekły... - Zamilkł na chwilę. - Cała rodzina brązowych kotów - co najmniej cztery, może pięć - uciekła przed jednym zwierzęciem, polującym samotnie.
+- Jesteś pewien, że to samotny łowca?
+Znowu zbadał teren.
+- Tak. Chodzi sam. Bardzo ciekawe.
+Było to więcej niż ciekawe.
+Gdzieś tam kryło się samotne zwierzę, stojące w łańcuchu pokarmowym wyżej niż ważące sto pięćdziesiąt kilo brązowe koty. Spłoszyło całą grupę dużych drapieżców i - to mi się najmniej podobało - nie zabijało wyłącznie dla pożywienia.
+Myśliwi czytają ślady, słuchają swoich tropicieli, ale przede wszystkim ufają swojemu instynktowi. Byliśmy na Dodgsonie IV od niecałych pięciu godzin, a ja już miałem złe przeczucia.
+
+- Spodziewałem się trochę, że przyniesie pan coś egzotycznego na kolację - odezwał się Jaxon Pollard, kiedy wróciłem do obozu.
+- Albo może jakąś cenną zdobycz - wtrąciła się Ramona Desmond.
+- Mam dosyć trofeów, a wy na pewno wolicie sami zdobyć własne.
+- Nie mówi pan jak prawdziwy myśliwy - stwierdziła.
+- Państwo płacicie za polowanie - wyjaśniłem. - Moim zadaniem jest wspieranie was i wkroczenie do akcji, jeżeli sytuacja wymknie się spod kontroli. Jeśli o mnie chodzi, idealne safari to takie, na którym nie muszę ani razu wystrzelić.
+- Mnie to pasuje - oznajmił Marx. - Dokąd ruszamy jutro?
+- Nie jestem pewien.
+- Nie jest pan pewien? To co, do cholery, robił pan przez całe popołudnie?
+- Badałem teren.
+- Trzeba z pana wyciągać każde słówko - poskarżył się Marx. - Co pan znalazł?
+- Myślę, że znalazłem ślady... Snarka pani Desmond. Nie mam na razie lepszej nazwy.
+Nagle wszyscy się zainteresowali.
+- Snarka? - zapytała Ramona Desmond  z zachwytem. - Jak wyglądał?
+- Nie wiem. Jest dwunożny, ale nie mam pojęcia, ile ma kończyn, najprawdopodobniej cztery. Duże zwierzęta w całej galaktyce rzadko miewają więcej. Chajinka sądzi z głębokości śladów, że może ważyć od stu pięćdziesięciu do dwustu kilo.
+- To niewiele - prychnął Marx. - Polowałem na większe.
+- Jeszcze nie skończyłem. W okolicy pełnej zwierzyny on najwyraźniej wystraszył wszystkie inne drapieżniki. - Zamilkłem na chwilę. - No może lekko przesadziłem.
+- To znaczy, że ich stąd nie wypłoszył? - Ramona była zdezorientowana.
+- Nie ma ich. Ale powiedziałem, że chodzi o inne drapieżniki, a nie mam pewności, czy Snark jest drapieżcą. Zabił olbrzymie zwierzę, podobne do kota, ale nie zjadł go.
+- Co to oznacza? - spytała Ramona.
+Wzruszyłem ramionami.
+- Nie jestem pewien. Mógł bronić swojego terytorium albo... - Zawiesiłem głos, rozważając inne przyczyny.
+- Albo co?
+- Albo po prostu lubi zabijać.
+- To jest nas dwóch - oznajmił Marx z uśmiechem. - Jutro rano pójdziemy i zabijemy sobie Snarka.
+- Nie jutro - oznajmiłem twardo.
+- A dlaczego, u diabła, nie?! - zezłościł się Marx.
+- Z zasady nie wyruszam przeciw niebezpiecznym zwierzętom, dopóki nie wiem o nich więcej niż one o mnie.  Jutro pójdziemy upolować coś na kolację i zobaczymy, czy zdołamy dowiedzieć się czegoś więcej o Snarku.
+- Nie płacę milionów kredytów za strzelanie do cholernego obcego bydła! - warknął Marx. - Znalazł pan coś, co niemal wrzeszczy do nas "Superpolowanie!" Głosuję za marszem z samego rana.
+- Podziwiam pańską odwagę i entuzjazm, panie Marx.  Ale tu nie panuje demokracja. Liczy się tylko jeden głos, a moim zadaniem jest przywiezienie was z tego safari całych i zdrowych. Nie zapolujemy na Snarka, dopóki nie dowiemy się o nim czegoś więcej.
+Nie powiedział ani słowa, ale wiedziałem, że w tej chwili zastrzeliłby mnie równie chętnie jak Snarka.
+
+Rano, zanim wyruszyliśmy, sprawdziłem broń całej grupy.
+- Niezły karabin laserowy - powiedziałem, oglądając najnowszą zabawkę Desmonda.
+- Mam nadzieję. Kosztował czternaście tysięcy kredytów - pochwalił się. -  Ma noktowizor, wzmocniony wizjer i podstawkę absorbującą wstrząsy...
+- Proszę zabrać też zwykły karabin i strzelbę - poleciłem. - Musimy wypróbować wszystko.
+- Ale zamierzam używać tylko tego laserowego - upierał się.
+Niemal z niechęcią wyjaśniłem mu wszystko.
+- Według mnie, a mam pewne doświadczenie, Dodgson IV ma biosystem klasy B3. Wczoraj wieczorem wysłałem ze statku transmisję podprzestrzenną z moimi obserwacjami. - Chyba nic nie zrozumiał. - Znaczy to, że w myślistwie sportowym musi pan używać niewybuchowej broni strzelającej pociskami nie większymi niż 450, dopóki klasyfikacja nie zostanie zmieniona.
+- Ale...
+- Proszę posłuchać - przerwałem mu. - Mamy bomby jądrowe, które mogłyby tę planetę dosłownie rozwalić na kawałki. Mamy inteligentne kule, które mogą odnaleźć zwierzę z odległości piętnastu kilometrów, zignorować jego uniki i uderzyć w chwili, gdy jest pewność natychmiastowej śmierci. Mamy implodery molekularne, mogące zamienić całą brygadę wroga w galaretę. Przy zwierzynie, z którą mamy do czynienia, żadna z tych broni nie kwalifikowałaby się do wykorzystania w łowiectwie sportowym. Wiem, że w pańskim przypadku chodzi tylko o laserową strzelbę, ale nie zamierzam rozpoczynać safari od łamania prawa i jestem pewien, że jako sportsmen chciałby pan dać zwierzynie równe szanse.
+Nie wyglądał na przekonanego, zwłaszcza co do tych równych szans, ale w końcu wrócił do swojego Bąbla i przyniósł resztę arsenału.
+Zebrałem całą czwórkę wokół siebie.
+- Wasza broń przez tydzień leżała zapakowana - powiedziałem. - Ustawienie mogło się rozregulować przez przyspieszenie statku, a grawitacja na tym świecie jest inna niż na waszym, chociaż różni się tylko minimalnie. Dlatego, zanim zaczniemy, chciałbym dać każdemu okazję ustawić wizjery. - I, dodałem w duchu, sprawdzić, czy umiecie trafić nieruchomy cel z odległości czterdziestu metrów, żebym wiedział, z kim mam do czynienia. - Ustawię tarcze w dolince przy rzece. Proszę przychodzić pojedynczo. 
+Po co upokarzać gorszych strzelców na oczach lepszych - oczywiście, jeśli są jacyś lepsi.
+Wziąłem z luku towarowego zestaw najprostszych tarcz. Kiedy dotarłem do dolinki, ustawiłem cztery tam, gdzie chciałem, uruchomiłem mechanizmy antygrawitacyjne i, kiedy już kołysały się delikatnie sto osiemdziesiąt centymetrów nad ziemią, zawołałem Marxa. Pojawił się chwilę później.
+- No dobrze, panie Marx. Wyregulował pan wizjer?
+- Zawsze dbam o swoją broń - wycedził, jakby samo pytanie było obelgą.
+- No to zobaczmy, co pan potrafi.
+Uśmiechnął się z wyższością, uniósł strzelbę, zerknął w wizjer, pociągnął za cyngiel i rozwalił dwie pierwsze tarcze na kawałki, po czym powtórzył to osiągnięcie z karabinem.
+- Nieźle - orzekłem.
+- Dzięki - rzucił ze spojrzeniem, które mówiło: "Oczywiście, że jestem świetnym strzelcem. Przecież mówiłem, nie?"
+Następny był Desmond. Uniósł karabin do ramienia, wymierzył starannie i chybił. Potem chybił jeszcze trzy razy. 
+Wziąłem karabin, wycelowałem i strzeliłem. Kula poleciała w górę i w prawo i zagłębiła się w pniu drzewa. Wyregulowałem wizjer i strzeliłem jeszcze raz. Tym razem trafiłem w środek tarczy.
+- No dobrze, proszę spróbować teraz. - Oddałem karabin Desmondowi.
+Znowu chybił cztery razy. Chybił na siedząco. Chybił na stojąco. Chybił z podpórką. Potem spróbował ze śrutówki i chybił jeszcze dwa razy, zanim w końcu trafił w cel. W końcu kompletnie bez sensu użył swojego laserowego karabinu, starając się trafić w jeden punkt zamiast omieść promieniem całą okolicę - znowu chybił. Obu nam ulżyło, kiedy to się wreszcie skończyło.
+Jego żona była odrobinę lepsza - trafiła w cel w trzeciej próbie z karabinem i w drugiej ze śrutówką. Omiotła okolicę promieniem laserowego karabinu, likwidując pozostałe tarcze.
+Następny powinien być Pollard, ale nie pokazał się, więc wróciłem po niego do obozu. Siedział z pozostałymi, popijając kawę.
+- Pana kolej, panie Pollard - oznajmiłem.
+- Ja będę tylko robił holografie. - Uniósł aparat.
+- Jaxon, jesteś pewien? - zapytał Desmond.
+- Nie lubię zabijać czegokolwiek - wyjaśnił.
+- No to co tutaj, u diabła, robisz?! - warknął Marx.
+Pollard uśmiechnął się.
+- Jestem tu, bo wciąż mi zawracałeś głowę, drogi Willardzie. Poza tym nigdy nie byłem na safari i lubię robić holografie.
+- No dobrze - powiedziałem. - Ale proszę zawsze trzymać się nie dalej niż dwadzieścia metrów ode mnie.
+- Nie ma sprawy - rzucił Pollard. - Nie chcę nic zabijać, ale też nie mam zamiaru dać się zabić.
+Poleciłem jego tragarzowi zostać i pomóc z obozem i posiłkiem. Zareagował, jakbym dał mu w twarz, ale zrobił, co mu kazałem.
+Wdrapaliśmy się do pojazdu i w jakieś pół godziny dotarliśmy do wodopoju. Po pięciu minutach Marx na zimno i bezbłędnie ustrzelił parę beżowo-brązowych roślinożerców o spiralnych rogach, każdego jedną kulą. Potem, korzystając ze swojego prawa do nazwania każdego gatunku, którego przedstawiciela upoluje jako pierwszy, nazwał je gazelami Marxa.
+- Co teraz? - zapytał Desmond. - Mięsa starczy nam na parę dni.
+- Odeślę pojazd do obozu po oprawiaczy. Zabiorą głowy i skóry razem z najlepszymi kawałami mięsa, a resztę przywiążą do pobliskich drzew.
+ - Po co?
+- Przynęta - wyjaśnił Marx.
+- Pan Marx ma rację. Coś przyjdzie, by je zjeść. Może zapach krwi zwabi z powrotem te kotowate drapieżniki. Albo poszczęści się nam, Snark wróci i zdołamy dowiedzieć się o nim czegoś więcej.
+- A co będziemy robić do tego czasu? - Desmond miał nadąsaną minę.
+- To zależy od państwa - odparłem. - Możemy tu zostać do powrotu pojazdu, możemy wrócić pieszo do obozu albo wybrać się do bagna, jakieś sześć kilometrów stąd, i sprawdzić, czy jest tam coś ciekawego.
+- Na przykład Snark? - ożywiła się Ramona.
+- Pięcioro ludzi i czterech Dabihów idących sześć kilometrów otwartą sawanną raczej nie zdoła wziąć czegokolwiek przez zaskoczenie. Z drugiej strony, nie jesteśmy częścią tego ekosystemu. Nie jesteśmy zapisani w mózgach zwierząt jako drapieżniki, więc zawsze jest szansa - jeśli Snark w ogóle tam jest - że będzie się kręcić w pobliżu z ciekawości albo czystej głupoty.
+Taką właśnie odpowiedź chcieli usłyszeć, postanowili więc pójść do bagna. Po drodze Pollard zrobił z pięćdziesiąt holografii. Desmond uskarżał się na upał, wilgoć, teren i owady. Ramona uruchomiła procesor czytający jej książkę prosto do ucha i nie odezwała się słowem, póki nie dotarliśmy do bagna. Marx po prostu pochylił głowę i szedł naprzód.
+Na miejscu zaskoczyliśmy małe stadko roślinożerców - imponujących zwierząt, ważących jakieś dwieście pięćdziesiąt kilo każde. Samce miały niesamowite rogi, mające z półtora metra długości, potrójnie skręcone. Wyglądały, jakby były z kryształu i działały jak soczewki, rozbijając światło słońca na maleńkie tęcze.
+- Mój Boże, spójrzcie na nie! - wykrzyknął Pollard, robiąc holografie tak szybko, jak tylko mógł.
+- Wspaniałe! - szepnęła Ramona Desmond.
+- Chciałbym mieć takiego - oznajmił Marx, obserwując stado.
+- Ustrzelił pan dwie gazele - zauważyłem. - Pan Desmond strzela pierwszy.
+- Nie chcę - zaprotestował Desmond nerwowo.
+- No dobrze. Pani Desmond, pani strzela pierwsza.
+- Nie mogłabym zabić czegoś tak pięknego.  
+- Nie - wymamrotał Desmond tak cicho, że nie mogła dosłyszeć. - Ty tylko zamknęłabyś je w więzieniu.
+- W takim razie strzela pan Marx - stwierdziłem. - Proponuję celować do pierwszego z lewej. Nie ma najdłuższych rogów, ale za to najbardziej symetryczne. Podejdźmy trochę bliżej.
+Marx wziął od swojego tragarza karabin i naładował go, a ja zwróciłem się do pozostałych:
+- Proszę zostać tutaj.
+Dałem znak Chajince, by podchodził okrężną drogą. Marx ruszył za nim, prawidłowo przykurczony, a ja zamykałem pochód. (Myśliwy szybko się uczy nigdy nie stawać między klientem a zwierzyną. Inaczej zasili konto firmy produkującej protezy uszu.)
+Kiedy podeszliśmy na odległość jakichś trzystu metrów, uznałem, że już wystarczy, i skinąłem Marxowi głową. Powoli uniósł karabin i wycelował. Zauważyłem, że woli celować w serce niż ryzykować zniszczenie głowy. To dobra strategia, oczywiście przy założeniu, że serce jest tam, gdzie się go spodziewamy.
+Marx wziął głęboki oddech, wypuścił wolno powietrze i zaczął ciągnąć za spust.
+W tej samej chwili przeleciało obok nas jaskrawo ubarwione latające stworzenie, wrzeszcząc na całe gardło. Rogaty kozioł podskoczył w momencie, w którym wystrzelił karabin Marxa. Słysząc strzał, reszta stada rozbiegła się we wszystkich kierunkach. Zanim Marx zdołał wymierzyć ponownie, ranny kozioł zaryczał, odwrócił się i zniknął za pobliskimi krzewami.
+- Chodźmy! - wrzasnął podekscytowany Marx, zrywając się i biegnąc za kozłem. - Wiem, że go trafiłem! Nie ucieknie daleko!
+Chwyciłem go, kiedy mnie mijał. 
+- Pan nigdzie nie pójdzie, panie Marx!
+- Co pan wygaduje?!
+- W tych krzakach znajduje się duże, niebezpieczne, ranne zwierzę. Nie mogę pozwolić, by pan za nim szedł.
+- Strzelam równie dobrze jak pan! - warknął. - To nie moja wina, że spłoszył je ten cholerny ptak! Wie pan o tym!
+- Proszę posłuchać. Nie jestem zachwycony, że muszę uganiać się po zaroślach za rannym zwierzęciem, które ma na głowie dwa półtorametrowe miecze, ale za to mi płacą. Nie mogę jednak szukać go i jednocześnie pilnować pana.
+- Ale...
+- Podobno był pan już na safari. To znaczy, że zna pan zasady.
+Mruczał pod nosem i klął, ale rzeczywiście znał zasady, więc dołączył do reszty grupy, a my z Chajinką ruszyliśmy w krzaki w poszukiwaniu rannej zwierzyny.
+Bagno śmierdziało gnijącą roślinnością. Przez jakieś dwieście metrów szliśmy po śladach krwi na liściach i krzewach, a błoto lepiło się do stóp Dabiha i moich butów. Nagle ślad zniknął. Kilka metrów na prawo było małe wzniesienie, na którym trawa została zgnieciona, małe gałązki połamane, a kwiaty zerwane z łodyg. Chajinka studiował wszystkie ślady przez dobrą minutę, po czym wstał.
+- Snark - mruknął.
+- O czym ty mówisz?
+- Ukrywał się, obserwował nas. - Chajinka wskazał na ziemię. - Ranne zwierzę położyło się tutaj. Widzisz krew? Snark był tam. To jego ślady. Kiedy zwierzę się położyło, Snark zobaczył, że jest za słabe, by wstać, ale wciąż niebezpieczne. Obszedł je wkoło. Widzisz... tu szedł. Potem skoczył i zabił je.
+- Jak?
+Chajinka wzruszył ramionami.
+- Nie wiem. Ale potem podniósł je i zabrał.
+- Był w stanie podnieść tak wielkie zwierzę?
+- Tak.
+- Musi być nie dalej niż kilkaset metrów przed nami.  Jak myślisz? Możemy go dogonić?
+- Ty i ja? Tak.
+Raz na jakiś czas, kiedy mnie ponosiło, Chajinka przypominał mi, że nie poluję dla własnej przyjemności. Podtekst był taki, że owszem, my dwaj moglibyśmy dogonić Snarka. Marx nie byłby obciążeniem. Ale nie ma mowy o tym, by zabrać Pollarda i Desmondów na bagna, uważać na drapieżniki i liczyć na to, że dogonimy Snarka - a, oczywiście, nie mogliśmy zostawić ich samych i iść za Snarkiem z Marxem.
+- No dobrze... - Westchnąłem. - Wracajmy i opowiedzmy im, co się stało.
+Marx dostał szału. Ciskał się i klął przez dobre trzy minuty, a potem był gotów ogłosić wendetę wobec złodzieja trofeów.
+Kiedy się wreszcie uspokoił, zostawiłem Chajinkę w tyle, by spróbował dowiedzieć się czegoś więcej o Snarku, a z resztą grupy ruszyłem z powrotem do wodopoju, gdzie czekał na nas pojazd.
+
+Długie trwała miesiące, długie trwała tygodnie
+(Miesiąc ma tych ostatnich aż cztery)
+Droga; ale - choć trudno myśleć o tym pogodnie - 
+Nie dopadliśmy Snarka - przechery!
+
+Mbele nieźle się uśmiał, gdy wróciliśmy do obozu zmęczeni, zgrzani i głodni.
+- Gadacie o tym Snarku, jakby istniał! - powiedział z rozbawieniem. - To wymyślone zwierzę z wierszyka dla dzieci.
+- Snark to po prostu dobra nazwa - wyjaśniłem spokojnie. - Możesz na niego mówić, jak tylko chcesz.
+- Nazwijmy to zwierzę nieobecnym - zaproponował. - Nikt go nie widzi.
+- Jasne. A cała galaktyka znika, jak zamkniesz oczy.
+- Nigdy o tym nie pomyślałem - przyznał Mbele. - Ale pewnie tak jest. - Zamyślił się na chwilę. - W każdym razie taką mam nadzieję. Dzięki temu czuję się potrzebny.
+- Posłuchaj! - wybuchłem. - Tam jest martwy kot ważący sto pięćdziesiąt kilo i jeszcze większa zaginiona antylopa! - Wpatrzyłem się w niego. - Nie zabiłem pierwszego i nie ukradłem drugiego. A ty?
+Przełknął swoją odpowiedź i unikał mnie przez resztę dnia.
+
+Chajinka wrócił do obozu następnego ranka i od razu dał mi znak. Podszedłem do niego.
+- Dowiedziałeś się czegoś? - zapytałem.
+- To ciekawe zwierzę - odpowiedział.
+Skrzywiłem się. Wszyscy wiedzą, że Dabihowie są mistrzami niedopowiedzeń.
+
+Dziś każdego zucha wzywam: niechaj wysłucha
+I w pamięci wpisze zakamarki
+Wykład mój (po raz setny go powtarzam, bo świetny): 
+"Po Czym Poznać Autentyczne Snarki?" 
+
+Zebrałem całą grupę wokół siebie.
+- No cóż... - zacząłem. - Dzisiaj wiemy o Snarku trochę więcej niż wczoraj... - urwałem, by obserwować ich reakcje. Wszyscy z wyjątkiem Desmonda sprawiali wrażenie zainteresowanych. Desmond wyglądał tak, jakby wolał być wszędzie, byle nie tu. - Chajinka był przy drzewie, do którego przywiązaliśmy ciała martwych zwierząt... - ciągnąłem.
+- I? - zapytał Marx.
+- Węzły zostały rozwiązane. Nie rozcięte, rozerwane czy przegryzione. Rozwiązane. Wiemy zatem, że Snark ma palce albo inne zręczne kończyny. Z ciał zniknęło trochę mięsa.
+- No dobrze - odezwała się Ramona. - Wiemy, że umie rozwiązywać węzły. Co jeszcze?
+- Wiemy, że jest mięsożerny. Wczoraj nie byliśmy tego pewni.
+- No to co? - prychnął Marx. - W galaktyce są miliony mięsożerców. Nie ma w tym nic niezwykłego.
+- To znaczy, że nie odejdzie daleko od stad zwierzyny. To jego supermarket.
+- A jeżeli  musi jeść tylko raz na parę miesięcy? - znowu wtrącił się Marx.
+- Nie - zaprzeczyłem. - To trzecia rzecz, jakiej się dowiedzieliśmy. Musi jeść mniej więcej tak często jak my.
+- A skąd to wiemy? - zdziwiła się Ramona.
+- Według Chajinki, podszedł do mięsa bardzo ostrożnie, ale kiedy już się najadł, odbiegł kłusem. Ślad zniknął jakieś półtora kilometra dalej, ale wiemy, że przebiegł całą tę odległość.
+- Aha! Rozumiem - mruknęła Ramona.
+- A ja nie - poskarżył się jej mąż.
+- Każde stworzenie, które może utrzymać takie tempo, znieść taki wysiłek, musi jeść codziennie. I wiemy jeszcze coś.
+- Co?
+- Nie boi się nas. Musi wiedzieć, że to my zabiliśmy tamte zwierzęta. Było tam pełno naszych śladów i zapachu, no i, oczywiście, były sznury. Jest nas dziewięcioro - pięcioro, jeśli nie liczyć Chajinki i tragarzy, ale on nie ma powodu, by ich nie liczyć. A jednak, chociaż wie to wszystko, nie opuścił tej okolicy. - Zamilkłem na chwilę. - To prowadzi do piątego wniosku. Nie jest zbyt inteligentny. Nie zrozumiał, że karabin pana Marxa zranił to zwierzę, które on wczoraj zabił. Gdyby rozumiał, że umiemy zabijać na odległość, bałby się nas. 
+- I może pan to wydedukować tylko z kilku śladów, które widział Chajinka? - Desmond najwyraźniej nie był przekonany.
+- Odczytywanie śladów i ich interpretacja to samo sedno polowania. Strzelanie to tylko ostatni krok. 
+- To ruszymy na niego teraz? - zapytał Marx niecierpliwie.
+Pokręciłem głową.
+- Wysłałem już Chajinkę z powrotem, żeby spróbował poszukać legowiska tego stworzenia. Jeżeli jest podobny do innych drapieżników, lubi poleżeć po posiłku. Jeśli będziemy wiedzieli, gdzie go szukać, zaoszczędzimy mnóstwo czasu i wysiłku. Lepiej zaczekać na Chajinkę i wyruszyć na Snarka rano.
+- To raczej dziwne - orzekła Ramona. - Nigdy nie widzieliśmy tego stworzenia, ale już doszliśmy do wniosku, że musi być imponujące.
+- Oczywiście, że jest imponujące.
+- Mówi pan, jakby wszystko było imponujące. - Uśmiechnęła się z wyższością.
+- To pierwsze prawo safari. Wszystko gryzie.
+- Jeśli to zwierzę jest tak niebezpieczne, jak pan sugeruje - odezwał się Desmond z wahaniem - to czy wolno nam używać bardziej... zaawansowanej broni?
+- Philemon, nie bądź mięczakiem! - Marx spojrzał pogardliwie.
+- Jestem bankierem, a nie cholernym Alanem Quatermainem! - odciął się Desmond.
+Mbele wyciągnął Statut i zaczął czytać na głos:
+- "Obowiązuje używanie broni zaaprobowanej dla danego świata, chyba że zdaniem myśliwego używana broń nie jest wystarczająca do zabicia zwierzyny".
+- Czyli gdyby stanowił poważne zagrożenie, moglibyśmy użyć karabinów pulsowych, imploderów molekularnych i innych takich?
+- Czy widział pan kiedykolwiek działanie implodera molekularnego? - zapytałem. - W trzy sekundy zamienia pięćdziesięciopiętrowy budynek w galaretę.
+- A karabiny pulsowe? - upierał się.
+- Niewiele można zabrać do domu, kiedy taka zabawka trafi w cel.
+- Ale czegoś potrzebujemy, do cholery! - wybuchnął Desmond.
+- Nasza broń jest w stanie powalić każde zwierzę na tej planecie bez najmniejszych trudności. - Zaczynał mi działać na nerwy. - Nie chciałbym nikogo urazić, ale jest zasadnicza różnica między słabą bronią a słabym myśliwym.
+- Otóż to! - mruknął Marx.
+- To było bardzo obraźliwe, panie Bell - oznajmił Desmond. Wstał i poszedł do swojego Bąbla. Jego żona popatrzyła za nim obojętnie, po czym wyciągnęła książkę i zabrała się do czytania.
+- Tak się odpłaca za szczerość - stwierdził Marx, nie próbując nawet ukryć rozbawienia. - Mam tylko nadzieję, że ten cały Snark jest choć w połowie taki, jak pan uważa.
+Połowa w zupełności by wystarczyła, pomyślałem niespokojnie.
+
+Chajinka, siedzący na masce pojazdu, uniósł włócznię, co znaczyło, że powinienem się zatrzymać.
+Zeskoczył, pochylił się, badał przez kilka sekund trawę, po czym odbiegł na lewo, nie odrywając wzroku od ziemi.
+Wyskoczyłem i chwyciłem karabin.
+- Proszę zaczekać tutaj - poleciłem czwórce ludzi. Tragarze, trzymający się w czasie jazdy uchwytów z tyłu pojazdu, stali teraz obok.
+- Kto strzela pierwszy? - zapytał Marx.
+- Niech pomyślę. Pan zastrzelił wczoraj tego wielkiego kozła, a pani Desmond to coś podobnego do dzika z wielkimi kłami. Czyli dzisiaj pierwszy strzela pan Desmond.
+- Nie zamierzam wysiadać z pojazdu - oznajmił Desmond.
+- Strzelanie z wnętrza pojazdu jest niezgodne z przepisami.
+- Pieprzyć przepisy i pieprzyć pana! - wrzasnął Desmond. - Nie chcę strzelać pierwszy! W ogóle nie chcę strzelać! W ogóle nie wiem, co ja robię na tym głupim safari!
+- Niech to szlag, Philemon! - syknął wściekle Marx.
+- O co chodzi? - zapytał zaskoczony Desmond.
+- Jeżeli było tam jakiekolwiek zwierzę, panie Desmond - wyjaśniłem, usiłując opanować złość - to właśnie dał mu pan doskonały powód, by uciekać ile sił w nogach w przeciwnym kierunku. Nie wolno krzyczeć podczas polowania.
+Odszedłem od nich, zdegustowany i dołączyłem do Chajinki. Stał pod niedużym drzewem obok ciała młodego roślinożercy ze zmiażdżoną czaszką.
+- Snark - powiedział, wskazując na czaszkę.
+- Kiedy? - zapytałem.
+Odciągnął wargi martwego zwierzęcia, by obejrzeć dziąsła, wsunął palce do uszu, przez kilka sekund badał też inne miejsca.
+- Pięć godzin - orzekł. - Może sześć.
+- Środek nocy.
+- Tak.
+
+Druga: zwyczaj wstawania późno, zwłaszcza we wtorki.
+W słowie "późno" nie ma krzty przesady:
+Snark śniadanie je wtedy, gdy my - podwieczorki,
+A dzień później niż my - je obiady.
+
+- Możesz go wytropić? - zapytałem Chajinkę.
+Rozejrzał się, po czym wykonał coś, co u Dabihów odpowiada zmarszczeniu brwi. 
+- Znika. - Wskazał punkt oddalony o jakieś trzy metry.
+- Chcesz powiedzieć, że jakieś zwierzę zatarło jego ślady?
+Wzruszył ramionami.
+- Nie ma żadnych śladów. Jego ani niczego innego.
+- Dlaczego?
+Nie miał na to odpowiedzi.
+Przez dłuższą chwilę wpatrywałem się w ziemię.
+- No dobrze - powiedziałem w końcu. - Chodźmy do pojazdu.
+Wrócił na swoją zwyczajową pozycję na masce, a ja usiadłem za tablicą rozdzielczą i zamyśliłem się.
+- No i? - zapytał Marx. - Chodziło o coś ze Snarkiem?
+- Tak. - Wciąż byłem zaskoczony brakiem jakichkolwiek śladów. - Zabił w nocy. Jego ofiara to zwierzę dobre w unikach, sądząc z jego budowy. A to znaczy, że doskonale widzi w ciemności i ma znakomitą koordynację ruchów.
+- Czyli to nocny łowca? - spytała Ramona.
+- Nie, tego bym nie powiedział. Kozła z kryształowymi rogami zabił w środku dnia, a więc jest oportunistą, jak większość drapieżników. Kiedy nawinie mu się jakaś zdobycz, bierze ją. Tak czy inaczej, jeśli nie zdołamy znaleźć jego legowiska, będziemy musieli zastawić pułapkę, siedzieć bez ruchu z karabinami, kłaść codziennie świeżą przynętę i mieć nadzieję, że go zainteresuje.
+- To nie jest prawdziwe polowanie! - oburzył się  Marx.
+- Nie ma mowy, żebyśmy ganiali za nim w ciemnościach - oznajmiłem.
+- Nie będę za niczym ganiał w ciemnościach - oświadczył kategorycznie Desmond. - Jak chcecie, to idźcie sobie beze mnie.
+- Nie bądź takim tchórzem! - ofuknął go Marx.
+- Pieprz się, Willard! - wrzasnął Desmond.
+- Śmiałe słowa - stwierdził Marx. - Dlaczego nie skierujesz trochę tej odwagi na zwierzynę?
+- Tu jest okropnie! Uważam, że powinniśmy wracać do obozu.
+- I co tam robić? - spytał Marx sarkastycznie.
+- Rozważyć nasze możliwości. To duża planeta. Może powinniśmy wsiąść do statku i wylądować na jakimś innym kontynencie. Takim bez Snarków. 
+- Nonsens! - zaprotestował Marx. - Przyjechaliśmy tu na polowanie. No to mamy na co polować.
+- Nie wiem, na co trafiliśmy - upierał się Desmond, znajdujący się gdzieś w połowie drogi między wściekłością a paniką. - I ty też nie.
+- Właśnie dlatego ten sport jest taki podniecający - wyjaśnił Marx.
+- Podniecające są programy sportowe na holowizji - odciął się Desmond. - To jest niebezpieczne.
+- Na jedno wychodzi - mruknął Marx.
+
+Kolejne dwa dni zeszły nam na daremnym szukaniu śladów Snarka. Przez jakiś czas myślałem, że odszedł z tej okolicy i rozważałem przeniesienie obozu, ale potem Chajinka znalazł względnie świeże ślady, może sprzed trzech godzin. Dlatego w końcu nie przenieśliśmy obozu - ale tego stworzenia też nie znaleźliśmy.
+Trzeciego popołudnia, kiedy akurat odpoczywaliśmy w cieniu wielkiego drzewa z fioletowo-złotymi kwiatami, usłyszeliśmy w oddali dziwny dźwięk.
+- Grzmot? - zapytał Marx.
+- Nie wydaje mi się - odpowiedział Pollard. - Na niebie nie ma ani chmurki.
+- No, ale coś to jest - upierał się Marx.
+Ramona zmarszczyła czoło.
+- I zbliża się. A w każdym razie robi się głośniejsze.
+Tknięty przeczuciem przestawiłem soczewki na Widzenie Teleskopowe.
+- Wszyscy na drzewo, natychmiast! - wrzasnąłem.
+- Ale...
+- Bez kłótni! Już!
+Nie byli najlepszymi wspinaczami, jakich znałem, ale kiedy w końcu dostrzegli to, co ja widziałem, wspięli się na gałęzie z ogromnym pośpiechem. Minutę później dołem przecwałowało kilka tysięcy gazel Marxa.
+Odczekałem, aż pył osiądzie, po czym opuściłem się na ziemię i zbadałem horyzont.
+- No dobrze, można zejść - oznajmiłem.
+- Dlaczego nie schowaliśmy się w pojeździe? - zapytała Ramona, złażąc z drzewa i oglądając uważnie ręce. 
+- Pojazd nie ma dachu, pani Desmond - wyjaśniłem. - Groziłby nam uraz czaszki, kiedy przez niego skakały. Albo zderzenie, gdyby któraś była kiepskim skoczkiem.
+- Rozumiem.
+- Co, u diabła, mogło spowodować coś takiego? - Pollard, otrzepując się, patrzył w ślad za uciekającym stadem.
+- Moim zdaniem jakiś drapieżnik pokpił sprawę.
+- A skąd pan to wie?
+- Bo pierwszy raz widzieliśmy taką ucieczkę. Możemy założyć, że jeśli drapieżnik zabija ofiarę szybko i sprawnie, gazele po prostu usuwają się z jego zasięgu i dalej się pasą. Ale kiedy chybia ofiary albo ją tylko rani, ona ucieka w sam środek stada, które z kolei wpada w panikę.
+- Myśli pan, że to któryś z tych wielkich kotów? - spytał Pollard.
+- Możliwe.
+- Bardzo chciałbym zrobić parę holozdjęć, jak takie koty polują.
+- Może się panu uda, panie Pollard. Pójdziemy po śladach do miejsca, gdzie stado się spłoszyło. Może będziemy mieli szczęście.
+- Nie mam nic przeciw temu. - Marx poklepał swój karabin.
+
+Wyruszyliśmy pojazdem na południowy zachód. Kiedy teren stał się zbyt nierówny, ruszyliśmy pieszo. Okolica zmieniła się z górzystej i porośniętej drzewami w bardzo lesistą. Chajinka szedł żwawo przed nami, wpatrzony w ziemię, dostrzegając rzeczy, których nawet ja nie widziałem. W końcu zatrzymał się.
+- Co znalazłeś? - Podszedłem do niego.
+Wskazał prosto przed siebie na gęste zarośla.
+- Jest tam.
+- Kto?
+- Snark - stwierdził, pokazując pojedynczy ślad.
+ - Jak głęboko wlazł w krzaki? Skąd wiesz, że po prostu tędy nie przebiegł? 
+Wskazał na krzewy, pokryte kolcami.
+- Nie może przez nie biec bez bólu.
+- Nigdy go nie widziałeś - odezwała się Ramona, która do nas dołączyła. - Skąd to wiesz?
+- Skoro nie poszarpały mu skóry, może być leśnym zwierzęciem, stworzonym przez Boga do życia tutaj - odpowiedział Chajinka, jakby wyjaśniał to dziecku. -  Ale wiemy, że poluje na równinach. Leśne zwierzę z grubą, ciężką skórą i kośćmi nie byłoby wystarczająco szybkie. A zatem to nie jest jego dom, lecz kryjówka.
+Pomyślałem, że to może być coś więcej niż kryjówka - to może być równie dobrze jego forteca. Była niemal nie do zdobycia. Ziemię pokrywały suche liście, przez co nikt nie mógł się do niego podkraść nie robiąc hałasu.
+- Na co czekamy? - zapytał Marx, podchodząc z Desmondem. Zatrzymał się na chwilę, by wziąć od tragarza karabin.
+- Czekamy, aż znajdę najlepszy sposób działania - odpowiedziałem.
+- Idziemy tam i załatwiamy go. - Marx nie miał wątpliwości. - Co w tym takiego trudnego?
+Pokręciłem głową.
+- To jego teren. Zna tu każdy centymetr. Wchodząc  narobiłby pan dużo hałasu, a sądząc po tym, jak splątane są korony drzew, jakieś trzysta metrów w głąb musi być ciemno jak w nocy. 
+- No to użyjemy czujników na podczerwień.
+- Nie podoba mi się to. - Nadal wpatrywałem się w gęstą roślinność. - Ma przewagę pod każdym względem.
+- Ale my mamy broń - upierał się Marx.
+- Przy prawie zerowej widoczności i możliwości manewru nie na wiele się przyda.
+- Gówno prawda! - prychnął Marx. - Tracimy czas. Chodźmy za nim.
+- Jestem odpowiedzialny za waszą czwórkę. Nie mogę ryzykować waszego bezpieczeństwa, pozwalając, żebyście tam weszli. Po kilku minutach stracilibyście kontakt ze mną i między sobą. Przy każdym kroku robilibyście hałas i, jeśli mam rację co do światła, niedługo nie moglibyście go dostrzec, nawet gdyby stał tuż obok was. Lasów na Dodgsonie jeszcze nie badaliśmy - możliwe, że Snark nie jest tutaj jedynym niebezpiecznym stworzeniem. Tu może być wszystko, od nadrzewnych kotów po jadowite owady i dwudziestometrowe nerwowe węże.
+- To co pan proponuje? - spytał Marx.
+- Najsensowniejsza wydaje się zasadzka. Ale zbudowanie jej zajmie pół dnia, a kto wie, gdzie on już wtedy będzie? - Przerwałem na chwilę. - No dobrze. Państwo troje, z bronią, proszę rozstawić się szerzej. Panie Pollard, proszę stanąć z tyłu. Chajinka i ja spróbujemy go wypłoszyć z zarośli.
+- Chyba pan mówił, że to zbyt niebezpieczne - odezwała się Ramona.
+- Muszę uściślić. To zbyt niebezpieczne dla amatorów.
+- Jeżeli jest szansa, że może pana zranić, to lepiej dajmy sobie spokój.
+- Doceniam pani  troskę, ale...
+- Nie jest to czysty altruizm. Co się stanie z nami, jeśli pana zabije?
+- Wrócicie państwo do obozu i opowiecie Mbelemu, co się stało. On wyśle wiadomość podprzestrzenną do firmy, a Silinger & Mahr zadecydują, czy zwrócić państwu pieniądze, czy zabrać państwa na nową planetę z nowym myśliwym.
+- W pana ustach brzmi to... jak biznes - stwierdziła z obrzydzeniem.
+- Dla mnie to biznes.
+- Dlaczego został pan myśliwym?
+Wzruszyłem ramionami.
+- A dlaczego pani została sędzią?
+- Lubię porządek.
+- Ja też.
+- Znajduje pan porządek, zabijając zwierzęta?
+- Znajduję porządek w Naturze. Śmierć jest po prostu jej częścią... - Zamilkłem na chwilę. - A teraz, panie Marx - odwróciłem się w jego stronę - proszę, by pan...
+Nie było go.
+- Gdzie on, do cholery, poszedł?!
+Nikt nie wiedział, nawet Chajinka. 
+Zawołałem jego tragarza.
+- Szef Marx poszedł tam. - Wskazał na las, po czym ze smutkiem pokazał mi zapasowy karabin. - Nie zaczekał na mnie.
+- Cholera! - mruknąłem. - Jakby nie wystarczyło, że muszę szukać Snarka! Teraz mam okazję zostać zastrzelonym przez tego palanta!
+- Dlaczego miałby do pana strzelać? - zapytała Ramona.
+- Usłyszy mnie, zanim mnie zobaczy. Jest naładowany adrenaliną. Będzie pewien, że jestem Snarkiem.
+- No to proszę tu zostać.
+- Chciałbym - odpowiedziałem szczerze. - Ale moim zadaniem jest chronienie go, czy tego chce, czy nie.
+Ten akurat argument stał się po chwili czysto akademicki, gdyż usłyszeliśmy strzał, a potem długi, pełen bólu krzyk.
+Krzyk człowieka.
+- Proszę stanąć jakieś dwieście metrów od siebie - poleciłem Desmondom. - Proszę strzelać do wszystkiego, co się pokaże i nie wygląda jak ja albo Dabih! Chodźmy! - zwróciłem się do Chajinki.
+Dabih poprowadził mnie przez las. Zaczęło się robić coraz ciemniej i gęściej i w końcu zgubiliśmy ślad Marxa.
+- Szybciej go znajdziemy, jeśli się rozdzielimy - szepnąłem. - Ty na lewo, ja na prawo.
+Trzymałem karabin gotowy do strzału, żałując, że rano nie włożyłem do oczu soczewek na podczerwień. Po minucie nie słyszałem już Chajinki, co znaczyło, że gdy w końcu usłyszę kroki, będę musiał czekać ze strzałem, aż poznam, czy to Dabih, czy Snark.
+To żadna tajemnica, że myśliwi nienawidzą tropienia rannej zwierzyny w zaroślach. I powiem wam coś jeszcze: tropienie w krzakach nie zranionej zwierzyny jest jeszcze gorsze. Pot zalewał mi oczy, owady właziły mi do butów, skarpetek i w rękawy koszuli, a ciężar karabinu najwyraźniej wzrósł trzykrotnie. Ledwo widziałem cokolwiek na trzy metry przed sobą, a gdyby Marx wezwał pomocy z odległości pięćdziesięciu metrów, znalezienie go zajęłoby mi pewnie z pięć minut.
+Ale Marx nie wzywał już pomocy. 
+Nagle dostrzegłem leżącą na ziemi ludzką postać. Podszedłem ostrożnie, widząc Snarki - jakkolwiek by wyglądały - za każdym drzewem. Ukląkłem.
+Gardło miał rozerwane, a wnętrzności wylewały się przez wielką dziurę w brzuchu. Najprawdopodobniej zmarł, zanim padł na ziemię. 
+- Chajinka! - wrzasnąłem. 
+Nie było odpowiedzi.
+Wołałem go po imieniu co trzydzieści sekund i w końcu, po jakichś piętnastu minutach, usłyszałem, jak coś przeciska się przez gęste krzaki, a przetworzony przez tłumacza, mechaniczny głos powtarza:
+- Nie strzelaj! Nie strzelaj!
+- Chodź tutaj! - zawołałem.
+Po chwili był przy mnie.
+- Snark - orzekł, patrząc na ciało Marxa.
+- Na pewno?
+- Na pewno.
+- No dobrze. Pomóż mi nieść ciało.
+Nagle usłyszeliśmy dwa wystrzały.
+- Cholera! - ryknąłem. - Wyszedł na nich!
+- To może już nie żyje. Były dwa strzały.
+Kiedy wreszcie wydostaliśmy się z zarośli, zobaczyliśmy Philemona Desmonda, siedzącego na ziemi i oddychającego z trudem. Drżał na całym ciele. Ramona i Pollard stali kilka metrów dalej, wpatrując się w niego - ona z jawną pogardą, on z pewnym współczuciem.
+- Co się stało? - spytałem.
+- Wypadł z krzaków prosto na mnie! - oznajmił Desmond drżącym głosem.
+- Słyszeliśmy dwa strzały. Trafiliście go?
+- Nie sądzę. - Znowu zaczął się trząść. - Nie, ja na pewno nie.
+- Jak, do cholery, mogliście chybić?! - wrzasnąłem. - Nie mógł być dalej niż jakieś dwadzieścia metrów!
+ - Nigdy nic nie zabiłem! - odwrzasnął Desmond.
+Rozejrzałem się po górzystej okolicy. Nie było widać ani śladu Snarka, a w zasięgu mojego wzroku musiało być z pięćset dobrych kryjówek.
+- Cudownie - mruknąłem. - Po prostu cudownie!
+
+Bosman popadł w stan glątwy, z warg płynęły mu klątwy:
+"Ech, tragiczne Przeznaczeń wiraże!
+Dziwną jest to manierą: ostrzec łowców dopiero
+Gdy Snark w progu, że tak się wyrażę!"
+
+Wyciągnęliśmy ciało Marxa z lasu i załadowaliśmy na tył pojazdu.
+- Mój Boże! - szepnął Desmond. - On nie żyje! Był jedynym z nas, który wiedział cokolwiek o polowaniach, a teraz nie żyje! Musimy się stąd wydostać!
+- Był też naszym przyjacielem - oznajmiła Ramona. - Mógłbyś poświęcić jemu trochę tego żalu, który wylewasz na siebie.
+- Ramono! - odezwał się ostro Pollard.
+- Przepraszam - rzuciła całkowicie nieszczerze.
+Pollard wpatrywał się w ciało Marxa, odkąd wynieśliśmy je z lasu.
+- Jezu, co za jatka! - powiedział w końcu. - Bardzo cierpiał?
+- Nie - zapewniłem. - Nie z takimi ranami. Natychmiastowa śmierć.
+- No cóż, chyba powinniśmy dziękować za to Bogu - uznał Pollard. W końcu oderwał wzrok od ciała i zwrócił się do mnie: - Co teraz?
+- Teraz to już nie sport - odpowiedziałem, zastanawiając się ponuro, czy odbiorą mi licencję za stratę klienta, czy tylko ją zawieszą. - Zabił jednego z nas. Musi zginąć.
+- Myślałem, że taka jest cała idea safari.
+- Celem safari jest polowanie sportowe, z daniem równych szans zwierzynie. Teraz naszym celem stało się zabicie go jak najszybciej.
+- To brzmi jak zemsta - zauważyła Ramona.
+- To tylko praktyczność - poprawiłem ją. - Wie już, jak łatwo zabić uzbrojonego człowieka, a nie chcemy, żeby weszło mu to w zwyczaj.
+- A jak go powstrzymamy?
+- Są sposoby. Wykorzystam wszystkie znane mi sztuczki (a nauczyłem się ich sporo przez całe życie), zanim będzie miał okazję zabić znowu. A teraz proszę mi opowiedzieć, jak właściwie wyglądał, żebym wiedział, jakie zastawić pułapki.
+- Jak ogromna czerwona małpa ze świecącymi oczami - powiedział Pollard.
+- Nie! - zaprzeczyła Ramona. - Raczej jak brunatny niedźwiedź, tylko z dłuższymi nogami.
+- Był smukły - dodał Pollard.
+Ramona znowu mu zaprzeczyła.
+- Nie, był kudłaty.
+- Cudownie - mruknąłem. - Zakładam, że przynajmniej zrobił pan parę holografii, panie Pollard?
+Pokręcił głową zawstydzony.
+- Byłem tak zaskoczony, kiedy na nas wypadł, że całkiem zapomniałem o aparacie.
+- Wszystko to jest ogromnie przydatne - stwierdziłem z obrzydzeniem. Zwróciłem się do Desmonda: - A pan?
+- Nie wiem - jęknął. Nagle zadrżał. - Wyglądał jak Śmierć!
+- Musi pan wybaczyć Philemonowi - powiedziała Ramona. Z jej miny było widać, że ona mu na pewno nie wybaczy. - Jest naprawdę bardzo dobry w inwestycjach i fuzjach, a nawet przejęciach. Za to nie jest zbyt kompetentny w niczym bardziej fizycznym. - Klepnęła jego medal. - Nie licząc biegów.
+
+Marx zostawił na Roosevelcie III żonę i troje dorosłych dzieci, a jego przyjaciele byli pewni, że rodzina będzie sobie życzyła transportu zwłok. Włożyliśmy więc ciało do pojemnika próżniowego i wrzuciliśmy je do ładowni.
+Potem wzięliśmy się z Chajinką do pracy. Zastawiliśmy siedem pułapek, po czym wróciliśmy do obozu, by czekać.
+Na drugi dzień wcześnie rano poszliśmy zobaczyć, co udało nam się osiągnąć.
+Wtedy właśnie dowiedziałem się, że Snark ma sardoniczne poczucie humoru.
+Każda pułapka zawierała martwe zwierzę. Ale, żebyśmy nie uznali, że mieliśmy z tym cokolwiek wspólnego, każde miało rozbitą głowę.
+Sukinsyn po prostu się z nas naśmiewał.
+
+Każdy bowiem typowy Snark, prócz innych swych szpetot,
+Przed kontaktem z ludzkością się wzbrania:
+Wszelkich trzeba więc znanych - i nieznanych też - metod
+Użyć, jeśli chce dopaść się drania!
+
+Obudziłem się następnego ranka słysząc brzmiące nieco znajomo, niezrozumiałe bełkotanie. Po jakiejś minucie oprzytomniałem na tyle, by je zidentyfikować. Wybiegłem z Bąbla i niemal wpadłem na Chajinkę, który biegł mi na spotkanie.
+- Co się dzieje? - zapytałem.
+Odpowiedział w swoim języku.
+- Gdzie twój tłumacz? 
+Paplał coś do mnie. Nie rozumiałem ani słowa.
+W końcu zaciągnął mnie tam, gdzie jedli i spali Dabihowie. Wskazał na bezkształtną masę metalu, plastyku i procesorów. Nocą Snark bezgłośnie wszedł do obozu i zniszczył wszystkie urządzenia tłumaczące.
+Zastanawiałem się, czy po prostu szczęśliwie wybrał, czy też wiedział, jak bardzo są nam potrzebne.
+Mbele, obudzony przez te same dźwięki, wybiegł  ze swojego Bąbla.
+- Co się, do cholery, dzieje?! - krzyknął.
+- Sam zobacz - odpowiedziałem.
+- Jezu! Czy którykolwiek z Dabihów mówi po ludzku?
+Pokręciłem głową.
+- Gdyby mówili, nie potrzebowaliby tłumaczy, prawda?
+- To był Snark?
+- Któż by inny? - Skrzywiłem się.
+- To co teraz zrobisz?
+- Najpierw spróbuję dojść, czy był to wypadek, czy złośliwość i czy miał jakiekolwiek pojęcie, jaki chaos spowoduje.
+- Uważasz, że może być trochę mądrzejszy od przeciętnego niedźwiedzia?
+- Nie wiem. Żyje jak zwierzę, zachowuje się jak zwierzę i poluje jak zwierzę. Ale w krótkim  czasie zabił Marxa i zadbał o to, by pięcioro pozostałych ludzi nie mogło porozumieć się z dwunastoma Dabihami. - Zmusiłem się do kwaśnego uśmiechu. - To nieźle jak na głupie zwierzę, prawda?
+- Lepiej obudź pozostałych i powiedz im, co się stało. 
+- Wiem. - Kopnąłem jedną z połamanych maszyn. - Niech to szlag!
+Obudziłem Desmondów i Pollarda i powiedziałem, co się stało. Myślałem, że Philemon Desmond zaraz zemdleje. Pozostali byli odrobinę bardziej przydatni.
+- Jak dawno to się stało? - zapytał Pollard.
+- Chajinka pewnie oceniłby to lepiej, ale nie mogę z nim rozmawiać. Moim zdaniem, jakieś dwie godziny temu.
+- Czyli jeśli pójdziemy za nim, będzie miał dwie godziny przewagi?
+- Tak.
+- Lepiej zabijmy go jak najszybciej - powiedziała Ramona. - Teraz, kiedy wie, gdzie jest nasz obóz, może wrócić w każdej chwili.
+- Dajcie mi laserowy karabin - poprosił Pollard. - Nie strzelałem, odkąd jeździłem w dzieciństwie na obozy, ale przejechanie po wszystkim promieniem chyba nie jest takie trudne?
+- Wygląda pan nie najlepiej, panie Desmond - zwróciłem się do męża Ramony. - Może byłoby lepiej, gdyby został pan w obozie.
+Wyraźnie był ogromnie wdzięczny za szansę, jaką mu dałem. Jego żona zepsuła jednak wszystko dodając, że i tak tylko by przeszkadzał.
+- Idę - zdecydował.
+- To naprawdę nie jest konieczne - zapewniłem.
+- Zapłaciłem. Idę.
+I tyle.
+- Nie ma sensu zabierać tragarza - powiedziałem, kiedy szliśmy we czwórkę do pojazdu. - Nie możemy się z nimi porozumieć, a poza tym teraz przepisy już nie obowiązują. Jeśli go dostrzeżemy, będziemy strzelać z wnętrza pojazdu. Będzie można oprzeć broń na czymś twardym. - Usiedli na swoich miejscach. - Proszę chwilę zaczekać.
+Znalazłem Mbelego, oświadczyłem, że jedziemy za Snarkiem i że powinien kazać Dabihom zbudować jakieś zabezpieczenia. Potem przywołałem gestem Chajinkę. Po chwili zasiadł, jak zwykle, na masce i ruszyliśmy w pościg.
+Ślad prowadził na północny wschód, przez sawannę, w stronę lekko zalesionej doliny. Dwa czy trzy razy wydawało mi się, że dostrzeżemy go za następnym wzgórzem, ale drań był ostrożny i do wczesnego popołudnia nie zauważyliśmy go ani razu.
+O zmroku Chajinka nie był już w stanie czytać śladów z pojazdu, zeskoczył więc i pobiegł kłusem ze wzrokiem przyklejonym do ziemi. Kiedy dotarliśmy do doliny, poruszał się już tak wolno, że Ramona i Pollard wysiedli i szli obok niego, podczas gdy ja prowadziłem pojazd, a Desmond siedział skulony z tyłu.
+
+Lecz kotlina cieśniała w coraz węższej wzgórz ramie,
+Zmrok był zimny jak zupa z konserwy:
+W końcu obaj musieli dalej iść ramię w ramię -
+Trochę im to działało na nerwy.
+
+Zapadła noc i nie było ani śladu Snarka. Nie chciałem uszkodzić pojazdu, jeżdżąc po tym terenie w ciemności, więc położyliśmy się spać aż do wschodu słońca, po czym wróciliśmy do obozu. Dotarliśmy tuż przed południem.
+Nikt nie był przygotowany na widok, jaki ujrzeliśmy.
+Jedenastu Dabihów, których tu zostawiliśmy, leżało na ziemi w groteskowo powykręcanych pozach, każdy z rozdartym gardłem lub wyrwanymi wnętrznościami. Wszędzie leżały oderwane ramiona i nogi, cały teren zalany był krwią. Martwe, nieruchome oczy patrzyły na nas oskarżycielsko, jakby mówiąc: "Gdzieście byli, kiedy was potrzebowaliśmy?"
+Smród był gorszy niż widok. Ramona zakrztusiła się i zaczęła wymiotować. Desmond pisnął i skulił się w pozycji płodowej na podłodze pojazdu, by nie patrzeć na pobojowisko. Pollard zamarł jak posąg, po chwili też zaczął wymiotować.
+Nie raz widywałem śmierć. Chajinka też. Ale żaden z nas nie widział jeszcze czegoś takiego. Opór był niewielki. Drapieżnik ważący dwieście kilo nie potrzebuje dużo czasu na powybijanie nieuzbrojonych Dabihów ważących po pięćdziesiąt. Moim zdaniem wszystko rozegrało się w ciągu niecałej minuty.
+- Co tu się, u diabła, stało? - zapytał Pollard, kiedy już odzyskał głos, wskazując zalane krwią, porozrywane ciała.
+
+Mógłbym tu, dalsze perły sypiąc tak przed ryj tłumu, 
+Oprzeć całą rzecz o Teoremat,
+Gdybym miał trochę czasu, a ty trochę rozumu - 
+Lecz na razie lepiej zmieńmy temat.
+
+- Gdzie jest Mbele? - zapytałem, gdy już się opanowałem i zrozumiałem, że nie ma go wśród ciał.
+Zanim ktokolwiek zdążył odpowiedzieć, pobiegłem do luku i wszedłem na statek, spodziewając się w każdej chwili ataku Snarka.
+To, co zostało z kapitana Mbelego, znalazłem na mostku. Głowa była oderwana od ciała, a brzuch rozdarty. Podłoga, fotele, nawet ekran, były zalane jego krwią.
+- Jest tam? - zawołała z ziemi Ramona.
+- Nie wchodźcie! - wrzasnąłem.
+Potem przeszukałem każdy centymetr statku, szukając Snarka. Czułem wściekłe bicie serca, kiedy badałem każdą sekcję. Nigdzie nie było ani śladu.
+Wróciłem na mostek i zacząłem dokładnie go badać. Snark nie wiedział, jak uruchomić statek ani czym on w ogóle jest, ale wiedział, że należy on do wroga, więc narobił sporo szkód. Niektóre - uszkodzenie fotela pilota i kapsuł Głębokiego Snu oraz rezerwowych ekranów - nie miały żadnego znaczenia. Inne - zapłon jądrowy, komputer nawigacyjny i radio podprzestrzenne - miały ogromne.
+Nadal badałem statek, oceniając szkody. W furii podarł kilka łóżek, ale najpoważniejszych zniszczeń dokonał  w kuchni. Miałem wrażenie, że nic tam nie da się naprawić.
+Wyszedłem do reszty grupy.
+- Znalazł pan kapitana Mbele? - zapytała Ramona.
+- Tak. Jest w środku. - Ruszyła w stronę luku. Chwyciłem ją za ramię. - Proszę mi wierzyć, lepiej go nie widzieć.
+- Dość! - wrzasnął Desmond. - Przyjazd tu był szaleństwem! Chcę się stąd zabrać. Nie jutro, nie później! Teraz!
+- Popieram to - zgodziła się Ramona. - Wynośmy się z tej planety, zanim on zabije jeszcze kogoś.
+- To niemożliwe - odparłem ponuro. - Snark poważnie uszkodził statek.
+- Jak długo potrwa naprawa? - spytał Pollard.
+- Gdybym był doświadczonym mechanikiem wyposażonym w pełny zestaw narzędzi i części zamiennych, może z tydzień. Ale jestem myśliwym, który nie umie naprawić zniszczonego statku. Nie wiedziałbym nawet, od czego  zacząć.
+- Czyli utknęliśmy tutaj? - zapytała Ramona.
+- Na jakiś czas.
+- Co to znaczy "na jakiś czas?!" - wrzasnął histerycznie Desmond. - Zostaniemy tu na zawsze! Już jesteśmy martwi! Wszyscy!
+Chwyciłem go i potrząsnąłem nim, a gdy nie przestawał wrzeszczeć, uderzyłem go mocno w twarz.
+- To nie pomoże - wycedziłem z wściekłością.
+- Nigdy się nie wydostaniemy z tej cholernej planety! - jęknął.
+- Owszem, wydostaniemy się. Mbele musiał meldować się co tydzień u Silingera & Mahra. Kiedy nie dostaną meldunku, wyślą ekipę ratunkową. Musimy tylko pozostać przy życiu, aż tu dotrą.
+- Nigdy nie dotrą! - bełkotał Desmond. - Wszyscy zginiemy!
+- Przestań płakać! - warknąłem. Tylko tego mi teraz trzeba, pomyślałem z obrzydzeniem. Otaczają nas poszarpane zwłoki, ziemia nasiąkła krwią, Snark jest pewnie nadal w pobliżu, a temu dupkowi odbija. - Mamy co robić! - Wszyscy spojrzeli na mnie. - We trójkę zacznijcie kopać wspólny grób dla Dabihów. Potem musimy wszystko spalić - każde drzewo, krzak, wszystko, żeby pozbyć się zapachu krwi. Mógłby przywabić drapieżniki. Czego nie da się spalić, zakopiemy.
+- A pan co będzie robił? - zapytał Desmond, który nareszcie odzyskał minimum równowagi.
+- Wyniosę ze statku to, co zostało z Mbelego i zmyję krew - oznajmiłem brutalnie. - Chyba że pan wolałby to zrobić. - Wyglądał jakby zaraz miał zemdleć. - Potem, jeśli zdołam dogadać się z Chajinką, spróbuję zabezpieczyć teren.
+- Jak? - spytała Ramona.
+- Mamy urządzenia reagujące na ruch i ciepło ciała. Może zdołam zmontować jakiś system ostrzegawczy. Możemy je z Chajinką pochować wokół obozu. Jeżeli skończymy przed wami, pomożemy w kopaniu grobu. A teraz do roboty - im prędzej zaczniemy, tym prędzej będziemy mogli zamknąć się wewnątrz statku i zdecydować, jaki będzie następny ruch.
+- A jest w ogóle jakiś? - spytał Pollard.
+- Zawsze jest - odpowiedziałem.
+Oczyszczenie kabiny z krwi i wnętrzności Mbelego zajęło mi prawie cztery godziny. To, co z niego zostało, włożyłem do próżniowego pojemnika i wyniosłem na zewnątrz.
+Chajinka pomagał w kopaniu grobu. Zawołałem go i pokazałem mu, przez skomplikowaną pantomimę, o co mi chodzi. Kilka chwil później rozkładaliśmy czujniki wokół obozu. Nie widziałem powodu, by siedzieć w Bąblach, kiedy w pobliżu kręci się tak niebezpieczny wróg, więc złożyłem je i wrzuciłem z powrotem do ładowni. Ponieważ grób nie był jeszcze gotowy, pomogliśmy z Chajinką go skończyć. Desmond nie chciał dotykać ciał, a Ramona wyglądała tak, jakby miała znowu zwymiotować, więc z razem Pollardem i Dabihem zaciągnęliśmy wszystkie zwłoki i ich części do grobu. Dorzuciłem tam pojemnik z ciałem Mbelego. Kiedy zasypywaliśmy grób, odczytałem nad nim fragment z Biblii.
+- Co teraz? - spytała Ramona, brudna i bliska załamania. 
+- Teraz spalimy wszystko, zakopiemy pozostałości zaschniętej krwi i przeniesiemy się do wnętrza statku.
+- I będziemy po prostu czekać na ratunek?
+Pokręciłem głową.
+- Ekipa ratunkowa dotrze tu dopiero za parę tygodni, może nawet za miesiąc. Będzie nam potrzebne mięso, a skoro w zniszczonej kuchni nie można go zamrozić, najprawdopodobniej konieczne będzie wychodzenie na polowanie codziennie, a przynajmniej co drugi dzień.
+- Rozumiem.
+- A ja zabiję Snarka - dodałem.
+- Dlaczego nie zaczekamy po prostu na ekipę ratunkową, nie ryzykując? 
+- Zabił trzynaście istot będących pod moją opieką - odparłem ponuro. - Zabiję go, choćby to miała być ostatnia rzecz, jaką zrobię.
+- Może Philemon powinien dać panu swój laserowy karabin - zaproponowała Ramona. - I tak nie najlepiej się nim posługuje.
+Desmond popatrzył na nią złowrogo, ale się nie odezwał. 
+- Może mu się przydać. Poza tym moja broń mi wystarczy.
+- Gdzie będzie go pan szukał? - spytał Pollard.
+- Mniej więcej w tej okolicy. Nie miał powodu, by ją opuszczać.
+- Nie możemy siedzieć tu jak przynęta i czekać na niego! - jęknął Desmond. - Odkąd jesteśmy na tej planecie, pan go nawet nie widział, ale on zabił już Marxa, Mbelego i naszych Dabihów. Wchodzi do obozu, kiedy tylko chce! Niszczy nasz sprzęt i nasz statek! Trzeba wojska, żeby go zabić!
+- Jeśli wróci, wewnątrz statku będziecie bezpieczni - odpowiedziałem.
+- Zamknięcie się w statku nie pomogło kapitanowi Mbelemu - zauważyła Ramona.
+- Nie zamknął luku. Myślę, że zobaczył, co się dzieje, i pobiegł do statku po broń. Snark dopadł go, zanim ją znalazł. Nie powinien był w ogóle wychodzić bez broni.
+- Czyli to jego wina, że ten potwór go zabił?! - krzyknął Desmond. - Nie obwiniajmy myśliwego, który nawalił! Obwiniajmy ofiarę!
+Nie wytrzymałem.
+- Jeszcze słowo i będzie kolejny trup! - wrzasnąłem.
+Pollard stanął między nami.
+- Spokój! - warknął. - To stworzenie gdzieś tam jest! Nie odwalajcie za nie roboty!
+Obaj trochę się uspokoiliśmy i w końcu weszliśmy na statek. Nie było nic do jedzenia, ale wszyscy byliśmy tak wyczerpani fizycznie i psychicznie, że to nie miało znaczenia. Pół godziny później spaliśmy.
+
+Każdego ranka Chajinka i ja przechodziliśmy przez wypalone, puste pole, jeszcze niedawno pokryte roślinnością. Wsiadaliśmy do pojazdu i przygotowywaliśmy się do zdobycia jakiegoś pożywienia. Chociaż w pobliżu statku nie było już żadnych kryjówek, miałem nieustanne wrażenie, że on nas obserwuje, ocenia naszą siłę, czeka na właściwy moment.
+Nigdy nie oddalaliśmy się od obozu więcej niż sześć kilometrów. Nie strzelałem do najefektowniejszych zwierząt, tylko do najbliższych. Potem wybieraliśmy kawały mięsa, które naszym zdaniem mogły się przydać, i zostawialiśmy resztę padlinożercom. Wracaliśmy do obozu, a po śniadaniu szliśmy szukać śladów Snarka.
+Wiedziałem, że jest w pobliżu. Byłem tego równie pewien jak własnego imienia, ale nie mogliśmy znaleźć żadnych śladów jego obecności. Ostrzegłem pozostałych, by nie opuszczali statku bez broni (a najlepiej, by w ogóle nie wychodzili) i żeby w żadnym wypadku nie oddalali się od niego na więcej niż trzydzieści metrów, chyba że w moim towarzystwie. 
+Piątego dnia po masakrze wszyscy mieli już dość czerwonego mięsa, postanowiłem więc iść z Chajinką nad rzekę i złowić parę ryb.
+- Mogę iść z wami? - Ramona wyłoniła się z luku. - Zaczynam dostawać klaustrofobii.
+Nie widziałem powodu, by jej odmówić. Z Chajinką i ze mną była bezpieczniejsza niż w statku.
+- Proszę wziąć karabin - poleciłem.
+Znikła wewnątrz statku i po chwili wróciła z laserowym karabinem.
+- Jestem gotowa.
+- Chodźmy więc.
+Ruszyliśmy przez gęste zarośla do rzeki.
+- Wszystkie miejscowe zwierzęta muszą tu przychodzić pić - zauważyła Ramona. - Czy nie byłoby łatwiej polować tutaj zamiast wyruszać co rano pojazdem?
+- Zwrócilibyśmy uwagę dwukrotnie większej liczby drapieżników - wyjaśniłem. - A skoro przychodzimy tu z Chajinką dwa razy dziennie po wodę, po co ściągać na siebie kłopoty?
+- Rozumiem. - Umilkła na chwilę. - Czy w rzece są jakieś drapieżniki? Takie, które mogłyby zjeść człowieka?
+- Żadnych nie widziałem. Ale nie zalecałbym kąpieli.
+Kiedy dotarliśmy na miejsce, Chajinka znalazł sporą gałąź i zaczął walić nią w wodę. Kiedy miał już pewność, że jest bezpiecznie, wszedł do rzeki po uda i uniósł włócznię nad głową, gotów do ataku, podczas gdy my obserwowaliśmy go w całkowitym milczeniu. Stał tak bez ruchu jakieś dwie minuty, potem nagle pchnął włócznię i wyciągnął na jej końcu dużą trzepoczącą się rybę.
+Uśmiechnął się i powiedział coś, czego nie zrozumiałem. Potem wyszedł na brzeg, wziął kamień i rozbił nim głowę ryby. Kiedy przestała się ruszać, wrócił do wody.
+- Jeszcze dwie i będzie kolacja - zauważyłem.
+- Jest naprawdę niesamowity - stwierdziła Ramona. - Gdzie pan go znalazł?
+- Odziedziczyłem go.
+- Co takiego?
+- Był tropicielem u myśliwego, którego ja byłem uczniem. Kiedy ów myśliwy  przeszedł na emeryturę, przekazał mi listę swoich klientów i Chajinkę.
+Nagle rozległ się tryumfalny okrzyk Chajinki. Uniósł włócznię, na końcu której znajdowała się duża, ważąca z kilkanaście kilo ryba. Sam Dabih nie ważył więcej niż  czterdzieści pięć kilo, prąd był silny, a dno śliskie. Nagle padł do tyłu i zniknął pod powierzchnią wody.
+Wyłonił się po sekundzie bez włóczni i ryby. Zobaczyłem je dobre dziesięć metrów od niego. Mówienie mu o tym nie miało sensu - bez tłumacza nie rozumiał ani słowa. Wszedłem więc sam do rzeki.Woda szybko sięgnęła mi do piersi i musiałem walczyć z prądem, ale w końcu złapałem włócznię i wróciłem na brzeg. Chajinka wylazł po chwili z zawstydzonym uśmiechem. Zrobił kolejną niezrozumiałą uwagę i rozbił rybie głowę, podobnie jak pierwszej.
+ - Widzi pani? - stwierdziłem sardonicznie. - Nawet łowienie ryb może być na safari fascynujące.
+Nie usłyszałem odpowiedzi. Obejrzałem się. Ramony Desmond nigdzie nie było.
+
+Snark znów musiał  wyręczać spłakanego Sędziego:
+Ani szmer nie pozostał z rwetesu,
+Kiedy, gromko wezwany, Wyrok wstał z kąta, gdzie go
+Posadzono w pierwszy dzień procesu.
+
+Przykucnąłem koło jej ciała. Nie było krwi - bezgłośnie złamał jej kark i zostawił tam, gdzie upadła.
+- Obserwował nas cały czas! - wrzasnąłem z furią. - Poczekał, aż będzie sama, chwycił ją i wciągnął w krzaki. - Przyszła mi do głowy ponura myśl. - Ciekawe, kto tu na kogo poluje?
+Chajinka mruknął coś niezrozumiałego.
+- No trudno - powiedziałem po chwili. - Zabierzmy ją do obozu.
+Zarzuciłem sobie ciało Ramony na ramię i dałem mu znak, by szedł za mną.
+Desmond wybiegł na nasz widok ze statku. Zaczął okładać się pięściami i wyrywać sobie włosy z głowy, wrzeszcząc coś bez sensu na całe gardło.
+- Co się, do cholery, dzieje? - zapytał Pollard, wyłażąc przez luk. Potem dostrzegł ciało. Z trudem zapanował nad głosem. - O Jezu! O Jezu! - powtarzał. Kiedy w końcu się uspokoił, stwierdził: - To więcej niż zwierzę! To jakiś mściwy, nieznany bóg!
+Chajinka poszedł do ładowni i wrócił z łopatą.
+Pollard wpatrywał się w Desmonda, który jeszcze się nie opanował.
+- Pomogę w kopaniu - zaproponował.
+- Dziękuję - odpowiedziałem. - Chyba lepiej zaprowadzę Desmonda do kabiny i dam mu coś na uspokojenie.
+Podszedłem i położyłem mu rękę na ramieniu.
+- To twoja wina! - wrzasnął. - Miałeś ją chronić, a pozwoliłeś ją zabić!
+Nie mogłem zaprzeczyć, więc tylko popychałem go delikatnie w stronę statku.
+I wtedy, w ułamku sekundy, coś w nim się przełamało. Widziałem to w jego twarzy. Oczy otworzyły się szeroko, mięśnie szczęki zaczęły drżeć, nawet ton głosu się zmienił.
+- To zwierzę dowie się, co to znaczy zabić żonę najpotężniejszego człowieka w Dalekim Londynie! - Spojrzał na zarośla i wrzasnął: - Jestem Philemon Desmond, do cholery, i nie będę się więcej bać jakiegoś pieprzonego tępego zwierzaka! Słyszysz mnie? To koniec! Już nie żyjesz!
+- Proszę, panie Desmond - powiedziałem cicho, popychając go w stronę statku.
+- Kim, do cholery, jesteś? - zapytał i widziałem, że naprawdę mnie nie rozpoznał.
+Miałem właśnie udzielić mu jakiejś odpowiedzi, kiedy wszystko pochłonęła ciemność, a ziemia uderzyła mnie w twarz.
+
+Bankier - w nagłym porywie tak szaleńczej odwagi,
+Że wzbudziło to moc komentarzy - 
+Ruszył w wysokopienne, rozszumiałe szparagi:
+Bór, gdzie Snark nieraz ślepia rozjarzy.
+
+Ktoś chlusnął mi w twarz wodą. Chwyciłem oddech, po czym usiadłem i uniosłem dłoń do głowy. Kiedy ją cofnąłem, była pokryta krwią.
+- Nic panu nie jest? - zapytał Pollard. Klęczał obok mnie, a za nim dostrzegłem Chajinkę.
+- Co się stało?
+- Nie jestem pewien. Właśnie zaczynaliśmy kopać grób, kiedy nagle usłyszałem, że Desmond zamilkł. Potem walnął pana czymś w głowę i uciekł.
+- Zaskoczył mnie - jęknąłem, mrugając wściekle powiekami. - Dokąd poszedł?
+- Nie wiem. - Wskazał na południowy wschód. - Chyba w tamtą stronę.
+- Cholera! - zakląłem. - Snark ciągle gdzieś tu jest!
+Próbowałem wstać, ale poczułem taki ból i zawrót głowy, że musiałem znowu usiąść.
+- Spokojnie. Ma pan pewnie niezły wstrząs mózgu. Gdzie apteczka? Może zdołam przynajmniej powstrzymać krwawienie.
+Powiedziałem mu, gdzie szukać, po czym zająłem się próbami wyostrzenia wzroku.
+Kiedy Pollard wrócił i zabrał się za moją głowę, zapytałem go:
+- Widział pan, czy przynajmniej zabrał ze sobą laserowy karabin?
+- Jeśli nie miał go przy sobie, kiedy pana uderzył, to nie fatygował się po niego.
+- A niech to szlag!
+- To chyba znaczy, że go nie miał.
+- Cudownie - mruknąłem, krzywiąc się, gdyż zrobił coś z tyłem mojej głowy. - Czyli jest nieuzbrojony, biega sobie po zaroślach i wrzeszczy na całe gardło.
+- Gotowe - orzekł Pollard, wstając. - Może nie najładniej to wygląda, ale przynajmniej przestał pan krwawić. Jak się pan czuje?
+- Ociężale. Proszę pomóc mi wstać.
+Kiedy stałem już na nogach, rozejrzałem się wokół.
+- Gdzie mój karabin?
+- Tutaj - wskazał Pollard. Podniósł go i podał mi. - Ale pan nie może szukać teraz Desmonda.
+- Nie zamierzam szukać Desmonda - wymamrotałem. - Zamierzam szukać jego! - Gestem wezwałem Chajinkę i niepewnym krokiem wyruszyłem na południowy zachód. - Proszę się zamknąć w statku.
+- Najpierw skończę grób Ramony.
+- Nie.
+- Ale...
+- Proszę robić, co mówię, chyba że jest pan gotów załatwić go łopatą.
+- Nie mogę zostawić jej ciała padlinożercom - zaprotestował Pollard.
+- Proszę ją zabrać ze sobą. Opryskać środkami konserwującymi, których używamy do trofeów, i zostawić w ładowni. Pochowamy ją, gdy wrócę.
+- Jeśli pan wróci - poprawił. - Zdaje się, że ledwo pan stoi.
+- Wrócę - obiecałem. - Wciąż jestem myśliwym, a on nadal tylko zwierzęciem.
+- Tak, jest tylko zwierzęciem. Dlatego przy życiu zostaliśmy tylko my dwaj i Chajinka.
+
+Desmond nie zaszedł daleko - zresztą wcale się tego nie spodziewałem. Znaleźliśmy go niecały kilometr od obozu z roztrzaskaną głową. Zaniosłem go do obozu i pochowałem razem z żoną.
+- Drań jest od początku o krok przed nami - stwierdził Pollard z goryczą, kiedy siedzieliśmy obok statku, gasząc pragnienie letnią wodą. Chajinka siedział parę metrów dalej, nieruchomy niczym posąg, wypatrując i nasłuchując oznak bliskości Snarka.
+- Jest sprytniejszy, niż myślałem - przyznałem. - Albo ma więcej szczęścia.
+- Nic nie ma tyle szczęścia - odparł Pollard. - Musi być inteligentny.
+- Z pewnością - zgodziłem się.
+Pollard otworzył szeroko oczy. 
+- Chwileczkę! - odezwał się ostro. - Skoro wiedział pan, że to istota inteligentna, to dlaczego zaczął pan na nią polowanie?
+- Jest różnica między inteligencją a rozumowaniem - odparłem. - Wiemy, że jest inteligentny. Nie wiemy, czy jest rozumny.
+Miał zdziwioną minę.
+- Myślałem, że to to samo. 
+Pokręciłem głową.
+- Na Ziemi szympansy były wystarczająco inteligentne, by tworzyć proste narzędzia i przekazywać tę wiedzę z pokolenia na pokolenie, ale nikt nigdy nie twierdził, że są istotami rozumnymi. Fakt, że Snark potrafi zacierać po sobie ślady, dostrzegać moje pułapki i wymykać się nam, dowodzi, że jest inteligentny, ale nie, że jest rozumny.
+- Z drugiej strony, nie dowodzi to, że nie jest rozumny - twierdził Pollard z uporem.
+- Nie, nie dowodzi.
+- Co zatem zrobimy?
+- Zabijemy go.
+- Nawet jeśli jest rozumny?
+- A co mamy zrobić ze stworzeniem, które zabiło piętnaście istot? Gdy jest to człowiek, skazujemy go na śmierć. Gdy zwierzę, tropimy je i zabijamy. Wynik jest zawsze taki sam.
+- No dobrze - zgodził się Pollard bez przekonania. - Zabijemy go. Jak?
+- Opuścimy statek i pójdziemy go szukać.
+- Dlaczego? Tu jesteśmy bezpieczni!
+- Proszę powiedzieć to Mbelemu, Desmondom i Dabihom. Dopóki tu pozostajemy, on wie, gdzie jesteśmy, a my nie wiemy, gdzie on jest. To znaczy, że on jest myśliwym, a my zwierzyną. Jeśli opuścimy obóz i złapiemy jego ślad, zanim on znajdzie nasz, znów staniemy się myśliwymi.
+Wstałem.
+- Im prędzej wyruszymy, tym lepiej.
+Nie był zadowolony, ale nie miał wyboru, gdyż alternatywą było samotne pozostanie w obozie. Kiedy załadowaliśmy pojazd, klepnąłem maskę, poczekałem, aż Chajinka na nią wskoczy i ruszyliśmy do miejsca, gdzie znalazłem ciało Desmonda.
+Dabih znalazł ślad i zaczęliśmy tropić Snarka. Pragnąłem go dopaść tak, jak niczego w życiu. Nie chodziło tylko o zemstę za wszystkich zabitych ludzi i Dabihów. Nawet nie o zawodową dumę. Wiedziałem, że to moje ostatnie polowanie, że po stracie piętnastu rozumnych istot będących pod moją opieką nigdy nie odzyskam licencji.
+Ślad prowadził z powrotem do obozu - Snark obserwował, jak grzebiemy ciało Desmonda. Ukrywał się, póki nie odjechaliśmy, po czym ruszył na północny zachód. Tropiliśmy go do późnego popołudnia, kiedy to znaleźliśmy się jakieś dwanaście kilometrów od statku.
+- Nie ma po co wracać na noc - powiedziałem do Pollarda. - Moglibyśmy już nigdy nie odnaleźć śladu.
+- A czy on nie zawróci do obozu?
+- Nie, jeżeli nas tam nie ma - odparłem z niezachwianą pewnością. - To już nie jest polowanie, to wojna. Żaden z nas nie ustanie, póki drugi żyje.
+Spojrzał na mnie mniej więcej tak, jak ja wcześniej na Desmonda.
+- Nie możemy tropić go w nocy - odezwał się w końcu.
+- Wiem. Każdy z nas będzie czuwał przez trzy godziny - ja, pan i Chajinka - i wyruszymy, gdy tylko będzie dość światła.
+Odbyłem pierwszą wartę. Ponieważ i tak nie mogłem spać, odsiedziałem także wartę Pollarda. Potem zbudziłem Chajinkę i zdołałem zdrzemnąć się trzy godziny. Jak tylko zrobiło się dość jasno, znowu ruszyliśmy po śladach.
+Koło południa zbliżyliśmy się do niewielkiego kanionu. Wtedy nagle dostrzegłem w oddali ruch. Zatrzymałem pojazd i uruchomiłem teleskopowe soczewki.
+Był jakieś półtora kilometra z przodu, w dodatku odwrócony do nas tyłem, ale wiedziałem, że nareszcie po raz pierwszy zobaczyłem Snarka.
+
+Lecz wtem oczy ich tkliwie na skalistym masywie
+Postać Bubu dostrzegły w oddali - 
+Stał - stał - ha, cóż to? - w przepaść, jakby nie mógł w nią nie paść,
+Padł - i w zgrozie zdrętwiali czekali.
+
+Podjechałem do brzegu kanionu. Chajinka zeskoczył z maski, a ja i Pollard po chwili dołączyliśmy do niego.
+- Jest pan pewien, że pan go widział? - zapytał Pollard.
+- Jestem pewien - odparłem. - Dwunożny. Rdzawo-brązowy. Wygląda właściwie jak skrzyżowanie niedźwiedzia z gorylem, przynajmniej z daleka.
+- Tak, to na pewno on. - Spojrzał w dół kanionu. - I zszedł tędy?
+- Owszem.
+- Zakładam, że pójdziemy za nim?
+- Nie ma powodu zakładać, że wyjdzie w tej okolicy.  Jeśli będziemy czekać, stracimy go z oczu.
+- Wygląda dość skalisto. Możemy znaleźć jego ślady?
+- Chajinka je znajdzie.
+Pollard westchnął głęboko.
+- A, co tam. - Wzruszył ramionami. - Nie zamierzam czekać tu samotnie, kiedy wy dwaj pójdziecie za nim. Pewnie będę bezpieczniejszy z wami, oczywiście jeśli  nie złamię sobie karku.
+Gestem nakazałem Chajince, by ruszył na dół - poruszał się po zboczach dużo pewniej niż jakikolwiek człowiek. Szedł jakieś pięćdziesiąt metrów tuż nad urwiskiem, po czym dotarł do słabo widocznej ścieżki, którą schodziliśmy prawie godzinę. Znaleźliśmy się w końcu na dnie kanionu, obok wąskiego strumyka, przy którym nasyciliśmy pragnienie, mając nadzieję, że woda nie zaszkodzi nam zbytnio, gdyż sprzęt napromieniający zostawiliśmy na statku.
+Odpoczęliśmy chwilę i wróciliśmy do polowania. Chajinka potrafił znaleźć trop w miejscach, gdzie przysiągłbym, że żadnego nie ma. Wczesnym popołudniem dno kanionu przestało być płaskie i musieliśmy iść krętą ścieżką obchodzącą skaliste formacje. Pollard trzymał się nieźle, ale był w nie najlepszej kondycji. Wciąż zostawał w tyle, kilka razy nawet zniknął nam z oczu. Musieliśmy stawać i czekać na niego.
+Kiedy znowu został w tyle, postanowiłem zapytać go, czy nie powinniśmy odpocząć. Nie ośmieliłem się krzyczeć, by nie zdradzić Snarkowi naszej pozycji, więc tylko dałem Chajince znak, by zwolnił, póki Pollard nas nie dogoni.
+Nie dogonił. Po kilku minutach cofnęliśmy się, by sprawdzić, co się stało.
+Nie mogłem go znaleźć. Jakby zniknął z powierzchni planety.
+
+Aż do zmroku tropili, ale jak kamień w wodę - 
+Ni krzty śladu, guzika, zegarka;
+Nie znaleźli niczego, co by było dowodem,
+Że to tu Bubu spotkał był Snarka.
+
+Szukaliśmy Pollarda przez pół godziny. Nie było ani śladu i w końcu zmuszeni byliśmy przyznać, że w jakiś sposób Snark zawrócił i okrążył nas lub też ukrył się i zaczekał, aż przejdziemy. Tak czy inaczej, najwyraźniej dopadł Pollarda.
+Wiedziałem, że dalsze poszukiwania nie mają sensu, dałem więc Chajince znak, by dalej tropił Snarka. Szliśmy kamienistym dnem kanionu, póki nie trafiliśmy na stromą skalną ścianę.
+- W górę albo z powrotem - stwierdziłem, spoglądając na nią. - Co lepiej?
+Wpatrywał się we mnie wyczekująco, czekając, aż dam mu znak, gdzie iść.
+Spojrzałem z powrotem w stronę, z której przyszliśmy, potem w górę, jak szła nasza ścieżka...
+... i kiedy spojrzałem w górę, zobaczyłem coś dużego lecącego na mnie!
+Odepchnąłem Chajinkę i rzuciłem się w lewo, tocząc się po ziemi. Coś wylądowało głośno kilka metrów dalej... Było to ciało Pollarda.
+Spojrzałem w górę i zobaczyłem Snarka, stojącego na krawędzi i patrzącego na mnie. Spojrzeliśmy sobie w oczy. Nagle odwrócił się i ruszył biegiem w górę skalnej ściany. 
+- Nic ci nie jest? - zapytałem Chajinkę, który właśnie wstawał.
+Otrzepał się, po czym wykonał ruch przypominający machanie łopatą i spojrzał na mnie pytająco.
+Nie mieliśmy łopat, a wykopanie gołymi rękami nawet płytkiego grobu w tym skalistym podłożu potrwałoby całe godziny. Zostawiając ciało Pollarda tam, gdzie leżało, mieliśmy niemal pewność, że zjedzą  je padlinożercy, ale jeśli stracilibyśmy czas na jego pogrzeb, zgubilibyśmy Snarka.
+
+"Złóżcie go tam, pod szparag - czas, jak mówią, nie szarak,
+Ale późno już", Bosman rzekł z mocą
+"Klepsydro, porę zmierz - ha! Toż właśnie się zmierzcha:
+Jak tu Snarka wytropić przed nocą?"
+
+Kiedy wdrapaliśmy się do połowy wysokości ściany, zatrzymałem się i spojrzałem wstecz. Wysoko na niebie krążyły nieznane drapieżne ptaki. Kiedy pierwszy z nich wylądował obok martwego Pollarda i zaczął go dziobać, odwróciłem się i skupiłem na Snarku.
+Dotarcie na szczyt zajęło nam godzinę, po czym Chajinka spędził  kilka minut na szukaniu śladu Snarka. Szliśmy za nim kolejną godzinę; okolica zmieniała się powoli - stopniowo stawała się na powrót zielona i żyzna.
+Wtedy stało się coś dziwnego. Ślad stał się nagle wyraźnie widoczny.
+Niemal zbyt widoczny.
+Tropiliśmy go jeszcze pół godziny. Czułem, że jest blisko i byłem gotów strzelać do wszystkiego, co się rusza. Przez wilgoć w powietrzu ręce spociły mi się tak bardzo, iż obawiałem się, że palec ześlizgnie się z cyngla. Dałem więc Chajince sygnał, że chciałbym zrobić krótką przerwę.
+Upiłem łyk z butelki. Potem, kiedy oparłem się o drzewo, ocierając karabin z wilgoci, zobaczyłem jakiś ruch niecały kilometr dalej.
+To był on!
+Uniosłem karabin do ramienia i wycelowałem. Był jednak za daleko. Zerwałem się na nogi i pobiegłem za nim. Na moment odwrócił się do mnie przodem, po czym zniknął w krzakach. 
+Kiedy dotarliśmy tam, gdzie był, znaleźliśmy ślad prowadzący na północ i ruszyliśmy nim. W pewnej chwili zatrzymaliśmy się, bym mógł wyrzucić z buta gryzącego owada - i nagle znowu go zobaczyliśmy. Ryknął i  zniknął w gęstych zaroślach, kiedy pobiegłem za nim.
+Całkiem jakby sukinsyn się z nami drażnił. Zastanawiałem się, czy aby nie prowadzi nas w pułapkę?
+I wtedy pojawił się nagły przebłysk zrozumienia.
+A może nie prowadził nas w pułapkę, tylko usiłował od czegoś odciągnąć?
+Niewiele miało to sensu, ale gdzieś w głębi serca wiedziałem, że to prawda.
+- Stój! - rozkazałem Chajince.
+Nie znał tego słowa, ale sam mój ton nakazał mu zatrzymać się w miejscu.
+Wskazałem na południe.
+- W tę stronę - oznajmiłem.
+Dabih zmarszczył czoło i wskazał w stronę Snarka, mówiąc coś w swoim języku.
+- Wiem, że tam jest - odpowiedziałem. - Ale i tak chodźmy w tę stronę.
+Ruszyłem na południe. Ledwo przeszedłem cztery czy pięć kroków, Chajinka znalazł się przy moim boku, znowu coś papląc, szarpiąc mnie za ramię, usiłując zmusić do pójścia za Snarkiem.
+- Nie! - warknąłem. Samego słowa na pewno nie zrozumiał, musiał więc zadziałać ton. Zresztą wszystko jedno, co było przyczyną, grunt, że wzruszył ramionami, spojrzał na mnie, jakbym zwariował, i ruszył za mną. Nie mógł prowadzić, gdyż nie było żadnych śladów, a on nie wiedział, dokąd idziemy. Ja zresztą też nie, ale instynkt mówił mi, że Snark nie chce, bym szedł w tę stronę, i to mi wystarczało.
+Szliśmy jakieś piętnaście minut, kiedy usłyszałem na lewo straszliwy ryk. Był to Snark - tym razem dużo bliżej, z innej strony. Pokazał się na chwilę i uciekł.
+- Wiedziałem! - szepnąłem z podnieceniem do Chajinki, który wydawał się zdezorientowany tym, że nadal ignoruję Snarka.
+Im dalej szliśmy na południe, tym odważniejszy robił się Snark. W końcu zbliżył się do nas na sto metrów, ale nigdy nie pokazał się na dość długo, bym mógł wystrzelić.
+Czułem, że Chajinka jest coraz bardziej zdenerwowany. W końcu, kiedy Snark ryknął trzydzieści metrów od nas, mały Dabih uniósł włócznię i rzucił się za nim.
+- Nie! - krzyknąłem. - Zabije cię!
+Próbowałem go złapać, ale był dla mnie za szybki. Ruszyłem za nim pomiędzy trawopodobne rośliny, wysokie na trzy metry. Było to wyjątkowo głupie posunięcie - nie mogłem dostrzec Chajinki, nie widziałem Snarka, nie miałem pola manewru, nie mógłbym nawet uskoczyć, gdyby się na mnie rzucił. Ale Chajinka był moim przyjacielem - jeśli mam być szczery, to prawdopodobnie moim jedynym przyjacielem - i nie mogłem pozwolić, by samotnie stawił czoło Snarkowi. 
+Nagle usłyszałem odgłosy szamotaniny. Rozległ się warkot, Chajinka krzyknął raz i zapanowała cisza.
+Przepychałem się między ciężkimi trawami. Potem natrafiłem na cierniste krzewy, kolce poszarpały mi ramiona i nogi. Nie zwracałem na to uwagi, szukając Chajinki.
+Znalazłem go na małej polance. Walczył o życie - świadczyły o tym jego rany - ale nawet uzbrojony we włócznię nie mógł się równać z dwustukilogramowym drapieżnikiem. Rozpoznał mnie, spróbował powiedzieć coś, czego i tak bym nie zrozumiał, i zmarł zaraz po tym, jak do niego dotarłem.
+Wiedziałem, że nie powinienem pozostawać w tych gęstych zaroślach, skoro Snark nadal jest w pobliżu. To był jego teren. Wróciłem więc na swój szlak i dalej szedłem na południe. Snark ryczał z ukrycia, ale nie pokazał się.
+Przeszedłem kolejne pół kilometra i dotarłem do drzewa z pustym wewnątrz pniem. Miałem zamiar je obejść, kiedy w środku usłyszałem popiskiwanie. Podszedłem ostrożnie, z karabinem odbezpieczonym i gotowym do strzału - i nagle Snark wyszedł na otwartą przestrzeń niecałe piętnaście metrów ode mnie i rzucił się naprzód z ogłuszającym rykiem.
+Znalazł się przy mnie tak szybko, że nawet nie zdążyłem wycelować. Zamachnął się potężną łapą. Uchyliłem się i odwróciłem, ale cios sięgnął mojego ramienia i wyrzucił mnie w powietrze. Wylądowałem na wznak, wstałem i zobaczyłem, że stoi jakieś dziesięć metrów ode mnie. Mój karabin leżał na ziemi obok niego.
+Znowu zaatakował. Tym razem byłem gotów. Zanurkowałem pod jego pazurami, przetoczyłem się po ziemi, chwyciłem broń i wystrzeliłem raz, zanim odwrócił się za mną.
+- Mam cię, sukinsynu! - wrzasnąłem triumfalnie.
+Z początku myślałem, że trafiłem go zbyt wysoko, by rana była śmiertelna, ale padł natychmiast. Trysnęła krew. Zauważyłem na jego boku jątrzącą się ranę, pewnie pamiątkę po spotkaniu z Marxem przed tygodniem. Obserwowałem go przez chwilę, po czym postanowiłem "zapłacić ubezpieczenie" - minimalny koszt drugiej kuli, by upewnić się, że nie wstanie i nie narobi przed śmiercią szkody. Podszedłem, by wepchnąć lufę do jego ucha, odkryłem, że nie mam jak i wysunąłem nogę, by przekręcić jego łeb.
+Poczułem w głowie coś w rodzaju elektrycznego prądu i nagle, chociaż nigdy niczego takiego nie doświadczyłem, zrozumiałem, że jestem połączony telepatycznie z umierającym Snarkiem.
+"Dlaczego przybyliście na moją ziemię, by mnie zabić?" - zapytał, raczej zdziwiony niż zły.
+Odskoczyłem, zaskoczony - i straciłem z nim kontakt. Najwidoczniej potrzebna była do niego fizyczna styczność. Przykucnąłem, ująłem w dłonie jego łapy i odczułem jego strach i ból.
+Potem on umarł, a ja stałem i patrzyłem na niego, czując, że cały mój wszechświat przewrócił się do góry nogami - bo w tej krótkiej chwili, w której dzieliłem jego myśli, dowiedziałem się, co się naprawdę stało.
+Rasa Snarka, rozumna, ale nie znająca techniki, nigdy nie była liczna i została zniszczona przez zarazę. Tak się jakoś stało, że przeżył on jeden. Pozostali zmarli dziesiątki lat temu, a on od tego czasu prowadził życie pełne straszliwej samotności.
+Wiedział o naszej obecności na Dodgsonie IV od dnia naszego lądowania. Nie miał nic przeciwko dzieleniu z nami terenów łowieckich i nie próbował nas w żaden sposób odstraszyć lub skrzywdzić.
+Zabicie kozła z kryształowymi rogami uznał za gest przyjaźni - nie rozumiał, że kradnie trofeum Marxa, bo idea trofeów łowieckich była mu całkowicie obca. Zabił Marxa dopiero po tym, jak tamten go zranił.
+Nawet wtedy był gotów nam wybaczyć. Martwe zwierzęta, które znalazłem w pułapkach, były dla niego darami przyjaźni.
+Nie rozumiał, że naprawdę chcemy go zabić, postanowił więc przyjść do obozu i spróbować porozumieć się z nami. Kiedy tam dotarł, mylnie uznał maszyny tłumaczące Dabihów za broń i zniszczył je. Potem, pewien, że przyjmiemy to za akt agresji, chociaż nikogo nie skrzywdził, odszedł, zanim się pobudziliśmy.
+Jeszcze raz chciał nawiązać z nami porozumienie. Tym razem nie próbował podejść do obozu nie zauważony. Przyszedł bez osłony, gotów na to, że zostanie wypytany o wszystko przez te nowe rasy. Ale nie był przygotowany na atak ze strony Dabihów. Walcząc w samoobronie, szybko się z nimi rozprawił. Mbele pobiegł do statku po broń lub szukając kryjówki. Pamiętał, co zrobił mu z odległości pięćdziesięciu metrów karabin Marxa, nie mógł więc pozwolić na to, by Mbele strzelał ukryty w statku. Ruszył za nim i zabił go, zanim tamten mógł znaleźć jakąś broń.
+Potem była już wojna. Nie wiedział, dlaczego chcemy go zabić, ale nie miał już wątpliwości, że tak jest... Był taki czas, że z radością powitałby kres swojego nieszczęśliwego, samotnego istnienia, ale teraz miał powód, wręcz gwałtowną potrzebę pozostania przy życiu za wszelką cenę...
+...bo okazało się, że to wcale nie był "on", ale "to". Snark był bezpłciowym zwierzęciem, rozmnażającym się przez pączkowanie. Jego ostatnia myśl dotyczyła ogromnego żalu, nie dlatego, że sam umrze, gdyż rozumiał cykl życia i śmierci, ale dlatego, że jego potomek umrze również.
+Patrzyłem na ciało Snarka, a moje chwilowe uczucie triumfu zostało zastąpione przez przytłaczające poczucie winy. To, co uznałem za swoje zwycięstwo, okazało się wymordowaniem całego gatunku.
+Znowu usłyszałem popiskiwanie, podszedłem więc z powrotem do pustego pnia i zajrzałem do środka. Tam zobaczyłem bardzo małą i bardzo bezradną wersję Snarka, drżącą i kulącą się ze strachu.
+Wyciągnąłem do niego rękę, a on zawarczał cichutko, wysoko i wtulił się w pień.
+Przemówiłem łagodnie, poruszyłem się bardzo powoli i znowu wyciągnąłem rękę. Tym razem patrzył długo na moją dłoń i w końcu ostrożnie, z wahaniem, dotknął jej. Natychmiast poczułem jego wszechogarniające przerażenie.
+"Nie bój się, maleńki" - powiedziałem w milczeniu.  "Cokolwiek się stanie, będę cię chronić. Jestem ci to winien".
+Jego strach zniknął, gdyż nie można kłamać, kiedy jest się z kimś w telepatycznym kontakcie. Po chwili wylazł z kryjówki.
+Spojrzałem w dal. Niedługo nadlecą ludzie. Za jakieś dwa tygodnie wyląduje ekipa ratunkowa. Znajdą w ładowni ciało Marxa, ekshumują Desmondów, Mbelego i jedenastu Dabihów. Przeczytają dziennik kapitański i dowiedzą się, że masakra ta była dziełem zwierzęcia zwanego Snarkiem.
+I, ponieważ zajmują się polowaniami, natychmiast zorganizują safari, by zabić Snarka szybko i sprawnie. Żaden argument nie mógłby ich od tego odwieść, nie po tym, jak stracili całą grupę ludzi i Dabihów. 
+Ale czeka ich niespodzianka, gdyż ten Snark nie tylko będzie znał teren, będzie też wiedział, jak ludzie myślą i działają i będzie uzbrojony w ludzką broń.
+Niemowlę wyciągnęło rękę i wypowiedziało jedno słowo. Próbowałem je powtórzyć, śmiejąc się z tego, że tak źle je wymawiam. Wziąłem małe stworzenie na ręce i poszedłem w zarośla, by, póki czas, dowiedzieć się czegoś więcej o byciu Tatą Snarkiem.
+
+Znikł w pół słowa, w pół głoski, którą rzec miał nadzieję,
+Znikł z uśmiechem, z promiennym znikł czołem,
+Znikł, nie wiedząc, że zniknie, że się w próżni rozwieje - 
+Znikł - bo sęk w tym, że Snark był Bądziołem.
+Przełożyła Anna D. Kamińska
+
+Wszystkie cytaty z "Łowów na Snarka" Lewisa Carrolla w przekładzie Stanisława Barańczaka ("44 opowiastki", Kraków 1998).

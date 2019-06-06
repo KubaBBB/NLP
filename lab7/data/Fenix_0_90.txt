@@ -1,0 +1,905 @@
+NUMER 0'90
+OPOWIADANIA:
+Henry Kuttner "Tryumf Łowcy"	 3
+Greg Bear "Styczne" 	 15
+James Morrow "Opowieści Biblijne dla dorosłych - nr 17 - Potop"	 31
+Jacek Piekara "Ponury Milczek"	 40
+PUBLICYSTYKA:
+Tomasz Kołodziejczak "Nie tylko dla chłopców"	 30
+WIDEO:
+Krzysztof Sokołowski "Ukochany brzydal" 	 55
+STAŁE DZIAŁY:
+Wiktor Bukato Konwenty 	 13
+FENIX - miesięcznik literacko filmowy
+
+Drogi Czytelniku!
+
+Zeszyt, który trzymasz w ręku, zapowiada wejście na rynek nowego miesięcznika poświęconego fantasy i SF. Zaczynamy skromnie, ale chcemy w ten sposób zaprezentować Ci nasze pismo, żebyś wiedział czego się po nas spodziewać. Następne numery ukazywać się będą w większej objętości (ok. 100 stron) i mam nadzieję, że uda nam się wydawać je nie w formie zeszytowej, jak ten, ale w postaci książki z klejonym grzbietem.
+W każdym z nich znajdziesz oprócz opowiadań mikropowieść. Będziemy publikować dużo fantastyki zachodniej, która wciąż pozostaje na naszym rynku mało znana. Aby choć w części nadrobić wieloletnie zaległości, zamierzamy w każdym numerze drukować przynajmniej jeden tekst z kolekcji utworów uhonorowanych nagrodami Hugo i Nebula (w niniejszym zeszycie otwierają tę serię opowiadania Grega Beara i Jamesa Morrowa), a także prezentować dokonania dawnych mistrzów gatunku (zaczynamy od Henry'ego Kuttnera). Oprócz tego nie zabraknie, rzecz jasna, przekładów fantastyki współczesnej.
+Nie znaczy to, że rezygnujemy z usług autorów rodzimych. Wprost przeciwnie! Ale nie będziemy wydzielać dla nich osobnego miejsca, nie przyznajmy im żadnych taryf ulgowych. Przyjmiemy tylko tych, którzy wytrzymają porównanie z pisarzami zagranicznymi.
+Znajdziesz także w "Fenixie" nieco publicystyki, recenzje, wywiady, materiały o filmie, wideo i grach fantastycznych. Już teraz mogę zapowiedzieć kilka stałych rubryk. Najnowszymi informacjami z życia Światowej SF dzielić się będzie z wami Wiktor Bukato. Stałą recenzję w każdym numerze bierze na siebie Marek Oramus, wznawiając swoją sławną rubrykę z "Przeglądu Technicznego". Postaramy się też przynajmniej co jakiś czas prezentować dział "książka i film", poświęcony ekranizacjom fantastyki.
+Tę ostatnią rubrykę możesz znać z wydawanego niegdyś w bardzo niewielkim nakładzie kwartalnika "Feniks". Zbieżność tytułów nie jest przypadkowa. Miesięcznik, którego zapowiedź czytasz, opracowywany jest przez część zespołu redakcyjnego dawnego "Feniksa". Instytucja, która przed trzema laty zamknęła to pismo już nie istnieje, czasy się zmieniły - postanowiliśmy więc jeszcze raz przystąpić do próby przełamania monopolu na rynku SF.
+Tak jak przy pierwszej próbie, decydujemy się na formułę magazynu, bardziej stosowną dla fantastyki niż wzorowany na pismach "głównego nurtu" typ miesięcznika literacko-krytycznego. Gdzie leży różnica? Magazyn z założenia służy prezentacji dokonań różnorodnych, nie trzyma się kurczowo żadnej "linii programowej" (chyba, że uznać za taką zamiar publikowania wszystkiego, co dobre, choćby godziło w prywatne gusta członków redakcji), a zamieszczane w nim głosy krytyków mogą być ze sobą diametralnie sprzeczne.
+Wszyscy wyszliśmy klubów SF, mamy za sobą wieloletnią działalność w fandomie. Dlatego chcemy, by "Fenix" był pismem przede wszystkim tego środowiska. Nie będziemy Cię zwodzić tanimi chwytami, nie zamierzamy reagować na chwilowe koniunktury. Jeżeli czujesz się zagorzałym zwolennikiem fantasy i SF, tej, która od siedemdziesięciu już prawie lat cieszy się na świecie niesłabnącą popularnością - to "Fenix" jest pismem wydawanym właśnie z myślą o Tobie.
+Startujemy w trudnym dla wszystkich czasopism momencie - z początku może nam być trudno do Ciebie dotrzeć. Dlatego też najpewniejszym (i najtańszym!) sposobem otrzymania "Fenixa" jest prenumerata, o warunkach której szczegółowe informacje znajdziesz na trzeciej stronie okładki. Wiem, że namawiam Cię do ryzyka. ale w końcu sami też dużo ryzykujemy, startując z nowym tytułem pomimo kryzysu, bezrobocia, inflacji i recesji gospodarczej.
+Mamy nadzieję że już za kilka miesięcy będziemy mogli wszyscy - i Ty, i redakcja, i wydawca stwierdzić, że opłaciło nam się to ryzyko podjąć.
+Rafał A. Ziemkiewicz
+
+Henry Kuttner
+
+
+
+Tryumf Łowcy
+(Home is the Hunter)
+Przełożył Jacek Manicki
+Poza mną nie ma nikogo, z kim mógłbym porozmawiać. Stoję tutaj, na szczycie wielkiej kaskady marmurowych stopni, spadającej w dół, do holu gościnnego, a wszystkie moje żony przyozdobione swymi klejnotami czekają, bo jest to Tryumf Łowcy - mój Tryumf, tryumf Zacnego Rogera Bellamy'ego, Łowcy. Światło połyskuje tam, w dole, na szklanych skrzyniach z setkami zasuszonych głów, które zdobyłem w uczciwej walce i jestem jednym z najpotężniejszych ludzi w Nowym Jorku. Te głowy czynią mnie potężnym.
+Ale nie ma nikogo, z kim mógłbym porozmawiać. Poza mną? Czy siedzi we mnie, słuchając, drugi Zacny Roger Bellamy? Nie wiem. Może jest on jedyną rzeczywistą cząstką mnie. Staram się, jak mogę, i nie prowadzi to do niczego dobrego. Być może Bellamy'emu, który siedzi we mnie, nie podoba się to, co robię. Ale ja muszę to robić. Nie mogę przestać. Urodziłem się Łowcą Głów. Urodzić się nim, to wielki zaszczyt. Któż mi nie zazdrości? Któż nie zamieniłby się ze mną, gdyby tylko mógł?
+Ale nie prowadzi to do niczego dobrego.
+Nie jestem dobry.
+Słuchaj mnie, Bellamy, słuchaj mnie, jeśli w ogóle tam jesteś, ukryty głęboko w mojej głowie. Musisz słuchać. - Musisz zrozumieć. Ty tam, w mojej czaszce. Teraz i ty, każdego dnia, dosłownie każdego dnia możesz się znaleźć w szklanej skrzyni stojącej w holu gościnnym innego Łowcy Głów, a stłoczony przed domem motłoch cisnąć się będzie do okien, przybywać będą goście, żeby patrzeć i zazdrościć, i wszystkie żony stać będą przystrojone w atłasy i klejnoty.
+Może ty tego nie rozumiesz, Bellamy. Powinieneś czuć się teraz wspaniale. Niepodobna, byś znał ten realny świat, po którym ja muszę chodzić i w którym przyszło mi żyć. Sto albo tysiąc lat temu mógł inaczej wyglądać. Ale to Dwudziesty Pierwszy Wiek. To dzisiaj, to teraz, i nie ma już odwrotu.
+Nie wydaje mi się, byś rozumiał.
+Widzisz, nie ma wyboru. Albo razem ze swą kolekcją kończysz w szklanej skrzyni innego Łowcy Głów, a twoje żony i dzieci zostają wydane motłochowi, albo umierasz śmiercią naturalną (do której jedną z dróg jest samobójstwo), twój najstarszy syn dziedziczy twą kolekcję, a ty, wtopiony w plastykowy monument, stajesz się nieśmiertelnym. Stajesz na zawsze w przeźroczystej plastykowej powłoce na cokole na skraju Central Parku, jak Renaway, jak stary Falconer, jak Brennan i cała reszta. Wszyscy cię wspominają, podziwiają i zazdroszczą ci.
+Czy wtedy, w tym plastyku, dalej będziesz myślał, mój Bellamy? Czy ja będę tam myślał?
+Falconer był wielkim Łowcą. Nie spoczął ani na chwilę i dożył pięćdziesięciu dwóch lat. Piękny to wiek dla Łowcy Głów. Krążą pogłoski, że sam zadał sobie śmierć. Trudno powiedzieć. To cud, że przez pięćdziesiąt dwa lata zachował głowę na karku. Współzawodnictwo staje się coraz trudniejsze, a ostatnimi czasy pojawia się coraz to więcej i więcej młodszych mężczyzn.
+Słuchaj mnie, Bellamy, Bellamy tam, we mnie. Czy ty kiedykolwiek naprawdę coś rozumiałeś? Nadal uważasz, że to jeszcze cudowny czas dzieciństwa, szczenięce lata, kiedy życie wydaje się proste? Czy kiedykolwiek byłeś przy mnie przez te długie, bezlitosne lata, kiedy moje ciało i umysł przysposabiały się do profesji Łowcy Głów? Wciąż jeszcze jestem młody i silny. Nigdy nie zaprzestałem treningu. Ale najcięższymi były te pierwsze lata.
+Przedtem życie było cudowne. Trwało to tylko sześć lat, sześć lat szczęścia, ciepła i miłości - w haremie u boku matki, wśród mamek i innych dzieci. Mój ojciec był wtedy bardzo dobry. Ale idylla skończyła się, kiedy minęło mi sześć lat. Nie powinni w ogóle uczyć nas miłości, skoro musiało to trwać tak krótko. Czy to właśnie pamiętasz, mój Bellamy tam, we mnie? Jeśli tak, to ja ci mówię, że te czasy nie mogą już wrócić. Zresztą ty to wiesz. Na pewno wiesz.
+U podstaw treningu leżało ślepe posłuszeństwo i żelazna dyscyplina. Mój ojciec nie był już taki dobry. Nie widywałem się często z matką, a kiedy ją spotkałem, ona też była dla mnie inna. Niemniej jednak miałem swoje zadośćuczynienie. Od czasu do czasu odbywały się parady, na których motłoch wiwatował na cześć moją oraz ojca. Kiedy wykazywałem się szczególnymi postępami w walce wręcz czy w strzelaniu, albo w dżudo, chwalili mnie też i ojciec, i instruktorzy.
+Było to surowo zabronione, ale moi bracia i ja próbowaliśmy czasami zabić jeden drugiego. Instruktorzy obserwowali nas bacznie. Wtedy nie byłem jeszcze dziedzicem. Ale stałem się nim, kiedy podczas walki dżudo mój starszy brat skręcił sobie kark padając. Wyglądało to na wypadek, ale oczywiście nim nie było i od tego czasu musiałem być ostrożniejszy. Musiałem nauczyć się przebiegłości.
+Przez cały czas, cały ten trudny czas, trwała nauka zabijania. Było to naturalne. Bez przerwy wbijali nam w głowę, jakie to naturalne. Musieliśmy się uczyć. A dziedzic mógł być tylko jeden...
+Już wtedy żyliśmy otoczeni strachem. Gdyby mój ojciec stracił głowę, wypędzono by nas wszystkich z posiadłości. Och nie, nie pozostalibyśmy głodni i bez dachu nad głową. To nie do pomyślenia w tym wieku nauki, Ale nie być Łowcą Głów! Nie stanąć jako nieśmiertelny w plastykowym monumencie wzniesionym przy Central Parku!
+Czasami śnię, że jestem jednym z motłochu. Wydaje się to dziwne, ale w tym śnie odczuwam głód. A to przecież niemożliwe. Wielkie elektrownie zaspokajają wszystkie potrzeby świata. Maszyny syntezują żywność, budują domy i dają nam wszystko, co niezbędne do życia. Nigdy nie mogłem należeć do motłochu, ale jeśli już byłbym kimś takim, wszedłbym do pierwszej lepszej restauracji i wziął sobie jedzenie z małych szafek ze szklanymi drzwiczkami; co tylko dusza zapragnie. Odżywiałbym się dobrze - o wiele lepiej, niż żywię się teraz. A jednak w moim śnie jestem głodny.
+Być może to, co jem, nie zadowala ciebie, Bellamy tam, we mnie. Mnie nie zadowala, ale nie po to jest. Moje posiłki są pożywne. Mają nieprzyjemny smak, lecz zawierają wszystkie białka, minerały i witaminy niezbędne do ustawicznego podtrzymywania najwyższej sprawności mózgu oraz ciała. I nie powinny być przyjemne dla podniebienia. To nie pławienie się w rozkoszach prowadzi człowieka do nieśmiertelności w plastyku. Przyjemność jest odczuciem osłabiającym i zdradliwym. Bellamy tam we mnie - czy ty mnie nienawidzisz?
+Moje życie nie było łatwe. Nie jest łatwym i teraz. Uparte ciało opiera się nieśmiertelnej przyszłości, nakłania człowieka do słabości. A jak długo można mieć nadzieję na zachowanie głowy na karku, jeśli jest się słabym?
+Motłoch sypia ze swoimi żonami. Ja nigdy nawet nie pocałowałem żadnej z moich. (Czy to ty zsyłasz mi te sny?) Moje dzieci? Tak, są moje; odpowiedzią jest sztuczne zapłodnienie. Sypiam na twardym łożu. Czasami wdziewam włosiennicę. Pijam wyłącznie wodę. Moje posiłki nie mają smaku. Ćwiczę z moimi instruktorami co dnia, aż do skrajnego wyczerpania. To trudne życie - ale w końcu staniemy, ty i ja, na zawsze zatopieni w plastykowym monumencie, a świat będzie nam zazdrościł i podziwiał nas. Umrę jako Łowca Głów i będę nieśmiertelny.
+Dowód znajduje się w tych szklanych skrzyniach, tam na dole, w holu gościnnym. Głowy, głowy - spójrz tylko, Bellamy, ile głów. Stratton, mój pierwszy. Zabiłem go maczetą w Central Parku. Noszę na skroni bliznę po ranie, jaką zadał mi tamtej nocy. Nauczyłem się już działać sprawniej. Musiałem.
+Za każdym razem, kiedy wchodziłem do Central Parku, pomagały mi strach i nienawiść. Czasami w Parku jest strasznie. Chodzimy tam tylko po zapadnięciu zmierzchu i czatujemy nierzadko przez wiele nocy, zanim zdobędziemy jakąś głowę. Wejście do Parku jest, jak wiesz, zakazane wszystkim prócz Łowców Głów. To nasz teren łowiecki.
+Jestem przebiegły, zwinny i szybki. Wykazałem się wielką odwagą. Tam, w mrokach Parku, nasłuchując, czekając, podchodząc, niepewny, czy zaraz nie poczuję ostrej stali przeszywającej mi gardło, tłumiłem swoje lęki i pielęgnowałem nienawiść. W Parku nie obowiązują żadne reguły. Broń palna, maczugi czy noże - raz wpadłem w sidła na ludzi, sama stal, liny i ostre kły. Ale na czas i dosta-tecznie szybko zrobiłem unik, dzięki czemu zachowałem wolną prawą rękę i strzeliłem Millerowi między oczy, kiedy po mnie przyszedł. Głowa Millera jest teraz tam, na dole. Nigdy byś nie powiedział, że przez jego czoło przeszedł pocisk. Wypychacze potrafią czynić cuda. Ale zwykle staramy się nie uszkadzać głów.
+Czym się tak zadręczasz, Bellamy tam, we mnie? Jestem jedynym z największych Łowców w Nowym Jorku. Ale taki ktoś musi być przebiegły. Musi zastawiać sidła i pułapki z dużym wyprzedzeniem i to nie tylko w Central Parku. Musi bez ustanku przydzielać zadania swoim szpiegom i trzymać napięte nici kontaktów, biegnące z każdej posiadłości w mieście. Musi wiedzieć, kto jest potężny, a kto niewart zachodu. Co by dało zwycięstwo nad Łowcą, który w swym holu ma tylko kilkanaście głów?
+Ja mam ich setki. Do wczoraj wyprzedzałem każdego mężczyznę z mojej grupy wiekowej. Do wczoraj byłem obiektem zazdrości dla wszystkich, których znam, idolem motłochu, niekwestionowanym mistrzem połowy Nowego Jorku. Połowy Nowego Jorku! Czy wiesz, ile to dla mnie znaczyło? Co dawała mi świadomość, że moi rywale nienawidzą mnie, a jednak uznają moją wyższość? Ty to wiesz, Bellamy. Fakt, że Wierny Jonathan Hull i Dobry Bill Lindman z Gwizdaczem Cowlesem policzyli swoje trofea, a potem połączyli się ze mną przez wideofon i błagali ze łzami nienawiści oraz furii w oczach, żebym raczył spotkać się z nimi w Parku, dać im szansę, której pragną - ów fakt był dla mnie ożywczym tchnieniem.
+Wyśmiałem ich. Swoim śmiechem doprowadziłem Czarnego Billa Lindmana do dzikiego ataku wściekłości, a potem prawie mu zazdrościłem, bo już od dawna nie udawało mi się wpaść w taką furię. Lubię to żywiołowe popuszczanie cugli wszystkim swoim instynktom prócz jednego - instynktu zabijania, na ślepo i bez powodu. Mógłbym wtedy zapomnieć nawet o tobie, Bellamy, tam we mnie.
+Ale to było wczoraj.
+A wczorajszej nocy Dobry Ben Griswold zdobył głowę. Pamiętasz jak się czuliśmy, ty i ja, kiedy dotarła do nas ta wiadomość? W pierwszej chwili chciałem umrzeć, Bellamy. Potem znienawidziłem Bena, tak jak nigdy jeszcze nikogo nie nienawidziłem, a dobrze znałem uczucie nienawiści. Nie mogłem uwierzyć, że tego dokonał. Nie mogłem uwierzyć, c z y j ą głowę zdobył.
+Powiedziałem, że to pomyłka, że na pewno zdobył głowę kogoś z motłochu. Ale wiedziałem, że okłamuję sam siebie. Nikt nie łaszczył się na nikczemną głowę. One nie mają żadnej wartości. Potem wmawiałem sobie, że to nie może być głowa Wiernego Jonathana Hulla. Nie może być. Na pewno nie jest. Bo Hull był potężny. W jego holu znajdowało się prawie tyle samo głów co w moim. Gdyby Griswold miał zagarnąć je wszystkie, stałby się potężniejszy ode mnie. Ta myśl napawała mnie czymś, czego nie potrafiłem znieść.
+Przywdziałem czapkę mego stanu z tyloma dzwoneczkami, ile głów zdobyłem, i wyszedłem zobaczyć. To była prawda, Bellamy.
+Opróżniano posiadłość Jonathana Hulla. Tłum wlewał się do środka i wylewał stamtąd, żony i dzieci Hulla wychodziły małymi, cichymi grupkami. Żony nie sprawiały wrażenia nieszczęśliwych, ale chłopcy tak. (Dziewczynki oddaje się motłochowi zaraz po urodzeniu; są bezwartościowe). Obserwowałem przez chwilę tych chłopców. Wszyscy byli zrozpaczeni i rozdrażnieni. Jeden miał blisko szesnaście lat, był dużym, zwinnym wyrostkiem, kończącym już chyba trening. Pewnego dnia mogę go spotkać w Parku.
+Wszyscy pozostali chłopcy byli za młodzi. Teraz, kiedy ich trening uległ przerwaniu, nigdy nie ważą się wejść do Parku. To dlatego, oczywiście, nikt z motłochu nigdy nie zostaje Łowcą. Przeistoczenie dziecka z królika w tygrysa wymaga długich lat morderczego treningu. W Central Parku szansę na przeżycie mają tylko tygrysy.
+Zajrzałem przez okno domu Wiernego Jonathana. Ujrzałem puste szklane skrzynie w holu gościnnym. A więc nie jest to senny koszmar ani łgarstwo; zagarnął je Griswold, powiedziałem sobie, zagarnął je, a razem z nim głowę Wiernego Jonathana. Wszedłem w bramę. Zaciskając pięści biłem głową w mur i jęczałem z pogardy dla samego siebie.
+Wcale nie byłem dobry. Nienawidziałem siebie i nienawidziałem Griswolda. Wkrótce pozostała tylko ta druga nienawiść. Wiedziałem już, co muszę uczynić. Dzisiaj, pomyślałem, on stoi tam, gdzie ja stałem wczoraj. Zdesperowani ludzie będą go przekonywać, będą błagać, będą rzucać mu wyzwania próbując wszystkich znanych sobie sposobów, by ściągnąć go dzisiejszej nocy do Parku.
+Ale ja jestem chytry. Planuję daleko naprzód. Mam sieci zarzucone na posiadłość każdego Łowcy w mieście, krzyżujące się z ich własnymi sieciami.
+Główną rolę odgrywała tutaj jedna z moich żon, Nelda. Dawno już zauważyłem, że zaczyna odnosić się do mnie z niechęcią. Nigdy się nie dowiedziałem, co było tego powodem. Podsycałem tę niechęć, dopóki nie przerodziła się w nienawiść. Zadbałem też, żeby Griswold się o tym dowiedział. To właśnie dzięki takim fortelom stałem się tak potężny, jakim wówczas byłem - i jeszcze będę, na pewno jeszcze będę.
+Naciągnąłem na dłoń specjalną rękawicę (nie poznałbyś, że to rękawica), podszedłem do mojego wideofonu i zatelefonowałem do Dobrego Bena Griswolda. Pojawił się uśmiechnięty na ekranie.
+- Wyzywam cię, Ben - powiedziałem. - Dziś wieczór o dziewiątej w Parku, przy karuzeli.
+Wyśmiał mnie. Był wysokim, potężnie umięśnionym mężczyzną o byczym karku. Spojrzałem na jego kark.
+- Czekałem na twój telefon, Roger - odrzekł.
+- Dziś wieczór o dziewiątej - powtórzyłem.
+Znowu wybuchnął śmiechem.
+- Ani myślę, Roger - odparł. - Po jakie licho miałbym ryzykować głowę?
+- Jesteś tchórzem.
+- Pewnie, że jestem tchórzem - przytaknął, wciąż się uśmiechając. - Kiedy nie ma nic do zyskania, a wszystko do stracenia. Czy byłem tchórzem zeszłej nocy, kiedy zdobyłem głowę Hulla? Od dawna miałem go na oku, Roger. Przyznaję, obawiałem się, że dopadniesz go pierwszy. A tak nawiasem mówiąc, dlaczego tego nie zrobiłeś?
+- To o twoją głowę mi chodzi, Ben.
+- Dziś wieczorem nic z tego - oświadczył. - I jeszcze nieprędko. Teraz długo nie zajrzę do Parku. Będę zbyt zajęty. Tak czy inaczej, daleko ci teraz do mnie, Roger. Ile masz głów?
+Wiedział, niech go piekło pochłonie, o ile mnie teraz wyprzedza. Pozwoliłem nienawiści wykrzywić mą twarz.
+- Dziś wieczorem o dziewiątej w Parku - powtórzyłem. - Przy karuzeli. Bo inaczej utwierdzisz mnie w przekonaniu, że się boisz.
+- Pocałuj mnie gdzieś, Roger - zadrwił ze mnie. - Dziś wieczorem prowadzę paradę. Popatrz sobie na mnie, jeśli chcesz... ale myśleć o mnie będziesz. Nic na to nie poradzisz.
+- Ty świnio, ty parszywa, tchórzliwa świnio!
+Roześmiał się; szydził ze mnie, prowokował, tak jak ja wielokrotnie czyniłem to wobec innych. Nie musiałem udawać gniewu. Miałem nieodpartą ochotę sięgnąć w ekran i zacisnąć palce na jego gardle. Dobrze było poczuć niepohamowaną wściekłość. Bardzo dobrze. Pozwalałem jej narastać do punktu, w którym wydała mi się wystarczająco wielka. Pozwalałem mu się śmiać i czerpałem z tego przyjemność.
+I wtedy uczyniłem wreszcie to, co sobie zaplanowałem. We właściwym momencie, kiedy mogło to już wyglądać przekonywająco, świadomie dałem upust furii i rąbnąłem pięścią w ekran monitora. Roztrzaskał się. Twarz Griswolda rozleciała się na kawałki; ten widok przypadł mi nawet do gustu.
+Połączenie zostało oczywiście przerwane. Ale wiedziałem, że wkrótce Griswold zgłosi się ponownie. Zsunąłem z dłoni rękawicę ochronną i wezwałem sługę, co do którego byłem pewien, że mogę mu zaufać. (Jest kryminalistą; ochraniam go. Jeśli umrę, on też umrze i dobrze o tym wie.) Zabandażował mi nieuszkodzoną prawą dłoń i pouczyłem go, co ma powiedzieć reszcie służby. Wiedziałem, że wieść ta dotrze szybko do Neldy przebywającej w haremie i że nie minie godzina, jak usłyszy ją Griswold.
+Karmiłem gniew. Przez cały dzień, ćwicząc Pod kierunkiem moich instruktorów w sali gimnastycznej, trzymałem maczetę i pistolet tylko w lewej ręce. demonstracyjnie dawałem po sobie poznać, że dochodzę do stadium dzikiej furii, szału zabijania, który ogarnia nas, kiedy czujemy, że doznaliśmy zbyt wielkiej porażki.
+Porażka tego rodzaju może mieć tylko jedną z dwóch konsekwencji. Tą drugą jest samobójstwo. Nie ryzykujesz wtedy niczego i masz pewność, że twe ciało stanie na obrzeżach Parku, zalane w plastykowy monument. Ale czasami do głosu dochodzi nienawiść i wypiera wszelki strach. Łowca staje się wtedy istnym berserkerem, i pomimo że czyni go to bardzo niebezpiecznym, stanowi wówczas łatwą zdobycz - zapomina o ostrożności.
+To niebezpieczeństwo dotyczyło również mnie, bo łatwo oddać się tego rodzaju zapomnieniu. A to najlepsza droga do skazania się na zapomnienie.
+Tak więc rzuciłem Griswoldowi przynętę. Ale trzeba było czegoś więcej niż sama przynęta, żeby go sprowokować, skoro uważał, że podjęcie takiego ryzyka nie przyniesie mu żadnego zysku. Rozpuściłem więc pewne pogłoski. Były to bardzo wiarygodne pogłoski. Z mojego poduszczenia rozniosło się pocztą pantoflową, że Czarny Bill Lindman i Gwizdacz Cowles, tak samo jak ja zdesperowani tryumfem, jaki odniósł nad nami Griswold, wyzwali jeden drugiego na spotkanie tej nocy w Parku. Tylko jeden mógł wyjść z tego żywy, ale ten jeden zostałby mistrzem Nowego Jorku w kategorii obejmującej naszą grupę wiekową. (Był jeszcze, ma się rozumieć, Stary Murdoch ze swą słynną, gromadzoną przez całe życie kolekcją. Na tak wysokim poziomie rywalizacja prowadzona była jednak tylko między nami.)
+Spodziewałem się, że zasłyszawszy te pogłoski Griswold zacznie działać. Takich wiadomości nie sposób sprawdzić. Człowiek rzadko rozgłasza otwarcie, że udaje się do Parku. Z tego, co wiedziałem, mogła to być nawet prawda. A z tego, co wiedział Griswold, jego przewaga znajdzie się w śmiertelnym niebezpieczeństwie, zanim zdąży się nacieszyć swoim Tryumfem. Oczywiście niebezpieczeństwo groziłoby mu również i wtedy, gdyby wyszedł bronić swego zwycięstwa. Lindman i Cowles są obaj dobrymi Łowcami. Ale Griswold, jeśli nie zwietrzyłby mojego podstępu, miałby szansę odnieść jedno pewne zwycięstwo - nade mną. Zacnym Rogerem Bellamym, czekającym w ślepej furii na umówionym miejscu spotkania z nie nadającą się do użycia w walce prawą ręką. Czyż nie było to aż nadto oczywiste? Tak, ale ty nie znasz Griswolda.
+Kiedy zapadł zmrok, przywdziałem strój myśliwski. Jest kuloodporny, czarny, ściśle dopasowany, ale nie krępuje ruchów. Uczerniłem sobie twarz i dłonie. Zabrałem pistolet, nóż i maczetę, której metalowe ostrze poddane specjalnym zabiegom nie miało prawa zabłysnąć w świetle ani go odbić. Lubiłem posługiwać się zwłaszcza maczetą. Mam silne ramiona. Uważałem, by nie używać zabandażowanej dłoni nawet wtedy, kiedy odnosiłem wrażenie, że nikt mnie nie obserwuje. I pamiętałem, że muszę wyglądać na bliskiego wybuchu dzikiego szału, bo zdawałem sobie sprawę, że szpiedzy Griswolda będą mu donosić o każdym moim ruchu.
+Ruszyłem w stronę Central Parku, zmierzając ku wejściu, od którego było najbliżej do placyku z karuzelą. Do tego miejsca ludzie Griswolda mogli mnie sobie śledzić. Ale ani kroku dalej.
+Ociągałem się przez chwilę przy bramie - pamiętasz to, Bellamy tam, we mnie? Pamiętasz plastykowe monumenty, które mijaliśmy idąc skrajem Parku? Falconer i Brennan, i inni, na zawsze nieśmiertelni, wyprężeni dumnie niczym bogowie w przeźroczystych, wiecznych blokach. Przeżyte wszystkie namiętności, stoczone wszystkie walki, zapewniona nieprzemijająca chwała. Czy ty też im zazdrościłeś, Bellamy?
+Pamiętam, jak oczy starego Falconera zdawały się przewiercać mnie (pogardliwie). Liczba głów, które zdobył, jest wyryta na cokole jego monumentu, a był bardzo wielkim człowiekiem. Zaczekaj, pomyślałem. Ja też stanę w plastyku. Zdobędę więcej głów, niż udało się to tobie, Falconer, a dzień, w którym tego dokonam, będzie zarazem dniem, w którym będę mógł złożyć to brzemię...
+Ledwie skrył mnie głęboki mrok panujący w bramie, zsunąłem szybko bandaż z prawej dłoni. Wydobyłem swój czarny nóż i trzymając się tuż przy murze zacząłem przesuwać się szybko w kierunku małej furtki, do której jest najbliżej z posiadłości Griswolda. Nie miałem oczywiście najmniejszego zamiaru zbliżać się do okolic placyku z karuzelą. Griswold będzie się śpieszył, żeby mnie dopaść i szybko się stąd ulotnić, a przez ten pośpiech przestanie być może myśleć. Griswold nigdy nie był dobry w myśleniu. Stawiałem wszystko na jedną kartę zakładając, że wybierze najkrótszą trasę.
+Czekałem z uczuciem wielkiego osamotnienia, rozkoszując się tą samotnością. Trudno było podsycać w sobie złość. W ciemnościach szeptały drzewa. Za Long Island, znad Atlantyku wschodził księżyc. Wyobraziłem sobie, jak zalewa swym blaskiem Cieśninę i miasto.
+Będzie dalej tak wschodził, kiedy ja dawno już nie będę żył. Będzie połyskiwał na moim monumencie i oblewał mą twarz zimnym blaskiem, kiedy ja i ty, Bellamy, będziemy już dawno spoczywać w pokoju, kiedy nasza długa wojna dawno już dobiegnie końca.
+I wtedy usłyszałem nadchodzącego Griswolda. Spróbowałem opróżnić swój umysł ze wszystkiego prócz żądzy zabijania. Do tego właśnie, od chwili kiedy ukończyłem sześć lat, przysposabiane były w takim znoju moje ciało i umysł. Odetchnąłem kilka razy głęboko. Jak zawsze usiłował narosnąć we mnie paniczny, paraliżujący strach. Strach i coś jeszcze. Coś czającego się we mnie - to ty, Bellamy? - co podpowiada, że tak naprawdę, to ja wcale nie chcę zabijać.
+W tym momencie Griswold znalazł się w zasięgu mojego wzroku i znajoma, nienażarta nienawiść doprowadziła wszystko z powrotem do normy.
+Nie pamiętam wiele z samej walki. Wszystko, zdawało się, zaszło w pojedynczym epizodzie, w którym czas stanął w miejscu - chociaż przypuszczam, że w rzeczywistości trwało dosyć długo. Był nieufny już wtedy, gdy skręcał w furtkę. Wydawało mi się, że nie zdradza mnie najmniejszy szmer, ale on miał wyostrzony słuch i uskoczył w samą porę, by uniknąć mego pierwszego strzału, który powinien z miejsca rozstrzygnąć sprawę.
+Tym razem nie było podchodzenia. Była twarda, szybka i fachowa walka. Obaj mieliśmy na sobie kuloodporną odzież, ale obaj byliśmy już ranni, zanim udało nam się zbliżyć do siebie na tyle, byśmy próbowali sięgnąć swych głów stalą. Griswold wolał szablę, dłuższą od mojej maczety. Mimo to walka była wyrównana. Musieliśmy walczyć szybko, bo hałas mógł tu ściągnąć innych Łowców, jeśli jacyś wałęsali się tej nocy po Parku.
+Ale w końcu zabiłem go.
+Odciąłem mu głowę. Księżyc nie wyłonił się jeszcze całkiem zza wysokich budynków po drugiej stronie Parku i noc była młoda. Wychodząc z głową Griswolda podniosłem wzrok na spokojne, dumne twarze nieśmiertelnych stojących wzdłuż obrzeża Parku.
+Wezwałem samochód. W ciągu kilku minut byłem już wraz z trofeum z powrotem w swojej posiadłości. Zanim dopuściłem do siebie chirurgów, dopilnowałem by głowę zabrano do laboratorium do przyśpieszonej obróbki, bardzo szybkiego spreparowania. I rozesłałem zaproszenia na uroczystość święcenia Tryumfu, która miała się odbyć o północy.
+Gdy leżałem na stole, a chirurdzy przemywali i opatrywali moje rany, wieść rozchodziła się już po mieście lotem błyskawicy. Moja służba była w posiadłości Griswolda i przenosiła jego zbiory do mego holu gościnnego, ustawiała dodatkowe skrzynie, które miały pomieścić wszystkie moje trofea, wszystkie trofea Wiernego Jonathana Hulla, jak również wszystkie Griswolda. Będę najpotężniejszym człowiekiem w Nowym Jorku, zaraz po takich mistrzach, jak stary Murdoch i jeden czy dwóch innych. Cała moja grupa wiekowa i ta o szczebel starsza, będą szalały z zazdrości i nienawiści. Pomyślałem o Lindmanie i Cowlesie, i roześmiałem się tryumfalnie.
+Wtedy myślałem, że to tryumf... wtedy.
+Stoję teraz u szczytu schodów patrząc w dół na światła i jasność, na rząd po rzędzie trofeów, na moje żony, cale w klejnotach. Służący podbiegają do wielkich podwoi z brązu i odmykają je z wysiłkiem. Co ukaże się za nimi? Tłum gości, wielkich Łowców przybywających złożyć hołd Łowcy większemu niż oni? Albo... przypuśćmy, że na mój Tryumf nie przyszedł dosłownie nikt?
+Brązowe wierzeje zaczynają się rozchylać. Ale tam, za nimi nie będzie nikogo. Nie mogę być jeszcze tego pewien, ale wiem to, jestem pewien. Ten strach, który nie opuszcza Łowcy nigdy, z wyjątkiem jego ostatniego i największego Tryumfu, jest teraz za mną. Przypuśćmy, że ktoś zdobył głowę starego Murdocha? Przypuśćmy, że tej nocy w Nowym Jorku jeszcze ktoś inny świętuje swój Tryumf, większy od mojego?
+Strach dusi mnie za gardło. Przegrałem. Zakasował mnie jakiś inny Łowca. Nie jestem dobry...
+Nie. Nie! Słuchaj. Słuchaj, jak wywrzaskują moje imię! Popatrz, popatrz na nich, jak wlewają się do środka przez otwarte wierzeje, są wszyscy wielcy Łowcy ze swymi skrzącymi się od klejnotów kobietami, walą zbitą ciżbą, by zapełnić roztaczający się pode mną, jasno oświetlony hol gościnny. Mój strach był przedwczesny. Mimo wszystko byłem tej nocy jedynym Łowcą w Parku. A więc zwyciężyłem i to mój Tryumf. Stoją tam, pośród połyskujących szklanych skrzyń, z twarzami zwróconymi w górę, na mnie, z twarzami wyrażającymi podziw, zazdrość. Jest tam i Lindman. Jest Cowles. Potrafię bez trudu czytaćz ich twarzy. Nie mogą się już doczekać, kiedy dopadną mnie samego dzisiejszej nocy i wyzwą na pojedynek w Parku.
+Wszyscy wyciągają do mnie ramiona w geście pozdrowienia. Skandują moje imię.
+Bellamy tam, we mnie - słuchaj! To nasz Tryumf. Nigdy nam go nie odbiorą.
+Przywołuję skinieniem sługę. Wręcza mi przygotowaną zawczasu, napełnioną już szklanicę. Teraz spoglądam z góry na Łowców z Nowego Jorku, spoglądam na nich z wyżyn swojego Tryumfu - i wznoszę ku nim mój puchar.
+Piję.
+Łowcy - teraz nie możecie mnie już ograbić.
+Stanę w plastyku dumny, boski w wiecznym bloku, który mnie oblewa, za mną namiętności, za mną wszystkie walki, moja chwała na wieki.
+Trucizna działa szybko.
+To tryumf.
+
+Jeden z najpłodniejszych i najlepszych autorów science fiction lat czterdziestych i pięćdziesiątych, Henry Kuttner, urodził się w Los Angeles 7 kwietnia 1915 roku. Zadebiutował opowiadaniem "The Graveyard Rats" jeszcze w latach trzydziestych, na łamach pisma "Weird Tales", drukującego głównie utwory grozy.. Kuttner równie swobodnie czuł się w science fiction, fantasy i horrorze, a ponadto celował w humorystycznym traktowaniu tych wszystkich gatunków. Jego ulubieni bohaterowie to nieodmiennie zalany genialny konstruktor Gallagher, niesamowici Hogbenowie, duszki, diabły; koszmary oraz nadludzie. Wielkim stymulatorem twórczości Kuttnera było jego małżeństwo z Catherine Moore, również utalentowaną autorką, z którą zresztą napisał wiele utworów wspólnie, pod pseudonimami Lewis Padgett, Keith Hammond, Lawrence O'Donnell czy C.L. Liddel. Niestety, Henry Kuttner zmarł przedwcześnie, 3 lutego 1958 roku.
+W.B.
+
+KONWENTY
+Minęły już czasy, gdy na międzynarodowych spędach fanów i twórców SF (zwanych na świecie conventions, a u nas konwentami) zjawiała się nieliczna polska delegacja złożona głównie z redaktorów "Fantastyki" i niżej podpisanego. Gdzieś tak od 1987 roku, czyli od światowego konwentu w Brighton Polacy uczestniczą w podobnych imprezach nader licznie. Na tegoroczny konwent światowy, do Holandii, wybiera się aż sześćdziesięcioosobowa (mniej więcej) ekipa. Ponieważ organizatorom jest to na rękę, postanowiłem podać kilka informacji o najbliższych imprezach tego rodzaju - może ktoś jeszcze się skusi?
+A więc, wspomniany już
+XLVIII Światowy Konwent Science Fiction (Haga, 23 - 27 sierpnia 1990r.)
+Wśród zaproszonych gości honorowych znajdą się Joe Haldeman, Wolfgang Jeschke i Harry Harrison (autorzy), Andy Porter (fan) oraz Chelsea Ouinn Yarbro (mistrzyni ceremonii). Opłata wejściowa (nie wliczono w nią kosztów zamieszkania!) wynosi 85 dolarów, jeżeli zostanie uiszczona przed imprezą. Na miejscu przy wejściu prawdopodobnie trzeba będzie zapłacić więcej.
+Eurocon'90 (Fayence, 1 - 4 listopada 1990 r.)
+W tym maleńkim miasteczku na południu Francji odbyła się już tzw. Eurokonferencja SF pod koniec roku 1985, czyli jakby przymiarka do tegorocznego Euroconu. Ponieważ termin koliduje z World Fantasy Convention (Chicago, 2 - 4 listopada), nie należy się spodziewać oszałamiającej liczby gości zza oceanu, ale Europa powinna być reprezentowana nieźle. Opłata wstępna 150 franków: za tę cenę uczestnik bierze udział w trzech coktailach i końcowym bankiecie. Koszt zamieszkania u miejscowych rodzin 300 franków od osoby pojedynczej, 400 od pary - ze śniadaniem.
+Wreszcie: Eurocon'91 - Cracon'91 (Kraków, 9 - 12 maja 1991 r.)
+Jak sobie niektórzy przypominają, pierwszy Eurocon odbył się w Polsce w 1976 roku (Poznań). Miał on raczej charakter zjazdu naukowego niż autentycznego konwentu, gdzie życie toczy się przeważnie poza salami obrad. Eurocon'91 ma być właśnie konwentem, toteż główne atrakcje to maskarada, konkurs piosenki fantastycznej; wreszcie końcowy bankiet. No i gdzieś tam, w tle, kilka pogadanek i referatów. Zaproszeni goście honorowi to: Poul Anderson (autor), Gianfranco Viviani (wydawca), Roelof Goudriaan i Borys Zawgorodny (fanowie).
+Wszelkie informacje na temat tych konwentów można otrzymać od niżej podpisanego, pisząc na adres: Wiktor Bukato, skrytka pocztowa 983, 00 - 950 Warszawa.
+Teraz z nieco innej beczki...
+Dwie najważniejsze nagrody literackie dla utworów science fiction to Hugo i Nebula; pierwszą przyznają uczestnicy konwentu światowego, drugą członkowie Stowarzyszenia Amerykańskich Autorów Science Fiction (SFWA). Obowiązują tu cztery kategorie (dla utworów literackich; Hugo przyznaje się również filmom, malarzom itp.) - powieść, mikropowieść, opowiadanie dłuższe i opowiadanie (novel, novelIa, novelette, short story). Część z nagrodzonych utworów znana jest już polskim czytelnikom, większość jednak nie. Będziemy je prezentowali na łamach "Fenixa" podając jednocześnie rok, w którym nagrodę przyznano.
+A przy okazji: czytelnicy najnowszej antologii Dona Wollheima ("Don Wollheim proponuje: 1989") znaleźli w nim opowiadanie Geoffreya A. Landisa "Fale na morzu Diraca", które dopiero w tym roku startuje w konkursie Nebuli i jest mocno faworyzowane. Życzymy powodzenia!
+
+Wiktor Bukato
+
+Hugo i Nebula za 1987r. w kategorii "opowiadanie"
+Greg Bear
+
+
+
+STYCZNE
+(Tangents)
+Przełożył Jacek Manicki
+
+Na kalifornijskiej łące stał chłopiec o orzechoworudych włosach. Jego twarz o azjatyckich rysach ocieniał twardy kapelusz; niskie, przysadziste ciało odziane było w podkoszulek z krótkimi rękawkami i brązowe szorty. Mrużąc przed słońcem oczy chłopiec patrzył ponad sięgającą do pasa trawą na piętrowy, rozsypujący się ze starości wiejski dom. Nagle zagwizdał kilka taktów z sonaty fortepianowej Haydna. Z piętra domu doleciało piskliwe, sfrustrowane, męskie - Jasna cholera! - i łomot pięści walącej w coś twardego. Przez chwilę panowała cisza. Potem, wypowiedziane łagodniejszym głosem, rozległo się kobiece pytanie:
+- Coś, nie wychodzi?
+- Nie. Siedzę w tym, czego nie widzę.
+- Szyfr? - spytała nieśmiało kobieta.
+- Teserakt. Skoro się nie ścina, nie jest galaretą.
+Chłopiec przykucnął w trawie i nasłuchiwał
+- No więc? - ciągnęła mężczyznę za język kobieta.
+- Och, Lauren, to wciąż jeszcze jest w powijakach.
+Rozmowa urwała się. Chłopiec wyciągnął się w trawie na wznak, świadom faktu, że znajduje się na terenie prywatnej posiadłości. Przelazł tu przez ogrodzenie ze sztachet i ceglanych słupków z nowego osiedla mieszkaniowego po drugiej stronie drogi. Szkoła się skończyła, a matka - przybrana matka - nie lubiła, gdy kręcił się cały dzień po domu. A właściwie to nie lubiła jego.
+Zamknął oczy i wyobraził sobie ogromną fortepianową klawiaturę oraz siebie, tańczącego po klawiszach, wystukującego nogami orientalnie brzmiącą gamę D-dur. Pasowała do jego pochodzenia, pomyślał. Kochał muzykę.
+Otworzył oczy, by ujrzeć chudą, siwiejącą panią w tweedowym ubraniu, pochylającą się nad nim i patrzącą spod ściągniętych brwi.
+- Jesteś na terenie prywatnym - powiedziała.
+Zerwał się na nogi i otrzepał trawę ze spodenek.
+- Przepraszam.
+- Wydawało mi się, że kogoś tu zauważyłam. Jak ci na imię?
+- Pal - odparł.
+- To imię? - spytała z rozdrażnieniem.
+- Pal Tremont. Tu nie jest moje prawdziwe imię. Jestem Koreańczykiem.
+- A więc jak masz naprawdę na imię?
+- Starzy kazali mi go więcej nie używać. Jestem adoptowany. Kim pani jest?
+Siwa kobieta zmierzyła go wzrokiem od stóp do głów.
+- Nazywam się Lauren Davies - oznajmiła. - Mieszkasz. gdzieś w okolicy?
+Wskazał na rząd stojących jeden przy drugim domów na skraju łąki.
+- Sprzedałam teren pod te domy przed dziesięcioma laty - westchnęła. - Zwykle nie jestem zadowolona. kiedy dzieciaki mi tu wchodzą.
+- Przepraszam - powtórzył Pal.
+- Jadłeś lunch?
+- Nie.
+- A zjadłbyś zapiekankę z serem?
+Spojrzał na nią spod oka i pokimał głową.
+
+
+Kuchnia była obszerna, o ścianach z czerwonej cegły, wyłożonych kafelkową lamperią. Siedział za dębowym stołem, a ramiona ledwie wystawały mu ponad blat, i jadł lekko przypaloną zapiekankę, patrząc na obserwującą go Lauren Davies.
+- Próbuję pisać o dziecku - powiedziała. - To trudne. Jestem starą panną i niewiele wiem o dzieciach.
+- Pani jest pisarką? - zapytał, popijając łyk mleka.
+Parsknęła.
+- Nie taką, o której ktokolwiek by słyszał.
+- Ten pan na górze, to pani brat?
+- Nie. To Peter. Żyjemy ze sobą od dwudziestu lat.
+- Ale mówiła pani przecież, że jest starą panną... Czy to nie ktoś, kto nigdy nie wyszedł za mąż albo nigdy nie kochał? - spytał Pal.
+- Nie byłam zamężna. I w ogóle to nie twoja sprawa. Stosunki łączące Petera i mnie nie powinny cię obchodzić. - Postawiła na tacy miskę zupy oraz kanapkę z sałatką z tuńczyka.
+- To jego lunch - wyjaśniła.
+Pal, nieproszony, wszedł za nią po schodach.
+- Tu pracuje Peter - poinformowała go Lauren. Pal stanął w progu wybałuszając oczy. Pokój zastawiony był aparaturą elektroniczną, terminalami komputerowymi i szarymi stelażami, których każdą półkę zajmowały, obok: książek i drukowanych płytek, dziwne, wykonane z kartonu bryły. Lauren postawiła tacę z lunchem na drukowanej płytce, spoczywającej niepewnie na pudełku po dyskietkach.
+- Nadal jakieś trudności? - rzuciła do chudego mężczyzny, odwróconego do nich plecami.
+Mężczyzna przekręcił się w ich stronę na obrotowym fotelu, zerknął przelotnie na Pala, spojrzał na lunch i potrząsnął głową, której wierzch porastała bujna, połyskliwie czarna czupryna. Na krótko ostrzyżonych skroniach kolor włosów przechodził gwałtownie w jasną, wyglądającą nienaturalnie siwiznę. Miał mały, wąski nos i wielkie, zielone oczy. Na biurku przed nim stał monitor komputerowy.
+- Nie przedstawiono nas sobie - zauważył, wskazując na Pala.
+- To jest Pal Tremont, gość z sąsiedztwa. Pal, to Peter Tuthy. Pal pomoże mi nakreślić tę postać, o której dyskutowaliśmy.
+Pal wpatrywał się z zainteresowaniem. Czerwone i. zielone linie na ekranie przeszły jakąś niezrozumiałą transformację i powtarzały ją znowu.
+- Co to jest teserakt? - zapytał Pal, przypominając sobie słowo, które usłyszał z okna, kiedy stał na łące.
+- To czterowymiarowy odpowiednik sześcianu. Usiłuję znaleźć sposób, który pomógłby mi nauczyć się go widzieć okiem wyobraźni - wyjaśnił Tuthy. - Próbowałeś tego kiedy?
+- Nie - przyznał Pal.
+- Masz - Tuthy podał mu okulary. - Jak w kinie.
+Pal założył okulary na nos i zapatrzył się w ekran.
+- Ach, tak? - powiedział. - To składa się i rozkłada. To zupełnie... to bodzie, a potem się cofa. - Rozejrzał się po laboratorium. - O rany!
+We wschodnim końcu pomieszczenia, na rusztowaniu z aluminiowych rurek, przypominającym sen hydraulika o sztalugach, spoczywała długa, odcieleśniona klawiatura fortepianowa, zamontowana w podłużnej, czarnej walizce. Chłopiec podbiegł do niej.
+- Tronclavier! Ze wszystkimi przełącznikami! Moja matka każe mi chodzić na lekcje gry na fortepianie, ale ja wolałbym się uczyć na czymś takim. Potrafi pan na tym grać?
+- Bawię się tym czasem - mruknął z rozdrażnieniem Tuthy. - Bawię się wszystkim, co elektroniczne. Ale co widzisz na ekranie? - zerknął na Lauren mrugając powiekami. - Zjem ten lunch. Zjem go. Ale teraz nie przeszkadzaj nam, proszę.
+- On ma pomagać m n i e - zaprotestowała słabo Lauren.
+Peter uśmiechnął się do niej.
+- Tak, oczywiście. Odeślę go na dół za małą chwilkę.
+Zszedłszy po godzinie z piętra, Pal wstąpił do kuchni i podziękował Lauren za lunch.
+- Peter to prawdziwy oryginał. Stara się znaleźć nowe kierunki.
+- Wiem - westchnęła Lauren.
+- Idę teraz do domu - oznajmił Pal. - Ale przyjdę jeszcze... jeśli nie ma pani nic przeciwko temu. Peter mnie zaprosił.
+- Na pewno nie będę miała nic przeciw temu - odparła bez przekonania Lauren.
+- Obiecał nauczyć mnie gry na Tronclavierze.
+Z tymi słowami Pal, uśmiechając się promiennie, wyszedł kuchennymi drzwiami.
+Gdy poszła na górę, żeby zabrać tacę, stwierdziła, że Peter siedzi z zamkniętymi oczami, rozparty wygodnie w fotelu. Na ekranie składały się i rozkładały cierpliwie figury geometryczne, sześciany przechodzące bez ustanku jeden w drugi.
+- No i co z tym zleceniem Hockruma? - spytała.
+- Właśnie nad nim ślęczę - rzekł Peter, nie otwierając oczu.
+
+
+Na drugi dzień Lauren zatelefonowała do przybranej matki Pala, żeby powiadomić oboje rodziców o miejscu pobytu syna. Kobieta zapewniła ją, że wszystko jest w porządku.
+- Czasami jest trochę niesforny. Niech go pani odeśle do domu, jeśli coś przeskrobie, ale nie od razu! Chcę trochę odpocząć - powiedziała, a potem roześmiała się nerwowo.
+Lauren zacisnęła mocno usta, podziękowała jej i odłożyła słuchawkę.
+Peter z chłopcem zeszli do kuchni i usiadłszy zaczęli zapełniać arkusze papieru liniami.
+- Peter uczy mnie posługiwania się swoim programem - oznajmił Pal.
+- Czy wiesz - odezwał się Tuthy, przyjmując swój najwznioślejszy ton profesora Cambridge - że przecinając sześcian płaszczyzną można go pociąć na mnóstwo różnych geometrycznie przekrojów?
+Pal patrzył spod przymrużonych powiek na poglądowy szkic, nakreślony odręcznie przez Tuthy'ego.
+- Jasne - stwierdził.
+- Dwuwymiarowa istota żyjąca na płaszczyźnie, nazwijmy ją Płaszczakiem, może postrzegać sześcian przepychany poprzez tę płaszczyznę rozmaicie: jako trójkąt, prostokąt, trapez, romb albo kwadrat. Jeśli dwuwymiarowa istota obserwuje proces przepychania tego sześcianu od samego początku do samego końca, widzi jedną lub więcej tych figur powiększających się, zmieniających nagle kształt, kurczących się i znikających.
+- Jasne - powtórzył Pal, postukując w podłogę czubkiem trampka. - To proste. Zupełnie jak w tej książce, którą mi pokazywałeś.
+- A kula przepychana przez taką płaszczyznę byłaby dla nieszczęsnego Płaszczaka najpierw n i e w i d z i a l n y m punktem (dwuwymiarowa powierzchnia dotykająca stycznie kuli), a potem kołem. To koło powiększałoby się, a potem zmniejszało, dochodząc do punktu i ponownie znikając. - Naszkicował poglądowe rysunki wpatrując się z zachwytem w swoje dzieło.
+- Rozumiem - przytaknął Pal. - Mogę się teraz pobawić Tronclavierem?
+- Za chwilkę. Cierpliwości. Jak zatem wyglądałby teserakt wnikający w naszą trójwymiarową przestrzeń? Przypomnij sobie teraz program... obrazy z ekranu monitora.
+Pal spojrzał w sufit.
+- Nie wiem - powiedział z wyraźnym znudzeniem.
+- Spróbuj się zastanowić - naciskał Tuthy.
+- Wyglądałby... - Pal wyciągnął ręce, by nakreślić w powietrzu kanciasty kształt. - Wyglądałyby jak te egipskie budowle, ale o trzech ścianach... albo jak pudełko. Wyglądałby też jak nietypowe pudełko, takie nieprostokątne.
+- A gdybyśmy obrócili teserakt wokół osi?
+Rozległ się dzwonek u drzwi i Pal zerwał się z kuchennego krzesła.
+- Moja mama?
+- Nie sądzę - uspokoiła go Lauren. - Już prędzej Hockrum. - Poszła do frontowych drzwi. Wróciła prowadząc za sobą niskiego, bladego człowieczka. Tuthy wstał i potrząsnął ręką mężczyzny.
+- Pal Tremont, a to Irving Hockrum - dokonał prezentacji, pomagając sobie ręką. Hockrum spojrzał na Pala i zatrzepotał powiekami w przeciągłym, niezbyt smacznym mrugnięciu.
+- Jak się posuwa praca? - spytał Tuthy'ego.
+- Skończyłem - oznajmił Tuthy. - Mam to na górze. Wydaje się, że twoi uczeni zdzierają korę nie z tego drzewa logicznego co trzeba. - Przyniósł aktówkę z papierami oraz komputerowymi wydrukami i wręczył ją Hockrumowi.
+Hockrum przekartkował wydruki.
+- Nie powiem, żeby wprawiło mnie to w dobry nastrój - stwierdził. - Ale nie potrafię znaleźć błędu. Znaczy, że mam tu oto kolejne dzieło twojego genialnego umysłu. Żałuję tylko, że wcześniej nam tego nie dałeś. Mnie oszczędziłoby to trochę zgryzot... a firmie pieniędzy.
+- Przykro mi - rzucił nonszalancko Tuthy.
+- Mam teraz dla ciebie ważną robótkę... - I Hockrum przedstawił w zarysie kolejny problem. Tuthy zastanawiał się nad nim przez kilka minut, po czym potrząsnął głową.
+- To bardzo trudne, Irving. Pionierska praca. Samo sprawdzenie, czy da się to ugryźć, zajęłoby co najmniej miesiąc.
+- Na razie tylko tyle chcę wiedzieć: czy to jest do ugryzienia. Wiele od tego zależy, Peter. - Hockrum złożył przed sobą ręce, chyba jeszcze bledszy i mizerniejszy, niż kiedy wchodził do kuchni. - Dasz mi szybko znać?
+- Zaraz się do tego zabiorę - obiecał Tuthy.
+- Protegowany? - spytał Hockrum wskazując na Pala. Na jego twarzy malowała się chytrość, jeśli nie przebiegłość.
+- Nie, przyjaciel. Interesuje się muzyką - odparł Tuthy. - Cholernie dobry w Mozarcie, jeśli mam być szczery.
+- Pomagałem przy teseraktach - pochwalił się Pal.
+- Moje gratulacje - powiedział Hockrum. - Mam nadzieję, że nie przeszkadzasz Peterowi w pracy. Peter pracuje nad bardzo ważnymi zagadnieniami.
+Pal potrząsnął z namaszczeniem głową.
+- To dobrze - podsumował Hockrum i opuścił dom, żeby zanieść swej firmie negatywne rezultaty.
+Tuthy, z depczącym mu po piętach Palem, wrócił do laboratorium. Lauren zasiadła w kuchni z wiecznym piórem w dłoni nad plikiem czystych kartek i usiłowała wziąć się do pracy, ale w głowie miała pustkę. Hockrum zawsze wzbudzał w niej niepokój. Weszła po schodach na piętro i stanęła w progu laboratorium. Często tak robiła; jej obecność nie przeszkadzała Tuthy'emu, który potrafił pracować w każdych warunkach.
+- Kim był ten człowiek? - pytał właśnie Pal Tuthy'ego.
+- Pracuję dla niego. Jest pracownikiem bardzo dużej firmy elektronicznej. Pożyczył mi większość sprzętu, którego tu używam; komputery, wysoko rozdzielcze monitory. Przychodzi do mnie z różnymi problemami, a potem odnosi moje rozwiązania swoim szefom i twierdzi, że sam do nich doszedł.
+- To bez sensu - stwierdził Pal. - A co to za problemy?
+- Kody, szyfry. Zabezpieczenia komputerów. Byłem kiedyś ekspertem w tej dziedzinie.
+- Czy to coś w rodzaju blokady? - Twarz Pala rozjaśniła się. - Uczyliśmy się tego trochę w szkole.
+- Przykro mi, ale to o wiele bardziej skomplikowane - uśmiechnął się Tuthy. - Słyszałeś kiedyś o niemieckiej "Enigmie", albo o projekcie "Ultra"?
+Pal pokręcił głową.
+- Tak też myślałem. Nie zawracaj sobie tym głowy. Spróbujmy teraz wykreślić na ekranie jeszcze jedną figurę. - Wywołał odpowiednią procedurę czterowymiarowego programu graficznego i posadził Pala przed ekranem. - A więc, jak wyglądałaby hipersfera przedostająca się do naszej przestrzeni?
+Pal zastanowił się.
+- Dziwacznie.
+- Wcale nie. Oglądałeś szkice poglądowe.
+- Ach, do n a s z e j przestrzeni. To proste. Wygląda jak balon rozdymający się z niczego i z powrotem kurczący. Trudniej sobie wyobrazić, jak wygląda hipersfera, kiedy jest prawdziwa. To znaczy na prewo od nas.
+- Na prewo? - zdziwił się Tuthy.
+- No tak, Prewo i lawo. Dóra i gół. Czy jak tam nazywają się kierunki.
+Tuthy wpatrywał się w chłopca. Żaden z nich nie zauważył Lauren stojącej w drzwiach.
+- Prawidłowe określenia brzmią ana i kata - powiedział Tuthy. - No, jak wygląda?
+Pal wykonał w powietrzu dwa szerokie zamachy ramionami.
+- Jest jak kula i jednocześnie jak podkowa, zależnie od tego, jak się na nią patrzy. Chyba jak balon użądlony przez pszczoły, ale cały gładki, nie sflaczały.
+Tuthy nie odrywał od chłopca wzroku. Po chwili spytał cicho:
+- Naprawdę to widzisz?
+- Jasne. Czy nie od tego jest twój program? Od umożliwiania oglądania tego rodzaju rzeczy?
+Tuthy pokiwał głową oszołomiony.
+- Mogę teraz pograć na Tronclavierze?
+Lauren wycofała się z drzwi. Miała wrażenie, że podsłuchała coś doniosłego, ale dla niej niepokojącego. Tuthy zszedł godzinę później zostawiając Pala wystukującego na klawiaturze coś Telemanna. Usiadł z nią przy kuchennym stole.
+- Program działa - oznajmił. - Nie działał dla mnie, ale dla niego działa. Przychodzi mu to z cholerną naturalnością. - Tuthy rzadko używał takiego języka. Znajdował się wyraźnie pod wielkim wrażeniem. - Pokazywałem mu właśnie figury o odwracalnych cieniach. Jest to sposób, aby odnieść przynajmniej wrażenie, że widzi się, jak coś się obraca w czwartym wymiarze. Chodzi o te wklęsłe maski, jakich używają w Disneylandzie... zdają się wybrzuszać, to znów zapadać w głąb, zależnie od oświetlenia. Albo fotografie księżycowych kraterów - przypominają bardziej wybrzuszenia niż zagłębienia terenu. To właśnie Pal nazywa obrazami odwróconymi: wybrzuszenia i zagłębienia.
+- I co w nich takiego szczególnego?
+- Widzisz, jeśli podejmuje się tę grę i doprowadza do tego, że twarze wklęsłe zdają się odwracać lub wybrzuszać w twoim kierunku, to jest to namiastka obracania ich w czwartym wymiarze. Rysy takiej twarzy zdają się zamieniać stronami. Prawe oko staje się lewym, i tak dalej. W mig to pojął, a zaraz potem odszedł grać Haydna. Odegrał już wszystkie moje nuty. Ten dzieciak jest geniuszem.
+- Masz na myśli geniusza muzycznego? Spojrzał jej w oczy i zmarszczył czoło.
+- Tak, wydaje mi się, że w tym też jest znakomity. Ale zależności przestrzenne, współrzędne i ruch w wyższych wymiarach... Czy wiesz, że gdybyś wzięła przedmiot trójwymiarowy i obróciła go w czwartym wymiarze, wróciłby stamtąd z zamienionymi wzajemnie stronami lewą i prawą? W czwartym wymiarze nie ma trwałego podziału na lewo i prawo.
+Gdybym więc wziął swoją rękę... - podniósł prawą rękę - i uniósł ją w dórę, albo opuścił w gół to wróciłaby tu taka. - Wyciągnął teraz lewą rękę, tak że znalazła się nad prawą, a prawą dłoń zwinął w pięść i schował za plecami.
+- Nie wiedziałam tego - przyznała Lauren. - Co to jest dóra i gół?
+- Tak Pal nazywa ruch po czwartym wymiarze. Dla purystów ana i kata. Coś w rodzaju góry i dołu dla Płaszczaka, który swoim umysłem obejmuje tylko określenia lewo i prawo oraz w przód i w tył.
+Zastanawiała się przez chwilę nad przykładem z rękami.
+- Nadal tego nie rozumiem - poddała się w końcu.
+- Ja też nie - pocieszył ją Tuthy. - Przypuszczam, że nasze układy są zbyt mało elastycznie okablowane.
+Pal przełączył brzmienie Tronclaviera na kombinację katedralnych organów z hawajską gitarą i grał teraz wariacje na temat Pergolesiego.
+- Zamierzasz dalej pracować dla Hockruma? - spytała Lauren. Tuthy jakby jej nie słyszał.
+- To nadzwyczajne - mruknął. - Ten chłopiec wszedł tu tak po prostu. Przyprowadziłaś go przypadkowo. Zadziwiające.
+
+
+- Myślisz, że potrafiłbyś określić mi ten kierunek? Wskazać mi go? - spytał chłopca Tuthy, trzy dni później.
+- W tę stronę nie porusza się żaden z moich mięśni. Widzę go w mojej wyobraźni, ale...
+- A co czujesz widząc go? Ten kierunek?
+Pal skrzywił się.
+- To coś o wiele większego. Miejsce, gdzie my żyjemy, znajduje się jakby na jednym stosie z innymi miejscami. Czuję się od tego samotny.
+- Dlaczego?
+- Bo jestem tu uwięziony. Nikt tam z zewnątrz nie zwraca na nas najmniejszej uwagi.
+Usta Tuthy'ego poruszyły się bezgłośnie.
+- Sądziłem, że te kierunki wyczuwasz intuicyjnie, w wyobraźni. Chcesz mi powiedzieć, że naprawdę w i d z i s z, co się dzieje tam na zewnątrz?
+- Tak. Tam na zewnątrz też są ludzie. No, niezupełnie ludzie. Ale to nie moje oczy ich widzą. Oczy są jak mięśnie, nie mogą podążać w te strony. Ale głowa... mózg. Wydaje mi się... że mogą.
+- Jasna cholera - zaklął Tuthy, mrugając powiekami. - Przepraszam - opanował się. - To grubiańskie. Czy potrafisz pokazać mi tych ludzi... na ekranie?
+- To cienie. Podobne do tych, o których rozmawialiśmy.
+- Świetnie. A więc narysuj mi te cienie.
+Pal usiadł przy terminalu, jego palce zawisły nad klawiszami.
+- Mogę ci je pokazać, ale musisz mi w czymś pomóc.
+- W czym mam ci pomóc?
+- Chciałbym im coś zagrać. Tym z zewnątrz. Żeby nas zauważyli.
+- Tym ludziom?
+- Tak. Wyglądają zupełnie dziwacznie. Stoją na nas, coś w tym rodzaju. Są zakotwiczeni w naszym świecie. Ale wyrastają wysoko... w górę. Nie zauważają nas, bo w porównaniu z nimi jesteśmy zbyt mali.
+- Boże, Pal, nie mam najmniejszego pojęcia, jak prześlemy im tam na zewnątrz muzykę... nie jestem nawet pewien, czy wierzę w ich istnienie.
+- Ja nie kłamię - powiedział Pal przymrużając oczy. Odwrócił się z fotelem do "myszy", spoczywającej na czarnej płytce z podziałką i z jej pomocą naszkicował cienie na ekranie monitora.
+- Pamiętaj, że to tylko cienie ich rzeczywistego wyglądu. Teraz narysuję linie dóry i gołu, żeby połączyć cienie.
+Chłopiec zacieniował figury, żeby wyglądały jak pełne. Skwitował swój trik uśmiechem, wyjaśniając, że było to konieczne, bo rzut czterowymiarowego obiektu na normalną przestrzeń jest, oczywiście, trójwymiarowy.
+- Wyglądają tak, jakby wziąć rośliny z ogrodu i dodać im mnóstwo rąk i palców... To trochę tak, jakby oglądało się przedmioty umieszczone w akwarium - wyjaśniał Pal.
+Z czasem Tuthy zapomniał o swoim sceptycyzmie i zafascynowany gapił się z otwartymi ustami na to, co chłopiec odtwarzał na ekranie monitora.
+
+
+- Wydaje mi się, że marnujesz czas, tak mi się właśnie wydaje - powiedział Hockrum. - Ta ocena rozwiązywalności problemu potrzebna mi była na dzisiaj. - Przechadzał się przez jakiś czas tam i z powrotem po salonie, a potem opadł na fotel tak ciężko, jak tylko pozwalało na to jego wątłe ciało.
+- Nie mogłem się skupić - tłumaczył Tuthy.
+- Przez tego chłopaka?
+- Prawdę mówiąc, tak. To bardzo utalentowany dzieciak.
+- Posłuchaj, przysporzyłeś mi wielu kłopotów. Gwarantowałem, że dostarczę tę ocenę dzisiaj. Teraz podpadnę. - Hockrum skrzywił twarz, sfrustrowany. - Co ty, u diabła, robisz z tym chłopcem?
+- Uczę go. A raczej to on uczy mnie. W tej chwili budujemy czterowymiarowy stożek, element składowy głośnika. Stożek jest trójwymiarowy - jeśli chodzi o materiał fizyczny użyty do jego budowy - ale pole magnetyczne tworzy jego rozszerzenie na czwarty wymiar.
+- Czy kiedykolwiek zastanawiałeś się, jak to wygląda, Peter?
+- Zapewniam cię, że na monitorze wygląda bardzo dziwnie...
+- Ja mówię o tobie i o tym chłopcu.
+Rozpromieniona w natchnieniu twarz Tuthy'ego wyciągnęła się z wolna i pobruździła w wyrazie konsternacji.
+- Nie rozumiem, o co ci chodzi.
+- Dużo o tobie wiem, Peter. Wiem, skąd przychodzisz, dlaczego musiałeś odejść... to nie wygląda najlepiej.
+Twarz Tuthy'ego spłonęła szkarłatnym rumieńcem.
+- Odpraw go - poradził mu Hockrum.
+Tuthy wstał.
+- Wynoś się z mojego domu - powiedział spokojnie. - Koniec z naszą współpracą.
+- Przysięgam - oświadczył Hockrum cichym, opanowanym głosem, patrząc spode łba na Tuthy'ego - że powiem wszystko rodzicom chłopca. Uważasz, że będą się spokojnie przyglądać, jak ich dziecko zadaje się ze starym, przepraszam za wyrażenie, pedałem? Sądzę, że powinieneś się z tym uwinąć do końca tygodnia. Dwa dni. Zdążysz?
+- Nie, nie wydaje mi się - odparł łagodnie Tuthy. - Wyjdź.
+- Wiem, że przebywasz tu nielegalnie. Fakt twojego wjazdu do kraju nie jest nigdzie odnotowany. Przy problemach, jakie miałeś w Anglii, nie jesteś tu z pewnością pożądanym cudzoziemcem. Szepnę słówko urzędowi imigracyjnemu i zostaniesz deportowany.
+- Nie mam czasu na tę pracę.
+- To go sobie wygospodaruj, zamiast douczać tego dzieciaka.
+- Wynoś się stąd.
+- Dwa dni, Peter.
+
+
+Tuthy opowiadał Lauren przy obiedzie o utarczce, jaką miał z Hockrumem.
+- On myśli, że ja uwodzę Pala. Niewyobrażalny sukinsyn. Nigdy już nic dla niego nie zrobię.
+- Lepiej więc będzie, jeśli od razu porozumiem się z adwokatem - stwierdziła Lauren. - Jesteś pewien, że nie możesz go... uszczęśliwić, zażegnać całej tej afery?
+- Mógłbym rozwiązać mu ten jego problemik w parę godzin. Ale nie chcę go już widzieć ani z nim rozmawiać.
+- Zabierze ci sprzęt.
+Tuthy zamrugał powiekami i machnął bezsilnie ręką.
+- Co oznacza, że będziemy musieli przyspieszyć pracę, prawda? Ach, Lauren, głupio zrobiłaś sprowadzając mnie tutaj. Powinnaś mnie zostawić, żebym zgnił.
+- Zignorowali wszystko, co dla nich zrobiłeś - powiedziała gorzko Lauren. Patrzyła przez kuchenne okno na zachmurzone niebo i drzewa przed domem. - Ocaliłeś ich głowy podczas wojny, a oni... mogliby cię zamknąć w więzieniu.
+
+
+Stożek leżał na stole, niedaleko okna, skąpany w promieniach porannego słońca, podłączony zarówno do komputera, jak i do Tronclaviera. Pal rozłożył nuty skomponowanego przez siebie utworu na pulpicie przed syntezatorem.
+- Przypomina kanon Bacha - powiedział. - Ale dzięki temu będzie dla nich lepiej brzmiało. Ma coś w rodzaju kontrapunktu albo nadrytmu, który zagram na dórnej części głośnika.
+- Dlaczego to robimy, Pal? - spytał Tuthy, gdy chłopiec zasiadł za klawiaturą.
+- Tak na prawdę, to ty nie jesteś stąd, Peter, co? - spytał Pal. Tuthy gapił się na niego.
+- Chodzi mi o to, że panna Davies i ty żyjecie sobie zgodnie... Ale czy ty jesteś stąd?
+- Skąd ci przychodzi do głowy, że nie jestem stąd?
+- Przeczytałem parę książek ze szkolnej biblioteki. O wojnie i w ogóle. Interesowały mnie przede wszystkim "Enigma" i "Ultra". Znalazłem tam wzmianki o człowieku, który nazywał się Peter Thornton. Na zdjęciu wygląda zupełnie jak ty, tylko jest młodszy. W książkach piszą o nim jak o bohaterze.
+Tuthy uśmiechnął się niepewnie.
+- Ale w jednej książce znalazłem pewną notkę. Zniknąłeś w 1965 roku. Oskarżono cię o coś. Nawet nie wspomnieli, o co.
+- Jestem homoseksualistą - powiedział cicho Tuthy.
+- Aha. No i co z tego?
+- Spotkaliśmy się z Lauren w Anglii w 1964 roku. Chcieli wtrącić mnie do więzienia, Pal. Polubiliśmy... pokochaliśmy się, przeszmuglowała mnie więc przez Kanadę do Stanów.
+- Ale jesteś przecież homoseksualistą. Oni nie lubią kobiet.
+- To wcale nieprawda, Pal. Lauren i ja bardzo się lubimy. Dużo ze sobą rozmawialiśmy. Ona zdradziła mi, że marzy o zostaniu pisarką, a ja opowiedziałem jej o matematyce i o wojnie. Omal nie umarłem podczas wojny.
+- Dlaczego? Byłeś ranny?
+- Nie. Zbyt intensywnie pracowałem. Spaliłem się i załamałem nerwowo. Przez całe lata czterdzieste przy życiu trzymała mnie droga mi osoba... mężczyzna. Po wojnie w Anglii było bardzo ciężko. Ale on zmarł w 1963 roku. Przyjechali jego rodzice, żeby uregulować sprawy majątkowe, i kiedy wniosłem sprawę do sądu o uwzględnienie mnie przy podziale, zostałem aresztowany.
+Zmarszczki na jego twarzy pogłębiły się. Zamknął oczy i długo ich nie otwierał.
+- Chyba naprawdę nie jestem stąd.
+- Ja też nie. Moich starych niewiele obchodzę. Nie mam zbyt wielu przyjaciół, nawet się tu nie urodziłem i nie wiem nic a nic o Korei.
+- Graj - powiedział Tuthy z kamienną twarzą. - Zobaczymy, czy usłyszą.
+- Och, usłyszą, usłyszą - zapewnił go Pal. - Mniej więcej tak właśnie rozmawiają między sobą. Chłopiec przebiegł palcami po klawiszach Tronclaviera. Stożek, podłączony do klawiatury za pośrednictwem mikrokomputera, zawibrował leciuteńko. Pal przez godzinę przerzucał tam i z powrotem stronice z zapisem swojej kompozycji, powtarzając pasaże, grając wariacje. Tuthy siedział w kącie podparty pod brodę, zasłuchany w mysich zgrzytach i piskach wydobywających się ze stożka. O ileż trudniejszy w interpretacji jest dźwięk czterowymiarowy, pomyślał. Nie ma tu nawet żadnych wizualnych punktów zaczepienia...
+W końcu chłopiec przerwał grę, splótł dłonie, rozprostował palce. Potem przeciągnął się.
+- Musieli usłyszeć. Teraz trzeba tylko poczekać na rezultaty. - Przełączył Tronclaviera na automatyczne odtwarzanie i odepchnął się razem z fotelem od klawiatury.
+Pal został aż do zmierzchu, potem z ociąganiem poszedł do domu. Tuthy tkwił w laboratorium do północy, nasłuchując cichutkich dźwięków wydawanych przez stożek głośnika. Nie mógł zrobić nic więcej. Poczłapał zgarbiony korytarzem do swojej sypialni.
+Przez całą noc Tronclavier odtwarzał zaprogramowany wybór kompozycji Pala. Tuthy leżał w łóżku w swoim pokoju, dwoje drzwi od pokoju Lauren, wpatrując się w sunący po ścianie snop księżycowej poświaty. Jak długą drogę musi przebyć czterowymiarowa istota, żeby tu dotrzeć?
+Jak długą drogę przebył sam, żeby tu się znaleźć?
+Nie wiedział nawet, kiedy zasnął. Miał sen i w tym śnie pojawił się falujący obraz Pala z szeroko otwartymi oczami, wykonującego ramionami pływackie ruchy. U mnie wszystko w porządku, powiedział chłopiec nie otwierając ust. Nie martw się o mnie... u mnie wszystko w porządku. Wróciłem do Korei, żeby zobaczyć jak tam jest. Nie jest źle, ale bardziej podoba mi się tutaj...
+
+
+Tuthy obudził się zlany potem. Księżyc już zaszedł, pokój zalegały nieprzeniknione ciemności. Hiperstożek kontynuował w laboratorium swoją odległą, mysiopiskliwą transmisję.
+Pal wrócił wczesnym rankiem pogwizdując chaotyczną wiązankę fragmentów czwartego koncertu skrzypcowego Mozarta. Lauren otworzyła mu drzwi wejściowe i chłopiec wbiegł po schodach do Tuthy'ego. Tuthy siedział przed monitorem, odtwarzając wykonany przez Pala szkic czterowymiarowych istot.
+- Widzisz ich teraz? - spytał chłopca. Pal skinął głową.
+- Są bliżej. Coś ich zainteresowało. Może powinniśmy wszystko przyszykować, no wiesz, przygotować się. - Zmarszczył czoło. - Zastanawiałeś się kiedyś, Jak wyglądałby czterowymiarowy odcisk stopy?
+Tuthy rozważał przez chwilę ten problem.
+- To byłoby bardzo interesujące - rzekł. - Byłby materialny. Z parteru doleciał krzyk Lauren.
+Pal i Tuthy, potykając się o siebie na schodach, zbiegli na dół. Lauren stała w salonie z rękami skrzyżowanymi nad piersiami i z dłonią przyciśniętą do ust. Pierwsza próba kontaktu pociągnęła za sobą zniknięcie fragmentu podłogi salonu gościnnego i jego wschodniej ściany.
+- Co za niezręczność - stwierdził Pal. - Jeden z nich musiał o to zawadzić.
+- Muzyka - powiedział Tuthy.
+- Co tu się, u diabła, wyprawia? - zapytała Lauren. Jej głos, z początku zgrzytliwy, przeszedł pod koniec pytania w krzyk.
+- Wyłącz lepiej tę muzykę - wydusił z siebie Tuthy.
+- Dlaczego? - spytał Pal z twarzą wykrzywioną pełnym podniecenia uśmiechem. - Może im się nie podoba.
+Obok Tuthy'ego rozdął się nagle do średnicy metra rozedrgany, jasny, przejrzysty, błękitny bąbel. Znieruchomiał i tak samo raptownie znikł.
+- To było jak łokieć - wyjaśnił Pal. - Jedno z jego ramion. Wydaje mi się, że stara się ustalić, skąd dobiega muzyka. Pójdę na górę.
+- Wyłącz to! - krzyknął Tuthy. - Zagram coś innego.
+Chłopiec wbiegł po schodach. Z kuchni doleciał ohydny, głuchy trzask, potem odgłos wypełniającej się próżni - odwrócone cmoknięcie zakończone sykiem - a następnie głucha wibracja, od której cierpły zęby.
+Wibracja powodowana przez czterowymiarową istotę szurającą po ich trójwymiarowej "podłodze". Ręce Tuthy'ego drżały z podniecenia.
+- Peter! - zawyła Lauren, nie dbając już o zachowanie resztek godności. Oderwała ręce od piersi i wyciągnęła zaciśnięte pięści, jakby szykowała się do ćwiczeń gimnastycznych albo boksowania.
+- Pal zwabił gości - wyjaśnił Tuthy.
+Odwrócił się w kierunku schodów. Pierwsze cztery stopnie oraz fragment podłogi zawirowały i zniknęły. Prąd powietrza omal nie wciągnął go w powstałą dziurę. Odzyskawszy równowagę ukląkł, żeby pomacać precyzyjnie wyciętą, wklęsłą krawędź. Pod spodem znajdowała się piwnica.
+- Pal! - zawołał Tuthy. - Wyłącz to!
+- Gram im coś nowego - odkrzyknął Pal. - Chyba im się podoba.
+Zadzwonił telefon. Tuthy znajdował się najbliżej drugiego aparatu, zainstalowanego u stóp schodów i instynktownie wyciągnął rękę, żeby podnieść słuchawkę. To był Hockrum. Krzyczał.
+- Nie mogę teraz z tobą rozmawiać... - powiedział Tuthy. Hockrum znowu coś krzyknął i to tak głośno, że usłyszała go Lauren. Tuthy odłożył gwałtownie słuchawkę.
+- Jeśli dobrze zrozumiałem, wylali go z pracy - oznajmił. - Zdaje się, że jest zły. - Postąpił sztywno trzy kroki, odwrócił się, puścił pędem i przeskoczył wyrwę dzielącą go od pierwszego nietkniętego stopnia. - Nie mogę teraz rozmawiać. - Potykając się wlazł na schody i zatrzymał na podeście u ich szczytu.
+- Jezu - jęknął, jak gdyby coś nagle do niego dotarło.
+- Zadzwoni do władz - ostrzegła go Lauren.
+Tuthy zbył to machnięciem ręki.
+- Wiem co się dzieje. Nadają kawałkom z przestrzeni trójwymiarowej czwarty wymiar. Czwarty wymiar. Dobrze mówi Pal: niezgrabni brutale. Mogli nas pozabijać!
+Pal siedział przed Tronclavierem grając radośnie nową melodię. Tuthy podszedł bliżej. Nagle drogę zagrodziła mu gruba, zielona kolumna, twarda jak skała i posiadająca podobną fakturę. Wibrując zakreśliła łuk w powietrzu. Z przestrzeni trójwymiarowej wyrwany został szeroki na metr kawał sufitu. Podmuch wiatru uniósł Tuthy'emu włosy na głowie. Kolumna skurczyła się do wymiarów kija od miotły, na całej jej powierzchni wykiełkowały wijące się jak węże włosy.
+Tuthy obszedł ostrożnie włochaty kij i wyciągnął z kontaktu wtyczkę Tronclaviera. Klatka z brązowych kiełbasek w kształcie cygara otoczyła komputer, zawirowała, wydłużyła się sięgając sufitu, podłogi oraz blatu stolika pod monitor, a potem skurczyła się do cieniutkich włókien i znikła.
+- Nie widzą tutaj wyraźnie - stwierdził Pal, wcale nie poruszony nagłym przerwaniem jego koncertu. Lauren wspięła się na górę zewnętrznymi schodami i stanęła obok Tuthy'ego.
+- Och, przepraszam za te zniszczenia.
+W jednym płynnym ruchu zwijania, niczym nalepki zrywane pośpiesznie z płaskiej powierzchni, usunięte zostały i Tronclavier, i stożek, i całe związane z nimi okablowanie.
+- Ojej - rzucił Pal, a na jego twarzy pojawił się nagle niepokój.
+I teraz przyszła kolej na chłopca. Był przeciągany wolniej, z większą ostrożnością. Na końcu zniknęła jego głowa, która przez kilka sekund unosiła się jeszcze w powietrzu.
+- Zdaje się, że podobała im się ta muzyka - powiedział z uśmiechem.
+Głowa, uśmiech i wszystko inne odleciało w kierunku, którego Tuthy i Lauren nie byli w stanie zaobserwować. Pokój zassał powietrze poprzez otwarte drzwi, a potem z westchnieniem powróciła normalność.
+Lauren stała jak wryta przez kilka minut, a Tuthy łaził po tym, co zostało z laboratorium, przeczesując palcami zmierzwione włosy.
+- Może wróci - powiedział. - Nawet nie wiem... - Ale nie dokończył. Czy trójwymiarowy chłopiec może przeżyć w czterowymiarowej otchłani, czy co tam leży w dórze, albo w gole?
+Tuthy nie sprzeciwiał się, gdy Lauren wzięła na siebie misję zatelefonowania do przybranych rodziców Pala i na policję. Kiedy przybyła policja, zniósł ze stoickim spokojem i nieruchomą twarzą wszystkie pytania oraz oskarżenia. Powiedział im wszystko, co wiedział. Nie uwierzono mu; nikt właściwie nie wiedział, w co ma wierzyć. Obfotografowano cały dom.
+- To tylko kwestia czasu - uprzedziła go Lauren - nim aresztują mnie, ciebie albo nas oboje.
+- A więc ustalmy zawczasu, co będziemy zeznawać - odparł Tuthy. - Powiesz im, że to wszystko moja wina.
+- Nie powiem. Ale gdzie on jest?
+- Nie jestem zupełnie pewien. Sądzę jednak, że nic mu się nie stało.
+- Skąd wiesz?
+Opowiedział jej o śnie.
+- Ale to było wcześniej - zauważyła.
+- W czwartym wymiarze nie ma to żadnego znaczenia - wyjaśnił. Pokazał niezdecydowanie w górę, potem w dół, a potem wzruszył ramionami.
+Ostatniego dnia spędził wczesnoporanne godziny owinięty w płaszcz i szlafrok w pełnym przeciągów laboratorium, puszczając raz po raz swój program i usiłując wyobrazić sobie wizualnie ana i kata. Zamknął oczy, skrzywił się, pokręcił głową i splótł palce. Uzyskał na ekranie monitora dziwne, małe figury, ale nic to nie dało. Jego mózg nie potrafił się nagiąć.
+Przy śniadaniu zanudzał Lauren żeby zrzuciła całą winę na niego.
+- Może to wszystko rozejdzie się po kościach - pocieszyła go. - Nie mają podstaw do wszczęcia dochodzenia. Żadnych dowodów... nic.
+Wszystko rozejdzie się po kościach, pomyślał ponuro przesuwając ręką po głowie i uśmiechając się ironicznie. A jak daleko nigdy się nie dowiedzą.
+Rozległ się dzwonek u drzwi. Tuthy poszedł otworzyć, kilka kroków za nim podążyła Lauren.
+Odtwarzając później wypadki, jakie wtedy nastąpiły, doszła do wniosku, że wydarzyły się one w następującej kolejności:
+Tuthy otworzył drzwi. Na ganku stało trzech mężczyzn w szarych garniturach, jeden z nich trzymał teczkę.
+- Pan Peter Tuthy? - spytał najwyższy.
+- Tak - powiedział Tuthy.
+Z rykiem i syczącym cmoknięciem zniknął kawał ściany nad drzwiami wraz z fragmentem framugi. Trzej mężczyźni spojrzeli na powstałą dziurę. Ignorując to, co niemożliwe najwyższy z nich ponownie skierował swą uwagę na Tuthy'ego i ciągnął:
+- Proszę pana, naszym obowiązkiem jest odprowadzenie pana do aresztu. Otrzymaliśmy informację, że przebywa pan w tym kraju nielegalnie.
+- Och? - zdziwił się Tuthy.
+Obok niego urósł do długości półtora metra nieregularny, przejrzysty pęcherz, który wibrując zawisł w powietrzu. Trzej mężczyźni cofnęli się. Ze środka pęcherza wyłoniła się głowa Pala, a pod nią jego wyciągnięte ramię i dłoń. Tuthy nachylił się. żeby obejrzeć to objawienie. Palce Pala skinęły na niego.
+- Przyjemnie tu - powiedział Pal. - Są przyjaźni.
+- Wierzę ci - odrzekł spokojnie Tuthy.
+- Panie Tuthy - zaczął znów odważnie najwyższy z mężczyzn, chociaż jego głos przeszedł w pisk.
+- Nie pójdziesz ze mną? - spytał Pal.
+Tuthy obejrzał się na Lauren. Skinęła mu nieznacznie głową, ledwie rozumiejąc, na co się godzi, i Tuthy ujął rękę Pala.
+- Powiedz im, że to wszystko moja wina - oświadczył jeszcze raz.
+Poczynając od stóp, a na głowie kończąc, Peter Tuthy został zdarty z tego świata. W powstałą po nim lukę wdarło się powietrze. Znikła połowa mosiężnej lampy przy drzwiach. Bez zadawania dalszych pytań ludzie z urzędu imigracyjnego wycofali się do swojego samochodu z pełnymi spodniami i zakłopotanymi, głęboko poruszonymi minami. Odjechali, pozostawiając Lauren zagłębioną w kontemplowaniu ciszy i spokoju.
+Nie spała przez trzy noce z rzędu, a kiedy wreszcie zasnęła, odwiedzili ją Tuthy z Palem i zadali jej pytanie.
+Dziękuję, ale wolę zostać tutaj, odpowiedziała.
+Tu jest fajnie, jak nie wiem co, nalegał chłopiec. Oni lubią muzykę.
+Lauren potrząsnęła spoczywającą na poduszce głową i obudziła się. Gdzieś niedaleko rozległ się pogwizdliwy, cichutki rodzaj dźwięku, a po nim nastąpiła silna wibracja. Dla niej brzmiało to jak aplauz.
+Westchnęła głośno, po czym wstała z łóżka, by zasiąść nad notatnikiem.
+
+
+Greg(ory Dale) Bear urodził się 20 sierpnia 1951 roku w Kalifornii. Obecnie mieszka na terenie stanu Waszyngton. Pierwsze opowiadanie "Destroyers" opublikował jeszcze jako szesnastolatek (w roku 1967), ale na serio pisaniem zajął się w latach siedemdziesiątych. Debiut powieściowy to "Hegira" (1979). Jego najsłynniejsze powieści, "Blood Music", "The Infinity Concerto" i "Serpent Mage" przygotowują do publikacji Wydawnictwa ALFA. Greg Bear jest laureatem jeszcze dwóch nagród Nebula i jednej Hugo - wszystkie w roku 1984 - za mikropowieść "Hardfought" oraz dłuższe opowiadanie "Blood Music", rozwinięte później w powieść pod tym samym tytułem.
+W.B.
+
+Nagroda Nebula za 1989r. w kategorii "opowiadanie"
+James Morrow
+Opowieści Biblijne dla Dorosłych, Nr 17 - POTOP
+(Bible Stories for Adults, No. 17: The Deluge)
+
+Przełożył Arkadiusz Nakoniecznik
+Zanurz naczynie w Morzu Kaspijskim, unieś je do ust i napij się. Ta woda nie zawsze miała smak soli. Być może gniew Jahwe oczyścił ziemię, ale za to zniszczył morza, zasalając je pogańską krwią i łzami grzesznych sierot.
+
+
+Sheila i jej pokolenie wiedzą, że zbliża się potop. Jahwe przemawia do nich poprzez ich grzechy. Złodziej rozcina sakwę, szekle zaczynają dźwięc0zeć przeraźliwie, nawołując do skruchy. Kapłan klęka przed posążkiem Dagona i rzeźba otwiera marmurową paszczę, by udzielić ostrzeżeń pochodzących nie od niego, lecz od Jahwe. Ladacznica dźga swoje wnętrze kolczastą gałęzią, wydrapując niechciane ciało i krwawiący płód odzywa się nagle boskim głosem. Jesteście zepsutą rasą, mówi Jahwe, brzydzę się wami. Ześlę deszcze, które zmażą was z powierzchni ziemi.
+Jahwe zawsze dotrzymuje słowa. Zaczyna się burza, potoki zamieniają się w rzeki, rzeki w wodospady, a jeziora w kipiące, rozwścieczone morza.
+Tak, trudno byłoby znaleźć kogoś bardziej plugawego od Sheili; w jej jabłku gościło wiele robaków, a zwój z rejestrem jej grzechów byłby tak długi jak Aras. Jest żarłoczna, niechlujna i sprzedaje swoje ciało. Miała już jedenaście aborcji. Powinnam była zrobić i tę dwunastą, uświadamia sobie, kiedy zaczyna się potop. Ale teraz jest już za późno; przeszła przez wszystkie bóle, znacznie okropniejsze od jakiejkolwiek aborcji, a jej piersi pozostały już na zawsze miękkie i zdeformowane. Ani się obejrzała, kiedy chłopiec miał już siedem lat. Był silny, zdolny i ładny, lecz teraz te szybko biegające stopy tkwią w rozszczepionyrn pniu oliwnego drzewa, mądre dłonie unoszą się bezwładnie, a piękna głowa leży pod wodą.
+Sheila słyszała kiedyś, że matka powinna być dla swego dziecka łodzią. w której może ono przetrwać wszystkie burze i sztormy, ale tym razem to Sam ją ratuje, nie ona jego. Utrzymuje jego ciało na powierzchni wody, mając nadzieję osuszyć płuca z mokrej śmierci, kiedy niespodziewanie podpływa do niej małe czółno, zaledwie wydrążony pień, nic więcej, a mimo to ulubiona zabawka chłopca. Często przepływał w nim na drugi brzeg Arasu i chwytał mieszkające na brzegach żółwie.
+Sheila wspina się do czółna, pozostawiając ciało Sama rekinom.
+
+
+DZIENNIK POKŁADOWY
+10 czerwca 1057 po stworzeniu.
+Zwierzęta jedzą zbyt dużo. Jeżeli nic się nie zmieni, to za osiem tygodni skończą nam się zapasy.
+Dla roślinożernych: 4540 funtów owsa dziennie, 6780 funtów siana, 2460 funtów warzyw i 3250 funtów owoców.
+Dla mięsożernych: 17620 funtów mięsa jaków i karibu dziennie. Możemy niebawem stracić cały zapas, jeżeli nie znajdziemy jakiegoś sposobu, żeby go zamrozić.
+
+
+Gniew Jahwe spływa ciężkimi, mokrymi zasłonami, jakby cały świat dostał się nagle pod ogromny wodospad. Sheila wiosłuje bez przekonania, nie mając ani żadnego celu, ani powodu, żeby żyć. Porywisty wiatr wzburza powierzchnię morza, błyskawice pokrywają niebo jaskrawą siatką pęknięć. W wodzie robi sie gęsto od rozkładających się grzeszników; unoszą się na plecach wpatrując się błagalnie w niebo żelatynowymi oczami, jakby prosili Boga o jeszcze jedną szansę.
+Świat cuchnie. Sheila dławi sie odorem. Ciekawe, czy grzesznicy śmierdzą bardziej od sprawiedliwych? Kiedy ona umrze, czy smród bijący z jej ciała odstraszy nawet muchy i sępy?
+Sheila bardzo chce umrzeć, lecz jej ciało ma na ten temat inne zdanie; każe jej unieść twarz i chwytać w usta lejącą się z nieba wodę. Głód stanowi znacznie trudniejszy problem, kąsając jej żołądek niczym skorpion. Cierpienie jest tak wielkie, że Sheila postanawia już dodać kanibalizm do repertuaru swoich grzechów, kiedy na dnie czółna dostrzega dwa wystraszone, zdezorientowane żółwie. Zjada jednego żywcem, zaczynając od głowy, żując skórzaste mięso i wysysając słonawą krew.
+Zza zasłony deszczu wyłania się ogromny, mroczny kształt: Sheila jest przekonana, że to morski potwór, rozgniewany, mściwy, o ostrych zębach... Wcielenie Jahwe, gotów uwolnić świat od jej ciężaru. To dobrze. Unosi z trudem ciężkie niczym młyński kamień wiosło i za-nurza je w wodzie, płynąc wśród utopionych książąt i wzdętych wodą koni ku ogromnemu ucieleśnieniu boskości.
+Bóg jest tuż przed nią i w chwilę potem uderza w jej łódź, miażdżąc ją z łatwością, z jaką krokodyl rozbija uderzeniem ogona skorupki jajek. Sheila znika pod powierzchnią wody, ale jeszcze ma dość czasu, żeby wraz z ostatnim oddechem splunąć w mroczną, pozbawioną wyrazu twarz Jahwe.
+
+
+DZIENNIK POKŁADOWY
+20 czerwca 1057 po stworzeniu.
+Jahwe nie wspomniał nic o rozbitkach, a mimo to dziś rano natrafiliśmy na dwoje.
+Z Testudo marginata nie było żadnego problemu; mamy masę żółwi, a ściślej biorąc wszystkie 255 gatunków - Testudinae, Chelydridae, Platysternidae, Kinosternidae Chelonidae i jeszcze jakich tylko dusza zapragnie. Nieczyste stworzenia, niejadalne, bezużyteczne. Pozostawiliśmy tego marginata w wodzie, gdzie wkrótce umrze.
+Inna sprawa z Homo sapiens. Przerażona, nieprzytomna, przywarła kurczowo do resztek swego czółna niczym uczepiony drzewa leniwiec.
+- Jahwe wyraził się zupełnie jasno - powiedział Cham, opierając się o reling "Raju II". - Wszyscy, którzy nie należą do naszej rodziny, zasługują na śmierć.
+- Jest jedną ze skażonego pokolenia - dodała jego żona. - Ladacznicą. Zostawcie ją.
+- Nie! - sprzeciwił się Jafet. - Musimy rzucić jej linę, jak uczyniłby każdy człowiek honoru.
+Jego młoda żona nie miała na ten temat żadnego zdania.
+Jeżeli chodzi o Sema i Temar, pojawienie się tej ladacznicy stało się dla nich kolejną okazją do kłótni.
+- Jafet ma rację - upierał się Sem. - Pozwól jej wejść między nas, Ojcze.
+- Niech Jahwe zrobi z nią, co zechce - odparła Temar. - Pozwól, żeby potop wypełnił swoje zadanie.
+- A co ty myślisz ? - zapytałem moją żonę. Uśmiechnęła się i wskazała na szalupę.
+Rozkazałem, żeby opuszczono łódkę na wodę. Jafet i Sem powiosłowali w niej po wzburzonej wodzie, oderwali ladacznicę od resztek czółna i wciągnęli ją przez burtę. Z wieloma kłopotami udało nam się wreszcie przenieść ją na pokład "Raju II" i ułożyć na przednim pokładzie. Przypominała lubieżnego morsa, tłustego i rozpasanego. Na grubym karku miała naszyjnik ze szczurzych czaszek. Kiedy Jafet nacisnął jej pierś, wyrzuciła ustami ogromną ilość wody i rozległ się kaszel, podobny nieco do ryku jaka.
+- Kim jesteś? - zapytałem.
+Spojrzała na mnie ze zdumieniem, po czym zemdlała. Znieśliśmy ją na dół, do świń, gdzie jest miejsce stworzeń tak nieczystych jak ona. Moja żona zdjęła z niej przesiąknięte wodą ubranie, a ja skrzywiłem się widząc pokryte strupami, obrzmiałe ciało.
+- Grzesznica czy nie, Jahwe uznał za stosowne ją ocalić - powiedziała moja żona, oblekając ją w suchą szatę. - My stanowimy jedynie narzędzie jego przebaczenia.
+- Być może - odparłem, uderzając słowami jak biczem.
+Ostateczna decyzja zależy, rzecz jasna, tylko ode mnie, nie od moich synów i ich żon. Czy pojawienie się ladacznicy stanowi jakiś test? Czy prawdziwie pobożny człowiek mógłby bez wahania skazać na śmierć ten strzępek ludzkiego śmiecia?
+Jest obrzydliwa nawet wtedy, gdy śpi. Jej włosy są jak hodowla wszy, a oddech jak zatruty wiatr.
+
+
+Sheilę budzi pochrząkiwanie świń. Otacza ją wielka czarna ciemność, wilgotna niczym zanurzony w bagnie kosz. Jej nozdrza płoną, wypełnione setką najróżniejszych zapachów. Wierzy, że została połknięta przez Jahwe i teraz siedzi w jego żołądku.
+Powoli jej oczy wypełniają się światłem. Drewniane wrota skrzynią, uchylając się na sporządzonych ze skóry zawiasach, i wchodzi młody człowiek, niosąc bukłak z winem oraz ugotowany udziec barana.
+- Czy jesteśmy we wnętrzu Boga? - pyta Sheila, unosząc na łokciach swój gruby tułów. Ktoś dał jej suche ubranie. Wypowiedzenie kilku słów kosztuje ją tak drogo, że opada z powrotem na przesiąkniętą zapachem świń słomę. - Czy to jest Jahwe?
+- Jego ostatnie dzieło - odpowiada młody mężczyzna. - Moi rodzice, bracia, nasze żony, ptaki, zwierzęta, a także ja, Jafet. Masz, jedz. - Podaje jej udziec. - Po siedem sztuk wszystkich czystych zwierząt, taki mieliśmy limit. Za miesiąc nic z tego nie zostanie. Korzystaj, póki możesz.
+- Chcę umrzeć. - Ale i tym razem buntownicze ciało ma na ten temat zupełnie inne zdanie; pożera mięso i pije łapczywie wino.
+- Gdybyś rzeczywiście chciała umrzeć, nie trzymałabyś się tak kurczowo szczątków swego czółna - mówi Jafet. - Witamy na pokładzie.
+- Na pokładzie? - pyta Sheila. Jafet jest bardzo przystojny. Widok jego kędzierzawej, czarnej brody budzi w niej uśpione żądze. - Więc jesteśmy na statku ?
+Jafet kiwa głową.
+- "Raj II". Od dziobu do rufy dobre, żywiczne drewno. To teraz cały świat, poza tym nic nie ma. Jahwe najwyraźniej chciał, żebyś tutaj trafiła.
+- Wątpię.
+Sheila wie, że jej wybawienie stanowi pomyłkę. Po prostu została przeoczona. Nikt nie chciał, żeby się tu znalazła, a już na pewno nie Bóg.
+- Ten statek zbudował mój ojciec - wyjaśnia jej młody mężczyzna. - Ma sześćset lat.
+- To ciekawe - mówi Sheila z grymasem niechęci na twarzy. Widziała tego człowieka: zdziwaczały, zasuszony patriarcha, potykający się co chwila o własną brodę. Ostatnie pięćset lat nie uczyniły dlań nic dobrego; wysuszyły tylko jego skórę i pozbawiły robaka zdolności sztywnienia.
+- Jesteś dziwką, prawda?
+Statek kołysze się, zatacza, i to samo dzieje się z żołądkiem Sheili. Unosi bukłak do ust, nadymając winem pulchne policzki.
+- Tak, a oprócz tego pijaczką, złodziejką, morderczynią własnych nie narodzonych dzieci... - szeroki uśmiech odsłania bezzębne części dziąseł - ... a w dodatku jestem zboczona seksualnie.
+Jafet raptownie nabiera w płuca powietrza i cofa się.
+Nazajutrz najpewniej prześpi się z nią, ale na razie Sheila jest wyczerpana i oszołomiona winem. Kładzie skołataną głowę na słomie i zasypia.
+
+
+DZIENNIK POKŁADOWY
+25 czerwca 1057 po stworzeniu.
+Urządziliśmy wyprawę na lodowiec i wnieśliśmy na pokład trzydzieści ton lodu. Mięso jeszcze przez jakiś czas nie zgnije, a nasze pantery, wilki i karnozaury będą miały co jeść.
+Kiedyś byłem świadkiem, jak bałwochwalcy rozprawiali się z banitą.
+Przywiązali go za łokcie do jednego wołu, a za kolana do drugiego, po czym pognali jedno zwierzę na północ, zaś drugie na południe.
+Połowa mej duszy jest przekonana o tym, że powinniśmy przyjąć tę kobietę. Czyż zabijając Ją nie upodobnimy się do tych, których Jahwe skazał na zagładę? Czy grzesząc w ten sposób nie skazimy nowej rasy, którą mamy zapoczątkować? W lędźwiach moich synów spoczywa cała przyszłość świata. Jesteśmy tymi, którzy zachowają gatunek. Jahwe wybrał nas przez wzgląd na czystość naszego nasienia, a nie nieomylność naszych sądów. Nie do nas należy potępianie kogokolwiek.
+Druga moja połowa żąda, żeby wrzucić tę kobietę do wody. Jafet zapewnia mnie, że to ladacznica, a prócz tego pijaczka, złodziejka i morderczyni płodów. Powinna była umrzeć z całą resztą. Nie możemy pozwolić, żeby z jej zdegenerowanego brzucha wyszło na świat jakiekolwiek potomstwo.
+
+
+Sheilę ponownie budzą pochrząkiwania świń, ale tym razem jest wypoczęta, spokojna i już nie chce umierać.
+Po południu do zagrody przychodzi inny młody mężczyzna, chyba jeszcze przystojniejszy od Jafeta. Mówi, że nazywa się Sem i niesie szklankę herbaty, w której pływają trzy przezroczyste kamyki.
+- To lód - wyjaśnia. - Skrzepnięta woda.
+Sheila pije. Zimna herbata w cudowny sposób obmywa jej język i przepłukuje gardło. Lód to wspaniała rzecz, myśli. Ci ludzie wiedzą, jak należy żyć.
+- Gdzie tu się można wysikać? - pyta, a Sem prowadzi ją do małego pomieszczenia o ścianach z trzciny. Kiedy Sheila kończy, Sem zabiera ją na wycieczkę, prowadząc w górę i w dół po łączących wewnętrzne pokłady drabinach. "Raj II" przecieka jak dziurawy namiot, wszędzie słychać monotonne, niepokojące pluskanie.
+Całe to miejsce można porównać do ogromnego zoo. Wszędzie pełno ssaków, gadów, ptaków, wszystkich po dwie sztuki. Sheila ogląda czarne, maleńkie stworzenia o zbyt wielu nogach i ogromne, cylindryczne o zbyt niewielu. Pochrząkiwania, ryki, wycia, jęki i skowyty wstrząsają mokrymi deskami poszycia.
+Sheili podoba się Sem, ale nie jego pływająca menażeria ani szalone przedsięwzięcie. Powoli ogarnia ją wściekłość. Są tu kobry, osy o gotowych do ataku żądłach, młode tyranozaury i allozaury, łakomie zerkające ku zgromadzonym na sąsiednim pokładzie gazelom; wreszcie tarantule, szczury, kraby, łasice, żółwie, dziki, bakterie i wirusy. Jahwe oszczędził je wszystkie.
+Moi przyjaciele nie byli gorsi od tarantul, myśli Sheila. Moi sąsiedzi byli równie ważni, jak łasice. Moje dziecko znaczyło więcej niż bakteria.
+
+
+DZIENNIK POKŁADOWY
+14 lipca 1057 po stworzeniu.
+Deszcz ustał. Dryfujemy na oślep. Moja żona cierpi na chorobę morską. Pomimo lodu zapasy szybko się kurczą. Nie możemy już wyżywić siebie, nie mówiąc o milionie gatunków.
+Wieczorem rozmawialiśmy na temat naszej pasażerki. Zgodnie z przewidywaniami Jafet i Sam optowali za uniewinnieniem, podczas gdy Cham uparł się, że ladacznica musi umrzeć.
+- Zło konieczne? - spytałem go.
+- To wcale nie jest zło - odparł. - Wściekłego psa zabija się po to, żeby nie zaraził innych. Ta kobieta nosi w swoim ciele przyszłych złodziei, zboczeńców i bałwochwalców. Nie możemy dopuścić do tego, by skaziła nowy porządek. Musimy opanować chorobę, dopóki jeszcze istnieje szansa, żeby to uczynić.
+- Nie mamy prawa - zaprotestował Jafet.
+- Jeżeli Bóg może wydać surowy wyrok na miliony grzeszników, to mnie z pewnością wolno to uczynić wobec jednego z nich - odrzekł Cham.
+- Ty nie jesteś Bogiem.
+Podobnie jak ja, ale ja jestem kapitanem statku i przywódcą naszego małego plemienia.
+- Wiem, że mówisz prawdę - zwróciłem się do Chama. - Mając do wyboru ostateczne dobro i chwilową litość musimy wybrać to pierwsze. Cham zgodził się wykonać egzekucję. Wkrótce pozbędzie się ladacznicy, używając tego samego obsydianowego noża, którym, gdy wreszcie ujrzymy ląd, rozprujemy brzuchy jagniąt, składając ofiarę dziękczynną z ich krwi.
+
+
+Sheilę zapędzono do pracy. Wraz z Chamem opiekuje się gadami. Pyehoninae jedzą tylko wtedy, kiedy same zabiją ofiarę, więc Sheila spędza całe popołudnia rywalizując z pokładowymi kotami i łapiąc szczury, które potem wrzuca do zagród pytonów.
+Cham jest najprzystojniejszy spośród trzech braci, ale Sheila nie lubi go. Wyczuwa w nim coś podłego i śliskiego. Chyba słusznie przydzielono mu opiekę nad żmijami i wężami.
+- Co myślisz o Jahwe ? - pyta go.
+Zamiast odpowiedzieć, Cham zerka na nią z ukosa.
+- Kiedy ojciec zachowuje się niewłaściwie - nie rezygnuje Sheila - dziecko reaguje najczęściej w ten sposób, że stara się nie dostrzegać tej niewłaściwości, zdwajając za to wysiłki, żeby być kochanym.
+Cham nadal milczy, mierząc ją dziwnym spojrzeniem. Sheila jednak jest uparta.
+- Gdy zabijałam dzieci, których nie chciałam urodzić, popełniałam morderstwo. Kiedy to samo czyni Jahwe, nazywa to eugeniką. Czy podoba ci się nasz wszechświat, Chamie?
+Nic nie odpowiada, tylko wrzuca szczura do klatki z pytonami.
+
+
+DZIENNIK POKŁADOWY
+17 lipca, 1057 po stworzeniu.
+Osiedliśmy na mieliźnie. Sem nadał miejscu naszego uwięzienia nazwę Arrarat. Rano wypuściliśmy Corvus corax, ale nie wrócił. Wątpię, czy jeszcze kiedykolwiek go zobaczymy. Zostały nam jeszcze dwa kruki, ale nie mogę się zgodzić na rozbicie pary. Następnym razem spróbujemy z jednym z Columbidae.
+Za godzinę ladacznica umrze. Cham otworzy ją, rozlewając jej krew i plugawe wnętrzności, a potem wspólnie wrzucimy jej zwłoki do wody. Dlaczego Jahwe nic nie mówił o rozbitkach?
+
+
+Cham bezszelestnie wślizguje się do świńskiej zagrody, przyklęka nad Sheilą niczym nocna zmora i przykłada ostrze do jej gardła.
+Sheila jest przygotowana. Jafet o wszystkim jej powiedział. Raptowny ruch i wszechświat Chama przewraca się do góry nogami. On sam nagle znajduje się na dole, Sheila na górze, on bezbronny, ona z jego nożem w dłoni.. Jej tłuste ciało wgniata go w słomę. Pozlepiane w strąki włosy łaskoczą go w policzki.
+Teraz należy dokonać gwałtu. Sheila jest w tym specjalistką, wielu bowiem spośród jej najlepszych klientów nie chciało słyszeć o niczym innym. Zręcznym ruchem rozcina od góry do dołu ubranie Chama, wyłuskując go niczym pomarańczę.
+- Stawaj! - mówi, macając jego jądra i robaka. - Stawaj, albo umrzesz.
+Cham drży i poci się. Przerażenie wykrzywia mu usta, lecz nim zdąży krzyknąć, Sheila przesuwa nożem po jego gardle niczym smyczkiem po strunach, rozcinając płytko skórę i upuszczając kilka kropel krwi.
+Jest profesjonalistką. Potrafi podniecić eunuchów, homoseksualistów, skazańców tuż przed egzekucją. Unosi szatę i opuszcza się powoli na erekcję Chama, rozkoszując się jego pozbawioną choćby odrobiny przyjemności namiętnością oraz delektując się twardością w swoim ciele. Wystarczy kilka minut fachowego unoszenia się i opadania by robak Chama wybuchł, napełniając ją jego doskonałym, czystym nasieniem.
+- Przyślij do mnie swoich braci - mówi Sheila.
+- Po co? - pyta Cham, dotykając płytkiej rany na gardle.
+- Oni także mają swoją rolę do spełnienia.
+
+
+DZIENNIK POKŁADOWY
+24 lipca 1057 po stworzeniu.
+Zniknęła nasza szalupa. Możliwe, że odcięła ją ladacznica, nim została zlikwidowana. Nieważne. Dziś rano wysłałem gołębicę, która wróciła niebawem z gałązką w dziobie. Już wkrótce nasze sandały dotkną suchego lądu.
+Moi synowie postanowili oszczędzić mi widoku ciała ladacznicy. To dobrze. W ciągu sześciuset lat mego życia widziałem dosyć martwych grzeszników.
+Dziś wieczorem będziemy śpiewać, tańczyć i zanosić podziękowania do Jahwe, a także złożymy w ofierze najlepsze jagnię.
+
+
+Świat powoli goi rany. Łagodny, chłodny wiatr rozwiewa włosy Sheili, a słońce głaszcze jej twarz. Daleko przed nią białe, skłębione chmury żeglują po czystym niebie.
+W oddali ukazuje się jakiś punkcik. Sheila natychmiast kieruje się wprost na ten punkt, przemierzając bezkresny ocean. Znak pokazał się w samą porę, gdyż zapasy zabrane z "Raju II" starczą jeszcze co najwyżej na tydzień, tym bardziej, że apetyt dopisuje jej jak nigdy.
+Mija piąty tydzień w szalupie, ona zaś wciąż jeszcze nie miała okresu. A Cham to tylko początek, myśli, uśmiechając się przebiegle do glinianego garnka. Jak na razie lód nawet nie zaczął się topić. Nasienie Sema i Jafeta, wyciśnięte z nich pieszczotami i groźbą śmierci, jest bezpiecznie zamrożone. Udało jej się nagromadzić go tyle, że będzie mogła zapełnić cały świat dziećmi. Jeżeli wszystko potoczy się zgodnie z jej planem, to już wkrótce Jahwe będzie musiał zesłać następny potop.
+Punkcik rośnie, by po pewnym czasie zamienić się w ptaka. Corvus Corax, tak pewnie nazwałby go stary człowiek.
+Sheila zdaje sobie sprawę, że jej plany są śmiałe, a nawet zuchwałe; ale czy to oznacza, że niemożliwe do zrealizowania? Ma zamiar dać początek dumnemu, zuchwałemu ludowi, który będzie dążył do rozwiązania tajemnic lodu i słońca; niepokornemu jak ona. Będą żeglować po zalanym wodą świecie tak długo, aż natrafią na doskonały kontynent, porośnięty jedwabistą trawą oraz skąpany w wiecznym świetle, i nazwą go tak, jak każdy powinien nazwać swój dom : Formoza, czyli Piękny.
+Kruk zniża lot i ląduje na garnku z nasieniem, a Sheila czuje przypływ niepohamowanej radości, kiedy wyciąga dłoń i wyjmuje z jego ostrego, lśniącego dzioba zieloną gałązkę.
+
+
+
+James Morrow to autor dość młody (po trzydziestce) który swoje opowiadania drukuje głównie na łamach "Isaac Asimov's Science Fiction Magazine". "Potop" pochodzi jednak z wydanej w 1988 roku antologii "Full Spectrum ". Morrow debiutował powieścią "The Wine of Violence'; dwie kolejne to "The Continent of Lies" i "This Is the Way the World End". Ten ostatni utwór otrzymał w roku 1987 nominację do nagrody Nebula. Na rok 1990 zapowiedziana jest kolejna powieść Morrowa "Only pegotten daugter"; równie świętokradcza jak drukowane dziś opowiadanie.
+W.B.
+
+Jacek Piekara
+
+Ponury Milczek
+
+"- Jakie zbrodnie popełnił? - zaśpiewał Leśny Gnom.
+- Mordował, zdradzał, umyślnie niszczył statki, torturował, szantażował, rabował, sprzedawał dzieci w niewolę, on...
+- Nie obchodzą mnie wasze spory religijne - przerwał Leśny Gnom."
+Jack Vance "Księżycowa ćma"
+
+O'Reilly z niecierpliwością czekał na samolot. Panował wyjątkowy upał, a w pozbawionym klimatyzacji przeszklonym wnętrzu hali przylotów atmosfera była iście szklarniowa. Samolot miał już blisko dwugodzinne opóźnienie, więc O'Reilly opróżniał chyba dziewiąty czy dziesiąty kubek soku. Napój pomagał tylko na chwilę, uwalniając język i usta od spiekoty, ale potem powodował tylko coraz większe pocenie. Koszula przylegała do pleców tak szczelnie, że zaprzestał jej ciągłego odlepiania. Starał się jednak stać nieruchomo i cierpieć w spokoju, wiedząc, że każdy nieopanowany ruch może go narazić na lekceważenie obsługi lotniska, która upał znosiła z możliwą jedynie na Taurydzie całkowitą obojętnością. O'Reilly zazdrościł im lekkich i przewiewnych strojów służbowych; sam musiał niestety założyć na zwykłe ubranie szeroki, ciepły płaszcz powitalny, którego zdjęcie teraz było już absolutnie niemożliwe. Grzał się więc pokornie w dusznej sali, z nienawiścią myśląc o procedurach celnych i medycznych, które zapewne spowodowały opóźnienie samolotu. Zastanawiał się też, kim ma być ta szyszka, której przybycie zapowiadała specjalna depesza z Centrum Federacji. Centrum zwykle nie zawracało sobie głowy byle kim, a i nie fatygowałoby w mało ważnym celu O'Reillego - głównego agenta handlowego na Taurydzie, który miał dość własnych obowiązków i kłopotów, aby jeszcze brać sobie na głowę następny. Depesza była krótka oraz lakoniczna, jak to zwykle wiadomości słynnego ze skąpstwa Centrum. Oznajmiała niedwuznacznie, że "O'Reilly czekać, dwunasta, lotnisko Ganen,...or Jansen". Najbardziej zagadkowy był ów wyraz "...or", który mógł oznaczać, że na Taurydę przybędzie senator Jansen, komandor Jansen, wizytator Jansen, albo Bóg wie co jeszcze, kończące się na "or". O'Reilly przypuszczał jednak, że gościem może być po prostu nowy ambasador, który miał zająć miejsce biednego Henricksa. Centrum zwykle nie zwlekało z obsadzaniem wakujących stanowisk. Ale znowu Tauryda nie była miejscem, do którego dyplomaci dobijaliby się drzwiami i oknami. O'Reilly miał tylko nadzieję, że przyślą kogoś choć trochę znającego miejscowe obyczaje, a nie jakiegoś bubka prosto ze szkoły dyplomatycznej. Czuł, że wtedy jego obowiązki agenta handlowego musiałyby odejść na dalszy plan i ustąpić miejsca obowiązkom nauczyciela. Spojrzał na zegar i zobaczył, że dochodzi wpół do trzeciej. Obiecał sobie, że poczeka jeszcze tylko pół godziny, ale w tej samej chwili kobiecy głos oznajmił z głośników:
+- Lot trzysta dwadzieścia dwa. Samolot z kosmodromu Nagadir wyląduje za trzy minuty.
+Prawie w tej samej chwili do O'Reillego podszedł barczysty mężczyzna w stroju strażnika, z karabinem przewieszonym przez plecy. W momencie kiedy stanął przed agentem, błyskawicznym ruchem zmienił maskę Obojętnego Przechodnia na Przyjaznego Nieznajomego.
+- Proszę za mną - powiedział.
+O'Reilly docenił w pełni ten. gest, który z pewnością był formą przeprosin za tak długi czas oczekiwania. Sam więc też szybko zmienił maski zakładając na twarz Przyjaznego Nieznajomego. Była to czysta kurtuazja, gdyż w stosunku jego do strażnika i strażnika do niego, stosunku całkowicie wynikającym z powinności służbowych, zmiana ta nie była konieczna. Świadczyła jednak o docenieniu przez O'Reillego przyjaznego zachowania funkcjonariusza lotniska. O'Reilly wiedział, że czasami na tych zdawałoby się pozbawionych znaczenia gestach można było zyskać bardzo wiele. Zresztą na Taurydzie, tak naprawdę, istniało mało spraw pozbawionych znaczenia.
+Wyszli na rozpaloną płytę lotniska. Mały, zabierający kilkunastu pasażerów samolot lądował właśnie na sąsiednim pasie. Kiedy podeszli do niego bliżej otworzyły się drzwi, wysunęły schody i z wnętrza wyszedł wysoki, czarnowłosy mężczyzna w jasnym, płóciennym garniturze, z małą walizeczką w ręku. Zszedł na płytę lotniska i stanął przed O'Reillym.
+- Pan O'Reilly, jeśli się nie mylę? - spytał.
+Głos miał miły i matowy. Mówił po angielsku z lekkim, chyba skandynawskim akcentem.
+- Jestem inspektor Jansen - przedstawił się, wyciągając rękę.
+Agent po chwili wahania ujął jego dłoń i z pewnym zakłopotaniem natychmiast wypuścił. "Inspektor", pomyślał. No tak, tego właśnie można było się spodziewać. Ale, Boże, to przecież gorsze, niż nieudaczny ambasador. Inspektor to wręcz klęska. W O'Reillym powoli dojrzewała myśl o złożeniu natychmiastowej rezygnacji. No, co tu się będzie działo! Jezu, lepiej nawet o tym nie myśleć. Po Jansenie od razu było widać, że Taurydę zna, nie, nawet cholera nie z książek. Jego znajomość tej planety ogranicza się chyba tylko do samej nazwy. Ale przecież mógł mu ktoś powiedzieć, żeby założył na twarz maskę. I nie chodzi tu wcale o obsługę lotniska, bo oni są przyzwyczajeni do cudzoziemców, ale o to, że wiadomość się rozniesie i Jansen będzie z miejsca stał na straconej pozycji. A pozycja społeczna O'Reillego też może na tym ucierpieć.
+- Chciałbym, aby pan przed wejściem do hali założył maskę - poprosił grzecznie agent.
+Jansen wzruszył ramionami.
+- Czy to konieczne? - spytał.- Jest taki upał, nie wiem dlaczego nie zdejmie pan tego gówna z twarzy.
+O'Reilly zmartwiał. Dopiero po chwili dotarło do niego, że te słowa wypowiedział człowiek obcy, nie znający zwyczajów, zwykły glina z Ziemi. Jezu, a pomyśleć, że lewa ręka na sam dźwięk tych słów skoczyła po maskę Szalonego Wojownika, a prawa dłoń schowała się w fałdy płaszcza w poszukiwaniu rękojeści miecza. No, będzie cyrk z tym Ziemianinem. Trzeba przyznać, że już start mu się udał. Gdyby na miejscu O'Reillego był jakikolwiek Taurydańczyk, Jansen leżałby na betonie z rozwalonym łbem - a stałoby się to tak szybko, że nie zdążyłby nawet pomyśleć, a co dopiero obronić się.
+- Niech pan posłucha - rzekł już ostro.- Ma pan założyć maskę!
+Lewa dłoń instynktownie, sama, bez udziału myśli, ustawia się prostopadle do ciała na wysokości brzucha. Gest ten oznaczał "rozkazuję!" i stosowało się go w stosunku do osób o bardzo niskiej pozycji społecznej. Użyty w innym wypadku był powodem do natychmiastowego pojedynku. O'Reilly wiedział, że przyzwyczajony do beznamiętnego i monotonnego tonu głosu mógł nie. oddać słowami wagi tego polecenia, ale Jansen usłuchał.
+- No, dobra - mruknął.- Da mi pan jedną ze swoich?
+Agent zastanowił się. Najlepszy będzie Ponury Milczek, choć szczerze mówiąc, jej noszenie w większości przypadków nie jest powodem do chwały. No, ale za to nikt nie zaczepi Jansena, a to już ważne. Zabicie Ponurego Milczka było dyshonorem dla mordercy. Maskę tę bowiem zakładał człowiek, który przeżył wielki szok psychiczny i w ten sposób prosił o przebaczenie mu jego ewentualnych uchybień, które wynikają ze złego stanu zdrowia. Faktem jednak jest, że długotrwałe używanie maski było nieco poniżające. No, ale lepsze to niż nic.
+Jansen założył posłusznie maskę i, nic już nie mówiąc, skierowali się w stronę drzwi do hali przylotów. Kiedy inspektor chciał pierwszy przejść przez próg, O'Reilly zdążył złapać go za rękę.
+- Po mnie - powiedział i wszedł do środka, a zdziwiony, dotknięty Jansen za nim. Samochód czekał na ulicy. Agent usiadł za kierownicą, wpuszczając inspektora na miejsce obok siebie.
+- Ładnie witacie tu gości - powiedział Jansen ze złością.
+"No, i jak mu to wytłumaczyć w kilku słowach?" - pomyślał bezradnie O'Reilly. - "Boże, dzisiaj wysyłam rezygnację."
+- Po co pana przysłali? - spytał, decydując się nie wyjaśniać na razie niczego.
+- Jak to po co? - zdziwił się inspektor: Kazano mi zbadać sprawę śmierci naszego ambasadora. Szczerze mówiąc, pana raport nie zachwycił Centrum.
+No i nic dziwnego. Jaki można napisać raport z Taurydy, przeznaczony dla bezdusznych urzędasów Centrum? Znając ich mentalność, gdyby napisał prawdę, przysłaliby tu nie inspektora a krążownik bojowy.
+- Pan orientuje się w sprawach Taurydy? - zapytał, właściwie niepotrzebnie, bo pewien był przeczącej odpowiedzi.
+- No cóż - mruknął Jansen z zakłopotaniem. - Dostałem materiały, ale szczerze mówiąc nie zdążyłem ich przeczytać. Ale znam taurydański. A poza tym, Centrum liczy, że okaże mi pan wszechstronną pomoc. - Położył nacisk na ostatnie zdanie.
+O'Reilly jęknął w duchu. To, że Jansen zna język Taurydy, tylko komplikowało sytuację. Możliwość popełnienia przez niego błędu zwiększała się kilkakrotnie. Zresztą, cóż to mogła być za znajomość? Aby poznać wszelkie jego niuanse i szczegóły znaczeniowe oraz zyskać możliwość wyrażania myśli trzeba było studiować ten język co najmniej kilka lat, a potem długie lata zapoznawać się z nim na miejscu, gdyż tylko obcowanie na żywo z tą ciągle zmieniającą się mową mogło przynieść jakieś korzyści. Jeżeli Jansen znał tylko język literacki (a nic nie wskazywało na to, aby było inaczej), to możliwość popełnienia przez niego znaczącego błędu na samym początku równała się stu procentom.
+A na Taurydzie za błędy się płaciło. Czasem nawet najwyższą cenę. Biedny Henricks.
+Jechali przez wyludnione miasto. Między godziną dwunastą a czwartą rzadko kto spaceruje po rozpalonych ulicach. Przez te cztery godziny Taurydańczycy odpoczywają na tyłach swoich białych, schludnych domków, gdzie zwykle mieszczą się małe ogrody i baseny. W cieniu ogrodowych drzew oddają się zajęciu; które oprócz poezji, muzyki i walki lubią najbardziej: błogiemu leniuchowaniu. Potem ulice się ożywiają. Gdy słońce zacznie chylić się ku zachodowi otworzą się sklepy, lokale, przekupnie wystawią swoje kramy, rozpocznie się czas towarzyskich wizyt. Ale to dopiero za godzinę.
+- Daleko jeszcze? - zapytał Jansen, rozpinając guziki koszuli. - Skonać można w tym gorącu.
+- Zaraz będziemy na miejscu - odpowiedział O'Reilly.
+- Chcę usłyszeć od pana prawdziwą wersję wydarzeń - oznajmił inspektor. - Bez tych wszystkich dwuznacznych bzdur z raportu.
+Agent zacisnął mocniej dłonie na kierownicy. Ten idiota znieważył go po raz trzeci i, słodki Boże, nie miał o tym zielonego pojęcia.
+- Oczywiście - odparł. - Ale nie sądzę aby łatwo było panu zrozumieć to, co tu zaszło.
+- Dobra. Zacznijmy od początku. Kto go zabił? -tyfrathon Kanderu Gardemuus.
+- Co to znaczy?
+- Tyfrathon to tytuł - odparł O'Reilly - Kander, to prowincja skąd pochodzi jego ród, a Gardemuus to imię.
+- W porządku. Co takiego zrobił Henricks, że został zmordowany?
+O'Reilly zatrzymał wóz przed jednym z białych domków i wysiadł. Jansen wyszedł za nim. Drzwi otworzył im niewolnik O'Reillego.
+- Kąpiel przygotowana, panie - oznajmił, pochylając głęboko głowę na znak szacunku.
+Inspektor sięgnął dłonią by zdjąć maskę, ale agent zauważył to w porę i powstrzymał jego rękę w pół ruchu.
+- Jak zostaniemy sami - rzekł. - Przy niewolnikach nie wolno panu zdejmować maski.
+- Coś takiego? - zdumiał się Jansen. - Pan ma niewolników? Widzę, że dojdzie mi parę smaczków do raportu.
+O'Reilly westchnął ciężko w duchu. Jak wytłumaczyć Jansenowi, że człowiek o jego pozycji społecznej musi mieć co najmniej kilku niewolników? Już i tak patrzono na niego ze zdziwieniem, że zawsze sam prowadzi wóz, ale on nie miał zaufania do szoferskich umiejętności Taurydańczyków.
+Weszli do obszernego białego pokoju. Podłoga wyścielona była grubym futrzakiem o długim włosiu, w kącie stało łoże zrobione z kilku olbrzymich poduch nakrytych dywanem, a obok niego leżały cztery wygodne pufy z brązowej skóry i przeszklona szafka-chłodnia z napojami. Jansen z westchnieniem ulgi opadł na pierwszy z brzegu puf.
+- Wstać - rozkazał po taurydańsku O'Reiłly, błyskawicznie zmieniając maskę Przyjaznego Nieznajomego na maskę Urażonego Dobroczyńcy. Lewą ręką wykonał ruch jakby otwierał wachlarz - gest rozczarowania.
+- Poproś o przebaczenie - powiedział szybko po angielsku do wstającego powoli Jansena.
+- Prze-przepraszam - zająknął się inspektor.
+Taurydańskiego używał poprawnie, aczkolwiek miał ten niepokojący akcent Południowych Wysp, a przybysze stamtąd nie byli specjalnie mile widziani w stolicy. O'Reilly zmienił maskę Urażonego Dobroczyńcy na Wybaczającego Władcę, usiadł wygodnie na łóżku, przetrzymał chwilę w miejscu stojącego Jansena, po czym dał mu znak, aby usiadł. Potem gestem odprawił niewolnika.
+- Co ma znaczyć ta cała szopka? - wybuchnął inspektor.
+O'Reilly z ulgą zdjął z ramion płaszcz i włożył go do szafy. Potem nalał sobie i Jansenowi po szklaneczce soku prosto z chłodni.
+- Nie wolno panu siadać wcześniej niż usiądzie gospodarz - wyjaśnił. - Może to być uznane za celową zniewagę. W ten sposób daje mi pan poznać, że jest pan lepszy ode mnie. Gospodarz nie może na to pozwolić, bo utraci honor.
+- Cholera - zaklął Jansen. - Dużo oni jeszcze mają podobnych idiotyzmów?
+- Sporo - odparł z namysłem O'Reilly. - Jeżeli chce pan czegokolwiek tu dokonać musi się pan ich nauczyć i dostosować do nich. muszą stać się pana drugą naturą.
+- Nie zamierzam tu długo siedzieć - burknął inspektor. - Wysmażę raport i wio do domu. Dobra, ale niech mi pan powie, co znaczyło to zmienianie masek i tak dalej. Cała ta szopa zrobiona po to, żeby niewolnik przypadkiem sobie nie pomyślał, że pana obraziłem.
+Agent zdjął z twarzy maskę i otarł dłonią pot z twarzy. Jansen poszedł w jego ślady z nieukrywanym zadowoleniem.
+- Ta maska - powiedział, pokazując ją inspektorowi - to Wybaczający Władca. Stosuje się ją darowując komuś przewinę. Używana w stosunkach pomiędzy przełożonym a podwładnym bądź w stosunku do ludzi o niższej pozycji społecznej. Założona w obecności kogoś o wysokim prestiżu może stać się powodem pojedynku.
+- Barbarzyństwo - rzekł z przekonaniem Jansen. - A poprzednia?
+- To był Urażony Dobroczyńca. Stosuje się ją do osób, które zawiodły zaufanie i które odpłaciły lekceważeniem za wyświadczoną przysługę. Ja zaszczyciłem pana, mającego na twarzy Ponurego Milczka, a więc maskę człowieka o nikłej pozycji, zaproszeniem do swego domu, a pan chciał mnie obrazić. Jeżeli nie usłyszałbym przeprosin mógłbym wyrzucić pana z domu, co pozbawiło by pana honoru, bądź wyzwać na pojedynek. Ale zabicie Ponurego Milczka jest odbierane jako dyshonor, zrobiłbym więc to pierwsze.
+- Pan by mnie na prawdę wyrzucił? - inspektor otworzył szeroko oczy.
+- Nie pozostawałoby mi nic innego - wyjaśnił obojętnie O'Reilly. - A wtedy jedynym sposobem by nie zostać tu poturbowanym byłby dla pana szybki wyjazd.
+- Cholera - Jansen stuknął pięścią w otwartą dłoń. - Ale przecież przyjeżdżają tu cudzoziemcy. No, turyści, naukowcy i tak dalej.
+O'Reilly aż zamarł na moment, ale zaraz się opanował. Cały czas zapominał, że ma do czynienia z cudzoziemcem nie znającym symboliki gestów.
+- To prawda - odparł po chwili - Ale oni chodzą bez masek. Traktowani są grzecznie, lecz ich pozycja jest równa zeru. Obraza z ich ust nie jest obrazą, a splamienie sobie rąk ich krwią byłoby hańbą. To miasto, jak żadne inne, panie Jansen. Człowieka z odsłoniętą twarzą nie spotka tu żadna krzywda, nawet gdyby udał się w najbardziej zakazane miejsce z walizką pełną pieniędzy.
+- To wspaniałe wyjście dla tajnej policji - zauważył bystro.
+O'Reilly spojrzał na niego. "Nic nie rozumie", pomyślał bezradnie. No, ale to wymaga czasu. Tauryda jest rzeczywiście skomplikowanym organizmem społecznym.
+- Niestety nie - odparł. - Jakiż szanujący się człowiek przyjąłby raport od podwładnego wiedząc, że pełnił on służbę bez maski? Potworna hańba.
+- No nie - roześmiał się Jansen. - Dać tu kilku naszych, a w trymiga zrobiliby porządek z przestępczością.
+Tak. Z pewnością. Był taki jeden co próbował podobnie. Oficer policji Nykkanuus, szlachetnie urodzony, bardzo zdolny. Zbyt sprytny. Aż dziwne, że wychowany na Taurydzie mógł wpaść na podobny pomysł. Źle skończył.
+- Ale dobra - inspektor potarł brodę knykciami. - Niech pan mówi o Henricksie.
+O'Reilly cały czas zastanawiał się, czy wyjawić prawdę. W gruncie rzeczy wynik inspekcji Jansena był mu całkowicie obojętny. Dawno już uniezależnił się od pensji płaconej mu przez Centrum i jak na taurydzkie warunki był człowiekiem w miarę majętnym. Tak więc ze strony Centrum nic mu nie groziło, ale taurydańskie obyczaje nauczyły go dbałości o własny honor i dlatego udowodnienie kłamstwa i wyrzucenie z posady (co by niewątpliwie nastąpiło) byłoby wielce nieprzyjemne i obniżyłoby rangę O'Reillego w jego własnych oczach. Postanowił więc mówić prawdę, choć wiedział, że nie będzie to zadanie łatwe.
+- Wracamy do pańskiego pytania - podjął agent. - Co zrobił Henricks? Otóż Henricks popełnił błąd i śmiertelnie obraził tyfrathona Gardemuusa.
+- Czy może usiadł przed nim? - spytał złośliwie Jansen.
+- Henricks był człowiekiem o wysokiej pozycji społecznej - ciągnął O'Reilly nie zwracając uwagi na zaczepkę. - Jego dom odwiedzał kwiat miejscowej arystokracji.
+- W szczególnie zażyłych stosunkach był właśnie z Gardemuusem, od którego otrzymał prawo odwiedzania w czasie odpoczynku...
+- Co to znaczy? - przerwał inspektor.
+- Między dwunastą a czwartą - wyjaśnił agent. - Zauważył pan, jak wyludnione były ulice w czasie naszego przejazdu z lotniska? Właśnie był czas odpoczynku. Zezwolenie na odwiedziny w tym czasie jest najwyższym wyrazem zaufania. Na dobrą sprawę uznaniem za członka rodziny.
+- No to fajnie. Ale dlaczego go zabił?
+- Henricks zakochał się w córce tyfrathona. Małżeństwo to było możliwe, chociaż pozycja Gardemuusa nieco by ucierpiała...
+- Co? - krzyknął Jansen. - Chce pan powiedzieć, że pozycja jakiegoś miejscowego szlachetki ucierpiałaby, gdyby jego córka wyszła za ambasadora Federacji? O'Reilly wiedział, że musi być cierpliwy. Ale myśl o rezygnacji stała się decyzją.
+- Tyfrathon Gardemuus - odparł - to arystokrata od stu dwunastu pokoleń. Od takiego też czasu jego ród włada Kanderem. Jest kilkudziesięciu ludzi na całej planecie, których jego córka mogłaby poślubić nie narażając pozycji ojca. A Gardemuus marzył o jej związku z następcą taurydańskiego tronu, co uczyniłoby go trzecią osobą na planecie. Rozumie pan teraz?
+- Rozumiem, ale przecież go chyba nie zabił tylko za to?
+- Oczywiście, że nie - O'Reilly machinalnie rozwinął stuloną do tej pory pięść na wysokości piersi - (znak zdumienia). - Oświadczyny ambasadora Federacji i prawie że członka rodziny nie godziły w honor Gardemuusa.
+- Więc co?
+Teraz przychodził czas aby przejść do najtrudniejszej części opowiadania. Jak człowiekowi pokroju Jansena wytłumaczyć złożoność sprawy, uwarunkowaną wieloletnimi tradycjami i powodującą, że fakt, który na Ziemi uznano by za morderstwo, tutaj był tylko splotem nieszczęśliwych okoliczności, a śmierć Henricksa nie stała w kolizji z żadnymi przepisami prawa ani etyki? Należało zacząć od początku.
+- Zdołał pan zapewne zauważyć - powiedział po namyśle - wyjątkową rolę masek w kontaktach międzyludzkich. Każdy z nas nosi u pasa przynajmniej z dziesięć różnych masek, które odzwierciedlają nasz stosunek do rozmówcy. Nie czas tutaj, abym tłumaczył panu całą złożoność tradycji i zwyczaju z tym związanego. A nie są to znowu sprawy łatwe do pojęcia dla kogoś, komu Tauryda jest zupełnie obca. Wracając jednak do sprawy. Henricks ubrany w najbardziej ceremonialny strój odwiedził pewnego dnia Gardemuusa. O przyjaźni jaką tyfrathon dla niego żywił może świadczyć założenie przez niego, gdy zobaczył ambasadora, maski Drogiego Przyjaciela. Zwykle człowiek o pozycji Gardemuusa ma tylko kilku, no, góra kilkunastu ludzi, w obecności których używa tej maski. Po pewnym czasie, który upłynął im na zwyczajowej, ceremonialnej rozmowie, Henricks założył maskę Pokornego Jałmużnika i wyłuszczył swoją prośbę. Kiedy wspominał ukochaną zmienia Pokornego Jałmużnika na Płomiennego Kochanka. Słowa oświadczyn są sformalizowane, ale użycie tych dwóch masek zastępuje wyznanie gorącej miłości połączone z kornym błaganiem. Na Taurydzie jest to najbardziej żarliwa forma oświadczyn.
+- Ależ oni sobie komplikują życie - zauważył Jansen. - No i co dalej?
+- Gardemuus nie chciał przyjąć tych oświadczyn; ale nie miał zamiaru też narażać na szwank przyjaźni z Henricksem, którego naprawdę lubił i cenił. Dlatego też przywdział maskę Dobrotliwego Ojca i odmówił. Wtedy Henricks powinien dać sobie spokój. Znał tutejsze obyczaje na tyle, że wiedział, iż nic już nie będzie w stanie zmienić decyzji Gardemuusa. On jednak ponowił prośbę. No cóż, miłość zaślepia - O'Reilly pociągnął długi łyk zimnego napoju. - I wtedy tyfrathon zmienił maskę na Wybaczającego Władcę. Było to wyraźne ostrzeżenie, że dalsze nalegania mogą spowodować zerwanie ich przyjaźni. Dalej już mogło dojść tylko do tego, że założyłby Obojętnego Przechodnia dając Henricksowi do zrozumienia, że nie mają o czy mówić. No cóż, to byłaby już obelga i przyjaźń zostałaby zerwana: Henricks doskonale o tym wiedział, ale był już bardzo zdenerwowany. Wydaje mi się, że chciał zakończyć tę niezwykle kłopotliwą dla nich obu scenę, a mógł to zrobić zakładając Płomiennego Kochanka, co zresztą uczynił, i zmieniając ją potem na Ponurego Milczka. Byłaby to jak najbardziej właściwa forma prośby o wybaczenie niezręczności spowodowanej miłosnym zaślepieniem i w stosunkach pomiędzy przyjaciółmi nie pozostawiłaby zadrażnień. No, ale wtedy Henricks się pomylił.
+- I cóż takiego zrobił?
+- Wyciągnął maskę Barbarzyńcy i ją właśnie założył.
+- I co? - spytał bez specjalnego zainteresowania w głosie Jansen.
+- I wtedy Gardemuus go zabił - dokończył O'Reilly.
+Inspektor patrzył na niego przez chwilę osłupiałym wzrokiem.
+- Jak, to? - wyjąkał w końcu.
+- Barbarzyńca oznacza rozkaz, wymuszenie, groźbę. Używa się jej tylko w stosunku do ludzi bez honoru, najniższej służby, bądź też jeżeli chce się kogoś śmiertelnie obrazić. W przełożeniu na słowa założenie Barbarzyńcy oznaczałoby tyle co: "moje pożądanie jest tak wielkie, że jak mi jej nie oddasz, to cię zabiję". Ale to nie w pełni oddaje obelżywość tej sceny. Gardemuus roztrzaskał mu głowę rytualną buławą. Zrobił to, sądzę, tak szybko, iż nie zdążył się nawet zastanowić nad tym, że postępowanie Henricksa musiało być wynikiem tragicznej pomyłki. Zagrała w nim krew stu dwudziestu arystokratycznych pokoleń. No i stało się.
+- Straszne, okropne, niesamowite - Jansen z trudem przyjmował do wiadomości słowa agenta. - Czy tu do cholery nie ma żadnych sądów na tej przeklętej planecie?
+- Są - odparł O'Reilly. - I Gardemuus był sądzony zgodnie z prawem.
+- No i? - zmarszczył brwi Jansen.
+"Boże", pomyślał O'Reilly, "dlaczego obiecałem sobie mówić prawdę i tylko prawdę? Przecież to rozmowa jak ze ślepym o kolorach, A może i gorzej."
+- Sąd, któremu, nawiasem mówiąc, przewodniczył sam radca królestwa, wyraził swoje uznanie tyfrathonowi za tak ścisłe wykonanie zalecanych przez zwyczaj obowiązków.
+- Jezu! - Jansen był naprawdę wstrząśnięty. Ale z wolna wściekłość zaczęła brać górę. Wstał i chodząc wzdłuż ścian pokoju walił pięścią w otwartą dłoń. O'Reilly o mało nie podskoczył z wrażenia.
+- Koniec z tym - warknął wreszcie: Ja tu zrobię porządek, bo pan, panie O'Reilly - tu spojrzał ostro w stronę agenta - zbytnio już chyba nasiąkł tymi barbarzyńskimi zwyczajami. No nie, do czego to doszło, ambasador Federacji zabity i nic! - mówił dalej kręcąc się po pokoju. - To im nie ujdzie płazem. Dziś jeszcze wysyłam raport, a panu radzę - znów ostre spojrzenie na O'Reillego - napisać natychmiastową rezygnację. To chyba lepsze od wywalenia na zbity pysk!
+- Miałem taki zamiar - odparł sucho agent.
+- Aha, jeszcze jedno. Chcę dziś jeszcze mówić z tym przewodniczącym sądu. Sądu - prychnął pogardliwie. - Parodia. Niech go pan tu wezwie.
+"Wezwie", powtórzył w myślach O'Reilly. Tak jakby radcę królestwa mógł ktokolwiek wzywać.
+- To niemożliwe - odparł.
+- Pan chyba nie zrozumiał jeszcze, że reprezentuję tu władze Federacji. Jedno moje słowo, a wyląduje pan przed sądem. I to nie przed jakąś miejscową parodią, a dobrym, ziemskim trybunałem.
+Przed sądem. Miły Boże. Czy ten dureń sądzi, że tak łatwo byłoby wywieźć z tej planety Rogera O'Reillego, agenta handlowego, człowieka o wysokiej pozycji społecznej i przyjaciela wielu osobistości? Jego nieobecność wywołałaby na tyle duże zamieszanie finansowe, że zbyt wielu Taurydańczyków zaangażowanych w prowadzone przez niego interesy miałoby spore kłopoty. A Taurydańczycy nie cierpieli kłopotów.
+- A co się dzieje z tym człowiekiem? - zapytał nagle wstając Jansen.
+- Z kim?
+- Z tym całym Gardemuusem! - wrzasnął inspektor.
+- Tyfrathon Gardemuus zrozumiał, że śmierć przyjaciela spowodował tragiczny błąd - objaśnił spokojnie O'Reilly - i mimo korzystnego wyroku sądu przywdział maskę Ponurego Milczka oraz udał się na wyprawę pokutną.
+- Co to znaczy? - spytał nieprzyjaźnie Jansen.
+- To znaczy, że dobrowolnie zrezygnował na czas pokuty ze swej społecznej pozycji, wygód, dostatku i przyjemności. Według wierzeń Taurydy, kiedy skończy się czas tułaczki pokutnej, Gardemuus będzie znów przyjacielem Henricksa i w przyszłym życiu będą jak najukochańsi bracia.
+- Co za bzdury! Powiem panu, co czeka tego Gardemuusa. Dobry, uczciwy sąd wojskowy na Ziemi. I jeżeli sędziowie będą mieli choć odrobinę zdrowego rozsądku, to sześć kul od plutonu egzekucyjnego.
+- Niech pań posłucha - O'Reilly podjął ostatnią próbę przekonania inspektora. - Panu kara jaką nałożył na siebie tyfrathon może wydawać się śmieszna, ale to z jego strony wielkie poświęcenie. Przecież surowość kary można rozpatrywać tylko w odniesieniu do społecznych i historycznych tradycji i zwyczajów danego narodu. Kiedyś na Ziemi Arabowie karali przestępców obcięciem prawej dłoni. W Europie taki człowiek nie tracił nic, poza tym oczywiście, że stawał się kaleką, ale w krajach arabskich dodatkowo był automatycznie wyklęty ze społeczności. Nie mógł jeść ani mieszkać razem z innymi, uważano go za pariasa i...
+- Co mi pan wyjeżdża z takimi duperelami! - uniósł się Jansen. - choćby pan rok gadał, to ja wiem swoje.
+- A jak pan zamierza zmusić Gardemuusa, by opuścił Taurydę? - spytał O'Reilly.
+- Jak? Powiem panu jak. Jutro wezwę najbliższy krążownik i załatwię tę sprawę raz dwa. Mam pełnomocnictwo drugiego stopnia, panie O'Reilly, a chyba wie pan, co to oznacza?
+O'Reilly wiedział. Rzeczywiście, każdy statek bojowy przybędzie na jego wezwanie. No, a to niestety oznaczałoby wojnę. Tauryda nie da bezkarnie porwać jednego ze swych najczcigodniejszych obywateli. Wiedział, co teraz należy robić. Sprawy zaszły zbyt daleko. Trzeba będzie jednak poprosić radcę królestwa Natymuusa, aby raczył przybyć.
+- Chciał pan rozmawiać z przewodniczącym sądu? - spytał O'Reilly. - Postaram się więc skłonić go do przybycia.
+- No, no - zauważył protekcjonalnie Jansen. - Nabiera pan rozsądku, co? Drugi stopień to nie w kij dmuchał, nie?
+Agent wystukał na klawiaturze telefonu zastrzeżony numer Natymuusa. Na szczęście telefon odebrał sam radca. Po ceremonialnych powitaniach O'Reilly powiedział:
+- Jak pan zapewne wie, ekscelencjo, goszczę u siebie znamienitego wysłannika Federacji Solarnej pana Jansena. Pan Jansen uniżenie prosi, aby raczył pan przybyć, gdyż chce złożyć panu wyrazy najszczerszego szacunku i osobiście podziękować za sprawiedliwy wyrok w sprawie szlachetnego tyfrathona Gardemuusa. Ponieważ pan Jansen już jutro musi opuścić wasz wspaniały kraj, pragnąłby spotkać się z panem, ekscelencjo, jeszcze dzisiaj.
+Radca królestwa był zadowolony. To, że wysłannik federacji Solarnej w czasie swego pobytu na Taurydzie będzie widział się tylko z nim znacznie podniesie jego prestiż. Dlatego też zgodził się chętnie: obiecał, że będzie nie później niż za dwie godziny, jeżeli oczywiście ekscelencja pan Jansen zechce czekać tak długo. Ponieważ pan Jansen ustami agenta O'Reillego obiecał czekać choćby do północy. Natymuus pożegnał się ceremonialnie i rozłączył.
+- Co za bzdur mu pan nagadał? - spytał inspektor.
+- Inaczej by nie przyjechał - odparł krótko O'Reilly. - A teraz najwyższy czas na kąpiel - zdecydował - Jestem pewien, że łazienka dla pana jest od dawna gotowa.
+Leżał w seledynowej, ciepłej wodzie pachnącej bukietem ziół. Kiedy umył się już i spłukał mydło pod prysznicem wyszedł z wanny, przypominającej kształtem konchę muszli, i pozwolił się osuszyć nagim niewolnicom. Z przyjemnością spoglądał na ich smagłe ciała o pełnych piersiach i smukłych udach. Jansenowi na wszelki wypadek dał niewolników. Bał się, że inspektor zbyt dosłownie odebrałby obecność nagich kobiet podczas swej kąpieli, a każda zaczepka z jego strony obniżyłaby prestiż O'Reillego. Miał nadzieję, że Jansen nie będzie zaczepiał niewolnikówˇ.
+Potem kobiety starannie go wymasowały oraz natarły ciało olejkami. Wreszcie poczuł, że zmęczenie ustąpiło i jest jak świeżo narodzony. Przeszedł do garderoby. Założył najbardziej ceremonialny strój, zielony kaftan szamerowany złotem i ciemnogranatowy płaszcz lamowany żółtym futrem molkara. Potem przypasał miecz w złoconej pochwie. Przejrzał się z zadowoleniem w lustrze. No, teraz wyglądał wystarczająco godnie, by móc przyjąć radcę królestwa. Założył maskę Gościnnego Gospodarza i poszedł do pokoju, gdzie siedział już odświeżony Jansen. Kąpiel poprawiła mu humor.
+- Niech pan zmieni maskę - poprosił O'Reilly. - Ponury Milczek jest niezbyt odpowiedni na przyjęcie takiej osobistości. Wydaje mi się, że ta będzie najlepsza. Wyciągnął w jego stronę Przyjaznego Nieznajomego, a Jansen założył tę maskę i oddał mu niepotrzebnego już Ponurego Milczka. W milczeniu czekali na przybycie Natymuusa. O'Reilly pewien był jak potoczy się rozmowa z dostojnym radcą i ze stuprocentową dokładnością mógł przewidzieć jej finał. Właściwie miał wątpliwości, czy postępuje słusznie, ale wiedział, że wyjdzie to tylko wszystkim na dobre. No, może prawie wszystkim.
+Tymczasem jednak zastanawiał się leniwie nad tym, w jakiej masce i w jakim stroju przybędzie Natymuus. Prestiż O'Reillego był na tyle duży, iż wymogom grzeczności odpowiadałby jedynie ceremonialny strój gościnny zakładany na wyjątkowe okazje, a maska, no cóż, łatwo się domyślić, że radca założy Przyjaznego Nieznajomego. Ich stosunki są zbyt luźne, aby przyszedł w Dobrym Towarzyszu. Agent mógł jednak iść o zakład, że radca wychodząc z jego domu będzie miał na twarzy Dobrego Towarzysza, a kto wie, czy nie Drogiego Przyjaciela. Ale to pokaże czas. Już za jakieś dwie godziny wszystko powinno się rozstrzygnąć: przyszłość O'Reillego, przyszłość Jansena i przyszłość Taurydy. Da Bóg, to cała sprawa odbędzie się jak należy. Zgodnie z prawem, etyką i dobrymi zwyczajami.
+- Kiedy przybędzie radca - powiedział agent - proszę starać się mówić jak najmniej i nie gestykulować. Tutaj gesty mają specyficzne znaczenia i wiele z nich może być potraktowanych jako zniewaga. Niech pan o tym pamięta.
+- Dobra, dobra - odparł niegrzecznie inspektor. - Niech się pan nie martwi. Postaram się nie urazić tego dostojnika. - Ostatnie słowo wymówił z lekką drwiną w głosie.
+Niedługo potem dźwięczny głos gongu obwieścił przybycie Natymuusa. Niewolnicy wprowadzili radcę do pokoju, po czym cicho wynieśli się zamykając drzwi. Gość był wysokim, szczupłym człowiekiem o pełnych energii ruchach. Pomimo siwych włosów i znamionującego leciwyˇ wiek głosu, trzymał się prosto jak świeca. Ubrany był rzeczywiście w strój, o jakim myślał O'Reilly, a i przypuszczenia agenta co do maski Przyjaznego Nieznajomego okazały się słuszne. O'Reilly wstał z miejsca na powitanie gościa i nim usiadł ponownie, gestem poprosił radcę aby spoczął. Było to przyjęcie nad wyraz kurtuazyjne i wręcz wyrafinowanie grzeczne. Natymuus musiał być zadowolony. Jansen jednak postanowił przejąć inicjatywę w swoje ręce. Zbliżył się do radcy, i wyciągnął dłoń na powitanie.
+- Miło mi pana poznać, ekscelencjo - powiedział po taurydańsku. - Jestem inspektor Tobias Jansen z Centrum Federacji.
+O'Reilly złośliwie uśmiechnął się pod maską, widząc zakłopotanie radcy, który w końcu po pełnej napięcia chwili wahania uścisnął dłoń Jansena. Gest ten, na Ziemi nie będący niczym innym oprócz powitania, na Taurydzie miał odmienne znaczenie. Zobowiązywał bowiem obu ludzi do niezmieniania masek na czas całej rozmowy. W pertraktacjach i rozmowach oficjalnych było to zupełnie tak, jakby jeden polityk prosił drugiego "porozmawiajmy, ale obiecaj, że będziesz dla mnie miły". Nic więc dziwnego, że Natymuus poważnie wahał się, nim uścisnął dłoń Jansena. Teraz ta wizyta stała się tylko i wyłącznie ceremonialna, bo radca nie mógł przystąpić do żadnych poważnych rozmów, będąc tak ograniczony w działaniu. Poza tym samo powitanie było jak na taurydzkie zwyczaje wręcz niegrzeczne, ale O'Reilly, choć mógł, wcale nie zamierzał tłumaczyć postępowania Jansena. Natymuus był zdziwiony zachowaniem wysłannika Centrum. Oczywiście nie pokazywał tego po sobie w żaden sposób. Przecież był nie tylko Taurydańczykiem, ale i dyplomatą. Jednak zachowanie Jansena nie tylko go zdziwiło, ale i uraziło. Dawno już nikomu nie zdarzyło się tak bezczelnie zaproponować mu niezmieniania maski. To jasne nadużycie zaufania i jeżeli ten Ziemianin myśli, że załatwi cokolwiek w taki sposób, to jest w głębokim błędzie. Stary radca miał też żal do O'Reillego. Agent mógł go przecież ostrzec przed tym człowiekiem. No, chyba, że łączą ich wspólne interesy, ale Natymuusowi zdawało się, iż jest z O'Reillym. w na tyle dobrych stosunkach, że ten nie poważy się na działanie przeciw niemu. A poza tym O'Reilly to człowiek o wysokim prestiżu, dobry przyjaciel nieszczęsnego Gardemuusa, co przecież o czymś świadczy. Radca wymieniając z agentem ceremonialne uwagi, a potem opowiadając o przygotowaniach do zaślubin córki jednocześnie intensywnie myślał nad całą tą zagadkową sprawą. W rozwiązaniu problemu pomogła mu pewna znajomość stosunków panujących na Ziemi. Nie był bowiem, jak większość Taurydańczyków, izolacjonistą, ale hołdował koncepcji poznawania obyczajów i historii innych nacji. Pamiętał przecież, że na Ziemi stosunek służbowego podporządkowania nie jest prostą wypadkową prestiżu. Wydawało mu się to niewiarygodne, ale w Federacji często wysokie funkcje pełnili ludzie o nikłym prestiżu. Podejrzewał, że Jansen piastuje jakieś wysokie stanowisko, jego pozycja społeczna jest wyższa od pozycji O'Reliego choć porównując prestiż obu, wydawałoby się to niemożliwe. Jansen wyraźnie był człowiekiem bez honoru. Świadczyło o tym każde wypowiedziane zdanie i każdy gest. A stary radca miał dobre oko co do ludzi. "Biedny O'Reilly", pomyślał Natymuus, "być podwładnym takiego zera. Dobrze, że on jutro wyjeżdża, bo prestiż O'Reliego spadłby bardzo, gdyby dowiedziano się, kto jest jego zwierzchnikiem." Radca poczuł się mile zaszczycony zaufaniem agenta. Oto on zaprosił go do swego domu widać wierząc, że Natymuus nie wykorzysta swych wiadomości przeciw jego prestiżowi. Zapewne ten Jansen chciał się spotkać z którymś z dostojników, a O'Reilly wybrał właśnie Natymuusa. To doprawdy wzruszające z jego strony. Ale oczywiście nie będzie można tolerować takich impertynencji jak poprzednia. Najlepiej uprzejmie się pożegnać i odejść. Biedny O'Reilly. Zaraz po powrocie wypadałoby mu przesłać jakiś drobny prezent. Niech wie, że radca Natymuus nie zdradza przyjaciół. Skończył opowiadać i wstał z miejsca.
+- Cieszę się, że mogłem podzielić się z wami moją radością. Jestem do głębi wzruszony i zaszczycony spotkaniem tak znamienitego człowieka jak jego ekscelencja pan Jansen. Będę zrozpaczony, jeżeli nie powitam ekscelencji - zwrócił się bezpośrednio do inspektora - na ceremonii zaślubin.
+O'Reilly wstał. Wiedział już, co nastąpi. Jansen wyciągnął rękę z wysuniętym wskazującym palcem.
+- Chwileczkę, ekscelencjo! - zawołał. - Mieliśmy porozmawiać o procesie w sprawie śmierci naszego ambasadora.
+Cztery zniewagi w jednym zdaniu. Doprawdy trzeba mieć talent. Po pierwsze, wysunięcie wskazującego palca oznacza "uwaga, słuchaj mnie", a radcy królestwa nie dyktuje się czego ma słuchać. Po drugie, nie zatrzymuje się dostojnika, gdy ten oficjalnie daje do zrozumienia, że chce się pożegnać. Po trzecie, na temat procesu się nie dyskutuje. Można podziękować, bądź wyzwać na pojedynek. Innych możliwości nie ma. Po czwarte proces nie dotyczył śmierci Henricksa, tylko honorowej sprawy tyfrathona Gardemuusa.
+O'Reilly nie odzywał się. Wypadki bez jego ingerencji i tak toczyły się jak najbardziej odpowiednim torem. Natymuus był nieco bezradny. Obiecał, że nie zmieni maski, a przecież trzeba było teraz nałożyć Obojętnego Przechodnia i odejść. Przyjazny Nieznajomy nie może opuścić swego rozmówcy.
+- Słucham - odparł radca siadając.
+- Chciałem powiedzieć panu, ekscelencjo, że proces w sprawie ambasadora Federacji Solarnej uważam za karygodny - mówił wolno Jansen, starannie dobierając słowa. - Jak można było uwolnić od kary zabójcę wysokiego dostojnika Federacji? Oznajmiam panu, że Gardemuus będzie musiał stanąć przed ziemskim sądem i odpowiedzieć za swój czyn zgodnie z zasadami naszego prawa. Od pana ekscelencjo spodziewam się pomocy w schwytaniu przestępcy.
+Zniewag było tyle, że O'Keilly przestał je liczyć. Natymuus wolno wstał. Teraz powinien założyć maskę Szalonego Wojownika i zabić Jansena. Było to jednak niemożliwe z dwóch powodów. Po pierwsze, nie mógł zmienić maski. Gdyby to uczynił po uprzednim uściśnięciu ręki inspektora. byłoby to dyshonorem, no a Przyjazny Nieznajomy nie może walczyć. Po drugie, Natymuus był gościem, a wyciągnięcie miecza przeciwko drugiemu gościowi w obecności Gościnnego Gospodarza jest śmiertelną zniewagą.
+- Jeżeli mi pan nie pomoże - ciągnął Jansen - będę zmuszony wezwać statek bojowy floty federacyjnej, aby umożliwił mi wykonanie zadania. A uczynię to bez względu na konsekwencje.
+Wymawiając słowo konsekwencje inspektor dla podkreślenia wagi swoich słów uderzył pięścią w otwartą dłoń. "Biedny Jansen", pomyślał O'Reilly. Biedny, mały, bezradny pionek, który myślał. że decyduje o czymkolwiek, a który od samego początku rozmowy poruszał się na szachownicy, na której on był arcymistrzem. Agentowi zrobiło się żal Jansena. To w gruncie rzeczy ani lepszy, ani gorszy człowiek niż wszyscy inni. Może gdyby wykazał choć minimum dobrych chęci wszystko mogłoby skończyć się inaczej. Może gdyby znał obyczaje Taurydy ocaliłby życie. A teraz cóż, Jansen musi zginąć i nawet cała flota Federacji nie uratuje go przed śmiercią. Oto skutek zadufania i lekceważenia odwiecznych tradycji. Oto skutek nieuctwa, oto skutek lenistwa (przecież miał w drodze materiały o Taurydzie, nauczyłby się z nich paru najprostszych rzeczy). Oto skutek lekceważenia (przecież O'Reilly ostrzegał go, żeby nie wykonywał żadnych gestów). Biedny, głupi Jansen. Uderzając pięścią w otwartą dłoń wykonał gest wyzwania do pojedyn-ku. Gest najbardziej obelżywego wyzwania. W połączeniu z jego słowami dawało to piorunujący skutek. A nieszczęsny Natymuus nie mógł odpowiedzieć ostrzem. Cokolwiek by zrobił, stanowić musiało dyshonor. O'Reillemu żal było także starego radcy. Chyba jeszcze nigdy nie stanął przed tak poniżającą i trudną próbą. Teraz tkwił jak posąg pod drzwiami pokoju i agent wyobrażał sobie, jaka burza uczuć i myśli przetacza się przez mózg Natymuusa. A Jansen stał przed nim, wzburzony i groził wyciągniętym palcem. Pozostawało tylko jedno. O'Reilly błyskawicznie pozbył się Gościnnego Gospodarza i założył maskę Szalonego Wojownika. Teraz, kiedy Gościnnego Gospodarza już nie było, radca mógł walczyć. Lewa ręka szybko zmieniła maski, prawa chwyciła rękojeść miecza. Ale O'Reilly był szybszy. To prawda, iż Natymuus był kiedyś najlepszym fechmistrzem Taurydy. Ale te lata minęły, minęły już dość dawno. O'Reilly był nie tylko doskonałym handlowcem, ale i mistrzem walk mieczem. Nim starszy człowiek zdołał wyciągnąć swój miecz choćby do połowy, agent błysnął już w powietrzu srebrnym ostrzem.
+- Jansen! - zawołał.
+I kiedy inspektor odwracał się w jego stronę, O'Reilly ciął. Ostrze przeszło gładko przez szyję i głowa Jansena gibnęła się na bok, a bluzgający krwią kadłub upadł w drgawkach na biały futrzak. Radca schował ze zgrzytem. swój miecz do pochwy. Milczeli przez chwilę.
+- Pozwoli pan przyjacielu - powiedział w końcu Natymuus - że przyślę niewolników z nowym dywanem na miejsce tego, który tak nieszczęśliwie się zabrudził.
+- Będę zaszczycony - odparł O'Reilly. Dopiero teraz radca zorientował się, że nadal ma na twarzy Szalonego Wojownika i szybko zmienił tę maskę na Przyjaznego Nieznajomego. Agent znów stał się Gościnnym Gospodarzem.
+- Jestem wzruszony - rzekł wolno radca - pańskim nad wyraz szlachetnym zachowaniem. Przewidując kłopoty, jakie mogą pana spotkać z uwagi na ten pożałowania godny incydent ośmielam się zaoferować panu wszelką pomoc, jakiej tylko mógłby udzielić człowiek. o tak skromnej pozycji jak moja. Będę zaszczycony, jeżeli zechce pan przyjąć moje usługi. - Mówiąc te słowa Natymuus zdjął maskę Przyjaznego Nieznajomego i założył Drogiego Przyjaciela. O'Reilly pochylił z szacunkiem głowę.
+- Z radością przyjmuję, ekscelencjo, pańską nad wyraz szczodrobliwą propozycję, Nie mogę znaleźć słów potępienia dla siebie samego, że dopuściłem do zaistnienia w moim domu tak nieprzyjemnego incydentu. Jeszcze raz błagam o wybaczenie, ekscelencjo. - O'Reilly założył maskę Pokornego Jałmużnika, a radca zbliżył się wolno do niego, sięgnął do jego pasa, delikatnie zdjął z jego twarzy Jałmużnika i nałożył na nią to, co agent widział przed sobą: - Drogiego Przyjaciela.
+- Pragnąłbym widywać pana jak najczęściej - powiedział Natymuus. - Będę zaszczycony, jeżeli poświęci pan swój drogocenny czas i zechce towarzyszyć mi w czasie popołudniowego odpoczynku, Myślę, że Jego Wysokość Następca Tronu z radością ujrzałby pana na najbliższym przyjęciu wydanym na cześć oddanych przyjaciół.
+- Jestem zaszczycony pana łaskawością, ekscelencjo - odparł krótko O'Reilly, gdyż uznał, że każde słowo przekazywałoby zbyt mały ładunek emocjonalny.
+- Pozwoli pan, że go pożegnam - rzekł radca - z radosnym niepokojem oczekuję naszego jutrzejszego spotkania.
+Wymienili ceremonialne formuły pożegnalne, po czym radca odwrócił się jeszcze od drzwi. Nie było to zgodne z etykietą, ale przecież przyjaciele mogą pozwolić sobie na drobne odstępstwa.
+- Dziś ogłoszę wiadomość o tym wypadku - powiedział Natymuus. - I jeżeli wolno mi przypuszczać, proces odbędzie się za tydzień. Jeżeli nie ma pan nic przeciwko temu, postaram się przewodniczyć obradom sądu, starając się, aby pańskie ważne zajęcia nie ucierpiały na skutek tego błahego zajścia.
+- Będę zaszczycony, ekscelencjo - powtórzył O'Reilly.
+Kiedy Natymuus wyszedł, agent udał się do garderoby, a potem łazienki, pozostawiając niewolnikom kłopot sprzątania pokoju. Gdy leżał już w zielonkawej, cudownie pachnącej wodzie zaczął leniwie zastanawiać się nad konsekwencjami sytuacji. Cóż, stał się naprawdę kimś. Drogi Przyjaciel radcy królestwa Natymuusa. Teraz koncesje sypną się jak z rogu obfitości. Ale O'Reilly nie zrobił tego dla pieniędzy czy prestiżu. On po prostu kochał tę planetę, kochał swego najlepszego przyjaciela Gardemuusa, kochał tych ludzi i ich jakże odmienne od ziemskich obyczaje. I nie zamierzał pozwolić na to, by ludzie pokroju Jansena nękali tak mu bliski kraj. A poza tym kochał spokój i nie chciał, aby półgłówki z Centrum dręczyły go sprawą Henricksa. Rozciągając się wygodnie w wannie obmyślał treść raportu o śmierci Jansena i miał błogą nadzieję, że następnym razem przyślą mu rozsądniejszego inspektora.
+Martwiło go jedynie to, że człowiek z jego pozycją społeczną nie będzie sobie mógł już pozwolić na samodzielne prowadzenie samochodu. A taurydańscy kierowcy byli tak nieostrożni.
+
+Warszawa, kwiecień 1989.
+
+Jacek Piekara należy do najmłodszych autorów polskiej SF - za kilka tygodni będzie obchodził dwudzieste piąte urodziny. Jest również tym autorem, który najszybciej ze swoich rówieśników zdołał zwrócić na siebie uwagę czytelników publikacjami prasowymi (m.in. w "ProbIemach" i "Fantastyce") oraz mikropowieścią fantasy "Smoki Haldoru" ("Iskry," 1987). Pisze dużo, znacznie więcej niż polscy wydawcy, są w stanie publikować - dotychczas ukazały się jedynie dwie książki Piekary; kilka następnych czeka od Iat na zmiłowanie edytorów. W najbliższych dniach powinien pojawić się na rynku jego zbiór opowiadań "Zaklęte Miasto" ("Nasza Księgarnia"; seria "Stało się jutro"), który przed laty; w momencie przyjęcia do druku, był pierwszą rodzimą książką fantasy.
+(raz)
+
+UKOCHANY BRZYDAL
+RZECZ O WIDEO (cz. I)
+
+Nie ma się co oszukiwać. Problem istnieje; nie udawajmy, że go nie ma. Czas najwyższy wyjąć głowę z piasku, przetrzeć szczypiące oczy i powiedzieć bardzo dobitnie: złapaliśmy się w pułapkę wideo, teraz trzeba pomyśleć, jak z niej wyleźć. Temat jest drażliwy i pełen przeróżnych nienormalności. Niektóre z nich nie interesują mnie w najmniejszym stopniu. Nie mam zamiaru udawać szalonego kinomana, który uważa wideo za stwór zły z samej jego natury, nie będę głosił krucjaty przeciw magnetowidom i namawiał do palenia kaset na stosach. Nie będę nawet ścigał z siekierą ludzi twierdzących, że nie ma potrzeby chodzić do kina na coś, co już przecież widziało się "z kasety", chociaż nie ukrywam, że na to akurat często miewam ochotę. Ale pewien jestem jednego: przyczyna zła tkwi nie w "hardware" czyli w samym magnetowidzie lecz w "software", czyli w dostępnym na kasetach repertuarze filmowym i w sposobie jego wykorzystania. Zastanówmy się więc nad tym, co i jak oglądamy - oraz dlaczego oglądamy to, co oglądamy, tak, jak oglądamy.
+
+1. Co?
+Na początku było, oczywiście, porno. TO trzeba było obejrzeć! Trzeba było posmakować "żółwi", trzeba było porozkoszować się zakazanym z dawna owocem. Pornoli było sporo, ośmielę się nawet twierdzić, że za dużo. One to łaśnie narzuciły próg jakościowy: wszystko, co lepsze od "hard porno", jest dobre. Mam niejasne wrażenie, iż przekonanie takie - niedopowiedziane do końca i nigdy nigdzie jasno nie wyartykułowane - unosi się w powietrzu jak duch, niestraszny tylko tym, którym najzupełniej wszystko jedno, co właściwie oglądają.
+Nie przypuszczam, by ktokolwiek pozostający jeszcze przy zdrowych zmysłach próbował zaprzeczyć twierdzeniu podstawowemu: środowisko ludzi zainteresowanych fantastyką (i wiele osób spoza tego środowiska) cierpi na wideomanię. Jej przyczyna jest jasna i nie ma się czemu dziwić: jeszcze niedawno, zaledwie parę lat temu, film był głównym medium, przez które światowa fantastyka docierała do Polski, a dostęp do filmu zawdzięczaliśmy niemal wyłącznie cudownemu dziecku: magnetowidowi. Przez pewien czas magnetowidy nie znajdowały w kinie żadnej prawdziwej konkurencji, pasożytowały więc na "oglądaczach", żyły i prosperowały. Ci, którzy przykleili się do monitorów (a było ich wielu), wpadli w końcu w nałóg. Nałóg, ośmielę się stwierdzić, szlachetny... kiedyś. Kiedyś warto było czekać w napięciu na każdą nowość, kiedyś każdy nowy film był lepszy (a w każdym razie ciekawszy i bardziej zaskakujący) od poprzedniego. Katalogi fabuł, gagów i efektów specjalnych tworzono na bieżąco w słusznym (kiedyś) przekonaniu, że każda kolejna produkcja Lucasów i Spielbergów dopisze do nich nowy rozdział. Teraz, gdy sytuacja zdążyła się już zmienić, gdy niespodziewanie szybko umarły mody stare, a jeszcze nie pojawiły się nowe, gdy kino fantastyczne weszło w okres intelektualnego zastoju, nadszedł sprzyjający czas, by odzyskać zachwianą równowagę umysłową i zamiast tylko oglądać, zacząć także myśleć.
+A my, jak bojące się wydorośleć dzieci, oglądamy wciąż to samo i tak samo, zmieniają się tylko tytuły. Obowiązuje ciągle kryterium ilościowe, liczą się przede wszystkim ci, którzy wszystko już widzieli. Pojęcie "nowości" rządzi równie bezwzględnie jak przed dziesięciu laty, kiedy każda nowość była objawieniem. Oglądamy by oglądać: tytuł po tytule, kopię po kopii. Aż wstyd o tym przypominać, ale trzeba: na kasety trafia przede wszystkim produkcja klasy "B", "C" i - najczęściej - "D...' Nigdy nie zabraknie jednego - złodziei czasu i zapychaczy pustych popołudni. Arcydzieła, dzieła, a ostatnio nawet przyzwoite filmy pojawiają się rzadziej i jakoś trudniej na nie trafić. Zarówno nasi rodzimi hurtownicy, jak i światowy przemysł wideo nie przeżyliby dnia, gdyby w biznesie stosowali kryteria estetyczne. Więc ich nie stosują.
+Tam, gdzie nagraną kasetę można po prostu kupić, problem nie jest wielki. Wybór istnieje zawsze. Polskie piractwo, z którego jesteśmy tacy dumni, że niemal się nim szczycimy (Polak potrafi!) doprowadziło w interesującym nas gatunku do tragicznego w skutkach zamknięcia puli filmów, które a priori uznano za fantastykę i do automatycznej likwidacji pozycji kontrowersyjnych, które, Boże broń!, mogłyby się "nie przyjąć". W związku z tym zabrakło skali wartości - kryteria jakościowe, jeżeli mają jeszcze jakieś znaczenie, ustalane są na podstawie pozycji w najlepszym razie średnich: ot, "Kobieta - jastrząb" czy "Nieśmiertelny". One to właśnie tworzą zawsze dostępny kanon "prawdziwej" filmowej fantastyki. Dla wygody tego kanonu wypaść z niego musiał Bergman, Ken Russel. Coppola z "Peggy Sue wyszła za mąż" i wielu, wielu innych. W ten sposób pojęcie filmu dobrego, filmu złego i wiele innych podstawowych pojęć straciło jakiekolwiek znaczenie, a wraz z nimi straciło sens mówienie o filmach.
+
+2. Jak?
+Fatalna jakość kopii, powielanych w nieskończoność z VHS-u na VHS, żenujące tłumaczenia, sepleniący i siorbiący herbatę w mikrofon lektorzy - to standard polskiego wideo. Decydują o tym, oczywiście, względy uważane za praktyczne: jeśli ktoś ma do wyboru jakość, za którą musi słono zapłacić, lub tańszy brak jakości, woli to drugie. Byle tylko dostrzec, że coś się rusza - i dobrze jest! Zaliczone!
+Byś może nie protestowałbym tak głośno, gdybym należał do grona, na przykład, miłośników filmów karate. wyobrażam sobie, zapewne błędnie. że w takich filmach wystarczy widzieć tyle, by z rozsądnym prawdopodobieństwem określić czyja to noga frunie ku czyjej twarzy. Z filmem w ogóle, a zwłaszcza z filmową fantastyką, nie jest już na szczęście tak prosto.
+Jeżeli mielibyśmy oglądać fantastykę w ten sposób, lepiej już nie oglądajmy jej wcale! Prawda oczywista, która aż wstyd przypominać, brzmi: w fantastyce filmowej wytworzył się kanon, obowiązujący nawet najprzeciętniejsze z produkcji. Należy do niego między innymi stopień komplikacji efektów specjalnych w science fiction, rola pejzażu jako aktora w fantasy, kreowanie atmosfery zdjęciami i charakteryzacja w horrorze, a przede wszystkim widowiskowość i staranny detal scenograficzny. Jakość kopii zabija najpierw te nieliczne i względne, ale zawsze walory, a później wszystko inne. Czytelna pozostaje jedynie akcja, od której akurat najmniej można wymagać. Przez lata obejrzałem co się dało z dostępnej na kasetach fantastyki, zarówno w kopiach uchodzących za dobre, jak i tych, które były fatalne bez dyskusji. Prawdziwa rozpacz! "Blade Runnerowi", zachwalanemu jako "pierwszy z lasera", w porównaniu z kopią oryginalną (ITI) brakowało niemal wszystkich zieleni i fioletów. I jeszcze "Legenda" na 21 calowym monitorze, śnieżący obraz, dialogi podawane z kilkunastosekundowym opóźnieniem... i "Willow" z wielokrotnie omawianymi, wspaniałymi, drobiazgowymi efektami specjalnymi, których na ekranie telewizyjnym w ogóle nie sposób docenić... I pustki w kinach. "Batmana" krytykował mi z wielką swadą rutynowany oglądacz, który w trakcie projekcji wyłączył w telewizorze kolor, bo go i tak nie było. Przykłady można mnożyć w nieskończoność, tylko po co?
+Załamałem się ostatecznie kiedy usłyszałem, że "Rain Man" jest "taki trudny w oglądaniu, że wyłączyłem magnetowid... a do kina nie chodzę, bo potrzebuję minimum komfortu, fotel, herbatka". Czyżbym był już aż tak stary, by jako jedyny pamiętać słynną (jeszcze niedawno!) dewizę McLuhana: "The medium is a message" - ŚRODEK PRZEKAZU JEST PRZEKAZEM! To, co oglądamy na wideo musi podlegać przełożeniu na język filmu. Wideo może być w poznawaniu filmu zaledwie środkiem pomocniczym, a i tak trzeba go używać ostrożnie. Nadużyty, jak prawie każde lekarstwo, ma nieprzyjemne skutki uboczne.
+Objawy chorobowe wideomani zauważalne są już dla każdego, kto je chce dostrzec. Jak narkomani, oglądacze żyją w świecie urojonym. Nie znają filmów, tylko kopie. Trwają w przekonaniu. że widzieli wszystko, a nie widzieli nic. Jeśli w ogóle dokonują jakichś syntez, to tylko schematycznych, fabularnych, opartych na kryteriach n-to rzędnej produkcji, która zawsze łatwo mieści się w szufladkach. Pojęcie magii kina, jakże ważne dla filmu i filmowej fantastyki, nie istnieje, bo nikt już o nim nie pamięta, bo nikt go już nie rozumie. Fotel, herbatka...
+Potwierdzeniem tej niewesołej diagnozy jest radosna działalność krytyków filmu fantastycznego, żyjących i prosperujących wyłącznie dzięki magnetowidom i francuskim magazynom. Andrzej Kołodyński, omawiając w "Filmach fantastyczno - naukowych"(Warszawa 1972, s.39) "Istotę z innego świata" Ch. Nyby przesuwa druk opowiadania Johna Campbella jr., na którym film ten był oparty, z roku 1938 na "koniec lat 40-tych", przypisując opowiadaniu z rozpędu "zimnowojenne tendencje". W zabawnej rubryce o wideo tygodnika "Ekran" pomylono już kiedyś dwa filmy Johna Carpentera; tytuł i obsadę wydrukowano z jednego, recenzję z drugiego. W numerze specjalnym pod dumnym tytułem "Wszystko o wideo" pan Janusz Kołodziej znęcał się nad horrorem pisząc m.in.: "...ożywione widma i watahy szaleńców, terroryzujące spokojne dzielnice wielkich miast..." a propos klasyka Carpentera "Halloween", w którym nie ma ani żywego trupa, ani watahy szaleńców, ani spokojnych dzielnic wielkiego miasta. Żebyśmy przypadkiem nie pomyśleli sobie, że to tylko poślizg ciętego pióra, autor dodał jeszcze optymistycznie: "... powoli powszechnieją wielbiciele kanadyjskich pił do masakrowania ciał", czyniąc niewątpliwie aluzję do filmu Tobe Hoopera, który ma wprawdzie w tytule masakrę piłą, ale jest to piła teksaska. Gdzie Rzym, gdzie Krym, a raczej: gdzie konie, gdzie psie zaprzęgi!? Miejmy nadzieję, że to ze strony "Ekranu" rzeczywiście wszystko. Na resztę z innych "źródeł", całkiem zresztą obfitą, spuszczam litościwą zasłonę milczenia ze względów towarzyskich.
+Kiedy już, jak w piosence Młynarskiego, wytworzy się "określona sytuacja" zewsząd rozlega się zawsze chór okrzyków: "to nie ja, to nie moja wina". Tymczasem ścinanie głów, nawet pustych, jest zajęciem intelektualnie najzupełniej bezpłodnym. Wyrzekanie na rzeczywistość, prawdę mówiąc, także. Lepiej chyba poświęcić chwilę czasu na poszukiwanie odpowiedzi na ostatnie pytanie:
+
+3. Dlaczego?
+Źródło jednostki chorobowej, której nadałem nazwę wideomanii tkwi w tak powszechnym, że już nawet niezauważanym paradoksie - głodujący podobno obywatele bardzo biednego kraju zagrożonego bezrobociem, kapitalizmem, urynkowieniem i wszystkimi innymi plagami (z wyjątkiem być może dżumy) mają najwyraźniej zdumiewająco dużo pieniędzy, których najwyraźniej nie umieją wydawać. Podstawowa nienormalność, z której wynikają natychmiast wszystkie inne nienormalności, polega na tym, że Polaka teoretycznie nie stać na magnetowid (skoro podobno nie stać go na cukier), ale zarazem stać go (skoro magnetowidów jest w Polsce ponad milion). A więc, skoro jednak stać go na magnetowid, to stać go także na kasety, ale jednak nie stać go na kasety (quod erat demonstrandum)... i tak w koło Macieju. Zupełnie gubię się w interpretacjach aktywności człowieka, który za ciężkie pieniądze kupił sobie wideo tylko po to, by w pirackiej wypożyczalni zapłacić za kasetę i po udanej projekcji szumów informacyjnych polecieć do serwisu z głowicą oklejoną błotem. Mam wrażenie, że patrzę na kogoś, kto kupił sobie komputer, ale oszczędził na dyskietkach, nabywając w ten sposób mebel znacznie mniej praktyczny od regału, bo nie powinno się stawiać na nim kwiatków, a nie wolno książek. W końcu zobaczyć, że coś się rusza można bez żadnych znaczących kosztów; po prostu wyglądając z balkonu.
+Wbrew pozorom, a w zgodzie z faktami, Polak może sobie pozwolić na wiele. I nawet sobie pozwala... ale nie do końca. Pomiędzy tym, na co go stać, i tym, na co wydać nie chce, istnieje całe wielkie terytorium domagające się kolonizacji jak niegdyś Dziki Zachód. Jak grzyby po deszczu rosną teraz na nim miasteczka bezprawia oraz nielegalnie zdobyte fortuny... I wszystko byłoby w zasadzie zrozumiałe gdyby, jak na westernach, torowały one drogę cywilizacji. Niestety, nikt nie rezygnuje z zarobienia na tandecie tylko dlatego, że ktoś pokiwa mu palcem przed nosem i powie "fe!". Cywilizacja polega podobno na zgodzie na rządy prawa; nam na razie brak przede wszystkim prawa, ze zgodą też nie jest najlepiej, by już nie wspomnieć o rządach. Piractwo zdążyło wychować sobie odbiorcę, dla którego słowo "jakość" nie ma żadnego znaczenia, który po prostu nie wie, o czym mowa. Dziwić to może niesłychanie, bo przecież o jakość wcale nie jest aż tak trudno. Obejrzałem już niemal wszystkie kasety firmowe rozpowszechniane przez ITI i chociaż miałem zastrzeżenia do jakości samych filmów, to do jakości kopii - nigdy. Wiem, że filmy ITI są oglądane, są nawet sprzedawane i dziwi mnie niepomiernie, że ktoś, kto obejrzał ich kasetę, kiedykolwiek jeszcze pójdzie do pirata.
+Dziwi, a raczej dziwiło. Już w trakcie pisania tego tekstu z całą jasnością uświadomiłem sobie, na czym prawdopodobnie polega mechanizm tego zjawiska: na ignorancji, niewiedzy o tym, co można i co trzeba. Wideo zaatakowało nas kiedyś z zaskoczenia i wkroczyło na ziemię niczyją, na grunt najzupełniej nieprzygotowany. Bo może dziś nikt jeszcze nie rozumie, jak szkodliwa jest moda dla dobrego, a prawdę mówiąc, dla każdego gustu. Bez rozsądnego przewodnika po Dzikim Zachodzie wideolandii nadal będzie po pierwsze - szkodzić, a po drugie - irytować. A wszyscy wołający na puszczy nadal będą wyłącznie zdzierali głos. Nie ma prostej kuracji, ale istnieje proste lekarstwo - reklama. Rynek aż woła przynajmniej o jeden, a najlepiej o kilka magazynów wideo z prawdziwego zdarzenia. Bez reklamy, na "sucho", nikogo nie przekona się o oczywistym fakcie - z naszymi Gold Starami za ubodzy jesteśmy na tandetę, a za jakość warto płacić, bo tylko jakość się opłaca. Być może dziś nikt jeszcze nie rozumie, że nie warto płacić za zmarnowany czas.
+
+cdn. (Mam nadzieję) 
+
+Nie potrafię skończyć tego tekstu błyskotliwym podsumowaniem. Wyobrażam go sobie jako "dzieło w toku", do którego przyłączą się czytelnicy. Uczciwie uprzedzam - jestem pewien swych racji, choć wolałbym się mylić w diagnozach. I z całą zarozumiałością oznajmiam, że jestem otwarty na wszystkie argumenty. Czekam więc, a czas oczekiwania skrócę sobie obejrzeniem "Abyss" Camerona - z kopii, na której oczywiście nic nie widać. Ale, w końcu, to przecież nowość. Tak wypada, proszę państwa, po prostu tak wypada!
+
+Publikowany poniżej tekst adresowanyˇ jest do tych, którzy SF NIE LUBIĄ. Dlaczego więc zamieszczamy go w naszym piśmie? Żeby wam pomóc radzić sobie z rodzicami, nauczycielami lub kolegami z pracy, którzy widząc w waszej teczce lub szufladzie biurka kolorową okładkę patrzą na was znacząco i jeżeli nie pukają się w czoło, to tylko przez grzeczność. Zmuście ich koniecznie do przeczytania tego artykułu!
+
+(red.) Nie tylko dla chłopców
+czyli Uniwersalny Poradnik "JAK ZACZĄĆ?"
+
+Uwaga! Jeżeli lubisz fantastykę naukową, możesz zacząć czytać tutaj - ale lepiej będzie, jeśli zajrzysz na koniec tego artykułu.
+
+Nie lubisz science-fiction. Denerwują Cię kolorowe okładki książek, których nie czytałeś. W książkach, do których zajrzałeś, drażnią Cię słowa takie jak nadprzestrzeń chronoklazm kontramocja, trudne do wymówienia imiona bohaterów. Według Ciebie, miłośnik SF całymi dniami ściga UFO albo wygina wzrokiem łyżeczki, albo łowi na wędkę Loch Nessa. Więc, gdy usłyszysz: "fantastyka-naukowa", zawsze uśmiechasz się lekceważąco.
+Dowiesz się tu paru rzeczy. Po pierwsze: dlaczego nie lubisz fantastyki. Dowiesz się też, jak się science fiction nauczyć, jak w niej zasmakować. Dużo nie trzeba, trochę cierpliwości i czasu. Nauczyciela już masz, to on dał Ci ten tekst do ręki. Dowiesz się wreszcie, jakie korzyści daje czytanie SF, przekonasz się, ile straciłeś do tej pory, unikając fantastyki. Przygotuj więc sobie coś słodkiego do chrupania, usiądź wygodnie, włącz jakąś muzykę. Każdemu dana jest szansa nawrócenia. Niech Bóg będzie z Tobą!
+
+Uwaga! Autor nie daje gwarancji na skuteczność poniższego zabiegu terapeutycznego u:
+- miłośników współczesnej poezji awangardowej
+- analfabetów
+- materialistów diaIektycznych
+
+PUNKT PIERWSZY: Krótki przegląd taksonomiczny tych, którzy science fiction nie lubią.
+Za to, że nie lubisz SF może być odpowiedzialne środowisko naturalne, bodźce, które odbierasz lub Twój kod genetyczny.
+Być może jesteś studentem polonistyki. Albo poważnym docentem. Albo księdzem. Albo gospodynią domową. Zresztą, wszystko jedno. Wiele różnych grup społecznych wywierało na Ciebie naciski już od dawna. Od lat słyszałeś: "O Boże, wyobraźcie sobie on się zajmuje jakimiś sajens-fikszenaliami". Albo: "Pokazywali wczoraj film o kosmitach, ale bzdura, nie?" Polonistka w szkole mówiła, że Lema nie czytuje z założenia, rodzice kupowali Ci wyłącznie atlasy anatomiczne i poradniki "Szyję sama", a jedyny w klasie miłośnik fantastyki był chudy, anemiczny i ciągle ktoś spuszczał mu bęcki. To wszystko warunkowało Twoją podświadomość, aż w końcu trafiłeś do grupy osobników, którzy nie czytują SF, bo to nie wypada. Pomyśl, przypomnij sobie wszystkie stresy z dzieciństwa wszystkie kompleksy nabyte i utrwalone. Jeśli to zrobisz - masz jeszcze szansę. Zmień towarzystwo, zapewniam Cię, niewiele stracisz.
+
+Pamiętaj, w dzisiejszych czasach powinieneś zadawać się tylko z ludźmi energicznymi, którzy mogą do czegoś dojść w życiu. A jak powiedział Karel Capek "Niektórzy ludzie nie potrafią wypowiedzieć słowa "Fan- tazja" bez lekceważącego tonu; no cóż, ci Iudzie mogą dojść nawet do piątej czy szóstej kategorii urzędniczj, ale nie dojdą nawet do jednej jedynej przygody."
+
+Niewykluczone, że Ty już próbowałeś. Może przeczytałeś dwie, trzy, może i dziesięć książek. Skosztowałeś, miałeś dobre chęci, a jakże, tylko że w ustach, zamiast słodyczy, tylko sól z pieprzem w musztardowym sosie. Mogło się tak stać, rozumiem to. Być może, że po prostu zacząłeś od niewłaściwych książek. Teraz leży na ladach wszystko - celuloza jest ciężkostrawna, a ludzie ostatnio myślą raczej o kiszkach, niż o mózgu. Ale był czas, gdy SF znikała z półek księgarskich szybciej niż futro zasiedlone przez rodzinę moli. W księgarniach, antykwariatach, bibliotekach pozostawały same gnioty. Ty poszedłeś na żywioł, zgarnąłeś do koszyka trzy, cztery przypadkowe tytuły to co akurat było na wierzchu. No i wziąłeś chłam.
+A może przeraża Cię hermetyczność fantastyki? Ten żargon naukowy, paranaukowy i pseudonaukowy, te blastery, paradoksy bliźniąt i cyborgi. Te schematy które znam i ja, i Dobry Człowiek, który Ci dostarczył ten tekst, a których Ty nie pojmujesz. Nie poddawaj się. Każdy z nas nie raz padał na pysk, nim się nauczył chodzić. Pomęcz się jeszcze trochę, zobaczysz, z każdym następnym tomem będzie Ci łatwiej.
+Choć może jest już dla Ciebie za późno. Masz siódemkę dzieci, sześć dni w tygodniu zasuwasz przy taśmie zbierasz znaczki pocztowe i na nic nowego nie masz już czasu. Pamiętaj, dzieci wyjdą z domu, taśma stanie, zastaniesz bezrobotnym, albo emerytem. Wtedy spokojnie będziesz mógł zabrać się za science fiction.
+Środowisko i własne doświadczenia mogły więc wyrobić u Ciebie odruchy warunkowe. Jednak Ty jesteś homo sapiens, a nie canis familiaris, jeśli tylko zechcesz, możesz nie ślinić się na dźwięk dzwoneczka.
+Chyba, że jesteś obciążony genetycznie. Nie, nie obrażaj się, to nie Twoja wina. To chemia i białko. Możliwe, że Ty po prostu n i e j e s t e ś w s t a n i e polubić SF. Tak jak Twoi pradziadkowie nie lubili powiastek Podróżniczych, a praszczurowie spali, gdy gędziarze śpiewali o Graalu, utopcach i Św. Aleksym. Gdy na myśl o gwiezdnych statkach gęsia skórka wyskakuje Ci na plecy, to działa Twoje DNA, które odziedziczyłeś po swych przodkach. Cóż, nic na to nie poradzisz. Bardzo mi Cię szkoda i sądzę, że powinno przyznać Ci się specjalne ulgi w autobusach oraz na wyciągach narciarskich. Mam nadzieję, że brak wyobraźni zbytnio Ci nie przeszkadza w życiu.
+
+Jeśli masz kiepskie DNA nie martw się. SF już dawno przewidziała możliwość ulepszania osobników genetycznie niedorobionych.
+
+Czy znalazłeś już swoją chorobę? Spójrz jeszcze raz uważnie. Warunkowało Cię otoczenie, Twoje doświadczenie, czy pochodzenie? Może jeszcze coś innego, wszak nie roszczę sobie prawa do wszechwiedzy, każda systematyka bywa zawodna. Przemyśl to w każdym bądź razie, znajomość choroby zawsze pomaga w jej leczeniu.
+
+PUNKT DRUGI: Jak to zrobić'
+Przekonałeś się już, Szanowny Czytelniku, jak błahe były przyczyny Twej niechęci do SF. Przystąpmy do zabiegu. Kiedy i jak?
+Oczywiście: im prędzej, tym lepiej. Więc jeśli jesteś Czytelniku osobnikiem młodym, Twoja wyobraźnia nie zbamboszowała się do reszty, bierz się do roboty. Science fiction wypełni Twój umysł i nawet jeśli zostaniesz Strasznie Poważnym Dyrektorem, to w szufladzie mahoniowego biurka, oprócz komputerowych wydruków, trzymać będziesz książkę z kosmolotem na okładce.
+Poproś o pomoc swego Nauczyciela. Niech wybierze dla Ciebie ze swojej biblioteczki dziesięć, dwadzieścia tytułów, a Ty przytargaj ten stosik do domu. Przy okazji poprawisz swoją kondycję fizyczną.
+
+Możesz też czytać kolejne książki z jakiegoś kanonu SF (np. podanego w "Drodze do SF" tom 1.). Natomiast nie słuchaj telewizyjnych i radiowych recenzentów, a recenzje w pismach fachowych i niefachowych omijaj odpowiednio - małym i dużym łukiem.
+
+Zadzwoń do pracy, weź tydzień urlopu, albo załatw sobie zwolnienie lekarskie. I czytaj. Nie przejmuj się początkowymi kłopotami.
+
+PAMIĘTAJ: Skończ książkę którą zacząłeś nawet jeśli Cię jej czytanie męczy.
+
+SF to obszar olbrzymi. Twój Nauczyciel może dać Ci kilka, góra kilkanaście tomów. Będzie więc wybierał po dwa, trzy reprezentatywne dla danego podgatunku stylistyki, poetyki. Nie muszą Ci się podobać wszystkie, ale, uwierz mi, któryś na pewno Cię oszołomi. Wszystkie swoje wrażenia przekazuj Nauczycielowi. Nie bój się, nie zanudzisz go, zawsze wysłucha Cię z przyjemnością. Jest tak skonstruowany, że o SF może gadać godzinami. Pamiętaj, że on nawracanie Ciebie traktuje jak Wielką Misję. Im więcej będziesz z nim rozmawiał, tym większą sprawisz mu przyjemność. Następne dziesięć książek, które Ci dostarczy, będzie się lokalizować w pasującej Ci konwencji.
+
+PAMIĘTAJ: Przeczytaj w s z y s t k i e książki z dostarczonego Ci kanonu.
+
+Może się tak zdarzyć, że przeczytawszy wszystko, nadal pozostaniesz wrogiem SF. Ale wtedy będziesz przynajmniej wiedział czego nie lubisz - jak sądzę do tej pory nie znosiłeś czegoś, czego nie znałeś.
+
+Jeśli jesteś literackim snobem, czytujesz tylko Joyce'a i Sartre'a, to uprzedź o tym swego Nauczyciela. Wtedy on przygotuje dla Ciebie zestaw specjalny. Jest z czego wybierać, bo napisano mnóstwo książek SF, których normalny człowiek nie jest w stanie przeczytać.
+
+
+PUNKT TRZECI: A po cholerę mi ta zabawa?!
+To dobre pytanie. Stawiasz je we właściwym momencie. Powodów jest więcej niż świństw, które połykasz codziennie wraz z poranną kawą.
+Przyjemność. SF to egzotyczna podróż, to spotkanie z przyrodą, jakiej nikt inny Ci nie da. To kosmiczne bitwy, nieznane krajobrazy, to ogrom przestrzeni i czasu. To łamigłówka, zabawa dla Twego umysłu i wyobraźni. To pułapki fabularne, zaskakujące puenty i niesamowite sytuacje.
+
+"Fantastyka naukowa to takie urokliwe miasto państwo posadowione na przełęczy między dwoma górskimi masywami z których jeden to Literatura, a drugi Nauka..." powiedział kiedyś Wiktor Żwikiewicz.
+
+Jeśli chcesz zostać intelektualnym glonem i jedynie wchłaniać szybkie fabuły - dostaniesz je tutaj. Jeśli szukasz odpowiedzi na ważne pytania dotyczące nauki i etyki, ludzkości i przyszłości, i chcesz myśleć, dostaniesz pożywkę dla swych rozważań.
+SF wyciągnie Cię z zaścianka geografii i nawyków zetknie z setką różnorodnych światów. Inaczej więc spojrzysz na ten świat pod Twymi stopami, na człowiecze mrowisko, na tempo zmian, które dotąd Cię przerażają. Bo SF przygotowuje ludzi do kroczenia dalej i prędzej. Ty też możesz zostać komandosem przyszłości. Współtwórcą nowego mitu.
+I powiem Ci coś jeszcze, tym razem trochę poważniej. Żyjesz tu i teraz, ograniczony czasem i przestrzenią, które kiedyś zbiegną się nieubłaganie w jeden punkt - drewniane pudło zagrzebane w ziemi. Chcesz być wolny, lecz nieubłaganie leziesz ku temu miejscu, uparcie i niestrudzenie. Nie uciekniesz. Ale jest sposób, by wychylić głowę poza wyznaczony Tobie czas i poza miejsce, w którym dane Ci jest oddychać. Ujrzeć to co było, co być może, co będzie i jest tam, gdzie sięgnąć nie pozwalają chemiczne silniki naszych rakiet i zbyt słabe teleskopy.
+To właśnie science fiction.
+
+UWAGA: Jeśli się wzruszyłeś, to bardzo dobrze, o to chodziło. Jeśli zaś sądzisz, że zacząłem truć; wybacz mi, bo ja się wzruszyłem na pewno.
+
+No i jest jeszcze jedna korzyść oprócz tych wszystkich które Ci wyliczyłem. Z chwilą, gdy polubisz SF, staniesz się członkiem klanu. W tej jednej chwili, w której powiesz "Lubię fantastykę naukową", zyskasz tysiące kumpli. Oni Cię nie znają ani ty ich, zasiedlacie wszystkie kraje i kontynenty. Ale uwierz mi, gdy spotkasz kogoś z nich, w pociągu, na plaży, u krawca, w każdej chwili będą oni gotowi umówić się z Tobą na piwo i pogadać o science fiction.
+Nie zwlekaj więc. To wszystko przed Tobą.
+
+KONIEC
+P.S. Jeśli już pokochałeś SF to weź ten artykuł, przepisz go w dziesięciu egzemplarzach i daj swoim znajomym. Zostań Nauczycielem. Pewien kominiarz z Ohio zlekceważył tę radę i następnego dnia dwóch wyrostków wybiło mu złoty ząb, złodziej ukradł drabinę, a z wizytą zwaliła się teściowa.
+
+KONIEC DEFINITYWNY
+
+DODATEK DLA TYCH KTÓRZY JUŻ LUBIĄ
+Tak naprawdę, ten artykuł powstał dla Ciebie. Nie wierzysz? Naprawdę. Należysz do kasty świrusów, wiesz o tym, lecz chciałbyś, żeby parę otaczających Cię osób nie patrzyło na Ciebie jak na czuba. Żeby ta piękna i ukochana wokół której od miesiąca tańczysz jak nastroszony wróbel lubiła czytać to co i Ty. Żeby Twoja polonistka przestała wykrzywiać twarz po każdym Twoim wystąpieniu na temat: "Moje lektury". Żeby Twoi Rodzice dali Ci czasem parę złotych na książkę, która nie jest słownikiem ortograficznym ani Dróbką-Szymańskim. Żeby Szef Twojego laboratorium uznał Cię wreszcie za człowieka odpowiedzialnego i dał Ci inną robotę niż wycieranie probówek. Jednym słowem: ŻEBY CIĘ ZROZUMIANO.
+Nie ma na co czekać. Weź się do roboty. Przygotuj stos książek i podetknij pod nos ten tekst wszystkim tym uśmieszkowiczom, pogardliwcom, niezrozumialcom i zabijakom. Może coś się ruszy. Trzymam za Ciebie kciuki.
+
+Tomasz Kołodziejczak
+1
+
+

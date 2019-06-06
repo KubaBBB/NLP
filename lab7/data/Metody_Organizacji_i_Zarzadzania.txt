@@ -1,0 +1,204 @@
+1.1. Funkcje i zasady zarządzania
+Planowanie - konkretność, terminowość, elastyczność, optymalny horyzont czasowy; Organizowanie - 
+podział pracy, harmonizacja, specjalizacja, hierarchia i rozpiętość kierowania, najkrótsza droga, 
+delegowanie uprawnień, współmierność uprawnień i odpowiedzialności, wyjątek; Kontrolowanie - 
+natychmiastowość, obiektywność, elastyczność kontroli, korygowanie (dynamika kontroli); Praca z 
+ludźmi, Pozyskiwanie środków materialnych i dysponowanie nimi - optymalne rezerwy, racjonalne 
+gospodarowanie środkami materialnymi, instrumentalizacja, energiczność w użyciu środków; Praca nad 
+informacjami - selekcja (20-80), wiarygodność, aktualność; Decydowanie - myślenie wielowariantowe, 
+ocena wielokryterialna, ograniczona racjonalność; Koordynowanie - minimum (najsłabsze ogniwo), droga 
+krytyczna, wczesne ostrzeganie.
+1.2. Proces organizowania i jego narzędzia
+organizacja - cecha systemu, system organizacyjny, funkcja zarządzania.
+Organizowanie przedsiębiorstwa - ramowa struktura organizacyjna, przebieg organizacyjny (dynamika), 
+szczegółowa struktura organizacyjna (rozmieszczenie stanowisk, powiązania, zakresy działania); 
+wartościowanie i normowanie pracy, koordynacja w czasie.
+Diagnostyka - diagnoza wstępna, diagnoza właściwa; podejścia / metodyki - zmieniając statykę 
+dostosowuje się też dynamikę i odwrotnie. Używa się narzędzi organizowania - ogół sposobów 
+postępowania i środków orgatechnicznych stosowanych w działalności organizatorskiej. Metody 
+organizatorskie - heurystyczne (elastyczność, fantazja), zracjonalizowane (logika, krytyka), klasyczne 
+(automatyzm, konformizm). Zestawienie: zasady, strategie (podejścia, metodyki ogólne), metody ogólne, 
+grupy metod szczegółowych, metodyki szczegółowe, metody szczegółowe, grupy technik, techniki. 
+1.3. Strategie organizatorskie
+podejście opisowo-ulepszające, podejście funkcjonalno-wzorujące (podejście systemowe, zespoły 
+mieszane), podejście diagnostyczno-funkcjonalne. 
+Zmodyfikowana prognostyczna (cele, zadania, analiza stanu, projektowanie wzorcowego systemu, 
+ustalenie ograniczeń, wybór wariantu, wdrożenie), RAPPOS (podobna do Nadlera, ale pierwiastek 
+diagnostyczny - dezagregacja / agregacja). 
+2.1. Badanie metod pracy
+Badanie metod pracy sprowadza się do podziału badanego procesu pracy na odpowiednio drobne części 
+składowe, zarejestrowanie ich za pomocą umownych symboli graficznych, poddania każdej z nich z osobna 
+krytycznej ocenie i analizie pod kątem eliminacji, połączenia lub uproszczenia sposobu jej realizowania, a 
+następnie opracowania zbiorczego projektu usprawnienia oraz wprowadzenia go w życie. Etapy: 1) wybór 
+celu i przedmiotu badania, 2) rejestracja stanu faktycznego (karty), 3) krytyczna analiza i ocena stanu 
+faktycznego (arkusz krytycznej oceny i analizy - stan, uzasadnienie, warianty rozwiązań, wariant 
+optymalny), 4) projektowanie stanu proponowanego, 5) wprowadzenie w życie zaprojektowanego 
+usprawnienia.
+2.2. Analiza wartości
+Początek: AW wyrobów, AW technologii, AW organizacji. System - kompleks elementów wzajemnie 
+powiązanych ze względu na spełniane funkcje. Każdy system jest podsystemem jakiejś większej całości i 
+stanowi zarazem nadsystem dla systemów niższego rzędu. 
+Etapy: 1) przygotowanie czynnika ludzkiego, 2) wybór przedmiot badania (ABC), 3) rozpoznanie systemu 
+(potrzeby środowiska, mankamenty systemu), 4) zbieranie informacji (zewnętrzne, wewnętrzne, określenie 
+kosztów, klasyfikacja funkcji), 5) analiza funkcji i poszukiwanie nowych rozwiązań (formułowanie 
+niezbędnych funkcji, ocena efektywności dotychczasowego rozwiązania), 6) opracowanie projektu 
+szczegółowego, 7) wdrożenie projektu.  
+Drzewo funkcji ? diagram fast. (dlaczego - kiedy - jak)
+2.3. Metody przestrzennego organizowania procesów pracy
+Metody: metoda Schmigalli, metoda ogniw, corelap, craft.
+Etapy: rozpoznanie (przedmiot badania, struktura organizacyjna, cele), modelowanie (graficzne - przebiegi 
+operacyjne, modele przestrzenne; matematyczne - funkcja celu, warunki ograniczające), analiza wariantów 
+(algorytmy, rozwiązania idealne), projektowanie szczegółowe (ograniczenia praktyczne, niezbędna 
+powierzchnie, ograniczenia jakościowe, rozmieszczenie proponowane), wdrożenie.
+Metoda ogniw: 1) oznaczenie przepływów międzyobiektowych i zsumowanie, 2) sumowanie w pionie i 
+poziomie, 3) tablica intensywności ogniw, 4) rozmieszczenie obiektów. Schmigalli: para o największej 
+intensywności przepływów, najwięcej powiązań z innymi obiektami, tabela powiązań, itd.
+Niezbędna powierzchnia Guerscheta: powierzchnia statyczna (wymiary), grawitacyjna (Ps*dojścia), 
+ewolucyjna ((Pg+PS)*K); K: ciężki (suwnice) 0,05-0,15; taśmowa 0,10-0,25; włókienniczy przędzalnie 
+0,05-0,25; włókienniczy tkalnie 0,5-1; precyzyjny 0,75-1; metalowy 1,5-2, maszynowy 2-3.
+2.5. Metody wartościowania pracy
+sumaryczne (sumaryczno-porównawcza), analityczne (Bedaux, Sulzer, Hagner&Weng, UMEWAP 85, 
+AWP-N)
+Metodyka: 1) przygotowanie zakładu pracy, 2) dokonanie wstępnej analizy pracy, 3) określenie metody 
+analitycznej (kryterium najwyższe, porównanie z innymi na stanowiskach, korekta; ekspercka), 4) 
+opracowanie opisów pracy dla stanowisk, 5) wycena punktowa stanowisk, 6) przechodzenie z wyników 
+wartościowania na płace (metoda statystyczna - najmn. kwadraty, Timmego - punty rosną progresywnie, to 
+przelicznik liniowy i na odwrót, ZM: Pzasadn = Pnajniższa + (pkt dla stan - pkt najn)*Wart pkt w PLN; W 
+= pnajn*(rozp.płacy-1)/pkt real max).
+Bedaux - kwalifikacje i umiejętności zawodowe 88, odpowiedzialność i wysiłek umysłowy 43, wysiłek 
+psychofizyczny 28, ryzyko zawodowe 22, właściwości umysłowe 57, właściwości moralne 95. 
+UMEWAP 85: fachowość (5) 220, odpowiedzialność (6) 160, wysiłek (3) 100, warunki środowiska pracy 
+(3) 120. Opisówka! - uniewesalność, powszechna zrozumiałość, uwzględnienie światowego dorobku w 
+zakresie wartościowania pracy; modyfikacja '87 - zmniejszenie liczby stopni, pominięcie wysiłku 
+fizycznego, obciążenia z tytułu niskiego prestiżu pracy, czynniki niebezpieczne, połączenie 
+odpowiedzialności za skutki pracy z odp. za decyzje.
+Hagner&Weng - umiejętności i doświadczenie zawodowe 100 , zręczność 100, odpowiedzialność 300, 
+wysiłek 300 , warunki pracy 800. 
+Sulzer - opisowa. 
+Karty przebiegu (stenografia organizatorska)
+Technika kartowania polega na rejestracji badanych procesów pracy przy pomocy umownych symboli 
+graficznych na specjalnych kartach i wykresach. Przy jej pomocy można rejestrować lub projektować 
+przebieg wszelkich procesów pracy fizycznej. 
+Karta przebiegu jest to arkusz, w którym rejestrujemy przy pomocy symboli wszystkie elementy pracy 
+składające się na proces pracy. Wykres przebiegu jest to wykonany w skali plan pomieszczeń, w którym 
+realizowany jest proces pracy, uwzględniający rozmieszczenie stanowisk roboczych, maszyn, wyposażenia 
+itp. z zaznaczeniem, na podstawie obserwacji dróg ruchu wykonawców lub środków pracy. 
+KP - Karta Procesu przedstawia ogólny obraz badanego procesu. Ujmuje tylko kluczowe elementy 
+każdego procesu (operację i kontrolę). KPM - Karta Przebiegu Materiału daje szczegółowy obraz procesu, 
+uwzględnia wszystkie czynności oraz zdarzenia jakie zachodzą w stosunku do przedmiotu. KPC - Karta 
+Przebiegu Czynności przedstawia zapis wszystkich kolejnych czynności, jakie wykonuje oraz stanów jakim 
+ulega w czasie badanego procesu jego wykonawca. KPCZ - Karta Przebiegu Czynności Zespołowych 
+służy do rejestracji przebiegu pracy zespołu ludzi wykonujących pracę zespołową, albo pracy ludzkiej w 
+powiązaniu z pracą maszyn czy urządzeń. KPCOR - Karta Przebiegu Czynności Obu Rąk stanowi 
+chronologiczny i systematyczny zapis czynności rąk wykonawczy w badanej sytuacji. KM - Karta 
+Mikroruchów stosowana jest do rejestracji ruchów elementarnych wykonywanych przez wykonawcę 
+badanej operacji. KOD - Karta Obiegu Dokumentów to podstawowy środek badania i usprawniania 
+organizacji i techniki prac biurowych. Znajduje ona zastosowanie przy zbieraniu informacji o sporządzeniu 
+i użytkowaniu dokumentu w różnych komórkach organizacyjnych. 
+operacja - zmiana właściwości fizycznych, chemicznych bądź kształtu przedmiotu pracy; transport - 
+przemieszczenie powyżej 2 metrów; manipulacja - przemieszczenie poniżej 2 metrów; kontrola - 
+czynności dotyczące ustalania cech ilościowych lub jakościowych przedmiotu pracy; oczekiwanie - 
+bezczynność pracowników, postój maszyn lub bezwładność materiałów; magazynowanie - jeśli uwolnienie 
+ze stanu oczekiwania musi być poprzedzone sporządzeniem dokumentu.
+Części karty przebiegu: nagłówkowa (nazwa przedsiębiorstwa, nazwa, symbol i numer karty, numer 
+arkusza, łączna ilość arkuszy składających się na jedną kartę przebiegu, dane dotyczące przedmiotu pracy - 
+nazwa, części, cechy, wymiary, określenie badanego procesu, określenie miejsca wykonywania procesu, 
+określenie wykonawcy - nazwisko, stawka, brygadzista, informacje określające charakter metody - 
+dotychczasowa / proponowana, określenie początku i końca obserwacji - miejsce, osoba przeprowadzająca 
+obserwację, data sporządzenia, osoba sprawdzająca, data sprawdzenia), robocza (A: czas trwania, 
+odległość przebyta, symbole graficzne, opis słowny, stosowany sprzęt; B: opis czynności, ilość, odległość, 
+czas, symbole w kolumnach, uwagi; C: opis czynności, lewa ręka, czas, prawa ręka, opis czynności).
+Znaczki
+KPC
+operacja
+kontrola
+transport
+transport z obciążeniem
+oczekiwanie
+magazynowanie
+oderwanie do innej pracy
+KOD
+zmiana właściwości dokumentu
+ustalenie legalności / poprawności
+transport
+stan bezczynności
+przechowywanie, archiwizacja
+wystawienie (emisja)
+numerowanie
+parafowanie
+złożenie podpisu
+odczytanie dokumentu
+likwidacja
+Metoda ABC
+Vilfredo Pareto, 20-80. A- 20% elementów reprezentuje 80% skumulowanej wartości cechy;
+etapy: obserwacja i rejestracja faktów, klasyfikacja numeryczna danych, przeniesienie danych na układ 
+współrzędnych. Przykłady: wybór wyrobów do analizy wartości (cena wyrobu), wybór operacji procesu 
+technologicznego do analizy wartości (koszt robocizny), wybór typowych stanowisk robotniczych (udział 
+roboczozmian w roku), racjonalizacja rozplanowania magazynu części (horyzontalna - ilość zamówień, 
+wertykalna - zamawiana ilość) usprawnianie kalkulacji wynikowej zleceń produkcyjnych (wartość zlecenia, 
+koszt stały). 
+Style kierowania
+White i Lippitt - lata 40-ste - 10-ciolatki, instruktor daje: A)zadania, podział pracy, metody - przerwanie 
+pracy, bijatyki; D) rzeczy do wyboru, sami dzielą pracę, nie narzuca sposobu wykonania - kontynuacja 
+pracy; B) róbta co chceta - brak pracy, zamieszanie, zabawy. 
+Blake i Bouton - lata 50-te - siatka (orientacja na ludzi, orientacja na zadania) - (11) bierny, (19) 
+demokratyczny, (55) kompromisowy - najczęstszy, (91) autokratyczny, (99) przywódczy, realizacyjny. 
+Efektywne od (55) do (99).
+Redin - lata 70-te - skrzynka (bierny - biurokratyczny, autokratyczny - autokrata życzliwy, altruistyczny - 
+promocyjny, kompromisowy - realizacyjny). 
+Benchmarking
+Metoda porównywania własnych rozwiązań z najlepszymi oraz ich udoskonalania przez uczenie się od 
+innych i wykorzystywanie ich doświadczenia. Rodzaje: wewnętrzny (łatwy dostęp do danych, dobre wyniki 
+w warunkach dywersyfikacji, zawężone pole widzenia, uprzedzenia w firmie), konkurencyjny (istotne 
+informacje, porównywalność wyrobów i procesów, dokładne określenie pozycji konkurencyjnej, trudny 
+dostęp do danych, niebezpieczeństwo powielania wąskich praktyk branżowych), funkcjonalny 
+(innowacyjność rozwiązań, relatywnie łatwy dostęp do danych, stosunkowo trudne wdrażanie, 
+czasochłonna analiza), ogólny (relatywnie łatwy dostęp do danych, innowacyjność, stosunkowo trudne 
+wdrażanie).
+Metodyka: I. Planowanie (identyfikacja przedmiotu badań, identyfikacja przedsiębiorstw do porównań, 
+wybór metody zbierania danych), II. Analiza (ustalenie odchyleń w zakresie parametrów efektywności, 
+określenie poziomów przyszłych wyników), III. Integracja (komunikowanie wyników benchmarkingu i 
+spowodowanie ich akceptacji, ustalenie celów funkcjonalnych), IV. Wdrożenie (opracowanie planu 
+wdrożenia, uruchomienie działań wdrożeniowych i zabezpieczenie ich realizacji, określenie nowych 
+benchmarków).
+Źródła: własna baza danych, raporty wewnętrzne, publikacje wewnętrzne, prace badawczo - rozwojowe, 
+ogłoszenie prasowe, prospekty reklamowe, salony wystawowe, sondaże telefoniczne, kontakty osobiste z 
+partnerami, biografie wybitnych menedżerów, dystrybutorzy sprzętu komputerowego; pośrednie: 
+stowarzyszenie zawodowe, sektorowe banki danych, czasopisma profesjonalne, wyższe uczelnie, instytuty 
+naukowo - badawcze, biura konsultingowe, badanie opinii klientów, seminaria szkoleniowe, materiały z 
+konferencji naukowych, izby przemysłowo - handlowe, biuletyny informacyjne.
+Reengineering
+Metoda gruntownego przekształcenia całościowych procesów w przedsiębiorstwie. Punktem wyjścia 
+analiza potrzeb klientów, celem - optymalizacja jakości, kosztów, terminu realizacji. 
+zasady: wychodzić od potrzeb klienta, analizować procesy w przedsiębiorstwie, uwzględniać istniejące 
+ograniczenia, myśleć inaczej. Analiza procesów, a nie strukturalna.
+zasady: 1) działanie powinno się organizować wokół wyników, a nie zadań; 2) użytkownicy wyniku 
+procesu powinni być organizatorami tego procesu; 3) zasoby przestrzennie rozproszone należy traktować 
+tak, jakby znajdowały się w jednym miejscu; 4) Procesy równoległe należy koordynować w czasie ich 
+wykonywania; 5) decyzje powinny być podejmowane w miejscu realizacji procesu, a oddalone 
+przestrzennie kierownictwo ma wyłącznie prawo kontroli decyzji; 6) gromadzone informacje powinny 
+spływać do jednego ogólnie dostępnego banku danych.
+Metodyka: (Hammer, Champy) 1) wybór procesu do rekonstrukcji (karta procesów; mankamenty 
+procesów, znaczenie dla klientów, potencjalne efekty); 2) utworzenie zespołu roboczego (zewn+wewn); 3) 
+zrozumienie procesu; 4) rekonstrukcja procesu; 5) wdrożenie rekonstrukcji w życie. Inaczej (Furey): 1) 
+rozpoznanie oczekiwań klientów; 2) ocena stanu istniejącego; 3) analiza i modyfikacja stanu istniejącego; 
+4) benchmarking w odniesieniu do rozwiązań innowacyjnych; 5) projektowanie nowego procesu; 6) 
+wdrożenie procesu. 
+Zmiany: 1) tradycyjne komórki funkcjonalne są zastępowane przez zespoły odpowiedzialne za dany 
+proces; 2) proste zadania są zastępowane przez złożoną pracę wielowymiarową; 3) stanowiska 
+kontrolowane są zastępowane stanowiskami z autonomią i odpowiedzialnością; 4) kryteria wynagradzania 
+odnoszą się w większym stopniu do efektów niż do aktywności; 5) miejsce szkolenia zajmuje edukacja 
+zawodowa; 6) kryteria awansowania: przydatność, a nie osiągane wyniki; 7) zmiana wartości: otwarcie na 
+klienta zastępuje protekcjonizm; 8) szefowie przekształcają się z nadzorców w animatorów; 9) struktury 
+hierarchiczne ulegają spłaszczeniu; 10) kierownicy z arbitrów przekształcają się w liderów. 
+Ewolucja i dyfuzja metod
+Gire - cykl życia metody (krzywa Gaussa); 10-30 lat narodziny i ekspetymenty, potem 20-30 lat wielka 
+dyfuzja. Francja - kryzys energetyczny w 1973; Polska: badanie metod pracy - 58-65 duże firmy, do 80 
+wykorzystanie, nauczanie spada; analiza wartości: 65-70, do 85 wykorzystanie, nauczanie stałe; 
+wartościowanie pracy: 60-65, małe wykorzystanie do 84, potem wzrost, nauczanie stałe; zarządzanie 
+strategiczne: 80-85, wykorzystanie rośnie, nauczanie rośnie.
+
+
+
+- 4 -
+

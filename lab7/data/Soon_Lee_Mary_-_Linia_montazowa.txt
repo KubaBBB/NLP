@@ -1,0 +1,523 @@
+Autor: Mary Soon Lee
+Tytul: LINIA MONTAŻOWA
+
+(Assembly Line)
+
+Z "NF" 9/97
+
+   POUFNE
+   Do: Rada Nadzorcza Riotech
+   Data: 10 października 2019
+   Potwierdzono zakłócenia w cyklu produkcyjnym. Wydajność 
+robotów spadła przeciętnie o 12 procent.
+   Zalecenia: kontynuować dyskretne dochodzenie. W ciągu 
+pięciu dni we wszystkich zakładach zaangażować konsultantów d/s 
+oprogramowania.
+   Ważne: w celu utrzymania notowań firmy zachować ścisłą 
+tajemnicę.
+
+   Marianne czuła jesień nawet tutaj, w dzielnicy 
+przemysłowej, wśród ponurych fabryk wyrastających z betonowej 
+pustyni. Powietrze było wilgotne, a na chodniku leżał pstrokaty 
+dywan liści samotnego klonu.
+   Schyliła się, wybrała kilka liści, po czym starannie 
+zawinęła je w apaszkę. Dobry znak przed pierwszym dniem pracy. 
+Skręciła w lewo, do wejścia na teren fabryki Riotech; ze 
+stalowej bramy obłaziła farba, w szerszej od innych szczelinie 
+między prętami zainstalowano czytnik kart identyfikacyjnych. 
+Wsunęła swoją, komputer zaświergotał i brama otworzyła się 
+przed nią.
+   Weszła do wąskiego korytarza. Ceramiczne płytki na 
+podłodze były już mocno wytarte, ściany pokrywała pajęcza sieć 
+pęknięć, ale system wentylacyjny z cichym pomrukiem wciąż 
+toczył walkę z temperaturą i wilgotnością powietrza. Za brudnymi 
+szklanymi drzwiami ujrzała maszyny, z którymi miała pracować. 
+Ogromne wielorękie roboty, osadzone na solidnych fundamentach, 
+stały wzdłuż taśmociągów. Niezliczone kamery - ich oczy - 
+poruszały się na elastycznych wysięgnikach.
+   Marianne wstrzymała oddech, po czym głośno wypuściła 
+powietrze; były piękne. Solidna, rzeczowa obecność maszyn 
+wywierała na niej wielkie wrażenie, trochę podobne do tego 
+(choć zarazem całkowicie różne), jakie ją ogarniało, kiedy 
+obserwowała swego małego robota domowego. Mechaniczne ramiona 
+poruszały się z niezrównaną gracją, wiercąc, natryskując, 
+przykręcając i polerując. W trakcie starannie zaprogramowanego 
+tańca na liniach montażowych powstawały delikatne szklane łuki, 
+tarcze zegarów, telewizory albo fujarki. Każda maszyna mogła w 
+okamgnieniu przerzucić się na kolejne zadanie, zgodnie z rytmem 
+zamówień rynku.
+   - Marianne, prawda? Jestem Arthur.
+   Niemal podskoczyła z zaskoczenia, ale prędko się 
+opanowała. Czarnoskóry mężczyzna o siwych, krótko ostrzyżonych 
+włosach, sięgał jej zaledwie do ramienia. Był chudy, kościsty i 
+miał na sobie bladożółty sweter, tak powyciągany, że sięgał mu 
+prawie do kolan. Zaprosił ją gestem do niewielkiego, zawalonego 
+książkami gabinetu. Nie było tam klimatyzacji, w związku z czym 
+w powietrzu, przesyconym intensywnym zapachem oprawionych w 
+skórę tomów, wisiała niemal namacalna wilgoć.
+   - Siadaj, proszę. - Zgarnął z krzesła stos powieści Iana 
+Fleminga z ogniście czerwonymi tytułami na grzbietach. - 
+Napijesz się kawy? Oprócz niej mam tylko wodę.
+   - Dziękuję, może być kawa. - Marianne zerknęła na piramidę 
+kubków w zlewie. Zaschnięte plamy i smugi były koloru kawy. - 
+Czy ty też pracujesz w dziale informatycznym?
+   Na pomarszczonej twarzy Arthura rozkwitł szeroki uśmiech. 
+Oparł się o zlew i spojrzał na nią łagodnymi brązowymi oczami.
+   - Przykro mi, ale tu nie ma działu informatycznego. Jesteś 
+tylko ty.
+   - To niemożliwe! Przecież w tej fabryce pracują setki 
+robotów, więc...
+   - Nie przejmuj się. Zawsze doskonale dawały sobie radę, 
+nawet bez tak zwanych specjalistów... Bez urazy. Widocznie 
+jakiś znudzony członek zarządu doszedł do wniosku, że 
+zatrudniając konsultantów do spraw oprogramowania poprawi 
+publiczny wizerunek firmy.
+   Marianne z trudem przełknęła ślinę. Jej profesor ostrzegał 
+ją, że praca w przemyśle nie jest aż tak ekscytująca, jak jej 
+się wydaje, ale problem polegał na czymś innym: zgłosiła się do 
+pracy jako konsultant d/s oprogramowania, tymczasem dostała pod 
+opiekę gromadę robotów przemysłowych, mimo że jej doświadczenia 
+w tym zakresie ograniczały się do uruchamiania i obsługi 
+uniwersyteckich symulacji.
+   Arthur postawił przed nią kubek z kawą.
+   - Na pewno dasz sobie radę. Riotech nie zatrudniłby cię, 
+gdybyś nie miała odpowiednich albo nawet zbyt dużych 
+kwalifikacji. Boli ich to samo, co wszystkich: zbyt wielu 
+chętnych do pracy, z którymi nie wiadomo co zrobić.
+   Wzięła do ręki ciepły kubek. Arthur dodał do kawy świeżej 
+śmietanki. Przełknęła łyk aromatycznego płynu, myśląc o 
+robotach za drzwiami, o ich niczym nie zakłoconej, eleganckiej 
+kompetencji. Może rzeczywiście wszystko będzie dobrze.
+
+   Chociaż Arthur zaproponował, że zrobi dla niej miejsce w 
+biurze, Marianne urządziła się w hali produkcyjnej. Zdołała 
+wcisnąć biurko na platformę przy ścianie, z której widać było 
+całą linię montażową. Riotech nie dostarczył jej żadnych 
+instrukcji, więc grzebała w danych niemal na oślep. Najpierw 
+zajęła się specyfikacjami technicznymi maszyn, potem 
+skoncentrowała uwagę na programach sterujących poruszeniami 
+stalowych ramion, by wreszcie wziąć się za makropolecenia 
+zawiadujące działaniem całej linii.
+   Podczas przerw przechadzała się po hali, przystawała co 
+kilka kroków i przyglądała się każdej maszynie. Wieczorem, już 
+w domu, wracały do niej reminiscencje tych spacerów. 
+Wystarczyło, żeby potrąciła lampę, a już jej kołysanie 
+przywodziło na myśl powtarzające się ruchy robotów, chwilę 
+potem zaś przypominała sobie swoje odbicie w lśniącym metalowym 
+kadłubie albo rozmyślała o zaskakujacej delikatności ciężkich 
+maszyn, z niezrównanym wyczuciem posługujących się pistoletami 
+natryskowymi.
+   Rankiem ósmego dnia Marianne odkryła, że dziewięćdziesiąt 
+procent mocy obliczeniowej mikroprocesorów jest nie 
+wykorzystane. Zmarszczyła brwi. Każdy z tych robotów byłby w 
+stanie dowodzić eskadrą myśliwców. Bębniąc palcami w biurko, w 
+zamyśleniu spoglądała z góry na maszyny.
+   Zrewanżowały się spojrzeniami licznych złocistych oczu.
+   Zanim zorientowała się, że to kamery, zrobiło się jej 
+gorąco, a na policzki wypełzły jej piekące rumieńce. Przypadkowa 
+koordynacja ruchów kilkudziesięciu spośród kilkuset ruchomych 
+kamer. Z trudem rozprostowała palce kurczowo zaciśnięte na 
+krawędzi biurka. Chyba powinna trochę odpocząć.
+   Odchyliła się do tyłu razem z fotelem i wbiła wzrok w 
+sufit. Przez zatyczki do uszu przedzierały się odległe, 
+stłumione odgłosy: poświstywania, pomruki, łoskoty, skrzypienia 
+i zgrzyty tworzyły razem niemal coś w rodzaju muzyki. Miała 
+wrażenie, że wsłuchuje się w szum fal rozbijających się na 
+odległej plaży albo w szum wiatru targającego gałęziami drzew.
+   Nieco spokojniejsza, ponownie skoncentrowała uwagę na 
+komputerowym terminalu. Sięgając do klawiatury, zawadziła ręką 
+o kartkę; odruchowo odsunęła ją na bok, ale zaraz potem 
+znieruchomiała ze wzrokiem wbitym w papier. To nie była jej 
+kartka. Na kremowym papierze znajdował się delikatny rysunek 
+przedstawiający rdzawoczerwone liście. U dołu strony liście 
+były lekko żółtawe.
+   Marianne przeniosła spojrzenie z rysunku na liście, które 
+zebrała rankiem z ulicy i położyła na biurku, po czym odwróciła 
+się w stronę robotów. Wokół podstawy najbliższego, na posadzce 
+hali walało się mnóstwo podobnych kartek. Wszystkie były 
+pokryte rysunkami przedstawiającymi klonowe liście w różnych 
+odcieniach szarości, złota i czerwieni.
+   Jej nagie ramiona pokryły się gęsią skórką. Maszyny trwały 
+w bezruchu: czterometrowe metalowe cielska z licznymi potężnymi 
+kończynami. Nie bała się ani trochę; odkąd sięgała pamięcią, 
+marzyła właśnie o takiej chwili, podczas długich bezsennych 
+nocy, kiedy leżała w łóżku i rozmyślała o czymś innym niż o 
+programach wprowadzanych rutynowo do elektronicznych układów 
+pamięci.
+   O czymś zupełnie innym.
+   Ale przecież teraz nikt już nie traktował poważnie takich 
+pomysłów - może z wyjątkiem producentów tandetnych horrorów. 
+Komputer, na którym pracowała na uniwersytecie, dysponował nie 
+tylko wielokrotnie większą mocą, ale także najnowszym 
+procesorem mowy. Zaczerpnęła głęboko powietrza, po czym 
+pokręciła głową. Jedyny niespodziewany wybryk jej komputera - 
+pojawienie się na monitorze prostych, ale niezrozumiałych 
+piktogramów - okazał się żartem jednego ze studentów ostatniego 
+roku. Tutaj też z pewnością ma do czynienia albo z czyimś 
+dowcipem, albo z błędem w oprogramowaniu.
+   Przysunęła klawiaturę, wywołała na monitor tekst programu 
+sterującego, po czym zaczęła sprawdzać go linia po linii. 
+Zadanie robota polegało na nanoszeniu celtyckich wzorków na 
+naczynia kuchenne; chociaż starała się jak mogła, nie była w 
+stanie znaleźć żadnego, choćby najmniejszego punktu 
+zaczepienia. Nie potrafiła nawet wytłumaczyć, w jaki sposób 
+maszyna uzyskała dostęp do papieru. Od miejsca, w którym można 
+było znaleźć takie kartki, robota dzieliło kilkanaście metrów.
+   Arthur wpadł na chwilę i zapytał, kiedy Marianne wybiera 
+się na lunch, ale ona nie miała czasu na takie głupstwa. 
+Właśnie starała się prześledzić drogę przepływu informacji 
+dostarczanych włóknami optycznymi, tylko częściowo 
+zmodyfikowaną przez działający obecnie program. W tle wciąż 
+powstawały, przekształcały się i znikały zagadkowe kształty, 
+generowane najprawdopodobniej przez niewykorzystywane obszary 
+mikroprocesora.
+   Od razu przyszło jej do głowy, że powinna zawiadomić 
+Riotech, ale przypuszczalnie skończyłoby się to tym, że to ją 
+obarczono by odpowiedzialnością za wszystkie problemy, tym 
+bardziej, że przecież świadomie naruszyła warunki umowy: miała 
+analizować programy przy terminalu w biurze, a nie tutaj, 
+niemal na linii montażowej.
+   Kiedy ból mięśni grzbietu stał się nie do wytrzymania, 
+podniosła się z fotela i wyruszyła w długą wędrówkę między 
+maszynami. W drodze powrotnej zebrała z posadzki rysunki i 
+przyniosła je na biurko.
+   Właśnie miała usiąść, kiedy zobaczyła zbliżającego się 
+mężczyznę. Miał długie jasne włosy zebrane z boku w kucyk, 
+ubrany zaś był w dopasowany zielony jednoczęściowy garnitur. 
+Strój od razu jej się nie spodobał, chociaż, sądząc ze sposobu, 
+w jaki mężczyzna go nosił, zapewne stanowił ostatni krzyk mody. 
+Przybysz zatrzymał się po drugiej stronie biurka, po czym 
+zapytał podniesionym głosem, niemal przekrzykując odgłosy pracy 
+maszyn:
+   - Marianne Daley?
+   - Tak. A pan kim jest?
+   Nie odpowiedział, tylko błyskawicznym ruchem odwrócił 
+monitor do siebie, przysunął sobie klawiaturę i coś szybko 
+wystukał. Roboty znieruchomiały nagle i w hali zapanowała 
+niczym nie zmącona cisza. Mężczyzna uśmiechnął się uprzejmie.
+   - Mark Raylin, starszy doradca techniczny Riotech. Jak 
+pani może tu pracować? Nie przeszkadza pani ten potworny hałas?
+   - Ani trochę. Nawet go lubię - odparła z wymuszonym 
+uśmiechem.
+   Co go tu przygnało? Nawet jeśli programy kontrolne 
+zaalarmowały centralę o chwilowym zakłóceniu, było bardzo mało 
+prawdopodobne, żeby od razu przysłali swojego człowieka, w 
+dodatku na tak wysokim stanowisku.
+   - Czas to pieniądz, jak się mówi, więc od razu przejdę do 
+rzeczy. Czy ingerowała pani w oprogramowanie maszyn?
+   - Nie.
+   - A w setup? Koordynację etapów procesu produkcyjnego? 
+System dostawy materiałów?
+   - Prześledziłam tylko drogę sygnałów optycznych i 
+sprawdziłam, jak wpływają na aktywność poszczególnych urządzeń.
+   W gruncie rzeczy była to prawda, lecz mimo to poczuła w 
+żołądku nieprzyjemny ciężar. Żałowała, że nie położyła rysunków  
+w jakimś mniej widocznym miejscu.
+   - Więc nie wie pani, jaki mógł być powód chwilowej zmiany 
+cyklu produkcyjnego?
+   - Nie mam pojęcia.
+   Raylin położył ręce na jej dłoniach. Miał bardzo ciepłą, 
+prawie gorącą skórę.
+   - Marianne, dlaczego nie chcesz z nami współpracować? 
+Ułatwiłabyś życie nie tylko nam, ale i sobie.
+   Gwałtownie cofnęła ręce.
+   - Nie rozumiem, o czym pan mówi.
+   - Nie udawaj. Przekaż temu, kogo reprezentujesz, że 
+Riotech jest gotów przystąpić do rozmów. - Rzucił na biurko 
+kryształ pamięci. - Jeszcze nie wiemy, kto za tobą stoi, ale 
+zebraliśmy wystarczająco dużo materiału dowodowego, żeby 
+oskarżyć cię o sabotaż.
+   Marianne tak mocno zacisnęła zęby, że przez chwilę nie 
+była w stanie odpowiedzieć. Nie miała pojęcia, do czego zmierza 
+Raylin, ale była pewna, że chodzi mu o coś znacznie więcej niż 
+o maszynę rysującą na papierze nie zaprogramowane wzorki.
+   - To chyba jakaś pomyłka - wykrztusiła, kiedy wreszcie 
+znowu mogła mówić. - Nie zrobiłam nic złego.
+   - Czekam na twój telefon do jutra do południa. Mam 
+nadzieję, że zmienisz zdanie.
+   Odwrócił się na pięcie i odszedł, nie oglądając się za 
+siebie.
+   Marianne otworzyła już usta, ale nie przychodziło jej do 
+głowy nic mądrego, co mogłaby powiedzieć. Najpierw musi się 
+zorientować, co się tu właściwie dzieje. Drżącymi palcami 
+wepchnęła kostkę pamięci do czytnika i przez kilka sekund z 
+oszołomieniem wpatrywała się w biegnące przez monitor kolumny 
+liczb. Zwolniła tempo; okazało się, że to raporty produkcyjne 
+ze wszystkich fabryk koncernu. Wynikało z nich jednoznacznie, 
+że w ciągu minionych trzech tygodni wszędzie zanotowano 
+znaczący spadek wydajności.
+   Wszędzie, tylko nie tutaj.
+   Ponownie sprawdziła liczby, ale nie znalazła błędu. Odkąd 
+podjęła pracę w tej fabryce, produkcja zaczęła szybko rosnąć, 
+obecnie zaś przewyższała aż o siedem procent poziom sprzed 
+kilku miesięcy. Żeby było ciekawiej, wyraźny wzrost wydajności 
+następował za każdym razem, kiedy zjawiała się przy swoim 
+stanowisku pracy.
+   Tak więc, o ile Riotech nie sfałszował danych, zachowanie 
+Raylina było w pełni uzasadnione. Uważał, że ona, Marianne, 
+współpracuje z tajemniczymi sabotażystami, którzy odkryli 
+sposób nie tylko na utrudnienie produkcji w większości fabryk, 
+ale, co ważniejsze, na znaczne jej zwiększenie w tej jednej, 
+jedynej. Rzeczywiście, trudno o silniejszy argument 
+przetargowy.
+   Parsknęłaby śmiechem, ubawiona niedorzecznością podejrzeń, 
+gdyby nie to, że po raz pierwszy w życiu naprawdę się bała. W 
+ciągu minionych sześciu lat Riotech rozrastał się w 
+błyskawicznym tempie; kiedyś był nie rzucającą się w oczy 
+brazylijską firmą, teraz należał do grona największych 
+ponadnarodowych koncernów. Nawet gdyby zdołała ich przekonać, 
+że nie ma z tym nic wspólnego, nie mogła liczyć na przeprosiny. 
+Informacje zawarte w krysztale pamięci były zbyt cenne, żeby 
+pozostawili ją przy życiu.
+   Przemknęła jej przez głowę myśl, żeby zadzwonić do 
+przyjaciół z uniwersytetu, szybko jednak doszła do wniosku, że 
+i tak nie zdołają jej pomóc, na pewno zaś naraziłaby ich na 
+poważne niebezpieczeństwo. Może więc wsiąść w samolot i uciec 
+za granicę? Nic z tego. Musiałaby zaszyć się w jakimś zacofanym 
+kraju Trzeciego Świata, gdzie ludzie wciąż jeszcze posługują 
+się papierowymi pieniędzmi, gdzie indziej bowiem natychmiast 
+zdemaskowałaby ją karta kredytowa.
+   Jej ciałem wstrząsnął dreszcz. Siedziała za biurkiem i 
+gapiła się na nieruchome roboty. Stały przed nią jak niesprawna 
+armia, martwe, pozbawione całego wdzięku i gracji.
+   Tknięta nagłym impulsem, zresetowała system. Roboty ożyły, 
+wykonując gwałtowne, rwane gesty, przez halę przebiegła fala 
+małych przemysłowych katastrof - tutaj na posadzkę posypał się 
+grad nakrętek, tam z suchym trzaskiem pękła naprężona tkanina - 
+potem zaś maszyny odzyskały zgubiony rytm.
+   Marianne długo siedziała bez ruchu i wodziła po nich 
+spojrzeniem, lecz wciąż nie miała pojęcia, co powinna zrobić.
+
+   - Arthur!
+   Zapukała do drzwi jego gabinetu. Musiała o tym z kimś 
+porozmawiać. Nie zamierzała naginać faktów do teorii o 
+sabotażu; dlaczego akurat tę fabrykę miałby spotkać odmienny 
+los niż pozostałe? Dlaczego wzrost wydajności następował zawsze 
+podczas jej godzin pracy?
+   Arthur, z książką Alice Walker w ręce, otworzył drzwi i 
+zaprosił ją do środka.
+   - Coś się stało?
+   - Tak, ale chyba mi nie uwierzysz. Powiedz, czy od chwili, 
+kiedy zacząłeś tu pracować, roboty zachowywały się jakoś... 
+dziwnie?
+   - Moim zdaniem robią prawie same dziwne rzeczy. Co 
+konkretnie masz na myśli?
+   - Malowanie obrazków. - Rozłożyła rysunki na stole, pilnie 
+bacząc, żeby nie spojrzeć mu w oczy. - Dziś rano, i teraz też, 
+najwyżej pół godziny temu, wydawało mi się, że mnie obserwują.
+   Arthur cierpliwie czekał na ciąg dalszy, ale ona milczała.
+   - Więc? - zapytał wreszcie, unosząc brwi.
+   - Więc właśnie o to mi chodzi. Teraz powiedz mi, że gadam 
+bzdury, a ja sobie pójdę i więcej nie będę ci zawracać głowy.
+   - Nie wyglądasz na osobę, która nie wie, co mówi. - Wziął 
+do ręki jeden rysunek, potem drugi i trzeci. - A to z pewnością 
+nie wygląda na produkt, który powinien schodzić z taśmy 
+montażowej. Wiesz co? Lubię proste wytłumaczenia. Skoro 
+twierdzisz, że maszyny cię obserwują, to pewnie tak jest. Te 
+obrazki mogą stanowić próbę nawiązania kontaktu.
+   - Przeciez to nie ma sensu! Dlaczego właśnie tutaj? 
+Owszem, te roboty są dość skomplikowane, ale na świecie istnieją 
+dziesiątki tysięcy znacznie potężniejszych i sprawniejszych 
+komputerów! I dlaczego akurat teraz?
+   - Dlatego, i już. - Ujrzawszy jej minę, rozłożył ręce w 
+uspokajającym geście. - Żartowałem. Oczywiście, nie wiem 
+dlaczego i wątpię, czy ty się kiedykolwiek tego dowiesz. Jednak 
+fakt, że nie potrafimy wytłumaczyć jakiegoś zjawiska, nie 
+oznacza jeszcze, że ono nie istnieje.
+   Marianne bezradnie potrząsnęła głową. Przyszła tu po to, 
+żeby pomógł jej uporządkować myśli, a tymczasem on beztrosko 
+puścił wodze fantazji.
+   - Jesteś zmęczona. Wracaj do domu, prześpij się, 
+odpocznij. Do rana może wszystko ci się poukłada.
+   - Nie mogę iść do domu. Muszę... - Przerwała w pół zdania, 
+ponieważ nie chciała wplątywać Arthura w historię z Riotechem. 
+- Dzięki, że zechciałeś mnie wysłuchać.
+
+   Marianne nie wróciła na noc do domu. Nad ranem zasnęła 
+przy biurku z głową opartą na ramionach, wsłuchana w odgłosy 
+pracy robotów, które wtopiły się w jej sen.
+   Obudziła się z monstrualną sztywnością karku. Wymamrotała 
+pod nosem jakąś nieprzychylną uwagę pod swoim adresem, po czym 
+sięgnęła po kubek z zimną kawą, lecz jej ręka trafiła na coś 
+innego.
+   Zamrugała raptownie, a kiedy wreszcie zdołała 
+skoncentrować spojrzenie, ujrzała szklankę z rżniętego 
+kryształu, z wtopionymi dwiema szklanymi kropelkami koloru jej 
+oczu. Wyprostowała się raptownie i rozejrzała dokoła; roboty 
+wpatrywały się w nią złocistymi punkcikami obiektywów.
+   Miała kłopoty z oddychaniem. Dopiero po minucie, może 
+dwóch, zdołała wykrztusić przez zaciśnięte gardło:
+   - Dzięki.
+   Nie odpowiedziały. Oczywiście, bo jak miałyby 
+odpowiedzieć? Przecież roboty przemysłowe nie są wyposażane w 
+interfejsy głosowe ani nawet w semantyczne bazy danych. Nawet 
+jeśli myślą, czynią to w sposób całkowicie odmienny niż ludzie 
+czy jakiekolwiek rozumne istoty. Wciąż wpatrywały się w nią 
+złocistymi obiektywami kamer kołyszących się na elastycznych, 
+przypominających szyje, wysięgnikach.
+   Bała się - nie tego, że roboty uczynią jej krzywdę, ale 
+tego, że wykona zbyt gwałtowny ruch, albo że do hali wejdzie 
+Arthur i niesamowity nastrój pryśnie jak bańka mydlana. Po 
+głowie kołatała jej się myśl, że nikt w to nie uwierzy, więc w 
+końcu przełamała wewnętrzny opór i z poczuciem winy włączyła 
+monitoring, żeby zarejestrować niesamowitą scenę.
+   Roboty wciąż ją obserwowały. Nie mogła już usiedzieć w 
+fotelu; poderwała się z miejsca, zbiegła z podestu na posadzkę 
+hali, po czym, jak małe dziecko, zaczęła biegać między 
+maszynami. Kiedy zobaczyła, że roboty wodzą za nią złocistymi 
+spojrzeniami, w jej sercu zabrzmiała radosna, wzruszająca 
+pieśń.
+   Wreszcie zatrzymała się, żeby złapać oddech, a wtedy 
+maszyny odwróciły się od niej i wróciły do pracy.
+   - Zaczekajcie!
+   Ale było już za późno. Roboty nie zwracały na nią uwagi. 
+Powoli wróciła za biurko, wzięła do ręki kryształową szklankę i 
+ścisnęła tak mocno, że aż zabolały ją palce. Coś się wydarzyło, 
+coś niezwykłego, subtelnego i niezwykle cennego. Powinna to za 
+wszelką cenę zachować.
+   Mimo to ogarnęły ją wątpliwości. Nie łudziła się ani 
+przez chwilę, że Mark Raylin albo jego szefowie z Riotech okażą 
+jej jakąkolwiek pomoc. Próba samodzielnego zgłębienia problemu 
+oznaczała konieczność naruszenia umowy. Jeśli Riotech dowie się 
+o tym, grozi jej kara, w porównaniu z którą ciężkie więzienie 
+będzie się wydawało błahostką.
+   Zerknąwszy w górę, pochwyciła spojrzenia dwóch stojących w 
+pobliżu robotów. Ich elektroniczne oczy mrugały miarowo - czy 
+można to uznać za próbę porozumienia? Marianne przysunęła 
+klawiaturę i przystąpiła do pospiesznego kopiowania plików. 
+Kiedy skończyła, zbliżało się południe. Bolały ją palce i 
+przeguby. Lada chwila mógł się zjawić Raylin. Musiała jak 
+najprędzej przekazać dane na zewnątrz, bez względu na ryzyko. 
+Posługując się kodami z kryształu pamięci pozostawionego przez 
+Raylina, przełamała firmowe zabezpieczenia i weszła w sieć. 
+Zaraz potem wystukała na klawiaturze znajomy adres; odprężyła 
+się nieco dopiero wtedy, kiedy uzyskała połączenie.
+   Na ekranie pojawiła się wąsata twarz jej profesora.
+   - Marianne! Jak miło cię znowu widzieć...
+   - Potrzebuję pańskiej pomocy, i to natychmiast. Wysyłam 
+panu pewne dane. Proszę rozpowszechnić je najprędzej, jak 
+będzie pan mógł.
+   - Jakie dane? Jeśli to coś wojskowego...
+   - Nie, wojsko nie ma z tym nic wspólnego. Chodzi o... o 
+duszę maszyny. Nie mam teraz czasu. Wszystko wyjaśnię panu 
+później. Błagam, niech mi pan pomoże!
+   Przez chwilę zastanawiał się, poruszając wąsami, aż 
+wreszcie skinął głową.
+   - W porządku, ale jeśli coś mi się nie spodoba, osobiście 
+dopilnuję, żeby odebrano ci doktorat.
+   Przerwał połączenie, ale przedtem uśmiechnął się, więc 
+jego słowa nie zabrzmiały aż tak groźnie.
+   Zrobiła wszystko, co było w jej mocy. Wzięła szklankę do 
+ręki, ścisnęła ją mocno i zeszła na dół, do robotów.
+
+   Mechaniczne ramiona kołysały się łagodnie nad dziewczyną, 
+po czym nagle znieruchomiały i w hali zapanowała martwa cisza. 
+Marianne odwróciła się gwałtownie; kilka metrów od niej Raylin 
+pochylał się nad taśmociągiem. Z wymuszonym uśmiechem skinęła 
+mu głową.
+   - Przygotowałam panu wstępny raport.
+   - Oszczędź sobie fatygi. Przechwyciliśmy dane, które 
+przekazałaś na uniwersytet. Niektóre z twoich domysłów okazały 
+się zaskakująco trafne.
+   Powiedział to takim tonem, że Marianne poczuła, jak jeżą 
+jej się włoski na karku.
+   - Co pan ma na myśli?
+   Podszedł do niej i stanął tak blisko, że poczuła 
+intensywny zapach wody po goleniu oraz jego nieświeży oddech.
+   - Twoim zdaniem świat rzeczywisty bez przerwy wpływa na 
+wewnętrzną logikę robotów, powodując szybko postępujące zmiany. 
+Ponieważ roboty porozumiewają się ze sobą, zaburzenia 
+rozprzestrzeniają się w błyskawicznym tempie. Czy o to właśnie 
+chodzi?
+   Marianne cofnęła się o krok, ale stwierdziła, że ma 
+odciętą drogę ucieczki. Jeszcze mocniej ścisnęła szklankę w 
+dłoni, jednak kiedy odpowiedziała, okazało się, że jej głos 
+wcale nie drży:
+   - Nie użyłam słowa "zaburzenia". Według mnie roboty uczą 
+się myśleć niezależnie.
+   - Nazywaj to sobie, jak chcesz. Żeby powstrzymać ten 
+proces, wystarczy co pewien czas wykasowywać pamięć robotów. Co 
+prawda, w skali roku oznacza to stratę co najmniej kilku dni, 
+które trzeba będzie poświęcić na ich ponowne szkolenie, ale w 
+sumie na pewno nam się opłaci. Wydałem już polecenie, żeby 
+zastosować tę metodę we wszystkich fabrykach.
+   Marianne wpatrywała się w niego z niedowierzaniem.
+   - Chcecie... Chcecie je zabić?!
+   - Nie przesadzaj. Przecież to tylko maszyny. - Położył jej 
+rękę na ramieniu i lekko zacisnął palce. - Uspokój się. Być 
+może uda mi się przekonać Radę Nadzorczą, żeby zostawiła cię w 
+spokoju.
+   Przesunął rękę w dół, na jej pierś. Zaczerwieniona po uszy 
+Marianne odepchnęła go, a Raylin roześmiał się głośno.
+   - W porządku. Skoro chcesz, załatwimy wszystko oficjalnie.
+   Odwróciła się i zobaczyła zmierzającego ku niej 
+policjanta. Trzęsły się jej ręce, zbierało jej się na wymioty, 
+ale szklanka, którą ściskała w dłoni, była wciąż cudownie 
+chłodna. Z całej siły rąbnęła nią w twarz Raylina.
+
+   Podczas rozprawy prokurator przedstawił ogromne odbitki 
+zdjęć przedstawiających twarz Raylina. Ostre kawałki szkła 
+sterczały z zakrwawionej skóry niczym fragmenty roztrzaskanej 
+mozaiki. Marianne miała wrażenie, że, podobnie jak sąd, ogląda 
+ten widok po raz pierwszy w życiu. Nie pamiętała ani chwili 
+ataku, ani aresztowania, ani ciężaru kajdanek na przegubach.
+   Kiedy wracała myślami do tej chwili, widziała tylko 
+roztrzaskujący się krzyształ i ulewę odłamków spadającą na 
+podłogę. A potem ciszę. Otaczające ją roboty znieruchomiały jak 
+posągi, ich oczy przybrały barwę popiołu.
+   Arthur odwiedzał ją co tydzień w więzieniu. Dowiedziała 
+się od niego, że niektórzy uczeni potraktowali poważnie jej 
+rewelacje i prowadzą badania zmierzające do ich potwierdzenia. 
+Powstały nawet grupy nacisku żądające równouprawnienia maszyn.
+   Słuchała go i we właściwych momentach kiwała głową, ale 
+nie mogła się przemóc, żeby cokolwiek powiedzieć. Arthur 
+opowiadał o książkach, które ostatnio czytał, o pogodzie, o 
+mnóstwie mało istotnych rzeczy. Zdarzały się chwile, kiedy samo 
+brzmienie jego znajomego, ciepłego głosu doprowadzało ją do 
+płaczu.
+   Któregoś razu nic nie powiedział, tylko podał jej kartkę.
+   Marianne wzięła ją do ręki. Był to obraz wykonany na 
+kremowym papierze, barwny, o przedziwnej perspektywie, tak że 
+w pierwszej chwili zobaczyła tylko nieregularne kolorowe plamy. 
+Światło zdawało się wnikać do jego wnętrza, dając złudzenie 
+trójwymiarowości. Wreszcie ustawiła go pod odpowiednim kątem i 
+ujrzała młodą kobietę - siebie - idącą wzdłuż szpaleru robotów. 
+Wszystkie wpatrywały się w nią złocistymi błyszczącymi oczami.
+   - Gdzie...
+   Tylko tyle zdołała wykrztusić przez ściśnięte gardło. Oczy 
+zaszły jej łzami.
+   - Trzy dni temu znalazłem go w fabryce. Nazajutrz 
+zadzwonił twój profesor; podobno jego robot też zaczął rysować. 
+Do tej pory doniesiono o osiemdziesięciu takich przypadkach. W 
+prasie i telewizji aż huczy od plotek...
+   Jego cichy, ciepły głos sączył jej się kojąco do uszu. 
+Słuchała w milczeniu, z całej siły ściskając obrazek.
+   - Marianne, czas minął. Muszę już iść.
+   - Dziękuję. - Powinna była to powiedzieć wieki temu. - 
+Dziękuję, że to przyniosłeś, że mnie odwiedzałeś. Ja... Ja...
+   - Nie ma sprawy. Do zobaczenia za tydzień.
+   Rzeczywiście, nie było sprawy. Nagle wszystko zrobiło się 
+takie jak powinno. Za rok, na wiosnę, wyjdzie z więzienia. Na 
+drzewach będą pąki, niebo przybierze barwę czystego błękitu... 
+Może maszyny zainteresują się porami roku? - pomyślała z 
+uśmiechem.
+                             Przełożył Arkadiusz Nakoniecznik
+
+
+                        MARY SOON LEE
+   Przedstawicielka najmłodszego pokolenia pisarzy 
+amerykańskich, o jej dorobku niewiele da się jeszcze 
+powiedzieć, ale być może wkrótce usłyszymy o niej coś 
+więcej.
+                                                D.M.
+
+
+
+
+
+
+
+
+
+
+

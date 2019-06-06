@@ -1,0 +1,3193 @@
+Wydanie pierwsze
+ISBN 83-85455-69-8
+SPIS TREŚCI
+Spis treści
+SPIS ILUSTRACJI 6
+WSTĘP  7
+1. SOUND BLASTER - PODSTAWY 9
+2. OBSŁUGA PLIKÓW VOC 11
+2. l STRUKTURA PLIKU VOC 11 2.2 STEROWNIK CT-VOICE 16
+SPOSÓB KORZYSTANIA ZE STEROWNIKA 16 OMÓWIENIE FUNKCJI STEROWNIKA 20 ZASADY KORZYSTANIA Z FUNKCJI 27 BIBLIOTEKA VOC.TPU 28 PRZYKŁADY 38 2 3 OBSŁUGA WIĘKSZYCH PLIKÓW 42
+SPIS TREŚCI
+3. OBSŁUGA PLIKÓW CMF 53
+3.1 STRUKTURA PLIKÓW CMF 53 Blok nagłówka 54 Blok instrumentów 55 Blok muzyczny 55
+3.2 FORMATY SBI i IBK 55
+3.3 STEROWNIK SBFM 57
+SPOSÓB KORZYSTANIA ZE STEROWNIKA 58 OPIS FUNKCJI STEROWNIKA 59 ZASADY KORZYSTANIA Z FUNKCJI 63 BIBLIOTEKA CMF.TPU 64
+3.4 PRZYKŁADY 73
+4. PROGRAMOWANIE DSP 79
+4.1 ZASADY OBSŁUGI DSP 79 Zerowanie DSP 80 Zapis do DSP 80 Odczyt z DSP 81 Obsługa przerwania DSP 81
+4.2 TRYB BEZPOŚREDNI 82
+4.3 Tryb DMA 93
+4.4 OBSŁUGA ZŁĄCZA MIDI 97 Tryb bezpośredni 98 Tryb przerwań 99
+4.5 KOMENDY DSP 99 Rozkaz 1xh 99 Rozkaz 2xh 101 Rozkaz 3xh 101 Rozkaz 40h 102 Rozkaz 7xh 102 Rozkaz Dxh 102 Rozkaz E l h 103
+4.6 BADANIE KONFIGURACJI SB 104
+5. PROGRAMOWANIE SYNTEZERA FM  109
+5. l FUNKCJONOWANIE SYNTEZERA FM 109
+SPIS TREŚCI
+5.2 ZASADY OBSŁUGI SYNTEZERA FM  112 Zapis danej do rejestru 113 Odczyt rejestru statusowego 113
+5.3 PRZYKŁADY 122
+6. SYGNAŁY l ICH PRZETWARZANIE   131
+6. l Co to są sygnały i jak je dzielimy  131
+6.2 Przetwarzanie analogowo-cyfrowe  133 Próbkowanie 134 Kwantyzacja 135
+6.3 Filtracja cyfrowa  136
+6.4 Analiza widmowa sygnału 139
+6.5 Rozpoznawanie mowy ludzkiej 140
+7. FORMAT WAV 147 LITERATURA 151
+6
+SPIS ILUSTRACJI
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+Karta Sound Blaster w wersji 2.0 10
+Struktura pliku VOC z pętlą Repeat Loop 15
+Mechanizm odwoływania się do funkcji CT-VOICE 17
+Obwiednia ADSR (Attack/Decay/Sustain/Relase) 110
+Synteza operatorowa   112
+Dwa typy obwiedni  116
+Synteza FM i addytywna  120
+Kształt fali generowanej przez oscylator operatora   121
+Widmo prążkowe 132
+10. Przetwarzanie analogowo-cyfrowe  134
+11. Efekt niejednoznaczności   134
+12. Aliasing 135
+13. Przykładowa charakterystyka kwantyzatora 136
+14. Charakterystyki filtrów dolno- i środkowoprzepustowego   137
+15. Wpływ dobroci na kształt charakterystyki filtru   137
+16. Ograniczenie zakresu zmian amplitudy   141
+17. Przykładowy wykres widmowy 144
+18. Widmo prążkowe 145
+19. Aproksymacja przebiegu wykresu widmowego 145
+WSTĘP
+WSTĘP
+Od kilku już lat multimedia to dziedzina zdobywająca coraz większą popularność. Kluczową rolę w technice multimedialnej odgrywa dźwięk. Jego źródłem są specjalne karty - np. opisywany w książce Sound Blaster. Karty takie są też obsługiwane przez programy rozrywkowe. Niestety mało jest publikacji poświęconych zasadom ich programowania i omawiających to zagadnienie w sposób wyczerpujący. Mam nadzieję, że moja książka wypełni choć w części tę lukę i okaże się pomocna dla wszystkich zainteresowanych tworzeniem oprogramowania współpracującego z kartami SB. Wszystkie przykłady prezentowane w pracy zostały przygotowane przy użyciu kompilatora Turbo Pascal w wersji 6.0 firmy Borland Inc. Ich teksty źródłowe oraz kompilaty znajdzie Czytelnik na dyskietce dołączonej do książki. Zakładam, że Czytelnik ma umiejętność programowania w dowolnym języku oraz elementarną wiedzę na temat funkcjonowania systemu DOS i architektury komputerów PC.
+Mimo że przedstawione przykłady napisane zostały w Pascalu, nic nie stoi na przeszkodzie, aby opisywane w pracy algorytmy wykorzystać pisząc programy w innych językach - np. C, Assembler. Ostatni rozdział poświęcony jest zagadnieniom związanym z przetwarzaniem dźwięku: filtrom cyfrowym, analizie widmowej, rozpo-
+WSTĘP
+znawaniu mowy. Traktować go należy wyłącznie jako wprowadzenie do opisywanych tematów.
+Na koniec chciałbym podziękować Matce oraz Kasi Byczkowskiej bez pomocy której książka ta być może w ogóle by nie powstała
+Autor
+9
+SOUND BLASTER - PODSTAWY
+
+l. SOUND BLASTER - PODSTAWY
+Karta Sound Blaster po raz pierwszy zaprezentowana została w 1989 roku. Kilka miesięcy później była już najlepiej sprzedającym się rozszerzeniem muzycznym przeznaczonym dla komputerów PC. Przyczyny niewątpliwego sukcesu to z pewnością dość duże możliwości i niska cena przy zachowaniu zgodności programowej z wcześniejszym dominantem - kartą AdLib firmy AdLib Inc. Obecnie, nawet w chwili gdy faktycznym standardem są już karty 16-bitowe, poczciwy SB wciąż trzyma się dobrze. Dzieje się tak między innymi dlatego, że najprostszą kartę zgodną ze standardem SB 2.0 nabyć już można za cenę niższą niż 100 złotych.
+Oto garść podstawowych informacji na temat parametrów karty Sound Blaster:
+  11-głosowy syntezer FM. Może pracować w dwóch trybach:
+w trybie melodycznym (9 głosów) i w trybie rytmicznym (możliwość syntezy sześciu różnych brzmień i korzystania z pięciu brzmień perkusyjnych: bęben basowy, talerz, werbel, bębenek i high hat). Syntezer FM zapewnia zgodność z kartą AdLib -oparty jest na tym samym układzie (FM1312).
+   Możliwość zapisu i odtwarzania próbkowanych dźwięków. Konwersja analogowo-cyfrowa i cyfrowo-analogowa realizowana jest przez serce karty SB - układ DSP [Digital Sound Processor).
+ROZDZIAŁ 1
+Próbkowanie i odtwarzanie kolejnych próbek dźwięku może odbywać się z różną (w zależności od wersji karty) częstotliwością. l tak dla kart w wersjach l.x maksymalna częstotliwość próbkowania wynosi 12 kHz, maksymalna częstotliwość odtwarzania - 23 kHz, w wersji 2.0 (wymiana DSP z 1.05 na 2.00) maksymalna częstotliwość próbkowania to 15 kHz, a odtwarzania - 44,1 kHz. Zapis dźwięku we wszystkich wersjach karty jest dokonywany z 8-bitową rozdzielczością. Układ DSP zapewnia możliwość kompresji samplowanego sygnału w czasie rzeczywistym według trzech algorytmów (ADPCM 4:1, 3:1, 2:1). Dekompresja może być realizowana w czasie rzeczywistym.
+   Możliwość współpracy z urządzeniami MIDI. Urządzeń wyposażonych w złącza typu MIDI niestety nie możemy połączyć bezpośrednio do karty Sound Blaster - konieczne jest użycie tzw. Sound Blaster MIDI Kit. Jest tak, ponieważ na karcie nie znajdują się standardowe gniazda MIDI (DIN).
+   Możliwość współpracy z joystick'iem analogowym. W wersji 1.0 karty znajduje się też moduł CMS upgrade. Był on instalowany w celu zapewnienia zgodności z poprzednim wyrobem firmy - kartą Gamę Blaster, zawierającą układ 12-głosowej syntezy AM.
+Rysunek l przedstawia rozmieszczenie najważniejszych elementów karty Sound Blaster 2.0.
+h UNE-IN LLJP WE MIKROFON
+|Potefiqomeł fegutwy gtosnosd
+WYStUCHAWK.
+Złqcze JOY/MO
+Rys.! Karta Sound Blaster w wersjl 2.0
+11
+OBSŁUGA PLIKÓW VOC
+
+2. OBSŁUGA PLIKÓW TOĆ
+Format VOC (Creative Voice File) to przyjęty przez firmę Creative Labs Inc. format zapisu plików zawierających dane dźwiękowe. Pliki tego typu obsługują programy dołączane do kart serii Sound Blaster. Przykładem mogą być programy VOXK1T i VEDIT. Zaletą jest duża funkcjonalność i uniwersalność plików VOC. Ich obsługa jest bardzo prosta - informacje w nich zawarte całkowicie opisują sposób odtwarzania (w strukturze VOC znalazło się miejsce na dane dotyczące częstotliwości próbkowania dźwięku, a także sposobu kompresji danych). Tematem tego rozdziału jest stosowanie sterowników dostarczanych przez Creative Labs Inc. przy programowaniu obsługi plików zapisanych w tym formacie.
+2.1 STRUKTURA PLIKU VOC
+Zasadniczo w strukturze pliku VOC wyróżnić można dwa bloki: blok nagłówka i blok danych. Blok nagłówka lo blok przechowujący identyfikator pliku, numer wersji oraz (bardzo ważne przy programowaniu) adres początku bloku danych. Blok danych to naturalnie część pliku przeznaczona do przechowywania danych dźwiękowych. Może być on podzielony na kilka, funkcjonalnie różnych, części.
+ROZDZIAŁ 2
+Blok nagłówka
+
+Położenie względem początku pliku
+Opis
+
+
+0-19
+20-21
+21-23
+24-25
+Opis pliku. W tym miejscu przechowywany Jest napis:
+,.Crealive Voice File" oraz bajt o wartości szesnastkowej 1A.
+Przesunięcie początku bloku danych względem początku pliku. Wartość lego stówa wykorzystujemy programując obsługę pliku VOC (długość nagłówka dla różnych wersji formatu może być przecież inna).
+Numer wersji formatu pliku. Młodszy bajt przechowuje mniej znaczącą część numeru, starszy - bardziej znaczącą.
+Kod identyfikacyjny pliku VOC ułatwiający rozpoznanie pliku zapisanego w tym formacie. Jest równy sumie słowa przechowującego numer wersji formatu i słowa o wartości szesnastkowej 1234.
+
+Blok danych
+Ta część pliku podzielona jest na wiele podbloków spełniających różne funkcje. Regułą jest tu, że pierwszy bajt podbloku specyfikuje jego typ. W zasadzie programista nie musi wnikać w strukturę poszczególnych podbloków, gdyż za odpowiednią interpretację zawartych w nich danych odpowiedzialne są funkcje sterowników CT-VOICE i CVDSK, opisywane w dalszej części rozdziału. Znajomość funkcji podbloków jest jednak konieczna do pełnego wykorzystania możliwości dostarczanych programiście.
+A oto jak przedstawiają się dostępne typy podbloków:
+  Typ O - Terminator (podblok kończący)
+Pojedynczy bajt o wartości O (BLKTYPE=0). Ten podblok kończy cały blok danych. Procedura odtwarzająca dźwięk kończy działanie po napotkaniu tego podbloku.
+  Typ l - Voice Data (dane dźwiękowe)
+Podblok przechowujący spróbkowany dźwięk wraz z opisem. Jego struktura przedstawia się następująco:
+13
+OBSŁUGA PLIKÓW VOC
+
+Przesunięcie Opis
+O        Bajt o wartości l używany przy identyfikacji podbloku (BLKTYPE=1).
+l        Trzy bajty opisujące ilość bajtów zajmowanych przez blok (BLKLEN). Liczba bajtów przeznaczonych na próbkę to wartość pola BLKLEN pomniejszona o 2.
+4        Bajt, którego wartość informuje o częstotliwości z jaką dźwięk był spróbkowany (SR). Przechowywaną w nim liczbę obliczyć można korzystając ze wzoru:
+SR = 256- 1000000/f gdzie f to częstotliwość wyrażona w Hz.
+5        Bajt opisujący metodę zastosowanej kompresji danych (PACK). Znaczenie różnych wartości:
+O - bez kompresji
+1 - kompresja metodą 4-bit
+2 - kompresjo metodą 2.6-bit
+3 - kompresjo 2-bit
+6         Początek ciągu bajtów próbki.
+Typ 2 - Voice Continuation (kontynuacja)
+Podblok przechowujący dane będące kontynuacją zapisanych w podbloku typu l. Ten typ podbloku przydatny jest w sytuacjach, gdy długość zapisywanej próbki jest na tyle duża, że 3 bajty pola BLKLEN w podbloku l nie okazują się nie wystarczające.
+Przesunięcie Opis
+O        Bajt BLKTYPE o wartości 2.
+l         Trzy bajty opisujące długość bloku (BLKLEN).
+4         Początek ciągu bajtów próbki.
+Typ 3 - Silence (cisza)
+Podblok definiujący okres ciszy. Użycie podbloków tego typu może okazać się przydatne tam, gdzie zależy nam na oszczędności pamięci dyskowej (także operacyjnej na czas odtwarzania), a próbka dźwiękowa zawiera okresy ciszy (przynajmniej względnej).
+ROZDZIAŁ 2
+Przesunięcie Opis
+Bajt BLKTYPE o wartości 3.
+Trzy bajty pola BLKLEN. Wartość tego pola dla tego typu podbloku wynosi zawsze 3.
+Dwubajtowe pole PERIOD określające czas trwania ciszy wyrażony w jednostkach cyklu próbkowania (odwrotność częstotliwości próbkowania wyrażonej wHz).
+Bajt pola SR, którego wartość wyliczamy według wzoru przedstawionego przy opisie typu Voice Data.
+Typ 4 - Marker
+Funkcja podbloku tego typu jest dość specyficzna. Mianowicie sterownik CT-VOICE, podczas odtwarzania dźwięku, modyfikuje słowo statusowe wartością przechowywaną w tym podbloku. Badanie słowa statusowego pozwala więc sprawdzić, która część bloku danych pliku VOC jest aktualnie odtwarzana. Ułatwić lo więc może realizację prezentacji graficzno-dźwięko-wych, gdzie kluczową rolę spełnia synchronizacja dźwięku z wyświetlanym obrazem.
+Przesunięcie Opis
+O        Bajt BLKTYPE o wartości 4.
+l         Pole BLKLEN o długości trzech bajtów i stałej wartości 2.
+4        Dwubajtowy marker o wartości zawierającej się w przedziale (l.FFFEh).
+Typ 5 - ASCII text (tekst ASCII)
+W zasadzie funkcja tego podbloku ograniczona jest do przechowywania ciągu znaków ASCII. Zastosowanie tego typu jest raczej ograniczone (w zasadzie wyłącznie komentarze dodawane do zdigitalizowanych dźwięków).
+Przesunięcie Opis
+O        Jednobajtowe pole BLKTYPE przechowujące wartość 5.
+15
+OBSŁUGA PLIKÓW VOC
+
+l        Pole BLKTYPE o długości 3 bajty i wartości równej długości ciągu znaków ASCII powiększonej o l.
+4        Początek ciągu ASCII zakończonego bajtem o wartości równej 0.
+Typ 6 - Repeat Loop (początek pętli repetycji)
+Jeżeli zdarzy się, że jakiś dźwięk chcemy odtwarzać cyklicznie większą ilość razy, to idealnym rozwiązaniem wydaje się być zastosowanie podbloku tego typu. Pozwala on na wielokrotne odtwarzanie próbki dźwiękowej umieszczonej w podblokach umieszczonych po nim. Przy założeniu, że plik zawierać ma odgłos (np. strzału - do wykorzystania w grze zręcznościowej) powtarzany cyklicznie n razy i zapisany w podbloku typu Voice Data, struktura tego pliku wyglądać może jak na rysunku 2.
+
+	Nagłówek pliku	
+	BInkAmych	
+
+	--^ Repeat Loop Vaice Dola	
+
+	--- End Repeat Loop Terminator	
+
+Rys. 2 Struktura pliku VOC z pętlą Repeat Loop Struktura podbloku Repeat Loop:
+Przesunięcie Opis
+Typ bloku (BLKTYPE=6). Pole BLKLEN o wartości 2.
+Dwa bajty przechowujące licznik repetycji (COUNT). Słowo przechowywane w tym polu determinuje liczbę powtórzeń. Po napotkaniu podbloku End Repeat Loop sterownik CT-YOICE powtórzy odtwarzanie następujących po Repeat Loop COUNT razy. Łączna suma odtworzeń jest więc równa COUNT+1. Warto wiedzieć, że jeśli zadana liczba powtórzeń równa będzie FFFFh, pętla realizowana będzie bez końca (tzn. aż do momentu użycia funkcji zakończenia operacji - nr 8).
+POZDZIAŁ 2
+Typ 7 - End Repeat Loop
+Podblok tego typu należy umieścić zaraz po ciągu podbloków, które chcemy objąć działaniem pętli zainicjowanej przez pod-blok typu Repeal Luop.
+Przesunięcie Opis
+Pole BLKTYPE o wartości 7. Pole BLKLEN o wartości 0.
+2.2 STEROWNIK CT-VOICE
+Sterownik CT-VOICE (Crealive memory modę Voice driver) jest dołączany, wraz z resztą oprogramowania, do kart dźwiękowych serii Sound Blasier. Jego kod znajduje się w pliku CT-VOICE.DRV. Udostępnia on programiście podstawowe funkcje związane z obsługą plików formatu VOC. Jego dostępność jest warunkiem koniecznym do uruchomienia części oprogramowania. Przykładem może tu być edytor plików dźwiękowych VEDIT korzystający podczas zapisu i odtwarzania dźwięku z jego funkcji. Jego umiejscowienie na dysku możemy zmienić, należy Jednak odpowiednio zmodyfikować wartość zmiennej środowiskowej SOUND.
+SPOSÓB KORZYSTANIA ZE STEROWNIKA
+W pliku CT-VOICE.DRV znajduje się kod sterownika CT-VOICE. Ogólnie rzecz biorąc, do jego funkcji odwołujemy się umieszczając przekazywane mu parametry w odpowiednich rejestrach i wywołując go assemblerową instrukcją CALL (daleką). Wpierw musimy naturalnie załadować go do pamięci. Mechanizm odwoływania się do jego funkcji przedstawia schematycznie rysunek 3.
+17
+OBSŁUGA PLIKÓW VOC
+
+Kod naszego programu -- CALL FAR
+Kod sterówka CT Voice
+JMP
+Ciąg ASCII opisujący' sterownik
+Re|es'ry na stos <- Wykonanie 'unkc|i t-.piestryze s'osu RETF
+Rys. 3 Mechanizm odwoływania się do funkcji CT-YOICE Kolejność, w jakiej musimy wykonywać procedury przygotowujące sterownik do działania, przedstawić można następująco:
+1. Odszukanie pliku CT-VOICE.DRV. Jeżeli nie ma go w aktualnym dla naszego programu katalogu, należy skorzystać ze zmiennej środowiskowej SOUND, w której (pod warunkiem, że użytkownik komputera umieścił odpowiednią komendę w AUTOE-XEC.BAT) przechowywana jest ścieżka do katalogu, w którym znajdują się sterowniki do karty Sound Blasier.
+2. Sprawdzenie rozmiaru pliku CT-VOICE.DRV- Testowanie wielkości pliku jest tutaj konieczne, gdyż rozmiary CT-VOICE.DRV dla różnych wersji sterownika mogą się dość znacznie różnić.
+3. Rezerwacja odpowiedniego obszaru pamięci operacyjnej.
+4. Wczytanie zawartości pliku CT-VOICE.DRV do zarezerwowanego obszaru. Należy zwrócić uwagę, że przesunięcie początku kodu sterownika względem początku zajmowanego przez niego segmentu musi być równe 0.
+5. Sprawdzenie, czy wczytany plik zawiera kod sterownika. Najprościej wykonać to wykorzystując fakt, że w oryginalnym pliku CT-VOICE.DRV od pozycji 3 rozpoczyna się ciąg znaków; "CT-VO-ICE". Czynność sprawdzenia poprawności przeprowadzić można oczywiście przed wczytaniem do pamięci całego pliku. Przykładowa procedura ładowania sterownika CT-V01CE zaimple-mentowana w języku Turbo Pascal wyglądać może następująco:
+Const
+Sterownik w_pamieci:booiean=false:
+{ czy już zatad3waliśmy sterownik do pamięci} var
+ROZDZIAŁ 2
+sterownik:pointer;
+{ wskaźnik początku kodu sterownika ustawiany przez } {funkcję Przygot:UJ_sterownik}
+Function Przygc)tuj_sterowmk:boolean;
+Var
+s:flle;
+specyfikacja:string;
+rozmianseg s,ofs^s:word;
+Co_jest_sterownik:boo!ean;
+Function lstnieje[Plłk:stringi:boolean;
+Var
+f:file;
+Begin
+assigntf.Plik],
+{Sl-}
+reset[fl;
+closetO;
+{$!+} tstnieje:=[10result=03 End;
+Begin
+if Scerowntk_w_pamieci then exit:;
+{ gdy wcześniej załadowany} specyfikacja:='CT-VOICE.DRV;
+if not fscniejeCspecyfikacja) then
+specyfikacja: =getE^vtlSaUNa'3+l\DRV\CT-VOICE.DRV';
+{ gdy nie odnaleziony w bieżącym katalogu } if not IstniejeCspecyfikacja) then
+begin
+Przygotui_sterownik:=fa!se;
+exit {nie udatosię}
+end;
+assignts,specyfikacja);
+reset[s,1);                  { otwieramy znaleziony plik } rozmiar:=fileSize[s);         {pobieramy rozmiar} getmemCsterownik, rozmiar);  { rezerwujemy pamięć } b!ockreadEs,sterownik^,filesize[s]];   {odczyt} cioseEs);                          {zamykamy plik} seg_s:=seg[ste^ow^ik/\];     {segment} ofs_s; ^fstsCerownik^ ],     { przesunięcie } toJest_sterownik:=[MemW[seg_s:ofs_s-3]=$5443);
+{tutaj sprawdziliśmy, czy wczytany plik zawiera kod }
+{sterownika CT-YOICE} if not toJest_sterownik then begin
+19
+OBSŁUGA PLIKÓW VOC
+
+Przygotu)_scerownik;=false;
+freemem[sterownik,rozmiar]:
+exic end:
+Przygotu]^sterownik:=tnJe { Wszystko jest w porządku }
+End;
+Do wczytanego z pomocą tej funkcji sterownika odwołać się można (przy założeniu, że na jego kod wskazuje zmienna Sterownik) np. tak:
+as m
+Tutaj nadajemy wybranym rejestrom odpowiednie wartości catl sterownik
+Odczytujemy z rejestrów zwrócone przez funkcję wyniki end;
+Naturalnie, aby nasz program uczynić bardziej uniwersalnym, możemy dołączyć do jego kodu zawartość pliku CT-VOICE.DRV na etapie konsolidacji. Wtedy zbędna staje się naturalnie jego obecność na dysku użytkownika. Programujący w języku Turbo Pascal postąpić może wg następującego schematu:
+1. Przygotować plik CT-VOICE.DRV używając dołączonego do kompilatora programu BINOBJ.EXE;
+B1NOBJ CT-VOICE.DRV CT-YOlCE.OBJ Yoice
+2. Przygotować bibliotekę zawierającą procedurę związaną z kodem sterownika:
+Unit VOCDrv; { nazwa przykładowej biblioteki} Interface
+procedurę voice;
+Implementatian
+{$LcI:-voice.obj}
+procedurę valce;
+exCernal End.
+3. Na początku naszego programu, w linii, w której wyszczególniamy używane biblioteki, po instrukcji USES dopisać nazwę VOC-Drv (tak nazwaliśmy stworzoną w punkcie 2 bibliotekę).
+ROZDZIAŁ 2
+Do włączonego w ten sposób kodu sterownika odwołujemy się korzystając z możliwości umieszczania w programie wstawek assem-blerowych:
+asm
+Wypełniamy parametran odpowiednie rejestry cali far ptrvoice Odczyt wyników z rejestrów end:
+Jakkolwiek byśmy kodu sterownika nie umieścili w pamięci operacyjnej, jest jeszcze jedna rzecz, o której pamiętać musimy. Używanie funkcji CT-VOICE wymaga uprzedniej rezerwacji jednego, szes-nastobitowego słowa w pamięci na zmienną używaną przez sterownik. Zmienna ta to Ct-Voice Status. Przechowuje ona wartość dodatnią całkowitą (w Turbo Pascalu typ Word). imiennej tej sterownik może więc nadawać wartości z przedziału O - FFFFh. Modyfikacji jej wartości dokonuje w następujących przypadkach:
+1. Podczas inicjalizacji. Po wykonaniu funkcji 3 sterownik nadaje zmiennej statusowej wartość 0.
+2. Rozpoczynając odtwarzanie/zapis danych dźwiękowych (wartość FFFFh).
+3. W momencie zakończenia operacji odtwarzania/zapisu danych dźwiękowych (nadawana wartość: 0).
+4. Gdy podczas odtwarzania bloku danych pliku dźwiękowego sterownik natrafi na podblok typu Marker, wpisuje do zmiennej statusowej przechowywaną w nim wartość. Jak wspomniałem przy opisie struktury pliku formatu VOC, używając podbloków typu Marker, możemy podzielić plik dźwiękowy na kilka części i informacje odczytywane z Ct-Voice Status podczas odtwarzania wykorzystać do synchronizacji dźwięku z działaniami programu.
+OMÓWIENIE FUNKCJI STEROWNIKA
+W tej części książki omówię udostępniane przez sterownik CT-VO-ICE funkcje. Generalnie rzecz biorąc, każdą z nich wywołuje się jednakowo - przez wywołanie dalekim CALL kodu sterownika. Numer funkcji oraz parametry dla niej umieszczamy w rejestrach mikroprocesora (w BX numer, w pozostałych parametry). Jeżeli funkcja ma
+OBSŁUGA PUKOW VOC
+21
+zwracać jakieś wartości, to na ogół odczytujemy je z rejestru AX (w przypadku danej 4-bajtowej z pary DX:AX). Istotny jest fakt, że wartości pozostałych rejestrów (także flagowego) są zachowywane.
+Funkcja B: Pobierz wersję sterownika
+Wejście:   BX=0 Wyjście:  AH - główny numer wersji
+AL - mniej znacząca część nuinem wersji
+Opis:      Funkcja zwraca numer wersji sterownika. Sprawdzenie wersji jest wskazane, jeżeli nasz program wczytuje sterownik z dysku użytkownika.
+Funkcja 1: Ustawienie adresu bazowego
+Wejście:  BX=1
+AX- adres bazowy Wyjście:   brak
+Opis:     Ta funkcja pozwala na ustawienie portu we/wy używanego przez sterownik do komunikacji z kartą. Jeżeli nasz program korzysta z tej funkcji, to powinien wywołać ją jako pierwszą. Dostępne wartości adresu bazowego to:
+210h, 220h, 230h, 240h, 250h i 260h (dla kart Sound Bla-ster 2.0 dopuszczalne wartości to 220h i 240h). Warto, by program umożliwiał użytkownikowi wybór adresu. Należy zwrócić uwagę, że wartością domyślną (ustawioną za pomocą zworek na karcie przez producenta) jest 220h. Taki leż adres będzie używany przez sterownik w wypadku, jeżeli nasz program nie odwoła się do lej funkcji.
+Funkcja 2: Ustawienie numeru przerwania dla DMĄ
+Wejście:  BX=2
+AX= numer przerwania
+Wyjście:   brak
+Opis:      Używając tej funkcji program może ustawić numer iinii IRQ używanej przez kartę Sound Blaster do sygnalizacji końca transmisji danych. Funkcja ta powinna być (jeśli wystąpiła potrzeba jej użycia) wywołana zaraz po funk-
+ROZDZIAŁ 2
+cji numer l (ustawienie adresu bazowego). Wartości, jakie przekazać możemy jako parametr, to 2, 3, 5 i 7. Domyślny numer przerwania IRQ to 7.
+Funkcja 3: Inicjalizacja sterownika
+Wejście:  BX=3
+Wyjście:   AX = O, gdy wszystko przebiegło pomyślnie,
+1 - błąd karty Sound Blaster
+2 - błąd operacji zapisu/odczytu (źle ustawiony adres bazowy)
+3 - błąd przerwania
+Opis:      Program powinien wywoływać lę funkcję przed skorzystaniem z pozostałych (oczywiście pomijając funkcje zmiany adresu bazowego i numeru przerwania IRQ). Zwrócona w rejestrze AX wartość wskazuje, czy procedura inicjalizacji przebiegła bezbłędnie. W przypadku wykrycia błędu działanie naszego programu powinno być przerwane. Bardzo istotnym jest fakt, że po inicjalizacji sterownika układ DAĆ zostaje włączony (konwersja danych cyfrowych do postaci analogowej). W zasadzie wyłącznie funkcje 0-2 mogą być wywoływane przed wykonaniem procedury inicjalizacji. Z funkcji inicjalizacji korzystamy jednorazowo.
+Funkcja 4: Włącz/Wytocz DAĆ
+Wejście:  BX=4
+AL=0, aby wyłączyć AL = l, aby włączyć DAĆ Wyjście:   brak
+Opis:     Korzystając z funkcji można włączać i wyłączać układ DAĆ odpowiedzialny za konwersję danych cyfrowych do postaci analogowej. Pozostawienie DAĆ w stanie włączonym na czas zapisu dźwięku do pamięci powoduje, że jednocześnie z zapisem dane kierowane są także na wyjście, co powodować może powstawanie dodatkowych szumów podczas samplingu. Dlatego przed rozpo-
+OBSŁUGA PLIKÓW VOC
+23
+częciem zapisu dźwięku (funkcja 7) należy wyłączyć DAĆ. Piszę o wyłączaniu układu DAĆ, mimo że w rzeczywistości chodzi właściwie o odłączenie wzmacniacza na jego wyjściu. Z punktu widzenia programisty nie ma to jednak żadnego znaczenia.
+Funkcja 5: Ustaw adres zmiennej statusowej
+Wejście:  BX=5
+ES:DI == adres słowa w pamięci operacyjnej przeznaczonego na zmienną Ct-Voice Status
+Wyjście:   brak
+Opis:     Sterownik CT-VOICE modyfikuje podczas działania poszczególnych funkcji szesnasiobitowe słowo, którego adres może wskazać korzystający ze sterownika program. Omówienie funkcji zmiennej z nim związanej znalazło się w rozdziale "Sposób korzystania ze sterownika".
+Funkcja 6: Rozpocznij odtwarzanie dźwięku
+Wejście:   BX=6
+ES:DI = adres bufora Wyjście:   brak
+Opis:     Funkcja rozpoczyna odtwarzanie dźwięku z wykorzystaniem układu DMĄ. Zaraz po jej wywołaniu sterownik wpisuje do zmiennej statusowej wartość FFFFh. Po rozpoczęciu odtwarzania sterownik oddaje sterowanie programowi wywołującemu, zaraz po czym nasz program zająć się może realizacją innych zadań (w grach i programach prezentacyjnych np. animacją). Dane przeznaczone do odtworzenia z pomocą tej funkcji muszą być zapisane w formacie przyjętym przez Creative Labs Inc. (opis w rozdziale "Struktura pliku VOC"). Uwaga: para rejestrów ES:DI wskazywać musi nie na początek pliku umieszczonego w pamięci, ale na początek Bloku Danych tego pliku. Przypominam tu, że początek błoku danych znaleźć możemy odczytując słowo o przesunięciu 20 względem początku nagłówka. Badając wartość
+ROZDZIAŁ 2
+zmiennej o adresie ustawionym funkcja 5 sprawdzać możemy, czy plik dźwiękowy jest odtwarzany, czy też procedura odtwarzania została już zakończona (wówczas wartość zmiennej statusowej jest równa 0). Należy pamiętać, że jednocześnie odtwarzać można wyłącznie jeden plik i w momencie, gdy chcemy rozpocząć odgrywanie następnego, musimy użyć funkcji 8 (zatrzymanie operacji).
+Funkcja 7: Rozpocznij zapis dźwięku
+Wejście:  BX-7
+AX = częstotliwość próbkowania DX:CX = rozmiar bufora
+ES:Dl = adres bufora przeznaczonego na składowanie odczytanych z przetwornika analogowo-cyfrowego danych
+Wyjście:   brak
+Opis:     Funkcja pozwala na zapis danych z przetwornika A/C do rozpoczynającego się od komórki wskazywanej przez parę ES:Dl bufora o rozmiarze zadanym wartościami rejestrów DX:CX. Sterownik CT-YOICE używa układu DMĄ, a co za tym idzie, zapis dźwięku odbywa się (podobnie jak odtwarzanie) "w tle". Zmienna statusowa zapisywana jest po rozpoczęciu próbkowania wartością FFFFh i, po jego zakończeniu, wartością 0. Jednym z parametrów, jakich oczekuje funkcja, jest częstotliwość próbkowania podawana w rejestrze AX. Zakres, w jakim mieścić się ona mieścić, jest ściśle związany z typem karty. I tak dla Sound Blaster'a w wersjach l.x maksymalna wartość wynosi 12000, a dla karty Sound Blaster w wersji 2.0 największa możliwa częstotliwość wynosi 15000. W obu przypadkach minimalna wartość to 4000.
+Funkcja 8: Zakończenie operacji We/Wy
+
+Wejście:
+Wyjście:
+BX=8 brak
+
+25
+OBSŁUGA PLIKÓW VOC
+
+Opis:      Funkcja przerywa odtwarzanie (zapis) dźwięku i nadaje zmiennej statusowej wartość 0.
+Funkcja 9: Zakończenie pracy ze sterownikiem Wejście:BX==9 Wyjście:   brak
+Opis:      Funkcja deinicjalizuje kartę dźwiękową i wyłącza układ DAĆ, Program powinien wywoływać ją kończąc działanie.
+Funkcja 10: Zawieś odtwarzanie dźwięku
+Wejście:  BX=10
+Wyjście:   AX = O, gdy operacja przebiegła prawidłowo AX = l, gdy żaden plik nie był odtwarzany
+Opis:     Funkcja pozwala na zawieszenie odtwarzania dźwięku (pauza). Wartość zmiennej statusowej zachowuje swoją wartość. Jeśli wywołamy tę funkcję w przypadku, gdy procedura odtwarzania nie była aktywna, zwróconą w AX wartością będzie l.
+Funkcja 11: Wznów odtwarzanie dźwięku
+Wejście:   BX=11 Wyjście:   AX = O, gdy wszystko w porządku
+AX = l, gdy odtwarzanie nie zostało zawieszone
+Opis:      Funkcja służy do wznowienia zawieszonego przy użyciu funkcji 10 odtwarzania dźwięku.
+Funkcja 12: Przerwij pętlę
+Wejście:   BX==12
+AX-= l, aby zakończyć natychmiastowo AX== O, gdy chcemy, aby sterownik odworzył powtarzany pętlą blok do końca
+Wyjście:   AX=0, gdy operacja przebiegła pomyślnie AX= l oznacza, że pętla nie była aktywna
+ROZDZIAŁ 2
+Opis:      Format VOC pozwala na zdefiniowanie pętli odtwarzania. Podbloki umieszczone między podblokiem typu 6 a podblokiem typu 7 będą odtwarzane cyklicznie zadaną liczbę razy. Jeżeli wykonywanie pętli chcielibyśmy z jakichś powodów przerwać, użyteczna okazuje się być właśnie funkcja 12. Zakończenie pętli może przebiegać na dwa sposoby: pierwszy (AX=1) polega na tym, że sterownik natychmiast "przeskakuje" do podbloku następującego po pętli, drugi (AX=0) polega na tym, że sterownik kończy odtwarzanie podbloków objętych działaniem pętli i (nie zważając na wartość licznika repelycji) rozpoczyna odtwarzanie następnych danych.
+Funkcja 13: Ustawienie pułapki użytkownika
+Wejście:  BX=13
+DX:AX== adres procedury użytkownika Wyjście:   brak
+Opis:     Sterownik CT-VOICE umożliwia wskazanie procedury, która wywoływana będzie każdorazowo, gdy rozpoczynane będzie odtwarzanie nowego podbloku. Sterownik przekazuje naszej procedurze adres nowego podbloku w parze rejestrów ES:BX. Przy jej tworzeniu zadbać musimy o spełnienie kilku warunków:
+ kończyć się powinna instrukcją assemblera RET (daleką);
+ zachowywać wartości wszystkich rejestrów (także rejestru flagowego, ale z pominięciem wskaźnika przeniesienia);
+ wskaźnik przeniesienia rejestru flagowego procedura powinna zerować, gdy chcemy, by nowy podblok był odtworzony (gdy nie chcemy - powinna go ustawić);
+ powinna zerować wskaźnik przeniesienia, gdy nowy podblok jest podblokiem kończącym (Terminator).
+Jeżeli chcemy zabronić wywoływania naszej procedury, wystarczy wywołać funkcję 13 zerując uprzednio rejestry AX i DX (wskazać adres 0:0).
+27
+OBSŁUGA PLIKÓW VOC
+
+ZASADY KORZYSTANIA Z FUNKCJI
+Zanim zaczniemy wykorzystywać podane funkcje sterownika CT-V01CE. musimy poznać kilka elementarnych zasad, jakich powinniśmy się trzymać przy wykorzystaniu go. Najprościej będzie, gdy zaprezentuję schematy, wg których postępować należy chcąc rozpocząć lub zakończyć pracę ze sterownikiem, odtworzyć próbkę dźwiękową lub zapisać dźwięk.
+Rozpoczynanie pracy:
+1. Rezerwacja pamięci i wczytanie do niej sterownika.
+2. Jeśli jest to konieczne, modyfikacja adresu bazowego z wykorzystaniem funkcji l.
+3. Zmiana numeru przerwania IRQ przy pomocy funkcji 2.
+4. Inicjalizacja sterownika - wywołanie funkcji 3.
+5. Ustawienie adresu zmiennej statusowej. Oczywiście wykonanie czynności 2 i 3 jest opcjonalne - jeżeli nie zostaną wykonane, przyjęte zostaną domyślne wartości numeru przerwania oraz adresu bazowego.
+Zakończenie pracy:
+1. Wywołanie funkcji 9 - deinicjalizacja sterownika.
+2. Zwolnienie pamięci operacyjnej przydzielonej sterownikowi.
+Odtwarzanie dźwięku:
+1. Rezerwacja odpowiedniego obszaru pamięci operacyjnej i wczytanie do niego zawartości pliku dźwiękowego VOC.
+2. Odczytanie szesnastobitowego słowa o przesunięciu 20 względem początku pliku. Jego wartość określa długość nagłówka.
+3. Włączenie układu DAĆ (funkcja 4). Jeżeli odtwarzamy dźwięk zaraz po inicjalizacji sterownika, czynność tę można pominąć.
+4. Wywołanie funkcji 6 (odtworzenie dźwięku) z podaniem w parze rejestrów ES:DI wyznaczonego adresu początku bloku danych.
+5. Czekać na moment w którym zmiennej statusowej nadana zostanie wartość O (koniec). Podczas oczekiwania na zakończenie odtwarzania nasz program może wykonywać inne czynności. Używając funkcji 10 i 11 możemy zatrzymywać i wznawiać wykonywanie procedury odtwarzającej a wywołując funkcję 8 - zakończyć jej działanie. Odczytując wartość zmiennej statuso-
+ROZDZIAŁ 2
+
+wej możemy, pod warunkiem uprzedniego wzbogacenia naszego pliku o podbloki typu Marker, sprawdzić, który fragment próbki dźwiękowej jest aktualnie odtwarzany.
+Zapis dźwięku:
+2.
+3.
+4.
+Rezerwacja pamięci przeznaczonej na bufor danych. Wyłączenie układu DAĆ (funkcja 4). Wywołanie funkcji zapisu danych (nr 7). Oczekiwanie na zakończenie zapisu. Proces możemy przerwać z pomocą funkcji 3. Osiągnięcie końca bufora lub koniec zapisu spowodowany wykonaniem funkcji 8 sterownik sygnalizuje nadaniem zmiennej statusowej wartości 0. Jako ostatnią czynność uważać można zapis spróbkowanego dźwięku do pliku. Należy tu pamiętać, że utworzony przez sterownik blok danych poprzedzić należy spreparowanym odpowiednio nagłówkiem.
+BIBLIOTEKA VOC.TPU
+W rozdziale tym prezentuję wersję źródłową przykładowej biblioteki gotowej do skompilowania przy użyciu kompilatora Turbo Pascal w wersji 6.0 lub nowszej- Posiadacze starszych wersji mogą w prosty sposób zmodyfikować tekst biblioteki (przez zamianę wstawek assemblerowych typu ASM na INLINE). Przy tworzeniu procedur główny nacisk postawiłem na czytelność i zrozumiałość. Ponieważ pełen tekst biblioteki znajdzie Czytelnik na dołączonej do książki dyskietce w pliku VOC.PAS, listing zamieszczony w książce pozwoliłem sobie przerywać komentarzami. unit;\/OC:
+interface
+typeVRodzajBledu=tVOk,
+YBrakSterowniks,
+YZaMaloPamieci,
+YZłyNaglowekSterownika,
+YBIadInicjelizacji,
+YUszkodzonaKarta,
+YBIadWeWy,
+VZIyNumepPrzerwaniaD!aDMA,
+YBIadZwolnienia,
+YBrakPIiku,
+VToNieVOC,
+OBSŁUGA PLIKÓW VOC
+29
+Typ VRodzajBledu jest typem wyliczeniowym i określa większość błędów, jakie mogą pojawić się podczas realizacji zaimplemetowanych w bibliotece procedur. Poniżej zadeklarowana została zmienna VOC_Blad typu VRodzajBledu, której zadaniem będzie przechowanie nadanej w trakcie realizacji procedur (funkcji) wartości. Naturalnie taki sposób opisania błędów (typem wyliczeniowym) może się komuś wydawać nienaturalny, ale moim zdaniem, przyczyni się on znacznie do zwiększenia przejrzystości prezentowanego tekstu.
+var
+VOC_Blad:VRod2ajBledu;
+\/OCSCatus:word;
+\/SterownikZainstalowany;Boo[ean;
+VDIugoscNag!owka:byte;
+Oprócz zmiennej VOC_BLAD wśród globalnych zmiennych udostępnianych przez bibliotekę znalazły się: VOCStatus (zmienna statusowa, której lokalizację w RAM wskażemy sterownikowi), VSterownik-Zainstalowany typu Boolean (informacja o tym, czy CT-VOICE został już wczytany do pamięci operacyjnej) oraz VDlugoscNaglowka (jak sama nazwa wskazuje, przechowamy tam wielkość potrzebną przy wyliczaniu pozycji bloku danych pliku VOC).
+procedure   VlnicjujSterownik[Port,lrq:word3;
+function    VWersjaSterownika:word;
+procedurę YWylaczDAC:
+procedurę YWIaczDAC;
+procedurę   VOdczyta|PlikVOC(var bufor:pointer;spec:string);
+procedurę   VZarezerwujPamiec(var gdzie:painter;ile:longint);
+procedurę  VZwolnijPamiectgdzie:pomter);
+function    VOpisBledu:string;
+procedurę  YDeinstatuJSterownik;
+procedurę  VOdtworzVOC[buror;pointer);
+procedurę  VOdtwor'zJeszczeRaz(bufor;poinCer];
+procedurę  VZakonczOperacjeVOC;
+procedurę VPauzaVOC;
+procedurę  VKanCynuuiOdtwarzanieVOC;
+procedurę  VPrzerwijPet!eVOC[iak:word);
+procedurę  VZapiszBlokEczesc:word;dlug;word;p'poincer);
+procedurę  VOdtworzBloktwsk:pointer];
+ROZDZIAŁ 2
+W części implementacyjnej zadeklarowałem użycie dwóch zmiennych globalnych: VSTEROWNIK (przechowa wskazanie na obszar zajmowany przez kod CT-VOICE) oraz VDawnaProceduraWyjscia (wykorzystywana do przechowania zastanej wartości ExitProc). Zmienna VSTEROWNIK jest używana przez wszystkie (za wyjątkiem VOpisBledu) wymienione w części interface procedury i funkcje. Należy zwrócić uwagę, że przed wykonaniem procedury VInicjujSte-rownik ma wartość nieokreśloną, a co za tym idzie, niedopuszczalne wtedy jest wykonanie jakiejkolwiek innej funkcji (procedury). irnplemenCaton
+uses dos.crt;
+var
+Vsterawnik:pointer;
+VDawnaProceduraWyj'scia:pointer;
+function lsCnieJe[Plik:string):boolean:
+var
+f:file;
+begin
+assign[f,P!ik);
+{$!-} resetCfl;
+closetf];
+{$!+} lstnieje:=(!OresulC=03 end;
+procedurę VZarezerwujPamiec(var gdzie:pointer;i!e:longint);
+var
+rregisters:
+ilasc:word;
+begrn
+i
+ilosc:=[ile+15) shr4; {ile paragrafów} rah:=$48; {numer ustugi DOS-u } rbx;=ilosc;
+MsDosCr);
+if Crbx<>ilosc) Chen VOC_blad:=VZaMaloPamieci e!se begin
+VOC_blad:=VOk;
+gdzie:=pt;rtr.ax,G) end
+end:
+31
+OBSŁUGA PLIKÓW VOC
+
+Procedura YZarezerwujPamiec wywoływana jest z pozostałych w celu allokacji zadanego obszaru pamięci operacyjnej. Jej parametry to zmienna typu Pointer, pod jaką postawione zostanie wskazanie 'na zarezerwowany fragment RAM, oraz zmienna typu Longint specyti-kująca rozmiar potrzebnego obszaru. Procedura allokuje wielokrotność 16 bajtów. W przypadku wystąpienia błędu zmiennej VOC_BLAD nadaje wartość VZaMaloPamieci. Zdefiniowana poniżej procedura VZwolnij Pamięć zwalnia wskazywany przez parametr obszar.
+prxedureVZwolni)P3miecCgdzie:point,er);
+var
+p:registers;
+besm
+nah:=$49;
+nes;=segtgdzie^3:
+msdostr);
+if (rax=7)or[nax=93 Chen VOC_blad:=VBIadZwolnienia end;
+procedurę VlnicjufSterownik(Port,lrq:word];
+var
+s:file;
+specyfikacja:strlng;
+seg_SiOfs_s:word, status_seg,status_ofs:word;
+toJest_sterownik:bDolean;
+wynik:word;
+begin
+if YSterownikZainstalowany then exit;
+specyfikacja: ='0^0^. DRV1;
+if not IstniejeCspecyfikscja) then
+specyfikacja: =getEnv('SOUND)+l\DRV\CT-VOICE.DRV':
+if not IsCnieJsCspecyfikscja] then
+begin
+VQC_Blad:=VBrakSterownika:
+exit
+end:
+assignis,specyfikacja), reset(s,1);
+VZarezer'wuJPamiec[Vsterownik,fileSi2e(sl);
+ifVOC_blad<>VOkthenexit;
+blockreadts.Ysterownik^.filesizets]);
+closets);
+seg_s:=seg[Vste^townik/');
+ofs_s:=ofs(Vsterownik^];
+tOJest;_sCerownik:=[MemW[seg_s:ofs_s+3]=$5443];
+ROZDZIAŁ 2
+S not tOJest_sterown ik Chen begir VCC^b[ad;=VZ!yNaglawekSt;erownika;
+exit end, if porcoO then asm
+mov bx,1 mov ax,port callVst;erowmk end;
+if irq<>0 then asm
+movbx,2 mov ax,irq całłYstercwnik end, StaCus_seg:=segtVOCstaCus);
+Stat:us_ofs:=ofs[VOCsC3tus];
+asm
+mav bx,3 cali Ysterownik mov wynik,ax mov bx,5
+mov es,status_seg movdi,staCusJ)fs cali Ysterownik end;
+case wynik of
+0:VOC_blad:=VOk;
+1: VOC_btad:=VL)szkodzonakarta;
+2: VOC_blad:=VBladWeWy;
+3: VOC_blad:=VZIyNumerPrzerwaniaDlaDMA
+end;
+end;
+Procedura VInicjujSterownik spełnia kluczową rolę w bibliotece. Jej działania polega na wczytaniu kodu sterownika i jego inicjalizacji. Dodatkowo, podając parametry różne od O możemy spowodować zmianę adresu bazowego i numeru używanego podczas transmisji przerwania. Końcowy fragment procedury odpowiedzialny jest za wskazanie sterownikowi lokalizacji słowa przeznaczonego na zmienną statusową. Zdefiniowana poniżej funkcja YWersjaSterownika zwraca wartość typu WORD, której bardziej starszy bajt odpowiada bardziej znaczącej części numeru wersji, a młodszy - mniej znaczą-
+33
+OBSŁUGA PLIKÓW VOC
+
+čej. Procedury VWyIaczDAC i YWIaczDAC odpowiadają za włączanie i wyłączanie układu konwersji DAĆ.
+function YWersjaSte równika,vwrd;
+var
+begin
+asm
+mov bx,0
+cali Ysterownik
+niovw,ax
+end;
+VWer'SjaSterownjka:=w
+end;
+procedurę YWylaczDAC;
+assembler;
+asm
+mDV bx,4 mov al,0 cal!Vscerownik
+end;
+procedurę VWIaczDAC;
+assembler;
+asm
+movbx,4
+mov al,1
+całłYsterownik end;
+Niżej znalazła się definicja procedury VOdczytajPlikVOC. Oczekuje ona podania zmiennej wskaźnikowej, której zostanie nadana wartość odpowiadająca wskazaniu zajmowanego przez plik obszaru oraz podania specyfikacji pliku dźwiękowego, który chcemy wczytać. Sprawdzenie, czy mamy do czynienia z plikiem formatu VOC polega tu na przyrównaniu słowa złożonego z dwóch pierwszych bajtów pliku do 7243h (znaki "C" i "r" z napisu "Creative Voice File"). procedurę VOdczycajPlikVOCCvarbufarpointer;spec;st ring];
+var
+plik_VQC:file;
+rozmiar_pliku:longlnt;
+Blokow:wor'd;
+wynik:word;
+miejsce.pointer;
+bogiń ifnoC IsCmejeEspec] then
+ROZDZIAŁ 2
+beoHi VOC_Blad-=VBrakPliku:
+exit end;
+assign(plik_VOC.spec]:
+re5et;(p!ik_VOC,1);
+rozmiar_pliku:=fileSize(plik_VOC);
+VZarezerwuiPamiecEbufor,rozmiarJ3liku3;
+if VOC_blad< >VOk chen exit:
+Bloków: =0:
+repeat
+miejsce: =Pt^[seg(bufo^A)+Blokowł4096,ofs(bufo^'^]];
+blockread[plik_VOC,miejsce" $FFFF,wynik);
+lnc(B!okow3 untilwynik=0;
+close(plik_VOC]:
+if MemW[seg(bufo^^]:ofs(bufo^-^)]<>$7^43
+then VOC_blad:=VToNieVOC;
+yDlugoscNagiawki^MemCsegtbufor^hofstbufor^l+^a]
+end;
+No i najważniejsze - odtworzenie wczytanego pliku - procedura VOdtworzVOC. Warto zwrócić uwagę, że przesunięcie w adresie segmentowym przekazywanym sterownikowi powiększane jest o rozmiar nagłówka wczytanego pliku.
+procedurę VOdtwor2VOC(bufor:poini;er);
+var
+buf_s,buf_o:word;
+begin
+bu^s^segróufor^ł;
+bufJ^ofsCbufor^+YDIugascNaglowka;
+YWIaczDAC;
+as m
+movbx,6 moves,buf_s movdi,buf_o całłYsterownik
+end
+end;
+W bibliotece zdefiniowałem także drugą procedurę odtwarzającą wskazywaną zadaną zmienną próbkę (VOdtworzJeszczeRaz). Jedyna różnica między nią a procedurą VOdtworzVOC polega na pominięciu w VOdtworzJeszczeRaz włączania układu DAĆ.
+procedurę VOdt;worzJeszczeRaz[bufor:pointer);
+var
+but s,but o:word;
+OBSŁUGA PUKÓW VOC
+35
+buf_s;=seg[bufor^);
+buf o^ofstbufor^l+YDlugoscNaglowkE aem
+movbx,6
+moves,buf_s
+movdi,buf_o
+cali Ysterownik end
+end;
+Procedura YZakonczOperacje może być używana zawsze, gdy chcemy zakończyć odtwarzanie lub zapis dźwięku. Procedury VPauza-VOC i VKontynuujOdtwarzanieVOC służą do chwilowego zawieszania i wznawiania odtwarzania.
+procedurę VZakonczOperacjeVOC;
+assembier;
+as m
+mov bx,8 ca!!Vsterownik
+end;
+procedurę VPauzaVOC:
+var
+odp;word;
+begin as m
+mov bx, 10 cali VsCerownik movodp,ax end;
+ifodp=1 then voc^b[ad:=VSBNieOdCwarzal end;
+procedurę VKontynuujOdtwarzanieVOC;
+var
+odp:wor'd:
+begin as m
+mov bx, 11 cali Ysterownik movodp,ax end;
+if odp=1 chen VOC_blad:=VSBNieOdCwarzal end;
+procedurę VPrzerwiJPetteVOCCiak:word);
+ROZDZIAŁ 2
+
+begin
+end;
+odp:word;
+i [fnot[jakin[0,1I]theniak:=1;
+asm
+mav bx,12
+movax,jak
+cali Ysterowmk
+movodp,ax end:
+ifodp=1 thenVOC_blad:=VNieByloPetli
+W bibliotece znalazła się także procedura zapisu dźwięku do pamięci operacyjnej. Jako parametrów oczekuje ona dwóch wielkości typu WORD określających częstotliwość próbkowania dźwięku oraz rozmiar bufora oraz wskazania na bufor przeznaczony na zapis danych. Należy pamiętać, że po dokonaniu zapisu we wskazanym buforze znajdować się będzie wyłącznie blok danych i, przed ewentualnym zapisem do pliku, należy poprzedzić go nagłówkiem.
+procedurę VZapiszBlok[czest:word;dlug:ward;p: pointę?];
+begin
+ifczest<400Cthen begin
+VOC_blad:=VZIaCzestotliwosc;
+exit end:
+YWylaczDAC;
+asm
+movbx,7 mavax, cześć movdx,0 movcx,dlug les di,p callVsterownik end end;
+Poniższa procedura stanowi pewne uzupełnienie zestawu narzędzi służących odtwarzaniu dźwięku. VOdtworzBlok pomija wielkość nagłówka przy wskazywaniu sterownikowi bufora z danymi, a co za tym idzie, doskonale nadaje się do odgrywania zapisanego z użyciem VZapiszBlok bloku danych.
+procedurę VOdtworzBIok(wsk:pointer);
+var
+37
+OBSŁUGA PLIKÓW VOC
+
+przechowa) :byte:
+begin
+przechowaj :=VDIugoscNaglowka;
+V0ugosc^aglowka:=0;
+VOdtworzVOC(wsk);
+VDIugoscNaglowka:= przechowaj
+end
+Funkcja VOpisBledu pełni rolę pomocniczą. Zwraca łańcuch ASCII opisujący błąd związany z aktualną wartością zmiennej VOC_BLAD.
+function VOpisBledu:sCring;
+begin
+case VOCJ)lad of
+V0k:
+VapisBledu;='Ok.';
+YBrakSterownika:
+VopisBledu:='Nie znaleziono pliku CT-VOICE.ORV';
+VZaMaloPamieci:
+VopisBledu:='ZbyC mało pamięci operacyjnej.':
+VZIyNaglowekSterownika:
+VapisB!edu:='Zty nagłówek CT-VOICE.DRV';
+YBIadInicjalizacji:
+VopisBledu:='Bład podczas inicjalizacji sterownika.';
+VL)szkodzonaKarta:
+VopisBledu:='Btędne działanie karty dźwiękowej.';
+VBladWeWy:
+VopisBledu:='Btad podczas zapisu/odczytu z portów karty,';
+YZłyNumerPrzerwaniaDlaDMA:
+VopisBledu:='Niewłaściwy numer przerwania IRQ.';
+YBIadZwolnienia:
+VopisBledu:='Błąd zwolnienia pamięci.';
+YBrakPtiku:
+VopisBledu;='BrBk pliku .VOC.';
+VToNieVOC:
+VopisBledu:='Błędny nagłówek pliku .VOC,';
+VSBNieOdtwarzal:
+VopisBledu:='Żaden plik nie byt odtwarzany1;
+VNieByiaPecli:
+VopisBledu:='Nie było aktywnej pętli.';
+VZtaCzestotliwosc:
+VopisBledu:='Zta częstotliwość próbkowania,' end end;
+Ostatnią publiczną procedurą biblioteki jest VDeinstalujSterownik. Można ją wywołać w programie, by deinicjałizować CT-VOłCE i zwolnić zajmowaną przez jego kod pamięć. Jego wywołaniem
+ROZDZIAŁ 2
+w przypadku zakończenia działania programu zajmie się nowa procedura wyjścia - VOCExit.
+procedurę YDanstalujScerownik;
+begm
+(f YSterownikZainsCalowsny then begin as m
+mov bx,9 całłYsterownik end;
+VZwolni|PamiectVsterownik);
+VSt:erownik2ainsCalowany:=false end end;
+($F+) procedurę VOCExtt:;
+begin
+YOeinscalujScerownik;
+ExitProc:==VDawnaProceduraWyjscia end;
+{SF-}
+begin
+VDawnaProceduraWyJscia;=ExitProc;
+ExitProc:=@VOCExit:
+VSterown ikZainsCalowany: = False;
+VOCstaCus:=0;
+VOC 81ad;=VOk
+end.
+PRZYKŁADY
+W poprzednim rozdziale zaprezentowałem kompletną, gotową do użycia bibliotekę funkcji i procedur użyteczną przy programowaniu obsługi plików VOC. Aby bardziej jeszcze rozjaśnić zasady korzystania ze sterownika, przedstawię przykład programu wykorzystującego jego usługi. Jego zadaniem będzie odtwarzanie zawartości zadanego parametrem pliku formatu VOC:
+program Zagraj;
+{$M 16000,0,50000} uses crt.YOC:
+var
+b:pointer;
+39
+OBSŁUGA PLIKÓW VOC
+
+procedurę koncZJesli_zle;
+begin
+lfVOC_Btad<>VOkthen begin
+wnteln[VapisBledu);
+halt end end:
+begin
+if paramcount<>1 then begin
+wricelnC Użycie: ZAGRAJ plik');
+wriceinfplik - plik w formacie VOC');
+halt end;
+Vlnic}ujSCerownik(0,0);
+kończ (esli_zle:
+VOdczytaJPlikVOC[b,paramstrE13);
+koncz_jesli_zle;
+VOdCworzVOCEb);
+wricelnrOdtwarzam. Wciśnij ESC aby przerwać...');
+repeat untii tkeypressed3orfVOCStatus=0);
+if keypressed then VZakonczQperacjeVOC
+end,
+Wspomniałem, że parametrami dla VInicjujSterownik mogą być (w przypadku, gdy ustawienia karty nie są standardowe) adres bazowy i numer przerwania IRQ. Warto byłoby, aby nasze programy, zanim zainicjują działanie sterownika, sprawdziły je. Jednym ze sposobów jest odczytanie wartości zmiennej środowiskowej BLASTER. Oczywiście w przypadku, gdyby w pamięci komputera, na jakim uruchomiony został nasz program, nie znajdowała się zmienna o tej nazwie, możemy np. zwrócić się z zapylaniem do użytkownika (sposób praktykowany - przekonać się o tym można przyglądając się kilku popularnym grom). Innym sposobem jest badanie każdego z portów i przerwań. Ta metoda zostanie omówiona w dalszej części książki. Poniżej przedstawiam proste funkcje zwracające interesujące nas wartości po uprzednim odczytaniu ich ze zmiennej BLASTER:
+function adres_bazowy:word;
+var
+lancuch.string;
+pozycja:byte;
+begin
+ROZDZIAŁ 2
+łańcuch: =GeCEnvt'8LAS7OT:
+if Uancucho"] then pozycjB:=pos['A', łańcuch)
+elsepozycja:=0, if pozycJaoOchen begm
+ad^es_bazowy:=256fr[o^d[l6^cuch[pozycja-1]]-4B] +^6ł[o^d[lancuch[pozyc^a+^])-4B] +ord([ancuch[pozycja+3])-48 end else adres_bazowy:=$220 end;
+function numer_IRQ:byte' var
+lancuch:string;
+pozycja;byte;
+begin lancuch:=SetEnv['BLĄSTER'];
+if [lancucho") Chen pozycja:=pas(T.lancuch] else pozycja:=0;
+ifpozycjaoOthen
+numer_IRQ:=ord[lancuch[pozycja+1]]-48 else
+numer_IRQ:=7 end;
+Bywa, że chcielibyśmy, aby użytkownik programu nie miał dostępu do używanych przez program plików VOC (tzn. nie mógł przez np. prostą podmianę zmienić efektów dźwiękowych w naszej grze). Najprostszym sposobem wydaje się wtedy zmiana ich nazwy i, częściowo, struktury [np. obcięcie nagłówka i pozostawienie tylko bloku danych) lub np. "sklejenie" ich w jeden plik i przechowywanie przez program położenia poszczególnych "składowych". W przypadku niewielu plików za sposób można także uznać połączenie ich zawartości z kodem naszego programu. Poniżej prezentuję przykładowy listing. Program odtwarza włączone na etapie konsolidacji dane dźwiękowe zapisane w formacie VOC. Korzysta także ze skonsolidowanego ze swoim kodem sterownika. Podobny programik może na przykład znaleźć zastosowanie przy tworzeniu plików wsadowych (podczas działania których komunikaty będą np. wypowiadane za pośrednictwem SB).
+program p1;
+usesVOCDrv;
+{tekst biblioteki zamieszczony przy opisie sposobu
+obsług/ą PLIKÓW VOC
+korzystane ze sterownika CT-WICE}
+{$Lexample1,obj} procedurę Dźwięk:
+external:
+kod procedury Dźwięk to zawartość pliku example1.obj utworzonego w następujący sposób:
+BINDBJ example1.voc example1,obj Dźwięk
+}
+var
+Status ;word:
+segm, przesuń, wynik:ward;
+procedurę Odtworz_zaw_pliku(si0iword];
+begin
+o:=o+$1A:
+{ długość nagłówka dla tej wersji formatu }
+asm
+mov bx,6
+mov es,s
+mov di,o
+cali far ptrvoice end;
+nepeat unti Status =0 {czekamy na koniec} end;
+begin
+Status =0;
+WriteInCBum bum bum,..'3; {informacja } asm
+movbx,3
+cali far ptrvcice
+nnov wynik,ax end;
+ifwynikoOthen
+begin wnteInfBłąd podczas inicjalizacji sterownika.');
+halt end;
+segm:=segEStatusl;
+przesuń; =ofs[Status], asm
+mov bx,5
+mov es,segm
+mov di, przesuń
+ROZDZIAŁ 2
+end.
+OdCworz_zcWJ^Ikutseg[D2wiek),of5EDzwiek]);
+as m
+movbx,9
+cali far ptrvai[:e end end. {ijuż}
+2.3 OBSŁUGA WIĘKSZYCH PLIKÓW
+Praca z plikami formatu VOC przy użyciu standardowego sterownika CT-VOICE jest wygodna, ale nie pozbawiona wad. Za podstawową należy uznać fakt, że niemożliwe jest odtworzenie pliku o rozmiarach przekraczających wielkość dostępnego do zaallokowa-nia obszaru RAM. Poza tym konieczność ładowania pliku do pamięci przed odtworzeniem zmusza nas do walki o niemal każdy bajt. Kłopotliwy Jest też zapis dźwięku o nieco większej długości. Okazuje się, że wśród rozpowszechnianych wraz z kartą plików znajduje się CTVDSK.DRV, zawierający kod sterownika (Creative Disk Double-Buffering Voice Driver), przy użyciu którego możemy odgrywać pliki bezpośrednio z dysku i zapisywać prosto do pliku (!). Pomysł jest prosty - sterownik wykorzystuje zdefiniowany wcześniej bufor dzieląc go na dwie części, do jednej "doczytując" kolejne partie pliku, z drugiej zaś odtwarzając uprzednio "doczytane". Funkcje nowego sterownika niewiele różnią się od funkcji standardowego CT-VOICE. Oto opis kilku z nich, niezbędnych do zapisu i odtwarzania danych dźwiękowych wprost z dysku, a nie udostępnianych (lub wymagających odmiennych parametrów) przez kod zawarty w CT-VOI-CE.DRV:
+Funkcja 3: Inicjalizacja sterownika
+Wejście:  BX=3
+AX= rozmiar bufora Wyjście:   AX - kod błędu
+O - wykonanie bezbłędne
+1 - błędne działanie karty Sound Blaster
+2 - zły adres bazowy (błąd odczytu/zapisu)
+3 - zły numer przerwania IRQ
+43
+OBSŁUGA PLIKÓW VOC
+
+Opis:     Jednym z wymaganych przez funkcję parametrów jest - podawany w rejestrze AX - rozmiar bufora. Parametr len rozumiany jest jako ilość bloków wielkości 4 KB, składających się na bufor. Tak więc. jeśli na potrzeby bufora allokujemy 32 KB, rejestrowi AX nadajemy wartość 8. Jak już wspomniałem, zdefiniowany bufor podzielony zostanie na dwie równe części. Można więc powiedzieć, że w AX podajemy rozmiar każdej z tych dwóch części będący wielokrotnością 2 KB.
+Funkcja 5: Ustawienie adresu zmiennej statusowej
+Wejście:  BX=5
+DX = numer segmentu z adresu zmiennej AX == przesunięcie wewnąirzsegmentowe zmiennej
+Wyjście:   brak
+Opis:      Wywołując tę funkcję wskazujemy sterownikowi lokalizację szesnastobitowego stówa przeznaczonego na zmienną statusową. Sterownik podczas pracy nadaje lej zmiennej różne wartości. Badając je możemy stwierdzić, na jakim etapie działania znajduje się procedura odtwarzania dźwięku. Dokładniejszy opis znajdzie Czytelnik we wcześniejszej części książki (opis CT-VOICE).
+Funkcja 6: Odtworzenie zawartości pliku
+Wejście:  BX=6
+AX = uchwyt pliku
+Wyjście:   AX - informacja o tym, czy wystąpił jakiś błąd (O oznacza wykonanie pomyślne)
+Opis:      Działanie funkcji polega na rozpoczęciu odtwarzania pliku z użyciem zainicjowanego wcześniej bufora. Parametrem funkcji jest uchwyt pliku - wielkość zwracana przez usługi DOS po jego otwarciu. Odgrywanie pliku z użyciem tej funkcji wiąże się z cyklicznymi odczytami z pamięci masowej. Należy zwrócić uwagę, że częstotliwość odwołań do dysku jest odwrotnie proporcjonalna do rozmiaru bufora.
+ROZDZIAŁ 2
+Funkcja 7: Zapis dźwięku do pliku
+Wejście:   BX=7
+AX= uchwyt pliku DX= częstotliwość
+Wyjście:   AX - informacja o ewentualnym błędzie (O - wykonanie bezbłędne)
+Opis:      Wywołanie tej funkcji rozpoczyna zapis do pliku danych dźwiękowych pobieranych z przetwornika analogowo-cyfrowego z częstotliwością zadaną przez wartość rejestru DX.
+Funkcja 14: Informacja o błędzie
+Wejście:   BX==14 Wyjście:   DX - kod błędu DOS
+AX- kod błędu sterownika
+Opis:     Funkcję wywołujemy w wypadku, gdy próba wykonania innej funkcji sterownika nie powiodła się. Badając zwrócone wartości możemy poznać przyczynę powstania błędu.
+Funkcja 15: Inicjalizacja bufora
+Wejście:   BX=15
+DX = numer segmentu początku bufora
+AX = przesunięcie wewnątrz segmentu początku bufora
+CX = rozmiar bufora w 4 KB blokach Wyjście:   brak
+Opis:      Wykonanie funkcji jest konieczne przed próbą odtworzenia jakiegokolwiek pliku. Wywołując ją wskazujemy sterownikowi miejsce w pamięci operacyjnej, gdzie ulokowaliśmy bufor używany przy odtwarzaniu.
+Skoro poznaliśmy już nowe funkcje sterownika, czas na zapoznanie się z podstawowymi zasadami korzystania z niego:
+45
+OBSŁUGA PLIKÓW VOC
+
+Rozpoczęcie pracy:
+1. Otwarcie pliku CTVDSK.DRV, sprawdzenie jego rozmiaru i allo-kacja niezbędnego obszaru pamięci operacyjnej.
+2. Wczytanie kodu sterownika i zamknięcie pliku.
+3. Inicjalizacja bufora używanego przez sterownik (allokacja pamięci i użycie funkcji 15). Jeżeli czynność ta nie poprzedzi inicjali-zacji sterownika, driver sam zarezerwuje bufor w pamięci operacyjnej.
+4. Modyfikacja adresu bazowego używanego przez sterownik.
+5. Zmiana numeru przerwania IRQ wykorzystywanego podczas transmisji danych.
+6. Inicjalizacja sterownika (funkcja numer 3).
+7. Wskazanie lokalizacji zmiennej statusowej. Przed inicjalizacją sterownika nasz program może także przejąć kontrolę przerwania 24h (obsługa błędów krytycznych). Dodatkowo należy pamiętać, że w przypadku wystąpienia jakiegoś błędu użyć możemy funkcji 14 (informacja o błędzie).
+Odtwarzanie:
+1. Otworzenie pliku zawierającego dane dźwiękowe i zapisanego w formacie VOC.
+2. Włączenie układu DAĆ (czynność jest zbędna, gdy odtwarzamy plik zaraz po inicjalizacji sterownika i gdy układ DAĆ nie był wyłączany).
+3. Wywołanie funkcji 6 z podaniem w rejestrze AX uchwytu do otwartego pliku.
+4. Oczekiwanie na moment, w którym zmiennej statusowej nadana zostanie wartość O (koniec). Podczas oczekiwania na zakończenie odtwarzania nasz program może wykonywać inne czynności. Używając funkcji 10 i 11 możemy zatrzymywać i wznawiać wykonywanie procedury odtwarzającej, a wywołując funkcję 8 - zakończyć jej działanie. Odczytując wartość zmiennej statusowej możemy, pod warunkiem uprzedniego wzbogacenia naszego pliku o podbloki typu Marker, sprawdzić, który fragment próbki dźwiękowej jest aktualnie odtwarzany. Podczas odtwarzania wciąż możemy odwoływać się do napędów dyskowych z użyciem usług DOS'u. Istnieją natomiast pewne ograniczenia dotyczące wykorzystania przez program przerwań 8h (Timer), l On (Video), 13h (usługi BlOS-u dotyczące operacji dyskowych)
+HOZDZfAŁ 2
+i 28h. Ich obsługę przejmuje na czas działania sterownik. Można je wykorzystywać jedynie:
+    przed inicjalizacją oraz po deinicjalizacji,
+po inicjalizacji oraz przed deimcjalizacją.
+6. Po zakończeniu odtwarzania należy zamknąć plik z danymi dźwiękowymi
+Zapis dźwięku:
+1. Otwarcie pliku przeznaczonego do zapisu danych.
+2. Wyłączenie (z użyciem odpowiedniej funkcji sterownika) układu DAĆ.
+3. Wywołanie funkcji 7 (zapis) z odpowiednimi parametrami.
+4. Wykonywanie innych czynności. Podczas zapisu dźwięku nasz program może wykonywać inne zadania. Chcąc zakończyć zapis dźwięku wystarczy wywołać funkcję 8 sterownika. Informację o tym, czy zapis dźwięku wciąż trwa, można uzyskać odczytując wartość zmiennej statusowej (O oznacza zakończenie zapisu).
+5. Zamknięcie pliku, do którego zapisywaliśmy dźwięk. Należy zwrócić uwagę, że dane zapisywane są przez sterownik w formacie VOC, nie ma więc już potrzeby (jak przy sterowniku CT-VOICE) zapisu nagłówka przed utworzoną przez driver strukturą-
+Zakończenie pracy:
+1. Zakończenie procedury odtwarzania (jeśli jest aktywna) i zamknięcie plików dźwiękowych.
+2. Wywołanie funkcji deinstalacji sterownika.
+3. Zwolnienie pamięci zajmowanej przez kod sterownika i bufor. Jeśli rozpoczynając pracę nasz program przejął obsługę przerwania 24h. po deinicjalizacji sterownika powinien przywrócić pierwotną wartość wektora.
+Wykorzystanie CTVDSK.DRV to prosty sposób na wzbogacenie dłuższej prezentacji o dźwięk czy też gry o muzykę. Moim jednak zdaniem, wykorzystanie plików VOC do przechowywania i odtwarzania "w tle" zdigitalizowanej muzyki nie jest pomysłem najlepszym (na jedną sekundę przywoicie słyszalnego dźwięku musimy przecież przeznaczyć co najmniej kilka KB) - znacznie wygodniej jest, według mnie, wykorzystać muzykę zapisaną w formacie CMF.
+47
+OBSŁUGA PLIKÓW VOC
+
+Skoro opisałem już metodykę wykorzystania CTVDSK.DRV, czas na przykład; będzie nim tekst źródłowy programu odtwarzającego zadany parametrem plik.
+{$M 16000.0,50000}
+program DskPIay;
+uses
+dos,crt;
+var
+sCerownik:pointer;     {wskazanie na początek kodu } Dbufferpointer;       { wskazanie na bufor} Error:byte;           { numer błędu } YOCStatus.word;        {zmiennastacusowa} P:fite;
+Uchwyt:word absolute P: { rzut: P na pole 16-bic } ch:char;
+Zat,rzymany:boolean;      {czy zsCrTymaliśmyodtwarzanie}
+function lscniejetPEik:string]'boolean;
+var
+f:file;
+begin
+assigntf.Plik);
+{$!-}
+resectf];
+close(f);
+{$!+}
+Istnieje: ^[IDresult^Ol end;
+function Czy to_plik_VOC[spec:string):boolean, var
+u:tile;
+tab:array[Q,.3] of char;
+begin
+assign(u,spec3;
+reset(u,1);
+iffilesize[u)>31 chen
+{ nagłówek + początek bloku danych }
+begin
+blockreadEu,tab,4);
+CzyJ:o_plik_VOC
+^[tab^+tabdl+tab^l+cabtS^Crea');
+endelse Czy_l;o_plik_VOC:=falsE:
+ROZDZIAŁ 2
+cbselu)
+end;
+procedurę 2are2erwuj_parniectvargd2)e:poinCer:iie'longinti;
+var
+r:regisCers;
+ilosc:word:
+begin
+ilość: =(ile-15] shr4:
+nah;=$4S:
+rbx:=ilosc;
+MsOosCr-);
+if [r.bxoilosc] then Error^S e.se begin
+Error:=0;
+gdzie:=ptr(r,ax,0) end
+end;
+procedurę Zwolnij^pamiectgdzie.pointer);
+var
+p:registers;
+begin
+rah:=$49:
+r.es:=segtgdzie^);
+msdostr];
+iftr.ax^7]or[rax=9)then Error:=3 end;
+procedurę lnicjuj_sterownik[PorC,lrq,Size:word);
+var
+sifile;
+specyfikacja:string;
+segment, przesuń :word;
+CoJest_stercwnik:boolean;
+wynik:word;
+begin
+specyfikacja:='CTVDSK,DRV;
+if not Istniejetspecyfikacjał then
+specyfikacja: ^getEnyfSaUND^+ADR^CTYDSK.DRY';
+if not IscriejeCspecyfikacja] then
+begin
+Error=1;
+exit
+end;
+S5sign[s,specyfikacjal:
+resetCs.l);
+OBSŁUGA PLIKÓW VOC
+Za reasrwJ |_Damec (ste rownik.fileSizetsJ);
+ifErroroO then exit:
+blockreadts,sterownik^ ,nlesize[5)], {wczyta) kod } closets], segment, =seg[ste''ownlk/s);
+p^zesun;-=of5[5t.e^ownlk/\]; { adres początku kodu } tOJesC^stero^nik^tMemWLsegmenc przesuń+31 =$5443):
+Co_)est sterownik: ==Co_)est_sterownik
+and EMemW[segment:przesun+5]=$4456):
+if noc COJest^sterownik then begin
+ErrDr':=4;
+exit
+end;
+Za^e^er'vuu^_pam^ec[Dbuffe^.s^^eft4Q95];
+if ErraroO then exit;
+segment; =seg[Dbuffe^/\];
+przesuń: ^fstDbuffer-^];
+asm
+mov bx,15
+mov dx,segment
+mov ax,prze5Lin
+mov cx,size
+cali sterownik end:
+if portoOthen
+asm
+mov bx,1 mov ax,port cali sterownik
+end;
+ifirqo0then
+asm
+mov bx,2 mov3x,irq cali sterownik
+end;
+segment: =seg[VOCstatus3;
+przesuń: =ofs[VOCstatus];
+asm
+mov bx,3
+mov ax,size
+cali sterownik
+mov wynik, ax
+mov bx,5
+movdx,segment
+movax,przesuń
+cali sterownik end:
+ROZDZIAŁ 2
+OBSŁUGA PLIKÓW VOC
+
+
+procedurę Kontynuuj;
+begin ZaCrzymany:=false;
+asm
+mov bx,11
+cali sterownik end end;
+procedurę Deinstalu^sterownik;
+begin asm
+movbx,9 cali sterownik end;
+Zwolnij_pamlecEsterownik];
+ZwDlnij_pamiec[Dbuffer3 end;
+procedurę KonczJesli_zle;
+begin
+ifError=Othen exit;
+case Error of 1: writeInCBrak pliku CTVDSK.DRV3:
+2: writeInCBład przydziału pamięci']:
+3: writeln['Btad zwolnienia pamięci');
+4: writelnC'Zły nagłówek sterownika'];
+5; writelnC'Błędne dziatanie karty']:
+B: writeInCBtąd obsługi portów karty');
+7: wntelnC'Btędny numer IRQ');
+8: wricelnt'Brak wskazanego pliku") end;
+halt
+end;
+begin
+begin
+end;
+if paramcountol then { nie podano parametru }
+writeInCUżycie: DiskPtayplik');
+writefnCplik- plik w formacie VOC');
+hale
+if not IstniejeCparamstrII)) then begin
+wnteln^Brak wskazanego pliku');
+halt
+casewynkof
+0: Error;=0;
+1: Error:=5;
+S: Error;=6;
+3:Error:=7 end
+end;
+procedurę DdtworzJ)likl)aki:stnng);
+var handle:word;
+begin assIgnLPjaki):
+{$F-} resetiPI;
+{$F+} ifioresulcoOthen begin
+Error:=B;
+exit end;
+handle;=Uchwyt:
+asm
+movbx,6
+movax, handle
+cali sterownik end end;
+procedurę Zakończ odtwarzanie;
+hegin
+ifVOCStatus<>Othen {jeśli jeszcze gra } asm
+movbx,8 cali sterownik end;
+{$F-} close(P]:
+{$F-} end;
+procedurę Pauza;
+begin Zatrzymany: =true;
+asm
+mov bx,10
+catl sterownik end end;
+ROZDZIAŁ 2
+OBSŁUGA PLIKÓW CMF
+53
+
+
+ifnotC2y_Co_pllk_VDCtparBmstr(1]} then begin
+wnteInCPlik nie jeść zapisany w formacie VOC'
+halt end:
+Inicjuj sterownik(0,D,103; { bufor 40 KB} koncz_Jesli_zle:
+2atr'zymany:=false;
+OdCworz_plik[paramstrt1l];
+writeInCOdtwarzam...'];
+writeInfSPACE - pauza, ESC - koniec'3;
+repeac
+if keypressedthen ch:=r-eadkeyelse ch:=#0;
+ifch=^32then
+case Zatr-zymany of
+true: KontynJJ);
+false; Pauza end uncii
+[VOCStat;us=0)or[ch=^27], Zakoncz^odCwarzanie;
+Deinst;aluj_sterownik
+3. OBSŁUGA PLIKÓW CMF
+
+W rozdziale omówię sposób obsługi plików zapisanych w formacie CMF (Creative Musie File). Struktura ta została stworzona do przechowywania danych muzycznych. Przy ich odtwarzaniu najłatwiej jest wykorzystać sterownik SBFM. Jego funkcje umożliwiają odtwarzanie muzyki "w tle", a co za tym idzie, np. proste wzbogacenie programów rozrywkowych o podkład muzyczny.
+3.1 STRUKTURA PLIKÓW CMF
+Sposób, w jaki zorganizowane są pliki CMF, przedstawia się w następujący sposób:
+1. Blok nagłówka
+Blok zawiera podstawowe informacje o zawartości pliku.
+2. Blok instrumentów
+Definicje instrumentów użytych przy odtwarzaniu muzyki. Wartość informująca o ilości 16-bajtowych definicji przechowywana jest w bloku nagłówka.
+3. Blok muzyczny
+Muzyka zapisana w zunifikowanej formie.
+ROZDZIAŁ 3
+Omówię teraz każdy z 3 bloków pliku CMF. Blok nagłówka
+
+Przesunięcie (szesnastkowo)
+Opis
+
+
+00-03h    Identyfikator pliku - 4 znaki ASCII "CTMF". 04-05h    Wersja formatu CMF.
+Starszy bajt słowa przechowuje bardziej znaczącą część numeru wersji, młodsza - mniej znaczącą część.
+06-07h    Przesunięcie Bloku instrumentów względem początku pliku CMF.
+08-09h    Przesunięcie Bloku muzycznego względem początku pliku.
+OA-OBh    Ilość cykli zegarowych odpowiadających ćwierćnucie.
+Dla przykładu: jeżeli częstotliwość zegara wynosi 96 Hz, a wartość tempa to 120, wartość ta powinna być równa 48 (domyślnie).
+OC-ODh    Ilość cykli zegarowych w ciągu sekundy.
+Częstotliwość zegara O wyrażona w Hz (1/sek). Wartością domyślną jest 96. Zalecany przedział wartości to (20,160).
+OE-OFh    Przesunięcie tytułu względem początku pliku.
+Wartość opisująca położenie ciągu znaków ASCII zakończonych bajtem równym O (ciąg ASCIIZ). Brak tytułu utworu sygnalizowany jest zerową wartością przesunięcia.
+10-1 Ih    Przesunięcie danych kompozytora względem początku pliku.
+Wartość opisuje położenie danych dotyczących kompozytora (np. nazwisko). Dane kompozytora muszą być zapisane jako ciąg ASCIIZ. Brak danych sygnalizowany jest zerową wartością przesunięcia.
+12-13h    Położenie komentarzy.
+Szesnastobitowe słowo opisujące położenie ciągu ASCIIZ zawierającego komentarz względem początku płiku
+55
+OBSŁUGA PLIKÓW CMF
+
+CMF. Długość wskazywanego ciągu nie powinna przekraczać 32 bajtów.
+14-23n    Tabela zajęcia kanałów.
+Szesnastobajtowa tablica przechowująca informacje o wykorzystywanych przy odtwarzaniu muzyki kanałach. Wartość l bajtu odpowiadającego danemu kanałowi oznacza jego wykorzystanie.
+24-25h    Ilość używanych instrumentów.
+Wartość opisująca ilość używanych przy odtwarzaniu muzyki instrumentów.
+26-27h    Tempo podstawowe. Główne tempo utworu.
+28h-..     Od tego miejsca rozpoczynają się ciągi znakowe opisujące tytuł, dane kompozytora ulworu i komentarze.
+Blok instrumentów
+Blok zawierający rekordy o długości 16 bajtów, opisujące używane przez utwór instrumenty. Ilość pól opisuje słowo nagłówka o przesunięciu 24h względem początku pliku. Położenie bloku instrumentów opisuje słowo o przesunięciu 6h. Każdy rekord zawiera obraz wartości rejestrów danego kanału FM. Rekord przechowuje wartości równe zawartym w obszarze rozpoczynającym się od przesunięcia 24h pliku SBI (SBI - Sound Blaster Instrument File to format zapisu opisu instrumentów używany np. przez program IEDIT).
+Blok muzyczny
+Format, w jakim zapisane są dane opisujące muzykę, jest zbliżony do formatu SMF (Standard MIDI Format). Opisuje on utwory jedności eżk owe, wielokanałowe i polifoniczne. Maksymalna liczba kanałów to 16.
+3.2 FORMATY SBI i IBK
+Pliki zapisane w formacie SBI (Sound Blaster Instrument) przechowują dane opisujące pojedynczy instrument. Większość pól struktury SBI można skojarzyć z odpowiednimi rejestrami układu syntezatora FM i ich zawartość może być bezpośrednio do nich wpisana w celu
+ROZDZIAŁ 3
+zdefiniowania danego brzmienia. Długość pliku zapisanego w formacie SBI jest stała i wynosi 51 bajtów. Poniżej prezentuję, jak przedstawia się jego struktura. Dokładniejsze opisy znaczenia poszczególnych pól znajdzie Czytelnik w rozdziale poświęconym bezpośredniemu programowaniu syntezatora FM.
+
+Przesunięcie (szesnastkowol
+Opis
+
+
+00-03 04-23
+24
+25
+26
+27
+28
+29
+2A 2B
+2C
+Identyfikator pliku. Ciąg znaków "SBI" zakończony bajtem o wartości lAh
+Nazwa instrumentu. Ciąg ASCI1Z (znaki ASCII i bajt o wartości 0) zawierający nazwę instrumentu Baji opisujący charakterystykę fali modulującej Bajt opisujący charakterystykę fali nośnej
+bit 7 - vibrato wysokości - tremolo (AM) bit 6 - vibrato amplitudy (VIB) bit 5 - dźwięk podtrzymany (EG-TYP) bit 4 - skalowanie obwiedni (KSR) bity 3-0 - mnożnik częstotliwości (MULTIPLE) Skalowanie/Poziom wyjściowy fali modulującej Skatowanie/Poziom wyjściowy fali nośnej bity 7-6 - skalowanie poziomu (KSL) bity 5-0 - poziom wyjściowy fali nośnej (TL)
+Bajt opisujący proces narastania i opadania fali modulującej
+Narastanie i opadanie fali nośnej
+bity 7-^ - prędkość narastania (AR) bity 3-0 - prędkość opadania (DR)
+Bajt, którego bity opisują poziom podtrzymania i prędkość wygasania fali modulującej
+Poziom podtrzymania i prędkość wygasania fali nośnej bity 7-^ - poziom podtrzymania (SL) bity 3-0 - prędkość wygasania fali (RR)
+Wybór fali modulującej
+57
+OBSŁUGA PUKÓW CMF
+
+2D        Wybór tali nośnej
+bity 7-2 - wy zerowane
+2F
+bity 1-0 -wybór fali (WS) Sprzężenie zwrotne/połączenie
+bity 7-4 - wyzerowne
+bity 3-1 - sprzężenie zwrotne układu modulatora
+bit O - połączenie 2F-33     Zarezerwowane
+Funkcje i znaczenie poszczególnych bitów odpowiednich pól opisujących falę modulującą i nośną są identyczne. Bajty o przesunięciach 24-33h odpowiadają kolejnym polom definicji instrumentu w bloku instrumentów pliku CMF.
+Ponieważ używanie plików SBI do przechowywania definicji pojedynczych instrumentów może być, przy większej ich liczbie, niewygodne, stworzono format IBK (Sound Blaster Instrument Bank), umożliwiający zgrupowanie w jednym pliku większej ilości definicji. Maksymalna liczba opisywanych plikiem IBK instrumentów wynosi 128. Struktura IBK przedstawia się następująco:
+Przesunięcie  Opis (szesnastkowo)
+00-03     Identyfikator pliku - ciąg "IBK" zakończony bajtem O wartości lAh.
+04-803    Parametry instrumentów. Obszar o wielkości 2 KB przeznaczony na przechowanie definicji 128 instrumentów (po 16 bajtów na każdy).
+804-C83   Nazwy instrumentów. Tablica zawierająca nazwy każdego z opisywanych w pliku instrumentów. Nazwę pojedynczego instrumentu stanowi ciąg 9 znaków ASCII zakończony bajtem o wartości 0.
+3.3 STEROWNIK SBFM
+W rozdziale omówię sposób wykorzystania rezydentnego sterownika Sound Blaster FM. Używając go można w prosty sposób odtwa-
+ROZDZIAŁ 3
+rzać muzykę zapisaną w formacie CMF, wykorzystując układ syntezatora FM (Frecjuency Modulation) będący częścią karty dźwiękowej.
+SPOSÓB KORZYSTANIA ZE STEROWNIKA
+Sterownik SBFM instalujemy w pamięci operacyjnej uruchamiając program SBFMDRV.COM. Program przechwytuje obsługę jednego z przerwań o numerze zawierającym się w przedziale 80h..BFh (wybiera pierwsze nie zajęte). Przesunięcie wewnątrzsegmentowe początku kodu nowej procedury obsługi przerwania jest równe 0. Do funkcji sterownika odwołujemy się wykonując obsługiwane przez niego przerwanie (rozkazem assemblerowym INT). Wpierw jednak musimy sprawdzić, obsługę którego przerwania przejął sterownik. Najprościej zrobić to badając dla każdego "podejrzanego" (od 80h do BFh) kod procedury obsługi. W kodzie oryginalnego SBFM, od przesunięcia 103h względem komórki wskazywanej przez wektor przerwania rozpoczynać się powinna 5-bajtowa sygnatura "FMDW.
+Wszystkie parametry przekazujemy driverowi z pomocą rejestrów mikroprocesora. Numer funkcji, z której chcielibyśmy skorzystać, umieszczamy w BX. a parametry w pozostałych. Po wykonaniu funkcji sterownik umieszcza (czasem nie) kod wyniku w rejestrze AX (odczytując jego zawartość dowiedzieć się możemy, czy operacja przebiegła pomyślnie, czy też nie).
+Wartości wszystkich rejestrów wraz z flagowym (oprócz AX i DX) są przez sterownik zachowywane.
+Podobnie jak sterownik CT-VOICE, SBFM modyfikuje wskazaną przez program zmienną zwaną dalej zmienną statusową. Dla drive-ra SBFM zmienna zajmuje jeden bajt. Jej lokalizację wskazujemy korzystając z funkcji l. Podobnie jak przy odtwarzaniu zawartości plików VOC, wartość zmiennej statusowej używanej przez sterownik informuje nas o działaniu procedur sterownika. Rezydentny driver SBFM modyfikuje ją w przypadku:
+1. Resetu (ustawia na 0)
+2. Rozpoczynając odtwarzanie bloku muzycznego pliku CMF (ustawia na FFh)
+3. Kończąc odtwarzanie bloku muzycznego (ustawia na 0)
+4. Natrafienia na pole Control Event w bloku muzycznym (ustawia wartość zmiennej statusowej zgodnie z zawartością pola Control Data)
+59
+OBSŁUGA PLIKÓW CMF
+
+Zmienna statusowa nie jest modyfikowana, gdy wywołamy funkcję chwilowego zatrzymania (nr 9) lub kontynuacji (nr 10) odtwarzania muzyki.
+OPIS FUNKCJI STEROWNIKA
+Rezydentny sterownik SBFM dostarcza nam następujące funkcje:
+Funkcja 0: Pobranie numeru wersja sterownika                    _____
+Wejście:  BX=0
+Wyjście:   AX - wersja SBFM
+Opis:     Funkcja zwraca bardziej znaczącą (AH) i mniej znaczącą (AL) część numeru wersji zainstalowanego w pamięci sterownika.
+Funkcja 1: Wskazanie bajtu statusowego
+Wejście:BX=1
+DX:AX== adres bajtu Wyjście:   brak
+Opis:     Wskazanie sterownikowi położenia bajtu przeznaczonego na zmienną statusową. Funkcje tej zmiennej omówiłem w części "Sposób korzystania z funkcji".
+Funkcja 2: Wskazanie tabeli instrumentów
+Wejście:  BX=2
+CX== ilość instrumentów
+DX:AX= adres tabeli Wyjście:   brak
+Opis:     Zanim rozpoczniemy odtwarzanie utworu muzycznego powinniśmy wskazać sterownikowi położenie tabeli zawierającej definicje instrumentów (driver zawiera wprawdzie definicję 16 instrumentów, ale użyte w odtwarzanym utworze mogą się od nich różnić). Sterownik używa jej do programowania układów syntezy FM. Należy pamiętać, że wielkość praekazywana w rejestrze CX nie powinna być większa od 128.
+ROZDZIAŁ 3
+Funkcja 3: Ustawienie częstotliwości zegara systemowego Wejście:BX=3
+AX= wartość odpowiadająca częstotliwości Wyjście:   brak
+Opis:      Używając tej funkcji informujemy sterownik o częstotliwości, na jaką powinien ustawić Timer O po zakończeniu odtwarzania. Welkość przekazywana w rejestrze AX wyliczyć można ze wzoru:
+w = l i 931801 częstotliwość U/Hz l
+Jeśli program nie wywoła tej funkcji lub wywoła z parametrem AX=FFFFh, Timer O pozostanie ustawiony na częstotliwość około 18.2 Hz-
+Funkcja 4: Ustawienie częstotliwości zegara SBFM
+Wejście:   BX=4
+AX= wartość odpowiadająca częstotliwości Wyjście:   brak
+Opis:      Działanie funkcji polega na ustawieniu częstotliwości, na jaką sterownik powinien przeprogramować Timer O na czas odtwarzania dźwięku. Sposób wyliczania wartości przekazywanej w AX jest laki sam jak dla funkcji poprzedniej:
+w = H93I80/częstotliivość [1/Hzf
+Częstotliwością domyślną jest 96 Hz. Właściwą dla danego utworu częstotliwość przechowuje szesnastobito-we słowo o przesunięciu OCh względem początku pliku. Częstotliwość Timera O decyduje o szybkości odtwarzania muzyki. Łatwo więc przez jej zmianę wpływać na tempo gry.
+Funkcja 5: Transpozycja utworu
+Wejście:  BX=5
+AX= parametr transpozycji Wyjście:   brak
+61
+OBSŁUGA PLIKÓW CMF
+
+Opis:      Działanie funkcji polega na zmianie tonacji utworu. Parametr przekazywany w AX wyrażony jest w półtonach.
+Funkcja 6: Odtworzenie utworu Wejście:BX=G
+DX:AX= adres bloku muzycznego
+Wyjście:   AX= wynik:
+O - wykonanie bezbłędne l - błąd, inny utwór jest wciąż aktywny
+Opis:     Wywołanie funkcji rozpoczyna odtwarzanie utworu muzycznego opisanego w bloku muzycznym. Para rejestrów DX:AX określa jego położenie. Wyliczyć j^ możemy korzystając z wartości przechowywanej w nagłówku pliku CMF (przesunięcie 08h względem początku). W wyniku działania funkcji sterownik ustawia wartość zmiennej statusowej na FFh. częstotliwość Timera O na zdefiniowaną przy użyciu funkcji 4, przejmuje obsługę przerwania 8h i rozpoczyna grę. Odbywa się ona "w tle".
+Funkcja 7: Zakończenie odtwarzania muzyki
+Wejście:BX=7
+Wyjście:   AX=0 - bezbłędnie
+AX=1 - żaden utwór nie był odtwarzany
+Opis:     Funkcja kończy odtwarzanie utworu muzycznego, zeruje zmienną statusową i programuje częstotliwość zegara Timer O na 18.2 Hz lub na ustawioną z użyciem funkcji 3.
+Funkcja 8: Reset sterownika SBFM
+Wejście:   BX=8 Wyjście:   AX=0 - bezbłędnie
+AX=1 błąd, sterownik odtwarza muzykę
+Opis:     Po wywołaniu tej funkcji sterownik wyłącza układy FM i ustawia domyślną (wewnętrzną) tabelę instrumentów. Jeśli sterownik odtwarza utwór muzyczny, należy
+ROZDZIAŁ 3
+
+wpierw wywołać funkcję 7. Wykonanie funkcji reinicjali-zacji sterownika jest konieczne przed zakończeniem pracy naszego programu.
+Funkcja 9: Chwilowe zatrzymanie odtwarzania Wejście:BX=9
+Wyjście:   AX= wynik
+O - przebieg bezbłędny l - błąd, żaden utwór nie był odtwarzany
+Opis:      Zatrzymanie odtwarzania. Funkcja nie modyfikuje wartości zmiennej statusowej. Odtwarzanie muzyki jest kontynuowane po wywołaniu funkcji l O i kończone w wyniku działania funkcji 7.
+Funkcja 10: Kontynuacja odtwarzania
+Wejście:
+Wyjście:
+Opis:
+BX=10
+AX=0 - bez błędów AX=1 - muzyka nie była zatrzymana
+Funkcja służy do wznowienia odtwarzania utworu zatrzymanego funkcją 9.
+Pułapki użytkownika dla Exclusive Commands
+
+Wejście:
+Wyjście:
+Opis:
+BX=11
+DX:AX== adres procedury pułapki
+brak
+Używając tej funkcji wskazujemy procedurę, którą sterownik wywoła wykorzystując assemblerową komendę CALL (międzysegmentową) w chwili, gdy w błoku muzycznym napotka na pole System Exclusive Command. Zdefiniowana przez nas procedura musi się kończyć komendą RETF. Musi też zachowywać wartości wszystkich rejestrów. Przekazywany do niej przez sterownik parametr to adres następnego po S.E.Command bajtu (w parze rejestrów ES:DI). Wyłączenie pułapki użytkownika jest konieczne przed zakończeniem działania na-
+63
+OBSŁUGA PLfKOW CMF
+
+szego programu. Dokonać tego możemy zerując przed wywołaniem lej funkcji rejestry AX i DX.
+ZASADY KORZYSTANIA Z FUNKCJI
+Istnieje kilka zasad, których powinniśmy się trzymać programując z wykorzystaniem rezydentnego sterownika SBFM. Najprościej będzie, gdy zaprezentuję uproszczony algorytm, wg którego działać powinien program odtwarzający muzykę zapisaną w formacie CMF:
+1. Odszukanie przerwania obsługiwanego przez sterownik. Podczas wykonywania tej procedury okazać się może, że żadne z przerwań nie jest wykorzystane przez SBFM - wtedy nasz program powinien kończyć działanie z odpowiednim komunikatem.
+2. Otwarcie pliku do odtworzenia, sprawdzenie jego rozmiaru, al-lokacja niezbędnego obszaru pamięci operacyjnej, wczytanie zawartości pliku i jego zamknięcie. Przed wczytaniem warto sprawdzić, czy pierwsze 4 bajty pliku układają się w ciąg "CTMF" (gdy nie, plik nie jest zapisany w formacie CMF).
+3. Wywołanie funkcji reinicjalizacji sterownika (nr 8).
+4. Wskazanie położenia zmiennej statusowej (funkcja 1).
+5. Odczytanie żądanej częstotliwości zegara systemowego na czas odtwarzania z odpowiedniego pola nagłówka pliku i ustawienie jej z użyciem funkcji 4.
+6. Wskazanie sterownikowi położenia tabeli zawierającej definicję instrumentów (jej lokalizację względem początku pliku CMF odczytamy z nagłówka).
+7. Obliczenie położenia początku bloku muzycznego (przesunięcie względem początku pliku odczytamy z nagłówka).
+8. Wywołanie funkcji odtwarzania muzyki (nr 6).
+9. Oczekiwanie na zakończenie odtwarzania muzyki (sterownik wyzeruje wtedy zmienną statusową). Podczas odtwarzania program może wykonywać inne czynności. Odtwarzanie możemy zatrzymywać i wznawiać przy użyciu funkcji 9 i 10 oraz zakończyć używając funkcji nr 7.
+10. Wywołanie funkcji reinicjalizacji sterownika oraz zwolnienie pamięci zajmowanej przez plik CMF.
+ROZDZIAŁ 3
+BIBLIOTEKA CMF.TPL
+W rozdziale tym zaprezentuję tekst źródłowy gotowej do użycia biblioteki CMF. udostępniającej kilka podstawowych procedur obsługi plików zapisanych w formacie Creative Musie File. Teksi biblioteki i kompilat znajduje się także na dołączonej do książki dyskietce.
+Podobnie jak we przedstawionej wcześniej bibliotece VOC.TPU, zacząłem od definicji typu wyliczeniowego opisującego możliwe błę-dy.
+untCMF;
+interface
+type CMoz!iweBledy=[COk,
+CMaloPamieci,
+CBIadZwalniama,
+CNieInstalowany,
+CBrakPIikuCMF,
+CZłyNaglowek,
+CZaDuzoInstr
+CAkCywnyLJtwor,
+CNieGral,
+CNieByloPauzy);
+Następnie zadeklarowałem kilka zmiennych: CMFSlatus, którą przeznaczyłem na bajt statusowy i którą wskażemy sterownikowi, CMF_blad typu CMozliweBledy przechowującą wartość odpowiadającą błędowi oraz CSBFMZainstalowany, której nadamy wartość True w przypadku, gdy w pamięci operacyjnej znajduje się kod sterownika SBFM.
+var
+CMFStatus:byte;
+CMF^blad:CMozliweBtedy;
+CSBFMZainstalowany: boolesn;
+Dalej następuje lista procedur i funkcji;
+procedurę Cinic|alizu|SBFI\/1:
+functian CNumerWersJfSBFM'wor'd;
+procedurę CUstawBajtStatusowySBFM;
+function CZaladujPlikCMF[spec:string3:pointer;
+procedurę CLJstawlnst:rumenty[sC3rt:;painCer);
+procedurę CNastawZegarSBFM[czest;wordJ;
+procedurę CTranspozycjaUtworu(polt:word);
+procedurę CZagr'ajCMF[g:pointeri;
+procedurę CZakonczCMF;
+65
+OBSŁUGA PLIKÓW CMF
+
+procedurę CReseOJ)SBFM, procedurę CPauzaCMF;
+procedurę CWznowCMF;
+procedurę CZwolnijPamiecCMFtg pointer);
+function CTytulCMF[g:poinCer):st:nng;
+funccion CKompozytorCMF[g:poinCert:st;nng:
+function CKomentarzCMF[g:pointer].string:
+function COpisBledu:stnng;
+implementation uses dos;
+W części implementacyjnej biblioteki umieściłem definicję typu rekordowego składającego się z pól odpowiadających kolejnym polom nagłówka pliku zapisanego w formacie CMF. W zmiennej lnt_CMF przechowamy numer przerwania, pod które "podczepił" się sterownik.
+Cype Naglowek=record
+ldenCyf]kator:arr8yt0..3] ofchar;
+Wersja :ward;
+PolozJnstr :word;
+Połóż Muz    :word;
+Cwiercnuta :ward;
+Czestotliwosc.word;
+Połóż Tytułu :word;
+Poloz_Kompoz :word;
+Poloz_Koment :word;
+Tab_kanalow :array[0.,15] of chan;
+InsCrumentow :word;
+Podst_Tempa :word;
+end;
+lnt_CMF'byte;
+CStaraProcWyjscia;pointer;
+funcCiori lstnieje[Plik:string]:boolean;
+var
+f:file;
+begin
+assign[f,Plik);
+{$1}
+reseCCf);
+closeCf];
+{$!+}
+ROZDZIAŁ 3
+end;
+procedurę Zarezerwuj pamiectvar gdzie:poincer;ile:longint);
+var
+r:regisCers:
+ilosc-word;
+begin
+ilosc:=(i)e+15]shr4;
+rah:=$48:
+rbx:=ilosc,
+MsDosEr);
+if tr,bx<>ilosc) then CMF_blad:=CI\/laloPamiecl
+else    begin
+CMF_bl6d:=COk;
+gdzie:=pt:r[r.ax,G) end end;
+procedurę Zwolnij_pamiactgdziB:poinCer];
+var rregisters;
+begin
+nah:=a49;
+nes^segtgdzie^);
+msdos(r);
+if (nax=7)oKrax=9) then CMF_b!ad:=CBiadZwalniania end;
+Procedura CInicjalizujSBFM spełnia kluczową rolę - odnajduje przerwanie, którego obsługę przejął sterownik i reinicjalizuje go oraz modyfikuje wartości zmiennych CSBFMZainstalowany oraz CMF_blad.
+procedurę ClnicjalizujSBFM;
+function Jest_sygnatura[p:point:er):boolean;
+typeSign=arrayt0..41 ofchar;
+const Znak:Sign='FMDRV';
+begin
+Jest_sygnatura:=[Sign[p^)=Znald end,
+var
+begin
+67
+OBSŁUGA PLIKÓW CMF
+
+CSBFMZainstalowany: =false;
+prze rwanie: =$7F;
+repeat
+inctprzerwanie);
+getintyectprze rwanie,wskaźniki;
+wskaznik:==pC^'^segtwskaznil^/\),$103);
+unci!
+[Jest sygnatura[wskaznik]]or[przBrwanie=$CO),
+if Jest^sygnaturaCwskaznikJ
+then
+l^t_CMF::;=p^zerwanie else
+CMF^blad:=CNielnstalowany;
+if przerwanie^ICO then exit;
+CSBFMZainstalowany: =t:rue;
+rej.bx:=B;
+intr[lnt_CMF,rei);
+If rej. ax<>0 then begin
+CMF_blad;==CAktywnyUtwor;
+exit end
+else CMF blad:=COk
+end;
+Dalej następują definicje: funkcji zwracającej daną typu Word opisującą numer wersji sterownika i procedury CUstawBajtStatusowySB-FM wskazującej sterownikowi adres zmiennej CMFStatus.
+function CNumerWersJiSBFM:word;
+vap rej:register's;
+begin
+rej.bx:=0,
+intrCInt^CMP.rej);
+CNumerWersjiSBFM:=rei.ax end;
+procedurę CUstawBaJtStatusowySBFM;
+yar rej:register-s;
+begin
+re).bx:=1;
+rel.dx:=seg[CMFSCatusl;
+rej.ax:=ofs(CMFScatus):
+incr[lnt_CMF,re|) end;
+ROZDZIAŁ 3
+Funkcja ładowania pliku allokuje odpowiedni obszar pamięci operacyjnej, sprawdza, czy nagłówek pliku rozpoczyna się od ciągu "CTMF" oraz ładuje jego zawartość do zarezerwowanego obszaru i zwraca wskazanie na jego początek.
+function CZaladuJPIikCMF[spec,str'ing3:poinCer:
+var
+f:file, rozmiar^phku, bloków, wynik:word:
+wsk,mie)sce:point:er, ident:stnng[4]:
+begin
+if not(lstme|e(5pec)] then begin
+CMF_blad;=CBrakP!ikuCMF;
+exit end;
+assigntf.spec);
+resECtf,1!];
+idenria];=^4:
+blockreadtf,ident[13,4):
+seektf.O];
+ifident<>'CTMF' Chen begin
+closetfl;
+CMF_Blad:=CZIyNaglowek;
+exit end:
+rozmiarJ3liku:=filesize(f);
+Zarezerwuj_pamiecEwsk,rozmiar pliku);
+ifCMF_blad<>COkthen begin
+closetfł:
+exit end, blokow:=0;
+repeat miejsce: =Pt^[seg(w5k^)+blokow<>4a96,of5[wsk^)];
+blockread(f,miejsce^,$FFFF,wynik]:
+lnc(Blokow3 uncii wynik=0:
+ciosek;
+CZaladuJPIikCMF:=wsk;
+CMF_blad:-COk end;
+Procedura CUstawInstrumenty wymaga jednego parametru - wskazania na początek nagłówka pliku. Jej działanie polega na spraw-
+OBSŁUGA PLIKÓW CMF
+69
+dzeniu, czy ilość instrumentów zadeklarowana w bloku nagłówka pliku nie przekracza 128 i jeśli ten warunek zostanie spełniony, wywołaniu funkcji 2 sterownika z odpowiednimi parametrami.
+Z kolei procedura CNastawZegarSBFM służy do określania, jaką częstotliwość zegara Timer O ma ustalić na czas odtwarzania muzyki sterownik. Im częstotliwość większa, tym większe tempo odtwarzania. Procedura CTranspozycjaUtworu umożliwia zmianę tonacji utworu zgodnie z parametrem.
+procedurę CUstawInsCrumentytsCartipoincer);
+var
+rej.registers;
+begin
+if Nag!owek[start^).lnst;rumentow>1 28
+then begin
+CMF_9lsd:=CZaDuzolnstr;
+exic end;
+rej.bx:=2:
+rej. CK^NaglowekCstart;^), Instrumentów;
+rej.dK^segCEtart^l;
+rej. ax:=ofs(start/\)+ Naglowektstart '\ 3, PolozJnstr;
+intr[lnt_CMF,rej) end;
+procedurę CNastawZegarSBFM[czest:word);
+var
+rej:registers;
+begin
+r'ej.bx:=4;
+rei.ax:=1ia31BQdiv czest;
+intr[lnt_CMF,rejl end;
+procedurę CTranspozycjaUtworutpolt;word);
+var
+rej':registers;
+begin
+ref.bx;=5;
+re).bx:=polt:;
+inCrEfnt_CMF,rej) end:
+Procedura CZagrajCMF rozpoczyna odtwarzanie wskazywanego przez wartość parametru g pliku. Wpierw informuje sterownik, na
+ROZDZIAŁ 3
+jaką częstotliwość ustawić powinien zegar systemowy, potem wskazuje mu tablicę instrumentów, na koniec wywołuje funkcję odtwarzania (nr 6).
+procedurę CZagr8|CMFCg:pointer);
+var
+rej:registers;
+begin
+CNastawZegarSBFM[IMaglowek(g^l. Częstotliwość);
+CUstawhstrumentytg),
+ifCMF_blad<>COkthen exit;
+rej,bx;=6:
+rej.d^segtg'"1);
+rej. ax: =ofs[g/1 ] + Nagtowektg ^). Poloz_muz;
+intr'tlnt_CMF,rej);
+if rej,ax<>0 chen CMF_blad:=CAktywnyUtwor end;
+Zdefiniowane dalej procedury CZakonczCMF, CResetujSBFM, CPau-zaCMF. CWznowCMF, CZwolnijPamiecCMF służą do sterowania pracą sterownika oraz do zwalniania pamięci zajmowanej przez plik.
+procedurę CZakonczCMF:
+var
+rej:registers:
+begin
+rej.bx:=7;
+intr(lnt_CMF,rej];
+if rej.ax<>D Chen CMF_blad:=CNieGral end;
+procedurę CResetujSBFM;
+var
+re|:regiscers;
+begin
+i re|'.bx:=B;
+incrElnC_CMF,rej);
+if re).ax<>0 then CMF_blad:=CAktywnyUtwor elseCMF blad:=COk
+end:
+procedurę CPauzaCMF;
+v8r
+rej:registers;
+begin
+reJ^^S;
+mtr[lnC_CMF,pej);
+ifrej.ax<>OchenCMF blad:=CNieGral
+71
+OBSŁUGA PLIKÓW CMF
+
+elseCMF blad^COk
+end;
+procedurę CWznowCMF:
+var
+rej^registers;
+begin
+rej.bx:=10;
+intrtlnt_CMF.re)];
+if rej.ax<>0 then CMF_blad:=CNieGrai
+efseCMF_blad:=COk end:
+procedurę CZwolniJPamiecCMFtg:pointer];
+begin
+Zwolnij_pamiectg) end;
+Budowa trzech zdefiniowanych poniżej funkcji jest podobna - działanie wszystkich polega na odnajdowaniu (na podstawie wartości przechowywanych w bloku nagłówka pliku) danych dotyczących tytutu i kompozytora utworu oraz uwag jego dotyczących.
+function CTytulCMF[g'pointer):string;
+var
+rob:string;
+iicz:byte:
+pol_t_s,pol t a:word;
+begin rob:=";
+^fNaglowek[g/\).Po!oz_tytulu>0 Chen begin
+po!_t_s;=segEg^];
+po!_t_o:=ofstg/^);
+poi t_o:=pol t o+Nagiowektg^l.PolozJiytulu;
+liczbo;
+repeat rób: ^rob+chKMemEpol^s:?^^^^-licz]];
+inctlicz)
+until
+chr(Mem[pol_c_s:polJ_o+licz]]=#0 end;
+CTytu!CMF;=rob
+end;
+funccion CKompozytorCMF[g:poincer):stnng;
+var
+rob:string;
+ROZDZIAŁ 3
+licz:byte;
+pol_k_s,pol_k_o:word:
+begin rob:=",
+if Naglowektg^). Połóż kompoz>Q Chen begin
+polJ^s^segCg"];
+pol_k_o:=ofs[g^);
+po^kJa^pol^o+Naglowektg^J.Poloz^kompoz;
+iicz;=a;
+repeat rób: = rób+chr[Mem[pol^k_s:pol_k_o+licz]);
+incUicz] until
+chr[Mem[pol k^s:pol_k_o+licz])=^0 end;
+CKompazytorCMF:^r'ob end.
+function CKomentarzCMF[g:pointer):string;
+var
+rob:string;
+licz:byte;
+pol_k_s,po!_k_o:wor'd;
+begin rob:=";
+if Naglowektg ^ l. Po!oz_koment>0 then begin
+pol_k_s;=seg(g^];
+pol_k_o:=ofs[g/^);
+P^KJ^P0^^^^0^^^'^0!0^0^1^' licz:=0;
+repeat rób; =rob+chr[Mem[pol_k_s:pol^o^ licz]];
+incdicz] until
+chriMemtpol k_s:pol_k_o+licz]]=^0 end;
+CKomentarzCMF^^rob end;
+Funkcja COpisBIedu zwraca ciąg znakowy opisujący błąd, jaki wy stąpił. Procedura_wyjscia_CMF to procedura, którą "podczepiamy' pod łańcuch procedur wyjścia naszego programu.
+funcCion COpi5BlEdu:string;
+begin caseCMF_bladof
+73
+OBSŁUGA PLIKÓW CMF
+
+COk
+:CopisBledu:='Ok ;
+CMaloPamieci
+CopisBledu:='Blad allokacji pamięci':
+CBIadZwalniania
+:CopisBledu;='Btad zwalniania pamięci', CNieInstalowany
+.CopisBledu:='Brak sterownika SBFM':
+CBrakPIikuCMF
+:CopisBledu:='Brak wskazanego pliku';
+CZłyNaglowek
+CopisBledu:='Zty nagłówek pliku';
+CZaDuzoInstr
+:CopisBledu.='Za dużo Irscrumentów';
+CAktywnyLJtwor
+:CopisB!edu:='SBFM odtwarza utwór', CNieGral
+:CopisBledu:='Ucwór nie jest odtwarzany';
+CNieByloPauzy
+CopisBledu:='Ucwór nie byt zatrzymany' end end,
+{$F-} procedurę Procedur'a^wyiscia_CMF,
+begin
+if CSBFMZainstalowany Chen begin
+CZakonczCMF;
+CResetujSBFM end;
+ExiCProc:=CStar'aProcWy!scia end;
+{$F-}
+begin
+CStaraProcWyjscia:=ExitProc;
+ExitProc:=@Procedura_wyjscia_CMF;
+ClnicjalizuiSBFM;
+CMFStatus:=0;
+ifCMF_blad=COkthen
+CUsCawBajtStaCusowySBFM end,
+3.4 PRZYKŁADY
+Na koniec chciałbym przedstawić przykładowy program wykorzystujący przedstawioną w poprzednim rozdziale bibliotekę. Działanie
+ROZDZIAŁ 3
+programu polega na odtwarzaniu wskazanego przy wywołaniu pliku CMF. Podczas odtwarzania możliwe Jest zatrzymanie/wznowienie gry. Program, przed rozpoczęciem odtwarzania, wyświetla na ekranie odczytane z pliku: tytuł utworu, nazwisko kompozytora i komentarze. program GrajCMF:
+{$M 15000,0,50000} uses cmf.crt;
+procedurę Jesli_b!ad_to_koniec;
+begin
+ifCMFJiladoCOk then begin
+writeCBLĄD: i;
+wriceIntCOpisBIedu);
+halt end end;
+var Muzyka:pointer;
+Pauza:boolean;
+ch:char:
+begin
+if paramcount<1 then begin
+writeInCLJżycie: GRAJCMF plik'];
+writelnC plik-plik w formacie CMF'];
+hatt
+end;
+Jesli_blad_toJ(omec;
+Muzyka:=C2aladuiPiikCMF(parBmstr(1l];
+Jesli_blad_CoJ(oniec, Pauza: =false;
+writeln['Tytuł : ',CTyt:ulCMF[Muzyka]]:
+wntelnC Kompozytor: '.CKompozytorCMFtMuzyka)):
+writeInCUwagi : '.CKomenCarzCMFCMuzyka]];
+writein;
+writeInfOdtwarzam...'];
+writeInCSPACJA- Pauza/Kontynuacja ESC - Koniec');
+white keypressed do ch:=readkey;
+CZagrajCMF[Muzyka);
+Jesli_blad_CG_koniec;
+repeat ch:=#0;
+75
+OBSŁUGA PUKÓW CMF
+
+i keypressed then ch: =readkey;
+ifch=#32then
+case Pauza of false begin
+CPauzaCMF;
+Pauza: =l;rue end;
+Crue: begin
+CWznowCMF;
+i'auza:=false
+end
+end;
+untii (CMFStatus=01ortch=#27);
+if ch=#27 Chen CZakonczCMF;
+CZwolnijPamiecCMFtMuzykal
+end.
+Drugi przykład to program odtwarzający muzykę z pliku włączonego do jego kodu na etapie konsolidacji. Taka metoda "udźwiękowiania" swoich programów jest, jak się wydaje, dosyć wygodna - nie musimy troszczyć się o obsługę błędów związanych z odczytem pliku i identyfikacją jego struktury. Ponadto, pliki zapisane w formacie CMF mają z reguły niewielką objętość - nie będzie więc zbytnią rozrzutnością (pamięć operacyjna O połączenie ich z kodem programu. program Muzyk;
+use5cmf,crt;
+{SLdoodle.obj} procedurę doodle; excernal;
+var ch:char;
+begin
+ifCMF_bladoCOkthen begin
+wriceln(COpisBledu);
+halt end;
+CZagrajCMF[@doodle);
+repeat
+untii [CMFStatus=u)or*tkeypressed):
+if keypressed then ch;=readkey;
+CZakonczCMF
+end.
+ROZDZIAŁ 3
+Prawdziwe pole do popisu autorom gier i programów rozrywkowych daje jednak dopiero możliwość jednoczesnego odtwarzania muzyki z plików CMF oraz próbek dźwiękowych zapisanych w formacie VOC. Poniżej przytaczam przykład prostego programu odtwarzającego muzykę i, po wykryciu wciśnięcia klawisza spacji, zawartość pliku STRZAL.VOC. program Mix;
+{$M 15000.0,50000} uses voc,cmf,crt;
+var
+muzyka:poincer, { wskazanie na początek pliku CMF }
+adglas:pointer: {wskazanie na VOC }
+ch:char;
+procedurę CzyBlad;
+begir
+ifVOC_blsd<>VClkchen
+begin
+wr(Celn[VOpisBledu);
+halt
+end;
+ifCMF_blad<>COkthen
+begin
+writeIntCOpisBIedu],
+halt
+end end;
+procedurę Wystrzał;
+begin
+VOdtworzVOC(Odgtos3:
+repeaC untii \/OCStatus=0 end;
+begin
+CzyBlad;
+VinicjujSterowniktO,0]: {wczytanie CT-VOICE } CzyBlad:
+VOdczytajPlikVOC[Odglos,'STRZALVOC')i CzyBlad;
+Muzyka:=CZaiadujPlikCMF('BADMAN.CMF'];
+CzyBtad;
+wricein;
+wnteInCSPACJA- Wystrzał, ESC-Koniec');
+OBSŁUGA PLIKÓW CMF
+
+rozpoczęcie odtwarzania muzyki
+wnteln.
+CZagrajCMFtMuzyka): { repeat cn:=#0;
+if keypressedthen ch:==readkey;
+ifch=#32then Wystrzał
+untii [CMFSCatus=0)orCch=#27]
+if ch=#27 then CZakonczCMF:
+CResetujSBFM;
+VZwolnijPamtec[Odglos];
+CZwolnijPamiecCMFtMuzyka]
+end.
+79
+PROGRAMOWANIE OSP
+ROZDZIAŁ 3
+
+4. PROGRAMOWANIE DSP
+Rozdział poświęcony Jest zagadnieniom związanym z programowaniem układu DSP. Mimo że dostarczane z kartą sterowniki zawierają procedury komunikacji z kartą, bezpośrednie programowanie układu DSP daje nam znacznie większe możliwości. Przede wszystkim jednak, sięgając "w głąb" karty nie jesteśmy już zmuszeni do korzystania z formatu VOC przy odtwarzaniu plików dźwiękowych oraz np. możemy zaprogramować własną obsługę złącza MIDI. Zresztą programowanie DSP nie jest wcale trudne - a o funkcjonalności tej metody oprogramowywania efektów dźwiękowych świadczyć może fakt, że relatywnie mało gier (czyt. prawie żadna) korzysta z firmowych sterowników.
+4.1 ZASADY OBSŁUGI DSP
+Z układem DSP komunikujemy się za pomocą czterech portów wejścia/wyjścia. Adres bazowy (względem którego liczymy adresy każdego z nich) jest ustawiany za pomocą zworek na karcie (jako 220h lub 240h dla karty Sound Blaster 2.0 i jako 210h, 220h, 230h, 240h. 250h, 260h dla kart w wersji l.x). Domyślna wartość tego adresu to 220h.
+ROZDZIAŁ 4
+Jeżeli x oznaczać będzie wartość wynikającą z wyboru użytkownika (2,4 lub 1,2,3,4,5,6), to adresy 4 portów DSP wynoszą:
+   port zerowania układu (wyjściowy): 2x6h
+   port odczytu danych (wejściowy): 2xAh
+port zapisu komendy DSP lub danej oraz odczytu statusu wejściowego (czy możliwy jest zapis) układu: 2xCh
+   port gotowości danych (wejściowy): 2xEh Dodatkowo do pełnej komunikacji z kartą we wszystkich trybach potrzebna jest znajomość numeru linii, na której zgłaszany jest koniec transmisji DMĄ oraz wykorzystywany na nią kanał. Numer używanej przez Sound Blaster linii ustawiamy dokonując zwarcia (rozwarcia) odpowiednich zworek na karcie. Domyślną wartością jest 7 (przerwanie IRQ7). Standardowo karla SB wykorzystuje do transmisji kanał l DMĄ.
+W zasadzie do pracy z kartą potrzebna Jest możliwość wykonania trzech podstawowych operacji: zerowania układu, zapisu danej (lub rozkazu), odczytu danej.
+Zerowanie DSP
+Zerowanie DSP należy przeprowadzić jednorazowo przed rozpoczęciem programowania karty. Proces zerowania polega na inicjaliza-cji układu oraz wprowadzeniu go w stan oczekiwania rozkazów. Oto algorytm, według jakiego działać powinna procedura zerująca DSP:
+1. Zapis bajlu o wartości l do portu zerowania (adres 2x6h).
+2. Oczekiwanie przez ok. 3 ms.
+3. Zapis bajlu o wartości O do portu zerowania (adres 2x6h).
+4. Powtarzane cyklicznie ok. 100 razy odczyty z portu odczytu danych (2xAh) i oczekiwanie, aż odebrany bajt będzie miał wartość OAAh.
+Jeżeli po upływie pewnego czasu (ok. 100 ms) układ DSP nie wyśle w odpowiedzi bajtu o wartości OAAh, zerowanie uznać można za nie udane.
+Zapis do DSP
+Możliwość wysłania danej lub komendy do układu DSP jest niezbędna przy jego programowaniu. Do zapisu jest używany port 2xCh. Przed próbą wpisu musimy jednak sprawdzić, czy DSP jest gotów do odebrania danych - w tym celu badamy stan najbardziej znaczą-
+81
+PROGRAMOWANIE DSP
+
+cego bitu z bajtu odczytanego z tego samego portu. Jeśli będzie on wyzerowany, możemy wysłać komendę (daną). Procedura wpisu powinna wyglądać następująco:
+l- Odczyt bajtu statusowego z portu 2xCh.
+2. Jeśli najbardziej znaczący bit odczytanego bajtu jest ustawiony, powrót do poprzedniego punktu.
+3. Zapis danej lub komendy do portu 2xCh.
+Odczyt z DSP
+Odczyt bajtu z DSP realizujemy korzystając z portu 2xAh. Bezpośrednio przed odczytem należy sprawdzić, czy jest ustawiony najstarszy bit bajlu odczytanego z portu gotowości danych (2xEh). Algorytm, wg którego powinna działać procedura odczytu z DSP, wygląda następująco:
+1. Odczyt bajtu z portu gotowości danych (2xEh).
+2. Jeśli najstarszy bil odczytanego bajtu jest wyzerowany, powrót do poprzedniego punktu.
+3. Odczyt danej z portu 2xAh.
+Obsługa przerwania DSP
+Układ DSP generuje przerwanie sprzętowe (numer ustawiamy przy instalacji karty, domyślnie IRQ 7) przy realizacji:
+   zapisu dźwięku z przetwornika A/C w trybie DMĄ
+   odczytu dźwięku z przetwornika C/A w trybie DMĄ
+   odczytu danych ze złącza MIDI w trybie przerwań Podczas tworzenia procedury obsługi tego przerwania należy pamiętać o kilku rzeczach:
+   Przyjęcie przerwania należy potwierdzić (tzn. poinformować DSP, że przejęliśmy jego obsługę). Realizujemy to odczytując jednorazowo daną jednobajtową z portu gotowości danych (2xEh). Wartość odczytanego bajtu nie jest istotna.
+   Po potwierdzeniu przerwania, w przypadku, kiedy procedura powinna odebrać daną bajtową (odczyt MIDI w trybie przerwań), odczytujemy ją z portu 2xAh.
+   Procedura obsługi przerwania powinna kończyć się wysłaniem sygnału końca (End Of Interrupt) do układu kontrolera przerwań 8259. Realizujemy to wysyłając bajt o wartości 20h do portu 20h.
+ROZDZIAŁ 4
+4.2 TRYB BEZPOŚREDNI
+Wymiana danych z układem DSP może odbywać się w dwóch trybach: bezpośrednim i DMĄ. Programowanie odtwarzania (zapisu) dźwięku w trybie bezpośrednim jest bardzo proste, ale nie pozbawione wad. Na czym polega? Otóż w trybie bezpośrednim o odbiór i zapis wszystkich danych z i do układu DSP troszczyć się musi nasz program. Oznacza to, że w obu przypadkach jesteśmy zmuszeni do ciągłego, cyklicznie i w równym tempie wykonywanego wysyłania lub odbioru danych. Dobrym rozwiązaniem (jeśli chodzi o zachowanie równej na różnych komputerach prędkości) jest zaprzęgnięcie do pracy obsługi przerwania zegarowego. Jakkolwiek byśmy jednak nie postąpili, w trybie bezpośrednim ciągła komunikacja z kartą Sound Blaster oznaczać może spowolnienie działania programu. Poza tym w trybie bezpośrednim nie jest możliwe odtwarzanie danych skompresowanych.
+Do komunikacji z DSP najlepiej przygotować sobie zestaw najbardziej podstawowych procedur. Poniżej przedstawiam tekst biblioteki przygotowanej dla kompilatorów Turbo Pascal. Zawarte w niej funkcje/procedury umożliwiają zerowanie DSP, wysłanie i odczyt danej z DSP, włączenie i wyłączenie układu DAĆ oraz odczyt i zapis bajlu do konwertera DAĆ. Deklarowane w bibliotece zmienne globalne są modyfikowane w części wykonawczej modułu. W części wykonawczej Czytelnik może też zauważyć pętlę Repeat-UntiI. Ta część kodu biblioteki będzie odpowiedzialna za wykrycie obecności karty dźwiękowej i odpowienią modyfikację wartości zmiennej BaseAddr. Wykrycie Sound Blasler'a jest tu realizowane przez powtarzaną, za każdym razem dla innego adresu bazowego, próbę zerowania układu DSP. Dla adresu prawidłowego próba powinna się powieść i można przyjąć obecność karty. W przypadku, jeśli badany adres przekroczy 260h uznajemy, że karta nie jest zainstalowana w systemie i zmiennej SBInstalled nadajemy wartość False.
+unit DSPDir;
+{ biblioteka procedur/funkcji bezpośredniego dostępu } { do uktadu DSP kart SB -tryb Direct}
+interface
+vsr
+BaseAddrword; { adres portu bazowego } ResetPort,ReadDataPort,WriteDataPort, WriceStatusPorC.DataAYailPorfword;
+PROGRAMOWANIE DSP
+SBInsCalled:bodean, {czySB ;esc zainstalowany}
+funccion aSPReset:boolean;
+funccion DSPRead:byte;
+procedurę DSPWnte[n:byte);
+funccion ADCByte:byte;
+procedurę DACByte(n:byte);
+procedurę TumDACOn;
+procedurę TumDACOff;
+implementation {część implementacyjna}
+{resec układu DSP} { odczyt ba|Cu z DSP } {zapis danej/rozkazu} {odczyt bajtu z ADC} { zapis do DAĆ } {włącznie DAĆ} {wyłączenie DAĆ}
+
+funccion DSPReset:boole3n;
+van:byte;
+begin
+{uwaga ; w procedura nie korzysta ze zmiennych } {opisujących adresy poszczególnych portów DSP,} { ponieważ nie mają one jeszcze ustalonej wartości} porttBaseAddr+$5l:=1;
+for i: =3 downco O do; { opóźnienie} porttBaseAddr+$61:=0;
+repeat incCi] until(port[BaseAddr+$E]and12B = 12B3ar(i"100);
+ifi=1DOthenDSPReset:=false
+else DSPReset:=[portEBaseAddr+$A3=$AA) {funkcja zwraca wartość TRUE gdy zerowanie OSP} {przebiegło pomyślnie} end;
+function DSPRead:byte;
+begin
+repeat
+untii tport[DataAvailPort] and 128 = 128);
+DSPRead: =port[ReadDataPort] end;
+procedurę DSPWritetn;byte];
+begin
+repeat
+untii (popttWriteStatusPort] and 128 = 03;
+port[WriteDataPort]:=n end;
+function ADCByte:byte;
+begin
+repeat
+ROZDZIAŁ 4
+PROGRAMOWANIE DSP
+85
+
+
+uncil [port[Wrn:eScatusPort] snd 128 = 0);
+port[WnteDataPort]:=$20:
+repeac:
+unt-i! [port[DataAvailPort] and 128 = 128];
+ADCByte: ^portIReadDataPortl
+end,
+procedurę DACByte[n:byte);
+begin
+repeat;
+uncil tporttWnteStatusPort] and 128 = 0];
+port[WriteDataPcrt]:=$10,
+repeat
+untii [pordWnteStatusPcrt] ard 128 = 0];
+port[WnteDataPort];=n end;
+procedurę TurnDACOn;
+begin
+repeat untii [porcEWnteSCatJsPort] and 128 = 03:
+porctWriteDataPortl: =$01 end;
+procedurę TurnDACOff;
+begin
+repeat
+uncil (porttWriteStatusPortl and 126 = O],
+port[Writ;eDataPortl;=$D3 end,
+begin
+{wpierw odszukamy SB próbując zerować DSP przez }
+{porty 2x0h}
+BaseAddr:=$20D;
+repeaC
+inc(BaseAddr,$103;
+untii [Ba5eAdd^=$2B01o^EQSPI:leset:]:
+if BaseAddr=$280 then SBInstalled: =false elseSBInstalled:=true;
+{teraz następuje nadanie odpowiednich wartości}
+{ kolejnym zmiennym }
+ResetPort:=BaseAddr+$6;
+ReadDataPort:=BaseAddr+$A;
+WriteDataPort;=BaseAddr+$C;
+WriteStatusPor't:=BaseAddr+$C;
+DacaAvailPort:=BaseAddr+$E end, {koniec}
+Wykorzystanie biblioteki jest bardzo proste. Poniżej przedstawiam przykładowy program pozwalający zorientować się w zasadach używania zawartych w niej funkcji. Program jest bardzo prosty, ale ilustruje metodę uzyskiwania obrazów fali podawanej na wejście mikrofonowe. Działanie programu jest zbliżone do działania oscyloskopu - na ekranie obserwujemy przebieg fali w pewnym stałym okresie. Rysunek jest cyklicznie uaktualniany z szybkością wynikającą z możliwości komputera i szybkości układu DSP (w chwili, gdy prędkość wykonywania poszczególnych operacji jest odpowiedni wysoka, "wąskim gardłem" staje się tempo odczytu z DSP). Program działa w trybie graficznym 13h kart VGA (320x200, bajt na punkt). program Oscyloskop;
+uses DSPDir.crt:
+const
+var
+ScreenBase;word=$AOOO;
+x:word;
+ch:char;
+procedurę Set320x200Mode;
+{ ustaw tryb ekranowy VGA 13h } assembler;
+asm
+end;
+movax,$0013 int$10
+procedurę DrawLine[x:word;n:byte);
+{ narysowanie "słupka" ilustrującego chwilowy poziom } { sygnału podawanego z wejścia mikrofonowego } var y:byte;
+begin
+y:=100+t(n-127) div2]; { obliczmy współrzędna }
+MemtScr-eenBase^D^y+Kl: =10 end,
+procedurę Clear;
+{wyczyszczenie roboczej części ekranu}
+begin
+FillChartMem[ScreenBase:11200],41600,03 end;
+
+ROZDZIAŁ 4
+begn
+Direct:Video:=false,
+{ znaki stawiamy korzystając z usfug systemowych }
+ifnotSBInstałled then
+begin
+wnteInCBrak karty Sound Blaster');
+haft end, TurnDACOff;
+{wyłączenie DAĆ} Sec320x200Mode;
+CexCcolorCLight:Red);
+write['OSCYLOSKOP']:
+gotoxy(1,24];
+wriCeCEsc-koniec'];
+x:-0;
+repeat ifx<319then incbdelse
+begin
+clear:
+x:=0
+end;
+DrawLine[x,ADCByte);
+untii keypressed;
+{ powtarzaj, dopóki ktoś nie wciśnie klawisza } if keypressed Chen ch:=readkey;
+textmode(lsst:mode)
+end.
+Wspomniałem, że w celu zapewnienia równomiernej w czasie prędkości przesyłania danych, wykorzystać możemy przerwanie zegarowe. Otóż w komputerach PC znajduje się układ 8253 lub 8254 o trzech kanałach wyjściowych:
+   Kanał O - używany do zliczania czasu. Podczas startu komputera procedury zawarte w BIOS programują układ zegarowy, tak by wysyłał tym kanałem sygnał 18.2 razy w ciągu każdej sekundy.
+  Kanał l - używany przy odświeżaniu RAM,
+   Kanał 2 - używany przy kontroli głośniczka komputera. Dla nas najistotniejszy jest kanał O, gdyż jest on bezpośrednio sprzężony z wejściem kontrolera przerwań, który, każdorazowo po pojawieniu się sygnału, wywołuje przerwanie 8h. Okazuje się. że częstotliwość, z jaką 8253(4) powoduje przerwanie, można zmienić. Wystarczy bowiem zmodyfikować wartość 16-bitowego dzielnika czę-
+87
+PROGRAMOWANfE OSP
+
+stotliwości układu dla kanału 0. Wartość, którą standardowo inicja-lizowany jest dzielnik, wynosi FFFFh. Dlatego częstotliwość wyjściowa wynosi początkowo ok. 18 Hz (częst. wejściowa równa 1.19318 MHz podzielona przez 65535 daje 18.207 Hz).
+Do zaprogramowania generatora związanego z kanałem O potrzebne jest jeszcze kilka informacji. Myślę, że najprościej będzie, gdy przedstawię schemat, wg jakiego powinna działać procedura zmieniająca procedurę obsługi przerwania 8h i zmieniająca częstotliwość generatora 0:
+1. Zapamiętujemy wektor przerwania 8h.
+2. Zabraniamy wykonywania przerwania IRQO (ustawiamy bit O w bajcie odczytanym z portu 21h i tak zmienioną wartość wysyłamy z powrotem przez port 21h do kontrolera przerwań).
+3. Zmieniamy wektor 8h tak, by wskazywał na naszą procedurę.
+4. Do portu o adresie 43h (rejestr sterujący) wysyłamy rozkaz o kodzie 36h. Dla pełnej jasności podam znaczenie poszczególnych bitów rozkazu:
+bity 7-6 - wybór kanału (dla kanału O oba bity wyzerowane) bity 5-4 - rodzaj operacji, jaką ma wykonać układ (zapis lub odczyt obydwu bajtów dzielnika - oba bity ustawione)
+bily 3-1 - tryb pracy (tu trzeci: bity Oli) bit O   - sposób odliczania (dla zliczania w kodzie binarnym od FFFFh do O bit powinien być wyzerowany).
+5. Do portu 40h wysyłamy kolejno wpierw młodszy, później starszy bajt licznika. Wartość licznika wyliczyć możemy korzystając z zależności:
+L == 1193180 l częstotliwość
+6. Zezwalamy na wykonywanie przerwania IRQO (zerujemy bit O bajtu odczytanego z portu 21h i tak zmienioną wysyłamy z powrotem do kontrolera przerwań). Dla pełnej jasności przytoczę tekst źródłowy programu odtwarzającego wskazany parametrem plik dźwiękowy wykorzystując przerwanie 8h. Program jest bardzo prosty - nie rozpoznaje formatu odczytywanego pliku, a częstotliwość odtwarzania przyjęta została jako 8000 Hz. Rozmiar pliku, którego zawartość ma być odtworzona, ograniczona jest wielkością dostępnej pamięci operacyjnej.
+program PlayBIN,
+{SM 15000.0,50000}
+uses DSPDindos.crt;
+var
+Spec:string, { specyfikacja pliku z danymi} F-file;
+Segment,SegBuf,afsBuf,Blocks,Res:word:
+Counc,Len:longint;
+{licznik i zmienna przechowująca długość pliku } Old6h:painter;
+{ wskazanie na dawna procedurę obsługi przerwania } ch:char;
+{$F+}
+procedurę SendDneByte; {wysyła bajt do DAĆ }
+interrupt;
+begin
+ifCounC<=Lenthen
+{jeśli jeszcze nie cały plik } begin ifOfsBuf=$10then begin IncCSegBuf);
+OfsBuf:=0 end:
+DACByte(MemESegBuf:OfsBuf]);
+incECount);
+incEOfsBuf) end;
+port[$20]:=$20{EO!} end;
+{$F-}
+procedurę AllacateMem[parag:word);
+{aibkacja zadanej parametrem liczby paragrafów}
+assembler,
+as m
+movbx,parag
+movah,$48
+int$21
+cmp bx,parag
+je @koniec
+xorax,ax @koniec: movSegBuf,ax
+movOfsBuf,Q
+ROZDZIAŁ 4	PROGRAMOWANIE OSP
+end:
+procedurę FreeBuf;
+{ zwolnienie pamięci przydzielonej plikowi} assembler:
+as m
+movah,$49
+mov es,Segment:
+int21h end;
+procedurę SecIntrRoutme:
+{ zaprogramowanie Timer'a i ustawienie wektora 8h } begin
+getinCvec[$a,01d6h3;
+porHSSIh-port^l ] or $01;
+setintvect$8,@SendOneByte),
+port[$431i=$36;
+porc[$40];=lot1193180divBOOO);
+porc[$4ai:-hi[11931BOdivB0003;
+port;l$21]:=port;[$21]and$FE end;
+procedurę ScopPlaying;
+{ przeprogramowanie Timer'a i przywrócenie } { pierwotnej wartości wektorowi przerwania } begin
+port[$21]:=port[$21] or $01;
+portt$43]:=$36;
+port^O^O;
+port[$40];=0;
+setintvect$6,QldBh);
+por'c[$21l:=portt$21] and $FE end;
+begin
+ifnotSBInstaIlsdthen
+begin
+writeln['Sound Blaster nie zainstalowany!'];
+halt end;
+if paramcount^D then begin
+writefPlik, który mann odtworzyć : '];
+readIntSpec];
+ifSpec="then halt end slse Spec:=paramstr[1];
+ROZDZIAŁ 4
+355 ignIF; Spęd;
+{$!-}
+resettF),
+{$!+}
+iflOResultodthen
+begin
+writeirCBrak wskazanego pliku !'];
+hale
+end;
+reset[F,1];
+Len:=filesize[R;
+AtlocateMemCtLen+15] shr4);
+ifSegBuf=Ochen
+begin
+wriCeInCBtad allokacji pamięci!');
+halt
+end;
+Segment::=SegBuf;
+Blocks:=0;
+repeat eiockReadEF,Mem[SegBuf+BlockEMD96;OfsBuf],$FFFF.Res];
+inc(B!ocks3 untii Fles=0;
+close(F);
+TurnDacOn;
+SeCinCrRoutine;
+Count:=0;
+writeInCOdtwarzam (częstotliwość 8 kHz)...');
+repeat
+untii [Count=Len]or(keypressed);
+ifkeypressedthen ch:=readkey:
+StopPlaying;
+FreeBuf
+end,
+Na koniec przedstawię jeszcze jeden program. Jego zadanie to odtwarzanie zapisanego wcześniej dźwięku w ustalanym przez użytkownika tempie. Program jest bardzo prosty - szybkość jego działania zależy od prędkości komputera, na jakim go uruchomimy. Przy szybkiej maszynie może się więc okazać, że zakres zmian opóźnienia przy odtwarzaniu jest zbyt mały. Komunikacja z kartą odbywa się w trybie bezpośrednim (w programie korzystam z przedstawionej wcześniej biblioteki). Zasady zabawy są następujące: klawisze kursora - zmiana prędkości odtwarzania dźwięku, klawisz ESC -zakończenie pracy. Zapisu dźwięku dokonujemy przy wciśniętym klawiszu Shifl (w momencie zwolnienia klawisza program rozpocz-
+91
+PROGRAMOWANIE DSP
+
+nie wysyłanie kolejnych bajtów próbki do przetwornika cyfrowo-analogowego). Program nie jest bardzo użyteczny, ale jego samodzielna analiza z pewnością pomoże w zrozumieniu zasad programowania operacji zapisu (odtwarzania) dźwięku w trybie bezpośrednim DSP. {$tvn5oaG,o,5aoou}
+program Zabawa;
+uses
+var
+Councer,SegBuf,OfsBuf:Word;
+i,Mernory:Longint;
+j,Loop:Byte;
+ch:char;
+procedurę Allocat;eMem[parag:ward);
+{ allokacja zadanej parmetrem liczby paragrafów } assembler;
+as m
+mov bx,parag
+movah,$46
+int$21
+cmp bx,panag
+je ((c)koniec
+xor ax,ax <§>koniec: mov SegButax
+mov OfsBuf.O end;
+procedurę FreeBuf;
+{ zwolnienie przydzielonej pamięci} assembler:
+as m
+movah,$49
+moves,SegBuf
+int21h
+end;
+funcCion ShifcPressed:Boolean;
+{ wciśnięty klawisz Shift} begin
+ShiftPressed:=[Mem[0;$417] and 3] o O end;
+ROZDZIAŁ 4
+begin
+{ reset DSP - przy okazji sprawdzimy obecność SB } ifnotdspreset then
+begin
+wncetnCSB nie zainstalowany');
+hale {kamee gdy błąd resetu }
+end:
+Memory:=600DG; { wielkość bufora na zapis } AllocateMemtMemory shr 4 + 1); {rezerwujemy pamięć } ifSegBuf=Ot;hen
+begin
+wntelnIZbyt mało pamięci operacyjnej'];
+hale { błąd allokacji} end;
+DirectVideo:=True;
+cirscr:
+Loop;=125; {zawożona wartość opóźnienia} gDtoxyt40,3);
+write^27,^26,' - Szybkość odtwarzania ; '];
+gotoxy[5,33;
+write[");
+gotaxyt6-[Loopdiv10),3];
+writeE#2193;
+gotaxy[70,3];
+wntetLoop];
+gotoxy[5,5];
+writeCShift - zapis dźwięku ');
+gotoxy(5,S];
+writeCEsc -koniec zabawy');
+repeac ifShiftPressedchen
+begin
+TurnDacOff; {wyłączenie DAĆ}
+Counter:=0; {wskaźnik = O }
+got;oxy[1,253;
+TextAt;cr:=112;
+wriCefZAPIS']:
+repeac
+Mem[SegBuf:Ofs3uf+CounCer]:=ADCByte;
+{ pobranie bajtu z przetwornika } inctCounter] {inkrementacja wskaźnika }
+untii ECounter'=Memory]or[not[ShiftPressed]);
+gotoxy[1,253;
+TextAttr:=7;
+write['ODTWARZAM'];
+i:=0.
+TumDACOn;
+repeat
+93
+PROGRAMOWANIE DSP
+
+forj:=0 to Loopdo, { opóźniamy)
+DACByte[Mem[SegBuf:OfsBuf+i]]; { wysłanie do DAĆ incU)
+until l>Counter,
+got;oxy[1,25];
+wntet'        ')
+end:
+ch:=#255;
+if keypressed Chen ch' =readkey;
+ifch=#0then ch:=readkey;
+if [ch= #75)and(Loop>5] Chen dec[Loop,5];
+if[ch=#77)and[Loop<245)chen inc[Loap,5):
+if(cho#255]then
+begin
+gotoxy[5,33;
+writet");
+gotoxy[6+[Loopdiv 10),3);
+write(#219];
+gocoxy[70,3);
+write(Loop:3]
+end;
+unt:ilch=#27;
+TurnDacOff; { wyłącz DAĆ } FreeBuf {zwolnij pamięć przydzielona na bufor) end.
+4.3 Tryb DMĄ
+Odtwarzanie i zapis próbek dźwiękowych w trybie bezpośredniej komunikacji z układem DSP z wielu względów jest niepraktyczne. Po pierwsze, transmisja danych w trybie bezpośrednim w znacznym stopniu absorbuje procesor. Po drugie, bardzo trudno jest zapewnić równomierną prędkość przesyłania danych. Dlatego najlepszą drogą jest korzystanie z możliwości transmisji w trybie DMĄ - nie zabiera ona czasu procesorowi i nie ma problemów z kontrolą jej prędkości (zajmuje się tym układ DSP). Poza tym, w trybie DMĄ możliwy jest zapis i odtwarzanie skompresowanych przez DSP według trzech dostępnych schematów: 4-bitowego (kompresja 2:1), 2.6-bitowego (kompresja 3:1) i 2-bitowego (4:1). W trybie bezpośrednim jest to niemożliwe.
+O żądanej szybkości transmisji informujemy układ DSP, ustawiając odpowiednią wartość jednobajtowego parametru TIME_CONSTANT
+ROZDZIAŁ 4
+za pomocą rozkazu 40h (patrz opis komend DSP). Reguła, według której ustalamy wartość zmiennej, jest następująca:
+TIME_CO^'STAN7'=256-1'OOOOOO/'częstotliwość próbkowania
+Drugim parametrem jest długość przesyłanego bloku danych, opisywana przez wartość dwubajtowego parametru DATA_LENGTH. Jego wartość ustawiamy używając komendy ł4h. Należy pamiętać, że wartość DATA_LENGTH powinna być mniejsza od ilości bajtów przeznaczonych do przesłania o l. Oznacza to więc, że dla przesyłu l bajta wartość parametru powinna być równa 0. Ponadto istotny jest fakt, że jako pierwszy, po kodzie rozkazu ł4h, powinien być wysłany do DSP młodszy bajt danej. Maksymalna długość bloku przeznaczonego do przesłania wynosi 64 KB (dla DATA_LENGTH = FFFFh). Wynika to z charakterystyki kontrolera DMĄ, dla którego ograniczeniem jest rozmiar fizycznej strony pamięci (64 KB). Nie oznacza to bynajmniej braku możliwości transmisji większej ilości danych - blok bajtów składających się na próbkę dźwiękową należy podzielić na kilka mniejszych, l tak próbkę rozpoczynającą się od adresu 7FOO-.0000 i kończoną bajtem znajdującym się pod adresem 7FOO:2FFF podzielić musimy na dwa bloki: pierwszy - rozpoczynający się od adresu 7000:FOOO. drugi - od adresu 8000:0000. Najlepiej będzie, jeżeli "stronicowanie" pamięci przedstawię w formie tabelki:
+Strona Segment:0ffset
+O       0000:0000-0000:FFFF
+1       1000:0000-1000:FFFF
+2       2000:0000-2000:FFFF
+3       3000:0000-3000:FFFF
+F       FOOO:0000-FOOO:FFFF
+Podczas programowania transmisji w trybie DMĄ nie wystarczy samo programowanie karty SB - na rozpoczęcie transmisji należy też przygotować układ DMĄC. Co ważniejsze, układ DMĄC musi być zaprogramowany, jeszcze zanim przystąpimy do programowania DSP karty Sound Blaster. Parametry, jakich wymaga DMĄC, są następujące:
+l. Numer strony - numer fizycznej strony pamięci, w której znajdują się dane do przesłania.
+PHOGRAMOWANfE DSP
+95
+2. Adres bazowy - 2-bajtowa wartość określająca przesunięcie (offset) wewnątrzstronicowe początku danych przeznaczonych do transferu. Numer strony i adres bazowy w sposób jednoznaczny opisują położenie komórki pamięci w obszarze l MB. Składają się na 20-bitowy adres, którego wartość wyliczyć możemy następująco:
+ADR20 = I6*SEGMENT + OFFSET
+Numer strony to wielkość 4-bitowa stanowiona przez najstarsze 4 bity 20-bilowego adresu, a adres bazowy to młodsze 16 bitów adresu 20-bitowego.
+3. Licznik - 2-bajtowa wielkość odpowiadająca parametrowi DA-TA_LENGTH (długość bloku danych w bajtach pomniejszona o l).
+4. Tryb transmisji - bajt określający kierunek przepływu danych (zapis danych do pamięci bądź ich pobranie). I tak wartość 45H odpowiada zapisowi dźwięku (zapis do pamięci), a wartość 49H odtworzeniu (odczyt z pamięci).
+Samo programowanie układu DMĄC nie jest bardzo skomplikowane, ale na potrzeby tej książki ograniczę się do opisu algorytmu. który możemy wykorzystać przy ustawianiu transmisji. Zakładam, że karta SB jest tak skonfigurowana, że wykorzystuje pierwszy kanał DMĄ.
+1. Zapis bajtu o wartości 5 do portu OAH. Informujemy w ten sposób sterownik DMĄC, że będziemy programować kanał l.
+2. Zapis bajtu o wartości O do portu OCH.
+3. Zapis bajtu o wartości odpowiedniej dla trybu transmisji do portu OBH. Zapis wartości 49H spowoduje więc ustawienie trybu odczytu z pamięci (odtworzenie dźwięku).
+4. Zapis młodszego bajtu adresu bazowego (patrz wyżej) do portu 02H.
+5. Zapis starszego bajtu adresu bazowego do portu 02H.
+6. Zapis numeru strony do portu 83H.
+7. Zapis do portu 03H młodszego bajtu licznika.
+8.  Zapis do portu 03H starszego bajtu licznika.
+9. Zapis do portu OAH bajtu o wartości l (odblokowanie kanału l). Poniżej przedstawiam tekst źródłowy przykładowego programu, w którym wykorzystana jest transmisja w trybie DMĄ. Program odtwarza próbkę dźwiękową skonsolidowaną z kodem programu.
+ROZDZIAŁ 4
+ppogramDMABeep;
+uses dos,dspdir,crt:
+consc Czestotitwosc:word=130GD;
+Dlugosc-word=4372;
+var
+Adres;loriginC; {tu przechowamy adres 20-bitowy} Przesuniecie:word; { przesunięcie wewnatrzstronicowe } Strona:byte;   { numer scrony} Old!RQHandler':pointer; { stary wektor przerwania 1RQ7 } Zakonczone:boo!ean;   { czy transmisja zakończana }
+{$!_ beepl.obj}             { plik z danymi dźwiękowymi} procedurę Dbeep; external,
+procedurę ProcIRO; interrupt:{ nasza procedura obsługi} begin                     { przerwania zgłaszanego na IRQ7 } Zakonczone:=true;
+port[$20]:=$20   {EDI} end;
+begin
+if not SBInstalledthen { czy wykryto kartę } begin writeInCBrak karty Sound Blaster'!1];
+haft end;
+getintvec[15,OldlRQHandler): { zapamiętujemy stary wektor} setintvec[15,@ProclRQl; { "naginamy"}
+Zakonczone:=false;
+TurnDACOn; {włączenie głośnika }
+port[S213:=port[$21]andnott1 shl7):
+{ odblokowanie linii IR07 }
+port[$OA]:=5; { ustawienie maski dla kanału DMĄ 1 } port[$OC]:=0;
+port[$OB]:=$49; {transmisja 2 pamięci do karty}
+Adres^lS^longint^egtDbeep^+ofstDbeep);
+Strona: =byteCAdres div 65535);
+97
+PROGRAMOWANIE OSP
+
+Przesuniecie.=word[Adnesand$FFFFl:
+port[$02] =Przesuniecie and $FF: { LSB przesunięcia } po"t[$02]=Pr2esuniecieshr8,   { MSB pr-zesunięcia }
+pQ'-t[$B3]:=3trana:
+portt$D31:= Długość and $FF; { młodszy bajt długości} port[$03]:=DlLjgosc shr6. { starszy bajt długości} port[$OA]: = 1;    { aktywacja kanału DMĄ 1 }
+{teraz podamy stała odpow- częstotliwości odtwarzania 1 DSPWnte[$40);
+DSPWrite[256-1000000 div Częstotliwość],
+{ poinformujemy o długości próbki i jazda i} DSPWntet$483:
+DSPWriteLDIugosc and $FF];
+DSPWrite[Dlugoscshr8);
+OSPWrite[$14);
+DSPWrite[Dlugosc and $FF3;
+DSPWritetDlugoscshrB);
+wntein;
+whte['B');
+repeat
+write['e'];
+delay[4Q]
+unti) Zakończone; { oczekuj na koniec } wnteln['p!');
+TurnDacOff; { wyłączenie DAĆ } SetlntVec[15,01dlRQHandler]; {stary wektor} port[$21]-port[$21]or(1 shl7) end.
+4.4 OBSŁUGA ZŁĄCZA MIDI
+Karty serii Sound Blaster mają możliwość współpracy z instrumentami wyposażonymi w złącze typu MIDI (Musical Instrument Digital Interface). Niestety - nie bezpośrednio - do karty dokupić należy tzw. SB MIDI KIT (podłączamy go do złącza joystick'a). Standard MIDI określa sposób transmisji: szeregowo, asynchronicznie, z prędkością 31250 bitów na sekundę przy ośmiobitowym słowie i bez kontroli parzystości.
+ROZDZIAŁ 4
+Komunikację ze złączem M1DI nadzoruje układ DSP. Realizować ją możemy korzystając z rozkazów 3xh. Zasadniczo istnieją dwa tryby komunikacji z M1DI: tryb bezpośredni i tryb przerwań. Operacji wysiania danej przez złącze M1DI dokonać można tylko w trybie bezpośrednim.
+Tryb bezpośredni
+W trybie tym komunikujemy się ze złączem obustronnie wykorzystując rozkazy układu DSP. Poniżej przedstawiam tekst procedury MłDIWrite(what:byte), realizującej wysłanie zadanej parametrem jed-nobajtowej danej złączem MłDI oraz funkcji MłDłRead:byte realizującej odczyt w trybie bezpośrednim danej jednobajtowej ze złącza M1DI. Globalna zmienna MIDIReadErr typu Boołean przyjmuje po wywołaniu funkcji MlDIRead wartość False w przypadku, gdy karta przyjęła daną oraz True w przypadku wystąpienia błędu (zbyt długi czas oczekiwania na nadejście danej). Jeżeli chcemy włączyć którąś z procedur do programu, zadeklarować w nim musimy użycie biblioteki DSPDir.
+var
+MIDIReadErr: Boołean:
+procedurę MIDIWriteCwhafbyte];
+begin
+DSPWrite($38); { kod rozkazu zapisu do M1DI}
+DSPWriteCwhat) { wystanie bajtu }
+end;
+funccion M!DIResd:byte;
+var
+Tinie:byte; {licznik pętli} begin
+Time:=0;
+DSPWrite[$30); { odczyt z MIDt w trybie Direct} repeat
+incCTime) {zwiększ licznik} untii
+tport[DataAvailPort] and 128 = 12B]ar(Time=100);
+ifTime=100then
+MIDIReadErr^True { upłynął czas na odpowiedź } else
+begin
+M!DIRead:=port[ReadDataPortl; { odczyt} MIOlReadErr=False {wszystko Ok} end end,
+99
+PROGRAMOWANIE DSP
+
+Tryb przerwań
+W trybie przerwań możliwy jest tylko odczyt nadchodzących na złącze MłDI sygnałów. W trybie tym nie musimy cyklicznie "odpytywać" portu M1DI - układ DSP sam "zawiadomi nas" o nadejściu danych. Schemat postępowania jest tutaj następujący:
+1. "Nagiąć" wektor przerwania obsługującego transmisję w trybie DMĄ z kartą tak. by wskazywał naszą procedurę.
+2. Odblokować odpowiednią linię 1RQ zerując właściwy bit rejestru maskującego pisząc do portu 21 h.
+3. Wysłać kod rozkazu 31 h do układu DSP, aby zainicjować odczyt ze złącza M1DI w trybie przerwań.
+4. Realizować inne zadania. W razie pojawienia się danej na złączu MIDł na odpowiedniej linii IRQ pojawi się sygnał i wywołana zostanie zainstalowana przez nas procedura. Jej działanie ograniczać się powinno do potwierdzenia przyjęcia przerwania oraz odczytu danej z portu odczytu danych układu DSP.
+5. Zatrzymać operację odczytu z MłDI możemy wysyłając ponownie do układu DSP kod rozkazu 31 h.
+6. Zablokować odpowiednią linię IRQ (z kontrolerem przerwań 8259 komunikujemy się tu przez port 21 h).
+7. Odtworzyć oryginalną (pierwotną) wartość wektora odpowiedniego przerwania.
+4.5 KOMENDY DSP
+W rozdziale tym przedstawię zestawienie komend DSP. Każda z nich jest związana z jednobajtowym kodem, który musimy wysłać (patrz procedura zapisu) do układu DSP.
+Rozkaz lxh
+Komendy lxh dotyczą 8-bitowej konwersji cyfrowo-analogowej w trybach bezpośrednim i DMĄ oraz konwersji 2-bitowej ADPCM w trybie DMĄ. Uwagę należy zwrócić na fakt, że podczas zainicjowanej rozkazami lxh transmisji DMĄ możemy wysyłać dane do portu MłDI OUT.
+lOh - Wysłanie tego rozkazu do DSP umożliwia bezpośrednie wysłanie do przetwornika cyfrowo-analogowego pojedynczego bajtu.
+ROZDZIAŁ 4
+14h - Inicjacja transmisji danych 8-bitowych do przetwornika cyfro-wo-analogowego w trybie DMĄ. Jeżeli chcemy wykorzystać len nasz rozkaz, fragment naszego programu odpowiedzialny za odtwarzanie dźwięku działać powinien według poniższego schematu:
+   umieścić dane przeznaczone do transmisji w pamięci operacyjnej,
+zaprogramować układ 8237 (przygotować kontroler DMĄ do transmisji),
+   ustalić stałą czasową TIME_CONSTANT dla transmisji z użyciem rozkazu 40h (odpowiednio dla częstotliwości, z Jaką odtwarzany sygnał był próbkowany),
+   wysłać do układu DSP rozkaz 14h,
+wysłać do układu DSP wielkość szesnastobitową (DATA-JLENGTH) opisującą długość przeznaczonego do transmisji bloku danych pomniejszoną o jeden. Należy zwrócić uwagę, aby Jako pierwszy wysłany został mniej znaczący (młodszy) bajt wartości.
+Uwaga: Transmisja zostanie rozpoczęta bezpośrednio po ostatniej z wymienionych czynności. Należy pamiętać o podzieleniu bloków danych leżących na granicy 64 KB stron pamięci na mniejsze. Wysłanie każdego następnego z nich inicjować może procedura obsługi przerwania końca transmisji DMĄ.
+16h/17h - Inicjacja transmisji w trybie DMĄ danych i ich konwersji w trybie 2-bitowym ADPCM. Schemat działania procedury wykorzystującej ten rozkaz jest następujący:
+   umieścić dane przeznaczone do transmisji w pamięci operacyjnej,
+  odpowiednio zaprogramować układ kontrolera DMĄ,
+   ustalić stałą czasową (TIME_CONSTANT) odpowiednio do częstotliwości, z jaką sygnał był próbkowany, wystać do układu DSP rozkaz 16h lub 17h (17h dotyczy transmisji danych do DAĆ z tzw. bajtem odniesienia),
+   wysłać do DSP 2 bajty opisujące długość bloku przeznaczonego do transmisji (jako pierwszy wysyłamy młodszy bajt). Jak widać, algorytm działania jest tu taki sam jak przy rozkazie 14h. Sposób, w jaki przygotować musimy dane do transmisji, jest obłożony ograniczeniami wynikającymi z samej metody.
+101
+PROGRAMOWANIE DSP
+
+Rozkaz 2xh
+Komendy 2xh dotyczą transmisji z przetwornika analogowo-cyfro-wego danych 8-bitowych w trybach DMĄ i bezpośrednim.
+20h - Bezpośredni odczyt jednego bajtu z przetwornika. Po wysłaniu wartości 20h do układu DSP możemy odczytać z niego pojedynczy bajt odpowiadający chwilowej wartości podanego na wejście mikrofonowe sygnału. Schemat działania procedury odczytu ciągu bajtów z przetwornika wygląda następująco:
+  wysłanie komendy 20h do układu DSP
+   odczyt pojedynczego bajtu z DSP
+   oczekiwanie (wtedy, gdy chcemy np. zapisywać próbki co określony czas) i powtórzenie pierwszych dwóch operacji lub zakończenie odczytu danych.
+24h - Inicjacja transmisji z przetwornika ADC w trybie DMĄ. Algorytm:
+  wysłać kod komendy(24h) do układu DSP
+   wysłać 2 bajty (pierwszy wysyłamy młodszy bajt !) opisujące
+długość bloku danych, jaki chcemy przyjąć. Zasady, jakich powinniśmy przestrzegać przygotowując samą transmisję wynikają z reguł programowania i działania DMĄC.
+Rozkaz 3xh
+Komendy umożliwiają komunikację z portami MIDI.
+30h - odczyt z portu MIDI (tryb odpytywania). Po wysłaniu kodu tej komendy do układu DSP możemy odczytać daną podaną na wejście MIDI z portu odczytu danych DSP (2xAh). Oczywiście pamiętać należy o uprzednim testowaniu stanu bitu 7 (czy jest ustawiony na l) portu statusowego (2xEh). 31 h - odczyt z portu MIDI w trybie przerwań. Odczyt danych z portu MIDI z wykorzystaniem przerwań jest bardziej wskazany. Zasada jest tutaj prosta: układ DSP generuje sygnał przerwania na linii IRQ. Procedura obsługi przerwania, instalowana przez nasz program, odczytywać powinna daną z portu MIDI. Odczyt wartości z portu statusowego (2xEh) regeneruje sterownik przerwań. Powtórne wysłanie rozkazu 31h zatrzymuje cały proces.
+38h - Zapis do portu MIDI. Jako pierwszy wysyłamy do układu DSP kod rozkazu 38h, a zaraz potem bajt, który chcemy wysłać przez port MIDI.
+ROZDZIAŁ 4
+Rozkaz 40h
+Rozkaz 40h służy do ustawiania stałej czasowej (TIME^CONSTANT) determinującej częstotliwość próbkowania przy transmisji DMĄ. Jed-nobajtową wartość stałej czasowej wysyłamy do układu DSP zaraz po przestaniu kodu rozkazu. Poniżej przedstawiam zależność, z której korzystamy przy obliczaniu wymaganej dla danej częstotliwości wielkości TIME_CONSTANT;
+TIME_CONSTANT=256-H)00000/częstotliu}ość
+Dla przykładu dla częstotliwości 8 kHz wartość stałej czasowej powinna wynosić 131 (256-1000000/8000). Z przedstawionej zależności wynika jednoznacznie minimalna częstotliwość próbkowania możliwa przy transmisji DMĄ, równa około 3.9 kHz (gdy TiME_CON-STANT=0).
+Rozkaz 7xh
+Komendy 7xh umożliwiają ustawianie trybów pracy układu DSP.
+74h - ustawienie trybu 4-bitowej konwersji cyfmwo-analogowej AD-PCM (transmisja DMĄ).
+75h - ustawienie DSP w tryb 4-bitowej konwersji C/A ADPCM z bajtem odniesienia (DMĄ).
+76h - ustawienie DSP w tryb 2.6-bilowej konwersji C/A ADPCM (DMĄ).
+77h - ustawienie DSP w tryb 2.6-bitowej konwersji C/A ADPCM z bajtem odniesienia (DMĄ).
+W zasadzie rozkazy 7xh przypominają (choć naturalnie dotyczą innych modów pracy) rozkazy lxh. Zasady korzystania z nich są więc takie same. Nie należy jednak zapominać, że wszystkie rozkazy 7xh dotyczą transmisji w trybie DMĄ.
+Rozkaz Dxh
+Komendy Dxh umożliwiają kontrolowanie transmisji DMĄ oraz włączanie i wyłączanie DAĆ.
+Dlh - włączenie wzmocnienia sygnałów z układu DAC-
+D3h - wyłączenie wzmocnienia sygnałów z układu DAĆ. Użycie lego rozkazu spowoduje, że sygnały pojawiające się na wyjściu DAĆ nie będą przesyłane do wzmacniacza (nie będą wzmacniane i przesyłane na odpowiednie gniazdo karty). Użycie rozkazu nie zakłóci
+103
+PROGRAMOWANIE DSP
+
+odtwarzania syntezowanego przez układ FM dźwięku. Należy zwrócić uwagę, że użycie rozkazu D3h jest wymagane przed rozpoczęciem konwersji analogowo-cyfrowej. Powody są tu jasne - próbkowany dźwięk jest jednocześnie kierowany na wyjście układu DAĆ i bardzo łatwo o powstawianie sporych zakłóceń podczas samplin-gu. Kierowany na wyjście DAĆ sygnał jest przy tym mocno zniekształcony - winy należy upatrywać w prędkości działania samej karty. Dowodem na to może być fakt, że przetwarzaniu analogowo-cyfrowemu przy włączonym wzmacnianiu DAĆ w trybie emulacji Sound Blaste^a na kartach Gravis Ultra Sound towarzyszy dźwięk bardzo dobrej jakości. Rozkazu D3h możemy używać do chwilowego wyciszania odtwarzanej próbki dźwiękowej.
+D8h - testowanie włączenia układu wzmacniania sygnałów z DAĆ. Jeżeli do układu DSP wyślemy kod rozkazu D8h, odczytana zaraz potem z DSP wartość będzie równa FFh, gdy wyjście układu DAĆ jest połączone ze wzmacniaczem lub OOh, gdy tak nie jest. W praktyce rozkaz rzadko używany (powtórne wysłanie do DSP komendy Dlh lub D3h nie powoduje przecież żadnego błędu).
+DOh - zatrzymanie transmisji DMĄ. D4h - kontynuacja wstrzymanej rozkazem DOh transmisji DMĄ.
+Rozkaz E l h
+Rozkaz El h nie został opisany w dokumentacji firmowej, mimo że jest przyjmowany nawet przez starsze układy. Wysyłając go do DSP sprawdzić możemy wersję karty. Pierwszy odebrany zaraz po wysłaniu kodu komendy bajt to bardziej znaczący numer wersji karty, drugi bajt - mniej znaczący. Oto tekst źródłowy programu wyświetlającego numer wersji zainstalowanej karty:
+Program Wersja;
+Uses
+DSPDir;
+begin ifnotDSPResetthen
+begin
+wnteInCBrak karty Sound Blaster');
+halt
+end;
+DSPWrite[$E1], {wystanie kodu rozkazu } writefSound Blaster');
+writeln(DSPRead,'.',OSPRead) end.
+ROZDZIAŁ 4
+4.6 BADANIE KONFIGURACJI SB
+Elegancko napisany program powinien zwalniać użytkownika z obowiązku samodzielnego ustalania parametrów pracy. W szczególności dotyczy to programów rozrywkowych. Programy obsługujące karty dźwiękowe powinny więc automatycznie rozpoznawać ich konfigurację. W odniesieniu do kart serii Sound Blaster oznacza to sprawdzenie numeru linii 1RQ, adresu bazowego i numeru kanału DMĄ używanych przez kartę. Sprawa badania adresu bazowego jest dosyć prosta - wystarczy podejmować próby resetowania układu DSP, za każdym razem zakładając inną wartość adresu. Poprawna (i odebrana w określonym czasie) odpowiedź układu oznaczać będzie, że przyjęta wartość jest prawidłowa. Algorytm ten został zaim-plementowany w przedstawionej wcześniej bibliotece DSPDir. Więcej problemów nastręcza jednak sprawdzanie numerów kanału DMĄ i linii IRQ- O ile założymy, że komputer komunikuje się z kartą używając pierwszego kanału procedura odnajdywania numeru przerwania IRQ przypisanego karcie działać powinna według schematu:
+   Zainstalowanie własnych procedur obsługi przerwań IRQ 2, 3, 5, 7. Każda z procedur powinna modyfikować wartość zadeklarowanej wcześniej zmiennej globalnej przypisując jej swój numer.
+   Zainicjowanie transmisji przyjętym kanałem DMĄ. Zakończenie transmisji spowoduje wywołanie ustawionego zworka-mi przerwania. Procedura jego obsługi nada odpowiednią wartość zmiennej, z której następnie będziemy mogli odczytać numer linii IRQ, na jakiej pojawił się sygnał.
+W przypadku, gdy nie znamy numeru kanału DMĄ używanego podczas transmisji, algorytm powtarzamy dla kolejnych, prawdopodobnych kanałów. Poniżej prezentuję tekst źródłowy programu wyświetlającego informacje o konfiguracji karty Sound Blaster (przy założeniu transmisji kanałem DMĄ l):
+program SBIRGInfo;
+uses dos.dspdir;
+var
+01dlRQHand2,01dlRQHand3,01dlRQHand5;pointer;
+01dlRQHand7;pointer;
+{stare wektory przerwań IRQ}
+PROGRAMOWANIE OSP
+Numberbyte;
+OLD21 byte:
+procedurę ProclRQ2; interrupt, { dla IRQ2 } begin
+Number:=2;
+portE$20]:=$2C   { EOI} end;
+procedurę ProclRQ3; inCerrupt; { dla IRQ3 } begin Number:=3;
+port[$20]:=$20   {EO!} end:
+procedurę PraclRQ5; mterrupt: { dla IRQ5 } begin
+Number:=5;
+port[$20]:=$20   {EOI} end;
+procedurę Pr'oclRQ7; inCerrupt; { dla IRQ7 } begin
+Number:=7;
+port[$203:=$2Q   {EOI} end;
+begin
+if noc SBInstalled Chen { czy wykryto kartę } begin
+wntelnC'Brak karty Sound Blaster''];
+halt end;
+getintvec(8-2,aidlRQHand2); { zapamiętujemy stary wektor} setintvec(8+2,@ProclRQ2]; {"naginamy"}
+getintvecES*3,OldlRQHand3); { zapamiętujemy stary wektor} 5etintvec(8+3,@ProclRQ3]; {"naginamy"}
+getintvec[8-5,OldlRQHand51; { zapamiętujemy stary wektor} setintvec(S+5,@ProclRQ5]: {"naginamy"}
+getintvec[8-7,OldlRQHand7); { zapamiętujemy stary wektor} setintvec(8+7,(o)ProclRQ7); {"naginamy"}
+OLD21 :=port[$21];
+p0(t[$21]:=porc[$213and89:
+ROZDZIAŁ 4
+{odblokowane l;nnlRa2,3.5,7}
+port[$OA]'=5: { ustawienie maski dla kanafu OMA 1 } port[$OC]:=0;
+portISOB): =$49; {transmisja z pamięci do karty} porC[$02]:=0;
+port[$02]:=0;
+{młodszy bajt długości} { starszy bajt długości}
+{ aktywacja kanału DMĄ 1 }
+DSPWritet$4D];
+DSPWritet'131]; { wartość bez znaczenia: tu dla 8000 Hz }
+DSPWrite($4B], DSPWhtem;
+DSPWriteEO];
+DSPWrite[$14];
+DSPWrite[1);
+DSPWriteCO)'
+{scary wektor IRQ2} {scary wektor IRQ3} {stary wektor IRQ5} {starywektorlRQ7}
+wriceln['Karcie przypisano linię IRQ',number] end,
+Ponieważ maksymalna częstotliwość próbkowania udostępniana przez kartę jest determinowana wersją układu DSP, przydatna jest możliwość sprawdzenia numeru wersji karty. Posłużyć się tu można rozkazem El h, opisywanym przy okazji omawiania komend DSP. Podany tam leż został tekst przykładowego programu.
+Warto zauważyć, że pomimo iż testowanie konfiguracji karty jest dość proste, wiele z programów zwraca się z pytaniem o ustawienia do użytkownika (a przynajmniej jest możliwość wymuszenia przyjmowanych przez program parametrów). Jeżeli już zdecydujemy się na takie podejście do problemu, przed zadaniem pytania o kanał DMĄ, numer linii IRQ czy adres portu bazowego warto sprawdzić wartość zmiennej systemowej BLASTER. Przykład proce-
+107
+PROGRAMOWANIE DSP
+
+dur testujących podstawowe ustawienia karty przedstawiony został w rozdziale poświęconym obsłudze plików zapisanych w formacie
+VOC.
+109
+ROZDZIAŁ 4
+PROGRAMOWANIE SYNTEZERA FM
+
+5. PROGRAMOWANIE SYNTEZERA FM
+Programowanie syntezera FM jest najbardziej naturalnym sposobem zmuszenia karty Sound Blaster do zagrania choćby najprostszej melodii. Opisywany w jednym z poprzednich rozdziałów sterownik SBFM, korzystając z układu FM, udostępnia nam prosty sposób udźwiękowienia swoich programów. Warto zdawać sobie sprawę, że do wszystkich możliwości karty daje dostęp dopiero znajomość zasad jej bezpośredniego programowania. W niniejszym rozdziale pragnę przekazać podstawowe informacje na temat funkcjonowania układu syntezy FM i zasad tworzenia wykorzystujących go programów.
+5.1 FUNKCJONOWANIE SYNTEZERA FM
+Syntezer FM, który znajdujemy na kartach Sound Blaster, oparty jest o układ Yamaha oznaczany przez FM1312. Może pracować w dwóch trybach: melodycznym (możliwość kształtowania brzmienia 9 instrumentów) oraz rytmicznym (definiujemy brzmienie 6 instrumentów i możemy korzystać ze zdefiniowanych 5 instrumentów perkusyjnych:
+bębna basowego, bębenka, werbla, talerza i ni hat).
+Zanim przystąpimy do programowania układu syntezy FM, warto
+przypomnieć sobie kilka podstawowych informacji na temat dźwię-
+ROZDZIAŁ 5
+ku w ogóle, a dźwięków generowanych przez naszego Sound Bla-stera w szczególności.
+Najprostszym dźwiękiem jest ton, czyli drgania akustyczne o przebiegu sinusoidalnym (mówimy tak, ponieważ wykres zmian natężenia dźwięku w funkcji czasu ma postać sinusoidy). Na przykład z dźwięku wydawanego przez instrumenty strunowe wyizolować można sygnał o częstotliwości podstawowej oraz szereg sygnałów o częstotliwościach wyższych niż podstawowa (tzw. harmonicznych). O barwie dźwięku decyduje tu liczba i amplituda kolejnych składowych. Ciąg zmian amplitudy całkowitego sygnału akustycznego w funkcji czasu to obwiednia dźwięku. Obwiednia charakteryzuje takie podstawowe parametry czasowe dźwięku, jak:
+   Czas narastania, czyli czas, w jakim amplituda sygnału osiągnie wartość maksymalną.
+   Czas opadania, czyli czas, w jakim amplituda sygnału osiąga (zmniejszając się) wartość związaną z fazą ustaloną.
+   Czas ustalania, czyli czas, w jakim amplituda osiągnie poziom, na jakim pozostanie do końca fazy ustalonej.
+  Czas zanikania (wybrzmiewania) - czas, w jakim wartość względna amplitudy sygnału spadnie do poziomu zerowego.
+OdB
+Poziom podtrzymania
+96 dB
+Narastanie Opadanie PodtaTymanie W/brzmiewenie (ARack)   (Decay)    (Sustsin)      (Retase)
+Rys.4 Obwiednia ADSR (AttackfDecay/Sustain/Relase)
+Układ syntezera FM zawiera 18 operatorów. Każdy z nich składa się z oscylatora, generatora obwiedni i sterownika głośności. Oscylator odpowiedzialny jest za generowanie fali o przebiegu opartym na sinusoidzie. Generator obwiedni na podstawie ustalonych parametrów moduluje w czasie amplitudę sygnału wyjściowego. Parametry pracy każdej z części operatora:
+Oscylator:
+   kształt bazowej fali (do wyboru jedna z czterech opcji)
+111
+PROGRAMOWANIE SYNTEZERA FM
+
+   mnożnik częstotliwości (współczynnik, przez który mnożona jest częstotliwość generowanego sygnału)
+   vibrato (ustawienie tego efektu powoduje niewielkie wahania częstotliwości dźwięku w funkcji czasu)
+   intensywność sprzężenia zwrotnego FB (dla syntezy FM)
+Generator obwiedni:
+czas narastania (czas, po jakim amplituda sygnału osiągnie wartość maksymalną)
+   czas opadania (czas, w jakim amplituda sygnału spadnie z poziomu maksymalnego do ustalonego) flaga fazy ustalonej EG-TYP (flaga ustawiona oznacza występowanie w obwiedni fazy ustalonej)
+   poziom amplitudy w fazie ustalonej
+   czas zanikania (czas, po jakim amplituda sygnału spadnie z poziomu ustalonego do 0)
+skala długości KSR (decyduje o tym, czy długość dźwięku ma być częściowo zależna od jego wysokości)
+Sterownik głośności:
+   głośność ostateczna (na wyjściu z operatora)
+  wibracje amplitudy (decyduje o tym, czy amplituda sygnału ma ulegać niewielkim wahaniom w czasie)
+   skala intensywności KSL (ustawienie powoduje uzależnienie głośności od wysokości dźwięku)
+Każdy z 18 operatorów bierze udział w syntezie dźwięku. W trybie melodycznym dwa operatory przypadają na każdy z dziewięciu instrumentów, a w trybie rytmicznym operatory 1-12 używane są przy syntezie brzmień 6 instrumentów, a operatory 13-18 użyte są do syntezy brzmienia 5 instrumentów perkusyjnych. Dla trybu rytmicznego pracy syntezera przyporządkowanie jest następujące:
+  bęben basowy (bass drum) - operatory 13 i 16
+   hi hat - operator 14
+  bębenek (tom tom) - operator 15
+werbel (snare drum) - operator 17
+talerz (top cymbał) - operator 18 Podczas syntezy FM brzmienia jednego instrumentu pracują dwa operatory. Jeden w funkcji modułu modulatora, drugi w funkcji
+ROZDZIAŁ 5
+modułu nośnika. Ideę dwu operatorowej syntezy FM przedstawia rysunek 5.
+pę<o sprzężenia zwiokiego
+
+	i	
+	
+	
+	
+		Operator 1			
+smusotd 1		
+	
+	
+	
+			
+
+Foła sinusoid. 2
+Rys.5 Synteza divuopera torowa FM
+Zależność między częstotliwością generowanego w ten sposób sy-nału a parametrami syntezy przedstawia się następująco:
+F(t) == A sin((Ot-\-I sinuJt) gdzie:
+A    ~ amplituda wyjściowa /    - mnożnik częstotliwości ą   - częstotliwość nośnika ą^   - częstotliwość modulatora
+Ponieważ podczas syntezy FM mamy do dyspozycji 9 kanałów instrumentalnych, każdemu kanałowi przypisane są 2 operatory (modulator i nośnik). Ich przyporządkowanie przedstawia się następująco:
+Kanał l: operatory l i 4 (o adresach OOh i 03h) Kanał 2: operatory 2 i 5 (o adresach O l h i 04h) Kanał 3: operatory 3 i 6 (o adresach 02h i 05h) Kanał 4: operatory 7 i 10 (adresy 08h i OBh) Kanał 5: operatory 8 i 11 (adresy OOh i OCh) Kanał 6: operatory 9 i 12 (adresy OAh i ODh) Kanał 7: operatory 13 i 16 (adresy l On i 13h) Kanał 8: operatory 14 i 17 (adresy llh i 14h) Kanał 9: operatory 15 i 18 (adresy 12h i 15h)
+5.2 ZASADY OBSŁUGI SYNTEZERA FM
+Zasady obsługi syntezera FM są proste. Układowi syntezy przypisane są dwa porty. Na oryginalnej karcie AdLib mają one adresy 388h i 389h. Na kartach Sound BIaster komunikacja z układem jest moż-
+113
+PHOGRAMOWANIE SYNTEZERA FM
+
+liwa także przez porty 2x8h i 2x9h (x zastępujemy naturalnie wartością wynikającą z przyjętego adresu bazowego). Ponieważ pisząc programy komunikujące się z kartą za pośrednictwem portów 388h i 389h mamy pewność, że będą leż współpracowały z kartami SB i AdLib, we wszystkich podawanych niżej przykładach będę używał wyłącznie tych adresów.
+Oto algorytmy, według których działać powinny procedury komunikacji z układem syntezy:
+Zapis danej do rejestru:
+1. Zapis do portu indeksowego 388h numeru rejestru
+2. Oczekiwanie ok. 3 mikrosekund
+3. Odczyt wartości jednobajtowej z portu danych 389h
+Uwaga: Przed ponownym zapisem do dowolnego rejestru należy
+odczekać około 23,3 mikrosekundy.
+Odczyt rejestru statusowego
+Odczyt rejestru stanu realizujemy odczytując jeden bajt z portu indeksowego (388h). Rejestr statusowy nie ma swojego adresu i nie można do niego zapisać żadnej wartości.
+Pewną trudność wydaje się nastręczać konieczność stosowania czasowych zwłok. Wydaje się, że najprościej będzie skorzystać z jednej z usług BIOS w wersji AT (usługa 86h przerwania 15h). Jeżeli chcemy, aby nasz program poprawnie działał także na komputerach klasy XT, musimy postarać się skonstruować pętlę czasową o ilości repetycji związanej z prędkością komputera.
+Poniżej przedstawiam zestawienie rejestrów układu FM:
+Rejestr statusowy
+Rejestr jest 8-bitowy, ale znaczenie mają jedynie najstarsze 3 bity. Bit 7 ustawiany jest w sytuacji, w której w którymś z rejestrów liczników (lub w obu naraz) wystąpi przepełnienie, a bity 6 i 5 sygnalizują wystąpienie przepełnienia liczników odpowiednio l i 2.
+Blh-Testowy
+Przed rozpoczęciem programowania układu należy wpisać do niego bajt o wartości 0.
+ROZDZIAŁ 5
+B2h - Liczniki
+Liczniki jest 8-bitowym licznikiem zliczającym od O do 255 okresy o długości 80 mikrosekund. Zasada korzystania z niego jest prosta. Wprowadzamy do niego jakąś wartość początkową N. Od tej pory jest ona (co 80 mikrosekund) zwiększana o l. W momencie, gdy zapisana w rejestrze wartość "przeskoczy" z 255 do O (nastąpi przepełnienie), ustawiany jest bit 6 w rejestrze statusowym. Tak więc czas T, jaki odmierzy licznik, zanim nastąpi przepełnienie, wyliczyć można z zależności:
+r = ( 256- N ) * 0.08 fmsl
+03h - Licznik2
+Licznik2 pełni identyczną funkcję jak Liczniki, z tą różnicą, że zlicza okresy o długości 320 mikrosekund. Przepełnienie sygnalizowane jest przez ustawienie bitu 5 rejestru statusowego. Zależność między wartością startową N a czasem przepełnienia T jest więc w jego przypadku następująca:
+r== (256 -N ) * 0.32 fmsl
+04h - Rejestr kontroli liczników
+Rejestr używany jest do uruchamiania i zatrzymywania liczników l i 2. Znaczenie poszczególnych bitów jest następujące:
+Bit O - ustawienie powoduje rozpoczęcie odliczania przez Liczniki, wartość O oznacza zatrzymanie pracy licznika, Bit l - jak bit O, ale w odniesieniu do Licznika2.
+Bit 5 - ustawienie tego bitu powoduje zerowanie bitu 5 rejestru statusowego (przepełnienie Licznika 2 nie jest sygnalizowane). Bit 6 - analogicznie jak bit 5, ale w odniesieniu do bitu 6 rejestru statusowego (brak sygnalizacji przepełnienia licznika l). Bit 7 - ustawiony powoduje zerowanie bitów 5,6,7 rejestru statusowego.
+Dalej przedstawiam pięć grup rejestrów powiązanych z poszczególnymi operatorami. Adres rejestru w grupie związanego z danym operatorem wyznaczyć można dodając do adresu pierwszego rejestru w grupie wartość odpowiedniego przesunięcia:
+115
+PROGRAMOWANIE SYNTEZERA FM
+
+	
+Operator	Przesunięcie	
+l	OOh	
+2	Olh	
+3	02h	
+4	03h	
+5	04h	
+6	05h	
+7	08h	
+8	OOh	
+9	OAh	
+10	OBh	
+11	OCh	
+12	ODh	
+13	lOh	
+14	llh	
+15	12h	
+16	13h	
+17	14h	
+18	15h	
+
+	
+20h-35h	AM/Y1B/EG/KSR/MULTIPLE dla operatorów 1..18	
+
+Grupa 8-bitowych rejestrów. Znaczenie poszczególnych bitów każdego z nich:
+Bit 7 - AM - ustawienie wahań natężenia dźwięku (tremolo). Dla wartości O bitu wahań nie ma, dla wartości l wahania będą zachodzić z częstotliwością 3.7 Hz. Maksymalną "głębokość" zmian określa wartość bitu 7 rejestru BDh (l lub 4.8 dB).
+Bit 6 - VIB - ustawienie efektu vibrato (wahania częstotliwości dźwięku). Częstotliwość wahań jest równa 6.4 Hz. Stopień zmian częstotliwości w czasie określamy ustawiając bit G rejestru BDh (7% lub 14%).
+Bit 5 - EG-TYP - typ obwiedni dźwięku. Wyzerowanie bitu oznacza wybranie typu l obwiedni, ustawienie - typu 2.
+ROZDZIAŁ 5
+
+typ l
+Fazo nofasionio
+Fara opadon.a
+TrP 2
+Faza norastoniB
+Feza obadania
+_Paziom podtrzymani b
+Wyb r? miewani y
+
+Klawisz wciśnięty
+/?ys.6' Dwa typy obimedni
+Bit 4 - KSR - włączenie następuje, gdy bit ustawimy, wyłączenie, gdy wyzerujemy. Włączenie KSR umożliwia podkreślenie efektu znanego z instrumentów strunowych - uzależnienia czasu trwania dźwięku od jego wysokości.
+Bity 3..0 - MULTIPLE - mnożnik. Równanie syntezy FM uwzględniające wartość mnożnika wygląda następująco:
+F(t)= A stn( a^-ą/ + f-5in(M^co^) ) gdzie:
+A - amplituda wyjściowa,
+l - amplituda modulatora,
+ą- częstotliwość nośnej,
+co^- częstotliwość modulatora,
+M- mnożnik dla operatora nośnej,
+M^- mnożnik dla operatora modulatora.
+Wielkość MULTIPLE może przybierać wartości od O do 15 (4 bity). Dla wartości O mnożnik przyjmuje wartość 0,5. Dla wartości z przedziału Ih-Fh odpowiednio 1 do 15.
+40h-55h KSL/Total Level
+Zestaw rejestrów służących do kontroli poziomu sygnału operatora i definiowaniu stopnia spadku głośności dla wyższych częstotliwości. Znaczenie bitów rejestrów:
+Bity 0-5 - TOTAL LEVEL - 6 bitów opisujących poziom wyjściowy sygnału operatora związanego z rejestrem. Zakres wartości: od O to 63. Znając wartość przechowywaną przez te 6 bitów, łatwo wyznaczymy poziom sygnału wyrażony w dB: WARTOŚĆ*0,75 fdB).
+Bity 6-7 - KSL - ustawiając bity 6 i 7 możemy regulować spadek natężenia dźwięku wraz ze wzrostem częstotliwości. I tak, spadek ten w zależności od wartości przyjmowanych przez dwubitowe słowo (młodszy bit to naturalnie bit 6) przedstawia się następująco:
+117
+PROGRAMOWANIE SYNTEZERA FM
+
+KSL	Spadek [dB/oktawę]	
+0 l 2 3	0 3 1,5 6	
+
+	
+
+60h-75h - Attack/DecayRatc
+Używając tej grupa rejestrów można kształtować fazę narastania i opadania dźwięku. Wartość 8-bajtowego rejestru należy podzielić na 2 4-bitowe słowa. Młodsze (bity 0-3 rejestru) z nich opisywać będzie czas trwania fazy opadania, starsze (bity 4-7) - narastJ^a. Najogólniej biorąc, im wielkość opisująca czas jest mniejsza, tym czas jest dłuższy. Dokładnie ilustruje to poniższa tabela (czasy podane są w ms):
+Wartość	Czas narastania (10% do 90%)	Czas narastania (-96dBdo0dB)	Czas opadania (90% do 10%)	Czas opadania (0dB do -96dB"	
+63	0.00	0.00	0.51	2.40	
+62	0.00	0.00	0.51	2.40	
+61	0.00	0.00	0.51	2.40	
+60	0.00	0.00	0.51	2.40	
+59	0.11	0.20	0.58	2.74	
+58	0.11	0.24	0.63	3.20	
+57	0.14	0.30	0.81	3.84	
+56	0.19	0.38	1.01	4.80	
+55	0.22	0.42	1.15	5.48	
+54	0.26	0.46	1.35	6.40	
+53	0.31	0.56	1.62	7.68	
+52	0.37	0.70	2.02	9.60	
+51	0.43	0.80	2.32	10.96	
+50	0.49	0.92	2.68	12.80	
+49	0.61	1.12	3.22	15.36	
+48	0.73	1.40	4.02	19.20	
+47	0.85	1.56	4.62	21,92	
+46	0.97	1.84	5.38	25.56	
+45	1.13	2.20	6.42	30.68	
+44	1.45	2.76	8.02	38.36	
+43	1.70	3.12	9.24	43.84	
+
+ROZDZIAŁ 5
+42	1.94	3.68	10.76	51,12	
+41	2.26	4.40	12.84	61.36	
+40	2.90	5.52	16.04	76.72	
+39	3.39	6.24	18.48	87.68	
+38	3.87	7.36	21.52	102.24	
+37	4.51	8.80	25.68	122.72	
+36	5.79	11.04	32.08	153.44	
+35	6.78	12.48	36.96	175.36	
+34	7.74	14.72	43.04	204.48	
+33	9.02	17.60	51.36	245.44	
+32	11.58	22.08	64.16	306.88	
+31	13.57	24.96	73.92	350.72	
+30	15.49	29.44	86.08	408.96	
+29	18.05	35.20	102.72	490.88	
+28	23.17	44.16	128.32	613.76	
+27	27.14	49.92	147.84	701.44	
+26	30.98	58.88	172.16	817.92	
+25	36.10	70.40	205.44	981.76	
+24	46.34	88.32	256.64	1227,52	
+23	54.27	99.84	295.68	1402.88	
+22	61.95	117.76	344.32	1635.84	
+21	72.19	140.80	410.88	1963.52	
+20	92.67	176.84	513.28	2455.04	
+19	108.54	199.68	591.36	2805.76	
+18	123.90	235.52	688.64	3271,68	
+17	144.38	281.60	821.76	3927.04	
+16	185.34	353.28	1026.56	4910.08	
+15	217.09	399.36	1182.72	5611.52	
+14	247.81	471.04	1377.28	6543.36	
+13	288.77	563.20	1643.52	7854.08	
+12	370.69	706.56	2053.12	9820.16	
+11	434.18	798.72	2365,44	11233.04	
+10	495.62	942.08	2754.56	13086.72	
+9	577.54	1126.40	3287.04	15708.16	
+8	741.38	1413.12	4106.24	19640.32	
+7	868.35	1597.44	4730.88	22446.08	
+6	991.23	1884.16	5509.12	26173.44	
+5	1155.07	2252.80	6574.08	31416.32	
+4	1482.75	2826.24	8212.48	39280.64	
+
+PROGRAMOWANIE SYNTEZERA FM
+119
+68h-95h -Sustain Level'Relase Ratę
+I znów 8-bitowy rejestr podzielony na 2 4-bitowe słowa. Młodsze z nich (bity 0-3) opisuje czas wybrzmiewania dźwięku. Starsze (bity 4-7) - odnoszą się do poziomu podtrzymania obwiedni dźwięku. Każdy bit 4-bitowego słowa wyznaczającego poziom podtrzymania ma swoją wagę. Bit najmłodszy - 3 [dB], bit następny - 6 |dB|, następny - 12 [dB], a najstarszy - 24 |dB]. Najwyższy poziom stanu podtrzymania wymusimy ustawiając wszystkie bity na "l" (wtedy poziom = 93 d B).
+Rejestry tej grupy służą do ustawiania częstotliwości dźwięku dla 9 głosów. W trybie melodycznym każdy rejestr jest związany z jednym głosem. W trybie rytmicznym pierwszych sześć par rejestrów związanych jest z 6 głosami, a dalej przyporządkowanie jest następujące:
+   bębenek - rejestry A8h i B8h,
+  bęben basowy - A6h i B6h.
+Dla reszty instrumentów perkusyjnych zmiana częstotliwości dźwięku jest niemożliwa.
+Rejestry AOh-A8h odpowiadają młodszej części 10-bitowej wielkości F-NUMBER opisującej częstotliwość generowanego dźwięku.
+Znaczenie bitów rejestrów BOh-B8h jest zróżnicowane:
+Bity 0-1 - przechowują najstarsze 2 bity F-NUMBER. Bity 2-4 - opisują oktawę, w której będzie grany dźwięk.
+Bit 5 - KEY - bit ma kluczowe znaczenie. Jego ustawienie powoduje rozpoczęcie generowania dźwięku (jak przy wciśnięciu klawisza), jego wyzerowanie spowoduje wyłączenie głosu (jak przy zwolnieniu klawisza klawiatury muzycznej).
+Uwaga - częstotliwość generowanego dźwięku można dość prosto wyznaczyć korzystając z zależności:
+F = 50000 * F-NUMBER " 2 ^(OKTAWA - 20)
+Dla oktawy 4 wartości F-NUMBER odpowiadające kolejnym dźwiękom:
+ROZDZIAŁ 5
+
+	
+Dźwięk	Częstotliwość	/-NUMBER	
+C^	277,2	363	
+D	293,7	385	
+D#	311,1	408	
+E	329,6	432	
+F	349,2	458	
+F#	370	485	
+G	392	514	
+G#	415,3	544	
+A	440,0	577	
+A#	466,2	611	
+C	523,3	686	
+
+	
+CBh-CBh -	 Feedback/Connection	
+Rejestry	pozwalają ustalić współczynnik intensywności sprzężenia	
+zwrotnego oraz sposób torów.	połączenia dwóch współpracujących opera-	
+Bity 1-3	tworzą 3 bitowe słowo. W zależności od jego wartości	
+współczynnik jest równy:	
+FB	Współczynnik	
+	
+0	0	
+	
+l	p/16	
+	
+2	P/8	
+	
+3	P/4	
+	
+4	p/2	
+	
+5	P	
+	
+6	2p	
+	
+7	4p	
+	
+
+Bit O określa, jak połączone są operatory. Z trybem syntezy FM mamy do czynienia, gdy bit jest wyzerowany, z syntezą addytywną - gdy bit został ustawiony.
+PROGRAMOWANIE SYNTEZERA FM
+121
+B<0(CON)	Schemat syntezy	
+0
+1	^ --
+P1 --	--.(.) ---
+T	Op"tt*if 1	
+	T
+l P2	Operalor Z	W^śde	
+				
+	
+				
+			
+				
+		
+		
+	
+	
+				
+			Operator l					
+	P1 --	-1")-)
+T		
+	(				
+			
+						
+		
+	
+	
+		ł)--------------------------7
+Wiście	
+			Operator 2				
+	
+	
+		
+		
+			
+			
+
+Rys. 7 Synteza FM i syntezo addytywną
+Pojedynczy rejestr, pozwalający nam kontrolować stopień wahań natężenia dźwięku dla efektu vibrato, stopień zmian częstotliwości dźwięku dla efektu tremolo. Poza tym używając rejestru przełączamy układ w tryb melodyczny lub rytmiczny.
+Bity O - 4 - mają znaczenie w trybie rytmicznym. Pełnią rolę identyczną Jak bit KEY rejestrów BOh-B8h (ustawienie rozpoczyna generowanie dźwięku, wyzerowanie - kończy). Bit 4 jest związany z bębnem basowym, bit 3 - z werblem, bit 2 włącza/wyłącza bębenek, l - talerz, O - high hat. Należy pamiętać, że jeżeli operujemy instrumentami perkusyjnymi z wykorzystaniem tego rejestru, bity KEY rejestrów B6h, B7h, B8h muszą być wyzerowane- W trybie rytmicznym przyporządkowanie operatorów poszczególnym instrumentom wygląda następująco:
+Instrument	Operator(y)	
+bęben basowy	13,16	
+hi hat	14	
+bębenek	15	
+werbel	17	
+talerz	18	
+
+Bit 6 rejestru pozwala na ustalenie intensywności efektu vibrato, Ustawiony oznacza 14% wahania częstotliwości, wyzerowany - 7%,
+ROZDZIAŁ 5
+Bit 7 - ustawianie maksymalnej zmiany natężenia dźwięku przy efekcie tremolo. Bit wyzerowany - l dB, ustawiony - 4,8 dB.
+E0h-F5h-WaveSelect
+Rejestry umożliwiają ustalanie kształtu fali generowanej przez oscy-latory poszczególnych operatorów. Dwa najmłodsze bity każdego rejestru kodują kształt jak na rysunku 8.
+brt 1	bit O	Kształt generowanej fali
+Rys.8 Kształt fali generowanej przez oscylator generatora
+5.3 PRZYKŁADY
+Po takiej dawce informacji na temat funkcjonowania układu FM czas na jakiś przykład. Pierwszym z nich jest tekst źródłowy biblioteki implementującej dwie najprostsze procedury:
+procedurę FMWriteCreg,value) - Zapis do rejestru wyspecyfikowanego parametrem reg wartości value. Procedura uwzględnia zwłoki czasowe konieczne przy programowaniu układu (realizuje je korzystając z usług BIOS-a w wersji AT).
+function FMStatus:byte - Zwraca wartość rejestru statusowego układu.
+Oprócz tego w części inicjacyjnej biblioteka testuje obecność układu FM karty Sound Blaster (AdLib) i nadaje odpowiednią wartość zmiennej globalnej FMInstalIed. Wartość True tej zmiennej oznacza
+123
+PROGRAMOWANIE SYNTEZERA FM
+
+jego obecność. Procedura FMCheck testująca kartę wykorzystuje w tym celu licznik pierwszy (80 mikrosekund).
+unitFMDir;
+interface var FMInstalted:boolean;
+procedurę FMWriCe(reg,value'byte); { zapis do rejestru } function FMStatus:byte; { odczyt rejestru statusowego }
+implementation uses dos:
+{doahnumerfunkcji} {starsze stówo =0} {młodsze stówo} {wykonać!}
+procedurę Waittmicros:word);
+var
+reg:registers;
+begin
+reg.ah:=$86;
+reg.cx:=D;
+reg.dx:=micros;
+intr[$15,regl end,
+{oczekiwanie 3.3us} port[$3891:==value:   { zapis wartości} Wait(24]             { oczekiwanie 24 us }
+procedurę FMWrite[reg,value:byte);
+begin
+port[$388]:=reg;     { numer rejestru } WaitC3);
+end;
+{odczyt statusu}
+function FMStacus:byte:
+begin
+FMScatus:=port[$38B] end;
+procedurę FMCheck;
+var
+A,B,i:byte;
+begin
+FMWriteCI .0); { zerujemy rejestr testowy}
+FMWrit:e[4.$60);
+FMWhce[4,$803;     {rejestr kontrolny}
+A-=FMStatus;
+{ zapamiętanie stanu rejestru statusowego }
+FMWrite[2,$FE);      { odlicz BO mikrosekund }
+ROZDZIAŁ 5
+
+{wystartowanie licznika 1 { pętla opóźniająca }
+FMWnte(4,$11),
+for i=1 to 255 do,
+B:=FMStatus,
+{Jeśli byt ustawiany bit przepełnienia licznika 1 }
+FMWrite[4,$603,
+FMWnce[4.S80);
+FMfnsta!led:=[[BxorA)=192J
+FMCheck
+end:
+begin
+f end,
+Napiszmy teraz najprostszy program wykorzystujący naszą kartę dźwiękową do syntezy FM. Zaczynamy naturalnie tak:
+Program Bdziang:
+uses
+crt.FMDir:
+begin
+if noc FMInstalled then halt;
+Teraz, po kolei, wypełniamy kolejne rejestry układu odpowiednimi wartościami. Najpierw wpisujemy O do rejestru testowego:
+FMWriCe($01,0);
+Teraz decydujemy, że nasz program będzie przełączał układ FM w tryb melodyczny. Ustawiamy też dużą głębokość efektu vibrato:
+FMWrite($BD,128];
+Następnie dobieramy mnożniki dla operatorów l i 2 i wybieramy typ obwiedni. Ustawimy też efekt vibrato. Pamiętamy, że dla głosu l (wykorzysta go nasz programik) adresy względne dwóch operatorów wynoszą odpowiednio O i 3.
+FMWrite[$20,64+32+103;
+FMWnte[$23,64+32+1);
+Teraz określamy poziom wyjściowy sygnału na każdym z operatorów:
+FMWrite($40,1);
+FMWrit;e($43,1);
+125
+PROGRAMOWANIE SYNTEZERA FM
+
+Pozostaje jeszcze dobrać czasy narastania, opadania i wybrzmiewa-nia dźwięku oraz poziom podtrzymania oraz ustalić kształt generowanej fali, ustawić tryb syntezy FM;
+FMWnt:e[$60,128-1), FMWnce[$63,128+1):
+FMWnte($80,128T31:
+FMWntet$83,128+3), FMWnCet$EQ,a);
+FMWntet$E3,0);
+FMWrite($CO,0);
+No i na koniec wprowadzić do pary AO i BO kod odpowiadający częstotliwości dźwięku, jaki wydać ma nasz program, ustalić oktawę i ustawić bit KEY:
+FMWrite[$AO,255):
+FMWrite[$BO,2+16+32];
+Dalej następuje krótka zwłoka czasowa, zerujemy bit KEY odpowiedniego rejestru i kończymy działanie:
+delay(500);
+FMWnte[$BO,1+16) end.
+Przyszedł czas na nieco bardziej skomplikowany program. Jego zadaniem będzie umożliwienie nam gry na wielogłosowych "cymbałkach".
+program Cymbałki;
+uses
+dos.FMDir;
+ConsC
+Var
+convert:array[0.,71 of byte
+=[$10,$n,$12,$13,$14,$15,$16,$01);
+{tu przechowamy scan-code'y kolejnych klawiszy}
+{naszej klawiatury}
+{ Dalej: parametry obwiedni dźwięku naszego }
+{instrumentu. Każdy może przybrać wartości}
+{ od O do 63 }
+Narastanie ^yte^;
+Opadanie     ^yte^B;
+Poziom :byte=2;
+Wybrzmewarie:byCe=4;
+8iaS_handler:pointer; { stary wektor przerwania 9h } ScanCode,Contrcl,counter:byte; { zmienne robocze }
+ROZDZIAŁ 5
+keys;arrayt0..6] of byte;
+{ tutaj będziemy trzymali wartości odpowiadające } { wyłączonym głosom 0,1.2,3,4,5,6 } keyboard:arrayt0..7] of boolean;
+{klawisze 0..6-nasza "muzyczna" klawiatura, } { klawisz? -kod Esc } pressed:array[O..B] of boolean;
+{ czy kanał 0..6 )est włączony}
+{$F+} procedurę MapKeyHandier; incerrupt:
+{ procedurę, którą zastąpimy oryginalną procedurę } { obsługi 9h i która będzie wypełniać odpowiednimi} {wartościami tablicę keyboard!]} var
+n:byte;
+begin
+ScanCode:=por't[$60); { pobranie kodu znaku }
+CQntrol:=portt$61];
+port[$61]:=Control or $90:
+port[3i61]:=Control; { regeneracja sterownika }
+for n: =0 Co 7 do Begin
+if ScanCode=convert[n] then keyboardCnL^true;
+if ScanCode'=converl:En] or $90 then keyboard[n];=fa)se end;
+port[$20J:=$20{EOI} end;
+{$F-}
+procedurę tnstallMapProc:
+var
+i: byte;
+begin
+set!ntvecC$9,(c)MapKeyHandier]; { nastaw wektor}
+for i: =0 to 7 do keyboard[i3:=false
+{ na początku wszystkie klawisze są zwolnione } end;
+procedurę UninstaUMapProc;
+begin
+seCintvec[$9,aiOS_handler)
+{ przywróć oryginalny wektor} end;
+procedurę Prepareinstruments:
+{ przygotowanie brzmienia każdego głosu instrumentu } const
+PROGRAMOWANIE SYNTEZERA FM	\^J
+fnumb:arrayt0 .6] of word=t385,432,458.514,577,647,686),
+{ stałe F-NUMBER dla kolejnych głosów } var
+ofs.byte, { zmienna pomocnicza } begin
+FMWrite[$BD,128);
+{tryb metodyczny i duża głębokość vibrato } forofs:=$00to$05do
+begin
+{ ustawienie parametrów dla głosów 0-3 )
+ifofs>2 then FMWrite($20+ofs,64+32+2)
+else FMWrite[$20+ofs,64+32+1).
+{vibrato, drugi typ obwiedni i mnożnik=2 }
+FMWrite[$40+ofs,1);
+{TotalLevel= 1 }
+FMWrite[$60+ofs. Narastanie shl4 + Opadanie);
+{czas trwania fazy narastania dźwięku}
+{i fazy opadania}
+FMWriteCSBO+ofs,Paziom shl 4 + Wybrzmiewanie)
+{ poziom stanu ustalonego i czas wybrzmiewania }
+end;
+forofs:=$OBto$OOdo
+begin
+{ ustawienie parametrów dla głosów 4-B} ifofs>$ODthenFMWrite($20+ofs,64+32+2) else FMWriceC$20+ofs,64+32+15:
+FMWriteE$40+ofs,1];
+FMWriteESBO+ofs,Narastanie shl 4 + Opadanie];
+FMWriteE$80+ofs.Poziom shl 4 + Wybrzmiewanie)
+end;
+{ ustawienie parametrów dla głosu 6}
+FMWrite($20+$10,64+32+1);
+FMWrice($20+$13,64+32+2);
+FMWrite($40+$10,1);
+FMWrite($40+$13,1);
+FMWrite($60+$10, Narastanie shl 4 + Opadanie);
+FMWrite($60+$13, Narastanie shl 4 + Opadanie);
+FMWrice($80+$10.Poziom shl 4 + Wybrzmiewanie);
+FMWrite($80+$13,Poziom sh! 4 + Wybrzmiewanie];
+forofs;=0to6do
+begin
+{wyznaczenie młodszej części F-NUMBER } ( dla każdego głosu } FMWnte[$AO+ofs,byte(fnumbEofs] and $FF]];
+keys[ofs]:=byte([fnumb[ofs]and$3FF]shr8)+1S;
+{ najstarsze 2 bity F-NUMBER do $BD i 4 oktawa } FMWrice[$90+ofs,keys[ofs])
+end
+ROZDZIAŁ 5
+end:
+ifnotFMinstalled then begio
+{jeżeli karcą nie jest zainstalowana } writeInCBrak karty SB lub AdLib,'), hale end;
+geCincvec[$9,BIOS^handler]; { zapamiętanie wektora } FMWrtteE$01,0): { wyzerowanie rejestru testowego } Prepareinstruments; { przygotowanie brzmień } forcounter:=0to G do
+pressed[counter]:=false;
+{ wszystkie głosy wyłączone } wnteCTerazgraj używając klawiszy Q,W,E,R,T,Y,U.'];
+wnteln[' Koniec- Esc.'J;
+InstallMapProc; { przejęcie obsługi przerwania 9h } repeat
+for counter:=0 to 6 do { dla każdego głosu } begin
+if Ckeyboar'd[counter]]and[nat pressedEcounter]] Chen begin { właśnie został wciśnięty}
+FMWrite[$BD+countenkeys[counter] or 32);
+pressed[counter]:=true;
+end;
+if [tnot keybaard[cQunter]]and[pressed[counter']]) then begin { właśnie został zwolniony}
+FMWrite[$BO+counter,keys[counter]);
+pressed[councer];=false;
+end:
+end,
+unti) keyboard^]; { aż nie zastanie wciśnięty Esc } UninstallMapProc;
+{ oddanie obsługi orygianiej procedurze } forcounter:=0to6 do FMWr-ite[$BO+counter,keys[counter]) {wyłączenie głosów}
+end.
+Korzystając z programu można, używając klawiszy Q, W, E, R, T, Y i U zagrać prostą melodię najprostszym brzmieniem. Program nie jest bardzo skomplikowany, ale osoby chcące zrozumieć zasady programowania układu syntezy FM powinny skupić się szczególnie na analizie procedury Prepareinstruments.
+PROGRAMOWANIE SYNTEZERA FM
+129
+Tym, którzy nie bardzo rozumieją sposób, w jaki zapewniłem możliwość odczytu stanu jednocześnie wciśniętych klawiszy (gra wielogłosowa), należy się słowo wyjaśnienia. W chwili, gdy wciskamy lub zwalniamy któryś z klawiszy, klawiatura PC wysyła do komputera ciąg składający się z jednego iub kilku bajtów. Ciąg ten, jednoznacznie określający pojedynczy klawisz, to tzw. scan code. Rotę odgrywa tu fakt, że scan code wysyłany przy wciskaniu klawisza (nazywany dalej kodem wciśnięcia) jest różny od ciągu wysyłanego przy zwalnianiu (kod zwolnienia) tego samego przycisku. W przypadku ciągu jednobajtowego różnica polega na tym, że bit 7 kodu zwolnienia jest zawsze ustawiony. W chwili wciśnięcia/zwolnienia jakiegokolwiek klawisza na linii IRQ1 pojawia się sygnał i wywołane zostaje przerwanie 9h. To właśnie procedura jego obsługi jest odpowiedzialna za odbiór ciągów kodujących zmiany stanu klawiszy i podejmowanie związanych z tym akcji (wypełnianie bufora klawiatury, modyfikacja bajtów statusowych w obszarze zmiennych BiOS-u itd). Pomysł rozwiązania problemu odczytu stanu wciśniętych jednocześnie klawiszy naszej "muzycznej klawiatur-ki" zasadza się właśnie na przejęciu obsługi tego przerwania i analizie nadchodzących z klawiatury sygnałów.
+131
+ROZDZIAŁ 5                SYGNAŁY l ICH PRZETWARZANIE
+
+6. SYGNAŁY I ICH PRZETWARZANIE
+W rozdziale tym chciałbym wprowadzić Czytelnika w dziedzinę przetwarzania sygnałów cyfrowych. Ponieważ omówienie każdego z problemów to właściwie temat na oddzielną pracę, nie chciałbym, aby ktokolwiek potraktował poniższy tekst inaczej, jak tylko wprowadzenie w tematykę omawianych zagadnień. Mam nadzieję, że lektura lego rozdziału skłoni niektórych do samodzielnych eksperymentów i do pogłębienia wiedzy na wybrane tematy.
+6.1 Co to są sygnały i jak je dzielimy
+Jeżeli założymy, że z pewnego źródła docierają do nas informacje o zmianie jakiś wielkości Fizycznych (np. ciśnienia, temperatury), to wielkość elektryczną bezpośrednio związaną z pierwotną postacią tej informacji nazywamy sygnałem. Każdy sygnał może być funkcją wielu zmiennych niezależnych. Najczęściej taką zmienną jest czas (t) lub częstotliwość (0.
+Zasadniczo sygnały podzielić można na deterministyczne (jeżeli mierzoną wielkość fizyczną można opisać zależnościami matematycznymi) oraz losowe (gdy nie jest możliwe przewidzenie wartości sygnału). W przypadku sygnału deterministycznego dwa zbiory danych opisujące sygnał uzyskane w tych samych warunkach powin-
+ROZDZIAŁ 6
+ny być identyczne. Często zdarza się, że obok interesującego nas sygnału pojawił się szum, a sam sygnał uległ zniekształceniom. Wyłowienie go stać się wtedy może nie lada problemem (wszelkie szumy nakładające się na sygnał mogą mieć zarówno deterministyczny, jak i losowy charakter).
+Zmiany sygnału deterministycznego opisać możemy zależnościami matematycznymi. Na sygnał taki składa się powtarzający się przebieg (okresowy) lub przebieg zanikający po upływie czasu (przejściowy).
+Można założyć, że sygnały okresowe składają się z jednego lub wielu przebiegów sinusoidalnych uzależnionych od okresu powtarzania (przedziału czasu, po jakim sygnał powtórzy się). Najmniej skomplikowany jest sygnał okresowy opisywany funkcją:
+x(t)= A*sin(2nft+(pj
+gdzie A to stała określająca amplitudę, f to częstotliwość w Hz, a <p to początkowy kąt fazowy. Sygnał taki powtarza się co okres T równy l/f.
+Uogólniając, sygnał okresowy można przedstawić za pomocą szeregu Fouriera (zakładamy, że sygnał okresowy składa się z sinusoid harmonicznych):
+x(t) ^A,sin(2nft-^-(p^ +A^in(2*2nft+^... ^-A^inCn *2nft-^^)
+Występowanie w sygnale składowych o różnych częstotliwościach przedstawić można za pomocą wykresu widmowego (jak na rysunku 9).
+A a
+Częstotliwość Rys.9 Widmo prążkowe
+Sygnały przejściowe są sygnałami zanikającymi do zera w określonym (skończonym) czasie. Widmo takich sygnałów ma charakter
+133
+SYGNAŁY l ICH PRZETWARZANIE
+
+ciągły, ponieważ (teoretycznie) sygnał taki zawiera nieskończoną liczbę częstotliwości składowych.
+Sygnały losowe analizujemy posługując się opisami propabilistycz-nymi i statystycznymi. Sygnały losowe podzielić można na stacjonarne i niestacjonarne, O tym. czy sygnał uznać można za stacjonarny, decyduje to, czy wyznaczone wg poniższego opisu xśr(t) i R(T) są stałe dla wszystkich wartości t, i T.
+Załóżmy, że uzyskaliśmy N zapisów sygnału o lej samej długości. x^ będzie wtedy wartością średnią sygnału w chwili t, po ilości zbiorów danych (np. dla 3 zbiorów opisujących sygnał mamy:
+xJt,) - (xft^ 4-x/^ +x//^/^.
+Funkcję autokorelacji R(T) wyznaczymy obliczając średnią ilo"7-. -nów dwóch próbek wziętych w dwóch oddzielnych chwilach ^ i ^ \: Każdym zbiorze (z zachowaniem odległości T=r^r,), Sygnał niestacjonarny to taki, dla którego wielkości x^ i R(T) nie zmieniają się z czasem.
+Istotną sprawą przy obróbce i analizie sygnałów jest ich prezentacja. 2 uwagi na to, że mają one na ogół charakter ciągły wśród form ich przedstawiania dominuje graficzna. W celu ułatwienia interpretacji sygnałów stosujemy często Filtrację i wygładzanie. Wygładzanie przeprowadzić można stosując np. algorytm Hanna:
+y,= 0,25y^l + 0,5y, + 0,25y,+/
+Naturalnie wygładzając w taki sposób ciąg danych eliminujemy z niego składowe o wyższych częstotliwościach - jest to tożsame z filtracją dolnoprzepustową. Jeżeli Filtracja zachodzi w dziedzinie czasu, mówimy o splocie. Okno splotu to określenie, którego używamy, gdy mówimy o oknie czasowym, spoza którego sygnały zostaną wytłumione.
+6.2 Przetwarzanie analogowo-cyfrowe
+Przetworzenie sygnału ciągłego do postaci zdyskretyzowanej nosi nazwę przetwarzania analogowo-cyfrowego. Sam proces podzielić można na dwa etapy - próbkowanie i kwantyzację. Każdy z nich spełnia inną rolę i na każdym z nich pojawiają się błędy innej natury. Zakładając dwuetapowość procesu, sam schemat przetwarzania przedstawić można jak na rysunku 10.
+ROZDZIAŁ 6
+
+Sygnał we^śoowy
+Próbkowanie
+Kwantyzacja
+
+10.15.20.30.25.
+Rys. 10 Przetwarzanie analogowo-cyfroioe
+Jak widać, wynikiem przetworzenia sygnału ciągłego jest ciąg liczb opisujących wartości kolejnych próbek. Oba elapy procesu zostały omówione poniżej.
+Próbkowanie
+Próbkowanie polega na pobieraniu próbek wejściowego sygnału w pewnych odstępach czasu (dla stałych odstępów mówimy o próbkowaniu ze stalą częstotliwością). Wynikiem próbkowania jest szereg próbek, czyli wartości odpowiadających uśrednionej w krótkim czasie amplitudzie- Okres, w którym sygnał wejściowy jest uśredniany, to apertura. Dla jakości próbkowania istotne jest, aby czas aper-tury był mały w stosunku do okresu próbkowania (czasu upływającego między pobraniem kolejnych próbek).
+Jak wspomniałem, ważnym parametrem procesu jest częstotliwość, z Jaką pobierane są próbki. Zjawiskiem mającym bardzo niekorzystny wpływ na jakość są wahania tej częstotliwości (jej chwilowe zmiany). Nieokreśloność okresu próbkowania nosi nazwę fluktuacji impulsów próbkujących.
+Największą trudnością tego etapu przetwarzania analogowo-cyfro-wego jest niejednoznaczność. Chodzi tutaj o to, że ten sam zbiór próbek może opisywać sygnały o bardzo różnych przebiegach. Ilustruje to rysunek 11.
+Rys.11 Efekt niejednoznaczności
+W praktyce może więc dojść do tego, że gdy np. spróbkujemy z odpowiednio niską częstotliwością sygnał o przebiegu sinusoidalnym i częstotliwości f, to otrzymane próbki opisywać mogą też sygnały sinusoidalne o częstotliwościach niższych. Zjawisko to nosi nazwę aliasingu. Ilustruje je rysunek 12.
+SYGNAŁY f fCH PRZETWARZANIE
+135
+Wartość próbek
+Rys. 12 Aliasing
+Jest ono bardzo niekorzystne. Zapobiega się mu stosując tzw. filtry antyaliasingowe (lub mówiąc inaczej, odfiltrowując składowe o zbyt wysokich częstotliwościach).
+Dosyć łatwo wykazać, że częstotliwość próbkowania powinna być co najmniej dwukrotnie większa od częstotliwości sygnału, którego przebieg chcemy opisać próbkami. Tak więc dla częstotliwości próbkowania 2f maksymalna częstotliwość przetwarzanego sygnału wynosić powinna f. W odniesieniu do dziedziny czasu twierdzenie przybiera postać kryterium Rayleigha:
+r > o.5*f
+gdzie T to okres próbkowania wyrażony w sekundach, a f to górna częstotliwość pasma, w jakim mieści się sygnał wyrażona w Hz.
+Naturalnie nie wolno zakładać, że na sygnał nie składają się fale o wyższych niż dopuszczalne częstotliwościach. Aby zredukować efekty niejednoznaczności, sygnał przed próbkowaniem poddaje się filtracji dolnoprzepustowej. Oczywiście charakterystyka zastosowanego filtra nigdy nie będzie prostokątna - składowe o częstotliwościach tylko nieznacznie wyższych od założonej f będą tłumione słabo. Stąd wynika konieczność próbkowania z wyższą niż 2f częstotliwością (w praktyce 4-60.
+Kwantyzacja
+Kwantyzacja jest procesem, który polega na przedstawieniu w postaci szeregu liczb dyskretnych ciągu dyskretnych wartości próbek. Ponieważ sygnał analogowy może przyjąć praktycznie nieskończoną
+ROZDZIAŁ 6
+liczbę stanów, kwantyzację potraktować należy jako przybliżenie. Podziałem sygnału wejściowego na ograniczoną liczbę poziomów zajmuje się kwantyzator.
+' * Wy]śae
+Rys.13 Przykładowa charakterystyka kiDontyzatora
+Proces kwantyzacji wprowadza pewien błąd związany ze skokiem kwantyzacji q. Błąd ten powoduje powstanie szumu zwanego szumem kwantyzacji. W mierze logarytmicznej odstęp szumów kwantyzacji od sygnału fonicznego przy kwantyzacji n-bitowej można oszacować jako:
+L = 6*n + 1,8 IdBj
+Łatwo więc wyliczyć, że odstęp szumu kwantyzacji dla słowa 8-bi-towego (jak w SB) wynosić będzie 49,8 dB. Dla słowa dwukrotnie dłuższego (16 bitów) odstęp wyniesie już 97,9 dB.
+6.3 Filtracja cyfrowa
+Bardzo istotnym problemem z dziedziny cyfrowego przetwarzania sygnałów jest ich filtracja w dziedzinie częstotliwości.
+Załóżmy, że mamy sygnał, na który składa się wiele składowych o różnych częstotliwościach. Załóżmy teraz, że zależy nam na wytłumieniu składowych o danej częstotliwości. Użyjemy wówczas nitru zaporowego. W przypadku, gdy z sygnału chcemy "wyłowić" częstotliwości leżące w pewnym zakresie, użyć musimy filtru przepustowego.
+137
+SYGNAŁY / ICH PRZETWARZANIE
+
+f                    i
+Rys. 14 Charakterystyki filtrów dolna- i środkowoprzepustowego
+Rysunek 14 przedstawia przykładowe charakterystyki często spotykanych typów filtrów. Kształt każdej charakterystyki zależy od parametrów filtru: jego dobroci Q, częstotliwości granicznych i wzmocnienia. Dobroć Q określa "stromość" charakterystyki.
+Rys.15 Wpływ dobroci no kształt charakterystyki filtru
+Większa dobroć oznacza, że wykres charakterystyki jest bardziej stromy - wzrost wzmocnienia przy przekraczaniu częstotliwości granicznej jest szybszy.
+Wzmocnienie określa stosunek amplitudy sygnału wejściowego do amplitudy sygnału wyjściowego w zakresie częstotliwości objętych działaniem filtru:
+k = AJA^.
+lub w skali logarytmicznej
+k = 20log(AJAJ IdBj
+Najogólniejsza posiać równania opisującego działanie najprostszego filtru cyfrowego to równanie, w którym po lewej stronie stoi y, (wartość i-tej próbki sygnału wyjściowego), a po prawej suma wymna-żanych przez stałe wartości poprzednich próbek sygnału wyjściowego oraz sygnału wejściowego x,. Wartość stałych wyznaczyć można stosując odpowiednie algorytmy.
+ROZDZIAŁ 6
+Dużym problemem filtracji cyfrowej jest czasochłonność obliczeń. Filracja realizowana w czasie rzeczywistym wymaga bardzo dużych mocy obliczeniowych.
+A oto tekst procedury filtrującej środkowoprzepustowo wskazany obszar pamięci. Procedura wymaga następujących parametrów:
+Fsamp:word    częstotliwość próbkowania wyrażona w Hz,
+Fsr:word        częstotliwość środkowa filtru,
+Wzmocn:real    wzmocnienie (musi być większe od jedności),
+Dobrocrreal     dobroć filtru (większa od 0.707).
+Bl:potnter      wskaźnik na bufor z danymi do przefilirowania,
+B2:potnler      wskaźnik na bufor, gdzie procedura ma umieścić przefiltrowane dane,
+Liword          ilość bajtów ciągu przeznaczonego do filtracji.
+procedurę Filtruj [Fsamp,Fsr:word:Wzmocn,Dobroc:real;B1,B2:pointer:L:word);
+type
+T8b=arrayEO..$FFFE] of byte;
+var
+X,Y,Z,A,B,C,D,E:rea!:
+Licz:word;
+3in
+ifW2mocn<1 then exit; {to nie filtr zaporowy} ifDobroc<0.707then exit;
+{wpierw obliczamy stałe filtracji A,B,C,D,E } X:=1/[sin[PlłFs^/FsampVcos[PI<Fsp/Fsamp));
+Y:=Wzmocn/Dobroc;
+Z:=1/Dobroc;
+A^DW+Y^+D/OW+Z^+D;
+B^+S^WO^+Z^+I);
+C^DW-Y^+W^+Z^+I];
+D:=B;
+E: ^^-Z^1 l/K^łZ^1 ];
+{teraz możemy przyscąpić do filtrowania } for licz: =2 to L do
+TBb(B2^Klicz]:=trunct
+CTabtBmiicz-S]
++BłTab[B1;^)[^^cz-1]
++AłTab(B1"3[licz]
+-ETabtBS^iicz-S]
+-D^TabtBS^nicz-l]);
+end;
+139
+SYGNAŁY f ICH PRZETWARZANIE
+
+6*4 Analiza widmowa sygnału
+Analiza widmowa to pojęcie odnoszące się do analizy amplitudy chwilowej lub mocy chwilowej sygnału w dziedzinie częstotliwości. Podstawowym jej zagadnieniem jest wyznaczenie funkcji gęstości widmowej mocy określającej, jaką energię niosą składowe sygnału o różnych częstotliwościach. Metodami pozwalającymi na określenie rozkładu mocy sygnału w funkcji częstotliwości jego składowych są między innymi bezpośrednia metoda szybkiego przekształcenia Fouriera i filtracja cyfrowa.
+Pierwsza metoda, w najogólniejszym zarysie, polega na zastosowaniu algorytmu FFT (szybkiej transformaty Fouriera) w celu wyznaczenia kolejnych współczynników szeregu Fouriera określających udział kolejnych harmonicznych w sygnale.
+Metoda druga polega na poddaniu sygnału wejściowego filtracji z użyciem filtrów przepustowych o sąsiadujących charakterystykach, a następnie podniesieniu do kwadratu i uśrednieniu pojawiających się na ich wyjściach wartości w celu wyznaczenia mocy "przepuszczanej" przez każdy z nich składowej.
+Jak wspomniałem, najczęściej interesuje nas moc poszczególnych składowych sygnału. Co oznaczać jednak może moc w odniesieniu do ciągu dyskretnych próbek? Otóż przez pojęcie mocy sygnału rozumieć będziemy wartość średnią kwadratu amplitudy. Dla 4 próbek x(l), x(2), x(3) i x(4) moc wyrazimy więc następująco:
+P= (x(l) *x(I)+x(2) *x(2) +x(3) ^x(3) +x(4) *x(4))/4
+Pojęcie estymaty odnosi się do gęstości mocy, to znaczy określa, jaka moc przenoszona jest przez sygnały o częstotliwościach zawierających się w przedziale l Hz (dlatego wyrażamy ją np. w W/Hz - wat na hertz). Jeżeli więc teraz wyobrazimy sobie np. filtr pasmowy o częstotliwości środkowej f, o szerokości pasma B, z którego otrzymaliśmy n próbek, to estymatę wyznaczyć możemy ze wzoru:
+G(f)=P(n)/B
+Obliczanie estymat dla częstotliwości "wyławianych" przez kolejne filtry o różnych częstotliwościach środkowych pozwala na wyznaczenie widma prążkowego mocy. W powyższym wzorze znak równości należałoby w zasadzie zastąpić znakiem przybliżenia, a to z uwagi na to. że w praktyce nie zrealizujemy filtru o nieskończenie wąskim paśmie, a ilość uśrednianych wartości jest ograniczona. W większości zastosowań nie ma to jednak większego znaczenia.
+ROZDZIAŁ 6
+6.5 Rozpoznawanie mowy ludzkiej
+Rozpoznawanie mowy to dziedzina, w jakiej bez cyfrowego przetwarzania sygnałów trudno byłoby mówić o jakichkolwiek wymiernych osiągnięciach. Tymczasem wydaje się, że znalezienie prostych schematów rozpoznawania dźwięków mowy ludzkiej przenieść nas może w zupełnie nową erę komunikacji między człowiekiem a maszyną. O ile dźwięk jako medium jest już wykorzystywany przy przekazywaniu informacji przez maszynę człowiekowi ("mówiące" zegarki, całe mnóstwo udźwiękowionych programów), o tyle ciągle Jeszcze trudno jest mówić o dwukierunkowej komunikacji. O tym, że zbliżamy się jednak do chwili, w której nowoczesne programy obsługiwać będziemy wypowiadając polecenia do mikrofonu, świadczyć może pojawienie się np. specjalnych aplikacji dla systemu Windows, które możemy "nauczyć" brzmienia prostych rozkazów wydawanych naszym głosem. W tej części rozdziału postaram się przekazać w zarysie podstawowe informacje związane z zagadnieniem rozpoznawania mowy.
+Złożoność dźwięków mowy jest pochodną skomplikowania procesu jego artykulacji. Jego brzmienie zależy od bardzo wielu czynników; własności osobniczych, intonacji, akcentu. Sygnał mowy niesie olbrzymią ilość informacji - mózg ludzki potrzebuje zaledwie małej części, aby dokonać prawidłowego rozpoznania.
+Zasadniczo biorąc najprostsza jest analiza sygnału w dziedzinie czasu - badamy wtedy jego amplitudę i szybkość jej zmian. W odniesieniu do amplitudy stosujemy miarę logarytmiczną. Jest ona bardziej naturalna, ponieważ dla dźwięków o małym natężeniu odczuwamy minimalną ich zmianę, a wrażliwość naszego narządu słuchu na zmienność sygnału dźwiękowego spada wraz ze wzrostem jego natężenia.
+Jeżeli w sygnale zawiera się wiele częstotliwości składowych (a tak jest w przypadku sygnałów mowy), warto skupić się nad zmianami widma sygnału w funkcji czasu. Załóżmy więc, że mamy szereg wykresów widmowych obrazujący zmiany widma w dziedzinie czasu. Naturalnie porównywanie "na oko" wykresów widma nie ma większego sensu. Dlatego należy wyróżnić kilka jego podstawowych parametrów.
+Pierwszym jest średnia ważona amplitudy składowych w widmie. Wielkość tę rozumieć można jako środek ciężkości wykresu widmowego. W amatorskich zastosowaniach aproksymuje się go uśre-
+141
+SYGNAŁY / ICH PHZETWARZANfE
+
+dnioną częstotliwością sygnału w danym przedziale czasowym. Jej oszacowanie Jest bardzo proste - wystarczy zliczyć ilość przejść przez zero (PPZ) sygnału. I tak - załóżmy, że mamy zapis dźwięku o czasie trwania 10 ms (0,01 sekundy). Dźwięk próbkowaliśmy z częstotliwością 10 kHz. Mamy więc 100 próbek (10000*0,01=100). Jeżeli teraz wystąpienie przejścia przez zero notować będziemy wtedy, gdy z dwóch "sąsiadujących" próbek jedna będzie miała wartość poniżej pewnej pewnej ustalonej wartości, druga - powyżej (będą miały przeciwne znaki), przy wystąpieniu n przejść przez zero powiemy, że uśredniona częstotliwość sygnału równa jest około n/ (2*0,01) [l/s=Hz], W praktyce możliwe jest przekonanie się, że parametr liczby przejść przez zero w zupełności wystarcza Judzkiemu mózgowi do rozpoznania dźwięku.
+Łatwo przeprowadzić odpowiednie doświadczenie - wystarc/y graniczyć zakres zmian amplitudy do dwóch wartości - jedynym zachowanym parametrem tak "okaleczonego" sygnału będzie właśnie liczba PPZ. Rysunek 16 przedstawia dwa sygnały - w pierwszym zmiany amplitudy są ciągłe, w drugim nie - jej wartości zostały ograniczone do dwóch poziomów.
+Sygna-f- wejściowy
+Sygnał po ograniczeniu zakresu zmian amplitudy
+RysJ6 Ograniczenie zakresu zmian amplitudy
+Dalej przedstawiam teksty źródłowe dwóch programów. Pierwszy z nich (RAW2PPZ) na podstawie zawartości wskazanego parame-
+]42	ROZDZIAŁ 6
+trem pliku tworzy drugi, ośmiokrotnie krótszy. Każdy bit kolejnego bajtu nowego pliku koduje nam informację, czy wartość kolejnej próbki pobrana z pliku wejściowego przekracza pewną wartość, czy też nie. Program drugi, na podstawie pliku "wyprodukowanego" przez RAW2PPZ tworzy plik opisujący kolejne próbki, z tym jednak, że amplituda (przez utratę informacji na poprzednim etapie) może przyjąć już tylko dwa stany. Oba programy traktować można jako kompresor i dekompresor danych dźwiękowych. Mimo że jedyną informacją zachowywaną po takiej "kompresji" jest liczba PPZ, "rożkom presowany" dźwięk nadal rozpoznajemy! program RAW2PPZ;
+uses dos;
+var
+F:file;
+Ce):flleofbyte;
+D:dirstr;
+N:namestr;
+E;extst;r;
+!le_8:lonsinC;
+Buf:array[Q..71 ofbyte;
+q,Bajt:byte;
+begin
+ifparamcounc=0t:hen
+begin {gdy brak parametrów }
+wriceInCUżycie; RAW2PPZ pliki [plik2n;
+halt end;
+fsplii;[paramstr[1],D,N,E);
+assignCF.paramscriI));
+{$'-} reset[R1];
+{$i+} ifioresuitoOthen
+begin
+writeInfBłąd otwarcia pliku!'];
+hale
+end;
+HeJ:=filesize(F)div8;
+If paramcount=1 then
+assign[Cel,n+'.PPZ') { rozszerzenie ,PPZ } else
+ass!gn[Cel,paramstr(2]];
+rewritetCeR;
+SYGNAŁY / ICH PRZETWARZANIE
+repeaC
+blockread[FBuf[0].83;
+Ba|t:=0;
+forq:=7downto O do
+if BufE7-q]> 127 then Bajt: =Ba)t or t1 shl q];
+wriceCCel.Belt],
+dect!le_B] uncii ile_8=0;
+BajC:=0;
+fillchBrt6uf[Q),8,Q); {wyzerowanie bufora} blockread[F,Buf,filesize(F] mód 8); {reszta } forq:=7downto0do
+if Buft7-q]> 127 then Bajt: =Bajt or [1 shl q);
+write(Cel,Baft);
+close(F);
+closetCel] { zamykamy i po wszystkim} end.
+tekst drugiego programu:
+program PPZ2RAW;
+uses dos;
+vsr
+F:fileofbyte;
+CBhftle;
+D:dirstr;
+N:namestr;
+E:extstr;
+Rozmiar: longint:
+Buf:arr8y[0..7]ofbyte:
+q.Bajt:byte;
+begin
+if paramcount:=0 then
+begin {brak parametrów}
+wnteInfUżycie: PPZ2RAW pliki [plik21');
+halt end;
+fsplittparamstr(1),a,N,E);
+assigntF.paramstKD);
+{Si-} resettF]; { próba otwarcia pliku }
+{$i+} ifiaresultoOthen begin
+wrIteInCBląd otwarcia pliku !'3;
+halt
+ROZDZIAŁ 6
+end, rozmiar. =fi!esizs[R, if paramcount=1 chen
+assign(Ce! N-'.RAW') { do pliku z rozszerzeniem RAW } else
+assigntCel,parametry]);
+re^nte[Cel,1]; { utworzenie }
+repeat
+read[F,BajC); { odczyt pojedynczego bajCu }
+fillchar[Buf[Q],Q,0]; {wyzerowanie bufora }
+forq:=7downto O do
+ifBajtandCl shiq) oOthen Buf[7-q]:=12B;
+blockwnte[Cel,Buf[0],8); { zapis 8-miu bajtów }
+dectr-ozmiari untii Rozmiar=G;
+close[F);
+closeCCeD { zamykamy oba pliki i już }
+end.
+Za drugi ważny parametr uznać można szerokość widma, której zmiany w czasie także niosą informacje o przebiegu procesu artykulacji.
+Oprócz tego przy analizowaniu dźwięków mowy zwraca się uwagę na tzw. formanty. Co to? Załóżmy, że mamy dany wykres widmowy jak na rysunku 17.
+fl      f2        f3           f
+Rys J 7 Przykładowy wykres widmowy
+Widzimy na nim trzy maksima. Częstotliwości, dla których je obserwujemy (fl,f2,f3), to właśnie formanty. Ich położenie i wielkość ulegają zmianie w czasie i wiele mówią o procesie emisji dźwięków. W mowie wyróżnić można kilka formantów. Każdego z nich poszukujemy w innym przedziale częstotliwości. Analiza formantów jest dość wygodna, bo zmieniają one swoje położenie i wielkość dosyć wolno. Pewnych trudności nastręcza głównie ich odnalezienie. Wyobraźmy sobie, że dysponujemy widmem prążkowym (otrzymanym np. w wyniku zastosowania szybkiej transformaty Fouriera) jak na rysunku 18.
+SYGNAŁY f ICH PRZETWARZANIE
+145
+RysJ 8 Widmo prążkowe
+Mimo że na pierwszy rzut oka trudno jest odnaleźć częstotliwość, której udział w badanym sygnale jest największy, można postarać się aproksymować przebieg krzywej widmowej i założyć np. że częstotliwość formantu równa jest 0,5(fl+f2).
+prawdopodobne położenie maksimum
+Rys. 19 Aproksymacja przebiegu wykresu widmowego W procesie wykrywania formantów często stosuje się sieci neuronowe.
+Wydzielenie parametrów ściśle powiązanych z procesem artykulacji jest kluczowym problemem w dziedzinie rozpoznawania mowy. Gdy je wyznaczymy, pozostaje nam przyrównywanie otrzymanych wielkości do tych, jakie wyznaczyliśmy w procesie uczenia. Naturalnie nie jest to proste. Jeżeli jednak zbiór parametrów opisujących dokonane nagranie potraktujemy jako pewien obiekt, to odnalezienie klasy, do której on należy, jest Już problemem innej natury. Najogólniej rzecz biorąc, identyfikacji dokonuje się najczęściej przyjmując istnienie pewnej "przestrzeni cech", w której każdy wymiar opisuje inny parametr. Każdej klasie obiektów, które mają podlegać identyfikacji, przypisujemy pewną przestrzeń, której granice wyznaczane są przez wartości każdej ze współrzędnych-parametrów. Obiekt należy do klasy, jeśli punkt w przestrzeni cech wyznaczany przez jego parametry mieści się w "objętości" tej klasy. Jeżeli parametry ulegają zmianom w dziedzinie czasu, to naturalnie dokładamy jeszcze współrzędną czasu i zamiast punktu otrzymujemy krzywą.
+I tak na przykład, gdy dźwięk rozpoznajemy tylko na podstawie zmienności liczby przejść przez zero, to mamy do czynienia z prze-
+ROZDZIAŁ 6
+strzenią dwuwymiarową (płaszczyzną). Każdy punkt na tej płaszczyźnie wyznaczają współrzędna czasu i liczby przejść przez zero. Jeżeli rozpoznaniu ma np. podlegać cały wyraz, to każde kolejne nagranie pozostawi na tej płaszczyźnie ślad w postaci krzywej niosącej informacje o zachowaniu liczby PPZ w funkcji czasu. "Ślady" wielu nagrań dokonywanych w procesie uczenia wyznaczą na naszej płaszczyźnie cech obszar. Jeżeli teraz dokonujemy nowego nagrania, to "nakładamy" otrzymaną krzywą na taki "wzorzec" i podejmujemy decyzję - albo wypowiedziane słowo zaliczamy do klasy (krzywa zmieściła się w obszarze), albo nie. Naturalnie takie podejście do problemu ma pewne wady. Może okazać się, że obszar jest tak "pojemny" (podczas uczenia brało udział wiele osób wypowiadających słowo z różnym akcentem i intonacją), że krzywa zmieści się we wzorcu, mimo że opisuje zupełnie inny obiekt. Cóż. można więc na przykład badać tendencje krzywej (do wzrostu, do spadku) - konieczne jest wówczas różniczkowanie przebiegu PPZ(t) w pewnych przedziałach czasu.
+Istotnym problemem, o jakim nie wolno nam zapominać, jest także normalizacja dokonywanych nagrań. Mówiąc prosto, chodzi o "wyrównywanie" nagrań przed ich analizą. Każdy z ludzi wypowiada to samo słowo inaczej. Dla przykładu; imię "Kasia" może być przez jedną osobę wypowiedziane jako "Kaasia", przez drugą: "Kassiia". l nie wystarczy tutaj zwykłe przeskalowanie w dziedzinie czasu -różne są bowiem także proporcje między czasem wypowiadania kolejnych fonemów (elementarna część dźwięku mowy - jak litera w alfabecie).
+FORMAT WAV
+147
+
+
+7, FORMAT WAV
+Format WAV (Microsoft Waveform Audio File) to format zapisu danych dźwiękowych używany przez programy pracujące pod kontrolą systemu Microsoft Windows. Myślę, że jego znajomość może się przydać np. przy tworzeniu oprogramowania dźwiękowego mogącego współpracować z aplikacjami Windows.
+Pliki zapisywane w formacie WAV spełniają założenia struktury RIFF
+(Resource Interchange File Format).
+Podstawowym elementem pliku jest pakiet o następującej budowie:
+   Identyfikator pakietu - czleroznakowy ciąg "RIFF"
+   Ilość danych w pakiecie (dana 4-bajtowa)
+Pakiet danych o długości specyfikowanej w poprzedzającej go
+części
+Pakiet RIFF składać się może z podstruktur różnych formatów i przechowujących różne typy danych. Nas interesują tylko dane dźwiękowe. I lak, "podpakiet" formatu WAVE ma następującą strukturę:
+   Identyfikator (4-znakowy ciąg "WAYE")
+Pakiet formatu (przechowuje parametry dotyczące danych)
+   Pakiet danych
+HOZDZIAŁ 7
+Na pakiet formatu składają się kolejno:
+1. Identyfikator pakietu formatu (4-znakowy ciąg "fmt ")
+2. 4-bajlowe słowo przechowujące długość dalszej części pakietu
+3. 2 bajty przechowujące wartość odpowiadającą rodzajowi formatu
+4. 16-bitowe słowo przechowujące ilość kanałów (dla dźwięku mono ma wartość l, dla stereo - 2)
+5. Czterobajtowe słowo określające częstotliwość próbkowania w Hz użyta przy zapisie danych
+6. Dana czterobajtowa charakteryzująca prędkość przepływu danych (wyrażoną w bajtach na sekundę). Wielkość uwzględnia liczbę kanałów. Na przykład dla monofonicznego dźwięku sprób-kowanego 8-bitowo z częstotliwością 10 kHz wartość słowa równa jest 10000 [bajtów/sęk]
+7. Wielkość (2-bajtowa) określająca wyrównanie danych w pakiecie danych (w bajtach). Dla próbkowania 8-bitowego równa jest ilości kanałów
+8. Dwa bajty przeznaczone na inne parametry Pakiet danych formatu WAVE ma postać:
+1. Identyfikator (ciąg "data" 4-znakowy)
+2. 4-bajtowe słowo określające długość pakietu danych (bez uwzględnienia pierwszych 8 bajtów - na identyfikator i długość)
+3. Wartości kolejnych próbek dźwiękowych Poniżej przedstawiam krótki programik, którego działanie polega na wyświetlaniu parametrów wskazanego przy wywołaniu pliku zapisanego w formacie WAV:
+program ShowWAY;
+type
+Header=record
+RIFFId:array[1..4]ofchar;
+CLen:longint;
+WAVEId:arTay[1.,4]ofcnar;
+FMTId:arr'8yt1..4] ofchar:
+FMTLen:longint;
+FMTTag:word;
+Channels:word;
+Fpeq;longint:;
+Transmis;bngirt;
+B/ces:vwrd;
+FORMAT WAV
+Bts.word:
+DATAId,array[1,,4] of char, DATALen;longint
+end:
+var
+f:file:
+Bu^painter;
+begm
+if paramcountol then begm
+wnteInfUzycie, ShowWAV plik'),
+halt end, assign(f,paramstr[1)]:
+1$!-}
+reset(f,1); { próba otwarcia pliku } {$!+} ifioresultoOthen begin
+wnteInCBtad otwarcia pliku !');
+halt { nie udało się } end;
+getmem[Buf,sizeof[Header)]; { pamięć} blockreadtf.Buf^sizeoftHeaderIJ; { odczyt} ctosetfl; { zamykamy plik} with HeadertBuf) do begin
+wnteh:
+whCefPlik    : ');
+writeln[paramstr[1)3:
+writeETyp     ; '3;
+ifChanne!s=1 then writelnt'MONO'1 elsewnteln['STEREO'l;
+writeInfCzęstotiiwość: ',Freql;
+writeInCHość bajtów : 'iDATALen);
+writeln('-> Czas Es]: ',DATALen/frcq:5:2) end
+end.
+ROZDZIAŁ?	LITERATURA	]5]
+LITERATURA
+[l ] K.G. Beauchamp "Przetwarzanie sygnałów metodami analogowymi i cyfrowymi", WNT, 1978
+|2| N. Kilen "Z Turbo Pascalem w głąb systemu", LYNX-SFT, 1994 [3) P. Norton "The New Peter Norton Programmer^s guide to the IBM
+PC & PS/2", Microsoft Press, 1988 [4] A. Stolz "Le grand Iwre de la Sound Blaster", Micro Application.
+1992
+[5] R. Tadeusiewicz "Sygnał mowy", WKŁ, 1988 [6] A. Wojtkiewicz "Elementy syntezy Filtrów cyfrowych". WNT, 1984 [7] "Sound Blaster Deueloper Kit", Creative Labs Inc.. 1990

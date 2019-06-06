@@ -1,0 +1,527 @@
+Autor: Sławomir Prochocki
+Tytuł: Kontra
+
+Z "NF" 6/91
+
+Nadesłane na konkurs "Fantastyka'90"
+
+
+Tej nocy spałem naprawdę dobrze. Świadomość, że dzień 
+nareszcie rozwiąże wszystkie problemy, sprzyjała 
+zawieszeniu broni między mną a dręczącymi koszmarami. 
+Wstałem świeżutki, sprężystym krokiem udałem się do 
+łazienki, potem zrobiłem kawę i w czasie gdy stygła, 
+rozejrzałem się po pokoju. Prawdę mówiąc, najchętniej nie 
+zabierałbym z tego pomieszczenia nic poza szmacianym 
+miśkiem. Ale przez co najmniej kilka najbliższych dni będę 
+musiał żyć z tymi klamotami, które wezmę ze sobą. Dopiero 
+potem, z dala od tego miejsca, rozpocznę nową egzystencję. 
+   Nie spostrzegłem nic niezbędnego, podszedłem więc do leżącej 
+na dywanie otwartej walizki i wrzuciłem tam przybory 
+toaletowe. Przy biurku zerknąłem na zegarek; za piętnaście 
+dziewiąta, miałem przynajmniej dwadzieścia minut. Ostatnie 
+dwadzieścia minut, które spędzę jako biedny człowiek. Lekko 
+pogładziłem urządzenie, które miało mi pomóc w staniu się 
+bogaczem - mały komputerek firmy Sharp, przenośne cacko, na 
+które wydałem jedną trzecią rocznych zarobków u Sparka.
+   Spark był chciwym draniem prowadzącym dużą firmę 
+dealerską, płacił o wiele za mało, wymagał jeszcze więcej, 
+ale nie narzekał na brak pracowników. Praca w jego firmie, 
+zajmującej się obsługą rynku walut, pozwalała na poznanie 
+większości kruczków systemu giełdowego i dawała dostęp do 
+niemal wszystkich danych o transakcjach zawieranych na 
+giełdach świata. Z czasem każdy pracownik Sparka stawał się 
+niewyczerpanym źródłem informacji o giełdzie. Spark zmuszał 
+podwładnych do samodzielnego myślenia i stałego podnoszenia 
+kwalifikacji. Ludzie zarabiali kiepsko, ale po pewnym czasie 
+każdy z nich miał wielką szansę zostać konsultantem innego 
+przedsiębiorcy i zarobić duże pieniądze. Mimo to rotacja 
+kadr w firmie była niewielka, bo dostęp do aktualnych danych 
+z sekcji informacyjnej był nie lada atutem w zawieraniu 
+transakcji. Dlatego większość pracowników zadowalała się 
+pracą u niego, a dorabiała na pół etatu gdzie indziej.  
+   Pracowałem dla Sparka już ponad rok. Od samego początku 
+przyświecał mi jeden cel - zarobić jak najwięcej pieniędzy w 
+jak najkrótszym czasie. Chciałem poznać giełdę od podszewki, 
+znać jej najskrytsze tajemnice i mechanizmy. Na samym 
+początku postanowiłem spekulować akcjami, ale wkrótce z tego 
+zrezygnowałem. Takich chętnych było bardzo wielu i to o 
+niebo bardziej doświadczonych niż ja. Poza tym spekulacja 
+bez znajomości polityki była samobójstwem, a ja na polityce 
+nie znałem się za dobrze. Dlatego postanowiłem zarobić 
+pieniądze w o wiele pewniejszy sposób i dużo szybciej - 
+postanowiłem je ukraść.
+   Odkąd pamiętam, interesowały mnie komputery. Już w szkole 
+podstawowej potrafiłem spędzić kilka godzin przy 
+klawiaturze, grzebiąc w systemie operacyjnym lub próbując 
+skopiować jakiś wyjątkowo dobrze zabezpieczony program. 
+Później włamywałem się do sieci szkolnej kasując swoje 
+nieobecności na zajęciach. W college'u sprytne poprawki w 
+liście końcowych ocen pozwoliły mi ukończyć tę wyjątkowo 
+nudną szkołę, a do firmy Sparka dostałem się dokonując 
+niewielkiego makijażu w moich testach kontrolnych. Komputery 
+były wszędzie, ja zaś umiałem nakłonić je do uległości. W 
+chwili, w której postanowiłem zostać złodziejem, wiedziałem, 
+że pomogą mi właśnie komputery.
+   Zegarek podwójnym brzęczykiem dał znać, że minęła 
+dziewiąta. O kilka kilometrów od mojego mieszkania wielki 
+elektryczny zegar dawał sygnał do pracy paru tysiącom ludzi 
+- pracowników największej giełdy finansowej świata, giełdy 
+nowojorskiej. Był to także sygnał dla mnie. Bez pośpiechu 
+odstawiłem filiżankę i włączyłem komputer. Ekran radośnie 
+pojaśniał, zaszumiał malutki wentylatorek i wesoło zastukał 
+twardy dysk. Zgłosił się system. Wystukałem na klawiaturze 
+hasło ogólnoamerykańskiej sieci USNET i po chwili na ekranie 
+miałem potwierdzenie przyjęcia zgłoszenia. Od tej chwili mój 
+malutki komputerek stał się częścią olbrzymiego zespołu 
+różnych komputerów w całych Stanach. Pozostawało mi tylko 
+czekać.
+
+Dokładnie o godzinie 9.10.00 w terminalu numer 3 na stacji 
+obsługi transakcji walutowych nastąpi malutkie zwarcie. Nic 
+poważnego, żadnych snopów iskier i efektów akustycznych, w 
+których lubują się reżyserzy filmów. Komputery nie psują się 
+w sposób efektowny. Po prostu nagle przestają działać.
+Tak stanie się za chwilę z terminalem, w którym 
+osobiście dwa dni temu podczas pełnienia dyżuru założyłem 
+malutki kondensatorek z zegarem bateryjnym. Ekran komputera 
+ściemnieje i na nic zdadzą się nerwowe zabiegi operatora 
+najpierw zresetowania komputera, a potem próba wyłączenia i 
+włączenia maszyny. Wtedy naciśnie on przycisk wzywający 
+kontrolę techniczną giełdy i poczeka na fachowca elektronika. 
+Obaj spróbują przywrócić komputerowi zdolność działania, co 
+nie da żadnych efektów. Niemożliwa jest praca komputera ze 
+spalonym głównym procesorem i ponad połową kości pamięci. 
+Wtedy elektronik podniesie słuchawkę i zażąda trwałego 
+odłączenia uszkodzonego terminala od sieci. Główny operator 
+giełdy podziękuje losowi, że awaria zdarzyła się na 
+dwadzieścia minut przed startem pierwszych operacji 
+giełdowych, sięgnie do przełącznika numer trzy na tablicy 
+transakcji walutowych i przekręci go w lewo. Powinno to 
+spowodować odcięcie terminala o tym numerze od sieci aż do 
+czasu jego naprawienia i ponownego włączenia. Ale moje ręce 
+dwa dni temu zwarły na stałe przewody w tym przełączniku tak 
+sprytnie, że przekręcenie go w lewo spowoduje tylko 
+zgaśnięcie lampki kontrolnej na tablicy, natomiast nie 
+spowoduje odłączenia samego terminala. Teraz rozpocznie się 
+następna faza operacji. Mój komputer wyśle do programu 
+kontroli sieci giełdowej sygnał gotowości do pracy podając 
+numer kodowy terminala numer 3. Sieć zaakceptuje to jako 
+powrót terminala do sieci i wyśle sygnał kontrolny do 
+sprawdzenia tożsamości. Po otrzymaniu właściwej odpowiedzi 
+mój komputerek zostanie uznany za pełnoprawną końcówkę sieci 
+i będzie włączony do operacji giełdowych. Zdobycie numeru 
+kodowego terminala kosztowało mnie miesiąc prób i błędów. 
+Przypominało próbę zgadnięcia numeru automatu telefonicznego 
+w budce na rogu ulicy przez wykręcanie kolejnych numerów i 
+czekanie na dźwięk dzwonka.
+   Płytkę identyfikacyjną odpowiedzialną za wysłanie dobrego 
+hasła do centralnego komputera wymontowałem bezpośrednio z 
+terminala i zamontowałem w swoim Sharpie. Ponieważ centralny 
+komputer sprawdzał tożsamość terminala tylko w przypadku 
+powrotu do sieci po awarii, nie musiałem się obawiać o 
+ujawnienie kradzieży przed sprawdzeniem plomb na obudowach 
+terminali. Przy kradzieży płytki i montażu kondensatora 
+musiałem zerwać plombę na obudowie komputera, lecz dokładna 
+kontrola plomb odbywała się raz na tydzień w poniedziałek, a 
+dzisiaj była środa. Na wszelki wypadek założyłem na pudło 
+komputera imitację plomby tak, aby jakiś nadgorliwy operator 
+nie wszczął alarmu za wcześnie.
+   Minęła 9.10. Dałem jeszcze pięć minut operatorowi i 
+elektronikowi na dojście do wniosku, że awaria terminala 
+numer 3 jest jednak poważna. Plan był dobry, mimo to z 
+napięciem wpatrywałem się w ekran komputerka wystukując kod 
+ponownego wejścia do sieci. Akces został przyjęty. Teraz 
+byłem pełnoprawnym operatorem giełdy. Operacja okradzenia 
+kogoś za pomocą komputera nie jest już tak prosta jak kilka 
+lat temu. Nie wystarczy przelać na swoje konto milion
+dolarów i podjąć je z banku. Teraz nad poprawnością 
+przelewów czuwają programy strażnicze, gotowe natychmiast 
+podjąć alarm, gdy wykryją jakąś nieprawidłowość. Z reguły 
+pociąga to za sobą automatyczną blokadę konta i donos na 
+policję. Przyłapany delikwent zostaje pozbawiony pieniędzy i 
+jest karcony przez organy porządku. Dlatego musiałem 
+przygotować wszystko z daleko posuniętą perfekcją i 
+ostrożnością.
+   Na razie jednak musiałem sprężyć się i skoncentrować na 
+testach, jakich wykonania żądał centralny komputer. Przed 
+każdą bowiem giełdą operator musiał wykazać, że jest w pełni 
+sprawny, aby nie komplikować funkcjonowania rynku. Po 
+zakończeniu dnia każda transakcja była i tak badana przez 
+innego operatora; żeby firma obsługująca giełdę miała dobrą 
+markę, jej operatorzy musieli być OK.
+   Spark dbał o jakość swoich usług i stąd te testy wstępne. 
+Wykonałem je bez żadnego problemu tak, jak czyniłem to od 
+kilkunastu miesięcy. Centralny komputer przestał mnie męczyć 
+i przez ostatnie pięć minut przed 9.30 mogłem się 
+zrelaksować. A było przed czym. Chciałem w dwie godziny 
+zarobić około 5 milionów dolarów i zniknąć w sinej dali, 
+zanim kontrolerzy giełdy zbadają transakcje zawarte za 
+pośrednictwem mojego terminala.
+   Ekran komputerka pstryknął i zapełnił się tabelami kursów 
+różnych walut. Po chwili zaczęły napływać wezwania kupna i 
+sprzedaży od różnych abonentów. Zacząłem pracę. Wybierałem 
+operację i kontrahentów i załatwiałem sprawę. Wszystko było 
+proste i nudne jak flaki z olejem. W tym czasie kontrolerzy 
+bieżący sprawdzali poprawność transakcji dokonywanych za 
+pośrednictwem każdego z terminali. Wiedziałem, że robili to 
+najwyżej przez pierwsze pół godziny, potem zabierali się do 
+jedzenia i czytania komiksów. Wiedziałem, bo przez pierwsze 
+dwa miesiące sam byłem kontrolerem bieżącym, obżerałem się z 
+nudów kanapkami i czytałem "Supermana". Z tego, co 
+wiedziałem, zwyczaje te nie uległy zmianie.
+   Po godzinie (dałem półgodzinną rezerwę na wyjątkowo 
+gorliwego operatora) wysłałem sygnał chwilowego zawieszenia 
+(operator też czasem musiał iść do toalety) i wywołałem 
+program GREG. Nad jego stworzeniem biedziłem się przez 
+ostatnie pół roku. Wprowadzał minimalne zmiany w kursach 
+walut, zmiany na ostatnim miejscu po przecinku. Ponieważ 
+kursy i tak cały czas oscylowały, nie można było dostrzec 
+tych zmian bez porównania z obowiązującym w danej sekundzie 
+kursem ogólnym. A sekunda ta już minęła i kurs zdążył się 
+zmienić. Program GREG był inteligentny - ekstrapolował z 
+tendencji dotychczasowych kurs waluty i na tej podstawie 
+podejmował decyzje, kiedy należy opóźnić daną transakcję o 
+kilka sekund, a kiedy przyśpieszyć. Byłem naprawdę dumny z 
+tego programu i mogłem go zapewne sprzedać firmie Sparka za 
+ładnych kilka tysięcy dolarów lub grać na giełdzie sam. To 
+pierwsze jednak dawało za mało pieniędzy, drugie zaś 
+wymagało olbrzymich zasobów gotówki. Zdecydowanie 
+rozwiązanie, które wybrałem, było najbardziej efektywne.
+   Przez godzinę mojej dotychczasowej pracy GREG zbierał 
+dane i gdy tylko ponownie włączyłem się w giełdę, 
+program zaczął zarabiać dla mnie pieniądze. Sam wybierał 
+kolejne operacje i dokonywał obrotu gotówką. Siedziałem 
+przed ekranem z satysfakcją obserwując rosnącą nadwyżkę 
+na moim koncie. Program był tak skonstruowany, że po 
+uzbieraniu 5 mln dolarów wyłączał się sam, uprzednio 
+przekazując pieniądze na konto banku mieszczącego się dwie 
+ulice od mojego mieszkania. Nie muszę chyba dodawać, na 
+czyje nazwisko było to konto.
+   Program nie mógł zarobić ani centa więcej. W ten sposób 
+zabezpieczyłem się przed własną chciwością. Nadmierna 
+zachłanność prowadziłaby do niebezpiecznego zmniejszenia się 
+rezerwy czasowej koniecznej do pobrania pieniędzy i ucieczki 
+samolotem poza granice USA. Wiedziałem, że moje oszustwo 
+wyda się najprawdopodobniej w ciągu godziny od zamknięcia 
+giełdy. Po następnych trzydziestu minutach będą wiedzieli, 
+kto to zrobił i gdzie powędrowały ukradzione pieniądze. 
+Przekazanie moich danych i rysopisu na posterunki graniczne 
+to kwestia kilku minut, a wtedy wydostanie się z kraju 
+stałoby się nie lada problemem. Zamierzałem tego uniknąć 
+wiejąc, zanim kradzież się wyda. To zaś wymagało czasu.
+   Cichy brzęczyk w komputerku, moje serce zabiło 
+zdecydowanie mocniej. Na ekranie w okienku, gdzie program 
+podawał na bieżąco zarobioną sumę, widniała jak byk piątka z 
+sześcioma zerami. Miałem swoje pięć milionów. Teraz komputer 
+wyjdzie z sieci wysyłając sygnał przerwy. Po pewnym czasie 
+operator bieżący zdziwi się, że terminal numer 3 nie 
+wykonuje żadnych operacji i zadzwoni do operatora głównego, 
+ale ten odpowie, że terminal jest z powodu awarii nieczynny 
+i po sprawie. Czekałem. Nagle zorientowałem się, że coś 
+poszło nie tak. Komputer nie wychodził z sieci. Zamiast 
+pożegnalnego napisu BYE, BYE na ekranie pojawiły się nagle 
+nowe tabele i wykresy. Prawdę mówiąc zgłupiałem. Dane na 
+ekranie nie miały nic wspólnego z giełdą. Przeleciałem 
+wzrokiem po cyfrach - jakieś współrzędne, stopnie, minuty, 
+niezrozumiałe nazwy, chyba oznaczenia kodowe. Zagapiłem się 
+jak neandertalczyk na telewizor. W głowie kołatała mi jedna 
+myśl: coś jest źle. Nic nie wynikało z tego genialnego 
+spostrzeżenia i gapiłbym się tak dowolnie długo, gdyby nagle 
+na ekranie nie pojawił się wielkimi literami napis WHO ARE 
+YOU? i mniejszymi literami PLEASE, ENTER YOUR CODE...
+
+   Wpadłem w niezły pasztet. GREG przy próbie wyjścia z 
+sieci giełdy władował się w inną sieć. To mógł być zbieg 
+okoliczności. Identyczne hasło wywołania, brak wolnej linii 
+transmisji lub coś podobnego, coś co mogło zdarzyć się 
+każdemu. Ale zdarzyło się mnie i to w niekorzystnym 
+momencie. Trudno, miałem jeszcze sporo czasu, podam byle 
+jaki kod i ta obca sieć mnie wyrzuci. Komputerek zapiszczał 
+ponaglająco. W tej chwili spłynęła na mnie fala gorąca. Ja 
+już byłem w tej sieci, widziałem przecież dane i tabele. To 
+nie program wejściowy pytał mnie o kod, lecz program 
+strażniczy. Musiał zorientować się, że ktoś spoza kręgu 
+adresów listy kontaktów autoryzowanych grzebie się w danych 
+i przerwał podgląd, aby zapytać się o kod. Różnica była 
+zasadnicza. Bramkarz, czyli program wejściowy po otrzymaniu 
+złego kodu po prostu nie wpuszczał użytkownika do danych, 
+strażnik zaś zwykle podnosił alarm. Nowsze wersje dobrych 
+programów blokowały niepożądany terminal. Jeśli natknąłem 
+się na dobry program, będę miał trudności z odblokowaniem 
+mojego Sharpa. Musiałem zaś to zrobić, by wyjść z sieci 
+giełdy i zyskać dodatkowe dwie godziny, zanim zaczną mnie 
+szukać.
+   Mój komputer zapiszczał przeciągle, a napis na ekranie 
+począł mrugać. Wystukałem ponad dwudziestoliterowy ciąg 
+znaków i wcisnąłem ENTER. Ekran błysnął i zgasł. Na moment. 
+Teraz pojawił się inny napis, na którego widok poczułem, jak 
+usta same układają mi się do uśmiechu - YOU ARE DEAD! 
+Pamiętam, jak pierwszy raz dorwałem się do systemu 
+informacyjnego szpitala na Bronxie i wszystkie rubryki o 
+stanie chorych uzupełniłem podobną informacją. Byłem wtedy 
+trzynastoletnim gówniarzem i takie kawały wydawały mi się 
+wspaniałą zabawą. Trudno, nie wyjdę z sieci. Zmniejszało to 
+rezerwę czasową do trzech godzin, ale taka też mi wystarczy. 
+Sięgnąłem do wyłącznika komputera, gdy zza pleców doszedł 
+mnie trzask, a na dywan sypnęło iskrami. Obracając się 
+dostrzegłem kątem oka ruch w okolicach okna. Nie zwróciłem 
+na to uwagi i skoncentrowałem się na źródle iskier. To był 
+zamek w moich drzwiach wejściowych. Zwykły elektroniczny 
+zamek z ośmiocyfrowym kodem i podwójnym ryglem. Teraz oba 
+rygle zostały stopione w jeden, jakby ktoś pracował nad nimi 
+palnikiem acetylenowym. To, co wziąłem za iskry, musiało być 
+kroplami stopionego metalu z zamka. Zamek został zablokowany 
+w pozycji zamkniętej. Jeszcze tego brakowało. Jakieś 
+cholerne kiloamperowe zwarcie w obwodzie. Nie wiedziałem, że 
+coś takiego jest w ogóle możliwe. Przecież gdybym akurat 
+trzymał dłoń na klamce mogło mnie zabić. Trzęsącą ręką 
+sięgnąłem po telefon, aby przywołać dozorcę, gdy mój wzrok 
+padł na ekran nadal włączonego komputera. Spokojnie jaśniał 
+tam napis, którego treść wolno docierała do mojej 
+świadomości, a kiedy już dotarła, poczułem, jak miękną mi 
+nogi: YOUR DOOR IS CLOSED!                                   
+   Po chwili zapaliły się kolejne litery: YOUR WINDOWS ARE 
+CLOSED TOO.
+   Nieprzytomnie spojrzałem na okna. To był ten ruch, na 
+który nie zwróciłem uwagi. Podbiegłem i szarpnąłem za 
+obrotową klamkę. Nic. Szarpnąłem mocniej i klamka została mi 
+w ręku. Zacząłem się pocić. To on, ten pieprzony strażnik! 
+Odnalazł miejsce, z którego nastąpił kontakt z jego siecią i 
+dobrał mi się do dupy. Chciał mnie wyizolować i uwięzić do 
+chwili, gdy przybędą policjanci. Cholera, to nie było to, 
+czego pragnąłem najbardziej. Doskonale orientowałem się, co 
+się stało. Dzisiaj niemal każdy blok mieszkalny miał w 
+swoich podziemiach sporą metalową skrzynię. Był to centralny 
+komputer domu. Sterował ogrzewaniem, sprawdzał poprawność 
+kodów otwierających drzwi w mieszkaniach, zajmował się 
+klimatyzacją, utrzymaniem odpowiedniej temperatury w rurach 
+z ciepłą wodą i setką innych czynności ważnych dla 
+poprawnego i ekonomicznego funkcjonowania bloku jako 
+jednostki w strukturze urbanizacyjnej miasta.
+   Program strażniczy dobrał się do naszego komputera 
+mieszkalnego i spowodował, że ten podał wysokie napięcie na 
+mój zamek w drzwiach. Prąd o wielkim natężeniu 
+stopił rygle w jedną masę. Jednocześnie fałszywa informacja 
+o warunkach zewnętrznych spowodowała zamknięcie i 
+uszczelnienie okien. Mogło to być na przykład ostrzeżenie o 
+skażeniu chemicznym obszaru. Ponieważ centralą telefoniczną 
+też sterował komputer, strażnik mógł się tam włamać i 
+spowodować blokadę mojego telefonu. Wszystko to było możliwe 
+pod jednym warunkiem - trzeba było mieć na to co najmniej 
+tydzień. Oba systemy były do złamania, ale miały całkiem 
+niezłe zabezpieczenia i obejście ich wymagało nie lada pracy 
+oraz przede wszystkim czasu. Trzeba było bowiem działać 
+niesłychanie ostrożnie i delikatnie. Programy strażnicze w 
+tych systemach podnosiły larum o byle co i cała robota szła 
+na marne. Sam próbowałem to kiedyś robić i choć jestem 
+całkiem niezły w te klocki, nie udało mi się wiele zwojować 
+z moim komputerem mieszkalnym. Ten program strażniczy musiał 
+mieć albo niesłychaną moc albo nie potrzebował wcale 
+włamywać się do innych systemów. Miał po prostu zapewniony 
+akces do wszystkich tych sieci. To ostatnie znaczyło, że był 
+to program NSA - Agencji Bezpieczeństwa USA. Poczułem wielką 
+kroplę potu wędrującą mi po plecach. NSA oznaczało poważne 
+kłopoty. Gdyby rzecz się wydała, większa kara groziła za 
+włamanie się do ich sieci niż za kradzież pieniędzy. Wniosek 
+był jeden: musiałem pryskać, odebrać swoje pieniądze i 
+jechać na lotnisko. Za półtorej godziny miałem samolot do 
+Madrytu i nie chciałem się spóźnić. Raczej nie wierząc, by 
+to coś dało, podniosłem słuchawkę telefonu. Oczywiście, tym 
+też się zajął - telefon był głuchy jak pień tysiącletniego 
+dębu. Stąd pomocy nie otrzymam. Rozejrzałem się po pokoju. 
+Właściwie miałem tylko jedną drogę ucieczki - okno. 
+Mieszkałem, co prawda, na ósmym piętrze, ale balkon sąsiada 
+był zaledwie o metr od mojego. Wystarczyło rozbić 
+zatrzaśniętą szybę i przeskoczyć głęboką, choć wąską 
+przepaść. Podniosłem z podłogi taboret, wziąłem potężny 
+zamach i zamarłem w kretyńskiej pozie statuy wolności, tyle
+że zamiast znicza w ręce dzierżyłem krzesełko.
+
+Zawsze miałem czuły węch.
+   Odkąd pamiętam, potrafiłem wywąchać w domu każde, choćby 
+nie wiem jak dobrze ukryte, łakocie. Doprowadzało to do 
+szału rodziców znajdujących mnie często radośnie 
+umazanego czekoladą lub masłem orzechowym. Teraz powonienie 
+uratowało mi życie. Poczułem bowiem zapach gazu. Ledwo 
+uchwytny, rozrzedzony, ale mój nos już złapał ten zapach i 
+przekazał mi odpowiedni sygnał. Postawiłem taboret na 
+podłodze i poszedłem do kuchni. Gdy tylko przekroczyłem jej 
+drzwi, zapach stał się o wiele intensywniejszy. I nic 
+dziwnego. Wyraźnie słyszałem syk uchodzącego gazu. Dochodził 
+z mojej kuchenki, co było o tyle dziwne, że wszystkie pięć 
+pokręteł były ustawione w pozycji zamkniętej. A jednak gaz 
+uciekał przez palniki w kuchence. Już przed wizytą w kuchni 
+było mi gorąco z wrażenia, tak gorąco, że nie mogło być 
+bardziej. Teraz przekonałem się, że tamto uczucie było jak 
+arktyczna zima przy upale Sahary. Ten cholerny program 
+strażniczy naprawdę chciał mnie zabić. Dążył do tego z 
+precyzją i konsekwencją. Uwięził mnie najpierw w 
+mieszkaniu, a teraz załatwiał mnie gazem. Dorwał się do 
+podprogramu regulującego ciśnienie gazu w rurach domu i 
+zwiększył je do maksimum. Zawory w kuchence puściły i gaz 
+zaczął się ulatniać. Kiedy będzie go dość, strażnik 
+spowoduje zapewne zwarcie w którymś z dziesiątków obwodów 
+oplatających moje mieszkanie, parę iskier i za chwilę 
+powitam Świętego Piotra wyniesiony ku niebu potężną 
+eksplozją. Cholernie cwany plan. Z tego, co zostanie z 
+mojego mieszkania, nie da się nic wywnioskować - wybuch 
+zatrze wszelkie ślady, zniszczy każdą wiadomość czy poszlakę 
+mogącą prowadzić w stronę NSA.
+   Mimo przerażenia poczułem nagle podziw dla programu i 
+tego, kto go stworzył. To musiał być wspaniały umysł, 
+genialny programista, być może nie jeden, lecz cały zespół.  
+Byłem teraz pewien, że gdybym rozbił szybę w oknie, program 
+odpowiednio zinterpretowałby spadek natężenia w obwodach 
+grzejnych szyby, które musiałbym przecież zniszczyć. Nie 
+wiedziałem, co on by zrobił wtedy. Być może, zaryzykowałby 
+wcześniejszą próbę wywołania eksplozji lub wybrałby inną, 
+równie niebezpieczną dla mnie opcję. Nie miałem pojęcia, ale 
+nie zamierzałem ryzykować. Wspiąłem się na stół kuchenny i 
+zamknąłem główny zawór na przewodzie gazowym. Zawór był 
+solidny i aby go zniszczyć, strażnik musiałby zwiększyć 
+ciśnienie gazu tak, że prędzej pękłyby rury w całym bloku 
+niż to zabezpieczenie. Rury w całym bloku! Poczułem, jak 
+włosy stają mi na głowie. Przecież ciśnienia w rurach 
+dostawczych nie da się zwiększyć wybiórczo. Taka była 
+konstrukcja sieci i koniec. To, co działo się u mnie, 
+musiało mieć miejsce w całym pionie mieszkalnym. A więc na 
+nic zamykanie dopływu gazu w moim mieszkaniu, pode mną i w 
+mieszkaniach wyżej. Z wolna dopełniał się szatański plan 
+programu-mordercy. Oznaczało to, że nie zginę tylko ja. W 
+eksplozji, która mogła lada chwila nastąpić, zginą wszyscy 
+mieszkańcy bloku i jeden Bóg wie, ilu jeszcze przechodniów.  
+   Co, do cholery, było w tych tabelach, że trzeba zabić 
+dziesiątki ludzi, aby nikt niepowołany o nich nie wiedział?  
+Wszystko jedno, co to było za gówno, nie miałem zamiaru za 
+nie umierać. Zeskoczyłem ze stołu o mało co nie łamiąc nogi 
+i pognałem do pokoju. Zatrzymałem się naprzeciw drzwi 
+wejściowych. Tędy nie było drogi ucieczki. Nawet Wielki 
+Arnold nic by nie zdziałał. Równie dobrze mogłem próbować 
+przebić się na wprost przez dzielącą mnie od korytarza 
+ścianę. Nie próbowałem. Okno też nie wchodziło w rachubę.  
+Nie mogłem uwierzyć, że nie ma wyjścia. Myśl! - powtarzałem 
+sobie na głos. Zaczęła ogarniać mnie panika. Czułem jej 
+macki oplatające w szybkim tempie mój umysł. Ręce zaczęły mi 
+latać, trząsłem się jak galareta na rowerze. Zacisnąłem 
+pięść i z całej siły rąbnąłem w ścianę. Pomogło. Na chwilę 
+mózg przestał pracować walcząc z bólem dłoni. Kiedy po kilku 
+sekundach ból nieco osłabł, poczułem się znowu sobą. Ręka 
+rwała mnie, jakbym stracił dwa palce, ale znowu mogłem 
+myśleć jasno. Z każdą chwilą przybliżała się śmierć. Lada 
+moment program uzna, że wystarczająco dużo gazu wydostało 
+się na zewnątrz, by eksplozja była dostatecznie silna i 
+wtedy wywoła ją. Z pokoju nie było wyjścia, łazienka też 
+odpadała, tam nie ma żadnych otworów poza odpływem w wannie 
+i ściekiem klozetowym - oba za wąskie dla średnio utuczonego 
+szczura. Co dopiero dla mnie!  
+   Wróciłem do kuchni. Nic, żadnej drogi na zewnątrz poza 
+malutkim wentylatorem i zsypem na śmieci. Rany boskie - zsyp 
+na śmieci! Jestem pewien, że pobiłem rekord świata w 
+szybkości demontażu pojemnika zsypowego jedną ręką - lewa 
+pięść była na razie nie do użytku. Ostatni ruch i przede mną 
+ziała czarna cuchnąca czeluść. Wiedziałem, że jeśli 
+zacznę się zastanawiać, nigdy się nie zdecyduję - skoczyłem 
+bez zastanowienia. Mając w perspektywie ponad dwadzieścia 
+metrów pionowego spadku żaden rozsądny człowiek nie 
+zdecydowałby się na ten krok. Ja nie znalazłem innego 
+wyjścia. Wlazłem w otwór nogami naprzód, starając się usiąść na 
+moment na brzegu, ale chora ręka ześliznęła się po ścianie i 
+poleciałem w czarną otchłań.
+   Żadnego druzgocącego zderzenia z twardym podłożem. Miękko 
+i łagodnie zjechałem pochyłym szybem i wpadłem po uszy w 
+stos puszek, papierów i szmat. To był cud. Z nieznanych 
+powodów projektanci budynku zdecydowali, że lepsze są 
+ukośnie montowane szyby zsypowe niż zajmujące o wiele mniej 
+miejsca szyby pionowe. Może wiązało się to z umiejscowieniem 
+wlotów do zsypu bezpośrednio w mieszkaniach, może chodziło o 
+redukcję hałasu? Ważne, że nadal żyłem.
+   Zanim zdążyłem się zdziwić i ucieszyć takim obrotem 
+sprawy, biegłem już do wyjścia z podziemi budynku. Po drodze 
+musiałem zrobić jeszcze jedną rzecz. Musiałem znaleźć główny 
+wyłącznik prądu w bloku. Program strażniczy nie wiedział, że 
+udało mi się wydostać z mieszkania, nie zaniecha wobec tego 
+dzieła zniszczenia. Mógł spowodować eksplozję tylko poprzez 
+wywołanie zwarcia. Odcinając prąd uniemożliwię mu to 
+dokumentnie.
+   Wiedziałem, gdzie jest ten pstryczek, od którego zależało 
+teraz życie kilkuset osób, wiedziałem dokładnie. Dokładne 
+plany budynku każdy jego lokator otrzymywał z chwilą 
+wprowadzenia się do mieszkania. Ale żaden plan nie 
+pokazywał, jak dotrzeć do wybranego miejsca startując z 
+kubła na śmieci. Biegłem po korytarzach kierując się 
+bardziej instynktem niż wiedzą. Wreszcie na jednej z 
+mijanych ścian zobaczyłem nad małą szklaną gablotką 
+upragniony napis: GŁÓWNY WYŁĄCZNIK ENERGETYCZNY. To było to! 
+Łokciem rozwaliłem szybkę, ująłem w zdrową dłoń plastykową 
+rączkę i niemal wyrywając ramię ze stawu szarpnąłem ją w 
+dół. Natychmiast zgasły wszystkie światła w korytarzu. To 
+samo musiało się dziać w całym bloku, odciąłem bowiem dopływ 
+energii elektrycznej na wszystkich kondygnacjach. Teraz 
+strażnik nie mógł już zrobić zwarcia i tym samym wysadzić 
+bloku w powietrze. Wygrałem!
+   Potykając się, po omacku dobrnąłem do tylnego wyjścia z 
+bloku. Ręka rwała jak szalona, byłem brudny i cuchnąłem 
+zsypem. Wszystkie moje rzeczy oprócz prawa jazdy i tego, co 
+miałem na sobie, zostały w zaryglowanym pokoju na górze. Za 
+parę godzin będę miał na karku policję, o ile wcześniej nie 
+dopadną mnie typy z NSA. Teraz naprawdę nie mieli innego 
+wyjścia niż zabicie mnie. O ile bowiem nie wiedziałem nic o 
+tajnych danych z ich sieci, to mogłem narobić niesamowitego 
+bałaganu posyłając swoją relację do prasy. Musiałem zniknąć 
+i to szybko. W banku dwie ulice dalej miałem na koncie 5 
+milionów dolarów. Gdybym jednak zjawił się w takim stanie 
+jak obecny, kasjer dla pewności wezwałby najpierw policję i 
+z szybkością policyjnego radiowozu znalazłbym się w pierdlu. 
+Po drodze wskoczyłem więc na piętnaście minut do publicznej 
+łaźni, gdzie umyłem się, a w tym czasie ekspresowa pralnia 
+uprała i wyprasowała moje ubranie. Zapłaciłem resztką 
+pieniędzy, jaka została mi po wykupieniu biletu lotniczego i 
+poszedłem do banku.
+
+Kasjer po spojrzeniu na czek zaprowadził mnie do zastępcy 
+dyrektora. Tam wymigując się od herbaty i wciąż podkreślając 
+brak czasu podpisałem jeszcze specjalną dyspozycję i 
+dostałem wreszcie pieniądze. Udało mi się nie przyjąć usług 
+biura ochrony banku na dostarczenie mnie z pieniędzmi w 
+bezpieczne miejsce i po dwudziestu minutach wyszedłem z 
+walizką pełną gotówki. Spojrzałem na zegarek. Do zamknięcia 
+giełdy pozostała niecała godzina. Po następnej zaczną mnie 
+szukać. Teoretycznie pozostało mi 120 minut na opuszczenie 
+kraju. Wiedziałem jednak, że nie mam już ani sekundy. Na 
+wszystkich portach lotniczych i przejściach granicznych 
+czekał na mnie jakiś facet z NSA. Czekał, aby zabić. I nie 
+było tam żadnego zsypu ani głównego wyłącznika. Prędzej czy 
+później będę musiał stawić czoło tym facetom. Ale na razie 
+byłem wolny. Z pewnością niedługo dowiedzą się, co zrobiłem 
+i ile pieniędzy ukradłem. Ale na banku trop się urwie. Będą 
+mnie szukali, to jasne. Jednak z taką kupą szmalcu mogłem 
+się zaszyć tak, że mnie nie znajdą. Przynajmniej nie od 
+razu. Po głowie chodziła mi myśl o jakimś nie za dużym i nie 
+za małym miasteczku przy granicy z Kanadą. Spokojne i 
+dostatnie życie, bez fajerwerków - to było coś dla mnie.
+   Ale już wtedy, gdy idąc po słonecznej stronie ulicy 
+rozważałem swoją przyszłość, wiedziałem, że to nie koniec 
+historii. Kiedyś, może nawet już niedługo, usiądę przy 
+klawiaturze dużo większego komputera niż mój Sharp. Spośród 
+milionów krążących w sieci programów odnajdę ten właściwy i 
+dobiorę się do niego tak, jak on dobrał się do mnie. Żaden 
+program nie działa bezbłędnie. Każdy ma jakąś lukę, choćby 
+jedną, najmniejszą. Przysiągłem sobie, że odnajdę ją w tym 
+programie i wedrę się przez nią do środka systemu. W jego 
+zakamarkach odnajdę wszystkie potrzebne kody i wtedy to ja 
+zabawię się w Boga. Wyczyszczę banki danych, wykasuję pamięć 
+i rozwalę zasilanie tak, że z centralnego komputera zostanie 
+kupa żużlu i dymiących drutów. Wtedy odeślę mu jego 
+prosty komunikat, choć po drugiej stronie nie będzie już 
+niczego ani nikogo, kto potrafiłby go odebrać. YOU ARE DEAD!
+   I nacisnę ENTER.
+                                     Sławomir Prochocki
+
+                     SŁAWOMIR PROCHOCKI
+Urodzony 24.01.1964 r. w Ełku. Absolwent Wydziału Fizyki 
+Uniwersytetu Warszawskiego, pracuje jako pośrednik handlu 
+komputerami. Czytelnik "Fantastyki" od pierwszego numeru. 
+"Kontra" jest jego literackim debiutem.
+                                                    (mp)
+

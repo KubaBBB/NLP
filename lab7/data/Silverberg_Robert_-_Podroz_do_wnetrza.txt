@@ -1,0 +1,678 @@
+Autor: Robert Silverberg
+Tytul: Podróż do wnętrza
+
+(Chiprunner)
+
+Z "NF" 2/92
+
+Miał piętnaście lat, ale wyglądał na 
+dziewięćdziesięciolatka, i to w dodatku marnie się 
+trzymającego. Znałem zarówno jego matkę, jak i ojca - 
+obecnie rozwiedzeni, pracowali w Krzemowej Dolinie i 
+zajmowali w swoich firmach bardzo eksponowane stanowiska.  
+Każde z osobna poprosiło mnie, żebym spróbował się nim 
+zająć. Jego skóra była błękitnoszara, ciasno opięta na 
+wystających kościach policzkowych, oczy także szare, duże, 
+głęboko osadzone, ramiona przypominały patyki, a wąskie usta 
+były zaciśnięte w grymasie wyrażającym irytację.  
+     Według informacji zawartych w leżącej przede mną na biurku 
+karcie miał sto siedemdziesiąt centymetrów wzrostu i ważył 
+trzydzieści trzy kilogramy. Chodził do trzeciej klasy jednej z 
+najlepszych prywatnych szkół średnich w okręgu Palo Alto. Jego 
+IQ wynosił 161, co widać było już na pierwszy rzut oka. 
+Stanowiło to dla mnie spore zaskoczenie, bowiem większość moich 
+pacjentów jest przygnębiona, zamknięta w sobie, niepewna i 
+nieśmiała, przypominając ledwo poruszające się zwłoki. W jego 
+przypadku o niczym takim nie mogło być mowy. Wkrótce okazało 
+się, że czekają na mnie jeszcze inne niespodzianki.
+     - Twoi rodzice powiedzieli mi, że zamierzasz zająć się 
+hardware'ową częścią przemysłu komputerowego - zacząłem zgodnie 
+ze standardową procedurą, polegającą na nawiązaniu z pacjentem 
+bliższego kontaktu.
+     Zbił mnie z tropu jednym kwaśnym spojrzeniem.
+     - Pan zawsze w ten sposób zaczyna? "Opowiedz mi o swoim 
+ulubionym hobby, chłopczyku?" Jeżeli nie ma pan nic przeciwko 
+temu, to lepiej darujmy sobie te bzdury i od razu przejdźmy do 
+rzeczy. Zdaje się, że chciał mnie pan zapytać o to, jak jem.
+     Zdumiało mnie, jak łatwo w ciągu trzydziestu sekund udało 
+mu się przejąć inicjatywę. Nie mogłem powstrzymać się od 
+porównania go z moimi innymi rozmówcami, nieszczęsnymi, 
+smutnymi istotami, z których musiałem wyciągać słowo po słowie.
+     - Szczerze mówiąc, chętnie porozmawiałbym także na temat 
+najnowszych osiągnięć w przemyśle komputerowym - odparłem, w 
+dalszym ciągu starając się zachować dobrotliwy ton.
+     - Wydaje mi się, że nie rozmawia pan o tym zbyt często, 
+bo inaczej nie użyłby pan zwrotu "hardware'owa część", ani 
+nawet "przemysł komputerowy". My już nie stosujemy takich 
+wyświechtanych określeń. - W jego wysokim głosie wyraźnie 
+słychać było tłumiony z trudem gniew. - Dalej, doktorze, 
+chwyćmy od razu byka za rogi; uważa pan, że cierpię na 
+anoreksję, prawda?  
+     - Cóż...
+     - Wiem wszystko o anoreksji. To choroba psychiczna 
+rozwijająca się na podkładzie próżności, na którą zapadają 
+przede wszystkim dziewczęta. Głodzą się, ponieważ chcą być 
+piękne, a ciągle im się wydaje, że są za grube. Ja nie 
+jestem próżny, doktorze, a poza tym nie jestem dziewczyną. 
+Nawet pan powinien już chyba to zauważyć.
+     - Timothy...
+     - Chcę panu jasno i wyraźnie powiedzieć, że nie mam 
+żadnych kłopotów z jedzeniem i że nie cierpię na nic, co 
+kwalifikowałoby mnie do czubków. Cały czas doskonale zdaję 
+sobie sprawę z tego, co robię. Przyszedłem tu tylko po to, żeby 
+przestała mnie dręczyć matka, która wbiła sobie do głowy, że 
+chcę zagłodzić się na śmierć. Kazała mi się do pana 
+zgłosić, więc jestem, jasne?
+     - Jasne - odparłem i wstałem z fotela. Jestem wysokim 
+mężczyzną o potężnych ramionach i gdy trzeba, potrafię sprawiać 
+wrażenie jeszcze potężniejszego. Udało mi się uzyskać to, co 
+chciałem, bowiem przez twarz Timothy'ego przemknął cień 
+strachu. Czasem, kiedy terapeucie zależy na narzuceniu swojego 
+autorytetu, najlepiej skutkują  właśnie takie, najprostsze 
+metody. - A teraz pomówmy o jedzeniu, Timothy. Co jadłeś 
+dzisiaj na obiad?
+     Wzruszył ramionami.
+     - Kawałek chleba i trochę sałaty.
+     - To wszystko?
+     - Jeszcze szklankę wody.
+     - A na śniadanie?
+     - Nie jadam śniadań.
+     - Ale za to z pewnością zjesz obfitą kolację?
+     - Może jakąś rybę, jeszcze nie wiem. Moim zdaniem 
+jedzenie to nic ciekawego.  
+     Skinąłem głową.
+     - Timothy, czy mógłbyś pracować na swoim komputerze, 
+gdybyś nie włączył go do sieci?
+     - To dosyć protekcjonalne pytanie, doktorze.
+     - Rzeczywiście. W takim razie zapytam cię wprost: czy 
+myślisz, że możesz zmusić swoje ciało do działania, nie 
+dostarczając mu paliwa?
+     - Moje ciało działa całkiem dobrze - odparł buntowniczym 
+tonem.
+     - Doprawdy? A powiedz mi, jaki sport uprawiasz?
+     - Sport? - powtórzył z takim wyrazem twarzy, jakby 
+usłyszał to słowo po raz pierwszy w życiu.
+     - Chyba wiesz, że normalna waga osoby w twoim wieku i 
+twojego wzrostu powinna wynosić...
+     - We mnie nie ma nic normalnego, doktorze, więc dlaczego 
+akurat waga miałaby być normalna?
+     - Bo była, aż do chwili, kiedy nagle przestałeś jeść. 
+Twoja rodzina bardzo się o ciebie niepokoi.
+     - Nic mi nie będzie - powtórzył ponuro.
+     - Chyba chciałbyś być zdrowy, prawda?
+     Przez długą, mrożącą krew w żyłach chwilę wpatrywał się we 
+mnie oczami, w których wyraźnie widziałem - albo wydawało mi 
+się, że widzę - migoczące iskierki nienawiści.
+     - Chciałbym zniknąć - powiedział wreszcie.
+
+Tej nocy śniło mi się, że zniknąłem. Stałem nagi i samotny 
+na płycie szarego metalu pośrodku rozległej, pustej równiny 
+pod złowrogim niebem koloru miedzi i w pewnej chwili zacząłem 
+się zmniejszać. Bardzo często w podświadomość terapeuty zapada 
+to, co usłyszy w swoim gabinecie; nazywamy to kontr-
+przeniesieniem. Malałem coraz bardziej. Na powierzchni metalu 
+pojawiły się otwory, które wkrótce zamieniły się w kratery o 
+poszarpanych krawędziach, a potem w rozległe przepaści i 
+wąwozy. Nad moją głową migotał obłok świecącego pyłu. Ziarenka 
+piasku, plamki i drobinki pyłu przybrały rozmiary ogromnych 
+głazów. Robiłem się coraz mniejszy i mniejszy. Wokół mnie 
+pojawiły się jakieś stworzenia, z których istnienia nie 
+zdawałem sobie do tej pory sprawy, przerażające, włochate 
+potwory o niezliczonej liczbie odnóży. Czyniły groźne ruchy, ale 
+ja malałem nadal i wkrótce wszystkie zniknęły. W powietrzu 
+tańczyło mrowie drżących, goniących za sobą szaleńczymi 
+zygzakami cząsteczek. Wirowały, od czasu do czasu 
+uderzając w moje ciało, pozbawiając mnie na moment tchu w 
+piersi i popychając we wszystkie strony. Unosiłem się, 
+zataczałem i przewracałem, nie mogąc w żaden sposób nad tym 
+zapanować, czując na sobie pulsujące uderzenia oślepiającego 
+światła. Nic nie mogło powstrzymać mego szaleńczego 
+zmniejszania, aż wreszcie w pewnej chwili wymknąłem się 
+zupełnie z królestwa materii. Dokoła tłoczyły się promieniujące 
+obojętnym blaskiem twory - chyba protony i elektrony, ale skąd 
+mogłem wiedzieć? - wytwarzając co jakiś czas snopy iskier, 
+kojarzące mi się z wybuchami radosnego śmiechu. Powtarzały mi, 
+żebym natychmiast opuścił ich królestwo, bowiem w przeciwnym 
+razie czeka mnie okropna śmierć. Zobaczyć świat w ziarnku 
+piasku - napisał Blake. Tak. A Eliot powiedział: Pokażę ci 
+strach w garści pyłu. Kurczyłem się coraz bardziej, a potem 
+obudziłem się, przerażony, mokry od potu i zupełnie sam.
+
+Zazwyczaj pacjent jest całkowicie niekomunikatywny, więc 
+rozmawia się z rodzicami, rodzeństwem, nauczycielami, 
+przyjaciółmi, z każdym, kto może podsunąć sposób nawiązania 
+kontaktu. Anoreksja jest śmiertelnie groźną chorobą. 
+Zapadają na nią przede wszystkim dziewczęta lub kobiety w 
+wieku dwudziestu kilku lat; tracą kompletnie samoocenę i nie 
+odbierają żadnych bodźców zmuszających do poszukiwania i 
+spożywania żywności, jakie wysyła każde zdrowe ciało. 
+Jedzenie jest wrogiem i należy go za wszelką cenę unikać. 
+Jedzą tylko wtedy, kiedy są do tego zmuszone,i jak najmniej. 
+Nie zdają sobie sprawy, że robią się zatrważająco chude. 
+Kiedy każe im się rozebrać i stanąć przed lustrem, pokazują 
+na swoim wyniszczonym ciele wyimaginowane fałdy tłuszczu. 
+Czasem nawet intensywna terapia nie jest w stanie 
+powstrzymać tego procesu i po przekroczeniu pewnego punktu 
+zaczyna się nieodwracalny marsz ku śmierci.  
+     - Był zawsze nadzwyczaj inteligentny - powiedziała matka 
+Timothy'ego, pięćdziesięcioletnia, interesująca kobieta, zawsze 
+zadbana i elegancka, pełniąca w jednej z największych firm w 
+Krzemowej Dolinie funkcję wiceprezesa do spraw finansowych. 
+Poznałem ją w charakterystyczny dla Kalifornii sposób: jej 
+obecny mąż był kiedyś mężem mojej pierwszej żony. - Nauczyciele 
+mówili, że jest geniuszem. Ale zawsze był jakiś dziwny, jakby 
+zamyślony czy ponury. Nieraz zastanawiałam się, czy przypadkiem 
+czegoś nie zażywa, choć oczywiście dzieciaki już tego teraz nie 
+robią. - Timothy był jej jedynym dzieckiem z pierwszego 
+małżeństwa. - Jestem przerażona, kiedy widzę, jak się w ten 
+sposób umartwia. Za każdym razem mam ochotę potrząsnąć nim i 
+wcisnąć mu siłą do gardła lody, dżem, płatki na mleku czy 
+cokolwiek, a potem już tylko chcę go przytulić i płakać.
+     - Powinien już zacząć się golić - powiedział jego ojciec, 
+pracujący dla laboratoriów Stanford AI. Często grywaliśmy razem 
+w tenisa. - Ja w tym wieku już się goliłem i ty pewnie też. 
+Jakieś trzy lub cztery miesiące temu podejrzałem go 
+przypadkiem, kiedy brał prysznic. Jeszcze jest dzieckiem.  
+Piętnaście lat i ani jednego włoska na ciele. To przez to 
+niedożywienie, prawda? Brak wystarczającej ilości pokarmu 
+opóźnia rozwój fizyczny.  
+     - Cały czas próbuję coś w niego wmusić - wyznał jego 
+przyrodni brat Mick. - Przyjeżdża do nas na weekendy i 
+większość czasu spędza przy komputerze, ale nieraz udaje mi się 
+go gdzieś wyciągnąć. Kupujemy mu hot doga albo hamburgera, a on 
+kiwa głową, mówi dziękuję i udaje, że je, ale wyrzuca go 
+natychmiast, kiedy tylko wydaje mu się, że nikt na niego nie 
+patrzy. Naprawdę, jest strasznie dziwny. I okropny. Kiedy się 
+go widzi, z tymi jego sterczącymi żebrami, to zupełnie tak, 
+jakby patrzyło się na jakąś postać z horroru.
+     - Chciałbym zniknąć - powiedział Timothy.
+
+Przychodził w każdy wtorek i czwartek na jednogodzinne 
+seanse. Początkowo we wszystkim, co mówił, pobrzmiewała wyraźna 
+nuta wrogości i niedowierzania. Jako zupełny laik zadałem mu 
+kilka pytań na temat najnowszych osiągnięć w dziedzinie 
+komputerów, a on odpowiadał mi monosylabami, nie starając się 
+nawet ukryć pogardy dla mojej ignorancji. Po pewnym czasie 
+jednak niektóre pytania zaczęły wzbudzać jego zainteresowanie i 
+zdarzało się, że zapominał o swojej irytacji i udzielał mi 
+znacznie dłuższej odpowiedzi, zagłębiając się przy okazji w 
+różne dziedziny swego królestwa. Nawet nie starałem się udawać, 
+że cokolwiek rozumiem. Wiedziałem, że właśnie w taki sposób uda 
+mi się do niego najbardziej zbliżyć, ale zdawałem sobie 
+jednocześnie sprawę z tego, że gawędząc z nim przez godzinę o 
+komputerach nie zdołam uzyskać żadnych efektów terapeutycznych.
+     Kiedy tylko próbowałem skierować naszą rozmowę na temat 
+jedzenia, natychmiast robił się nadzwyczaj ostrożny, co zresztą 
+łatwo było przewidzieć. Dał mi jasno do zrozumienia, że to, co 
+i jak je, jest wyłącznie jego osobistą sprawą, której nie ma 
+ochoty omawiać ani ze mną, ani z kimkolwiek innym. Jednak 
+zawsze, kiedy o tym mówił, na jego twarzy pojawiał się blask 
+przywodzący na myśl wygłodniałego artystę Kafki; sprawiał 
+wrażenie dumnego ze swoich osiągnięć i wydawało się, jakby 
+nawet oczekiwał podziwu dla zmyślności, z jaką udawało mu się 
+unikać przyjmowania posiłków.
+     W przypadkach, kiedy mamy do czynienia z anoreksją, 
+nadmierna bezpośredniość na początkowych etapach terapii 
+może przynieść więcej szkody niż pożytku. Pacjentka  k o c h a  
+swoją chorobę i opiera się wszelkim próbom zmierzającym 
+do wyleczenia. W związku z tym moje rozmowy z Timothy'ym 
+dotyczyły głównie jego nauki, kolegów ze szkoły i 
+przyrodniego rodzeństwa. Postęp, jakiego dokonywałem, był 
+obezwładniająco powolny i przebiegał bardzo okrężną drogą.  
+Najgorsza była nie opuszczająca mnie ani na chwilę 
+świadomość, że nie mam dużo czasu. Wyniki przeprowadzanych w 
+szkole badań wskazywały na to, że chłopiec znajduje się w 
+bardzo poważnym stanie: nastąpiło znaczne osłabienie kości, 
+degeneracja tkanki mięśniowej, niekorzystne zmiany w 
+elektrolicie i wydzielaniu hormonów. Już niedługo zamiast 
+stosowania psychoterapii mogła zajść konieczność 
+hospitalizacji, a w gruncie rzeczy nikt nie był w stu 
+procentach pewien, czy i na to nie było już za późno.  
+     Timothy doskonale zdawał sobie sprawę z niebezpieczeństwa, 
+ale w ogóle się tym nie przejmował.
+     Dałem mu do zrozumienia, że nie zamierzam go do niczego 
+zmuszać. Powiedziałem mu wprost, że jeżeli o mnie chodzi, to 
+może nawet zagłodzić się na śmierć, jeśli tak bardzo mu na tym 
+zależy, ale jako psychologa mającego ambicje pomagania 
+ludziom, bardzo interesuje mnie ustalenie przyczyn jego 
+postępowania, i to wcale niekoniecznie po to, żeby go ratować, 
+lecz by pomóc innym pacjentom, którzy byliby uzyskaniem takiej 
+pomocy zainteresowani. Uwierzył mi, bowiem wyraz jego twarzy 
+uległ pewnej zmianie, zaś on sam złagodził nieco swoje 
+nastawienie. Było to już nasze piąte spotkanie i czułem, że 
+jego opór może lada chwila pęknąć. Zaczynał o mnie myśleć nie 
+jak o jednym z nieprzyjaciół, lecz jak o neutralnym, 
+pozbawionym emocji obserwatorze. Następny krok polegał na tym, 
+żeby zmusić go do dostrzeżenia we mnie sprzymierzeńca -  
+ja i ty, ramię w ramię przeciwko  n i m. Opowiedziałem mu 
+trochę o moim dzieciństwie i trudnej młodości, traktując to jak 
+kilka sznurków szklanych paciorków zaoferowanych z myślą o 
+wymianie.
+     - Dokąd chcesz pójść, kiedy uda ci się zniknąć? - 
+zapytałem wreszcie.
+
+Chwila okazała się dobrze dobrana, zaś rezultaty przeszły 
+moje najśmielsze oczekiwania.
+     - Czy wie pan, co to jest układ scalony?
+     - Oczywiście - odparłem.
+     - Tam właśnie wchodzę.
+     Nie "chciałbym tam wejść", tylko po prostu "wchodzę".
+     - Opowiedz mi o tym - poprosiłem.
+     - Naturę rzeczywistości można poznać tylko wtedy, jeśli 
+się jej dokładnie przyjrzeć - powiedział. - Najdokładniej, jak 
+tylko można. Weźmy na przykład te fantastyczne mikroprocesory - 
+są mniejsze od paznokcia, a mają możliwości pięćdziesiąt razy 
+większe od dawnych komputerów. Co się w nich  n a p r a w d ę  
+dzieje? Otóż ja właśnie wchodzę w nie i patrzę. To jakby coś w 
+rodzaju transu: koncentruję się coraz bardziej i bardziej, a 
+potem zaczynam schodzić w dół, do wnętrza, coraz głębiej. - 
+Roześmiał się ochryple. - Myśli pan pewnie, że to tylko jakiś 
+mistyczny bełkot, prawda? Waha się pan między dwoma 
+interpretacjami: jedną, że jestem po prostu postrzelonym 
+szczeniakiem i drugą, że ma pan do czynienia z nie lada 
+spryciarzem, karmiącym pana stekiem bzdur, żeby tylko nie 
+przejść do sedna sprawy. Czy nie mam racji, doktorze?
+     - Kilka tygodni temu miałem sen, w którym stawałem się 
+nieskończenie mały - odparłem. - Właściwie to był bardziej 
+koszmar niż sen, ale mimo to wręcz fascynujący, choć zarazem 
+okropny. Zszedłem aż do poziomu molekuł, stając się mniejszy od 
+ziaren piasku, bakterii, a potem nawet elektronów i protonów, 
+czy też czegoś, co według mnie nimi było.
+     - Jakie światło było tam, gdzie pan dotarł?
+     - Oślepiające. Bezustannie pulsowało.
+     - Jaki miało kolor?
+     - Wszystkie kolory na raz.
+     Spojrzał mi w oczy.
+     - To prawda!
+     - Widziałeś to samo?
+     - Tak. Nie. - Poruszył się niepewnie. - Jak mogę panu 
+powiedzieć, skoro pan też to widział? Tak, to było coś w 
+rodzaju pulsującego strumienia, składającego się ze wszystkich 
+możliwych kolorów.
+     - Opowiedz mi coś jeszcze.
+     - O czym?
+     - O tym, co czujesz, kiedy się zmniejszasz.
+     Popatrzył na mnie z wyższością jak nauczyciel na ucznia.
+     - Wie pan, jakiej wielkości jest układ scalony? Powiedzmy, 
+na przykład MOSFET?
+     - MOSFET?
+     - Tranzystor polowy typu metal-tlenek-półprzewodnik - 
+wyjaśnił. - Najnowsze mają średnicę jednego mikrometra, czyli 
+dziesięć do minus szóstej metra. Inaczej mówiąc, to jedna 
+milionowa metra. Są małe, ale daleko im jeszcze do poziomu 
+molekularnego. Na jednym mikrometrze można zmieścić około 
+dwustu ameb albo całą armię wirusów. Tam właśnie schodzę, do 
+korytarzy, w których bezustannie śmigają elektrony. Oczywiście, 
+nie widzę ich. Nie zobaczyłbym ich nawet wtedy, gdybym stał się 
+jeszcze mniejszy, tylko co najwyżej mógłbym wyliczyć ich 
+najbardziej prawdopodobne trasy, ale za to je  c z u j ę. 
+Biegam wraz z nimi korytarzami i kanałami, wciskając się we 
+wszystkie szpary i poznając teren, żebym mógł się czuć jak u 
+siebie w domu.
+     - Jak wyglądają elektrony?
+     - Podobno śniło się to panu, więc niech mi pan powie.
+     - Przypominają iskry albo obłok świecących, pędzących z 
+ogromną prędkością bąbelków.
+     - Wyczytał pan to w którymś ze swoich fachowych czasopism?
+     - Ja to widziałem - odparłem. - A raczej czułem w swoim 
+śnie.
+     - Tak jest naprawdę! - Był spocony, na policzki wystąpiły 
+mu intensywne rumieńce, dłonie wyraźnie drżały, a całe ciało 
+rozpaliło się metaboliczną gorączką, jakiej jeszcze u niego nie 
+widziałem. Wyglądał jak szkielet, który właśnie zszedł z kortu 
+po bardzo zaciętym meczu. - Czy jest pan pewien, że to był 
+tylko sen? - zapytał nachylając się do mnie i po raz pierwszy 
+pozwalając sobie na okazanie wobec mnie całej swojej słabości. 
+- Jest pan pewien, że nie był pan tam naprawdę?
+
+Kafka miał rację; osobie cierpiącej na anoreksję przede 
+wszystkim zależy na okazaniu swych nadzwyczajnych zdolności. 
+"Popatrzcie - mówi - jaka jestem niezwykła. Posiadam 
+niespotykany dar. Potrafię w pełni zapanować nad moim ciałem. 
+Odmawiając przyjmowania pokarmów przejęłam kontrolę nad moim 
+losem. Dysponuję nadzwyczajną siłą woli. Czy wy umiecie 
+narzucić sobie taką dyscyplinę? Czy potraficie to zrozumieć? 
+Oczywiście, że nie. Tylko ja jestem do tego zdolna." Nadmierna 
+otyłość stanowi tutaj jedynie mało istotny pretekst, bowiem 
+przede wszystkim chodzi o zademonstrowanie niezwykłych 
+umiejętności, udowodnienie, że jest się zdolnym osiągnąć coś 
+nadzwyczajnego i pokazanie światu, jak wyjątkowym jest się 
+człowiekiem. Surowa dieta stanowi tylko środek do osiągnięcia 
+innego celu: uzyskania kontroli nad swoim ciałem, życiem, a 
+wreszcie nad całym fizycznym światem.
+
+Zaczął nieco lepiej wyglądać. Na jego policzkach pojawił 
+się ślad rumieńców, zaś on sam wydawał się bardziej odprężony i 
+jakby mniej nerwowy. Odniosłem nawet wrażenie, jakby trochę 
+przytył, choć wyniki badań, jakie otrzymywałem od szkolnego 
+lekarza, nie potwierdzały moich obserwacji; czasem waga 
+wskazywała kilogram lub dwa więcej, czasem mniej, lecz nic nie 
+świadczyło o tym, że rozpoczął się stały przyrost ciężaru 
+ciała. Z rozmów z jego matką wynikało, że miewał okresy 
+nieznacznie większego zainteresowania jedzeniem, ale zaraz 
+potem następował powrót do ścisłej diety albo niechętnego, 
+powolnego przeżuwania. Z całą pewnością trudno było uznać te 
+wyniki za zachęcające, lecz miałem graniczące z pewnością 
+przeczucie, że zaczynam wreszcie nawiązywać z nim kontakt i że 
+znajduję się na początku drogi, którą uda mi się odciągnąć go 
+od skraju przepaści.
+
+- Po to, żeby się tam dostać, muszę się stać całkowicie 
+nieważki - powiedział Timothy. - Zupełnie dosłownie. To, co do 
+tej pory osiągnąłem, to dopiero początek. Muszę jeszcze stracić 
+całą resztę.
+     - Dopiero początek, powiadasz? - powtórzyłem do głębi 
+poruszony i zapisałem coś szybko w notesie.
+     - Jestem już w stanie wyruszyć w drogę, ale na razie nie 
+mogę nigdzie dotrzeć. W chwili, gdy docieram do strukturalnych 
+rejonów układu scalonego, napotykam barierę nie do przebycia.
+     - A więc jednak docierasz do jego wnętrza?
+     - Owszem, ale nie osiągam prawdziwego zrozumienia, na 
+którym mi przede wszystkim zależy. Być może wina leży po jego 
+stronie, a nie po mojej. Może osiągnąłbym to, co zamierzam, 
+gdybym miał do dyspozycji układ scalony wykorzystujący zjawisko 
+studni kwantowej, ale taki jeszcze nie został skonstruowany, a 
+nawet jeśli został, to i tak nie zdobędę do niego dostępu. Wie 
+pan, chciałbym zabrać się z falami prawdopodobieństwa. 
+Chciałbym być tak mały, żeby złapać się jakiegoś elektronu i 
+przebyć wraz z nim całą drogę. - Jego oczy płonęły wewnętrznym 
+blaskiem. - Jeśli pan chce, niech pan porozmawia o tym z moim 
+bratem albo z kimkolwiek. Ci, którzy tego nie rozumieją, 
+uważają mnie za wariata, zresztą podobnie jak pozostali.
+     - Mnie możesz o tym powiedzieć, Timothy.
+     - Układ scalony to w gruncie rzeczy miliardy 
+mikroskopijnych, stłoczonych jeden przy drugim tranzystorów. Są 
+wykonane z krzemu lub germanu, zanieczyszczonego dodatkami 
+boru, arsenu lub jeszcze innych pierwiastków. Po jednej stronie 
+warstwy izolacyjnej tranzystora znajdują się cząsteczki typu n, 
+po drugiej typu p. Kiedy przez bramkę zaczyna dopływać prąd, 
+elektrony przenoszą się na stronę p, ponieważ ma ona potencjał 
+dodatni, zaś cząsteczki naładowane dodatnio uciekają na stronę 
+n. W związku z tym każdy, nawet najprostszy obwód logiczny... - 
+przerwał. - Nadąża pan?
+     - Mniej więcej. Powiedz mi, co czujesz, kiedy zaczynasz 
+się zagłębiać do wnętrza układu.
+
+Na początku jest nagłe poruszenie i przypływ ekstatycznej 
+siły; nie ma mowy o żadnym spadaniu, raczej już o unoszeniu się 
+w przestrzeni. Podłoga znika z pola widzenia, a w chwilę potem 
+nadchodzi niewyobrażalne zwielokrotnienie percepcji - w jeszcze 
+przed chwilą pustym, zdawałoby się, powietrzu, zaczynają 
+tańczyć drobinki pyłu, zaś światło nabiera zupełnie nowych 
+cech, odbijając się i migocząc w niesamowity sposób. Świat 
+zaczyna się zmieniać. Znajome kształty - stół, krzesło, 
+komputer - znikają w miarę jak obserwator zbliża się do samej 
+ich istoty, dostrzegając złożoną strukturę i urozmaicenie 
+powierzchni. To już nie las, a poszczególne drzewa. Wszystko 
+jest zrobione z czegoś, ale nic nie jest jednolicie solidne. 
+Drewno i metal zamieniają się w labirynty włókien, sieci i 
+połączeń. Otwierają się coraz to nowe wąwozy i bezdenne 
+przepaści. Wędrowiec zbliża się do nich, niesiony niczym piórko 
+podmuchami molekularnego wiatru.
+     Nie jest to łatwa podróż. Świat staje się coraz bardziej 
+ziarnisty. Trzeba przedzierać się przez niewidzialną zamieć 
+szalejących cząsteczek tlenu i azotu, hamującą każdy, 
+najmniejszy nawet krok. Przed wędrowcem leży stanowiący cel 
+jego wyprawy układ, błyszczący niczym promienista Valhalla. 
+Trzeba przestać myśleć o przeciwnościach i rozpocząć szaleńczy 
+bieg. Na niebie rozbłyskują gigantyczne tęcze, rozlewając 
+oślepiające strugi najczystszych barw i uderzając z siłą gotową 
+wyrzucić z orbit zabłąkane atomy. A potem... potem...
+     Układ pojawia się w całym swym przepychu, niczym 
+wzniesiona na ateńskiej równinie świątynia Zeusa. Olbrzymie, 
+jarzące się przyćmionym światłem kolumny, ziejące czernią 
+bramy, ciemne, kuszące korytarze, ukryte sanktuaria, do których 
+nie można dotrzeć, zaś ich istoty nie sposób nawet zrozumieć. 
+Wszędzie wokół pełno różnobarwnego światła. W powietrzu 
+rozbrzmiewa tajemnicza, podniosła muzyka. Podróżny czuje się 
+jak odkrywca stawiający pierwsze kroki w zaginionym świecie, 
+jednocześnie ani przez moment nie przestając się kurczyć. 
+Niedostrzegalne jeszcze przed chwilą szczegóły powiększają się 
+błyskawicznie, puchnąc niczym rosnące po deszczu, metalowe 
+grzyby i pną się coraz wyżej, żeby wreszcie całkowicie 
+przesłonić niebo. Wędrowiec jest już tak mały, że z trudem 
+udaje mu się przekroczyć próg, ale znalazłszy się we wnętrzu 
+może się poruszać ze znacznie większą swobodą. Znajduje się w 
+niezwykłym wąwozie, którego srebrzyste, pokryte licznymi 
+pęknięciami ściany wznoszą się wyżej niż sięga jego wzrok. 
+Zaczyna biec. Dysponuje niespożytą energią, a jego nogi 
+poruszają się niczym stalowe sprężyny. Za jego plecami wrota 
+otwierają się i zamykają, otwierają i zamykają; porywa go 
+wezbrany strumień i niesie naprzód, a on czuje, bo nie widzi, 
+wibracje atomów boru i krzemu, wyczuwa mijające go elektrony i 
+nie-elektrony, przyciągane do dodatnio lub ujemnie naładowanych 
+ścian wąwozu.
+     Ale to nie wszystko. Biegnie nadal, bowiem jest tu jeszcze 
+nieskończenie więcej, cały świat zamknięty w otaczającym go 
+świecie, leżący u jego stóp i drażniący go swoją 
+niedostępnością. Wiruje przed nim niczym cyklon, a on rzuciłby 
+się w jego środek, gdyby mógł, lecz powstrzymuje go jakaś 
+niewidzialna bariera, granica wyznaczająca kres jego wędrówki i 
+dokonań. Niczego nie pragnie tak bardzo, jak chwycić 
+przemykający obok elektron, wyrwać go z jego ścieżki i zajrzeć 
+mu do serca. Pragnie wejść do wnętrza atomu i odetchnąć 
+zamkniętym w jego wnętrzu powietrzem, a następnie zobaczyć 
+ukryte głęboko jądro, tęskni za widokiem mezonów, kwarków i 
+neutrin. Tyle jeszcze jest tych światów w światach, a on jest 
+duży, potwornie niezgrabny, niczym chwiejący się na nogach 
+olbrzym, niezdolny przedostać się na drugą stronę niewidzialnej 
+granicy...
+     Tylko dotąd i ani kroku dalej...
+     Ani kroku...
+
+Patrzył na mnie z drugiej strony biurka. Jego twarz była 
+mokra od potu, a cienka koszula przykleiła się w wielu miejscach 
+do skóry, która zupełnie straciła swój niezdrowy, ziemisty 
+odcień. Sprawiał wrażenie całkowicie przeistoczonego i wręcz 
+tryskającego życiem, bardziej niż ktokolwiek, kogo do tej pory 
+widziałem. W jego oczach płonął faustowski ogień i 
+wszechogarniająca żądza. Podobnie musieli wyglądać Magellan, 
+Newton i Galileusz. Jednak w jednej chwili wszystko to 
+zniknęło i znowu miałem przed sobą wymizerowanego chłopca, 
+chudego, przygarbionego i żałośnie kruchego.  
+
+Poszedłem do znajomego fizyka, przyjaciela ojca 
+Timothy'ego, prowadzącego badania na uniwersytecie. Nie 
+wspomniałem ani słowem o chłopcu.
+     - Co to jest "studnia kwantowa"? - zapytałem.
+     Spojrzał na mnie ze zdziwieniem.
+     - Gdzie o tym usłyszałeś?
+     - Od jednego ze znajomych, ale obawiam się, że nie bardzo 
+go zrozumiałem.
+     - To coś w rodzaju nadzwyczaj małego przełącznika - 
+powiedział. - Dzieli nas od niego jeszcze jakieś pięć, dziesięć 
+lat. Sam pomysł polega na tym, żeby do tej samej sieci 
+krystalicznej wprowadzić dwa różne, półprzewodzące materiały, 
+tworząc w ten sposób "supersieć" przypominającą nieco 
+trójwymiarową szachownicę. Przeciskające się między 
+poszczególnymi sześcianami elektrony mogłyby wówczas wykonywać 
+wszelkie operacje ze zwielokrotnioną prędkością.
+     - A jak duże byłoby to urządzenie w porównaniu z 
+dzisiejszymi układami scalonymi?
+     - Jego rozmiary mierzyłoby się w nanometrach, czyli w 
+miliardowych częściach metra - odparł. - Byłoby mniejsze od 
+wirusa, osiągając wielkość, poniżej której, według 
+teoretycznych wyliczeń, zanika zjawisko półprzewodzenia. 
+Jeszcze krok dalej i trzeba by już przejść na angstremy.
+     - Angstremy?
+     - Jedna dziesięciomiliardowa metra. Mierzy się w nich 
+rozmiary atomów.
+     - Aha... Dobrze. Czy mogę cię jeszcze o coś zapytać?
+     Na jego twarzy pojawił się wyraz lekko rozbawionej, 
+cierpliwej tolerancji.
+     - Czy ktoś wie, jak właściwie wygląda elektron?
+     - Jak  w y g l ą d a ?
+     - Chodzi mi o to, czy starano się je zobaczyć, może nawet 
+sfotografować...
+     - Wiesz, co to jest zasada nieoznaczoności?
+     - No... Nie bardzo.
+     - Elektrony są cholernie małe i mają masę rzędu... eee... 
+coś około dziewięć razy dziesięć do minus dwudziestej ósmej 
+grama. Po to, żeby cokolwiek zobaczyć, w dowolnym znaczeniu 
+tego słowa, potrzebujemy światła, bowiem widzimy właśnie dzięki 
+światłu emitowanemu przez dany obiekt lub pochodzącemu z innego 
+źródła i odbitemu przez niego. Najmniejsza jednostka światła, 
+jaką jest foton, posiada tak niską częstotliwość, że po prostu 
+zasłoni każdy elektron, jaki znajdzie się w jego pobliżu. Nie 
+możemy użyć promieniowania o wyższej częstotliwości, takiego 
+jak na przykład promienie gamma lub x, bowiem w miarę wzrostu 
+częstotliwości rośnie także energia, więc taki promień po 
+prostu wybiłby interesujący nas elektron nie wiadomo gdzie i 
+tyle byśmy go widzieli. Tak więc sam rozumiesz, że nie możemy 
+"zobaczyć" elektronu, bowiem już w chwili ustalania jego 
+pozycji nadalibyśmy mu nową prędkość, w wyniku czego 
+natychmiast zmieniłby swoją pozycję. Jedyne, co nam pozostaje, 
+to na podstawie szczegółowych obliczeń i rachunku 
+prawdopodobieństwa domyślać się, gdzie jest i jak szybko się 
+porusza. Mniej więcej właśnie na tym polega zasada 
+nieoznaczoności.
+     - Chcesz przez to powiedzieć, że zobaczyć elektron może 
+tylko ktoś, kto jest dokładnie jego wielkości lub nawet 
+mniejszy?
+     Zerknął na mnie z ukosa.
+     - Zdaje się, że to pytanie nie jest pozbawione sensu - 
+odparł. - Przypuszczam nawet, że mógłbym na nie odpowiedzieć 
+twierdząco, ale o czym my właściwie, do diabła, rozmawiamy?
+
+Tej nocy śniłem ponownie o olbrzymich, groteskowych 
+stworzeniach, jarzących się fluorescencyjnym blaskiem na tle 
+najczarniejszego z możliwych nieba. Miały szpony, macki i 
+tuziny oczu, a ich pękate, asymetryczne cielska były porośnięte 
+gęstymi, rudymi włosami. Niektóre posiadały grube pancerze, 
+inne zaś lśniące kolce, wysuwające się rzędami spod drżącej 
+skóry. Goniły mnie w tym pozbawionym powietrza świecie i 
+wszędzie, gdzie się skierowałem, widziałem ich coraz więcej i 
+coraz bliżej. W pewnej chwili ujrzałem, że ściany kosmosu 
+zaczynają się chwiać i rozpływać, niebo zatacza się jak pijane, 
+a przez szczeliny w ciemności wlewają się strugi jaskrawych, 
+wymieszanych ze sobą barw, splecione niczym wielkie łańcuchy. 
+Wciąż biegłem przed siebie, lecz potwory otaczały mnie ze 
+wszystkich stron, nie pozostawiając żadnej drogi ucieczki.
+
+Timothy nie przyszedł na spotkanie. Od kilku dni miałem 
+wrażenie, że oddala się ode mnie; często przez całą godzinę 
+siedział bez ruchu, nie odzywając się ani słowem i wpatrując 
+się we mnie z wnętrza hermetycznej kuli niedostępności. Uznałem 
+to za objaw pasywno-agresywnej fazy oporu, lecz kiedy nie 
+zjawił się o wyznaczonej porze, zaniepokoiłem się; taki otwarty 
+bunt nie był w jego stylu. Wszystko wskazywało na to, że trzeba 
+będzie sięgnąć po inne metody terapii - bezpośrednią 
+interwencję starszego, kochającego brata, czyli mnie, 
+terapię rodzinną lub nawet spotkania z udziałem nauczycieli 
+i kolegów.  Pomimo ostatnich, niekorzystnych zmian wciąż 
+jeszcze wydawało mi się, że zdołam dotrzeć do niego na czas, 
+ale w tym momencie miarka się przebrała. Nazajutrz 
+zadzwoniłem do jego matki, od której dowiedziałem się, że 
+Timothy został zabrany do szpitala, więc zaraz po porannych 
+godzinach przyjęć pojechałem go odwiedzić. Kiedy lekarz 
+dyżurny usłyszał, że jestem terapeutą i usiłowałem wyleczyć 
+go z anoreksji, zesztywniał i przybrał lodowaty ton. Nie 
+musiałem być telepatą, żeby wiedzieć, co myślał. "Niewiele 
+udało ci się osiągnąć, co?" 
+     - Są z nim rodzice - powiedział. - Zapytam, czy 
+zgodzą się, żeby pan wszedł. Jego stan jest bardzo poważny.
+     Okazało się, że byli tam wszyscy, łącznie z ojczymami, 
+macochami i dziećmi z kolejnych małżeństw. Timothy przypominał 
+woskową lalkę. Przyniesiono mu książki, kasety, a nawet 
+walizkowy komputer, ale wszystko było poupychane po kątach 
+łóżka. Leżące na środku ciało było tak wychudzone, że niemal 
+trudno je było dostrzec pod cienką kołdrą. Miał podłączoną 
+kroplówkę, a także całą masę innych kabelków i rurek
+prowadzących do ustawionych wokół łóżka aparatów. Nie spał, ale 
+wydawał się spoglądać na inny świat, być może świat 
+szalejących bakterii i drżących molekuł, który śnił mi się 
+kilka nocy temu. Odniosłem wrażenie, że się leciutko uśmiechał.
+     - Zemdlał podczas lekcji - szepnęła matka.
+     - Dokładnie w pracowni komputerowej - dodał ojciec z 
+nerwowym, zgrzytliwym chichotem. - Odzyskał przytomność dwie 
+godziny temu, ale bredził coś bez sensu.  
+     - On chce wejść do swojego komputera - oznajmił jeden z 
+chłopców. - To głupie, prawda? - No oko mógł mieć jakieś siedem 
+lat.
+     - Timothy umrze, Timothy umrze! - zanuciła jego 
+rówieśnica.
+     - Christopher! Bree! Uspokójcie się! - zareagowało 
+jednocześnie troje spośród rodziców.
+     - Czy zaczął reagować na kroplówkę? - zapytałem.
+     - Lekarze mówią, że nie - odparła matka. - Jest w 
+krytycznym stanie. W tym tygodniu schudł półtora kilograma. 
+Myśleliśmy, że je, ale on musiał chyba chować wszystko do 
+kieszeni. - Potrząsnęła głową. - Nie sposób było cały czas go 
+pilnować.
+     Patrzyła na mnie zimno, podobnie jak ojciec, a nawet 
+większość pozostałych osób. "To twoja wina. Liczyliśmy na 
+ciebie, mieliśmy nadzieję, że uda ci się mu pomóc" - mówiły ich 
+oczy. Co miałem im odpowiedzieć?  Wyleczyć można tylko tych, do 
+których można dotrzeć, zaś Timothy postanowił za wszelką cenę 
+pozostać poza moim zasięgiem. Mimo to boleśnie odczuwałem ich 
+pełen wyrzutu gniew.
+     - Widziałem już ludzi, którzy po leczeniu wychodzili ze 
+znacznie gorszego stanu - powiedziałem. - Musi odzyskać siły na 
+tyle, żeby być w stanie znowu ze mną rozmawiać. Jestem pewien, 
+że wtedy uda mi się doprowadzić go do porządku. Już prawie 
+przełamałem jego opór, kiedy...
+     Jasne, odrobina optymizmu nic nie kosztuje. Dałem im 
+wszystko, co mogłem: doświadczenie wypływające z kontaktów z 
+podobnymi przypadkami, kiedy to po ostrym kryzysie następowała 
+raptowna poprawa, i tak dalej, i tak dalej, dzieląc się bogatym 
+doświadczeniem wykształconego, mądrego człowieka. Nawet to na 
+nich podziałało. Po jakimś czasie nabrali graniczącego z 
+pewnością przekonania, że na policzkach chłopca pojawiły się 
+lekkie rumieńce, a on sam poruszył się lekko.  Uwierzyli, że 
+wkrótce dzięki maszynom tłoczącym do jego krwiobiegu 
+substancje odżywcze, których on z taką konsekwencją unikał, 
+odzyska przytomność.  
+     - Patrzcie! - mówili jeden przez drugiego. - Patrzcie, jak 
+porusza rękami! Patrzcie, jak oddycha! Na pewno wszystko będzie 
+dobrze.
+     Chyba nawet ja sam zacząłem w to wierzyć.
+     Potem jednak przypomniałem sobie jego słowa: "Po to, żeby 
+tam dotrzeć, muszę stać się całkowicie nieważki. To dopiero 
+początek. Muszę pozbyć się całej reszty.
+     Chciałbym zniknąć."
+
+Tej nocy miałem trzeci sen, szczegółowy, realistyczny, 
+niemal namacalny. Spadałem i biegłem jednocześnie, pracując 
+nogami jak maratończyk na czterdziestym drugim kilometrze, w 
+tym samym czasie pędząc przez pozbawioną powietrza pustkę w 
+kierunku srebrno-czarnej powierzchni jakiejś planety. Spadałem 
+bez końca, nie czując własnego ciężaru, po czym wylądowałem 
+miękko na powierzchni i natychmiast zacząłem biec, posuwając 
+się jednak nie naprzód, lecz w dół, między ustępującymi mi z 
+drogi atomami substancji, z której składał się grunt. W miarę
+jak schodziłem coraz niżej, robiłem się także coraz mniejszy i 
+mniejszy, aż wreszcie przypominałem zaledwie pędzącego przed 
+siebie, bezcielesnego ducha, nieważkie wspomnienie samego 
+siebie. Mimo to nie zatrzymywałem się, wnikając w kolejne 
+poziomy wolny od niewygodnego balastu ciała.
+
+Rano zadzwoniłem do szpitala. Timothy umarł wczesnym 
+świtem.
+
+     Czy zawiodłem? Być może tak, ale sądzę, że nikomu na moim 
+miejscu nie udałoby się odnieść sukcesu. Timothy przeniósł się 
+tam, gdzie chciał się przenieść, zaś siła jego woli była tak 
+wielka, że wszelkie próby przeciwstawienia się jej musiały być 
+dla niego jak nieistotne, pozbawione jakiegokolwiek znaczenia 
+brzęczenie owadów.
+     Tak więc udało mu się osiągnąć swój cel. Pozbył się 
+bezużytecznej skorupy. Ruszył w dół, biegnąc i unosząc się w 
+przestrzeni, aż do samego jądra, gdzie panuje absolutna wiedza 
+i nikt nigdy nie słyszał o czymś takim jak niepewność. Biegnie 
+wśród lśniących elektronów, dotarłszy wreszcie do wyznaczanego 
+miarą angstremów świata.
+                             Przełożył Arkadiusz Nakoniecznik
+
+                      ROBERT SILVERBERG
+Autor amerykański, urodzony  w r. 1935. Swą błyskotliwą 
+karierę rozpoczął jako niespełna dwudziestolatek. Ukończył 
+wydział literatury angielskiej na Uniwersytecie Columbia i w 
+tym samym roku otrzymał Hugo w kategorii najlepiej 
+zapowiadającego się młodego twórcy. Od tego czasu Silverberg 
+dostał wszystkie możliwe nagrody SF. Uważany jest za 
+wielkiego stylistę.
+   "Fantastyka" przedstawiła go opowiadaniem "Skrzydła Nocy" 
+(nr 5/85). "Podróż do wnętrza", którą prezentujemy Państwu 
+dzisiaj, Don Wollheim umieścił w swoim wyborze najlepszych 
+opowiadań roku 1990.  
+                                                       D.M.

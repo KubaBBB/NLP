@@ -1,0 +1,2603 @@
+Zadaniem niniejszego Leksykonu jest umożliwienie szybkiego odnalezienia opisu składni i odpowiedniego przykładu zastosowania potrzebnego polecenia pakietu RMAN w celu archiwizacji, odtworzenia lub odzyskania danych. Autorzy założyli, że Czytelnik jest zaznajomiony z podstawami obsługi baz danych Oracle oraz z zagadnieniami związanymi z tworzeniem kopii zapasowej i odzyskiwaniem danych. Wszystkie zamieszczone w niniejszej książce przykłady skryptów trybu wsadowego zostały utworzone w języku skryptowym systemu Unix.
+Tytuł oryginału: Oracle RMAN Pocket Reference Tłumaczenie: Bartłomiej Garbacz
+
+
+Oracle RMAN
+Leksykon kieszonkowy
+
+
+Wstęp
+Niniejsza książka jest leksykonem kieszonkowym pakietu Recovery Manager (RMAN) - narzędzia służącego do przeprowadzania wszelkich czynności związanych z archiwizowaniem i odzyskiwaniem danych w bazach danych Oracle. Nie stanowi ona jednak wyczerpującego kompendium wiedzy na temat archiwizowania i odzyskiwania danych. Zawarto tu natomiast przegląd architektury pakietu RMAN, w skrócie opisano metody archiwizowania i odzyskiwania danych za pomocą tego pakietu, przedstawiono zagadnienia związane z obsługą katalogu odzyskiwania (recovery catalog), a także zamieszczono diagramy składniowe poleceń pakietu RMAN.
+Zadaniem niniejszego Leksykonu jest umożliwienie szybkiego odnalezienia opisu składni i odpowiedniego przykładu zastosowania potrzebnego polecenia pakietu RMAN w celu archiwizacji, odtworzenia lub odzyskania danych. Autorzy założyli, że Czytelnik jest zaznajomiony z podstawami obsługi baz danych Oracle oraz z zagadnieniami związanymi z tworzeniem kopii zapasowej i odzyskiwaniem danych. Wszystkie zamieszczone w niniejszej książce przykłady skryptów trybu wsadowego zostały utworzone w języku skryptowym systemu Unix. Wiele z tych przykładów zawiera ścieżki dostępu odpowiadające środowisku pracy stosowanemu przez Autorów. Jeśli Czytelnik będzie opracowywał własne skrypty, musi je dostosować do środowiska pracy swojej aplikacji.
+Podziękowania
+Autorzy składają gorące podziękowania swojemu sprzymierzeńcowi, wydawcy Jonathanowi Gennick. Jego komentarze i sugestie w ogromnym stopniu wpłynęły na jakość i czytelność tej książki. Autorzy dziękują także recenzentom, wśród których znaleźli się: Jeff Cox, Tim Gorman, Dick Goulet, Mark Hampton, Steve Orr, Walt Weaver oraz JeremiahWilton.
+Uwagi
+Pisząc niniejszą książkę Autorzy starali się stosować do prawa Pareto* - dlatego położono szczególny nacisk na opisanie tych zagadnień, z którymi użytkownik najprawdopodobniej zetknie się podczas wykorzystywania pakietu RMAN. Nie omówiono tu wszystkich rodzajów środowiska pracy ani wszystkich scenariuszy archiwizowania i odzyskiwania danych, jakie stosować może administrator baz danych Oracle.
+W niniejszej książce opisano niektóre z najczęściej spotykanych scenariuszy, jednakże trzeba pamiętać, że sprawą o fundamentalnym znaczeniu jest dogłębne poznanie własnej implementacji pakietu RMAN. Jest to warunek zapewnienia sobie możliwości odzyskania każdej bazy danych, bez względu na rodzaj ewentualnej awarii. Nie można przecenić ważności regularnego testowania pakietu jako formy przygotowania do usuwania skutków nieprzewidywalnych awarii.
+Dzięki poprawnie skonfigurowanej implementacji pakietu oraz jego regularnemu testowaniu administrator bazy danych zyskuje pewność, że niezależnie od okoliczności zdoła on opanować sytuację.
+
+*Prawo Pareto (ang. Pareto's Law) nazywane jest także Zasadą 80:20 i mówi, że w każdej grupie pewnych elementów istotne elementy stanowią relatywnie mały podzbiór całości. W tym przypadku można sformułować je następująco: do rozwiązania 80% problemów związanych z wykorzystaniem pakietu RMAN wystarczy znać 20% jego możliwości" -przyp. tłum.
+Przyjęte konwencje
+WERSALIKI
+Wskazuje słowo kluczowe pakietu RMAN, słowo kluczowe języka SQL lub nazwę obiektu bazy danych.
+kursywa
+Stosowana dla nazw plików, nazw katalogów oraz adresów URL, w celu wyróżnienia fragmentu tekstu oraz przy pierwszym użyciu terminu technicznego, a także dla terminów w języku angielskim.
+czcionka o stałej szerokości
+Stosowana w przykładowych kodach programów.
+czcionka pogrubiona o stałej szerokości
+Wskazuje tekst wpisywany przez użytkownika w przykładach interakcji z systemem.
+kursywa o stałej szerokości
+Stosowana przy opisie składni poleceń lub w celu wskazania terminów definiowanych przez użytkownika.
+[ ]    - oznacza opis składni poleceń; stosowane w celu wskazania elementu opcjonalnego.
+{ }    - oznacza opis składni poleceń; stosowane w celu wskazania konieczności wyboru elementu.
+|      - oznacza opis składni poleceń, stosowane w celu oddzielenia od siebie elementów wymaganego wyboru.
+_     - oznacza opis składni poleceń, stosowane w celu określenia podkreślonej opcji jako domyślnej.
+S.O. - skrót od: system operacyjny.
+
+Architektura pakietu RMAN
+
+Recovery Manager (RMAN) jest programem narzędziowym, który umożliwia zarządzanie procesami tworzenia kopii zapasowych i odzyskiwania danych w bazach danych Oracle. Administratorzy często są niechętni i nie wykorzystują pakietu RMAN. Wynika to z jego zauważalnej złożoności oraz faktu, że przejmuje on kontrolę nad wykonywaniem zadań o krytycznym znaczeniu. Starsze metody archiwizowania i odzyskiwania danych są sprawdzone i godne zaufania, jednak stosowanie technologii RMAN umożliwia wykorzystywanie pewnych udogodnień.
+    Tworzenie przyrostowych kopii zapasowych, w przypadku których kopiuje się tylko te bloki danych, które zmieniły się od czasu ostatniej archiwizacji.
+   Przestrzenie tabel nie są przełączane w tryb backup, dlatego też nie tworzy się żadnych dodatkowych plików dziennika powtórzeń w czasie tworzenia kopii zapasowej otwartych plików danych (online backup).
+   Wykrywanie uszkodzonych bloków danych podczas archiwizacji danych.
+    Równoległe wykonywanie operacji wejścia-wyjścia.
+    Automatyczne rejestrowanie wszystkich operacji związanych z archiwizacją i odzyskiwaniem danych.
+   Wbudowane polecenia tworzenia raportów i list.
+Cechą szczególną architektury pakietu RMAN jest połączenie głównego programu wykonywalnego (narzędzia rman) oraz procesów działających w tle, które komunikują się z jedną lub większą ilością baz danych i z urządzeniami wejścia-wyjścia. Podstawowymi komponentami architektury pakietu RMAN są:
+ program wykonywalny RMAN;
+ procesy serwera;
+ kanały;
+ docelowa baza danych;
+ baza danych katalogu odzyskiwania (opcjonalnie);
+ warstwa obsługi nośników danych (media management layer) (opcjonalnie);
+ kopie zapasowe (backups), zbiory kopii zapasowych (backup sets) i elementy kopii zapasowych (backup pieces).
+Poniżej zamieszczono opis każdego z tych komponentów.
+
+Program wykonywalny RMAN
+
+Program wykonywalny pakietu RMAN, zwykle nazywany rman, nadzoruje wszelkie operacje archiwizacji i odzyskiwania danych.
+UWAGA
+Wykorzystywanie pakietu RMAN nie wymaga posiadania żadnych dodatkowych licencji -jest on standardowym narzędziem dostarczanym wraz z wersją instalacyjną Oracle 8.0.x, Oracle8i lub Oracle9i.
+
+Użytkownik podaje informacje o operacjach archiwizacji i odzyskiwania, które należy przeprowadzić. Następnie program wykonywalny łączy się z docelową bazą danych, wywołuje potrzebne procesy serwera, a potem wykonuje żądane operacje. W końcu program wykonywamy RMAN zapisuje te operacje w plikach kontrolnych docelowej bazy danych oraz w bazie danych katalogu odzyskiwania (jeśli ta opcja jest wykorzystywana):.
+
+Procesy serwera
+Procesy serwera pakietu RMAN (server processes) są procesami pracującymi w tle, uruchamianymi na serwerze i umożliwiającymi komunikację programu RMAN z bazami danych, a także z urządzeniami dyskowymi, taśmowymi lub innymi urządzeniami wejścia-wyjścia. Procesy serwera wykonują całą pracę związaną z tworzeniem kopii zapasowej lub odzyskiwaniem danych. Wykonywanie typowych operacji powoduje uruchomienie kilku procesów serwera.
+Procesy serwera są uruchamiane w następujących sytuacjach:
+   uruchomienie programu RMAN i łączenie się z docelową bazą danych;
+    łączenie się z bazą danych katalogu odzyskiwania (jeśli ta opcja jest wykorzystywana);
+   przydzielenie i otwarcie kanału wejścia-wyjścia podczas archiwizacji lub odzyskiwania danych.
+Kanały
+Kanał (channel) jest procesem serwera pakietu RMAN uruchamianym w razie zaistnienia konieczności komunikacji z urządzeniem wejścia-wyjścia takim, jak napęd dyskowy lub taśmowy.
+Kanał odczytuje i zapisuje pliki kopii zapasowej utworzonej przez program RMAN. Każde wydanie polecenia przydziału kanału (allocate channel) powoduje uruchomienie się odpowiedniego procesu na serwerze docelowej bazy danych. Podczas przydzielania kanałów możliwe jest zmienianie charakterystyk urządzeń wejścia-wyjścia, takich jak:
+   typ urządzenia wejścia-wyjścia, z którym związany jest odczyt lub zapis danych - zarówno dysku, jak i taśmy;
+    liczba procesów jednocześnie korzystających z urządzenia wejścia-wyjścia;
+   maksymalny rozmiar plików tworzonych na nośniku urządzenia wejścia-wyjścia;
+   maksymalna szybkość, z jaką czytane są pliki bazy- danych;
+   maksymalna liczba jednocześnie otwartych plików.
+
+Docelowa baza danych
+Docelowa baza danych (target database) jest bazą danych, na której program wykonywalny RMAN przeprowadza operacje tworzenia kopii zapasowych, odtwarzania i odzyskiwania danych. Baza ta zawiera pliki danych (datafiles), pliki kontrolne (control fileś) oraz archiwalne pliki dziennika powtórzeń (archived redo files), które są archiwizowane,- odtwarzane lub odzyskiwane. Warto pamiętać, że program RMAN nie tworzy kopii zapasowej aktywnych plików dziennika powtórzeń (online redo logs) docelowej bazy danych.
+
+Baza danych katalogu odzyskiwania
+Baza danych katalogu odzyskiwania (recovery catalog database) stanowi opcjonalne, wykorzystywane przez pakiet RMAN repozytorium informacji dotyczących operacji tworzenia kopii i odzyskiwania danych przeprowadzanych na docelowej bazie danych. Katalog odzyskiwania stanowią trzy elementy:
+    Oddzielna baza danych, określana jako baza danych katalogu (z poziomu docelowej bazy danych).
+    Schemat w bazie danych katalogu.
+   Tabele (wraz z obiektami pomocniczymi) w schemacie. Tabele te zawierają dane odnoszące się do operacji archiwizacją i odzyskiwania danych przeprowadzonych przez pakiet RMAN na bazie docelowej.
+Katalog jest bazą danych, którą zazwyczaj tworzy się na serwerze nie będącym serwerem bazy docelowej. Dzieje się tak ze względów bezpieczeństwa - dzięki temu ewentualna awaria serwera docelowej bazy danych nie przekreśla możliwości wykorzystania bazy danych katalogu odzyskiwania. Umieszczenie katalogu i docelowej bazy danych na tym samym serwerze może spowodować, że nawet pojedyncza awaria nośnika danych uniemożliwi odtworzenie docelowej bazy danych.
+Wewnątrz bazy danych katalogu znajduje się specjalny schemat zawierający tabele, gdzie przechowywane są informacje o operacjach wykonywanych przez pakiet RMAN związanych z archiwizowaniem i odzyskiwaniem danych. Informacje te dotyczą między innymi:
+    szczegółów odnoszących się do fizycznej struktury docelowej bazy danych;
+    dziennika operacji tworzenia kopii zapasowej plików danych, plików kontrolnych oraz archiwalnych plików dziennika powtórzeń docelowej bazy danych;
+    skryptów składowanych, w których są zawarte często wykonywane sekwencje poleceń pakietu RMAN.
+Stosowanie katalogu odzyskiwania jest opcjonalne. Kiedy program RMAN wykonuje pewne operacje związane z archiwizacją, informacje o tych operacjach są zapisywane w plikach kontrolnych docelowej bazy danych. Dlatego też stosowanie katalogu nie jest koniecznym warunkiem poprawnego działania pakietu RMAN. Jeśli jednak użytkownik wykorzystuje katalog odzyskiwania, program RMAN przechowuje tu dodatkowe informacje (nazywane często metadanymi - metadata) dotyczące zarchiwizowanych danych.
+
+UWAGA
+Częstym nieporozumieniem jest uważanie katalogu za miejsce przechowywania fizycznych plików kopii zapasowej docelowej bazy danych. W rzeczywistości katalog zawiera jedynie informacje o kopiach zapasowych docelowej bazy danych, a nie fizyczne pliki tej kopii.
+
+Wykorzystywanie katalogu daje największe możliwości stosowania różnych scenariuszy archiwizacji i odzyskiwania danych. Opcja ta pozwala na uzyskanie dostępu do sięgającej daleko wstecz historii archiwizacji oraz umożliwia zarządzanie wszystkimi operacjami archiwizowania i odzyskiwania danych z poziomu jednego repozytorium. Zastosowanie katalogu jest warunkiem wykorzystania wszystkich możliwości pakietu RMAN. Z tego też względu zaleca się uruchomienie tej opcji.
+
+UWAGA
+Baza danych katalogu odzyskiwania jest często określana jako katalog lub baza danych katalogu. W niniejszej książce wykorzystano obydwa terminy.
+
+Warstwa obsługi nośników danych
+Warstwa obsługi nośników danych (Media Management Layer, MML) jest oprogramowaniem pochodzącym od innych dostawców. Oprogramowanie to zarządza procesami odczytu i zapisu plików na taśmach. MML służy także do śledzenia rozdziału zapisywanych plików pomiędzy odpowiednie taśmy. Jeśli zachodzi potrzeba tworzenia kopii zapasowych bazy danych na taśmie, konieczne jest zastosowanie MML. Wykorzystanie pakietu do archiwizacji danych tylko na dysku pozwala na zrezygnowanie z MML.
+Narzędzia MML często stosuje się do archiwizacji plików systemowych serwera, na którym znajduje się system zarządzania bazą danych. Jeśli w danym środowisku pracy oprogramowanie MML już istnieje, możliwe jest tworzenie kopii zapasowych danych na taśmach. Wykorzystanie taśm do archiwizacji danych, do czego niezbędne jest oprogramowanie MML, daje następujące korzyści:
+   niższy koszt składowania dużych archiwów;
+    mniejsze ryzyko utraty danych zarówno z bazy, jak i plików archiwalnych. Wynika to z faktu, że utworzone kopie zapasowe nie są przechowywane na serwerze, na którym znajduje się docelowa baza danych.
+Podczas zapisywania plików kopii zapasowych na taśmach MML zapamiętuje rozdział tych plików pomiędzy odpowiednie taśmy. W przypadku konieczności odtworzenia danego pliku bazy danych program RMAN przekazuje do MML listę potrzebnych plików archiwalnych. Następnie MML określa, które taśmy zawierają wymagane pliki archiwalne, odtwarza je i przekazuje z powrotem do programu RMAN. W tym momencie możliwe jest odtworzenie wymaganego pliku bazy danych.
+Odpowiednie przygotowanie pakietu RMAN do współpracy z MML może okazać się najtrudniejszą i najbardziej skomplikowaną częścią całego procesu implementacji pakietu RMAN. Spowodowane jest to faktem, że stosowane oprogramowanie może pochodzić od kilku różnych dostawców. W takiej sytuacji znalezienie przyczyny zaistniałych problemów i ich rozwiązanie często sprawia duże trudności.
+
+Kopie zapasowe, zbiory kopii zapasowych i elementy kopii zapasowych
+Polecenie backup pakietu RMAN powoduje tworzenie zbiorów kopii zapasowych (backup sets), które są logicznie powiązanymi grupami fizycznie istniejących plików. Te fizycznie istniejące pliki, które program RMAN tworzy na nośniku danych, są z kolei nazywane elementami kopii zapasowej (backup pieces). Użytkownik pakietu RMAN musi poznać prawidłowe znaczenie tych terminów.
+
+Kopia zapasowa RMAN (RMAN backup)
+Jest to kopia zapasowa całości lub części odpowiedniej bazy danych. Powstaje ona w rezultacie wywołania polecenia backup pakietu RMAN. Kopia zapasowa składa się z jednego lub większej ilości zbiorów kopii zapasowych (backup sets).
+Zbiór kopii zapasowej (Backup set)
+Jest to logicznie powiązana grupa plików kopii zapasowej - stanowiących elementy kopii zapasowej (backup pieces} - które są tworzone w rezultacie wywołania polecenia backup pakietu RMAN. Zbiór kopii zapasowych jest wewnętrzną nazwą kolekcji plików związanych z utworzonym archiwum. Zbiór kopii zapasowych składa się z jednego lub więcej elementów kopii zapasowej.
+
+Element kopii zapasowej (Backup piece)
+Jest to fizycznie istniejący plik binarny tworzony przez pakiet RMAN w czasie archiwizacji danych. Elementy kopii zapa sowej są zapisywane na odpowiednim nośniku - dysku lub taśmie. Zawierają one bloki plików docelowej bazy danych, archiwalne pliki dziennika powtórzeń oraz pliki kontrolne.
+Tworzenie elementu kopii zapasowej z plików danych przez pakiet RMAN odpowiada następującym warunkom:
+   plik danych nie może być rozdzielony pomiędzy wiele* zbiorów kopii zapasowej;
+   plik danych może być rozdzielony pomiędzy elementy kopii zapasowej, o ile pozostaje w jednym zbiorze kopii zapasowej;
+    pliki danych i pliki kontrolne mogą być umieszczone w tym samym zbiorze kopii zapasowej;
+   archiwalne pliki dziennika powtórzeń nigdy nie są przechowywane w tych samych zbiorach kopii zapasowej, co pliki danych lub pliki kontrolne.
+RMAN jest jedynym narzędziem obsługującym elementy kopii zapasowej. Odtworzenie pliku z kopii zapasowej utworzonej przez pakiet RMAN jest możliwe jedynie za pomocą tego pakietu. Nie można samodzielnie zrekonstruować pliku bazy danych z elementów kopii zapasowej.
+
+Uruchamianie pakietu RMAN
+W niniejszym rozdziale przedstawiono wymagania, które trzeba spełnić przed zaimplementowaniem pakietu RMAN. Omówiono także sposób jego uruchamiania, a także sposób łączenia się z docelową bazą danych. Uwzględniono opis aplikacji z wykorzystaniem i bez wykorzystania katalogu odzyskiwania.
+
+Wymagania dotyczące docelowej bazy danych
+Jeżeli środowisko pracy bazy danych jest skonfigurowane poprawnie, Czytelnik może pominąć studiowanie tego podrozdziału.
+Połączenie się programu RMAN z docelową bazą danych jest możliwe po spełnieniu następujących warunków:
+   zdefiniowanie odpowiednich zmiennych systemowych;
+   posiadanie dostępu do konta użytkownika S.O. lub schematu użytkownika o uprawnieniach SYSDBA.
+Przed połączeniem się z bazą danych należy upewnić się, że zdefiniowano standardowe zmienne systemu Unix. Zmiennymi tymi są: ORACLE_SID, ORACLE_HOME, PATH, NLS_LANG oraz NLS_DATE_FORMAT. Określają one nazwę instancji bazy danych, ścieżkę dostępu do programu wykonywalnego pakietu RMAN oraz opisują zachowanie poleceń archiwizacji, odzyskiwania i raportowania.
+
+UWAGA
+Przed zaimplementowaniem pakietu RMAN trzeba zadbać o to, aby zmienna NLS_LANG wskazywała na zestaw znaków, w jakim utworzono docelową bazę danych. W przeciwnym wypadku mogą zaistnieć problemy podczas stosowania poleceń BACKUP, RESTORE oraz RECOVER.
+
+Oprócz odpowiedniego zdefiniowania zmiennych systemowych konieczne jest także posiadanie dostępu do konta użytkownika S.O. lub schematu użytkownika bazy danych o uprawnieniach SYSDBA. Jest to konieczny warunek uzyskania połączenia z docelową bazą danych, jeśli połączenie następuje za pomocą pakietu RMAN. Istnieją dwie metody udostępniania uprawnień SYSDBA:
+    lokalnie - poprzez uwierzytelnianie systemowe (O/S authentication);
+    zdalnie - poprzez plik haseł (passwordfile).
+Uwierzytelnianie systemowe jest definiowane podczas instalacji systemu Oracle. Tworzona jest wtedy grupa użytkowników systemu Unix. Użytkowników tych zazwyczaj nazywa się dba, a ich uprawnienia określane są jako SYSDBA. Często konto systemowe Unix, z którego korzysta się podczas instalowania systemu Oracle, nazywa się oracle. Zazwyczaj należy ono także do grupy dba, tak więc za pomocą tego konta zwykle można uruchomić program RMAN i uzyskać połączenie z docelową bazą danych.
+
+UWAGA
+Uwierzytelnianie systemowe umożliwia zestawienie lokalnego połączenia z docelową bazą danych bez konieczności podawania opcji AS SYSDBA, gdyż dla połączeń lokalnych RMAN automatycznie łączy się z docelową bazą danych z uprawnieniami SYSDBA.
+Wykorzystanie pliku haseł jest drugą metodą pozwalającą na zarządzanie bazą danych za pomocą uprawnień SYSDBA. Poniżej podano dwie główne przyczyny, dla których zaleca się ten sposób pracy:
+   Firma Oracle nie zaleca już stosowania polecenia CONNECT INTERNAL oraz narzędzia Server Manager.
+   Często konieczne jest zdalne sterowanie pakietem RMAN za pomocą połączenia sieciowego.
+W przypadku pracy w środowisku rozproszonym warto zapewnić sobie możliwość tworzenia kopii zapasowych wszystkich docelowych baz danych z jednego miejsca bez konieczności lokalnego logowania się na każdym serwerze. Jedynym sposobem prowadzenia takiego procesu jest wykorzystanie połączenia sieciowego. Zdalne sterowanie pakietem RMAN przez połączenie sieciowe jest możliwe po wykonaniu następujących czynności:
+   utworzenie pliku haseł;
+   umożliwienie zdalnego logowania użytkownikom korzystającym z pliku haseł.
+Utworzenie pliku haseł może przeprowadzić właściciel programów wchodzących w skład systemu Oracle lub użytkownik należący do grupy dba. W tym celu należy za pomocą polecenia Unix cd przejść do katalogu $ORACLE_HOME/dbs i wydać polecenie orapwd:
+$ orapwd file=orapwnazwasid password=haslo entries=n
+Powyższy przykład zawiera trzy zmienne definiowane przez użytkownika:
+nazwasid
+Nazwa pliku haseł docelowej bazy danych;
+hasło
+Hasło weryfikujące użytkownika SYS z uprawnieniami SYSDBA podczas próby połączenia się z docelową bazą danych;
+maksymalna liczba wpisów dozwolonych w plikach haseł dla użytkowników z uprawnieniami DBA albo OPER (parametr opcjonalny).
+Przykładowo, jeśli instancja danej bazy danych nosi nazwę brdstn, zakładane hasło brzmi patni oraz maksymalna liczba wpisów w pliku haseł nie może przekraczać 30, należy wydać następujące polecenie:
+$ cd $ORACLE_HOME/dbs
+$ orapwd file=orapwbrdstn password=patni entries=30
+Utworzony plik haseł otrzymuje nazwę orapwdbrdstn i jest umieszczany w katalogu $ORACLE_HOME/dbs.
+Po utworzeniu pliku haseł należy jeszcze umożliwić przeprowadzanie zdalnego logowania. W tym celu ustawia się wartość parametru inicjalizującego REMOTE_LOGIN_PASSWORDFILE na wartość exclusive,jak przedstawiono poniżej:
+remote_login_passwordfile = exclusive
+Ustawienie wartości exclusive umożliwia wykorzystywanie pliku haseł tylko przez jedną bazę danych i oznacza, że jego wpisy mogą dotyczyć także użytkowników innych, niż sys i internal.
+Po przeprowadzeniu wyżej opisanych czynności i posiadając uprawnienia SYSDBA można wykorzystać połączenie sieciowe w celu połączenia się z docelową bazą danych.
+Warto zwrócić uwagę, że plik haseł trzeba utworzyć tylko dla docelowej bazy danych, nie jest to natomiast konieczne dla bazy katalogu. Jest to spowodowane tym, że łączenie się z bazą docelową musi odbywać się z konta posiadającego uprawnienia SYSDBA. W przypadku zdalnego połączenia z bazą docelową uprawnienia SYSDBA są nadawane poprzez plik haseł. W przypadku katalogu jest inaczej - uprawnienia SYSDBA nie są wymagane, gdyż użytkownik loguje się jako właściciel schematu katalogu.
+Informacje o nadaniu użytkownikowi uprawnień SYSDBA można znaleźć za pomocą widoku V$PWFILE_USERS, na przykład:
+SQL> grant SYSDBA to rmanadmin;
+Grant succeeded.
+SQL> select * from v$pwfile_users where username='RMANADMIN';
+USERNAME 	SYSDB	SYSOP 
+RMANADMIN 	TRUE 	FALSE
+
+Wywoływanie programu wykonywalnego pakietu RMAN
+
+Praca z pakietem RMAN rozpoczyna się od wywołania pliku wykonywalnego. Po jego uruchomieniu pojawia się znak zachęty i z wiersza poleceń można wydawać komendy pakietu RMAN. Plik wykonywalny pakietu RMAN znajduje się razem z innymi plikami wykonywalnymi systemu Oracle w podkatalogu bin instalacji systemu Oracle.
+
+UWAGA
+Na potrzeby przykładów przedstawionych w niniejszym paragrafie zakłada się, że środowiskiem pracy jest system Unix oraz że użytkownik ma dostęp do konta oracle S.O.
+Wywołanie programu wykonywalnego pakietu RMAN następuje po wydaniu komendy rman z wiersza poleceń danego S.O. Pojawia się wówczas znak zachęty pakietu RMAN:
+$ rman
+Recovery Manager: Release 9.0.1.0.0 - Production 
+RMAN>
+W tym momencie można rozpocząć z wiersza poleceń wywoływanie komend języka pakietu RMAN w celu przeprowadzenia zadań związanych z tworzeniem kopii zapasowych lub odzyskiwaniem danych.
+Polecenie exit powoduje zakończenie działania programu wykonywalnego RMAN i powrót do wiersza poleceń danego S.O.:
+RMAN>  exit
+$
+Szczegółowy opis dostępnych poleceń znajduje się w punkcie Składnia poleceń wywoływanych z wiersza poleceń w dalszej części niniejszej książki.
+
+Łączenie z docelową bazą danych bez wykorzystania bazy danych katalogu odzyskiwania
+
+Najprostszym sposobem zastosowania pakietu RMAN jest połączenie z docelową bazą danych bez wykorzystania katalogu odzyskiwania. Przeprowadza się to przez podanie w wierszu poleceń parametru nocatalog.
+
+Uwierzytelnianie systemowe
+
+Aby połączyć się z docelową bazą danych korzystając z uwierzytelniania systemowego, używa się następującego polecenia:
+$   rman  target  /   nocatalog
+Recovery Manager: Release 9.0.1.0.0 - Production connected to target database: BRDSTN (DBID=664610428) using target database controlfile instead of recovery catalog
+Z uwierzytelniania systemowego można korzystać jedynie z poziomu konta użytkownika znajdującego się na tym samym serwerze, na którym znajduje się baza danych.
+
+UWAGA
+W przypadku systemów Oracle 8.0.x oraz Oracle8i łączenie się z docelową bazą danych bez wykorzystywania katalogu odzyskiwania wymaga podania parametru nocatalog. W odniesieniu do wersji Oracle9i opcja nocatalog jest domyślnym parametrem połączenia.
+
+Uwierzytelnianie z użyciem pliku haseł
+
+W przypadku łączenia się z bazą docelową przez połączenie sieciowe konieczne jest wykorzystanie łańcucha inicjalizacji połączenia (connect string). Warunkiem pomyślnego przeprowadzenia tej operacji jest wcześniejsze utworzenie pliku haseł dla docelowej bazy danych. Poniżej przedstawiono przykład połączenia się z bazą docelową za pomocą konta sys i hasła mooft:
+$ rman target / sys/mooft@brdstn nocatalog
+Recovery Manager: Release 9.0.1.0.0 - Production connected to target database: BRDSTN (DBID=664610428) using target database controlfile instead of recovery catalog
+W powyższym przykładzie brdstn jest nazwą usługi sieciowej (net service). Nazwy usług sieciowych są zazwyczaj zdefiniowane w pliku tnsnames.ora.
+
+Ukrywanie hasła
+Podawanie nazwy użytkownika oraz jego hasła w wierszu poleceń jest wygodne, ale bardzo ryzykowne ze względów bezpieczeństwa. W systemie Unix istnieje możliwość podglądania tego, co dany użytkownik pisze w wierszu poleceń. W tym celu wydaje się komendę ps. Na przykład:
+$ ps -ef | grep rman
+oracle 27681 21612  3 16:54:02 pts/5 0:03 rman target / sys/mooft
+Zatem efektem wydania komendy ps jest wyświetlenie całego polecenia rman wraz z nazwą użytkownika i hasłem. Aby uniknąć związanych z tym zagrożeń bezpieczeństwa aplikacji, nie należy podawać informacji potrzebnych do uzyskania połączenia w wierszu poleceń systemu operacyjnego. Samo łączenie z docelową bazą danych przeprowadza się dopiero po rozpoczęciu sesji RMAN. Na przykład:
+$ rman nocatalog
+Recovery Manager: Release 9.0.1.0.0 - Production RMAN> connect target / sys/mooft@brdstn
+connected to target database: BRDSTN (DBID=664610428) using target database controlfile instead of recovery catalog
+Łączenie z bazą danych z poziomu poleceń programu RMAN zabezpiecza przed sytuacją, w której informacja o haśle jest prezentowana na liście aktywnych procesów.
+
+Łączenie z docelową bazą danych oraz bazą danych katalogu odzyskiwania
+
+Jeśli w danej aplikacji wykorzystuje się katalog odzyskiwania, zwykle łączenie z bazą docelową oraz bazą katalogu odbywa się jednocześnie. Jest to konieczne, gdyż obydwie te bazy muszą stale posiadać aktualny zestaw informacji dotyczących przeprowadzanych operacji związanych z tworzeniem kopii zapasowych i odzyskiwaniem danych.
+Po załogowaniu się do serwera docelowej bazy danych dane połączenie z bazą danych katalogu odbywa się zazwyczaj poprzez połączenie sieciowe. Dzieje się tak, gdyż w przypadku aplikacji produkcyjnej baza katalogu nigdy nie powinna znajdować się na tym samym serwerze, co baza docelowa. Umieszczenie tych baz na jednym serwerze powoduje powstanie pojedynczego punktu awarii (single point of failure) i możliwe jest zaistnienie sytuacji, w której odzyskanie danych jest nieosiągalne.
+
+Uwierzytelnianie systemowe
+
+Na potrzeby poniższego przykładu zakłada się, że użytkownik jest załogowany do serwera docelowej bazy danych jako użytkownik oracle lub inny, który należy do grupy dba, oraz że istnieje baza danych katalogu odzyskiwania. Rozdział Wykorzystywanie katalogu odzyskiwania zawiera szczegóły dotyczące konfigurowania katalogu odzyskiwania.
+$ rman target / catalog rmancat/sholay@brdstnrc
+Recovery Manager: Release 9.0.1.0.0 - Production
+connected to target database: BRDSTN (DBID=664610428)
+connected to recovery catalog database
+W ten sposób uzyskuje się połączenie jednocześnie z bazą docelową i bazą katalogu. Można również najpierw wywołać program RMAN, a dopiero-potem wydać polecenia connect dla, odpowiednio, bazy danych katalogu oraz bazy docelowej:
+$ rman
+Recovery Manager: Release 9.0.1.0.0 - Production
+RMAN> connect catalog rmancat/sholay@brdstnrc
+connected to recovery catalog database
+RMAN> connect target /
+connected to target database: BRDSTN (DBID=3662736385)
+Wywoływanie poleceń connect dopiero z poziomu programu RMAN zabezpiecza przed sytuacją, w której hasła są prezentowane na liście procesów. Lista procesów jest dostępna dla każdego użytkownika S.O.
+
+Uwierzytelnianie z zastosowaniem pliku haseł
+
+Poniżej przedstawiono przykład uzyskiwania sieciowego połączenia z docelową bazą danych w przypadku stosowania pliku haseł. Należy zwrócić uwagę na nazwę usługi sieciowej podawanej w przypadku obydwu połączeń.
+$ rman
+Recovery Manager: Release 9.0.1.0.0 - Production 
+RMAN> connect target / sys/namstay@brdstn
+RMAN-06005: connected to target database: BRDSTN (DBID=3662736385)
+RMAN>  connect catalog  rmancat/sholay@brdstnrc
+RMAN-06008:   connected  to  recovery  catalog  database
+Kolejność łączenia się z tymi bazami nie ma znaczenia. Jednak przed rozpoczęciem wydawania poleceń pakietu RMAN muszą być nawiązane obydwa połączenia.
+
+Wykonywanie poleceń
+Przeprowadzanie jakichkolwiek operacji z poziomu programu RMAN jest możliwe pod warunkiem stosowania składni jego poleceń. Zbiór dostępnych komend jest dość liczny i przeprowadzenie jednej operacji często wymaga wykonania całej serii poleceń. Można tego dokonać wpisując komendy w wierszu poleceń programu RMAN lub wywołując je z poziomu skryptów S.O. lub skryptów pakietu RMAN.
+
+Wykonywanie komend
+wywoływanych z wiersza poleceń RMAN
+Najprostszym sposobem wywołania polecenia RMAN jest ręczne wpisanie go w wierszu poleceń programu. Zaleca się, aby w pierwszej kolejności zapoznać się z tą metodą. Umiejętność korzystania z pakietu RMAN poprzez ręczne wpisywanie jego poleceń jest cenna z następujących powodów:
+   Pojęcia mogą być redefmiowane.
+   W pewnych sytuacjach nie ma innej możliwości utworzenia kopii zapasowej lub odzyskania danych za pomocą pakietu RMAN.
+Innymi słowy, praca za pomocą narzędzia służącego do archiwizacji i odzyskiwania danych wymaga zrozumienia składni poleceń, na których opiera się jego działanie. W przeciwnym przypadku istnieje prawdopodobieństwo znalezienia się w sytuacji, kiedy odzyskanie danych jest uniemożliwione przez brak wiedzy dotyczącej sposobu zapisu listy konkretnych poleceń RMAN. Poniżej znajduje się prosty przykład wykonania pełnej kopii zapasowej plików danych na dysku poprzez ręczne wpisanie poleceń:
+$ rman nocatalog 
+Recovery Manager: Release 9.0.1.0.0 - Production 
+RMAN> connect target /
+connected to target database: BRDSTN (DBID=3662736385) using target database controlfile instead of recovery catalog
+RMAN> run {allocate channel d1 type disk;
+2> backup full format '/ora01/backup/rman_%d_%U.bus'
+3> database;}
+Efektem przeprowadzenia tej operacji jest wykonanie pełnej kopii zapasowej plików danych w katalogu /oraOl/backup dysku lokalnego.
+Przed wykonaniem kopii zapasowej otwartych plików danych (online backup) docelowa baza danych musi znajdować się w trybie archivelog. Poniżej przedstawiono przykład przełączania bazy danych w ten tryb:
+SQL> connect sys/heeraa as sysdba; 
+SQL> alter database archivelog;
+Nawet w razie bezbłędnego podania prostych komend pakiet RMAN prezentuje wiele związanych z nimi informacji. Czytelnik zauważył zapewne, że program RMAN analizuje składnię każdego z wpisanych wierszy. Dlatego po wprowadzeniu wyrażenia o niepoprawnej składni natychmiast jest prezentowana informacja o błędzie (error stack) i konieczne jest rozpoczęcie danej procedury od nowa. Poniżej przedstawiono przykład wpisania polecenia zawierającego błąd składniowy w drugim wierszu. Po wprowadzeniu tak sformułowanej komendy i wciśnięciu przycisku Enter program RMAN wyświetli następujące informacje:
+RMAN> run {allocate channel d1 type disk;
+2> backup ful format '/ora01/backup/rman_%t.bus;
+RMAN-00571:
+RMAN-00569: === ERROR MESSAGE STACK FOLLOWS ==== 
+RMAN-00571:
+RMAN-00579: the following error occurred at
+06/10/2001 13:08:39
+RMAN-00558: error encountered while parsing input commands
+RMAN-01005: syntax error: found "identifier":
+expecting one of: "archivelog, backup, backupset,
+channel, check, copies, controlfilecopy, cumulative, current, database, datafile, datafilecopy, device, diskratio, filesperset, format, full, force, incremental, keep, (, maxsetsize, nochecksum, noexclude, nokeep, not, parm, proxy, pool, skip, setsize, tablespace, tag, validate"
+RMAN-01008: the bad identifier was: ful
+RMAN-01007: at line 2 column 8 file: standard input
+Zatem po popełnieniu błędu najpierw należy zapoznać się z odpowiedzią programu RMAN, a dopiero potem wydać polecenie od nowa.
+
+UWAGA
+Można przyjąć, że jeśli po wydaniu jakiegoś polecenia programu RMAN nie ma informacji RMAN-00569: === ERROR MESSAGE STACK FOLLOWS ===, oznacza to pomyślne wykonanie tego polecenia.
+
+Wykonywanie komend pakietu RMAN zapisanych w pliku
+W tym paragrafie wyjaśniono zastosowanie poleceń programu RMAN zapisanych w pliku S.O. Wykonywanie poleceń z poziomu pliku pozwala na wielokrotne wykorzystywanie kodu (code reusability), co upraszcza wykonywanie poleceń w trybie wsadowym (batch mode).
+Aby wykonać polecenia pakietu RMAN z poziomu pliku należy:
+1.  Zapisać je w pliku tekstowym.
+2.   Spowodować ich wykonanie przez program RMAN.
+Najpierw należy utworzyć pusty plik za pomocą któregoś edytora tekstu (na przykład vi) i wpisać w nim kolejne polecenia programu RMAN. Komendy te powinny być takie same, jak komendy wpisywane w wierszu poleceń. Jako przykład można przedstawić plik o nazwie pelna_kopia.rmn, w którym umieszczono poniższy kod. Warto zauważyć, że warunkiem poprawnego działania poniższego skryptu jest istnienie katalogu o nazwie /ora01/backup.
+# Skrypt tworzy pełną kopie zapasową bazy danych. 
+run {
+# przydziel kanał
+allocate channel d1 type disk;
+#  wydaj  polecenie backup
+backup full  format   '/ora01/backup/rman_%d_%U.bus' 
+database;
+}
+UWAGA
+Komentarze w plikach poleceń programu RMAN rozpoczynają się znakiem #. Wszystko, co znajduje się za znakiem # w tym samym wierszu, jest komentarzem.
+
+Wykonanie skryptu nastąpi po wydaniu poniższego polecenia programu RMAN. Efektem wydania tego polecenia jest nawiązanie połączenia z bazą docelową* i równoczesne wywołanie skryptu:
+W tym przypadku katalog odzyskiwania nie jest używany -przyp. tłum.
+$ rman target / nocatalog @pelna_kopia.rmn log=pelna_kopia.log
+Po zakończeniu wykonywania skryptu można przejrzeć zawartość pliku pelna_kopia.log w celu sprawdzenia, czy zadanie zostało wykonane pomyślnie.
+Innym sposobem wykonania poleceń zapisanych w pliku S.O. jest podanie jego nazwy dopiero po uruchomieniu programu RMAN:
+$ rman nocatalog 
+RMAN> connect target / 
+RMAN> @pelna_kopia.rmn
+Umieszczanie poleceń RMAN w plikach S.O. jest wygodnym sposobem przechowywania i wykonywania skryptów użytkownika służących do tworzenia kopii zapasowych i odzyskiwania danych. Planując strategię archiwizacji i odzyskiwania danych warto uwzględniać także tworzenie skryptów systemowych, co pozwoli na zautomatyzowanie wykonywania często powtarzających się zadań.
+
+Wykonywanie poleceń języka SQL i systemu operacyjnego
+z poziomu programu RMAN
+
+Istnieją sytuacje, w których konieczne jest wykonywanie poleceń języka SQL z poziomu programu RMAN. W tym celu stosuje się komendę sql w linii poleceń RMAN. Na przykład:
+RMAN> sql "alter system switch logfile";
+Jeśli w poleceniu SQL występują pojedyncze znaki ', należy je podwoić (' '). Poniżej przedstawiono odpowiedni przykład:
+RMAN> sql "alter database datafile
+ ''/d0101/ordadta/brdstn/users_01.dbf'' offline";
+Można również wykonywać polecenia S.O. za pomocą podobnej techniki i komendy host:
+RMAN>   host   "Is";
+Niektóre z poleceń języka SQL, na przykład ALTER DATABASE, są bezpośrednio obsługiwane przez pakiet RMAN. Można wykonywać je bezpośrednio z linii poleceń programu RMAN, bez konieczności wcześniejszego wydania komendy sql. Na przykład:
+RMAN> alter database mount;
+Warto zwrócić uwagę, że z poziomu programu RMAN składnia SQL polecenia ALTER DATABASE nie jest w pełni obsługiwana. Rozdział Lista poleceń pakietu RMAN zawiera pełny opis składni polecenia ALTER DATABASE oferowanego przez pakiet RMAN.
+
+Uruchamianie programu RMAN z poziomu skryptów systemowych
+
+W przypadku środowiska systemu Unix przydatne jest także wykonywanie poleceń pakietu RMAN z poziomu skryptów systemowych. Przykładowo, wykonywanie zadań związanych z tworzeniem kopii zapasowych danych można zautomatyzować za pomocą narzędzia planującego działanie procesów (scheduling tool), takiego jak cron. Narzędzie to ma możliwość wywołania skryptu systemowego zawierającego polecenia pakietu RMAN.
+Podstawy skryptów systemowych
+Poniżej przedstawiono przykład wykonania poleceń pakietu RMAN z poziomu skryptu systemowego:
+#!/bin/ksh
+export TARGET_CONN=sys/gober@brdstn
+export CATALOG_CONN=rman_cat_owner/gando@rman_cat
+rman ŤEOF
+# Połącz się z bazą docelową i bazą katalogu 
+connect target $ {TARGET_CONN} 
+connect catalog $ { CATALOG_CONN }
+# Wykonaj polecenie backup
+run { allocate channel d1 type disk; 
+backup full format
+ /d0102/backup/rman_%U.bus' database; } 
+EOF
+# exit
+Proszę zwrócić uwagę na kilka kwestii związanych z powyższym przykładem. Dwie zmienne, TARGET_CONN oraz CATALOG_ CONN, przechowują informacje dotyczące połączenia. Pełnią one rolę łańcuchów inicjalizacji połączenia (connection strings) po wywołaniu programu RMAN z poziomu skryptu. Umożliwia to zabezpieczenie informacji dotyczących hasła przed wyświetleniem w liście procesów.
+Łańcuch EOF funkcjonuje jako znacznik informujący system Unix o tym, że wszystkie polecenia pomiędzy dwoma takimi znacznikami są związane z poleceniem znajdującym się bezpośrednio z lewej strony ciągu znaków Ť. Zamiast łańcucha EOF można zastosować jakikolwiek inny łańcuch znaków, jednak w przykładach skryptów systemowych zamieszczonych w niniejszej książce standardowo wykorzystano ciąg znaków EOF.
+Jeśli program RMAN znajduje błąd, zwraca niezerowy kod błędu. Kod ten może być potem odpowiednio przetwarzany wewnątrz skryptu systemowego. Na przykład:
+... #Sprawdza, czy operacje programu RMAN wykonane
+zostały pomyślnie 
+if [ $? -ne 0 ]; then 
+# zawiadom administratora o problemie
+fi
+Przed wywołaniem skryptu systemowego należy się upewnić, że ustawione są odpowiednie prawa dostępu do jego pliku. Ważne jest posiadanie uprawnień do jego wykonania oraz brak prawa jego odczytu przez wszystkich użytkowników systemu. Można to osiągnąć za pomocą polecenia systemu Unix chmod:
+$ chmod 750 nazwa_pliku
+Wartość 750 w powyższym poleceniu oznacza, że plik skryptu może być wykonywany oraz że prawo do jego odczytywania posiadaj ą jedynie użytkownicy należący do tej samej grupy, co jego właściciel.
+
+Przekazywanie parametrów do programu RMAN
+
+Kluczowym zagadnieniem strategii tworzenia kopii zapasowych i odtwarzania danych jest utworzenie maksymalnie prostej i jednocześnie uniwersalnej procedury. Jednym ze sposobów zmniejszenia złożoności tego zadania jest sterowanie wykonywaniem skryptów poprzez parametry. Technika ta pozwala na wielokrotne wykorzystywanie tego samego kodu w razie wykonywania podobnych zadań. Jednym z przykładów wielokrotnego wykorzystywania tego samego kodu jest tworzenie przyrostowych kopii zapasowych (incremental backups) za pomocą pakietu RMAN. W tym przypadku można posłużyć się jednym skryptem, który tworzy wszystkie rodzaje przyrostowych kopii zapasowych. Jedynym parametrem, jaki trzeba uwzględnić, jest poziom kopii zapasowej (backup level). Jedną z metod przekazywania parametrów do programu RMAN jest tworzenie skryptu systemowego i zastosowanie takich zmiennych systemowych dla poleceń RMAN, które można konstruować dynamicznie. Poniżej znajduje się przykład skryptu systemowego, do którego przekazano następujące parametry: poziom kopii przyrostowej oraz docelowy katalog dla elementów kopii zapasowej:
+#!/bin/ksh
+# Poniższe trzy zmienne należy zdefiniować
+# bezpośrednio, albo umieścić w pliku oraenv. 
+export ORACLE_HOME=/ora01/app/oracle/product/8.1.6 export ORACLE_SID=brdstn 
+export PATH=$PATH:$ORACLE_HOME/bin
+export MAILX="/usr/ucb/Mail"
+export MAIL_LIST="aadamee@yahoo.com"
+export  BOX=`uname  -a | awk '{print$2}'`
+export  PRG=`basename  $0`
+export  USAGE="Użycie:   ${PRG}   <poziom  kopii przyrostowej>-<katalog docelowy dla elementów kopii zapasowej >"
+export RLEV=$1 
+export RDIR=$2    
+if [ -z "${RLEV}" o -z "${RDIR}" ] 
+then
+echo "${USAGE}"
+exit 1 
+fi
+echo "Parametr 1 -> ${RLEV} : Parametr 2 -> ${RDIR}"
+
+rman nocatalog ŤEOF
+connect target /
+run {
+allocate channel d1 type disk; 
+setlimit channel d1 kbytes 1900000; 
+backup incremental level=${RLEV} 
+tag db_level_${RLEV}
+format '${RDIR}/rm_l_${RLEV}_%d_%t_%U.bus' 
+(database filesperset=25 include current
+controlfile);
+sql "alter system archive log current"; 
+release channel d1; 
+}
+EOF
+
+#-- Sprawdza, czy operacje wykonane zostały przez
+#-- program RMAN pomyślnie
+if [ $? -ne 0 ]; then
+$MAILX -s "RMAN napotkał problem z $ORACLE_SID w
+$BOX" \
+$MAIL_LIST ŤEOF
+Sprawdź przyrostową kopię zapasową RMAN o poziomie
+${RLEV}...
+EOF
+# 
+else
+print "Polecenia RMAN wykonane pomyślnie..." 
+fi
+# ---------------------------------------
+exit
+
+Jeżeli plik skryptowy nosi nazwę rman_kop_przyr.ksh, utworzenie przyrostowej kopii zapasowej poziomu O i umieszczenie jej w katalogu /oraO l/backup następuje po wywołaniu tego pliku z linii poleceń S.O., jak przedstawiono poniżej:
+$ rman_kop_przyr.ksh 0 /ora0l/backup
+Skrypt ten sprawdza najpierw poprawność swojego wywołania, potem wykonuje odpowiednie polecenia pakietu RMAN w celu utworzenia przyrostowej kopii zapasowej danych i sprawdza, czy polecenia te zostały wykonane pomyślnie, czy też zaistniały. jakieś błędy. Na końcu następuje wysłanie pocztą elektroniczną odpowiedniej wiadomości do tych osób, których adresy e-mail znajdują się w zmiennej SMAIL_LIST.
+
+Wykorzystywanie katalogu odzyskiwania
+Jedną z podstawowych decyzji, jaką należy podjąć przed zaimplementowaniem pakietu RMAN, jest decyzja co do wykorzystania lub zrezygnowania ze stosowania katalogu odzyskiwania. W niniejszym rozdziale opisano zalety i wady katalogu oraz szczegóły dotyczące jego wykorzystywania.
+
+Istota katalogu odzyskiwania
+Pod wieloma względami pakiet RMAN może być postrzegany jako narzędzie służące do tworzenia kopii zapasowych i odzyskiwania plików bazy danych Oracle. Pakiet RMAN musi mieć dostęp do wielu informacji, takich jak czas utworzenia ostatniej kopii zapasowej danych, określenie, które pliki były archiwizowane, które zbiory kopii zapasowej zawierają odpowiednie pliki bazy danych. Informacje te znajdują się w plikach kontrolnych
+docelowej bazy danych. Opcjonalnie istnieje możliwość takiego skonfigurowania pakietu RMAN, aby informacje te były przechowywane w oddzielnej bazie danych nazywanej katalogiem (catalog).
+Katalog składa się z bazy danych oraz schematu bazy danych Obiekty schematu przechowują specyficzne dla programu RMAN informacje o każdej z docelowych baz danych.
+
+Zalety katalogu odzyskiwania
+Katalog odzyskiwania daje większą swobodę działania i dostęp do wszystkich możliwości pakietu RMAN. Zalety korzystania z katalogu stają się szczególnie cenne w następujących sytuacjach:
+   W razie stosowania serwera Oracle8i odzyskiwanie plików kontrolnych bez używania katalogu może być trudne.
+    Istnieje możliwość przechowywania przez długi okres czasu metadanych dotyczących zarówno tworzenia kopii zapasowych, jak i odzyskiwania danych.
+    Istnieje możliwość wykonywania operacji związanych z tworzeniem kopii zapasowych z poziomu jednego repozytorium.
+    Pakiet RMAN korzystający z katalogu posiada szerszy zakres wykonywanych operacji, co ma znaczenie przy pewnych scenariuszach archiwizacji i odzyskiwania danych.
+Katalog odzyskiwania pozwala na rekonstrukcję plików kontrolnych w przypadku ich uszkodzenia lub utraty. W sytuacji, gdy katalog nie jest wykorzystywany i nie prowadzi się archiwizacji plików kontrolnych za pomocą polecenia ALTER DATABASE BACKUP CONTROLFILE, może się okazać, że odzyskanie docelowej bazy danych jest niemożliwe.
+Inną zaletą korzystania z katalogu jest możliwość przechowywania przez dłuższy czas informacji dotyczących operacji pakietu RMAN związanych z archiwizowaniem i odzyskiwaniem danych. Jeśli zaszłaby konieczność wykorzystania kopii zapasowej utworzonej kilka miesięcy wcześniej, w przypadku stosowania katalogu istniej ą dużo większe szansę powodzenia.
+Używanie katalogu umożliwia zarządzanie wszelkimi operacjami związanymi z archiwizacją i odzyskiwaniem danych z poziomu jednego repozytorium. Dzięki temu można łatwo przechowywać wszystkie metadane dotyczące operacji tworzenia kopii zapasowej i odzyskiwania danych w jednym miejscu, nawet jeśli dana aplikacja posiada wiele baz danych.
+Zastosowanie katalogu daje większe możliwości podczas pewnych scenariuszy odzyskiwania danych. Na przykład, podczas rekonstrukcji danych można skorzystać z poprzednich stanów (incarnations) bazy danych.
+
+Wady katalogu odzyskiwania
+Zalety używania katalogu odzyskiwania są znaczące, ale korzystanie z niego może spowodować także powstanie kilku potencjalnych problemów.
+   Dokonywanie uaktualnień oprogramowania może sprawiać kłopoty z uwagi na kwestie zgodności.
+   Utworzenie katalogu zwiększa złożoność systemu.
+   Jeśli stosuje się katalog utworzony w systemie Oracle wcześniejszym od wydania 8.1.6, korzystanie z docelowych baz danych utworzonych w różnych wersjach systemu może okazać się problematyczne.
+   Katalog może zwiększyć wymagania aplikacji co do sprzętu i zasobów systemowych.
+W razie obsługi produkcyjnych baz danych, gdzie istotna jest możliwie największa swoboda działania w przypadku różnych scenariuszy archiwizacji i odzyskiwania danych, firma Oracle zaleca wykorzystanie bazy danych katalogu odzyskiwania. Jeżeli jednak aplikacja jest nieprodukcyjną bazą danych, której należy zapewnić wykorzystanie możliwości pakietu RMAN bez narzutu czasowego i zwiększonych wymagań sprzętowych i systemowych, można rozważyć wykorzystanie samych plików kontrolnych docelowej bazy danych.
+
+Używanie pakietu RMAN bez katalogu
+Pakiet RMAN może być stosowany do archiwizacji i odtwarzania danych natychmiast po zainstalowaniu, bez konieczności tworzenia i konfigurowania katalogu. To rozwiązanie może być korzystne w przypadku posiadania ograniczonych zasobów systemowych lub w razie potrzeby posiadania szybkiego i łatwego w użyciu mechanizmu archiwizacji i odzyskiwania danych. W niniejszym paragrafie przedstawiono zagadnienia, które maj ą znaczenie w przypadku zastosowania takiego rozwiązania:
+   Jeżeli stosuje się system Oracle8i lub wcześniejszy, w przypadku utraty wszystkich plików kontrolnych odzyskanie bazy danych może okazać się nieosiągalne. Jeśli jako repozytorium informacji potrzebnych do odtworzenia bazy danych używa się tylko plików kontrolnych bazy docelowej, należy zapewnić archiwizację plików kontrolnych (co powinno być zresztą standardową procedurą w każdej sytuacji). Pliki te należy zapisywać na wielu dyskach.
+
+UWAGA
+W razie niewykorzystywania katalogu odzyskiwania należy upewnić się, że pliki kontrolne bazy danych są regularnie archiwizowane poprzez polecenie ALTER DATABASE BACKUP CONTROLFILE.
+
+   Ilość przechowywanych danych historycznych o operacjach wykonywanych przez pakiet RMAN jest ograniczona.
+   W razie konieczności powrotu do starszych wersji zbiorów kopii zapasowych ograniczeniu ulega swoboda działania. Jeśli dostępny zbiór kopii zapasowych jest uszkodzony lub utracony, trzeba za pomocą pakietu RMAN przywrócić poprzednią wersję całej kopii zapasowej. W przypadku oznaczenia zbiorów kopii zapasowych jako nieużyteczne (unusable) brak katalogu ogranicza swobodę działania
+   Może okazać się konieczne zwiększenie wartości parametru CONTROL_FILE_RECORD_KEEP_TIME w pliku init.ora. Określa on liczbę dni, przez jakie informacje o archiwizacji i odzyskiwaniu danych są przechowywane w plikach kontrolnych przed ich nadpisaniem. Wartość domyślna tego parametru wynosi siedem dni. Trzeba się upewnić, że kopia zapasowa docelowej bazy danych jest tworzona przynajmniej raz w czasie tego siedmiodniowego okresu.
+
+Strategie tworzenia kopii zapasowej bazy katalogu
+Katalog odzyskiwania wymaga od administratora tyle uwagi, co jakakolwiek inna ważna produkcyjna baza danych. Istnieją różne strategie archiwizacji i odtwarzania danych:
+ pełny eksport (full export);
+ zimna kopia zapasowa (egid backup);
+ gorąca kopia zapasowa (hot backup);
+ kopia zapasowa pakietu RMAN;
+   gorąca kopia zapasowa bazy danych w stanie gotowości (hot standby);
+   rekonstrukcja katalogu.
+Każda z wyżej wymienionych metod posiada zarówno zalety, jak i wady, które należy rozważyć przed dokonaniem wyboru jednej z tych technik. Poniżej opisano najistotniejsze cechy charakterystyczne każdej z wymienionych strategii archiwizacji i odzyskiwania danych.
+
+Pełny eksport
+Pełny eksport jest jedną z najprostszych metod tworzenia kopii zapasowej bazy danych. Wadą tej techniki jest to, że ewentualnie odzyskana baza danych jest w stanie, który istniał w momencie przeprowadzania ostatniego pełnego eksportu. Po odtworzeniu bazy katalogu odzyskiwania na podstawie utworzonej w ten sposób kopii zapasowej należy jak najszybciej wykonać pełną archiwizację lub archiwizację poziomu O wszystkich baz docelowych.
+
+Zimna kopia zapasowa
+Zimna kopia zapasowa jest techniką prostą w implementacji, ale jej wadą jest konieczność zatrzymania systemu bazy danych katalogu. Jeżeli baza danych katalogu znajduje się w trybie
+archivelog, w razie potrzeby można wykorzystać zimne kopie zapasowe do jej odzyskania w punkcie czasowym (point-in-time recovery).
+
+Gorąca kopia zapasowa
+Gorąca kopia zapasowa jest metodą nieco bardziej skomplikowaną w implementacji w porównaniu z wykonaniem zimnej kopii zapasowej. Zaletą tego sposobu archiwizacji danych jest możliwość prowadzenia tej operacji podczas pracy bazy danych. Dlatego też jest to zalecana metoda archiwizacji bazy katalogu.
+
+Kopia zapasowa pakietu RMAN
+Pakiet RMAN może służyć do utworzenia kopii zapasowej bazy katalogu zarówno za pomocą innego katalogu odzyskiwania, jak i w przypadku uruchomienia go z opcją NOCATALOG. Utworzenie odrębnego katalog w celu archiwizacji katalogu istniejącego zwiększa złożoność architektury systemu. Jeżeli program RMAN pracuje bez katalogu odzyskiwania, trzeba zapewnić działanie odrębnego mechanizmu archiwizacji plików kontrolnych.
+
+Gorąca kopia zapasowa bazy danych w stanie gotowości
+Gorące kopie zapasowe bazy danych w stanie gotowości (hot standby) pozwalają na szybkie przywrócenie bazy do stanu gotowości (standby database) w przypadku, gdy główna baza danych jest zatrzymana. Jednakże implementacja tej metody może być skomplikowana i zwykle wymaga dużych ilości zasobów systemowych.
+
+Rekonstrukcja katalogu
+Jeśli nastąpi całkowita utrata bazy katalogu i gdy nie istnieją odpowiednie kopie zapasowe, można ponownie utworzyć te bazę, a następnie zarejestrować i zarchiwizować bazy docelowe Związane z tą metodą ryzyko polega na tym, że jeśli w trakcie jej wykonywania nastąpi utrata docelowej bazy danych oraz jej plików kontrolnych, odzyskanie bazy docelowej może być
+nieosiągalne.
+
+Zagadnienia związane z katalogiem odzyskiwania
+Tworzenie bazy danych katalogu odzyskiwania jest stosunkowo prostym zadaniem. Katalog ten składa się z bazy danych, schematu oraz odpowiednich obiektów. Należy zwrócić uwagę na poniższe zagadnienia:
+    lokalizacja systemu zarządzania bazą danych, gdzie znajdować się będzie katalog;
+   zastosowana dla katalogu wersja systemu zarządzania bazą danych;
+    sposób doboru wielkości katalogu;
+    sposób zarządzania wieloma docelowymi bazami danych.
+
+Fizyczne umieszczenie katalogu
+Baza danych katalogu odzyskiwania i baza docelowa powinny znajdować się na oddzielnych serwerach. W przeciwnym wypadku istnieje duże ryzyko, że podczas wykonywania operacji
+związanych z archiwizacją i odzyskiwaniem danych w przypadku awarii serwera nastąpi jednoczesna utrata bazy katalogu i bazy docelowej.
+Katalog może również obsługiwać system zarządzania bazą danych wykorzystywany już przez inne aplikacje. Zaletą takiego rozwiązania jest wykorzystanie już istniejących zasobów. Wadą natomiast jest możliwość nastąpienia obniżenia wydajności i dostępności katalogu z powodu działania innych aplikacji w tej samej bazie.
+
+Wersja katalogu
+Zaleca się, aby do utworzenia bazy danych katalogu stosować najwyższą dostępną w danym środowisku pracy wersję systemu Oracle. Pozwoli to na zminimalizowanie problemów związanych ze zgodnością i zmniejszy poziom złożoności zadań podczas sporządzania kopii zapasowych docelowych baz danych.
+
+UWAGA
+Nowsze wersje systemu - Oracle8i oraz Oracle9i - umożliwiają zmniejszenie problemów związanych z obsługą wielu docelowych baz danych, które powstały w różnych wersjach systemu.
+
+Określanie wielkości katalogu
+Rozmiar bazy danych katalogu zależy częściowo od ilości obsługiwanych docelowych baz danych. Poniżej znajdują się minimalne zalecane przez Autorów wymagania co do konfiguracji katalogu:
+   przestrzeń tabel systemowych (system tablespace)
+- 200 MB;
+    przestrzeń tabel tymczasowych (temporary tablespace)
+- 20 MB;
+   przestrzeń tabel segmentów wycofania (rollback/undo tablespace) - 20 MB;
+   przestrzeń tabel schematu katalogu (catalog schema tablespace) - 20 MB;
+   dwie grupy, w każdej po dwa aktywne dzienniki wycofania (online redo logs) o rozmiarze 2 MB.
+W zależności od liczby docelowych baz danych oraz częstotliwości dokonywania archiwizacji istnieje prawdopodobieństwo konieczności przyjęcia wyższych wartości, niż podane wartości minimalne.
+
+Zarządzanie
+wieloma docelowymi bazami danych
+Sytuacja, w której wszystkie produkcyjne bazy danych danej aplikacji byłyby w tej samej wersji i nie istniałby problem zgodności czy też konieczności uaktualniania oprogramowania, zdarza się niezmiernie rzadko. Dużo bardziej prawdopodobne jest, że docelowe bazy danych danej aplikacji powstały w wydaniach od 8.0.4 do 9.0.x systemu Oracle. Powoduje to konieczność dokonania wyboru wersji, w której tworzony będzie katalog odzyskiwania.
+Dokonanie wyboru wersji katalogu jest zadaniem dość trudnym. Każda dostępna alternatywa charakteryzuje się pewnymi zaletami i wadami związanymi z poziomem zgodności oraz
+możliwością wystąpienia problemów związanych z obsługą aplikacji. Podejmowanie tej decyzji zawsze trzeba przeprowadzać mając na uwadze specyfikę danej firmy. Wyboru dokonuje się na podstawie trzech niezależnych czynników. Są to:
+ Wersja docelowej bazy danych.
+ Wersja bazy danych katalogu.
+ Wersja obiektów utworzonych w ramach schematu katalogu.
+W przypadku konieczności obsługi wielu docelowych baz danych utworzonych w różnych wersjach można posłużyć się następującymi technikami wyboru wersji katalogu:
+   Zastosowanie konkretnej wersji systemu dla bazy danych katalogu, a dla każdej z docelowych baz danych schematu opartego na tej samej wersji.
+   Zastosowanie bazy danych katalogu ze schematami w różnych wersjach, odpowiadających każdej z docelowych baz danych.
+   Zastosowanie dla wszystkich baz docelowych jednej bazy danych katalogu utworzonej w najnowszej dostępnej wersji systemu Oracle, oraz schematu katalogu utworzonego przez najwyższą odpowiadającą wersję binarną pakietu rman.
+
+Tworzenie katalogu
+W tym paragrafie zamieszczono przykłady przedstawiające szczegóły dotyczące tworzenia bazy danych katalogu oraz rejestrowania w tym katalogu docelowej bazy danych. Na potrzeby tych przykładów założono, że baza danych katalogu i baza docelowa znajduje się na odrębnych serwerach. Bazy utworzono w systemie Oracle9i, ale w przypadku wersji Oracle8i procedura postępowania jest taka sama.
+W celu utworzenia katalogu odzyskiwania wykonuje się następujące czynności:
+1.  Utworzenie oddzielnej przestrzeni tabel, w której znajdą się obiekty katalogu.
+2. Utworzenie schematu katalogu.
+3. Nadanie odpowiednich uprawnień.
+4. Utworzenie obiektów schematu.
+W poniższych przykładach zastosowano etykietę 901" w celu oznaczenia wersji bazy danych katalogu, w tym przypadku jest to wydanie Oracle 9.0.1.
+Pierwszy krok, utworzenie przestrzeni tabel, jest bardzo prosty:
+SQL> CREATE TABLESPACE rman_901_cat DATAFILE '/d0l/oradata/brdstn/ rman_901_cat_01.dbf' SIZE 50M;
+Kiedy istnieje już przestrzeń tabel mogąca pomieścić obiekty schematu, można utworzyć sam schemat użytkownika:
+SQL> CREATE USER rman_901
+IDENTIFIED BY rman_901_pwd DEFAULT TABLESPACE rman_901_cat TEMPORARY TABLESPACE temp QUOTA UNLIMITED ON rman_901_cat;
+Przed wygenerowaniem obiektów katalogu należy nadać odpowiednie uprawnienia utworzonemu schematowi. Przywileje te, nadawane za pomocą mechanizmu ról (rola RECOVERY_ CATALOG_OWNER), pozwolą schematowi na zarządzanie obiektami katalogu.
+SQL> GRANT recovery_catalog_owner TO rman_901;
+W tabeli dba_sys_privs znajduje się lista uprawnień, jakie ta rola nadaje:
+SQL> SELECT PRIYILEGE FROM dba_sys_privs
+WHERE GRANTEE = 'RECOVERY_CATALOG_OWNER';
+PRIVILEGE
+ALTER SESSION
+CREATE CLUSTER
+CREATE DATABASE LINK
+CREATE PROCEDURĘ
+CREATE SEOUENCE
+CREATE SESSION
+CREATE SYNONYM
+CREATE TABLE
+CREATE TRIGGER
+CREATE VIEW
+10 rows selected.
+Następnie w utworzonym schemacie definiuje się obiekty katalogu. W tym celu należy uruchomić program RMAN, połączyć się ze schematem katalogu i wydać polecenie create catalog. Jeśli w poleceniu create catalog nie zostanie podana nazwa przestrzeni tabel, obiekty katalogu zostaną utworzone w domyślnej przestrzeni tabel przypisanej do właściciela katalogu.
+$ rman catalog rman_901/rman_901_pwd
+Recovery Manager: Release 9.0.1.0.0 - Production
+connected to recovery catalog database recovery catalog is not installed
+RMAN> create catalog;
+recovery catalog created RMAN> exit
+Na tym etapie procedury istnieje już w pełni funkcjonalny katalog odzyskiwania pakietu RMAN.
+
+Rejestrowanie docelowej bazy danych
+Po utworzeniu katalogu należy zarejestrować docelową bazę danych. Jest to konieczne, aby móc wykorzystywać katalog odzyskiwania do jej archiwizacji. Aby przeprowadzić tę operację, należy uruchomić program RMAN w systemie, w którym znajduje się docelowa baza danych. Następnie trzeba połączyć się z bazą docelową oraz katalogiem i wydać polecenie register database. Poniżej przedstawiono przykład rejestrowania docelowej bazy danych BRDSTN:
+$ rman target / catalog rman_901/ rman_9Ol@rman_catalog
+Recovery Manager: Release 9.0.1.0.0 - Production
+connected to target database: BRDSTN
+(DBID=664610428)
+connected to recovery catalog
+RMAN> register database;
+database registered in recovery catalog starting full resync of recovery catalog full resync complete
+Na tym etapie katalog odzyskiwania jest już gotowy do przechowywania informacji dotyczących operacji tworzenia kopii zapasowych bazy docelowej. Istnieje możliwość przeglądania tych informacji w katalogu za pomocą różnych poleceń RMAN, na przykład za pomocą polecenia report schema. W rozdziale Lista poleceń pakietu RMAN" znajduje się więcej szczegółów dotyczących tego tematu.
+
+Skrypty składowane w katalogu
+Skrypty składowane w katalogu odzyskiwania stanowią kolejną technikę przechowywania kodu poleceń programu RMAN, co pozwala na wielokrotne wykorzystywanie skryptów. Warunkiem korzystania z tej metody jest posiadanie bazy danych katalogu odzyskiwania.
+
+Przechowywanie skryptu
+W celu zapisania skryptu składowanego należy połączyć się z bazą danych katalogu i z bazą docelową. Połączenie z bazą katalogu umożliwia programowi RMAN zapisanie informacji dotyczących lokalizacji skryptu, a połączenie z bazą docelową przekazuje mu informację, z którą bazą docelową dany skrypt jest związany.
+Po nawiązaniu obydwóch połączeń należy zapisać skrypt za pomocą komend create script lub replace script. Komendy te powodują, odpowiednio, tworzenie nowego skryptu lub zastąpienie istniejącego skryptu zapisanego wcześniej pod tą samą nazwą. Poniżej przedstawiono przykład tworzenia skryptu służącego do wykonania pełnej kopii zapasowej bazy danych:
+$ rman target / catalog rman_901/ rman_9 O l_pwd@ rman_catalog
+Recovery Manager: Release 9.0.1.0.0 - Production
+connected to target database: BRDSTN
+(DBID=664610428)
+connected to recovery catalog database
+RMAN> replace script pelna_kopia{ 
+2> allocate channel d1 type disk; 
+3> backup full format
+4> '/d0102/backup/rman %d %U.bus' database;
+5> }
+replaced script pelna_kopia
+Efektem tego działania jest zapisanie w katalogu skryptu pod l
+nazwą pelna_kopia. Nie oznacza to jednak jego automatycznego wywołania. Aby wykonać polecenia zapisane w skrypcie należy go uruchomić.
+
+Uruchamianie skryptu składowanego
+
+Wykonywanie poleceń zawartych w skrypcie następuje po jego uruchomieniu. W tym celu po nawiązaniu połączenia z bazą danych katalogu oraz bazą docelową stosuje się polecenie
+execute script:
+$ rman target / catalog rman_901/ rman_9 O l_pwd@ rman_catalog
+Recovery Manager: Release 9.0.1.0.0 - Production   l
+connected to target database: BRDSTN l
+(DBID=664610428) l
+connected to recovery catalog database 
+RMAN> run {execute script pelna_kopia;}
+executing script: pelna_kopia
+Można także uruchamiać składowane skrypty z poziomu innych skryptów. Pozwala to na tworzenie modułowych poleceń programu RMAN. Poniżej przedstawiono przykład skryptu, w skład którego wchodzą trzy inne skrypty. Jeden z nich przydziela kanał,  drugi zwalnia kanał, a trzeci wykonuje polecenie backup. Aby przeprowadzić tę operację, należy utworzyć plik o nazwie stsc.sto i umieścić w nim następujące polecenia:
+# Ten skrypt przydziela kanał. 
+replace script przydz_dysk { 
+allocate channel d1 type disk;
+}
+# Ten skrypt zwalnia kanał, 
+replace script zwoln_dysk { 
+release channel d1;
+}
+# Ten skrypt wykonuje pełną kopię zapasową, 
+replace script pelna_kopia{
+execute script przydz_dysk;
+backup full format '/d0102/backup/rman_%d_%U.bus' database;
+execute script zwoln_dysk;
+}
+
+Następnie, w celu uruchomienia pliku i zapisania wszystkich skryptów, wydaje się następującą komendę w wierszu poleceń S.O.:
+$ rman target / catalog rman_901/ rman_9 O l_pwd@ rman_ca talog @stsc.sto log=str.log
+Na tym etapie skrypty zostają zapisane w katalogu. Po otwarciu pliku dziennika str.log można przeczytać zawarty w nim komunikat informacyjny. Trzeci z zapisanych skryptów, pelna_kopia, jest skryptem głównym. Wywołuje on po kolei dwa pozostałe skrypty jako część procesu tworzenia pełnej kopii zapasowej danych.
+Poniżej znajduje się przykład przeprowadzenia tej operacji z poziomu programu RMAN:
+$ rman target / catalog rman_901/ rman_901_pwd@ rman_catalog
+Recovery Manager: Release 9.0.1.0.0 - Production 
+RMAN> run {execute script pelna_kopia;}
+Skrypt pelna_kopia przydziela kanał wywołując skrypt przydz_dysk, tworzy pełną kopię zapasową korzystając z polecenia backup, a w końcu zwalnia kanał wywołując skrypt zwoln_dysk.
+
+Przeglądanie skryptu składowanego l
+Przeglądanie treści skryptu składowanego z poziomu programu RMAN jest możliwe po wydaniu polecenia print   script:
+print  script  nazwa_skryptu;
+W celu przeglądania wcześniej zapisanego skryptu należy uruchomić program RMAN, połączyć się z bazą docelową oraz bazą katalogu, a następnie wydać polecenie print  script:
+$ rman target / catalog rman_901/
+rman_901_pwd@rman_catalog 
+RMAN> print script pelna_kopia;
+Dostęp do całego kodu źródłowego skryptu przechowywanego w katalogu jest możliwy za pomocą dwóch widoków związanych z pakietem RMAN: rc_stored_script oraz rc_stored_script_line: 
+SQL> desc rc_stored_script 
+Name                   Null?    Type 
+DB_KEY                 NOT NULL NUMBER 
+DB_NAME                NOT NULL VARCHAR2(8) 
+SCRIPT_NAME            NOT NULL VARCHAR2(100) 
+SQL> desc rc_stored_script_line 
+Name                   Null?   Type 
+DB_KEY                 NOT NULL NUMBER 
+SCRIPT_NAME            NOT NULL VARCHAR2 (100) 
+LINĘ                   NOT NULL NUMBER 
+TEXT                   NOT NULL VARCHAR2(1024) 
+Aby przejrzeć cały kod skryptu magazynowanego związanego z daną bazą danych, należy załogować się za pomocą programu SQL*Plus jako użytkownik schematu, który zawiera obiekty bazy danych katalogu. Następnie uruchamia się następujący skrypt:
+COLUMN nazwa_skryptu FORMAT A11 
+COLUMN tekst FORMAT A65 
+SELECT
+a. nazwa_skryptu,
+a.text 
+FROM rc_stored_script_line a, 
+rc_stored_script      b 
+WHERE a.db_key = b.db_key
+AND   b.db_name='NAZWA_DOCELOWEJ_BAZY_DANYCH' 
+ORDER BY
+a.line;
+Po uruchomieniu skryptu z poziomu SQL*Plus informacja wyjściowa będzie wyglądać w następujący sposób:
+NAZWA_SKRYP TEKST
+pelna_kopia   {
+pelna_kopia   allocate channel d1 type disk;
+pelna_kopia   backup full format
+              /d0102/backup/rman_%d_%U.bus' pelna_kopia   database; . 
+pelna_kopia   }
+
+Usuwanie skryptu składowanego
+W celu usunięcia skryptu składowanego z katalogu stosuje się następujące polecenie:
+RMAN> delete script nazwa_skryptu;
+gdzie nazwa_skryptu oznacza nazwę usuwanego skryptu.
+
+Kopie zapasowe
+W niniejszym rozdziale zaprezentowano serię skryptów pakietu RMAN oraz skryptów systemowych (korn), które służą do tworzenia kopii zapasowych bazy danych oraz jej poszczególnych komponentów. Pakiet RMAN może archiwizować pliki danych (datafiles), pliki kontrolne (control fileś), archiwalne pliki dziennika powtórzeń (archived redo fileś) oraz elementy kopii zapasowej (backup pieces). Pakiet RMAN nie tworzy kopii zapasowych .aktywnych plików dziennika powtórzeń (online redo logs).
+
+UWAGA
+Częścią standardowego działania pakietu RMAN w odniesieniu do archiwizacji danych jest odczytywanie wszystkich bloków plików danych, sprawdzenie ich poprawności, a w końcu zapisanie informacji o wszelkich wykrytych nieprawidłowościach. Informacje dotyczące potencjalnych uszkodzeń są dostępne w widokach V$BACKUP_CORRUPTION oraz V$COPY_CORRUPTION.
+Przed utworzeniem kopii zapasowej bazy danych musi być ona zamontowana (tryb mount) lub otwarta. Wymóg, by baza danych była przynajmniej w trybie mount, jest spowodowany koniecznością zapewnienia dostępu programowi RMAN do plików kontrolnych docelowej bazy danych przed przeprowadzeniem procesu archiwizacji danych.
+
+Pełna kopia zapasowa zamkniętych plików danych
+Przed utworzeniem kopii zapasowej zamkniętych plików danych (offline backup) należy zamknąć bazę danych, a następnie uruchomić ją ponownie w trybie mount. Baza danych nie musi znajdować się w trybie archivelog.
+Poniższy skrypt (dla wersji Oracle9i*) zamyka bazę danych, montuje ją (tryb mount), tworzy jej kopię zapasową, a w końcu ponownie ją otwiera:
+#!/bin/ksh
+rman target / ŤEOF 
+shutdown immediate; 
+startup mount; 
+backup database format
+/d99/rmanback/brdstn/rman_%d_%t_%U.bus'; 
+alter database open; 
+EOF 
+exit
+Poniższy skrypt systemowy dla wersji Oracle8i tworzy pełną kopię zapasową bazy danych. Należy zwrócić uwagę, że składnia poleceń jest tu nieco bardziej złożona w porównaniu z wersją Oracle9i. Dla wersji Oracle8i polecenia allocate oraz backup muszą znajdować się wewnątrz polecenia run {}.
+#!/bin/ksh
+rman target / nocatalog ŤEOF
+shutdown immediate;
+startup mount;
+run {
+allocate channel dl type disk;
+backup database format
+/d99/rmanback/brdstn/rman_%d_%t_%U.bus'; 
+alter database open; 
+EOF 
+Exit
+Wyznacznikiem nie jest wersja serwera Oracle, ale programu Recovery Manager. Np. dla wydania RMAN 8.l.7.0.0 z serwerem w wersji 9i należy zastosować wersję skryptu dla Oracle8i -przyp. red.
+
+UWAGA
+W obu przykładach zastosowano parametr format w celu podania określonej lokalizacji oraz niepowtarzalnej nazwy dla elementów kopii zapasowej. Pominięcie tego parametru powoduje, że elementy kopii zapasowej kierowane są do katalogu SORACLE_HOME/dbs. Więcej szczegółów na temat tego zagadnienia znajduje się w tabeli l.l w rozdziale Lista poleceń pakietu RMAN".
+
+Pełna kopia zapasowa otwartych plików danych
+Przed utworzeniem kopii zapasowej otwartych plików danych (online backup) baza danych musi być otwarta oraz znajdować się w trybie archipelag. Jeśli wykorzystywanym systemem jest Oracle9i, składnia odpowiedniego polecenia jest bardzo prosta:
+RMAN> backup database format
+2> '/d99/rmanback/brdstn/rman_%d_%t_%U.bus';
+UWAGA
+W przeciwieństwie do standardowego sposobu tworzenia kopii zapasowych otwartych plików danych (gorących kopii zapasowych) pakiet RMAN nie przełącza przestrzeni tabel w tryb backup. Nie są zatem generowane żadne dodatkowe dzienniki powtórzeń. W przypadku baz danych o wysokiej aktywności może to dawać znaczące korzyści związane z lepszym wykorzystaniem zasobów systemowych.
+W przypadku wersji Oracle8i należy zastosować polecenie
+run{}:
+RMAN>   run   {
+2> allocate channel d1 type disk;
+3> backup database  format
+4>   '/d99/rmanback/brdstn/rman_%d_%t_%U.bus';
+5>   }
+
+Tworzenie kopii zapasowej przestrzeni tabel
+Możliwość podawania jedynie podzbioru przestrzeni tabel podczas procesu archiwizacji danych zwiększa zakres możliwych strategii tworzenia kopii zapasowych.  W przypadku wersjir' Oracle9i składnia polecenia jest bardzo prosta:
+RMAN> backup tablespace system, users format
+2> ' /d99/rmanback/brdstn/rman_bckup_%d_%t_%U.bus';
+W przypadku wersji Oracle8i należy ponownie zastosować polecenie run { }:
+RMAN> run {
+2> allocate channel d1 type disk;
+3> backup format
+4> '/d99/rmanback/brdstn/rman_bckup_%d_%t_%U.bus'
+5> tablespace system, users include current controlfile; 
+6> }
+
+Tworzenie kopii zapasowej plików danych
+Pliki danych można archiwizować przez podanie ich numerów lub nazw. Dla wersji Oracle9i składnia polecenia jest prosta. W przypadku tworzenia kopii zapasowej na dysku i jeśli numery plików archiwizowanych danych są znane, stosuje się następujące polecenie:
+RMAN>  backup datafile  1,2;
+W analogicznej sytuacji dla wersji Oracle8i składnia takiego polecenia wygląda następująco:
+RMAN> run {
+2> allocate channel d1 type disk;
+3> backup format
+4> '/d99/rmanback/brdstn/rman_bckup_%d_%t %U.bus'
+5> datafile l, 2;
+6> }
+Można także podać nazwę konkretnego pliku danych przeznaczonego do archiwizacji:
+RMAN> run {
+2> allocate channel d1 type disk;
+3> backup format
+4> '/d99/rmanback/brdstn/rman_bckup_%d_%t_%U.bus'
+5> '/d01/oradata/workprd/users_01.dbf';
+6> }
+Jeżeli archiwizacji poddaje się więcej plików, ich nazwy należy oddzielić przecinkami.
+
+Tworzenie kopii zapasowej plików kontrolnych
+Przydatną właściwością systemu Oracle9i jest możliwość automatycznej archiwizacji plików kontrolnych po każdorazowym wydaniu polecenia backup lub copy. Można to osiągnąć za pomocą polecenia configure w następujący sposób:
+RMAN> configure controlfile autobackup on;
+Samodzielnie archiwizację pliku kontrolnego w systemie Oracle9i przeprowadza się za pomocą polecenia:
+RMAN> backup current controlfile;
+Poniżej przedstawiono przykład archiwizacji pliku kontrolnego za pomocą skryptu systemowego. Jest on poprawny dla wersji Oracle9i i Oracle8i:
+#!/bin/ksh
+# Plik: kopia_bezp_kontrol.ksh
+#---------- -- ---
+export ORACLE_HOME=/dOO/app/oracle/product/9.O.O
+export ORACLE_SID=brdstn
+export PATH=/usr/sbin:/usr/bin:$ORACLE_HOME/bin
+export MAILX="/usr/ucb/Mail"
+export MAIL_LIST="chaya@garam.com"
+BOX=uname -a | awk '{print$2}'` 
+date
+rman nocatalog log=rman_kopia_kontrol.log ŤEOF 
+connect target / 
+run {
+allocate channel d1 type disk; 
+setlimit channel d1 kbytes 1900000; 
+backup
+format '/d99/rmanback/brdstn/ 
+rman_cntl_%d_%t_%U.bct' 
+(current controlfile); 
+release channel d1; 
+}
+EOF 
+#
+if [ $? -ne 0 ]; then
+$MAILX -s "RMAN napotkał problem z $ORACLE_SID w $BOX" \ $MAIL_LIST ŤEOF
+Sprawdź kopię bezpieczeństwa RMAN pliku kontrolnego... EOF 
+# 
+else
+print "Kopia bezpieczeństwa RMAN pliku kontrolnego została poprawnie utworzona..." 
+fi
+date
+
+Tworzenie kopii zapasowej archiwalnych plików dziennika powtórzeń
+W przypadku wersji Oracle9i składnia polecenia tworzącego kopię zapasową archiwalnych plików dziennika powtórzeń (archived redo logfiles) jest bardzo prosta:
+RMAN> backup archivelog all;
+Inną techniką, możliwą do zastosowania w systemie Oracle9i, jest zastosowanie w poleceniu backup wyrażenia plus archivelog, dzięki czemu archiwalne pliki dziennika powtórzeń wchodzą w skład kopii zapasowej. Wydanie poniższej instrukcji powoduje utworzenie co najmniej dwóch elementów kopii zapasowej - dla plików danych i dla archiwalnych plików dziennika powtórzeń:
+RMAN> backup database format
+2> '/dOO/backup/rman_%U.bus' plus archivelog;
+Znajdujący się poniżej prosty skrypt działa poprawnie zarówno w przypadku wersji Oracle8i, jak i Oracle9i. Wykonanie skryptu powoduje utworzenie kopii zapasowej wszystkich archiwalnych plików dziennika powtórzeń docelowej bazy danych:
+RMAN> run {
+2> allocate channel tl type 'sbt_tape';
+3> backup filesperset 5 format
+4> '/d0100/backup/ar_%d_%t.bus' (archivelog all );
+5>   }
+
+UWAGA
+Przydatną właściwością pakietu RMAN jest jego zdolność odróżniania tych archiwalnych plików dziennika powtórzeń, których zapis na dysku jest zakończony. Dzięki temu pakiet RMAN nigdy nie podejmuje próby archiwizacji częściowo zapisanych archiwalnych plików dziennika powtórzeń.
+Poniżej przedstawiono kolejny przykład skryptu systemowego, który za pomocą poleceń pakietu RMAN tworzy kopię zapasową archiwalnych plików dziennika powtórzeń. Po jego uruchomieniu, w zbiorze kopii zapasowej znajdą się wszystkie archiwalne pliki dziennika powtórzeń utworzone w ciągu ostatnich trzech dni.
+#!/bin/ksh
+# Plik: kopia_bezp_arch.ksh
+#______________________________________________
+export ORACLE_HOME=/dOO/app/oracle/product/9.O.O
+export ORACLE_SID=brdstn
+export PATH=/usr/sbin:/usr/bin:$ORACLE_HOME/bin
+export MAILX="/usr/ucb/Mail"
+export MAIL_LIST="heeraa@chamak.com"
+#______________________________________________
+BOX='uname -a | awk '{print$2}''
+#______________________________________________
+date
+#______________________________________________
+rman nocatalog log=rman_kopia_arch.log ŤEOF 
+connect target sys/pwd 
+run {
+allocate channel d1 type disk; 
+setlimit channel d1 kbytes 1900000; 
+backup
+format '/d99/backup/brdstn/arch_%d_%t.bus' filesperset=50
+archivelog from time 'sysdate-3'; 
+release channel d1;
+}
+EOF
+#
+if [ $? -ne 0 ] ; then
+$MAILX -s "RMAN napotkał 'problem z $ORACLE_SID
+w $BOX" \
+$MAIL_LIST ŤEOF
+Sprawdź kopię bezpieczeństwa RMAN archiwalnego
+dziennika powtórzeń...
+EOF
+# 
+else
+print "Kopia bezpieczeństwa RMAN archiwalnego  *
+dziennika powtórzeń została poprawnie
+utworzona ..." 
+fi
+date
+
+UWAGA
+Jeżeli jakiś proces nie związany z programem RMAN usunie pliki dziennika powtórzeń, to ani w plikach kontrolnych, ani w opcjonalnym katalogu odzyskiwania nie zostanie zapisana żadna informacja o tym, że te pliki nie sąjuż dostępne. Dlatego też należy okresowo wydawać polecenie:
+RMAN> change archivelog all validate;
+Z tego względu warto, aby program RMAN usuwał te pliki z systemu w momencie, gdy nie są one już potrzebne.
+
+Przyrostowe kopie zapasowe
+Jedną z najbardziej spektakularnych cech pakietu RMAN jest możliwość tworzenia przyrostowych kopii zapasowych (incremental backups). W przypadku standardowej, opartej na powielaniu plików, procedury tworzenia kopii zapasowych (na przykład
+tworzenia gorących lub zimnych kopii zapasowych) kopiowane są wszystkie bloki plików danych bazy docelowej, bez względu na to, czy były one używane, czy nie. Program RMAN posiada możliwość sprawdzenia, które bloki plików danych zostały zmienione od ostatniej archiwizacji. Dzięki temu kopiowaniu podlegają tylko bloki zmodyfikowane.
+
+UWAGA
+Jeśli podczas archiwizacji program RMAN kopiuje tylko zmodyfikowane bloki, proces ten nazywa się kompresją (compressiori). Nieużywane lub niezmodyfikowane bloki w pliku danych zostają pominięte.
+Pomijanie nie zmienionych bloków daje ogromne korzyści poprzez zmniejszenie wymagań co do zasobów systemowych. Oznacza to także, że czas wykonania kopii zapasowej oraz ilość potrzebnego do jej przechowania miejsca na taśmie lub dysku zależą od ilości dokonanych w bazie danych zmian, nie zaś od jej rozmiaru. W przypadku bardzo dużych baz danych już tylko ten jeden argument może uczynić zasadnym korzystanie z pakietu RMAN.
+Wiele zagadnień dotyczących kopii przyrostowych związanych jest z pojęciem poziomu (level). Podstawą idei tworzenia przez pakiet RMAN wielopoziomowych kopii zapasowych jest założenie, że archiwizować należy tylko te bloki, które zostały zmodyfikowane od czasu poprzedniej archiwizacji. Tworzenie kopii przyrostowych można stosować w odniesieniu do całej bazy danych, jak również danych przestrzeni tabel lub plików danych. Posługiwanie się poziomami określane jest w przypadku systemów Oracle jako tworzenie wielopoziomowej przyrostowej kopii zapasowej (multilevel incremental backup). Istnieje pięć poziomów kopii zapasowej w przedziale od O do 4 (level O - level 4}.
+Istnieją dwa rodzaje przyrostowych kopii zapasowych - różnicowe (differential) oraz kumulacyjne (cumulative). Tworzenie różnicowej kopii .przyrostowej polega na tym, że pakiet RMAN archiwizuje tylko te bloki, które zostały zmienione od czasu utworzenia kopii poziomu n lub niższego. Przykładowo, jeśli tworzy się różnicową kopię przyrostową poziomu l, archiwizacji podlegają bloki, które zostały zmodyfikowane od czasu poprzedniej archiwizacji na poziomie 1. W przypadku pakietu RMAN tworzenie kopii różnicowych jest domyślnym trybem przeprowadzania archiwizacji przyrostowej.
+
+UWAGA
+W razie tworzenia przyrostowej kopii zapasowej o poziomie wyższym od O, jeśli nie wykonano wcześniej żadnej archiwizacji na tym poziomie, pakiet RMAN automatycznie tworzy kopię poziomu 0.
+Tworzenie kumulacyjnej kopii przyrostowej polega na tym, że pakiet RMAN archiwizuje tylko te bloki, które zostały zmienione od czasu utworzenia kopii poziomu n-1 lub niższego. Przykładowo, jeśli tworzy się kumulacyjną kopię przyrostową poziomu l, nastąpi archiwizacja bloków, które zostały zmodyfikowane od czasu ostatniej archiwizacji na poziomie 0.
+Udostępnienie tych wszystkich możliwości pozwala na wybór najodpowiedniejszej w danej sytuacji strategii archiwizacji danych. Różnicowa kopia bezpieczeństwa zajmuje mniej miejsca i jej utworzenie trwa krócej, ale odtworzenie danych na podstawie tej kopii zabiera więcej czasu. Z kolei kopia kumulacyjna zajmuje więcej miejsca i więcej czasu trwa jej utworzenie, ale odtworzenie danych na jej podstawie jest szybsze. Zatem w zależności od specyficznych cech aplikacji należy podjąć decyzję, czy ważniejsze jest zminimalizowanie czasu tworzenia kopii
+zapasowych danych, czy też czasu odtwarzania danych. W przypadku małych baz danych zaleca się wykorzystanie pakietu RMAN do codziennego wykonywania kopii zapasowej poziomu 0.
+
+UWAGA
+Pełna archiwizacja (full backup) polega na tworzeniu kopii zapasowej dokładnie tych samych bloków, co w przypadku archiwizacji na poziomie 0. Różnica między tymi procesami wynika z tego, że kolejne procesy archiwizacji przyrostowej zachodzą w sposób całkowicie niezależny od istnienia pełnej kopii bezpieczeństwa. Dlatego też pełne kopie nie mogą zostać zastosowane w celu odtwarzania danych z kopii przyrostowych. Tworzenie pełnej kopii zapasowej jest domyślnym trybem archiwizacji w przypadku, gdy nie podano żadnego poziomu przyrostu.
+Poniżej znajduje się przykład utworzenia kopii kumulacyjnej (dla systemu Oracle9i), gdzie program RMAN archiwizuje wszystkie bloki, które zostały zmodyfikowane od czasu ostatniej archiwizacji na poziomie 3 lub niższym, oraz pomija przestrzenie tabel przeznaczone tylko do odczytu (readonly}:
+RMAN> backup incremental level 4 cumulative database 2> skip readonly;
+Poniżej przedstawiono przykład utworzenia różnicowej kopii bezpieczeństwa w przypadku systemu Oracle8i. Archiwizacji podlegają wszystkie bloki, które zostały zmodyfikowane od czasu ostatniej archiwizacji na poziomie l lub niższym:
+RMAN> run {allocate channel dl type disk;
+2> backup incremental level l format
+3> '/dOlOl/backup/rman %U.bus' database;}
+
+Porady dotyczące tworzenia kopii zapasowych
+Powyżej omówiono różne scenariusze archiwizacji danych. W dalszej części niniejszego rozdziału przedstawiono polecenia służące do informowania o spójności kopii zapasowych lub zwiększania wydajności procesu ich tworzenia.
+
+Sprawdzanie stanu kopii zapasowej *
+Jedną z pożytecznych cech pakietu RMAN jest możliwość kontrolowania stanu kopii zapasowej. Najprostszym sposobem zapoznania się z tymi informacjami jest wydanie polecenia
+list  backup.
+RMAN> list backup;
+Efektem wykonania polecenia list backup jest wyświetlenie informacji o nazwie, poziomie, czasie utworzenia oraz stanie każdej z kopii zapasowych. Ponadto pakiet RMAN ma możliwość prostego sprawdzenia odtwarzalności plików danej kopii zapasowej. Do tego celu służy polecenie r e storę da-tabase validate. Efektem wykonania tej komendy nie jest przeprowadzenie samego procesu odtwarzania, lecz jedynie sprawdzenie, czy zawartość zbiorów kopii zapasowej może zostać w razie potrzeby odtworzona. Poniżej przedstawiono przykład zastosowania tego polecenia dla aplikacji działającej w systemie Oracle8i i Oracle9i:
+RMAN> run {
+2> allocate channel d1 type disk; 
+3> restore database validate; 
+4> }
+
+Konfigurowanie kanałów
+Przydatną cechą systemu Oracle9i jest możliwość zmiany domyślnych właściwości kanału. Po zmianie właściwości te zostają zapisane w pliku kontrolnym i są zachowywane na potrzeby kolejnych sesji programu RMAN. Poniżej przedstawiono przykład zmiany domyślnej wartości parametru ratę (maksymalna liczba danych czytanych przez kanał) urządzenia dyskowego oraz wartości łańcucha formatującego:
+RMAN> configure channel device type disk
+2> ratę 1000000 format '/d99/rmanback/rman_%U.bus';
+Przeglądanie wszystkich ustawień konfiguracyjnych jest możliwe po wydaniu dostępnego w wersji Oracle 9i polecenia
+show all:
+RMAN>  show all;
+RMAN configuration parameters are: 
+CONFIGURE RETENTION POLICY TO REDUNDANCY l;
+# default
+CONFIGURE BACKUP OPTIMIZATION OFF; # default 
+CONFIGURE DEFAULT DEVICE TYPE TO DISK; # default 
+CONFIGURE CONTROLFILE AUTOBACKUP OFF; # default 
+CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEYICE
+TYPE DISK TO '%F'; # default 
+CONFIGURE DEVICE TYPE DISK PARALLELISM 1;
+# default 
+CONFIGURE DATAFILE BACKUP COPIES FOR DEVICE TYPE
+DISK TO 1; # default 
+CONFIGURE ARCHIYELOG BACKUP COPIES FOR DEVICE TYPE
+DISK TO 1; # default 
+CONFIGURE CHANNEL DEYICE TYPE DISK RATĘ 1000000
+FORMAT '/d99/rmanback/rman_%U.bus'; 
+CONFIGURE MAKSETSIZE TO UNLIMITED; # default 
+CONFIGURE SNAPSHOT CONTROLFILE NAME TO '/d00/
+app/oracle product/9.O.0/dbs/snapcf_dev900.f';
+# default
+Warto zauważyć, że pozycje, dla których ustawienia domyślne nie zostały zmienione, są oznaczone przez # default.
+Aby skasować ustawienia Właściwości kanału, wydaje się polecenie configure clear. Poniżej przedstawiono przykład polecenia, którego wydanie przywraca domyślne ustawienia właściwości urządzenia:
+RMAN> configure default device type clear;
+
+Równoległość tworzenia kopii zapasowych
+W celu zwiększenia wydajności pracy aplikacji program RMAN może rozdzielić wykonanie pewnych poleceń na kilka równoległych procesów. Nie oznacza to, że w razie wywołania kilku poleceń będą one wszystkie wykonywane równocześnie, ale że wykonanie każdego z nich oddzielnie zostanie rozbite na równoległe procesy.
+Dobrym przykładem przetwarzania równoległego (parallelization) jest wykonanie polecenia bać kup. Jeśli przydzielonych jest kilka kanałów, program RMAN jednocześnie korzysta z kilku procesów w celu wykonania tego polecenia. Dane zapisywane są jednocześnie przez wszystkie kanały:
+RMAN> configure device type disk parallelism 3; 
+RMAN> backup database format '/d99/rmanback/ rman_%U.bus';
+W efekcie podczas archiwizacji bazy danych wykorzystywane są trzy równoległe procesy.
+
+Oznaczanie kopii zapasowych
+Pakiet RMAN udostępnia możliwość nadawania zbiorom kopii zapasowych nazw odpowiadających wymaganiom użytkownika. Przykładowo, pozwala to na łatwe rozróżnianie kopii zapasowych tworzonych codziennie i co tydzień, lub też na rozróżnianie przyrostowych kopii zapasowych tworzonych na różnych poziomach. W celu nadania odpowiedniej nazwy stosuje się słowo kluczowe tog w poleceniu backup. Poniżej przedstawiono przykład oznaczenia kopii zapasowej poziomu 3 jako inc_level_3:
+RMAN> backup incremental level 3 tag inc_level_3
+format 
+2> '/d99/rmanback/rman_%U.bus';
+Znaczniki (tags) mogą być stosowane w poleceniu list w celu szybkiego zlokalizowania zbiorów kopii zapasowych, a także w poleceniach restore oraz switch. Ta sama wartość znacznika może być wykorzystana dla wielu różnych zbiorów kopii zapasowych, zatem nie musi być ona niepowtarzalna. Jeśli wartość danego znacznika jest niejednoznaczna, zostanie ona zastosowana do opisania ostatnio utworzonego zbioru kopii zapasowych o podanej w znaczniku wartości.
+W poniższym przykładzie przedstawiono zastosowanie polecenia list wyświetlającego informacje o istniejącej kopii zapasowej, którą oznaczono jako inc_level_3:
+RMAN> list backuppiece tag=inc level 3;
+
+Odtwarzanie plików
+W zasadzie odtwarzanie plików składa się z trzech istotnych etapów:
+1.  Należy upewnić się, że docelowa baza danych jest uruchomiona w odpowiednim dla operacji odtwarzania trybie. W przypadku utraty plików kontrolnych jest to tryb nomount (started). Jeśli trzeba odtworzyć całą bazę danych, należy zastosować tryb mount. Jeśli uszkodzone zostały pliki danych nie należące do przestrzeni tabel SYSTEM, można pozostawić bazę danych otwartą. Jedynie przestrzenie tabel lub pliki danych podlegające odtwarzaniu muszą pozostawać w stanie nie podłączonym (offline).
+2.  Uruchomienie programu RMAN i zestawienie połączenia z docelową bazą danych oraz bazą danych katalogu odzyskiwania (jeśli jest używany).
+3.  Wywołanie odpowiedniego polecenia RESTORE programu RMAN w celu przywrócenia wymaganych plików. Odtwarzane są pliki wymagane oraz odpowiednie archiwalne pliki dziennika powtórzeń.
+Po odtworzeniu potrzebnych plików należy zrekonstruować (recover) bazę danych oraz ją otworzyć. Rekonstrukcji bazy danych można dokonać z poziomu programu RMAN, narzędzia SQL*Plus lub, w przypadku Oracle8i, programu Server Manager.
+
+Odtwarzanie i odzyskiwanie wszystkich plików danych
+Na potrzeby niżej opisanego scenariusza założono, że istnieje dostęp do plików kontrolnych. Pierwszym etapem procesu odtwarzania plików jest upewnienie się, że docelowa baza danych jest wyłączona (shutdown):
+SQL> connect sys/harakhat as SYSDBA; 
+SQL> shutdown abort;
+ORACLE instance shut down.
+Następnie należy zamontować docelową bazę danych (tryb mounf). Pakiet RMAN nie może odtworzyć plików danych, jeżeli baza nie jest przynajmniej zamontowana. Wynika to z konieczności posiadania dostępu do plików kontrolnych w celu sprawdzenia, które zbiory kopii zapasowej będą potrzebne do odtworzenia bazy danych. Jeżeli plik kontrolny nie jest dostępny, należy go odtworzyć w pierwszej kolejności. W celu zamontowania bazy danych wydaje się polecenie STARTUP MOUNT, jak pokazano niżej:
+SQL> startup mount;
+Oracle instance started.
+Total System Global Area   309809312 bytes 
+Fixed Size 7388 bytes 
+Variable Size             145715200 bytes 
+Redo Buffers              180224 bytes 
+Database mounted.
+W celu odtworzenia plików danych należy wykorzystać program RMAN, gdyż pliki zbiorów kopii zapasowej zapisane są w wewnętrznym formacie pakietu RMAN. W tym celu należy połączyć się z docelową bazą danych:
+$ rman target / catalog
+rman 901/rman_901_pwd@rman_catalog
+Recovery Manager Release 9.0.1.0.0 - Production
+connected to target database: BRDSTN
+(DBID=664610428)
+connected to recovery catalog
+W pozostałej części przykładu pokazano sposób odtwarzania wszystkich plików danych bazy docelowej. Podczas tego procesu program RMAN odnajduje ostatni pomyślnie utworzony zbiór kopii zapasowej i przywraca pliki danych do stanu, w którym się znajdowały podczas tworzenia tego zbioru.
+W trakcie odtwarzania plików bazy danych w systemie Oracle9i program RMAN odczytuje zawartość nagłówka każdego pliku danych w celu sprawdzenia konieczności jego odtworzenia.
+Proces rekonstrukcji bazy danych polega na przydzieleniu kanału dla operacji wejścia-wyjścia, a następnie wydaniu polecenia pakietu RMAN re storę database.
+Wprzypadku systemu Oracle9i wydawanie odrębnej komendy przydziału kanału nie jest konieczne, można bowiem wykorzystać opcję default channel:
+RMAN> restore database; 
+RMAN> recover database; 
+RMAN> alter database open;
+W przypadku systemu Oracle8i polecenia ALLOCATE, RESTORE oraz RECOYER muszą znajdować się wewnątrz polecenia run{}:
+RMAN> run {
+2> allocate channel dl type disk;
+3> restore database;
+4> recover database;
+5> alter database open; }
+Inną możliwością rekonstrukcji bazy danych i jej otwarcia po odtworzeniu plików danych przez program RMAN jest wykorzystanie poleceń programu SQL*Plus:
+$ sąlplus /nolog
+SQL> connect sys/hinghoda as SYSDBA;
+SQL> recover database;
+SQL> alter database open;
+
+Odtwarzanie konkretnych przestrzeni tabel lub plików danych
+W przypadku systemu Oracle9i odtworzenie przestrzeni tabel lub pliku danych może być bardzo prostym zadaniem. Jeśli podczas rekonstrukcji danej przestrzeni tabel lub pliku danych baza danych pozostaje otwarta, najpierw należy wyłączyć daną
+przestrzeń tabel lub plik danych (tryb offline). W poniższym przykładzie pokazano sposób odtwarzania i rekonstrukcji przestrzeni tabel USERS:
+RMAN> restore tablespace users; 
+RMAN> recover tablespace users;
+Oprócz przestrzeni tabel można odtworzyć i zrekonstruować konkretny plik danych:
+RMAN> restore datafile
+2> '/d0101/oradata/brdstn/users_01.dbf'
+RMAN> recover datafile
+2> '/d0101/oradata/brdstn/users_01.dbf'
+W przypadku systemu Oracle8i składnia polecenia odtwarzania przestrzeni tabel jest tylko trochę bardziej złożona - polecenia ALLOCATE, RESTORE oraz RECOYER muszą w tym przypadku znaleźć się wewnątrz polecenia run { }:
+RMAN> run {
+2> allocate channel dl type disk;
+3> restore tablespace users;
+4> recover tablespace users; }
+
+Odtwarzanie przestrzeni tabel zapisanych w trybie tylko do odczytu
+Po utworzeniu kopii zapasowej przestrzeni tabel zapisanej w trybie tylko do odczytu (read-only tablespace} nie ma potrzeby przeprowadzania jej ponownej archiwizacji. Okresowe archiwizowanie takich przestrzeni tabel może się jednak okazać korzystne, ponieważ w przypadku konieczności odtworzenia bazy danych odpowiednia kopia zapasowa znajdować się będzie na taśmie, do której dostęp jest szybki i łatwy. Program RMAN nie potrzebuje żadnych archiwalnych plików dziennika powtórzeń w celu odtworzenia i zrekonstruowania przestrzeni tabel zapisanej
+w .trybie tylko do odczytu. Ponadto przed rozpoczęciem rekonstrukcji takiej przestrzeni tabel nie jest konieczne wyłączanie bazy danych. Wykonać trzeba jedynie następujące czynności:
+1.   Wyłączenie danej przestrzeni tabel.
+2.  Odtworzenie przestrzeni tabel lub odpowiednich plików danych.
+3.  Włączenie danej przestrzeni tabel. Rekonstrukcja nie jest potrzebna.
+Na przykład:
+RMAN> sql 'alter tablespace old_rnd offlinę';
+RMAN> restore tablespace old_rnd;
+RMAN> sql 'alter tablespace old_rnd online';
+
+Odtwarzanie do określonego momentu w czasie
+Jeśli baza danych znajduje się w trybie archivelog, można korzystać z odtwarzania do określonego momentu w czasie (point-in-time recovery). Ten typ rekonstrukcji przeprowadza się tylko w odniesieniu do całej bazy danych, nie zaś pojedynczych plików danych lub przestrzeni tabel. Nie należy mylić tego pojęcia z pojęciem rekonstrukcji przestrzeni tabel do określonego momentu w czasie (tablespace point-in-time recovery, RMAN TSPITR). Poniżej przedstawiono przykład odtworzenia plików danych za pomocą programu RMAN, a następnie przeprowadzenia rekonstrukcji typu cancel za pomocą narzędzia SQL*Plus. Założono, że proces odbywa się w systemie Oracle9i:
+RMAN> restore database;
+SQL> recover database until cancel;
+Po rekonstrukcji bazy danych do określonego momentu w czasie można otworzyć ją dla użytkowników. Jeżeli przeprowadzono odtwarzanie do określonego momentu w czasie, podczas otwierania bazy danych trzeba podać parametr resetlogs:
+SQL> alter database open resetlogs;
+Wyczyszczenie dzienników powoduje, że sporządzenie w tym momencie kopii zapasowej bazy danych staje się sprawą o fundamentalnym znaczeniu. Ponadto jeśli stosuje się katalog odzyskiwania, to trzeba przekazać do niego informację o utworzeniu" nowej bazy danych. W takiej sytuacji należy wydać polecenie reset database.
+
+Odtwarzanie plików kontrolnych
+Poniżej opisano czynności, które wykonuje się w celu odzyskania plików kontrolnych:
+1.  Otwarcie bazy danych w trybie nomount.
+2.  Wydanie polecenia programu RMAN - RESTORE CONTROLFILE.
+
+UWAGA
+W przypadku systemu Oracle9i możliwe jest odtworzenie plików kontrolnych, nawet jeśli nie zastosowano katalogu odzyskiwania. Możliwość ta jest dostępna pod warunkiem wykorzystania istniejącej w pakiecie RMAN funkcji automatycznego archiwizowania (autobackup) tych plików w trakcie tworzenia każdej kopii zapasowej.
+Na potrzeby poniższych przykładów zakłada się, że system pracuje z wykorzystaniem katalogu odzyskiwania. W celu odtworzenia pliku kontrolnego-w przypadku systemu Oracle9i wydaje się polecenie:
+RMAN> startup nomount; 
+RMAN> restore controlfile;
+W przypadku systemu Oracle8i stosuje się polecenie run {}:
+RMAN> run {
+2> allocate channel tl type sbt_tape; *
+3> restore controlfile;}
+
+Odtwarzanie archiwalnych plików dziennika powtórzeń
+Po wydaniu polecenia RECOYER z poziomu programu RMAN w pierwszej kolejności następuje sprawdzenie dostępności potrzebnych archiwalnych plików dziennika powtórzeń. Jeśli te pliki są niedostępne, program RMAN przywraca je za pomocą wcześniej utworzonej kopii zapasowej archiwalnych plików dziennika powtórzeń. W celu samodzielnego odtworzenia archiwalnych plików dziennika powtórzeń wydaje się polecenie RESTORE ARCHIYELOG.
+
+UWAGA
+Jeśli dostępna jest przyrostowa kopia zapasowa, w przypadku rekonstrukcji plików danych program RMAN używa jej zamiast pliku archiwalnego dziennika powtórzeń.
+W poniższym przykładzie przedstawiono sposób podania lokalizacji docelowych archiwalnych plików dziennika powtórzeń oraz ich odtworzenia. Nawet w przypadku Oracle9i polecenie to musi zostać wywołane z poziomu polecenia run { }.
+RMAN> run {
+2> set archivelog destination to '/d00/backup/';
+3> restore archivelog all; }
+Bardzo trudna jest sytuacja, w której okazuje się, że na dysku nie ma archiwalnych plików dziennika powtórzeń, a nie zostały one wcześniej zarchiwizowane.
+Poniżej przedstawiono przykład odtworzenia przestrzeni tabel, a następnie zastosowania polecenia RECOYER w celu automatycznego odtworzenia i przywrócenia archiwalnych plików dziennika powtórzeń, których nie było na dysku, lecz zostały wcześniej zarchiwizowane przez program RMAN. Założono, że aplikacja pracuje w systemie Oracle9i.
+RMAN> restore tablespace users; 
+RMAN> recover tablespace users;
+
+Lista poleceń pakietu RMAN
+Opisanie zalet i wad wszystkich poleceń pakietu RMAN przekraczałoby zakres niniejszej książki. W niniejszym rozdziale przedstawiono jednakże opis składni każdego z nich. Zaprezentowano także różnice w składni tych poleceń w zależności od tego, czy stosowana jest wersja Oracle8i, czy Oracle9i. Ponadto podano przykłady wykorzystania najczęściej używanych komend.
+
+Powtarzające się słowa kluczowe
+Polecenia, z którymi Czytelnik zapozna się studiując dalszą część niniejszego rozdziału, zawieraj ą wiele powtarzających się słów kluczowych. Poniżej znajduje się ich wyszczególnienie.
+
+DBID
+Jednoznaczny identyfikator bazy danych.
+
+BACKUPSET
+Określa zbiór kopii zapasowej, który ma być zastosowany w danej operacji.
+
+CHANNEL id_kanału
+Określa kanał komunikacyjny, z którego korzysta program RMAN komunikując się z urządzeniem wejścia-wyjścia.
+
+CHECKLOGICAL
+Powoduje sprawdzenie bloków pod względem poprawności logicznej, a w razie wykrycia błędów dokonuje odpowiednich wpisów w pliku alert.log oraz plikach śledzenia. Dodatkowo istnieje możliwość sprawdzenia zakresów uszkodzonych bloków w widoku V$BACKUP_CORRUPTION. Bloki te można odtworzyć poprzez wydanie polecenia BŁOCK RECOYER, które istnieje jednak tylko w wersji Oracle9i.
+
+DATAFILE
+Określa plik danych poprzez jego nazwę lub numer.
+
+DATAFILECOPY
+Wskazuje konieczność zastosowania obrazów (image co-pies) plików danych.
+
+DEVICE TYPE specUrządzenia
+Określa typ urządzenia, które należy wykorzystać w danej operacji.
+
+FORMAT 'łańcuch_formatujący'
+Określa nazwę i miejsce docelowe zapisu plików elementów kopii zapasowej. W łańcuchu formatującym można stosować różne maski, które opisano w tabeli 1.1.
+Tabela 1.1. Maski lańcucka formatującego
+Maska 	Opis
+%c	Kopiuje numer elementu kopii zapasowej
+%d 	Nazwa bazy danych
+% D 	Dzień miesiąca (DD)
+%M 	Miesiąc roku (MM)
+% F 	Niepowtarzalna nazwa oparta na numerze DBID (jest to niepowtarzalna liczba identyfikująca bazę danych), dniu miesiąca, miesiącu, roku oraz wartości sekwencji
+%n 	Nazwa bazy danych, obcięta do maksymalnej długości ośmiu znaków
+%u 	Ośmioznakowa nazwa reprezentująca zbiór kopii zapasowej oraz czas jego utworzenia
+%p 	Numer każdego elementu w zbiorze kopii zapasowej; wartość początkowa wynosi l i jest zwiększana o jeden dla każdego tworzonego pliku
+%U 	Niepowtarzalna nazwa pliku utworzona poprzez połączenie %u_%p_%c
+%s 	Numer zbioru kopii zapasowej
+%t 	Znacznik czasu zbioru kopii zapasowej
+%T 	Rok, miesiąc i dzień w formacie RRRRMMDD
+
+LEVEL całkowita
+Wskazuje poziom tworzonej kopii zapasowej.
+operandPrzydziału
+Patrz pozycja ŤoperandPrzydziałuť poniżej, w sekcji Składnia poleceń wywoływanych z wiersza poleceń".
+
+TABLESPACE nazwa__przestrz_ tabel 
+Określa nazwę przestrzeni tabel.
+
+TAG nazwa_znacznika
+Określa dowolną nazwę znacznika kopii zapasowej, kopii ptików, archiwalnych plików dziennika powtórzeń i kopii plików kontrolnych.
+
+UNTIL wyrażenieUntil
+Stosowane w wielu poleceniach pakietu RMAN w celu l określenia górnej granicy czasu wykonania, maksymalnej wartości SCN* lub maksymalnej wartości sekwencji.
+
+Powtarzające się wyrażenia
+Podobnie, jak w przypadku powtarzających się w różnych poleceniach stów kluczowych, istnieje także wiele powtarzających się wyrażeń. W diagramach składniowych można je rozpoznać po zapisie, w którym drugi i kolejne wyrazy są pisane z .dużej litery. Na przykład: specŁańcuchaPołączenia, operandKopiiBezp i operandspecKopiiBezp są wyrażeniami. Jeśli dane wyrażenie nie jest zdefiniowane tuż po poleceniu, w którym występuje, jest ono wyrażeniem powtarzającym się. Definicje tych wyrażeń zamieszczono w porządku alfabetycznym razem z opisami poleceń.
+
+Składnia poleceń wywoływanych z wiersza poleceń
+Uruchamiając program RMAN, można podawać różne parametry w wierszu poleceń S.O. Przedstawiają je poniższe diagramy składniowe.
+System Change Number - wewnętrzna wartość w bazie danych Oracle, która jest zwiększana po każdej dokonanej zmianie w pliku dziennika powtórzeń. - przyp. tłum.
+
+Składnia w Oracle9i
+RMAN [parametr [parametr.
+parametr :-
+TARGET [=] specŁańcuchaPołączenia
+{ CATALOG [=] specŁańcuchaPolaczenia | NOCATALOG}
+| AUKILIARY [=] specŁańcuchaPołączenia
+| LOG [ = ] t ' ]nazwa_pliku[ ' ]
+| APPEND
+| { CMDFILE [ = ] 10} [']nazwa_pliku(']
+| MSGNO
+| TRACE [=] [']nazwa_pliku[']
+| DEBUG [[=] { ALL l typDebug [, typDebug ...] }
+[LEVEL [=] całkowita]]
+| SEND [=] 'polecenie'
+| PIPE [ = ] [']nazwa_potoku[']
+| TIMEOUT [=] całkowita
+}
+
+Składnia w Oracle8i
+RMAN [parametr [parametr. . .]]
+parametr :=
+{ TARGET [=] specŁańcuchaPołączenia
+| { CATALOG [=] specŁańcuchaPoia.czenia l NOCATALOG }
+| AUKILIARY [=] specŁańcuchaPołączenia
+| LOG [=] [ ' ]nazwa_pliku[ ' ]
+| APPEND
+| { CMDFILE [=] l @ } [ ' ]nazwa_pliku[ ' ]
+| MSGNO
+| TRACE   [=]    [ ' ]nazwa_pliku[ ' ]
+| DEBUG
+| SEND   [=]    'polecenie'
+
+Słowa kluczowe
+
+TARGET
+Określa docelową bazę danych.
+
+CATALOG
+Określa opcjonalną bazę danych katalogu odzyskiwania.
+
+AUXILIARY
+Określa opcjonalną pomocniczą bazę danych.
+
+LOG (MSGLOG) nazwa_pliku
+Określa nazwę pliku, w którym zapisywane są informacje o wykonaniu polecenia. Jeśli dany plik już istnieje, jest on nadpisywany. Dany plik nie jest nadpisywany, jeśli zastq-sowano także słowo kluczowe APPEND.
+
+APPEND
+Określa, że informacje dotyczące wykonania polecenia dopisywane są do pliku dziennika zdarzeń. Jeśli ten plik nie istnieje, jest tworzony. Zastosowanie tego słowa kluczowego zapobiega nadpisaniu pliku dziennika.
+
+MSGNO
+Powoduje wyświetlanie numerów komunikatów pakietu RMAN.
+
+TRACE
+Powoduje śledzenie i zapis poleceń debuggera pakietu RMAN do pliku wyjściowego.
+
+DĘBUG
+Powoduje wyświetlanie szczegółowych komunikatów o wykonywanych poleceniach SQL.
+
+PIPE
+Umożliwia wykonanie poleceń pakietu RMAN za pomocą pakietu DBMS_PIPE. Potoki mogą być także stosowane w celu przetwarzania wyjściowej informacji dotyczącej wykonania polecenia.
+
+TIMEOUT
+Stosowane w połączeniu z PIPĘ. Parametr ten wymusza zakończenie sesji programu RMAN w podanym przedziale czasowym.
+
+SEND
+Powoduje wysłanie zależnych od rodzaju wykorzystywanego oprogramowania komend do wszystkich kanałów podczas korzystania z warstwy obsługi nośników danych.
+
+@
+Wykonuje polecenia pakietu RMAN zapisane w pliku S.O. Jeśli nie podano ścieżki dostępu, domyślnie plik ten powinien znajdować się w katalogu, z którego wywołano sesję programu RMAN.
+Składnia
+@nazwa_pliku
+Przykład
+RMAN>   @pelna_kopia.rmn
+
+@@
+Wykonuje polecenia programu RMAN zapisane w pliku S.O. Podwójny znak @@ ma szczególne znaczenie, jeśli polecenie jest wykonywane z poziomu skryptu. Oznacza on, że wywoływany plik znajduje się w tym samym katalogu, co wywołujący go skrypt.
+Składnia
+@@nazwa_pliku
+Przykład
+Poniżej znajduje się przykład działania dwóch skryptów. Pierwszy z nich  pelna_kopia - zawiera odwołanie do drugiego w postaci - @@kopia_przestrzeni_tabel:
+RMAN> @pelna_kopia
+Kiedy skrypt pelna_kopia wywoła skrypt kopia_przestrzeni tabel, program RMAN podejmie próbę odszukania skryptu kopia_przestrzeni_tabel w tym samym katalogu, w którym znajduje się pelna_kopia.
+
+ALLOCATE CHANNEL
+Powoduje utworzenie kanału komunikacyjnego w celu przeprowadzenia operacji wejścia-wyjścia. Polecenie to musi być wykonane wewnątrz polecenia RUN.
+
+UWAGA
+Firma Oracle przestała rekomendować pewne komendy polecenia ALLOCATE CHANNEL istniejące dla wersji Oracle8i. Przykładami takich komend są KBYTES i READRATE. Zalecaną obecnie składnię można znaleźć w opisie polecenia CONFIGURE.
+Składnia w Oracle9i
+ALLOCATE [AUXILIARY] CHANNEL [']id_kanału['] 
+{ DEVICE TYPE [=] specUrządzenia \ NAME [=]
+'nazwa_kanału' } 
+[operandPrzydziału [operandPrzydziału . . .}]
+Składnia Oracle8i
+ALLOCATE   [AUXILIARY]   CHANNEL   [']id_kanału[']  
+{ TYPE   [ = ]   spec Urządzenia  |   NAME   [ = ]
+specUrządzenia   }
+ [operandPrzydziału   [operandPrzydziału   ...]];
+Słowa kluczowe
+NAME   'nazwa_kanału'
+Nazwa urządzenia wejścia-wyjścia.
+Przykłady
+Poniżej przedstawiono przykład utworzenia jednego kanału typu disk. Następnie wykonywana jest archiwizacja danych. Elementy kopii zapasowej są kierowane do domyślnego katalogu: $ORACLE_HOME/dbs.
+RMAN> run {
+2> allocate channel dl type disk;
+3> backup database;
+4> }
+Następny przykład przedstawia sytuację, w której elementy kopii zapasowej tworzone są w katalogu określonym przez podwyrażenie FORMAT. Zastosowanie maski %U zapewnia unikalną nazwę każdemu elementowi kopii zapasowej.
+RMAN>   run   {
+2>  allocate  channel  d1   type  disk  format
+3>   '/d99/backups/r_%U';
+4> backup  database;   }
+
+ALLOCATE CHANNEL
+FOR MAINTENANCE
+Umożliwia przeprowadzanie operacji związanych z konserwacją plików za pomocą kanałów. Używa się go w połączeniu z poleceniami CHANGE lub CROSSCHECK.
+
+Składnia w Oracle9i
+ALLOCATE CHANNEL FOR MAINTENANCE 
+DEVICE TYPE [=] specUrządzenia 
+[operandPrzydziału [operandPrzydziału ...]];
+Składnia w Oracle8i
+ALLOCATE CHANNEL FOR
+{ MAINTENANCE | DELETE } 
+{ TYPE [=] specUrządzenia 
+| NAME [=]'nazwa_kanału' } 
+[operandPrzydziału [operandPrzydziału ...]];
+Przykład
+Poniżej przedstawiono przykładowe polecenie, na skutek którego przydzielony kanał usuwa element kopii zapasowej:
+RMAN> allocate channel for maintenance type disk; RMAN> change backuppiece '/d99/backups/lccn3ed4_l_l' 2> delete; 
+RMAN> release channel;
+
+ALTER DATABASE
+Polecenie to pełni analogiczną funkcję względem polecenia ALTER DATABASE języka SQL. Jest ono wykorzystywane do montowania i otwierania bazy danych z poziomu linii poleceń
+programu RMAN. Może ono być wykonane wewnątrz polecenia RUN albo bezpośrednio z linii poleceń programu RMAN.
+Składnia
+{ ALTER DATABASE { MOUNT | OPEN [RESETLOGS] } 
+| { MOUNT | OPEN [RESETLOGS] DATABASE };
+Słowa kluczowe
+MOUNT
+Montuje bazę danych bez jej otwierania.
+OPEN
+Otwiera bazę danych.
+RESETLOGS
+Ustawia wartość sekwencji na l w aktywnych dziennikach powtórzeń (online redo logs). W przypadku zastosowania polecenia ALTER DATABASE pakietu RMAN docelowa baza danych w katalogu jest automatycznie resetowana. W przypadku wykorzystywania narzędzia SQL*Plus zresetowanie docelowej bazy danych w katalogu przeprowadza się wykonując polecenie RESET DATABASE pakietu RMAN.
+BACKUP
+Powoduje utworzenie kopii zapasowej elementu fizycznie (przykładowo, plik danych lub plik archiwalnego dziennika powtórzeń bazy danych) istniejącego lub logicznego (przestrzeń tabel) bazy danych. W przypadku wersji Oracle8i polecenie to musi być wydane wewnątrz polecenia RUN.
+Składnia w Oracle9i
+BACKUP   [   FULL   l    INCREMENTAL   LEVEL   [ = ]    całkowita   } 
+['operandKopiiBezp   [operandKopiiBezp   . . . ] ]
+specKopiiBezp   [specKopiiBezp]...
+[PLUS   ARCHIVELOG
+[operandSpecKopiiBezp   [operandSpecKopliBezp  ...]]];
+
+operandKopiiBezp   :=
+{   FORMAT   [=]    'łańcuch_formatujący'
+[, 'łańcuch_formatujący' ...] ^
+CHANNEL [']id_kanału[']
+CUMULATIYE
+MAKSETSIZE [ = ] całkowita [ K | M | G ]
+FILESPERSET [=] całkowita
+PARMS [=] 'parametry_kanału'
+POOL [=] całkowita
+TAG [=] [']nazwa_znacznika[']
+opcjeZachowywania
+SKIP { OFFLINE | READONLY | INACCESSIBLE }
+NOEXCLUDE
+PROXY [ONLY]
+VALIDATE
+FORCE
+DISKRATIO [=] całkowita
+NOT BACKED UP [SINCE TIME [=] 'łańcuch_daty']
+NOCHECKSUM
+CHECK LOGICAL
+COPIES [=] całkowita
+DEVICE TYPE specUrządzenia }
+specKopiiBezp :=
+[ (]
+{ BACKUPSET
+{    {   ALL   |   specCzasuUtworz   }
+l   klucz_główny   [,   klucz_główny   . . .]
+}
+| DATAFILE specPlikuDanych [, specPlikuDanych ...] 
+| DATAFILECOPY 'nazwa_pliku' [, 'nazwa_pliku' ...] 
+| DATAFILECOPY TAG [=] [']nazwa_znacznika['] [,
+[']nazwa_znacznika[ ' ] . . . ]
+| TABLESPACE [ ' ] nazwa_przestrz_tabel [ ' ]
+[ , [' ] nazwa_przestrz_tabel [' ] . . .] 
+| DATABASE | specArchDzienPowt
+| CURRENT CONTROLFILE [FOR STANDBY] 
+| CONTROLFILECOPY ' nazwa_pliku ' } [operandSpecKopiiBezp [operandSpecKopiiBezp] . . .]
+[)]
+operandSpecKopiiBezp :=
+{ FORMAT [=] ' łańcuch_formatujący' [,
+ ' łańcuch_formatujący' ...} 
+| CHANNEL [']id_kanału['] 
+| MAXSETSIZE [=] całkowita [ K | M | G ] 
+| FILESPERSET [=] całkowita 
+| PARMS [=] ' parametry_kanału' 
+| POOL [=] całkowita 
+| TAG [=] [ ' ] nazwa_znacznika [ ' ] 
+| opcjeZachowywania
+| SKIP { OFFLINE | READONLY | INACCESSIBLE }
+| NOEXCLUDE
+| FORCE
+| DISKRATIO [=] całkowita
+| NOT BACKED UP [SIŃCE TIME [=] ' łańcuch_daty' ]
+| INCLUDE CURRENT CONTROLFILE [FOR STANDBY]
+| DELETE [ALL] INPUT
+}
+Składnia w Oracle8i
+BACKUP [ FULL | INCREMENTAL LEVEL [=] całkowita ] [operandKopiiBezp [operandKopiiBezp} . . .] specKopiiBezp [specKopiiBezp];
+
+operandKopiiBezp :=
+{ FORMAT [=] ' łańcuch_formatujący' [,
+' łańcuch_formatujący' ...] 
+| CHANNEL [']id_kanału['] 
+| CUMULATIVE
+| FILESPERSET [=] całkowita 
+| PARMS [=] ' parametry_kanału'
+| POOL   [=]    całkowita
+| TAG   [ = ]    [']nazwa_znacznika[ ' ]
+| opcjeZachowywania
+| SKIP { OFFLINE | READONLY | INACCESSIBLE }
+| PROXY [ONLY]
+| DISKRATIO [=] całkowita
+| NOCHECKSUM
+| CHECK LOGICAL
+| SETSIZE [ = ] całkowita       ..: .
+
+specKopiiBezp :=
+[(]
+{ DATAFILE specPlikuDanych [, specPlikuDanych ..
+| DATAFILECOPY ' nazwa_pliku ' [, ' nazwa_pliku' ..
+| DATAFILECOPY TAG [=] [ ' ] nazwa_znacznika [ ' ]
+[ , \ [ ' ] nazwa_znacznika [' } ... j 
+| TABLESPACE [ ' ] nazwa_przestrz_tabel [ ' ]
+[ , \ [ ' ] nazwa_przestrz_tabel [' ] . . . ] 
+| DATABASE 
+| specArchDzienPowt 
+| CURRENT CONTROLFILE 
+| CONTROLFILECOPY ' nazwa_pliku ' } [operandSpecKopiiBezp [operandSpecKopiiBezp] . . .]
+operandSpecKopiiBezp :=
+{ FORMAT [=] ' łańcuch_formatujący'
+ [ , ' łańcuch_formatujący' ...] 
+| CHANNEL [ ' ] id_kanału[ ' ] 
+| FILESPERSET [=] całkowita 
+| PARMS [=] ' parametry_kanału' 
+| POOL [=] całkowita 
+| TAG [=] [ ' ] nazwa_znacznika [ ' ] 
+| SKIP { OFFLINE | READONLY l INACCESSIBLE } 
+| DISKRATIO [=] całkowita 
+| INCLUDE CURRENT CONTROLFILE 
+| DELETE INPUT 
+| SETSIZE [=] całkowita
+}
+
+Słowa kluczowe
+
+CURRENT CONTROLFILE [FOR STANDBY]
+Określa, że bieżący plik kontrolny także ma podlegać archiwizacji. Zastosowanie opcji FOR STANDBY określa, że utworzony plik kontrolny będzie mógł służyć w celu utworzenia bazy danych w stanie gotowości (standby database).
+
+CUMULATIVE
+Powoduje, że pakiet RMAN archiwizuje tylko te bloki, które zmieniły się od czasu ostatniej archiwizacji przeprowadzonej na poprzednim poziomie (levef).
+
+MAXSETSIZE całkowita
+Określa maksymalną wielkość zbioru kopii zapasowej. Można ją podawać w bajtach, kilobajtach (K), megabajtach (M) lub gigabajtach (G).
+
+FILESPERSET całkowita
+Ogranicza maksymalną liczbę plików w zbiorze kopii zapasowej do podanej liczby.
+
+PARMS 'parametry_kanału '
+Wysyła zależną od danego S.O. informację do warstwy systemowej za każdym razem, gdy tworzony jest nowy element kopii zapasowej.
+
+POOL
+Określa miejsce, gdzie należy przechowywać kopię zapasową (media management pool). Stosuje się tylko w połączeniu z wykorzystaniem oprogramowania obsługi nośników danych.
+
+SKIP
+Określa, że podczas archiwizacji należy pominąć pliki danych o atrybucie tylko-do-odczytu (read-only), pliki nieaktywne (offline) lub niedostępne (inaccessible).
+
+NOEXCLUDE
+Powoduje zmianę ustawień domyślnych, które wcześniej zdefiniowano za pomocą polecenia CONFIGURE EXCLUDE.
+
+PROXY
+Zezwala, by czas i sposób przesyłania danych były zależne od oprogramowania obsługi urządzeń (media manager).
+
+VALIDATE
+Sprawdza poprawność plików pod względem występowania błędów fizycznych i logicznych.
+
+FORCE
+Zezwala na zignorowanie ustawień optymalizujących zdefiniowanych za pomocą polecenia CONFIGURE.
+
+DISKRATIO całkowita
+Rozdziela kopię zapasową pomiędzy wiele dysków (zapis symetryczny).
+
+NOT BACKED UP[SINCE TIME ' łańcuch_daty']
+Powoduje tworzenie kopii zapasowych tych plików, które nie były archiwizowane w ogóle lub od podanego dnia i godziny.
+
+NO CHECKSUM
+Powoduje pominięcie obliczania sumy kontrolnej bloku.
+
+COPIES całkowita
+Określa liczbę tworzonych kopii zapasowych. Wartość domyślna tego parametru wynosi l.
+
+DELETE
+Powoduje usuwanie wejściowego pliku zbioru kopii zapasowej (backup set), kopii pliku danych (data/ile copy) lub dziennika archiwizacji (archived log) po pomyślnym wykonaniu kopii zapasowej.
+Przykłady
+W podrozdziale Tworzenie kopii zapasowej plików danych" zawarto przykłady zastosowania polecenia BACKUP.
+
+BLOCKRECOVER (dotyczy tylko Oracle9i)
+Polecenie to pozwala na dostosowanie poziomu szczegółowości odzyskiwania danych poprzez podanie krótkiej listy uszkodzonych bloków, nie zaś całego pliku danych.
+Składnia
+BLOCKRECOVER
+[DEVICE TYPE specUrządzenia (, specUrządzenia] .. .] specBloku [specBloku]... [opcjeBloku 
+[opcjeBloku]...];
+specBloku   :=
+{   DATAFILE   specPlikuDanych  BLOCK   całkowita
+[,   całkowita   ...] 
+|   TABLESPACE  nazwa_przestrz_tabel  DBA  całkowita
+[,   całkowita   ...] 
+|   CORRUPTION   LIST
+}
+opcjeBloku   :=
+{   FROM   {   BACKUPSET   |    DATAFILECOPY   } 
+|   FROM TAG   [=]    [']nazwa_znacznika['] 
+|   RESTORE   wyrażenieUntil
+Słowa kluczowe
+BLOCK całkowita
+Określa blok(i), który(e) należy odtworzyć.
+DBA
+Określa adres odtwarzanego bloku danych (data block address).
+CORRUPTION LIST
+Odzyskuje bloki umieszczone w widokach słownika V$COPY_ CORRUPTION oraz V$BACKUP_CORRUPTION.
+FROM
+Określa, że odtwarzanie danych powinno odbywać się altfb ze zbioru kopii zapasowej (backup set), albo kopii pliku danych (datafile copy).
+FROM TAG nazwa_znacznika
+Określa zbiór kopii zapasowej, który ma być odzyskany oraz ma służyć jako źródło odzyskiwania danych na poziomie bloków.
+RESTORE wyrażenieUntil
+Określa, że należy odtworzyć zbiory kopii zapasowych utworzone przed podanym terminem.
+
+CATALOG
+Powoduje dodanie do katalogu odzyskiwania informacji dotyczących wywoływanego przez użytkownika polecenia COPY.
+Składnia
+CATALOG { CONTROLFILECOPY | DATAFILECOPY | ARCHIVELOG } 'nazwa_pliku' [, 'nazwa_pliku' ...] 
+[TAG [=] ['}nazwa_znacznika ['] | LEVEL [=]
+całkowita ]
+[TAG   [=]    [']nazwa_znacznika[']   |   LEVEL   [=] całkowita   l ... ;
+Słowa kluczowe
+CONTROLFILECOPY 'nazwa_pliku '
+Określa nazwę kopiowanego pliku kontrolnego. Informacja o tym pliku powinna być dodawana do katalogu odzyskiwania.
+DATEFILECOPY 'nazwa_pliku '
+Określa nazwę kopiowanego pliku danych. Informacja o tym pliku powinna być dodawana do katalogu odzyskiwania.
+ARCHIVELOG 'nazwa_pliku '
+Określa nazwę archiwalnego pliku dziennika powtórzeń. Informacja o tym pliku powinna być dodawana do katalogu odzyskiwania.
+TAG nazwa_znacznika
+Określa nazwę znacznika przypisywanego do pliku w ramach katalogu odzyskiwania.
+LEVEL całkowita
+Określa, że kopia pliku powinna być zarejestrowana w katalogu odzyskiwania na podanym poziomie kopii przyrostowej.
+Przykład
+Poniżej przedstawiono przykład dodania do katalogu odzyskiwania informacji o zastosowaniu poleceniu COPY po połączeniu z docelową bazą danych. Najpierw użytkownik wykonuje polecenie COPY:
+RMAN> run {
+2> allocate channel dl type disk;
+3> copy datafile '/d02/oradata/brdstn/users_01.dbf'
+4> to '/d99/users 01.dbf; }
+Po połączeniu z katalogiem odzyskiwania można zarejestrować informacje dotyczące poprzedniego zastosowania polecenia COPY:
+RMAN> catalog datafilecopy '/d99/users_01.dbf' 
+level 0;
+
+CHANGE
+Umożliwia przeprowadzenie konserwacji (maintenance) zbiorów kopii zapasowych lub związanych z nimi elementów kopii zapasowej. Konserwacja może polegać na:
+   zmianie przechowywanych w odpowiednim repozytorium informacji o zbiorach kopii zapasowych i elementach kopii zapasowej;
+   usunięciu elementów kopii zapasowych z nośnika dyskowego lub taśmowego. Powoduje to jednoczesne usunięcie związanych z nimi informacji z plików kontrolnych docelowej bazy danych oraz z opcjonalnego katalogu odzyskiwania.
+Składnia w Oracle9i
+CHANGE
+{ { BACKUP | COPY } [OF listaObiektów]
+[opcjeKonserwacji [opcjeKonserwacji]...] 
+| specObiektówKonserwacji
+[DEVICE TYPE specUrządzenia [, specUrządzenia]. . .] } { AYAILABLE | UNAVAILABLE | UNCATALOG |
+opcjeZachowywania} [DEVICE TYPE specUrządzenia [, specUrządzenia] . . . ] ;
+
+Składnia w Oracle8i
+CHANGE
+{ ARCHIVELOG
+{  klucz_główny   [,   klucz_główny  ...] 
+|  'nazwa_pliku'    [,'nazwa_pliku'   ...]   }
+|  specArchDzienPowt 
+|  BACKUPPIECE   {    'uchwyt'    [,'uchwyt'    ...]
+|  klucz_główny  [,   klucz_główny  ...] 
+|  TAG   [=]    [']nazwa_znacznika[']   }
+|  BACKUPSET  klucz_główny   [,   klucz_główny  ...] 
+|  {   CONTROLFILECOPY   
+|  DATAFILECOPY  } {  klucz_główny  [, klucz_główny .] 
+|    'nazwa_pliku'    [,'nazwa_pliku'   ...] 
+|   TAG   [=]    [']nazwa_znacznika[']
+[,  [']nazwa_znacznika[' ]   ...   ]   } 
+|  PROXY   {   'uchwyt'    [,'uchwyt'    ...]
+|  klucz_główny   [,   klucz_główny  ...] 
+|  TAG   [ = ]    [']nazwa_znacznika[' ]   } }
+{ DELETE | AVAILABLE | UNAVAILABLE 
+| UNCATALOG | CROSSCHECK };
+Słowa kluczowe
+AVAILABLE
+Zmienia status kopii zapasowej (polecenie backup) lub kopii danych (polecenie copy) na AVAILABLE.
+UNAVAILABLE
+Zmienia status kopii zapasowej lub kopii danych na UNAVAILABLE. Kopie zapasowe oznaczone jako UNAVAILABLE nie są wykorzystywane przez pakiet RMAN. Dlatego też w razie potrzeby odzyskania danych stosowana jest dostępna wcześniejsza kopia zapasowa.
+UNCATALOG
+Usuwa z katalogu odzyskiwania informacje o odpowiednich kopiach plików danych oraz archiwalnych plikach dziennika powtórzeń, a w pliku kontrolnym docelowej bazy danych oznacza je jako DELETED.
+Przykłady 
+Poniżej przedstawiono przykład przeprowadzania operacji usuwania elementu kopii zapasowej reprezentowanej przez plik o nazwie Iccn3ed4_l_l:
+RMAN> allocate channel for maintenance type disk;
+RMAN> change backuppiece '/d99/backups/lccn3ed4_l_l' 2> delete; 
+RMAN> release channel;
+W następnym przykładzie pokazano sposób oznaczania zbioru kopii zapasowej jako niedostępnego (unavailable):
+RMAN> allocate channel for maintenance type disk; RMAN> change backupset 1180 unavailable; 
+RMAN> release channel;
+
+CONFIGURE (dotyczy tylko Oracle9i)
+Definiuje ustawienia sesji programu RMAN obowiązujące do czasu jej zakończenia.
+Składnia
+CONFIGURE
+{ konfiguracjaUrządz
+| konfiguracjaKopiiBezp
+| { AUKNAME FOR DATAFILE specPlikuDanych
+| SNAPSHOT CONTROLFILE NAME
+}
+{ TO 'nazwa pliku' l CLEAR }
+|  konfiguracjaPlikuKontrln };
+
+konfiguracjaUrządz :=
+{ DEFAULT DEVICE TYPE { TO specUrządzenia l CLEAR }
+| DEVICE TYPE specUrządzenia
+{ PARALLELISM całkowita | CLEAR } | [AUKILIARY] CHANNEL [całkowita]
+DEVICE TYPE specUrządzenia { operandPrzydzialu 
+| CLEAR } }
+konfiguracjaKopiiBezp :=
+{ RETENTION POLICY { TO { RECOVERY WINDOW OF 
+całkowita DAYS
+| REDUNDANCY [=] całkowita 
+| NONE }
+| CLEAR } | MAXSETSIZE { TO { całkowita [ K | M | G ]
+| UNLIMITED }
+| CLEAR } | { ARCHIVELOG | DATAFILE }
+BACKUP COPIES FOR DEVICE TYPE specUrządzenia 
+{ TO całkowita | CLEAR.}
+| BACKUP OPTIMIZATION { ON | OFF | CLEAR } 
+| EXCLUDE FOR TABLESPACE nazwa_przestrz_tabel
+[CLEAR] 
+}
+konfiguracjaPlikuKontrln :=
+CONTROLFILE AUTOBACKUP
+{ ON | OFF
+| CLEAR
+| FORMAT FOR DEVICE TYPE
+specUrządzenia { TO ' łańcuch_formatujacy'
+| CLEAR } }
+Słowa, kluczowe
+SNAPSHOT CONTROLFILE NAME
+Określa nazwę i ścieżkę dostępu do migawki pliku kontrolnego. Wartość domyślna zależy od systemu operacyjnego. Dla systemu Unix jest to katalog $ORACLE_HOME/dbs.
+DEFAULT DEVICE TYPE 
+Określa domyślny nośnik danych, którym może być dysk lub taśma.
+DEVICE TYPE specUrządzenia
+Określa typ urządzenia stosowanego podczas automatycznego przydzielania kanałów oraz definiuje stopień równoległości wykonania. Oznacza to bezpośrednie określenie liczby przydzielanych i wykorzystywanych kanałów. Wartość domyślna stopnia równoległości wynosi l.
+PARALLELISM całkowita
+Określa liczbę automatycznie przydzielanych kanałów dla danego urządzenia.
+RETENTION POLICY
+Definiuje politykę zachowywania kopii (retention policy), dzięki czemu program RMAN po pewnym czasie oznacza zbiory kopii zapasowych jako przestarzałe (obsolete). Takie zbiory mogą być następnie usunięte przez administratora.
+RECOVERY WINDOW OF
+Definiuje przedział odzyskiwania (recovery window). Wartość tego parametru oblicza się jako wartość parametru SYSDATE minus podana przez administratora liczba dni. Kopie zapasowe utworzone przed wyliczoną datą są oznaczane jako przestarzałe.
+REDUNDANCY
+Definiuje liczbę nadmiarowych kopii zapasowych lub liczbę kopii danych, których nie należy traktować jako przestarzałych. Wartość domyślna tego parametru wynosi l.
+MAXSETSIZE całkowita
+Definiuje maksymalny rozmiar elementu kopii zapasowej dla każdego kanału. Wartość może być podana w bajtach, kilobajtach (K), megabajtach (M) lub gigabajtach (G). Wartością domyślną tego parametru jest UNLIMITED (bez ograniczeń).
+CONTROLFILE AUTOBACKUP
+Określa, czy dozwolone jest automatyczne archiwizowanie plików kontrolnych. Wartością domyślną jest OFF (niedozwolone).
+FORMAT FOR DEVICE TYPE
+Określa nazwę i lokalizację pliku kontrolnego. Wartością domyślną jest %F (patrz tabela 1.1).
+CLEAR
+Przywraca wartość domyślną.
+Przykład
+Poniższy przykład przedstawia sposób określenia dysku jako domyślnego typu urządzenia oraz zdefiniowania formatu stosowanego podczas nadawaniu nazw elementom kopii zapasowej:
+RMAN> CONFIGURE CHANNEL DEYICE TYPE DISK FORMAT 
+2> '/d99/rmanback/rman %U.bus';
+
+CONNECT
+Powoduje nawiajzanie połączenia z bazą docelową, bazą katalogu lub bazą pomocniczą w celu przeprowadzenia operacji związanych z archiwizowaniem, odtwarzaniem lub odzyskiwaniem danych.
+Składnia
+{ CONNECT TARGET [specŁańcuchaPołączenia] [;] 
+| { CONNECT CATALOG | CONNECT AUXILIARY } specŁańcuchaPołączenia [;]
+}
+Przykłady
+Poniżej przedstawiono przykład nawiązania połączenia z docelową bazą danych w wersji Oracle8i bez zastosowania opcjonalnego katalogu odzyskiwania:
+$> rman target / nocatalog
+Kolejny przykład dotyczy sposobu nawiązania połączenia zarówno z bazą docelową, jak i z katalogiem odzyskiwania:
+$> rman target / catalog rman901/ secret@ rman_catalog
+
+COPY
+Stosowane w celu tworzenia obrazów (image copies) plików bazy danych. W przypadku systemu Oracle8i polecenie to musi być wykonane wewnątrz polecenia RUN.
+Składnia
+COPY   [opcjeKopiowania   [opcjeKopiowania]...] {   plikKopiowany TO
+{   AUKNAME   |    'nazwa_pliku'   [opcjeKopiowania [opcjeKopiowania].. .]    } [,   plikKopiowany TO
+{   AUXNAME   |    'nazwa_pliku'    [opcjeKopiowania [opcjeKopiowania].. . ]    } ] . .. l    (plikKopiowany TO
+{   AUKNAME   |    'nazwa_pliku'    [opcjeKopiowania
+[opcjeKopiowania] . . .]    } ) [(plikKopiowany TO
+{   AUKNAME   |    'nazwa_pliku'    [opcjeKopiowania [opcjeKopiowania]...]    } )
+]... };
+Oracle9i opcjeKopiowania :=
+{ TAG [ = ] [ ' ] nazwa_znacznika'[ ' ]
+| LEVEL [=] całkowita
+| NOCHECKSUM
+| CHECK LOGICAL
+|   opcjeZachowywania
+}
+Oracle9i plikKopiowany := 
+{ DATAFILE specPlikuDanych 
+| DATAFILECOPY
+{ 'nazwa_pliku' 
+| TAG [=] [']nazwa_znacznika['] } 
+| ARCHIVELOG 'nazwa_pliku' 
+| CURRENT CONTROLFILE [FOR STANDBY] 
+| CONTROLFILECOPY
+{ 'nazwa_pliku' 
+| TAG [=] [']nazwa_znacznika['] } }
+Oracle8i opcjeKopiowania :=
+{ TAG [=] [']nazwa_znacznika[']
+| LEVEL [=] całkowita
+| NOCHECKSUM
+| CHECK LOGICAL
+}
+Oracle8i plikKopiowany := { DATAFILE specPlikuDanych | DATAFILECOPY
+{ 'nazwa_pliku' 
+| TAG [=] [']nazwa_znacznika['] } 
+| ARCHIVELOG 'nazwa_pliku' 
+| CURRENT CONTROLFILE 
+| CONTROLFILECOPY
+{ 'nazwa_pliku' 
+| TAG [=] [']nazwa_znacznika['] } }
+Słowa kluczowe
+AUXNAME
+Określa, że nazwa pliku utworzonego w rezultacie działania polecenia COPY jest alternatywną nazwą pliku, który został wcześniej zdefiniowany w poleceniu SET.
+NO CHECKSUM
+Określa, że nie należy przeprowadzać obliczeń sumy kontrolnej bloku.
+
+CREATE CATALOG
+Powoduje utworzenie schematu w bazie danych katalogu odzyskiwania.
+Składnia
+CREATE CATALOG [TABLESPACE
+[']nazwa_przestrz_tabel[' ] ] [; ]
+Słowa kluczowe
+TABLESPACE nazwa_przestrz_tabel
+Określa przestrzeń tabel, w której są umieszczane obiekty katalogu odzyskiwania. Domyślnie wykorzystywana jest domyślna przestrzeń tabel właściciela schematu w katalogu odzyskiwania.
+Przykład
+RMAN> create catalog;
+CREATE SCRIPT
+Powoduje utworzenie i składowanie skryptu w repozytorium katalogu.
+Składnia
+CREATE SCRIPT [']nazwa_skryptu[']
+{
+{ poleceniaKopiowania | poleceniaOdtwarzania | poleceniaKonserwacji | polecenialnne
+}
+[ poleceniaKopiowania 
+| poleceniaOdtwarzania | poleceniaKonserwacji 
+| polecenialnne
+poleceniaKopiowania ;
+{ BACKUP
+| COPY
+}
+poleceniaOdtwarzania
+{ REPLICATE
+| RESTORE
+| RECOVER
+| BLOCKRECOVER
+| DUPLICATE
+| SWITCH }
+poleceniaKonserwacji :=
+{ CATALOG
+| CHANGE
+| CONFIGURE
+| CROSSCHECK
+| DELETE
+| VALIDATE
+| REPORT
+| DELETE
+| SHOW }
+polecenialnne :=
+{ ALLOCATE
+| ALTERDATABASE
+| BEGINLINE
+| DEBUG
+| EKECUTESCRIPT
+| HOST
+| RELEASE
+| RESYNC
+| SEND
+| SET
+| SHUTDOWN
+| SQL
+| STARTUP }
+Przykłady
+Patrz Skrypty składowane katalogu".
+
+CROSSCHECK
+Umożliwia sprawdzenie, czy zbiór kopii zapasowych i związane z nim elementy kopii zapasowej wciąż znajdują się na nośniku danych. Jeśli zbiór kopii zapasowych jest zlokalizowany w miejscu określonym przez plik kontrolny docelowej bazy danych lub opcjonalny katalog odzyskiwania, jego status oznacza się jako AVAILABLE (dostępny). W przeciwnym wypadku określany jest jako EXPIRED (nieaktualny).
+Składnia w Oracle9i
+CROSSCHECK
+{ { BACKUP | COPY }
+[OF listaObiektów] [opcjeKonserwacji [opcjeKonserwacji] . . .] 
+| specObiektówKonserwacji
+[DEYICE TYPE specUrządzenia [, specUrządzenia] . . . ]
+Składnia w Oracle8i
+CROSSCHECK  BACKUP
+[   OF  listaObiektów ]
+[   opcjeSprawdz   [   opcjeSprawdz. . . ] ] ; opcjeSprawdz   :=
+{   TAG   [=]    [']nazwa_znacznika[']
+|   specCzasuUtworz   }
+Przykład
+Poniżej przedstawiono przykład sprawdzenia istnienia wszystkich zbiorów kopii zapasowych:
+RMAN> allocate channel for maintenance type disk; RMAN> crosscheck backup; 
+RMAN> release channel;
+W następnym przykładzie pokazano, w jaki sposób dla wszystkich zbiorów kopii zapasowych sprawdzane są elementy kopii zapasowej zawierające przestrzeń tabel SYSTEM:
+RMAN> allocate channel for maintenance type disk; RMAN> crosscheck backup of tablespace system; 
+RMAN> release channel;
+DELETE
+W odniesieniu do wersji Oracle9i polecenie to powoduje usuwanie fizycznie istniejących plików związanych ze zbiorami kopii zapasowych lub kopiami plików danych, uaktualnienie ich statusu w pliku kontrolnym oraz usuwanie informacji ich dotyczących z opcjonalnego katalogu odzyskiwania.
+Zarówno w systemie Oracle8i, jak i Oracle9i kopie zapasowe są oznaczane jako EXPIRED (nieaktualne), jeśli nie można odszukać ich w zapisanej lokalizacji. Zastosowanie polecenia delete odnośnie kopii zapasowej oznaczonej jako EXPIRED usuwa informacje o niej z pliku kontrolnego oraz opcjonalnego katalogu odzyskiwania. 
+Składnia w Oracle9i
+DELETE [NOPROMPT] { [EXPIRED]
+{ { BACKUP | COPY }
+[.OF listaObiektów] [opcjeKonserwacji [opcjeKonserwacji].. . ] 
+| specObiektówKonserwacji
+[DEYICE TYPE specUrządzenia [, specUrządzenia] . . .] } 
+| OBSOLETE [przestKopieBezp]
+[DEVICE TYPE (specUrządzenia [, specUrządzenia]...]
+
+Składnia w Oracle8i
+DELETE EXPIRED BACKUP [ OF listaObiektów ] [ opcjeUsuwania [ opcjeUsuwania,
+opcjeUsuwania :=
+{   TAG   [ = ]    [ ']nazwa_znacznika['] |   specCzasuUtworz   }
+Słowa kluczowe
+NOPROMPT
+Powoduje usuwanie pliku o podanej nazwie bez żądania potwierdzenia.
+EXPIRED
+Powoduje usuwanie plików oznaczonych w katalogu jako EXPIRED.
+OBSOLETE
+Powoduje usuwanie plików, które są już nieprzydatne do przeprowadzenia procesu odzyskiwania danych (pliki przestarzałe).
+Przykład
+Poniżej przedstawiono przykład usuwania z plików kontrolnych bazy docelowej oraz opcjonalnego katalogu odzyskiwania informacji związanych z kopiami zapasowymi oznaczonymi jako EXPIRED. Przyjęto, że przykład dotyczy wersji Oracle8i.
+RMAN> allocate channel for maintenance type disk; RMAN> crosscheck backup;
+RMAN-08074: crosschecked backup piece: found to be
+'EXPIRED' RMAN-08517: backup piece handle=/d99/rman/brdstn/
+rman_10_BRDSTN_Occv81ck_l_l.bus recid=12
+stamp=435443094
+RMAN> delete expired backup of database;
+RMAN-08517: backup piece handle=/d99/rman/brdstn/ rman_10_BRDSTN_Occv81ck_l_l.bus recid=12 stamp=435443094
+RMAN-08073: deleted backup piece
+Poniżej przedstawiono przykład dotyczący wersji Oracle 9i, w którym pokazano sposób usuwania fizycznie istniejących
+plików związanych z kopią zapasową oraz usuwania związanych z nimi informacji z pliku kontrolnego docelowej bazy danych i z opcjonalnego katalogu odzyskiwania:
+RMAN> delete backup of database;
+List of Backup Pieces
+BP Key  BS Key  Pc# Cp# Status      Device Type Piece Name
+25      25      11   AVAILABLE   DISK
+/d99/rman_
+Oucv8npu_
+l_l.bus 
+Do you really want to delete the above objects
+(enter YES or NO)? YES 
+deleted backup piece 
+backup piece handle=/d99/rman_0scv8npr_l_l.bus
+recid=26 stamp=435445566
+
+DELETE SCRIPT
+Powoduje usuwanie skryptu składowanego z katalogu odzyskiwania.
+Składnia
+DELETE SCRIPT [']nazwa_skryptu[' ] ;
+
+DROPCATALOG
+Powoduje usuwanie wszystkich obiektów powiązanych ze schematem katalogu odzyskiwania.
+Składnia
+DROP CATALOG[;]
+
+DUPLICATE
+Powoduje utworzenie duplikatu bazy danych (duplicate database) lub utworzenie bazy danych w trybie gotowości (standby database). Proces ten jest przeprowadzany na podstawie kopii zapasowej bazy docelowej. W przypadku Oracle8i polecenie to musi być wywołane z poziomu polecenia RUN.
+Składnia w Oracle9i
+DUPLICATE TARGET DATABASE
+{ TO [']nazwa_bazy_danych['] [ [UstaOpcjiDuplikat]
+[UstaOpcjiDuplikat ...] ] | FOR STANDBY [ [listaOpcjiDuplikatTrybGotow]
+[UstaOpcjiDuplikat ...] ] };
+UstaOpcjiDuplikat : =
+{ LOGFILE specDziennika [, specDziennika]...
+| NOFILENAMECHECK
+| SKIP READONLY
+| DEVICE TYPE specUrządzenia [, specUrządzenia ...]
+| PFILE [=] [']nazwa_pliku[']
+}
+specDziennika :=
+{    'nazwa_pliku'    [SIZE   całkowita   [   K   |   M  ]    [REUSE] 
+|   GROUP  całkowita   ( ' nazwa__pliku' [,    'nazwa_pliku'    ...]) [SIZE   całkowita   [   K   |   M   ]    [REUSE]    }
+listaOpcjiDuplikatTrybGotow := 
+{ DORECOVER | NOFILENAMECHECK }
+Składnia w Oracle8i
+DUPLICATE TARGET DATABASE TO [']nazwa_bazy_danych[']
+, [ LOGFILE specDziennika [, specDziennika ...] 
+[ NOFILENAMECHECK ] [ SKIP READONLY ] ;
+specDziennika :=
+{ 'nazwa_pliku' [SIZE całkowita [KIM] [REUSE] 
+| GROUP całkowita ('nazwa__pliku' [, ' nazwa__pliku' ...]) [SIZE całkowita [ K | M ] [REUSE] }
+Słowa kluczowe
+NOFILENAMECHECK
+Zastosowanie tego słowa kluczowego powoduje, że program RMAN nie sprawdza identyczności nazw plików w docelowej bazie danych i bazie zduplikowanej. Zaleca się, aby opcja ta była stosowana jedynie w przypadku duplikowania bazy danych na inny serwer, gdzie dopuszczalne jest takie samo brzmienie nazw katalogów i plików.
+PFILE
+Określa lokalizację pliku parametrów (parameter file) duplikowanej bazy danych. Plik parametrów w podanym, wcześniej utworzonym, katalogu jest wykorzystywany przez pakiet RMAN w celu rozpoczęcia procesu duplikowania bazy danych. Zastosowanie tej opcji jest konieczne, jeśli plik parametrów nie znajduje się w lokalizacji domyślnej ($ORACLE_HOME/dbs)
+DORECOYER
+Powoduje, że pakiet RMAN po utworzeniu bazy danych rekonstruuje ją w trybie gotowości. W razie potrzeby stosowane są także archiwalne dzienniki powtórzeń.
+
+EXECUTE SCRIPT
+Powoduje wykonanie skryptu składowanego w repozytorium katalogu odzyskiwania. Polecenie to musi być wywołane wewnątrz polecenia RUN.
+Składnia
+EXECUTE SCRIPT [']nazwa_skryptu('];
+Przykład
+Poniżej przedstawiono przykład uruchomienia skryptu o nazwie pelna_kopia:
+RMAN> run {execute script pelna_kopia;}
+
+EXIT
+Kończy pracę programu RMAN. Składnia
+EXIT[;]
+
+HOST
+Powoduje uaktywnienie wiersza poleceń S.O., skąd można wykonywać komendy systemowe danego S.O.
+Składnia
+HOST [{' | "}polecenie{' | "}];
+Przykłady
+Poniżej przedstawiono przykład zastosowania komendy HOST bez parametrów w celu przejścia do wiersza poleceń S.O. Opuszczenie tego wiersza przywraca sterowanie sesji programu RMAN.
+RMAN> host;
+$> ls lt
+$> exit
+RMAN>
+Poniżej pokazano przykład przekazania polecenia jako parametru w celu jego wykonania i bezpośredniego powrotu do sesji programu RMAN:
+RMAN> host 'ls It;
+total 2
+-rwx----- 1 oracle dba 186 Jul 2 20:17full_bck.ksh
+host command complete
+RMAN>
+
+LIST
+Powoduje wyświetlenie szczegółowej listy kopii zapasowych (backups) lub obrazów danych (image copies).
+Składnia w Oracle9i
+LIST
+{ INCARNATION [OF DATABASE
+[[']nazwa_bazy_danych[']]] 
+|    [EXPIRED]
+{ specObiektówListy
+[ opcjeKonserwacji 
+| RECOVERABLE
+[ wyrażenieUntil] ] [ opcjeKonserwacji 
+| RECOVERABLE
+[wyrażenieUntil] ]... 
+| specObiektówKonserwacji
+;
+};
+specObiektówListy :=
+{ BACKUP [OF listaObiektów] [opcjeListyBackup]
+| COPY [OF listaObiektów]
+}
+opcjeListyBackup := [ [BY BACKUP] [VERBOSE] | SUMMARY
+| BY { BACKUP SUMMARY | FILE } ]
+Składnia w Oracle8i
+LIST
+{ INCARNATION [OF DATABASE [
+[ ' ] nazwa_bazy_danych [' ] ] ] 
+| { BACKUP | COPY } [OF listaObiektów]
+[ opcjeListy [opcjeListy ...] ]; opcjeListy := { { TAG [ = ] ['] nazwa_znacznika [']
+| specCzasuUtwórz } 
+| RECOVERABLE [ wyrażeńieUntil ]
+| DEVICE TYPE specUrządzenia [, specUrządzenia ...] 
+| LIKE 'wzór_łańcucha' }
+Słowa kluczowe
+EXPIRED
+Powoduje wyświetlenie zbiorów kopii zapasowych, które w plikach kontrolnych bazy docelowej lub w katalogu odzyskiwania zostały oznaczone jako EXPIRED.
+BY BACKUP
+Powoduje wyświetlenie zbiorów kopii zapasowych oraz ich zawartości.
+VERBOSE
+Powoduje wyświetlenie szczegółowych informacji odnośnie zbiorów kopii zapasowych.
+SUMMARY
+Powoduje wyświetlenie jedno wierszowego komunikatu dotyczącego zbiorów kopii zapasowych lub plików oraz podsumowanie informacji o nich.
+Przykłady 
+Wyświetlenie szczegółowej informacji o wszystkich kopiach zapasowych następuje po wydaniu polecenia:
+RMAN> list backup;
+Wyświetlenie szczegółowej informacji o wszystkich zbiorach kopii zapasowych, które zawierają przestrzeń tabel SYSTEM, następuje po wydaniu polecenia:
+RMAN> list backup of tablespace system;
+Wyświetlenie informacji dotyczących zarchiwizowanych archiwalnych dzienników powtórzeń następuje po wydaniu polecenia:
+RMAN> list backup of archivelog all;
+Niżej przedstawione polecenie dotyczące systemu Oracle9i powoduje wyświetlenie skróconej informacji o kopiach zapasowych przestrzeni tabel SYSTEM:
+RMAN> list backup of tablespace system summary;
+List of Backups
+Key TY LV S Device Type Completion Time #Pieces Tag
+#Copies
+1179 B  F  X DISK        07-JUL-01       l 
+1248 B  F  A DISK        09-JUL-01       l
+l 
+l
+listaObiektów
+Wyrażenie to określa elementy składowe bazy danych, których dotyczyć będą polecenia backup, restore oraz operacje związane z konserwacją plików (maintenance).
+Składnia
+listaObiektów :=
+{ DATAFILE specPlikuDanych [, specPlikuDanych ...]
+| TABLESPACE [']nazwa_przestrz_tabel[']
+[, [']nazwa_przestrz_tabel['] ...] 
+| specArchDzienPowt 
+| DATABASE [SKIP TABLESPACE
+[ ' ] nazwa_przestrz_tabel [ ' ] [,
+[']nazwa_przestrz_tabel[']]...] 
+| CONTROLFILE }
+[ DATAFILE specPlikuDanych [, specPlikuDanych]... 
+| TABLESPACE [']nazwa_przestrz_tabel[']
+[, [']nazwa_przestrz_tabel['] ...] 
+| specArchDzienPowt 
+| DATABASE [SKIP TABLESPACE
+[']nazwa_przestrz_tabel[']
+[, [']nazwa_przestrz_tabel[']]...] 
+| CONTROLFILE ] . ..
+
+opcjeKonserwacji (dotyczy tylko Oracle9i)
+Jest to wyrażenie pozwalające na dołączanie dodatkowych parametrów w czasie przeprowadzania operacji związanych
+z konserwacją plików bazy danych oraz archiwalnych plików dziennika powtórzeń.
+Składnia
+{   TAG   [ = ]    [']nazwa_znacznika[ ' ]
+l   specCzasuUtworz
+|   LIKE   ' wzór_łańcucha'
+|   DEVICE TYPE  specUrządzenia   [,   specUrządzenia   ...]
+}
+
+opcjeZachowywania (dotyczy tylko Oracle9i)
+Sprawia, że określona polityka zachowywania kopii (retention policy) nie dotyczy danej kopii zapasowej lub kopii danych.
+Składnia
+{ KEEP { UNTIL TIME [=] 'łańcuch_daty' 
+| FOREVER } { LOGS l NOLOGS } 
+| NOKEEP }
+Słowa kluczowe
+UNTIL TIME łańcuch_daty'
+Określa, że dana kopia zapasowa lub kopia danych powinna być zachowana aż do podanej daty.
+FOREVER
+Oznacza, że dana kopia zapasowa lub kopia danych będzie przechowywana przez czas nieokreślony. Wymaga to zastosowania katalogu odzyskiwania, gdyż kopie zapasowe lub kopie danych nigdy nie staną się nieaktualne (expired).
+LOGS
+Powoduje zachowanie wszystkich archiwalnych plików dziennika powtórzeń powiązanych z kopiami: zapasową lub danych.
+NOLOGS
+Określa, że archiwalne pliki dziennika powtórzeń powiązane z kopią zapasową lub kopią danych nie są zachowywane. W rezultacie możliwe jest odtworzenie bazy danych tylko do stanu w punkcie czasowym, w którym wykonano kopię zapasową lub kopię danych.
+
+operandPrzydziału
+Wyrażenie umożliwiające zmianę właściwości kanału. Składnia w Oracle9i
+operandPrzydziału :=
+{ PARMS [=] 'parametry_kanału'
+| CONNECT [=] specŁańcuchaPołączenia
+| DEBUG [=] całkowita
+| FORMAT [ = ] 'łańcuch_formatujacy'
+[,'łańcuch_formatujący' ...] 
+| TRACE [=] całkowita 
+| { MAXPIECESIZE [=] całkowita
+| RATE [=] całkowita } [ K | M | G ] 
+| MAKOPENFILES [=] całkowita 
+| SEND 'polecenie' }
+Składnia w Oracle8i
+operandPrzydziału :=
+{ PARMS [=]'parametry_kanału'
+| CONNECT [=] specŁańcuchaPołączenia
+| DEBUG [=] całkowita
+| FORMAT [=]'łańcuch_formatujący'
+[,'łańcuch_formatujący' ...] 
+| TRACE [=] całkowita }
+Słowa kluczowe
+PARMS
+Określa parametry przydzielonego urządzenia. Dotyczy urządzeń, które nie są dyskami.
+CONNECT specŁańcuchaPołączenia
+Określa docelową bazę danych operacji dotyczących tworzenia kopii zapasowych i odzyskiwania danych.
+DEBUG całkowita
+Powoduje zapisywanie w zewnętrznym pliku informacji o błędach następujących podczas przeprowadzania operacji tworzenia kopii zapasowych, kopiowania lub odzyskiwania danych za pomocą kanału.
+TRACE całkowita
+Określa poziom informacji śledzenia zapisywanych do odrębnego pliku dziennika. Konkretne znaczenie wartości liczbowej całkowita zależy od oprogramowania zarządzającego nośnikami danych.
+MAXPIECESIZE całkowita
+Określa maksymalny rozmiar elementu kopii zapasowej.
+RATE całkowita
+Określa maksymalną liczbę bajtów, które pakiet RMAN ma odczytywać za pomocą kanału. Wartość ta może być podawana w bajtach, kilobajtach (K), megabajtach (M) lub giga-bajtach (G).
+MAXOPENFILES całkowita
+Określa maksymalną liczbę plików, które pakiet RMAN może jednocześnie otworzyć.
+SEND 'polecenie '
+Wysyła zależne od rodzaju oprogramowania polecenie do wszystkich przydzielonych kanałów.
+PRINTSCRIPT
+Powoduje wyświetlenie zawartości skryptu składowanego w repozytorium katalogu.
+Składnia
+PRINT  SCRIPT   [']nazwa_skryptu['];
+Przykład
+Poniżej przedstawiono przykład polecenia, które powoduje wyświetlenie zawartości skryptu składowanego w katalogu odzyskiwania:
+RMAN> print script pelna_kopia;
+printing stored script: pelna_kopia {
+allocate channel dl type disk;
+backup full format ' /d0102/backup/rman_%d_%U.bus' database;
+przestKopieBezp (dotyczy tylko Oracle9i)
+Wyrażenie stosowane w celu określenia kopii zapasowych, które mają być traktowane jako przestarzałe (pbsolete).
+Składnia
+przestKopieBezp :=
+{ REDUNDANCY [=] całkowita
+| RECOVERY WINDOW OF całkowita DAYS | ORPHAN }
+[ REDUNDANCY [=] całkowita
+| RECOVERY WINDOW OF całkowita DAYS | ORPHAN ]...
+Słowa kluczowe
+REDUNDANCY całkowita
+Określa liczbę nadmiarowych kopii zapasowych lub kopii danych, które należy zachować jako dostępne (available).
+ORPHAN
+Określa, że dana kopia zapasowa jest przestarzała.
+
+QUIT (dotyczy tylko Oracle9i)*
+Kończy pracę program RMAN. 
+Składnia
+QUIT[;]     -
+
+RECOVER
+Powoduje przeprowadzenie rekonstrukcji bazy danych lub jednego z jej fizycznie istniejących komponentów. W czasie procesu rekonstrukcji do odtworzenia plików danych służą albo kopie przyrostowe (w pierwszym rzędzie), albo archiwalne pliki dziennika powtórzeń. W przypadku systemu Oracle8i polecenie to musi być wywołane wewnątrz polecenia RUN.
+Składnia w Oracle9i
+RECOVER [DEVICE TYPE specUrządzenia
+[, specUrządzenia]. . .] obiektRekonstr [UstaOpcjiRekonstr] ; obiektRekonstr := { DATABASE
+[ wyrażenieUntil
+| [wyrażenieUntil} SKIP [FOREVER] TABLESPACE
+[']nazwa_przestrz_tabel[']    [, [']nazwa_przestrz_tabel[']    ...]
+|   TABLESPACE   [']nazwa_przestrz_tabel[']
+[,    [']nazwa_przestrz_tabel[']    ...] 
+|   DATAFILE  specPlikuDanych   [,   specPlikuDanych
+LstaOpcjiRekonstr : =
+{ DELETE ARCHIYELOG
+| CHECK READONLY
+| NOREDO
+| CHECK LOGICAL
+| { FROM TAG | ARCHIVELOG TAG } [=]
+[']nazwa_znacznika[']
+}
+[, { DELETE ARCHIVELOG
+| CHECK READONLY
+| NOREDO
+| CHECK LOGICAL
+| { FROM TAG | ARCHIVELOG TAG } [=] [']nazwa_znacznika[']
+Składnia w Oracle8i
+RECOYER  obiektRekonstr   [UstaOpcjiRekonstr]
+UstaOpcjiRekonstr   : =
+{   DELETE  ARCHIVELOG
+|   CHECK  READONLY
+|   NOREDO
+| CHECK LOGICAL
+[, { DELETE ARCHIVELOG
+| CHECK READONLY
+| NOREDO
+| CHECK LOGICAL
+Słowa kluczowe
+DELETE ARCHIVELOG
+Powoduje usunięcie niepotrzebnych archiwalnych plików dziennika powtórzeń.
+CHECK READONLY
+Powoduje wyłączenie z procesu odzyskiwania danych przestrzeni tabel zapisanych w trybie tylko do odczytu, jeśli odpowiadające im pliki danych są aktualne.
+NOREDO
+Powoduje przeprowadzanie procesu odzyskiwania danych tylko za pomocą przyrostowych kopii zapasowych. Nie są wykorzystywane archiwalne pliki dziennika powtórzeń. Opcję tę należy stosować, jeżeli odzyskiwana baza danych pracuje w trybie noarchivelog.
+Przykłady
+Patrz rozdział Odtwarzanie plików".
+REGISTER
+Powoduje zarejestrowanie docelowej bazy danych w repozytorium katalogu odzyskiwania. Przed wykonaniem tego polecenia należy połączyć się z bazą danych katalogu oraz rejestrowaną bazą docelową.
+Składnia
+REGISTER DATABASE;
+
+RELEASE CHANNEL
+Powoduje zwolnienie kanału, który wcześniej przydzielono dla obsługi operacji wejścia-wyjścia. Po przydzieleniu kanały pozostają otwarte do chwili zakończenia zadania lub gdy zostaną zwolnione za pomocą odrębnego polecenia. W tym przypadku można wydać powyższe polecenie w celu zwolnienia podanego kanału, zaś program RMAN wciąż będzie utrzymywał połączenie z docelową bazą danych. W przypadku wersji Oracle8i polecenie to musi być wykonane wewnątrz polecenia RUN.
+Składnia
+RELEASE CHANNEL [']id_kanału['];
+Przykład
+Poniżej przedstawiono przykładową operację, w której najpierw przydzielono kanał, następnie wykonano przyrostową kopię zapasową poziomu O, a w końcu zwolniono kanał za pomocą odpowiedniej komendy:
+RMAN> run {
+2> allocate channel d1 type disk;
+3> backup incremental level O database;
+4 > release channel d1;
+5> }
+
+releasePoKonserwacji
+Wyrażenie służące do zwalniania kanału przydzielonego na potrzeby operacji związanych z konserwacją plików.
+Składnia
+RELEASE CHANNEL;
+Przykład
+Poniżej przedstawiono przykład przeprowadzenia przydzielania kanału dla operacji konserwacyjnych, zmiany statusu zbioru kopii zapasowej oraz zwolnienia kanału:
+RMAN> allocate channel for maintenance type disk; RMAN> change backupset 1180 unavailable; 
+RMAN> release channel;
+
+REPLACE SCRIPT
+Powoduje zamianę skryptu składowanego w repozytorium katalogu. Jeśli podany skrypt nie istnieje, jest tworzony.
+Składnia
+REPLACE SCRIPT [']nazwa_skryptu[']
+{ poleceniaKopiowania
+| poleceniaOdtwarzania
+| poleceniaKonserwacji
+| polecenialnne
+[ poleceniaKopiowania
+| poleceniaOdtwarzania
+| poleceniaKonserwacji
+| polecenialnne
+poleceniaOdtwarzania
+{ REPLICATE
+| RESTORE
+| RECOYER
+| BLOCKRECOVER
+| DUPLICATE
+| SWITCH
+poleceniaKonserwac j i
+{ CATALOG
+| CHANGE
+| CONFIGURE
+| CROSSCHECK
+| DELETE
+| VALIDATE
+| REPORT
+| DELETE
+| SHOW
+polecenialnne := { ALLOCATE
+ALTERDATABASE
+| beginLine
+| DEBUG
+| executeScript
+| HOST
+| RELEASE
+| RESYNC
+| SEND
+| SET
+| SHUTDOWN
+| SQL
+| STARTUP
+poleceniKopiowania { BACKUP | COPY
+Przykłady
+Patrz rozdział Skrypty składowane w katalogu".
+
+REPLICATE
+Służy do replikacji plików kontrolnych do lokalizacji wskazanych za pomocą parametru inicjalizującego control_flles. Polecenie to musi być wywołane wewnątrz polecenia RUN.
+Składnia
+REPLICATE CONTROLFILE FROM 'nazwa_pliku';
+
+REPORT
+Służy do generowania szczegółowych raportów odnośnie archiwizacji bazy danych. Raporty te mogą zawierać informacje o kopiach zapasowych, które:
+   są potrzebne w celu odtworzenia danych;
+   wymagają określonej liczby przyrostowych kopii zapasowych w celu odtworzenia danych;
+    są uznane za przestarzałe (obsolence).
+Polecenie REPORT umożliwia także wyświetlenie plików danych, które w celu odtworzenia wymagają zastosowania archiwalnych plików dziennika powtórzeń z podanej liczby dni.
+Składnia w Orade9i
+REPORT
+{ { NEED BACKUP [ { INCREMENTAL | DAYS } [=] 
+całkowita
+| REDUNDANCY [=] całkowita
+| RECOVERY WINDOW OF całkowita DAYS) ] 
+| UNRECOVERABLE
+}
+obiektRaportu 
+|   SCHEMA   [wyrażenieAt]
+|   OBSOLETE   [przestKopieBezp] } 
+[   DEVICE  TYPE  specUrządzenia   [,   specUrządzenia   ...];
+obiektRaportu   :=
+[   DATAFILE   specPlikuDanych   [,   specPlikuDanych]...
+|   TABLESPACE   [']nazwa_przestrz_tabel[']
+[,    [' ]nazwa_przestrz_tabel[' ]    . . .] 
+|    DATABASE   [SKIP   TABLESPACE
+[ ' ] nazwa_przestrz_tabel [ ' }    [,    ['] nazwa_przestrz_tabel[']]] ]
+wyrażenieAt :=
+{ AT TIME [=] 'łańcuch_daty'
+| AT SCN [=] całkowita
+| AT SEQUENCE [=] całkowita THREAD [=] całkowita
+}
+Składnia w Oracle8i
+REPORT
+{ { NEED BACKUP [ { INCREMENTAL | DAYS } [=]
+całkowita
+| REDUNDANCY [=] całkowita ]
+| UNRECOVERABLE
+}
+obiektRaportu 
+| SCHEMA [wyrażenieAt] 
+| OBSOLETE [przestKopieBezp] }
+wyrażenieAt :=
+{ AT TIME [=] 'łańcuch_daty'
+| AT SCN [=] całkowita
+| AT LOGSEQ [=] całkowita THREAD [=] całkowita
+}
+Słowa kluczowe
+NEED BACKUP
+Powoduje utworzenie raportu dotyczącego plików danych wymagających archiwizacji. Raport jest oparty albo na współczynniku nadmiarowości (redundancy factor), albo na poziomie kopii przyrostowej (incremental levet), albo na przedziale odzyskiwania (recovery window).
+UNRECOVERABLE
+Powoduje utworzenie raportu dotyczącego wszystkich niemożliwych do odtworzenia plików danych.
+SCHEMA [WyrażenieAt]
+Powoduje utworzenie raportu dotyczącego przestrzeni tabel i plików danych w określonym punkcie czasowym.
+OBSOLETE [przestKopieBezp]
+Powoduje wyświetlenie informacji odnośnie niepotrzebnych kopii zapasowych i kopii danych, które mogą zostać usunięte (są uznane za przestarzałe).
+Przykłady
+W celu wygenerowania raportu odnośnie plików danych, które w celu odtworzenia wymagają zastosowania archiwalnych plików dziennika powtórzeń sprzed dwóch (lub więcej) dni, należy wydać polecenie:
+RMAN> report need backup days 2 database;
+W celu wygenerowania tego samego raportu, ale tylko w odniesieniu do plików danych przestrzeni tabel systemowych, można posłużyć się komendą:
+RMAN> report need backup days 2 tablespace system;
+Wyświetlenie kopii zapasowych traktowanych jako przestarzałe jest efektem wydania polecenia:
+RMAN> report obsolete;
+
+RESET DATABASE
+Powoduje utworzenie nowej wersji (incarnation) docelowej bazy danych lub przywrócenie z katalogu odzyskiwania poprzedniej wersji bazy docelowej. Polecenie to jest wymagane tylko wówczas, gdy bazę otwarto stosując opcję reset logs w poleceniu języka SQL ALTER DATABASE. Po wydaniu polecenia RMAN ALTER DATABASE docelowa baza danych jest resetowana automatycznie.
+Składnia
+RESET DATABASE [TO INCARNATION klucz_wersji];
+Słowa kluczowe
+INCARNA TION klucz_ wersji
+Wskazuje, że starsza wersja (incarnation) bazy danych jest uznawana za bieżącą wersję tej bazy.
+
+RESTORE
+Powoduje odtworzenie całej kopii zapasowej lub tylko jej części do docelowej bazy danych. W przypadku stosowania wersji Oracle8i polecenie to musi być wywołane wewnątrz polecenia RUN.
+Składnia w Oracle9i
+RESTORE
+[(] obiektOdtworz [(operandSpecOdtworz
+[operandSpecOdtworz].. . ]    [) ] [(]   obiektOdtworz   [(operandSpecOdtworz
+[operandSpecOdtworz] . . .]    [)]... 
+[   CHANNEL   [ ' ]id_kanału[]
+PARMS   [ = ]    'parametry_kanału'
+|    FROM   {   BACKUPSET   |    DATAFILECOPY   } 
+|   wyrażenieUntil
+| FROM TAG [ = ] [']nazwa_znacznika[' ] 
+| VALIDATE 
+| CHECK LOGICAL 
+| CHECK READONLY
+| DEVICE TYPE specUrządzenia [, specUrządzenia 
+| FORCE ]
+[ CHANNEL [']id_kanału['] 
+| PARMS [=] 'parametry_kanału' 
+| FROM { BACKUPSET | DATAFILECOPY } 
+| wyrażenieUntil
+| FROM TAG [ = ] [ ']nazwa_znacznika['] 
+| VALIDATE 
+| CHECK LOGICAL 
+| CHECK READONLY
+| DEVICE TYPE specUrządzenia [, specUrządzenia | FORCE
+obiektOdtworz :=
+{ CONTROLFILE [TO 'nazwa_pliku']
+| DATABASE
+[SKIP [FOREYER] TABLESPACE [']nazwa_przestrz_tabel['] [, [']
+nazwa_przestrz_tabel['] . . . ] ]
+| DATAFILE specPlikuDanych [, specPlikuDanych 
+| TABLESPACE [ ']nazwa_przestrz_tabel[']
+[, [']nazwa_przestrz_tabel[']] 
+| specArchDzienPowt }
+operandSpecOdtworz :=
+{ CHANNEL [']id_kanału[']
+| FROM TAG [=] [']nazwa znacznika[']
+| PARMS [=] 'parametry_kanału' 
+| FROM
+{ AUTOBACKUP
+[{ MAXSEQ | MAXDAYS } [=] całkowita) 
+[{ MAXSEQ | MAKDAYS } [=] całkowita) ...] | 'uchwyt' } }
+Składnia w Oracle8i
+RESTORE
+[(] obiektOdtworz [(operandSpecOdtworz
+[operandSpecOdtworz] . . .] [) ] [(] obiektOdtworz [(operandSpecOdtworz
+[operandSpecOdtworz] . . . ] [)]... [ CHANNEL [']id_kanału[']
+| PARMS [=] 'parametry_kanału'
+| FROM { BACKUPSET | DATAFILECOPY }
+| wyrażenieUntil
+| FROM  TAG   [=]    [']nazwa_znacznika[']
+| VALIDATE
+| CHECK LOGICAL
+| CHECK READONLY ] [ CHANNEL [']id_kanału[']
+| PARMS [=] 'parametry_kanału'
+| FROM { BACKUPSET | DATAFILECOPY }
+| wyrażeńieUntil
+| FROM TAG [=] [']nazwa_znacznika[']
+| VALIDATE
+| CHECK LOGICAL
+| CHECK READONLY ] . . . ;
+operandSpecOdtworz :=
+{ CHANNEL [']id_kanału[']
+| FROM TAG [=] [']nazwa_znacznika[']
+| PARMS [=] 'parametry_kanału'
+}
+Przykłady
+Patrz rozdział Odtwarzanie plików".
+
+RESYNC
+Powoduje przeprowadzenie ponownej synchronizacji katalogu z plikami kontrolnymi docelowej bazy danych. Polecenia RESYNC używa się, przykładowo, jeśli katalog odzyskiwania był unieruchomiony dla celów konserwacyjnych lub z jakiegokolwiek innego powodu i musi zostać zsynchronizowany z docelową bazą danych. Większość poleceń RMAN synchronizuje katalog z bazą docelową. W przypadku systemu Oracle8i polecenie to musi być wykonane wewnątrz polecenia RUN.
+Składnia
+RESYNC CATALOG [FROM CONTROLFILECOPY 'nazwa_pliku'];
+
+RUN
+Służy do wykonywania serii poleceń. W przypadku systemu Oracle8i niektóre polecenia (jak na przykład BACKUP lub RESTORE) muszą być wykonane z poziomu polecenia RUN. W przypadku wersji Oracle9i większość komend nie wymaga takiego postępowania, jednak wciąż kilka z nich należy wywoływać z poziomu polecenia RUN. Należą do nich komendy:
+ ALLOCATE CHANNEL
+ EXCUTE SCRIPT
+ REPLICATE
+ SWITCH
+Składnia
+RUN {
+polecenia }
+
+SEND
+Powoduje wysłanie zależnego od rodzaju oprogramowania polecenia do jednego lub większej ilości kanałów w przypadku" używania warstwy obsługi nośników danych (media management layer). W przypadku systemu Oracle8i polecenie to musi być wywoływane wewnątrz polecenia RUN.
+Składnia
+SEND
+[ DEVICE TYPE specUrządzenia [, specUrządzenia]...]
+| CHANNEL [']id_kanału['} [, [']id_kanału['] ...]
+]
+'polecenie' [PARMS [=] 'parametry kanału'];
+
+SET
+Definiuje ustawienia bieżącej sesji programu RMAN. Ustawienia te są aktualne tylko do czasu jej zakończenia.
+Składnia w Oracłe9i
+SET { opcjeRman [;] | opcjeWykonania; } opcjeRman :=
+{ ECHO { ON | OFF }
+| DBID [=] całkowita
+| CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE
+TYPE specUrządzenia TO 'łańcuch formatujący' }
+opcjeWykonania :=
+( NEWNAME FOR DATAFILE specPlikuDanych TO
+{ 'nazwa_pliku' | NEW }
+| MAXCORRUPT .FOR DATAFILE.. specPlikuDanych 
+[,specPlikuDanych ...] TO całkowita 
+| ARCHIVELOG DESTINATION TO
+katalog_archiw_dziennik' 
+| wyrażenieUntil | BACKUP COPIES [=] całkowita 
+| COMMAND ID TO 'łańcuch' 
+| AUTOLOCATE { ON | OFF } 
+| CONTROLFILE AUTOBACKUP
+FORMAT FOR DEVICE TYPE specUrządzenia TO
+łańcuch_formatujący' }
+Składnia w Oracle8i
+SET { opcjeRman [;] | opcjeWykonania;} opcjeRman :=
+{ AUXNAME FOR DATAFILE specPlikuDanych TO { nazwa_pliku' 
+| NULL }
+|   DBID   [=]   całkowita
+| SNAPSHOT CONTROLFILE NAME TO 'nazwa_pliku' } 
+| ECHO { ON | OFF }
+};
+opcjeWykonania :=
+{ { NEWNAME FOR DATAFILE specPlikuDanych TO nazwa_pliku' 
+| MAXCORRUPT FOR DATAFILE specPlikuDanych
+[, specPlikuDanych . . .] TO całkowita
+|   ARCHIVELOG   DESTINATION   TO 
+katalog_archiw_dziennik'
+|   wyrażenieUntil
+| DUPLEX [=] { ON | OFF | całkowita } 
+| COMMAND ID TO 'łańcuch' 
+| AUTOLOCATE { ON | OFF } }
+| LIMIT CHANNEL ['] id_kanału ['] opcjeLimitu [opcjeLimitu ...]
+opcjeLimitu :=
+{ KBYTES [ = ] całkowita
+| READRATE [=] całkowita
+| MAXOPENFILES [=] całkowita
+Przykład
+Poniżej przedstawiono przykład wykonania pełnej kopii zapasowej bazy danych, gdzie polecenie SET zastosowano w celu określenia limitu rozmiaru w kanale d1. Ograniczenie to powoduje, że każdy z elementów kopii zapasowej utworzonych za pomocą tego kanału posiada rozmiar nie większy, niż 1,9 MB.
+RMAN> run {
+2> allocate channel d1 type disk;
+3> set limit channel d1 kbytes 1900000;
+4> backup format='d99/backups/%U' archivelog all delete 
+5> input;}
+
+SHOW (dotyczy tylko Orade9i)
+Powoduje wyświetlenie aktualnych ustawień zdefiniowanych za pomocą polecenia CONFIGURE.
+Składnia
+SHOW
+{ RETENTION POLICY
+| [DEFAULT] DEYICE TYPE
+| [AUXILIARY] CHANNEL [FOR DEYICE TYPE
+specUrządzenia} 
+| MAXSETSIZE 
+| { DATAFILE | ARCHIVELOG } BACKUP COPIES
+| BACKUP OPTIMIZATION
+| SNAPSHOT CONTROLFILE NAME
+| AUXNAME
+| EXCLUDE    
+| CONTROLFILE AUTOBACKUP [FORMAT]
+|   ALL
+
+SHUTDOWN
+Służy do zamykania docelowej bazy danych. 
+Składnia
+SHUTDOWN [ NORMAL | ABORT | IMMEDIATE | TRANSACTIONAL ][;]
+
+specArchDzienPowt
+Wyrażenie to umożliwia wygodne określenie archiwalnych plików dziennika powtórzeń, które posłużą do operacji tworzenia kopii zapasowych, odzyskiwania i konserwacji danych.
+Składnia
+ARCHIVELOG { ALL
+| LIKE 'wzór_łańcucha' 
+| zakresArchDzienPowt
+[LIKE 'wzór łańcucha' [THREAD [=] całkowita]]
+zakresArchDzienPowt w Oracle9i :=
+{ { { UNTIL TIME | FROM TIME } [=] 'łańcuch_daty' 
+| { TIME BETWEEN 'łańcuch_daty' AND
+| FROM TIME [=] 'łańcuch_daty' UNTIL TIME 
+[=]'łańcuch daty'
+|   UNTIL  SCN   [=]   całkowita
+|   SCN  BETWEEN   całkowita  AND   całkowita
+|   FROM  SCN   [=]   całkowita   [UNTIL  SCN   [=]   całkowita]
+}
+[THREAD   [=]    całkowita]
+|    {   UNTIL  SEQUENCE   [ = ]   całkowita
+|    FROM   SEQUENCE   [ = ]    całkowita    [UNTIL   SEQUENCE   [ = ]
+całkowita]
+|   SEQUENCE   [BETWEEN   całkowita  AND]    całkowita
+} 
+[THREAD   [=]    całkowita]
+zakresArchDzienPowt  w Oracle8i   := 
+{    {   UNTIL  TIME   |   FROM  TIME   }    [=] ' łańcuch_daty' 
+|   FROM TIME   [=] ' łańcuch_daty'   
+UNTIL TIME [=] ' łańcuch_daty' 
+|   UNTIL  SCN   [=]   całkowita
+|   FROM  SCN   [=]   całkowita   [UNTIL  SCN   [=]   całkowita] 
+|   UNTIL  LOGSEQ   [=]   całkowita   [THREAD   [=]   całkowita] 
+|   FROM LOGSEQ   [=]   całkowita   [UNTIL  LOGSEQ   [=] 
+całkowita] 
+[THREAD   [=]   całkowita]}
+Słowa kluczowe
+ALL
+Określa, że podczas danej operacji wykorzystywane będą wszystkie dzienniki.
+LIKE 'wzór_łańcucha '
+Określa, że podczas danej operacji wykorzystywane będą te dzienniki, których nazwy pasuj ą do podanego wzorca.
+zakresArchDzienPowt
+Określa, że podczas danej operacji wykorzystywane będą tylko te dzienniki, które spełniają podane kryteria odnośnie czasu, SCN lub wartości sekwencji.
+THREAD całkowita
+Określa wątek dziennika powtórzeń i jest używane tylko wraz z Oracle Real Application Clusters.
+
+specCzasu Utwórz
+Określa czas utworzenia kopii zapasowej.
+Składnia 
+specCzasuUtworz :=
+COMPLETED
+{ AFTER [=]
+| BETWEEN 'łańcuch_daty' AND
+| BEFORE [=] } 'łańcuch_daty'
+Słowa kluczowe
+AFTER łańcuch_daty'
+Określa czas, po którym nastąpiła archiwizacja (polecenie backup) lub kopiowanie (polecenie copy) danych.
+BETWEEN 'łańcuch_daty ' AND ' łańcuch_daty ' Określa przedział czasowy, w którym nastąpiła archiwizacja lub kopiowanie danych.
+BEFORE 'łańcuch_daty'
+Określa czas, przed którym nastąpiła archiwizacja lub kopiowanie danych.
+
+specŁańcuchaPołączenia
+Określa informacje niezbędne do nawiązania połączenia z bazą docelową, bazą katalogu lub pomocniczą bazą danych.
+Składnia
+['][id_użytkownika][/[hasło]] [@nazwa_usługi_sieciowej] [']
+
+specObiektówKonserwacji (dotyczy tylko Oracle9i)
+Jest to wyrażenie stosowane w celu określenia typów obiektów, na których przeprowadzane są operacje konserwacyjne (main-tenance).
+Składnia
+specObiektówKonserwacji := 
+{ { BACKUPPIECE | PROXY }
+{ 'uchwyt' [, 'uchwyt' ...]
+|   klucz_główny   [,   klucz_główny  ...]
+|   TAG   [=]    [']nazwa_znacznika[']
+}
+|   BACKUPSET   klucz_główny   [,   klucz_główny   ...] 
+|    {   CONTROLFILECOPY   |    DATAFILECOPY   }
+{   {   klucz_główny   [,   klucz_główny  ...] 
+|    'nazwa_pliku'    [,    'nazwa_pliku'    ...} }
+|   TAG   [=]    [']nazwa_znacznika[']    [,    ['] nazwa_znacznika[']    ...]
+} 
+| ARCHIVELOG
+{   klucz_główny   [,   klucz_główny  ...]
+|    'nazwa_pliku'    [,    'nazwa_pliku'   ...]
+}
+|   specArchDzienPowt }
+Słowa kluczowe
+BACKUPPIECE
+Określa fizycznie istniejący element kopii zapasowej poprzez podanie nazwy jego pliku, klucza głównego lub nazwy znacznika.
+PROXY
+Określa kopię pośredniczącą (proxy copy) poprzez podanie nazwy jej pliku, klucza głównego lub nazwy znacznika.
+Występuje w pakiecie RMAN w wersji Oracle 8i lub nowszej. Program RMAN wysyła do MML listę plików danych przeznaczonych do archiwizacji, nie zaś fizyczne dane. Dzięki temu oprogramowanie MML wykorzystuje własne, zoptymalizowane strategie archiwizacji i odzyskiwania danych -przyp. tłum.
+CONTROLFILECOPY
+Określa kopię pliku kontrolnego poprzez podanie nazwy jej pliku, klucza głównego lub nazwy znacznika.
+DATAFILECOPY
+Określa kopię pliku danych poprzez podanie nazwy jej pliku, klucza głównego lub nazwy znacznika.
+
+specPlikuDanych
+Określa plik danych poprzez jego pełną nazwę lub numer. Składnia
+specPlikuDanych := 
+{'nazwa pliku' | numer pliku]
+
+specUrządzenia
+Określa rodzaj nośnika danych zastosowanego podczas wykonywania polecenia backup lub copy.
+
+Składnia
+{   DISK   |    [']urządzenie_przechowyw_danych[']    }
+
+SPOOL (dotyczy tylko Oracle9i)
+Powoduje, że informacje wyjściowe generowane przez program RMAN są zapisywane w pliku dziennika.
+Składnia
+SPOOL  LOG   {   OFF   |   TO  nazwa_pliku   }    [APPEND][;]
+
+SQL
+Pozwala na wykonywanie instrukcji języka SQL z poziomu linii poleceń programu RMAN.
+Składnia
+SQL   {'    |    "}instrukcja{'   |   "};
+Przykłady
+Poniżej przedstawiono przykład zastosowania instrukcji SQL w celu wydania polecenia ALTER SYSTEM:
+RMAN> SQL 'alter system switch logfile';
+Kolejny przykład dotyczy przełączenia pliku danych w stan nieaktywny (offline). Należy zwrócić uwagę na sposób zastosowania polecenia SQL, w którego treści znajdują się znaki '. Każde wystąpienie dwóch znaków ' ' w łańcuchu polecenia traktowane jest jak jeden znak i w takiej też postaci polecenie jest wykonywane.
+RMAN > SQL "alter database datafile
+''/d01/oradata/brdstn/users_01. dbf'' offline";
+
+STARTUP
+Służy do uruchamiania docelowej bazy danych z poziomu programu RMAN. Polecenie to ma działanie analogiczne względem instrukcji języka SQL STARTUP.
+Składnia 
+STARTUP
+[   FORCE
+| { NOMOUNT | MOUNT }
+| DBA
+| PFILE [=] [']nazwa_pliku[']
+}
+[ FORCE
+| { NOMOUNT | MOUNT }
+| DBA
+|   PFILE   [=]    [']nazwa_pliku[']
+] . . .    [; ]
+
+SWITCH
+Polecenie to jest analogiczne względem instrukcji języka SQL ALTER DATABASE RENAME plik. Określa ono, że kopia pliku danych staje się aktualnym plikiem danych. Polecenie to należy wykonywać wewnątrz polecenia RUN.
+Składnia
+SWITCH
+{ DATAFILE specPlikuDanych
+[ TO DATAFILECOPY { 'nazwa_pliku' | TAG [=] [']
+nazwa_znacznika['] }] | DATAFILE ALL
+};
+Przykład
+Poniżej przedstawiono przykład kopiowania pliku danych przestrzeni tabel USERS do innej lokalizacji. Po wykonaniu tego zadania wydanie polecenia SWITCH powoduje zmodyfikowanie pliku kontrolnego w taki sposób, aby powstała kopia stała się aktualnym plikiem danych.
+RMAN> sql "alter database datafile
+'/d02/oradata/brdstn/users_01.dbf'' offline";
+RMAN> sql statement: alter database datafile 
+2> ''/d02/oradata/brdstn/users_01.dbf'' offline 
+RMAN> run { 
+2> copy datafile '/d02/oradata/brdstn/users_01 .dbf
+3> to '/d03/oradata/brdstn/users_01.dbf'; 
+4> switch datafile '/d02/oradata/brdstn/users_01 .dbf 
+5> to datafilecopy '/d03/oradata/brdstn/users_01.dbf'; 
+6> }
+Starting copy at 10-JUL-Ol allocated channel: ORA_DISK_1 channel ORA_DISK_1: copied datafile 6 output filename=/d03/oradata/brdstn/
+users_01.dbf recid=4
+stamp=434740922 
+Finished copy at 10-JUL-Ol 
+datafile 6 switched to datafile copy 
+input datafilecopy recid=4 stamp=
+434740922 filename=/d03/
+oradata/brdstn/users_01.dbf 
+RMAN> recover datafile"1/d03/oradata/brdstn/users_01 .dbf ;
+Starting recover at 10-JUL-Ol using channel ORA_DISK_1 Starting media recovery media recovery complete Finished recover at 10-JUL-Ol 
+RMAN> sql "alter database datafile
+'/d03/oradata/brdstn/foo_01.dbf' online" ;
+statement: alter database datafile '/d03/oradata/brdstn/users Ol.dbf online
+
+UPGRADE CATALOG
+Powoduje uaktualnienie schematu katalogu odzyskiwania do nowszej wersji, która jest wymagana przez program wykonywalny RMAN. Nie można używać pliku binarnego RMAN wraz z katalogiem utworzonym w wersji wcześniejszej. Przykładowy stosowanie programu RMAN w wersji Oracle 9.0.1 w celu połączenia się z katalogiem w wersji Oracle 8. l .7 jest niemożliwe.
+Składnia
+UPGRADE CATALOG [TABLESPACE
+[ ' ] nazw-a_przestrz_tabel [ ' ] ]    [; ]
+
+VALIDATE
+Służy do sprawdzania integralności kopii zapasowej. Wszystkie wchodzące w jej skład elementy kopii zapasowej są sprawdzane w celu stwierdzenia, czy ich zawartość będzie mogła być w razie konieczności odtworzona, oraz czy są wolne od fizycznych uszkodzeń nośnika. W przypadku systemu Oracle8i polecenie to musi być wydane wewnątrz polecenia RUN.
+Składnia w Oracle9i
+VALIDATE BACKUPSET klucz_główny [, klucz_glówny ...]
+[ CHECK LOGICAL
+| DEVICE TYPE specUrządzenia [, specUrządzenia ...]
+]
+[ CHECK LOGICAL
+| DEVICE TYPE specUrządzenia [, specUrządzenia ...]
+Składnia w Oracle8i
+VALIDATE BACKUPSET klucz_glówny [, klucz_główny ...] [ CHECK LOGICAL ];
+Przykład
+Poniżej przedstawiono przykład zastosowania polecenia VALIDATE w celu sprawdzenia poprawności zbioru kopii zapasowej o numerze 41. Wyświetlony tekst informuje, czy zbiór kopii zapasowej będzie mógł zostać odtworzony.
+RMAN> run {
+2> allocate channel d1 type disk;
+3> validate backupset 41;
+4> }
+released channel: ORA_DISK_1
+allocated channel: dl
+channel d1: sid=17 devtype=DISK
+channel dl: starting validation of datafile
+backupset
+channel dl: restored backup piece l 
+piece handle=/d0999/rman_0ncuja8a_l_l.bus tag=null
+params=NULL
+channel dl: validation complete released channel: dl
+
+wyrażenieUntil
+Wyrażenie stosowane przez wiele poleceń RMAN w celu określenia górnej granicy czasu wykonania, maksymalnej wartości SCN lub maksymalnej wartości sekwencji.
+Składnia
+wyrażenieUntil :=
+{ UNTIL TIME [=] 'łańcuch_daty'
+| UNTIL  SCN   [=]    całkowita
+| until sequence [=] całkowita thread [=]
+całkowita

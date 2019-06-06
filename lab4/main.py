@@ -23,12 +23,13 @@ if __name__ == '__main__':
         unmapped_words = []
         for word in simmilar_words:
             unmapped_words.append(textprocessor.unmap_words(word))
-        print(f'Slowo nie wystepuje w polskim jezyku.\n')
-        print(f'Moze chodzilo o \'{unmapped_words[0]}\'?\n')
-        if(show_simmilar == True):
+        print(f'Slowo nie wystepuje w polskim jezyku.')
+        print(f'Moze chodzilo o \'{unmapped_words[0]}\'?')
+        show_hints = input('Chcesz zobaczyc inne mozliwosci? t/n\n')
+        if(show_hints == 't'):
             print(f'Inne możliwosci {unmapped_words[1:num_of_simmilar]}\n')
     else:
-        print(f'Slowo {input_word} wystepuje w polskim jezyku.\n\n')
+        print(f'Slowo {input_word} wystepuje w polskim jezyku.')
 
     end = time.time()
     print(f'Czas egzekucji: {end-start}')

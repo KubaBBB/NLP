@@ -1,0 +1,1122 @@
+
+
+
+
+
+
+
+ARTHUR BLOCH
+
+
+
+Prawa Murphy'ego
+(Tłumaczył: Iwona Haluch)
+
+
+
+
+Prawo Murphy'ego:
+
+
+
+
+Jeżeli COŚ może się nie udać, 
+to się nie uda
+
+Prawa Murphy'ego - am. Pot. Zasada, 
+że jeśli cokolwiek może się nie udać, 
+na pewno się nie uda. (Pochodzenie nieznane)
+- Funk and Wagnalis, Standard
+   College Dictionary, New York
+
+
+	Kim był Murphy? Jakiż to dziwny spisek zbiegów okoliczności natchnął go wypowiedzenia tego, tak dziś znanego przykazania? Dlaczego nie odebrał z pralni swego prania? To tylko nieliczne z wielu pytań, na które nie miałem zamiaru odpowiedzieć w tej książce. Badaniem pochodzenia Praw Murphy'ego zajmowali się najlepsi uczeni, eksperci w dziedzinie lingwistyki i historii ludowej - niestety bez skutku. A kim jestem ja, aby kwestionować takie świadectwo?
+	Gdy, zrezygnowany, miałem przystąpić do druku książki, nie dając odpowiedzi na te palące pytania, zaskoczył mnie następujący list od niejakiego pana George'a Nicholsa z Południowej Kalifornii:
+
+"Drogi panie Arturze Bloch!
+	Rozumiem, że zamierza Pan wydać książkę "Prawa Murphy'ego - i inne przyczyny tego, że nic się nie udaje". Czy interesuje Pana prawdziwa historia pochodzenia nazwy Prawa Murphy'ego?"
+	Kiedy odpowiedziałem twierdząco, napisał:
+	"Wydarzenie to miało miejsce w 1949 roku w Bazie Lotniczej Edwards w Muroc, w Kalifornii, w czasie przeprowadzania Projektu MX981. Było to eksperymentalne symulowanie katastrofy samolotu w trakcie lotu. Na mocy kontraktu z Laboratorium Aero-medycznym w Wrigh Field, w projekcie uczestniczyła firma Northrop Aircraft. Ja byłem kierownikiem projektu Northropa. Odkrywcą Praw był kapitan Ed Murphy inżynier ds. rozwoju z Laboratorium Lotniczego z Wright Field. Zdenerwowany błędnym działaniem przetwornika, wynikającym z błędu w okablowaniu mostkó tensometru, Murphy rzucił następujący komentarz: "Jeśli jest jakikolwiek sposób, aby zrobić to źle, on to zrobi." Słowa te odnosiły się do technika, który okablował mostki w Laboratorium. Zdanie to i jego wariacje nazwałęm Prawami Murphy'ego.
+
+	... W kilka tygodni po tym "nadaniu nazwy, pułkownik Strapp na konferencji prasowej oznajmił, że nasze dobre wyniki testowania symulowanych katastrof w ostatnim czasie są wynikiem niezachwianej wiary w Prawa Murphy'ego i ciągłych wysiłków uniknięcia tego, co nieuniknione. W ciągu następnych miesięcy szeroko odwoływano się do Praw Murphy'ego w reklamach przemysłowych - i tak Prawa Murphy'ego wystartowały  i zaczęły żyć własnym życiem.
+Pozostaję z szacunkiem,
+George E. Nichols,
+Menedżer ds. Zabezpieczenia
+Niezawodności i jakości
+Programu Viking
+Laboratorium Napędu Odrzutowców - 
+NASA
+
+	W ten oto sposób, dzięki uprzejmemu listowi pana Nicholsa, problem się nam zawęża; mamy już bowiem odpowiedzi na wspomniane wcześniej palące pytania, i to bardziej szczegółowe, niż moglibyśmy oczekiwać. Pozostaje jeszcze tylko dowiedzieć się, dlaczego Ed Murphy nie odebrał z pralni swego prania.
+
+Artur Bloch
+Berkeley, Wrzesień 1977
+
+PRZEDMOWA
+
+	Czy nigdy nie zdarzyło ci się, że telefon zadzwonił akurat w momencie, kiedy usiadłeś na sedesie? Czy autobus, na który czekałeś, nie przyjechał dokładnie w chwili, gdy zapaliłeś papierosa? Czy nigdy nie zaczęło padać w dniu, w którym umyłeś samochód, a przestało natychmiast, gdy tylko kupiłeś parasol? Być może w takim momencie zdałeś sobie sprawę, że coś się święci, że właśnie wymyka ci się jakaś uniwersalna prawda, która aż się prosi aby ją nazwać po imieniu. A może słyszałeś już o Prawach Murphy'ego. Zasadzie Petera, czy prawie Selektywnej Grawitacji i chciałeś w takim momencie odwołać się do któregoś z nich, ale zapomniałeś, jak były dokładnie sformułowane?
+	I oto masz przed sobą w postaci książki pierwszy zbiór dowcipów i mądrości czarująco obłąkanych technologów, biurokratów, humanistów i antyspołecznych obserwatorów. Został on przygotowany specjalnie dla ciebie, aby dostarczyć ci ulgi w pewnego rodzaju przykrych sytuacjach. Badając te interdyscyplinarne dogmaty, znaleźliśmy liczne powtórzenia (które potwierdzają ważność obserwacji), częste niezgodności co do autorstwa i mnóstwo anonimowych darowizn. Zmuszeni jesteśmy uznać wkład niezrównanego Zymurgy'ego, który powiedział: "Jeśli raz otworzysz puszkę z robactwem, jedynym sposobem powtórnego ich zamknięcia jest użycie większej puszki." Jeśli odniesiemy tę myśl do tej książeczki, zdamy sobie sprawę, że pomysł ten, raz podjęty, musi się rozrosnąć, ponieważ nasz drogowskaz prawdy ciągle odkrywa dalsze zasady, stare i nowe.
+	Na przestrzeni wieków uczeni profesorowie i pozerzy raczyli nas prawami wszechświata, subtelnymi acz niezmiennymi podwalinami kosmicznego porządku. Od ludzi religii otrzymaliśmy Prawa Moralności; od mistyków - Prawa Karmy; od racjonalistów - Prawa Logiki; od artystów - Prawa Estetyki. Teraz przyszła kolej na technologów.
+	Oficjalną linią partii technologii, samej nauki, jest rozpacz. Jeśli ktoś nie wierzy, niech sprawdzi prawa termodynamiki, sformułowane na nowo w Twierdzeniu Ginsberga. Wszechświat dusi się, niczym olbrzymi gulasz, pozostawiony na ogniu przez cztery biliony lat. Prędzej czy później nie będzie można odróżnić marchewki od cebuli.
+	"A zamknięty system przysłów?" - może ktoś zapytać, wyglądając z okna apartamentu na szczycie wieżowca, popijając martini z wódką i obserwując krzątający się tłum małych bożych figurek biegających wokół swoich interesów. Niestety, wystarczy tylko spojrzeć na te interesy oczami Petera, Parkinsona i innych. Zrozumiemy wtedy, że to tylko kwesta czasu, zanim mikrokosmiczny pyłek, który nazwaliśmy wielkim biznesem czy rządem, niczym ich uniwersalne odpowiedniki, straci zdolność odnoszenia sukcesu wbrew sobie samemu.
+	"Jesteśmy po złej stronie dywanu", powiedział Ojciec Brown, słynny detektyw w sutannie. I to jest prawda. Kilka luźnych zakończeń, przypadkowa nić - to wszystko, co widzimy z wielkiego arcydzieła niebios, stworzonego przez najdroższego ze wszystkich tkaczy dywanów. Zaledwie kilka odważyło się badać odległą stronę dywanu i poszukując prawdy, stawiło czoło gniewowi Trzymającego Dywan. Właśnie im dedykujemy tę książeczkę.
+
+MURPHOLOGIA
+
+Prawo Murphy'ego:
+	Jeżeli coś może się nie udać, to się nie uda.
+	Uzupełnienie:
+1. Nic nie jest takie proste jak się wydaje.
+2. Wszystko zabiera znacznie więcej czasu, niż by się wydawało.
+3. Jeżeli istnieje prawdopodobieństwo, że coś może pójść źle, to na pewno będzie to właśnie to, co spowoduje największe szkody.
+4. Jeżeli przewidzisz cztery możliwe sytuacje, w których coś może się nie udać i zdołasz je obejść, natychmiast wyłoni się piąta,
+5. Sprawy pozostawione samym sobie mają tendencję, aby zamieniać się ze złych na jeszcze gorsze.
+6. Zawsze, kiedy masz właśnie coś zrobić, okazuje się, że najpierw musisz zrobić coś innego.
+7. Każde rozwiązanie rodzi nowe problemy.
+8. Głupcy są tak pomysłowi, że niemożliwe jest stworzenie czegoś, z czym każdy głupi by sobie nie poradził.
+9. Natura jest zawsze po stronie ukrytych wad.
+10. Matka natura jest suką.
+
+Filozofia Murphy'ego
+	Uśmiechnij się ... jutro będzie gorzej.
+
+Stała Murphy'ego
+	Rzeczy ulegają zniszczeniu wprost proporcjonalnie do swej wartości.
+
+Rewizja ilościowa Prawa Murphy'ego
+	Wszystkie sprawy biorą w łeb jednocześnie.
+
+Komentarz Hilla na temat Prawa Murphy'ego
+1. Jeśli masz wiele do stracenia, gdyby sprawy przyjęły zły obrót, powinienieś podjąć wszelkie możliwe środki, aby temu zaradzić.
+2. Jeśli nie masz nic do stracenia, odpręż się.
+3. Jeśli możesz wiele zyskać, odpręż się.
+4. Jeśli to nie ma znaczenia, to nie ma znaczenia.
+
+Komentarz O'toole'a do Prawa Murphy'ego
+	Murphy był optymistą.
+
+Siódmy wyjątek Zymury'ego do Prawa Murphy'ego
+	Nieszczęście zawsze idą parami.
+
+Postulat Bolinga
+	Nie martw się, jeśli czujesz się dobrze. Przejdzie ci.
+
+Oświadczenie White'a
+	Nie trać głowy ...
+
+Komentarz Owena do oświadczenia White'a
+	... mogą chcieć cię o nią skrócić ...
+
+Dodatek Byrda do komentarza Owena
+	... a chcieli by uniknąć długich poszukiwań.
+
+Prawo Ilesa
+	Zawsze istnieje prostszy sposób.
+	Uzupełnienie:
+1. Jeśli szukasz prostszego sposobu, zwłaszcza przez dłuższy czas, nie znajdziesz go.
+2. Ilesowi też się to nie uda.
+
+Drugie prawo Chischolma
+	Jeśli wszystko idzie dobrze, na pewno wkrótce coś się nie uda.
+	Uzupełnienie:
+1. Jeżeli wydaje się, że już nie może być gorzej - na pewno będzie.
+2. Zawsze kiedy wydaje ci się, że będzie lepiej, to znaczy, że coś przeoczyłeś.
+
+Trzecie prawo Chisholma
+	Wszystko, co powiesz, zostanie przez innych ocenione zupełnie sprzecznie z twoimi intencjami.
+	Wnioski:
+1. Jeśli wyjaśnisz sprawę tak jasno, że wykluczysz jakąkolwiek możliwość jej niezrozumienia, na pewno znajdzie się ktoś, kto i tak zrozumie cię opatrznie.
+2. Jeśli zrobisz coś, o czym jesteś przekonany, że spotka się z ogólną aprobatą, zawsze znajdzie się ktoś, kto będzie myślał inaczej.
+3. Wszelkie wysiłki podjęte w celu wprowadzenia tego zamiaru w życie i tak spełzną na niczym.
+
+Pierwsze prawo Scotta
+	Wszystko, co idzie źle, sprawia wrażenie, że idzie dobrze.
+
+Drugie prawo Scotta
+	Jeżeli znajdziesz jakiś błąd i poprawisz go, to okaże się, że pierwsza wersja była poprawna.
+	Wniosek:
+	Po znalezieniu poprawki błędu niemożliwe będzie dopasowanie pierwotnej wielkości z powrotem do rówania.
+
+Pierwsze prawo Finagle'a
+	Jeśli eksperyment działa, to znaczy, że coś musiało pójść źle.
+
+Drugie rpawo Finagle'a
+	Niezależnie od przewidywanego rezultatu eksperymentu, zawsze znajfzie się ktoś chętny do tego, aby:
+a) błędnie go zinterpretować,
+b) sfałszować lub
+c) uwierzyć, że jest on wynikiem jego własnej, ulubionej teorii.
+
+Trzecie rpawo Finagle'a
+	W każdym zbiorze danych liczba w najbardziej oczywisty sposób poprawna, nie wymagająca sprawdzenia jest błędem.
+	Uzupełnienie:
+1. Nikt, do kogo zwrócisz się o pomoc, nie zauważy tego.
+2. Każdy nieproszony o radę, zauważy to natychmiast.
+
+Czwarte prawo Finagle'a
+	Jeśli już coś zawaliłeś, cokolwiek zrobisz, aby to naprawić, tylko pogorszy sprawę.
+
+Zasady Finagle'a
+1. Aby jak najlepiej poznać jakieś zjawisko, zanim przystąpi się do badania, najpierw trzeba je dogłębnie zrozumieć.
+2. Zawsze rób notatki - to dowód, że pracujesz.
+3. Najpierw narysuj wykres, a potem sporządź własną interpretację.
+4. W przypadku jakichkolwiek wątpliwości, staraj się mimo wszystko brzmieć przekonywująco
+5. Eksperymenty powinny się powtarzać - wszystkie powinny zawodzić w ten sam sposób.
+6. Nie wierz w cuda - licz na nie.
+
+Aksjomat Wingo'a
+	Wszystkie prawa Finagle'a można obejść, posiadłszy prostą sztukę działąnia bez myślenia.
+
+Prawo Gumpersona
+	Prawdopodobieństwo zdarzenia się czegoś jest odwrotnie proporcjonalne do jego pożądalności.
+
+Prawo postępu Issawiego
+	Przebieg postępu: Większość spraw jednostajnie ulega pogorszeniu.
+	Ścieżka postępu: Skrót jest najdłuższą odległością między dwoma punktami.
+	Dialektyka postępu: Bezpośrednie działanie wywołuje bezpośrednią reakcję.
+	Tempo postępu: Społeczeństwo nie jest samochodem, lecz mułem ... Za mocno naciskane, wierzgnie i zrzuci jeźdźca.
+
+Pierwsze prawo Sodda
+	Każde przedsięwzięcie napotyka na przeszkodę w postaci nieuświadomionej ingerencji jakiejś innej siły (ożywionej lub nieożywionej).
+	Mimo to niektóre przedsięwzięcia można doprowadzić do końca, ponieważ siła ingerująca sama podejmuje przedsięwzięcie, a tym samym również podlega ingerencji.
+
+Drugie prawo Sodda
+	Wcześniej czy później i tam musi nastąpić najgorszy z możliwych splotów okoliczności.
+	Uzupełnienie:
+	Każdy system musi być zaprojektowany w taki sposób, aby stawić czoła najgorszemu z możliwych splotów okoliczności.
+
+Prawo Simona
+	Wszystko złożone do kupy wcześniej czy później i tak się rozleci.
+
+Prawo Rudina
+	W sytuacjach kryzysowych, które zmuszają ludzi do wyboru jednej spośród kilku możliwości, większość ludzi wybiera tę najgorszą.
+
+Twierdzenie Ginsberga
+1. Nie możesz wygrać.
+2. Nie możesz zremisować.
+3. Nie możesz nawet wycofać się z gry.
+
+Komentarz Freemana na temat twierdzenia Ginsberga
+	Każdy główny nurt filozoficzny próbujący stworzyć złudzenie, że życie ma sens, opiera się na negacji jednego z Twierdzeń Ginsberga. Mianowicie:
+1. Kapitalizm oparty jest na założeniu, że można wygrać.
+2. Socjalizm oparty jest na założeniu, że można osiągnąć remis.
+3. Mistycyzm oparty jest na założeniu, że można wycofać się z gry.
+
+Komentarz Ehrmana
+1. Zanim nastąpi poprawa, będzie jeszcze gorzej.
+2. Kto powiedział, że w ogóle nastąpi poprawa?
+
+Drugie Prawo Termodynamiki Everitta
+	Nieład w społeczeństwie stale wzrasta. Tylko nadzwyczaj ciężka praca może go zredukować w ograniczonym stopniu i zaprowadzić ograniczony porządek. Jednak i ten wysiłek zaowocuje wzrostem  globalnego nieładu w społeczeństwie.
+
+Prawo termodynamiki Murpy'ego
+	Pod naciskiem wszystko się pogarsza.
+
+Drugie prawo ekologii Commonera
+	Nic w przyrodzie nie ginie.
+
+Prawo Puddera
+	Wszystko, co zaczyna się dobre, źle się kończy.
+	Wszystko, co zaczyna się źle, kończy się jeszcze gorzej.
+
+Twierdzenie Stockmayera
+	Jeśli coś wydaje się łatwe, jest trudne. Jeśli coś wydaje się trudne, jest całkowicie niewykonalne.
+
+Prawo Howe'a
+	Każdy ma jakiś plan, który jest niewykonalny.
+
+Prawo Wynne'a
+	Stagnacja ma tendencję wzrostową.
+
+Pierwsze prawo rozwoju systemów dynamicznych
+	Po otwarciu puszki z robactwem, jedynym sposobem ponownego zamknięcia go, jest użycie większej puszki.
+
+
+Prawo Sturgeona
+	90% wszystkiego jest w stanie surowym
+
+Prawo niewypowiadania
+	Jeśli wypowiesz coś dobrego - na tym się skończy. 
+Jeśli wypowiesz coś złego - na pewno się spełni.
+
+Niezwrotne prawa oczekiwań
+	Negatywne oczekiwania rodzą negatywne wyniki.
+	Pozytywne oczekiwania rodzą negatywne wyniki.
+
+MURPHOLOGIA - STOSOWANA
+
+Prawo Bookera
+Odrobina działania warta jest tony abstrakcji.
+
+Prawa Klipsteina
+	W odniesieniu do Inżynierii Ogólnej:
+1. Jeżeli zgłosisz jakiś patent, zawsze okaże się, że ktoś już złożył podobny tydzień temu.
+2. Stałość dat dostawy jest odwrotnie proporcjonalna do napiętości planu.
+3. Wymiary wyrażane są zawsze za pomocą najmniej użytecznych terminów. Na przykład, prędkość wyrażana jest w wiorstach na dwa tygodnie.
+4. Każdy drut przycięty według miary, jest za krótki.
+W odniesieniu do prototypowania i produkcji:
+1. Tolerancje gromadzą się i zbiegają w punkcie maksymalnej trudności.
+2. Jeśli w danym projekcie wymaganych jest n składników, to dostępnych będzie n-1.
+3. Silnik zawsze obraca się w złym kierunku.
+4. Jeden nie zabezpieczony obwód niszczy pozostałe.
+5. Tranzystor zabezpieczony bezpiecznikiem chroni bezpiecznik w ten sposób, że sam wybucha pierwszy.
+6. Defekt przechodzi niezauważony przez wszystkie kontrole i ujawnia się dopiero w praktyce.
+7. Nabyte części i przyrządy będą spełniać pokładane w nich nadzieje tylko do czasu, aż przejdą pomyślnie przez wszystkie testy próbne.
+8. Po usunięciu ostatniej z 16 śrubek przytrzymujących pokrywę, okaże się, że usunąłeś niewłaściwą pokrywę.
+9. Po przykręceniu ostatniej z 16 śrubek przytrzymujących pokrywę, zauważysz, że zapomniałeś o uszczelce.
+10. Po całkowitym złożeniu urządzenia okaże się, że na ławce zostało kilka dodatkowych części.
+
+
+Zalecenia Komitetu Międzynarodowego Towarzystwa Filozofujących Inżynierów: uniwersalne prawa dla naiwnych inżynierów
+1. Jeśli w obliczeniach może wkraść się jakiś błąd, na pewno się wkradnie.
+2. Każdy błąd w jakichkolwiek obliczeniach skierowany jest zawsze na spowodowanie jak największych szkód.
+3. W każdym wzorze stałe (szczególnie te uzyskane z podręczników dla inżynierów) powinny być traktowane jako zmienne.
+4. Najlepsze nawet określenie warunków działania laboratorium, nie będzie w najmniejszym stopniu odpowiadać warunkom napotykanym w praktyce.
+5. Najbardziej podstawowy wymiar na planie czy rysunku ma największe szanse na to, że zostanie pominięty.
+6. Im mniej zyskuje się na danym projekcie, tym bardziej wygórowana będzie jego cena.
+7. Jeśli urządzenie próbne działa dobrze, wszystkie następne wyprodukowane będą działały źle.
+8. Wszystkie terminy dostaw trzeba pomnożyć przez czynnik 2.0.
+9. Żądanie podstawowych zmian w konstrukcji nadejdzie, kiedy proukcja jest już na ukończeniu.
+10. Części, których po prostu nie można złożyć w nieodpowiedniej kolejności, tak właśnie zostaną złożone.
+11. Nie dotyczy to części, które można stosować wymiennie.
+12. Dokumentację producenta dotyczącą osiągów danego urządzenia, trzeba pomnożyć przez czynnik 0.5.
+13. To, co sprzedawca mówi na temat zalet urządzenia, trzeba pomnożyć przez czynnik 0.25.
+14. Instrukcje obsługi dołączone do urządzenia są natychmiast wyrzucane przez odbiorców.
+15. Część urządzenia wymagająca naprawy lub jakiegokolwiek dostosowania, będzie najtrudniej dostępna.
+16. Warunki obsługi podane w dokumentacji na pewno nie zostaną dotrzymane.
+17. Jeśli za błąd odpowiedzialna jest więcej niż jedna osoba, nikt nie jest winny.
+18. Identyczne urządzenia, które zachowują się w identyczny sposób w warunkach próbnych, nie będą się identycznie zachowywać w praktyce.
+19. Jeśli w praktyce inżynieryjnej, czynnik bezpieczeństwa zostanie, w wyniku doświadczeń, doprowadzony do najwyższej wartości, jakiś pomysłowy idiota natychmiast wynajdzie metodę przekroczenia owego czynnika bezpieczeństwa.
+20. Płacenie faktur za naprawę unieważnia gwarancję.
+
+Czternasty wniosek Atwooda
+	Pożyczając książki, tracisz tylko te, które szczególnie chciałbyś zachować.
+
+Trzecie prawo Johnsona
+	Jeśli przegapisz tylko jedno wydanie jakiegoś magazynu, na pewno będzie to właśnie to wydanie, które zawiera artykuł, opowiadanie lub odcinek powieści, który najbardziej chciałeś przeczytać.
+	Uzupełnienie:
+	Wszyscy twoi znajomi też je przegapili, zgubili lub wyrzucili.
+
+Prawo Hapera o magazynach
+	Poszukiwany artykuł znajdziesz dopiero wtedy, kiedy już zastąpisz go innym.
+
+Uzupełnienie zasady posiadania Richarda
+1. Jeśli posiadasz coś dostatecznie długo, możesz to wyrzucić.
+2. Jeśli cokolwiek wyrzucisz, od razu będziesz tego potrzebować.
+
+Prawo zachłanności Glatuma
+	Postrzegana przydatność jakiegoś artykułu jest odwrotnie proporcjonalna do jego rzeczywistej przydatności, kiedy już został zakupiony i opłacony.
+
+Prawo Lewisa
+	Niezależnie od tego jak długo i z jakim wysiłkiem chcesz coś kupić, kiedy wreszcie dokonasz zakupu, okaże się, że gdzie indziej mogłeś zapłacić o wiele mniej.
+
+Prawo Perlsweiga
+	Ludzie, których z ledwością stać na zapłacenie czynszu, płacą czynsz.
+	Ludzie, których z łatwością stać na zapłacenie czynszu, tworzą sprawiedliwość.
+
+Prawo ogrodnictwa
+1. Narzędzia innych ludzi pracują tylko  w ogrodach innych ludzi.
+2. Fajne rzeczy nigdy się do niczego nie przydają.
+3. Jeśli nikt tego nie używa, musi być jakaś przyczyna.
+4. Najwięcej dostajesz zawsze tego, czego najmniej potrzebujesz.
+
+Prawo samolotowe
+	Jeżeli samolot, którym lecisz ma opóźnienie, to samolot, na który chcesz się przesiąść, na pewno będzie punktualny.
+
+Pierwsze prawo jazdy na rowerze
+	Niezależnie do tego, jaką drogą jedziesz, zawsze jest pod górę.
+
+Pierwsze prawo brydża
+	Wina jest zawsze po stronie partnera.
+
+Zasada kociej frustracji
+	Jeśli kot zaśnie na twoich kolanach i sprawia wrażenie bezgranicznie zadowolonego, nagle musisz stać i iść do łazienki.
+
+Prawo Kitmana
+	Czysty nonsens ma tendencję do usuwania z ekranu telewizyjnego zwykłego nonsensu.
+
+Prawo Johnsona i Lairda
+	Ból zęba lubi zaczynać się w sobotę wieczorem.
+
+Obserwacja Ettorego
+	Inna kolejka porusza się zawsze szybciej.
+
+Prawo Booba
+	Szukając czegoś, zawsze znajdziesz to w ostatnim miejscu, do którego zajrzysz.
+
+PROJEKTOLOGIA
+
+Prawo Osborna
+	Zmienne nie będą; stałe nie są.
+
+Prawo specyfikacji Klipsteina
+	W szczegółach Prawo Murphy'ego wypiera Prawo Ohma.
+
+Pierwsze prawo rewizji
+	Informacje o konieczności zmian w projekcie zostaną dostarczone twórcy projektu dopiero wtedy - i tylko wtedy - gdy plany będą już ukończone. (Często prawo to zwane jest prawem "Dopiero teraz mi to mówisz?!")
+	Uzupełnienie:
+	W prostych przypadkach, gdzie występuje jeden oczywisty dobry sposób i jeden oczywisty zły sposób, mądrzej jest wybrać ten zły, aby przyspieszyć późniejsze poprawki.
+
+Drugie prawo rewizji
+	Im bardziej niewinna wydaje się modyfikacja, tym większe pociągnie za sobą skutki i tym większą część planu trzeba będzie przerysowywać.
+
+Trzecie prawo rewizji
+	Kiedy jesteś już niebezpiecznie blisko ukończenia projektu i w tym momencie nadchodzą w końcu rzeczywiste wymiary terenu - a nie takie, jakie zleceniodawcy chcieliby, żeby były - zawsze prościej jest zacząć od początku.
+	Uzupełnienie:
+	Zazwyczaj niepraktycznie jest martwić się na zapas o przeszkody - jeśli nie ma żadnej, ktoś zrobi ją dla ciebie.
+
+Prawo zagubionego cala
+	Przy projektowaniu jakiejkolwiek konstrukcji, żadna ważna wielkość nie zostanie obliczona poprawnie p godzinie 16.40 w piątek.
+	Uzupełnienie:
+1. Jeśli w tych samych warunkach mniejsze wielkości podane są w szesnastej części cala, nie zostaną w ogóle obliczone.
+2. Poprawny wynik stanie się oczywisty w poniedziałek o godzinie 9.01.
+
+Prawo chaosu stosowanego
+1. Ta część wysyłki, którą fabryka zapomniała wysłać, jest właśnie tą, która stanowi 75% wartości całej ekspedycji.
+Uzupełnienie:
+Fabryka nie tylko zapomniała wysłać brakującej części, ale w 50% przypadków nawet jej nie wykonała.
+2. Dostawa handlowa, która normalnie trwa jeden dzień, będzie trwała pięć dni, jeśli na nią pilnie czekasz.
+3. Po dodaniu dwóch tygodni do harmonogramu nieoczekiwanych opóźnień, dodaj jeszcze dwa na nieoczekiwane spóźnienia.
+4. Jeżeli w spodziewanej dostawie wybierzesz jedną rzecz, która nie powinna być źle oznakowana, to możesz być pewien, że właśnie ona będzie źle oznakowana.
+Uzupełnienie:
+a) W każdym zbiorze części z tym samym znakiem montażowym, jedna nie będzie do niczego pasowała.
+b) Nie zauważysz tego aż do chwili, gdy będziesz próbował wstawić tę część w miejsce, które znak wskazuje.
+c) Nigdy nie kłóć się z producentem o błąd. W drukach kontrolnych wszystkie pozycje są odhaczone i zawierają nawet dziury, których nie ma.
+
+Twierdzenie Wyszkowskiego
+	Niezależnie od części używanych zarówno przez dostawcę jak i klienta, producent, z powodów tylko jemu wiadomych, stosuje swoje własne części zamienne - niestety inne.
+
+Równania Snafu
+1. W problemie zawierającym n równań, zawsze będzie n+1 niewiadomych.
+2. Przedmioty lub informacje najbardziej potrzebne, będą najtrudniej osiągalne.
+3. Kiedy już wykorzystasz wszystkie możliwości i nie uda ci się, okaże się, że jest jedno rozwiązanie, proste i oczywiste, wyraźnie widoczne dla wszystkich.
+Stała Skinnera
+Jest to taka wielkość, która, kiedy ją przemnożysz przez, podzielisz przez, dodasz do lub odejmiesz od odpowiedzi, którą masz, da odpowiedź, jaką powinieneś mieć.
+
+Prawo Mikscha
+	Jeśli sznurek ma jeden koniec, to ma i drugi.
+
+Prawo programowania komputerów
+1. Każdy nowy program jest już przestarzały.
+2. Każdy dany program kosztuje więcej i zabiera więcej czasu.
+3. Jeśli program jest użyteczny, trzeba go zmienić.
+4. Jeśli program jest bezużyteczny, trzeba go udokumentować.
+5. Każdy dany program tak się rozrośnie, że wypełni całą dostępną pamięć.
+6. Wartość programu jest proporcjonalna do wagi jego wytworu
+7. Zawiłość programu rośnie tak długo, aż przerośnie możliwości programującego.
+
+Postulaty Troutmana dotyczące programowania
+1. Jeśli w czasie testowania program działa bezbłędnie, w praktyce zawsze działa źle.
+2. Najbardziej szkodliwy błąd zostanie wykryty nie wcześniej, niż po 6 miesiącach produkcji programu.
+3. Karty sterując, które w oczywisty sposób nie mogą być nieuporządkowane, będą nieuporządkowane.
+4. Nie dotyczy to taśm wymiennych.
+5. Jeśli ktoś stworzyłby edytor wejściowy, który odrzuca wszelkie błędne dane, to i tak znalazłby się pomysłowy idiota, który odkryłby metodę ominięcia edytora.
+6. Język najlepiej znany wszystkim programistom to przekleństwa.
+
+Prawo Gilba o niesolidności
+1. Komputery zawodzą, ale ludzie zawodzą jeszcze bardziej.
+2. Każdy system oparty na ludzkiej niezawodności, jest zawodny.
+3.  Niewykrywalne błędy są nieskończone w swej różnorodności, w przeciwieństwie do wykrywalnych błędów, które z definicji są ograniczone.
+4. Inwestowanie w niezawodność, będzie rosło, dopóki nie przekroczy prawdopodobnych kosztów błędów, lub dopóki ktoś nie uprze się, żeby wykonano trochę użytecznej pracy.
+
+Prawo Brooka
+	Dołączanie dodatkowego zespołu programistów do spóźnionego projektu oprogramowania, jeszcze bardziej go opóźni.
+
+Prawo nauki o komputerach według Goluba
+1. Niewyraźne cele programów stosuje się po to, aby uniknąć kłopotu oszacowania odpowiadających im kosztów wytworzenia.
+2. Niedbale zaprojektowany projekt zabiera trzy razy więcej czasu, niż można by oczekiwać, starannie zaplanowany projekt zabiera tylko dwa razy tyle.
+3. Wysiłek konieczny do korygowania procesu wzrastania geometrycznie wraz z czasem.
+4. Zespoły pracujące nad projektami nie cierpią tygodniowych sprawozdań z poczynionych postępów, ponieważ żywo manifestują one brak jakiegokolwiek postepu.
+
+Prawo entomologii cybernetycznej Lubarsky'ego
+	Zawsze jest jeszcze jedna pluskwa.
+
+Zasada Showa
+	Stwórz system, który nawet głupiec potrafi obsłużyć, a tylko głupiec będzie chciał się nim posługiwać.
+
+MASZYNOLOGIA
+
+Zasada IBM Pollyanny
+	Maszyny powinny pracować; ludzie powinni myśleć.
+
+Prawo przewrotności natury
+	Nie da się określić z góry, którą stronę chleba posmarować masłem.
+
+Prawo selektywnego przyciągania
+	Każdy przedmiot spada tak, aby spowodować jak największe szkody.
+	Wniosek Jenninga:
+	Prawdopodobieństwo tego, że chleb upadnie na podłogę stroną posmarowaną masłem, jest wprost proporcjonalne do ceny dywanu.
+	Wniosek Klipsteina:
+	Spadają rzeczy tylko najdelikatniejsze.
+
+Prawo Sprinkle'a
+	Przedmioty zawsze spadają pod kątem prostym.
+
+Prawo warsztatowe Anthony'ego
+	Każde narzędzie, gdy upadnie, potoczy się w najtrudniej dostępny kąt warsztatu.
+	Uzupełnienie:
+	Po drodze do owego kąta, upadające narzędzie najpierw uderzy cię w nogę.
+
+Zasada części zamiennych
+	Łatwość dostępu do małych części, które spadły ze stołu, zmienia się proporcjonalnie do ich wielkości - i odwrotnie proporcjonalnie do ich niezbędności do ukończenia wykonywanej właśnie pracy.
+
+Prawo Paula
+	Nie można spaść z podłogi.
+
+
+Pierwsze prawo Johnsona
+	Kiedy zawodzi jakieś urządzenie mechaniczne, to zawsze dzieje się to w możliwie najbardziej nieodpowiednim czasie.
+
+Prawo irytacji
+	Jeśli pracując nad jakimś projektem odłożysz narzędzie, bo jesteś pewien, że nie będzie ci więcej potrzebne, natychmiast okazuje się niezbędne.
+
+Prawo Watsona
+	Niezawodność urządzeń mechanicznych jest odwrotnie proporcjonalna do liczby i ważności osób sprawujących nad nimi kontrolę.
+
+Drugie prawo Wyszkowskiego
+	Wszystko będzie działać, jeśli pomajstrujesz przy tym wystarczająco długo.
+
+Prawo Sattingera
+	Włączone do kontaktu lepiej działa.
+
+Prawo Lowery'ego
+	Jeśli zablokowało się - pchaj na siłę.
+	Jeśli się rozleci, to znaczy, że i tak wymagało wymiany.
+
+Prawo Schmidta
+	Jeśli psujesz coś dostatecznie długo, w końcu ci się uda.
+
+Pierwsze prawo oporu Fudda
+	Pchnij odpowiednio mocno, a przewróci się.
+
+Prawo siły Anthony'ego
+	Nie rób nic na siłę; weź większy młotek.
+
+Postulat Hornera
+	Doświadczenie zmienia się proporcjonalnie do zrujnowanego sprzętu.
+
+Aksjomat Cahna
+	Kiedy wszystko inne zawiedzie, przeczytaj instrukcję.
+
+Zasada dotycząca urządzeń wielofunkcyjnych:
+	Im mniej funkcji dane urządzenie ma wykonać, tym zrobi to lepiej.
+
+Prawo Coopera
+	Wszystkie urządzenia są wzmacniaczami.
+
+Prawo Jenkinsona
+	Nie będzie działać tak czy inaczej.
+
+Pierwsze prawo Gordona
+Jeśli projekt naukowy w ogóle nie jest wart zrobienia, to nie jest wart zrobienia go dobrze.
+
+Prawo Badań naukowych Murphy'ego
+Dostateczna ilość badań potwierdzi twoją teorię.
+
+Prawo Maiera
+Jeśli jakieś fakty nie pasują do teorii, trzeba się ich pozbyć. 
+Uzupełnienie:
+1. Im większa teoria, tym lepiej.
+2. Eksperyment można uznać za sukces, jeśli w celu uzyskania zgodności z teorią trzeba się pozbyć nie więcej niż 50% uzyskanych pomiarów.
+
+Prawo Williamsa l Hollanda
+Jeśli zebrano dostatecznie dużo danych, wszystko można udowodnić metodami statystycznymi.
+
+Teoria Edingtona
+Ilość różnych hipotez stworzonych, aby wyjaśnić jakieś zjawisko biologiczne jest odwrotnie proporcjonalna do dostępnej wiedzy.
+
+Prawo Peera
+Rozwiązanie problemu zmienia jego naturę.
+
+Prawo Haryarda
+W najbardziej rygorystycznie kontrolowanych warunkach ciśnienia, temperatury, objętości, wilgotności i innych zmiennych, organizm zachowa się dokładnie tak, jak będzie miał ochotę.
+
+Czwarte prawo rewizji
+Po ukończeniu pracochłonnej i starannej analizy jakiejś próbki, zawsze dowiesz się, że to nie ta próbka i nie ma nic wspólnego z danym problemem.
+
+Prawo Hersha
+Biochemia rozrasta się tak, że wypełnia przestrzeń i czas dostępny na jej ukończenie i publikację.
+
+Zasada Dokładności
+Zawsze łatwiej jest pracować nad rozwiązaniem problemu, jeśli zna się odpowiedź.
+
+Prawo Younga
+Wszystkich wielkich odkryć dokonuje się przez pomyłkę.
+Uzupełnienie:
+Im większe fundusze, tym więcej czasu zabiera zrobienie pomyłki.
+
+Prawo dużych problemów Hoare'a
+W każdym dużym problemie znajduje się jakiś mały problem, który usiłuje wydostać się na zewnątrz.
+
+Prawo laboratoryjne Fetta
+Nigdy nie kopiuj udanego eksperymentu.
+
+Pierwsze prawo Wyszkowskiego
+Żadnego eksperymentu nie da się odtworzyć.
+
+Czynnik bezowocności
+Żaden eksperyment nigdy nie jest kompletną klapą - zawsze może służyć jako przykład negatywny.
+
+Prawo pana Coopera
+Jeśli nie rozumiesz jakiegoś słowa we fragmencie pisma technicznego pomiń je. Fragment ten będzie miał dokładnie takie same znaczenie.
+
+Prawo Parkinsona dla badań medycznych
+Udane badanie przyciąga większe dotacje, które uniemożliwiają dalsze badania.
+
+Szóste prawo Parkinsona
+Postęp w naukach zmienia się odwrotnie proporcjonalnie do liczby publikowanych periodyków.
+
+Zasada pełnego obrazu
+Naukowcy są tak pogrążeni w wąskich wycinkach badań, że nie mają pełnego obrazu czegokolwiek, włącznie ze swoimi własnymi badaniami.
+Uzupełnienie: 
+Dyrektor Badań Naukowych powinien wiedzieć tak mało, jak to tylko możliwe na temat szczegółowego tematu badań, którymi zarządza.
+
+Prawo Booke'a
+Zawsze gdy jakiś system jest już kompletnie zdefiniowany, jakiś skończony głupek odkrywa coś, co albo obala system, albo rozszerza go poza granice poznania.
+
+Prawo Campbella
+Natura czuje odrazę do bezmyślnych eksperymentów.
+
+Prawo Meskimena
+Nigdy nie ma czasu, żeby zrobić coś dobrze, ale zawsze jest czas, żeby to przerobić.
+
+
+HIERARHOLOGIA
+
+Prawo Hellera
+Pierwszym mitem zarządzania jest to, że w ogóle istnieje. 
+Wniosek Johnsona:
+Nikt naprawdę nie wie, co się dzieje na jakimkolwiek szczeblu organizacji.
+
+Zasada Petera
+W każdym systemie hierarchicznym pracownik dąży do podciągnięcia się do swego poziomu niekompetencji. 
+Uzupełnienie:
+1. Każde stanowisko jest zajmowane przez pracownika, który jest niekompetentny do wykonywania swoich obowiązków.
+2. Praca wykonywana jest przez tych pracowników, którzy nie osiągnęli jeszcze swojego poziomu niekompetencji.
+
+Inwersja Petera
+Wewnętrzna spójność jest o wiele więcej warta niż efektywne działanie.
+
+Ukryty postulat Petera według Godina
+Każdy pracownik zaczyna na swoim poziomie kompetencji.
+
+Obserwacja Petera
+Super-kompetencja jest jeszcze bardziej niepożądana niż niekompetencja.
+
+Prawo ewolucji Petera
+Kompetencja zawsze zawiera ziarno niekompetencji.
+
+Zasada twórczej niekompetencki Petera
+Sprawiaj wrażenie, że osiągnąłeś już swój poziom niekompetencji.
+
+
+Twierdzenie Petera
+Niekompetencja plus niekompetencja równa się niekompetencja.
+
+Prawo podstawiania Petera
+Zajmij się kretowiskami, góry same się sobą zajmą.
+
+Prognoza Petera
+Poświęć wystarczająco dużo czasu na utwierdzenie się w jakiejś potrzebie, a potrzeba zniknie.
+
+Placebo Petera
+Wrażenie jest zawsze ważniejsze niż działanie.
+
+Prawo Godina
+Powszechność niekompetencji jest wprost proporcjonalna do wysokości szczebla w hierarchii.
+
+Reguła Freemana
+Warunki mogą zmusić niekompetentnego pracownika, żeby stal się kompetentny, przynajmniej w wyspecjalizowanej dziedzinie.
+
+Aksjomat Yaila
+W każdym przedsięwzięciu ludzkim praca szuka najniższego szczebla w hierarchii.
+
+Prawo Imhoffa
+Organizacja biurokracji przypomina zbiornik septyczny, w którym bakterie beztlenowe rozkładają nieczystości kanalizacyjne - największe kawałki zawsze wypływają na wierzch.
+
+Trzecie prawo Parkinsona
+Ekspansja oznacza zawiłość, a zawiłość ulega rozkładowi.
+
+
+
+Czwarte prawo Parkinsona
+Liczba osób w jakimkolwiek zespole pracowniczym ma tendencję wzrostową, niezależnie od ilości pracy, jaką trzeba wykonać.
+
+Piąte prawo Parkinsona
+Jeśli jest sposób na odłożenie ważnej decyzji, dobra biurokracja, publiczna lub prywatna, znajdzie go.
+
+Aksjomat Parkinsona
+1. Urzędnik pragnie pomnażać podwładnych, nie rywali.
+2. Urzędnicy wytwarzają pracę sobie nawzajem.
+
+Żelazne prawo socjologii o Oligarhii
+W każdej zorganizowanej działalności, niezależnie od jej dziedziny, niewielka liczba osób zostaje oligarchicznymi przywódcami, a reszta idzie za nimi.
+
+Prawo Oesera
+U osób zajmujących najwyższe stanowiska w jakiejś organizacji istnieje tendencja do spędzania całego czasu na zasiadaniu w komitetach i podpisywaniu listów.
+
+Prawo Cornuelle'a:
+Władza ma tendencję do przydzielania pracy tym, którzy najmniej się do niej nadają.
+
+Prawo Zymurgy'ego o pracy ochotniczej
+Ludzie są zawsze chętni do pracy w czasie przeszłym.
+
+Prawo komunikacji
+Nieuchronnym wynikiem ulepszonej i wzmożonej komunikacji pomiędzy różnymi szczeblami w hierarchii jest znaczny wzrost nieporozumienia.
+
+Prawo Dowa
+Dla każdej hierarchii prawdziwe jest twierdzenie, że im wyższy szczebel, tym większy chaos.
+
+Prawo Bunuela
+Przesada jest szkodliwa w każdym przypadku, nawet jeśli chodzi o efektywność.
+
+Sparksa dzięsięć wskazań dla menedżera
+1. Dołóż wszelkich starań, aby mieć ważną minę.
+2. Staraj się, aby widywano cię z ważnymi ludźmi.
+3. Mów z autorytetem; rozwódź się jednak tylko na temat faktów oczywistych i sprawdzonych.
+4. Nie wdawaj się w dyskusje, lecz jeśli już zostaniesz przyciśnięty do muru, zadaj zupełnie oderwane od tematu pytanie. Kiedy twój przeciwnik będzie starał się zrozumieć, co jest grane - szybko zmień temat.
+5. Słuchaj uważnie, gdy inni dyskutują nad jakimś problemem. Gdy : tylko usłyszysz jakiś banał, wykorzystaj to i zignoruj ich.
+6. Jeśli podwładny zada ci słuszne pytanie, spójrz na niego, jakby postradał zmysły. Kiedy opuści wzrok, zadaj mu to samo pytanie tylko sparafrazowane.
+7. Obejmij wysokie stanowisko, ale trzymaj się z dala od widoku publicznego.
+8. Poza swoim biurem chodź szybkim krokiem - ograniczy to do minimum pytania od podwładnych i zwierzchników.
+9. Drzwi do biura miej zawsze zamknięte. To stawia gości w defensywie i sprawia wrażenie, że zawsze masz ważną konferencję.
+10. Wszystkie polecenia wydawaj ustnie. Nie zapisuj nigdy niczego, co mogłoby być dowodem twojej niekompetencji.
+
+Prawdy o zarządzaniu
+1. Pomyśl, zanim coś zrobisz; to nie twoje pieniądze.
+2. Cale dobre zarządzanie jest wyrazem jednej wielkiej idei.
+3. Żaden pracownik na kierowniczym stanowisku, nie zadaje sobie trudu, aby udowodnić, że nie miał racji.
+4. Jeśli do usprawiedliwienia Jakiegoś działania potrzebne są wyrafinowane obliczenia, nie rób tego.
+
+Pierwsze prawo Jaya o kierownictwie
+Zmiana to podstawa kierowania, a dokonywanie zmian przed innymi - to kreatywność.
+
+Dylemat pracownika
+1. Niezależnie od tego ile zrobisz, zawsze zrobisz za mało.
+2. To czego nie zrobisz, jest zawsze ważniejsze od tego, co zrobiłeś.
+
+Maksyma Matcha
+Głupiec na wysokim stanowisku jest jak człowiek na szczycie wysokiej góry; wszystko wydaje mu się małe i on wszystkim wydaje się mały.
+
+Żelazne prawo dystrybucji
+Ci, którzy mają, dostają.
+
+Prawo H.L. Menckena
+Ci, którzy potrafią - robią. Ci, którzy nie potrafią - uczą. 
+Rozwinięcie Maruna: 
+Ci, którzy nie potrafią uczyć -zarządzają.
+
+Aksjomat wojskowy
+Każdy rozkaz, który może zostać źle zrozumiany, zostanie źle zrozumiany.
+
+Prawo jonesa
+Człowiek, który potrafi się uśmiechać, kiedy wszystko bierze w łeb, na pewno pomyślał właśnie o kimś, na kogo może zwalić winę.
+
+Pierwsze prawo socjoekonomii
+W systemie hierarchicznym, stawka wynagrodzenia za wykonanie zadania wzrasta odwrotnie proporcjonalnie do przykrości i trudności zadania.
+
+Lament Harisa
+Wszyscy dobrzy są już zajęci.
+
+Prawo Putta
+Technika zdominowana jest przez dwa typy ludzi. Tych, którzy rozumieją, czym nie kierują. Tych, którzy kierują tym, czego nie rozumieją.
+
+
+KOMITETOLOGIA
+
+Prawo Olda i Kahna
+Efektywność posiedzenia komisji jest odwrotnie proporcjonalna do ilości uczestników i czasu poświęconego na naradę.
+
+Prawo Shanahana
+Czas trwania posiedzenia wzrasta do kwadratu liczby osób na nim obecnych.
+
+Prawo trywialności
+Ilość czasu przeznaczona porządkiem dziennym danej sprawie jest odwrotnie proporcjonalna do sumy, jaka wchodzi w grę.
+
+Prawo posiedzeniodynamiki Issawiego
+1. Comitas comitatum, omnia comites.
+2. Im mniej podoba ci się zasiadanie w komitetach, tym większe prawdopodobieństwo, że będziesz zmuszony w nich zasiadać.
+
+Prawo Hendricksona
+Jeśli jakiś problem jest przyczyną wielu posiedzeń, to w końcu posiedzenia stają się ważniejsze niż ten problem.
+
+Zasada Lorda Falklanda
+Kiedy nie ma potrzeby podejmowania decyzji, jest potrzeba nie podejmowania decyzji.
+
+Prawo Fairfaxa
+Wszelkie fakty, które włączone do dyskusji przynoszą oczekiwany rezultat, są faktami dla tejże dyskusji.
+
+
+
+Reguła McHaughtona
+Każda teza w systemie biurokratycznym, którą warto wypowiedzieć, musi być możliwa do wyrażenia prostym zdaniem oznajmującym, które w oczywisty sposób jest prawdziwe, gdy tylko zostało wypowiedziane.
+
+Prawo Trumana
+Jeśli nie możesz kogoś przekonać, wpraw go w zakłopotanie.
+
+Pierwsze prawo dyskusji
+Nigdy nie dyskutuj z głupcem -ludzie mogą nie widzieć różnicy.
+
+Prawa odkładania spraw na potem
+Odkładanie spraw na później:
+1. Skraca pracę i kogo innego obarcza odpowiedzialnością za jej zakończenie (tego, kto ustalił nieprzekraczalny termin).
+2. Redukuje niepokój poprzez zmniejszenie oczekiwań co do rezultatów przedsięwzięcia, z wielkich, możliwych do osiągnięcia w ogóle, do małych, możliwych do osiągnięcia w danych okolicznościach.
+3. W oczach innych i w swoich własnych zyskuje się uznanie ponieważ z reguły zakłada się, że ważność pracy usprawiedliwia stres.
+4. Można też uniknąć przeszkód w postaci przydziału innych obowiązków chodzi bowiem o to, aby najbardziej zestresowany pracownik mógł się skoncentrować na jednej rzeczy.
+5. Odkładanie spraw na później zapobiega nudzie - nigdy nie czujesz, że nie ma nic ważnego do zrobienia.
+6. Może wyeliminować pracę, jeśli zapotrzebowanie na nią minie, zanim została wykonana.
+
+Zasada porządku Swipple'a
+Ten, kto krzyczy, ma głos.
+
+Reguła Rayburna
+Jeśli chcesz robić postępy, idź naprzód.
+
+Prawa Borena
+1. Kiedy masz wątpliwości, mów niewyraźnie.
+2. Kiedy masz kłopoty, wyślij delegata.
+3. Jeśli jesteś odpowiedzialny, zastanów się.
+
+Zasada procedury parlamentarnej Parkera
+Dobry plan dzisiaj jest lepszy, niż doskonały plan jutro.
+
+KSIĘGOWOŚCIOLOGIA
+
+Sofizmat Frothinghama
+Czas to pieniądz.
+
+Prawo Crane'a
+Nie ma czegoś takiego jak bezpłatny obiad.
+
+Pierwsze prawo Parkinsona
+Praca rozrasta się, aby wypełnić czas na jej wykonanie; rzecz, która ma być wykonana puchnie w swej ważności i złożoności wprost proporcjonalnie do czasu, jaki ma być potrzebny na jej wykonanie.
+
+Drugie prawo Parkinsona
+Wydatki rosną w miarę dochodów.
+
+Prawo zwłoki Parkinsona
+Zwłoka jest najgorszą formą odmowy.
+
+Prawo Wikera
+Rząd rozrasta się, aby zaabsorbować dochód państwowy, a potem dochody innych.
+
+Pierwsze prawo rzeczywistości Tuccillego
+Przemysł zawsze rozwija się po to, aby wypełnić gospodarczą próżnię.
+
+Zasada Westheimera
+Aby określić ilość czasu potrzebną na wykonanie jakiegoś zadania, musisz: określić ile czasu według ciebie potrzeba na to zadanie, pomnożyć go przez dwa i zmienić jednostkę na najbliższą największą. W ten sposób wyasygnujesz dwa dni na zadanie, wymagające godziny.
+
+
+
+Prawo Greshama
+Z nieważnymi sprawami od razu dajemy sobie radę; ważne sprawy nigdy nie są rozwiązywane.
+
+Prawo programowania Gray'a
+n + l trywialnych zadań powinno być wykonanych w tym samym czasie, co n normalnych.
+
+Obaleni prawa Gray'a przez Logga
+n + l trywialnych zadań zabiera dwa razy tyle czasu co n trywialnych zadań.
+
+Zasada projektowania 90/90
+Pierwsze 90% zadania zabiera 10% czasu, a ostatnie 10% zabiera 90%.
+
+Pierwsze prawo Weinberga
+Postęp dokonuje się w co drugi piątek.
+
+Zasada uporządkowania
+Artykuły potrzebne do wczorajszego eksperymentu trzeba zamówić nie później niż jutro w południe.
+
+Prawo Cheopsa
+Nic nigdy nie zostało zbudowane według planu i w granicach budżetu.
+
+Rozszerzona zasada Epsteina - Heisenberga
+Na orbicie R&D tylko dwa z trzech istniejących parametrów mogą być zdefiniowane jednocześnie. Parametrami tymi są: zadanie, czas i zasoby.
+1. Jeśli wiadomo, na czym polega zadanie i istnieje jakiś limit czasowy przeznaczony na jego wykonanie, nie wiadomo wtedy jakie będą koszta.
+2. Jeśli jasno zdefiniowano czas i zasoby, nie można określić, jaką część zadania R&D zostanie wykonana.
+3. Jeśli masz jasno określony cel R&D oraz określoną ilość pieniędzy, jaka według obliczeń potrzebna będzie na wykonanie zadania, nie możesz przewidzieć czy i kiedy cel zostanie osiągnięty. Jeśli ktoś ma wystarczająco dużo szczęścia i potrafi dokładnie zdefiniować wszystkie trzy parametry, wtedy to, czym się zajmuje nie mieści się w granicach R&D.
+
+Prawo Pareto'a (prawo 20/80)
+20% klientów odpowiada 80% obrotów.
+20% komponentów wyjaśnia 80% kosztów, eto.
+
+Zasada O'Briena (teoria 357.73 $)
+Rewidenci księgowi nie przyjmują żadnych zestawień wydatków, których suma da się podzielić przez 5 lub 10.
+
+Obserwacja Issawiego na temat zużycia papieru
+Każdy system ma własny sposób zużywania ogromnych ilości papieru:
+w społeczeństwach socjalistycznych - przez wypełnianie ogromnych formularzy w czterech kopiach, w społeczeństwach kapitalistycznych - przez wieszanie wielkich plakatów i pakowanie każdego artykułu w cztery warstwy kartonu.
+
+Browna prawo sukcesu w interesach
+Papierkowa robota naszego klienta przynosi korzyści. Nasza własna papierkowa robota przynosi straty.
+
+Towarzyszący wniosek Johna
+Aby otrzymać pożyczkę, najpierw musisz udowodnić, że jej nie potrzebujesz.
+
+Pierwsze prawo O'Briena
+W pewnym momencie istnienia dosłownie każdej organizacji wyczerpuje się jej zdolność do odnoszenia sukcesu.
+
+Prawo instytucji
+Bogactwo wystroju drzwi frontowych biura zmienia się odwrotnie proporcjonalnie do wypłacalności firmy.
+
+Prawo Paulga
+W Ameryce nie chodzi o to ile co kosztuje, ale o to, ile można zaoszczędzić.
+
+Prawo juhaniego
+Każdy kompromis jest kosztowniejszy niż jakakolwiek propozycja kompromisu.
+
+EKSPERTOLOGIA
+
+Złota zasada nauki i sztuki
+Ten, kto ma złoto ustanawia zasady.
+
+Prawo Gummidge'a
+Jakość ekspertyzy zmienia się odwrotnie proporcjonalnie do liczby zdań zrozumiałych dla ogółu.
+
+Prawo Dunne'a
+Za retoryką kryje się dwuznaczność.
+
+Prawo Maleka
+Najprostsze myśli formułowane są w najbardziej skomplikowany sposób.
+
+Nakaz Allisona
+Najprostszym sposobem sprawdzenia, czy jest się ekspertem w danej dziedzinie jest zdolność wygrywania pieniędzy w serii zakładów co do przyszłości tej dziedziny.
+
+Prawo Weinberga
+Ekspert jest to człowiek, który unika małych błędów w drodze do wielkiego fiaska.
+
+Prawo Pottera
+Natężenie krytyki jest odwrotnie proporcjonalne do rzeczywistej wartości przedmiotu.
+
+Prawo Rossa
+Nigdy nie definiuj znaczenia wypowiedzi z góry.
+
+Zasada wychodzenia z krytycznej sytuacji
+Zawsze zostaw sobie miejsce na wyjaśnienia w przypadku, gdyby się nie sprawdziło.
+
+
+
+Prawo idei rewolucyjnych Clarke'a
+Każda idea rewolucyjna - w Nauce, Polityce, Sztuce i Czymkolwiek Innym - wywołuje 3 etapy reakcji. Można je podsumować trzema frazami:
+1. To niemożliwe - nie będę marnował czasu.
+2. To możliwe, ale nie warte zachodu.
+3. Mówiłem przez cały czas, że to był dobry pomysł.
+
+Pierwsze prawo Clarke'a
+Jeśli wybitny, ale starszy wiekiem uczony twierdzi, że coś jest możliwe, prawie na pewno ma rację. Kiedy twierdzi, że coś jest niemożliwe, bardzo prawdopodobne jest, że się myli.
+
+Drugie prawo Clarke'a
+Jedynym sposobem na to, by odkryć granice możliwości, jest wyjście poza nie, do niemożliwości.
+
+Zasada wielkości
+Gdy ktoś, kogo wielce podziwiasz i szanujesz, zdaje się być pogrążony w głębokich myślach, prawdopodobnie myśli o obiedzie.
+
+Trzecie prawo Clarke'a
+Każda dostatecznie zaawansowana technologia niczym nie różni się od magii.
+
+Prawo wyższości
+Pierwszy przykład nadrzędnej zasady jest zawsze gorszy od rozwiniętego przykładu niższej zasady,
+
+Prawo Blaawua
+Ugruntowana technologia utrzymuje się pomimo nowej technologii.
+
+Prawo Cohena
+Liczy się tylko to, jaki tytuł zdobędziesz, naciągając fakty; same fakty nie mają znaczenia.
+
+Prawo Fitza i Gibbona
+Im więcej kucharzy, tym gorszy obiad.
+
+Wyróżnienie Bartha
+Są dwa gatunki ludzi: ci, którzy dzielą ludzi na dwa gatunki i ci, którzy tego nie robią.
+
+Prawo Runamoka
+Są cztery gatunki ludzi: tacy, którzy siedzą cicho i nic nie robią, tacy, którzy mówią, żeby siedzieć cicho i nic nie robią, tacy, którzy coś robią i tacy, którzy mówią o robieniu.
+
+Ósme prawo Lewego
+Najwięksi geniusze nie potrafią uniknąć zaabsorbowania drobiazgami.
+
+Dziewiąte prawo Lewego
+Tylko Bóg może dokonywać przypadkowego wyboru.
+
+Prawo Segala
+Człowiek z jednym zegarkiem wie, która jest godzina. Człowiek z dwoma, nigdy nie jest pewien.
+
+Prawo Millera
+Nie stwierdzisz, jak głęboka jest kałuża, dopóki do niej nie wdepniesz.
+
+Szóste prawo Kamina
+Próbując przewidzieć działania jakiegoś polityka na polu gospodarczym, nie daj się zwieść jego słowom; patrz, co robi.
+
+Prawo Weilera
+Nic nie jest niemożliwe dla kogoś, kto nie musi tego robić sam.
+
+Zasada procentów LaCombe'a
+Zakres opłacalności czegoś wynosi albo 15-25%, albo 80-90%. 
+Wniosek Dudenhoefera: 
+Wynik 50% wystarczy dla zakresu 40-60.
+Drugie prawo Weinberga
+Gdyby budowniczowie wznosili budynki w taki sam sposób, jak programiści piszą programy, to pierwszy dzięcioł, jaki by się pojawił, zniszczyłby cywilizację.
+
+HUMANOLOGIA
+
+Pierwsze prawo socjo-genetyki
+Celibat nie jest dziedziczny,
+
+Reguły Beifelda
+Prawdopodobieństwo, że miody mężczyzna spotka pociągającą dziewczynę wzrasta gwałtownie kiedy jest on już w towarzystwie (l) dziewczyny, (2) żony, (3) przystojniejszego i bogatszego kolegi.
+
+Czwarte prawo Farbera
+Potrzeba matką dziwnych towarzyszy w łóżku.
+
+Drugie prawo Hartleya
+Nigdy nie śpij z większym od siebie wariatem.
+
+Prawo Beckhapa
+Uroda razy rozum równa się stała.
+
+Postulaty Pardo
+1. Wszystko, co dobre w życiu, jest nielegalne, albo tuczące.
+2. W życiu są tylko trzy wierne rzeczy: pieniądze, pies i stara kobieta.
+3. Nie ważne, czy jesteś bogaty, czy nie, o ile możesz żyć wygodnie i mieć wszystko, czego chcesz.
+
+Prawo Parkera
+Piękno jest powierzchowne, ale brzydota przenika aż do kości.
+
+Prawo kapitana Penny'ego
+Czasami uda ci się okpić niektórych ludzi, niektórych uda ci się okpić zawsze, ale nie uda ci się okpić MAMY.
+
+
+Prawo konserwacji zła Issawiego
+Całkowita ilość zła w każdym systemie pozostaje stała. Stąd, każdej redukcji - np. ubóstwa lub bezrobocia - towarzyszy wzrost, np. przestępczości lub zanieczyszczenia powietrza.
+
+Prawo Katza
+Ludzie i narody będą działać racjonalnie, kiedy wyczerpią wszystkie inne możliwości.
+
+Prawo oświadczeń politycznych Parkera
+Prawdziwość jakiegokolwiek oświadczenia nie ma nic wspólnego z jego wiarygodnością i odwrotnie.
+
+Aksjomat pana Cole'a
+Suma inteligencji na planecie jest stała; liczba ludności - rośnie.
+
+Steela plagiat czyjejś filozofii
+Każdy powinien coś sądzić: ja sądzę, że wypiję jeszcze jednego drinka.
+
+Trzecie prawo Lewewgo
+Ta część społeczeństwa, z którą najbardziej sympatyzujesz jako liberał, nieuchronnie okaże się być jedną z najbardziej ograniczonych i sfanatyzowanych części społeczeństwa.
+
+Poprawka Kelly'ego
+Fajni faceci i niefajnie kończą.
+
+Stała Kenedy'ego
+Nie wściekaj się - zrewanżuj się.
+
+Motto Canada Bill Jonesa
+Niemoralne jest pozostawienie pieniędzy frajerom. 
+Uzupełnienie;
+Smith&Wesson bije cztery asy.
+
+Motto jonesa
+Przyjaciele przychodzą i odchodzą; wrogowie gromadzą się.
+
+Kodycyl McClaughry'ego do motta Jonesa
+Chcesz mieć wroga, zrób komuś przysługę.
+
+Prawo Vique'a:
+Człowiek bez religii jest jak ryba bez roweru.
+
+Piąta zasada
+Traktujesz siebie zbyt poważnie.
+
+METAPRAWA
+
+Metaprawo nędzników
+Wszystkich praw, dobrych i złych, trzeba słuchać co do litery.
+
+Postulat Peratga:
+Liczba racjonalnych hipotez, które mogą wyjaśnić jakieś zjawisko jest nieskończona.
+
+Metaprawo Ully
+Wszystkie prawa są udawaniem rzeczywistości.
+
+Ostateczna zasada
+Z definicji, kiedy badasz nieznane, nie wiesz, co odkryjesz.
+
+Metaprawo Coopera
+Zwiększenie ilości nowych praw powoduje zwiększenie ilości nowych sposobów ich ominięcia.
+
+PRAWA - COLE'A
+
+Prawo Cole'a
+Cienko poszatkowana kapusta.
+
+Obserwcja Wallace'a
+Wszystko jest w stanie całkowitego rozczochrania.
+
+Pierwsze prawo Hartley'a
+Możesz przyprowadzić konia do wody, ale dopiero jeśli przekonasz go, aby popływał na plecach - coś osiągnąłeś.
+
+Prawo Weayera
+Jeśli kilku reporterów jedzie jedną taksówką, ten, który siedzi z przodu płaci za wszystkich. 
+Wniosek Doley'a:
+Niezależnie od tego ilu reporterów jest w taksówce i niezależnie od tego, kto płaci, każdy wpisuje pełną kwotę na swój rachunek.
+
+Drugie prawo Johnsona
+Jeśli w ciągu kilku miesięcy odbywają się tylko trzy ważne wydarzenia towarzyskie, wszystkie przypadną na jeden wieczór.
+
+Prawo Matscha
+Lepiej mieć koszmarny koniec, niż koszmary bez końca.
+
+Postulat Jacquina na temat demokratycznego rządu
+Życie, wolność, ani własność żadnego człowieka nie są bezpieczne gdy obraduje ciało ustawodawcze.
+
+Obserwacja Fowlera
+Jedyną niedoskonałą rzeczą w naturze jest rasa ludzka.
+
+Prawo innowacji Termana
+Jeśli chcesz, aby drużyna trójboju lekkoatletycznego wygrała skok wzwyż, znajdź jedną osobę, która potrafi skoczyć 7 stóp, a nie 7 osób, które potrafią skoczyć l stopę.
+
+Paradoks Trischmana
+Fajka daje mędrcowi czas do namysłu; głupcowi coś, co może wetknąć w usta.
+
+Komentarz Churchilla o człowieku
+Człowiek czasami potyka się o prawdę, ale w większości przypadków podnosi się i idzie dalej.
+
+Prawo Haldane'a
+Wszechświat jest nie tylko dziwniejszy niż sobie wyobrażamy, jest dziwniejszy niż sobie możemy wyobrazić.
+
+Prawo Kerr-Martina
+1. Zajmując się swoimi własnymi problemami, ludzie są ekstremalnymi konserwatystami.
+2. Zajmując się problemami innych ludzi, są ekstremalnymi liberałami,
+
+Prawo obserwacji
+Nic z bliska nie wygląda tak dobrze jak z daleka. Albo - nic nie wygląda tak dobrze z daleka jak z bliska.
+
+Aksjomat Aquinasa
+Co uchodzi bogom, nie uchodzi krowom.
+
+Mało znane siódme prawo Newtona
+Bezpieczniej jest mieć ptaka w ręku niż nad głową.
+
+Twierdzenie White'a
+Im szybciej i im dokładniej przekażesz złe wiadomości, tym lepiej.
+
+
+Prawo Bucy'ego
+Rozsądny człowiek nic nigdy nie realizuje.
+
+SPIS TREŚCI
+
+PRZEDMOWA
+MURPHOLOGIA
+MURPHOLOGIA STOSOWANA
+PROJEKTOLOGIA
+MASZYNOLOGIA
+NAUKOLOGIA
+HIERARCHOLOGIA
+KOMITETOLOGIA
+KSIĘGOWOŚCIOLOGIA
+EKSPERTOLOGIA
+HUMANOLOGIA
+METAPRAWA
+PRAWA COLE'A
+SPIS TREŚCI
+
+

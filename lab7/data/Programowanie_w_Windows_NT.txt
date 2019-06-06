@@ -1,0 +1,669 @@
+
+
+WYDZIAŁ MATEMATYKI I INFORMATYKI UAM   
+              
+ MODUŁ LABORATORYJNY                                                             NR.      01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Autor:		GRZEGORZ  CZŁONKOWSKI (WMiI UAM)
+
+
+
+Tytuł: 		WPROWADZENIE DO PROGRAMOWANIA W 
+
+ 			WIN 32 API  (Windows NT, Windows 9x).
+
+
+
+
+
+
+
+
+
+Przedmioty:  	SOP 322  oraz  JPR 222, PRP 321, PRP 322 
+
+
+Finansowanie i wykonanie w ramach umowy między Fundacją im. Stefana Batorego a Wydziałem Matematyki i Informatyki UAM (wniosek EC 156/98 i decyzja nr 1020). Kierownik projektu - Doc dr hab. Magdalena Jaroszewska, kierownik podprojektu  Dr Wiesław Kurc.
+
+
+
+POZNAŃ  1999 r.
+
+Spis treści
+
+
+WSTĘP	3
+WIN32s	3
+Windows NT	3
+Windows 95/98	4
+Dostępność funckji Win32 API z poziomu Delphi	4
+WĄTKI	6
+Funkcja CreateThread	6
+Funkcja ResumeThread	7
+Funkcja SuspendThread	8
+Funkcja ExitThread	8
+Funkcja TerminateThread	9
+Funkcja GetThreadPriority	10
+Funkcja SetThreadPriority	11
+Funkcja GetPriorityClass	11
+Funkcja SetPriorityClass	12
+Fragmenty przykładu napisanego w Delphi 3 (Ćwiczenie 1- Wątki)	14
+Ćwiczenie 2-Pliki .	17
+Dla zaawansowanych	19
+
+
+
+WSTĘP
+
+       Skrót API pochodzi od angielskich słów Application Programming Interface, czyli Interfejs Programowania Aplikacji. Jest to zatem zestaw funkcji, które można wywołać we własnej aplikacji windowsowej. Obszary pokryte przez funkcje API to m.in.:
+* Pliki  operacje na plikach
+* Zarządzanie klawiaturą i myszą
+* Obsługiwanie grafiki
+* Zarządzanie pamięcią
+* Wszelkiego rodzaju usługi multimedialne
+* Sieci
+* Drukowanie
+* Procesy i wątki
+* Zasoby
+* Zabezpieczenia systemu
+* Zarządzanie oknami aplikacji i inne.
+
+
+WIN32 API zostało zaimplementowane na czterech platformach:
+1. WIN32s
+2. Windows NT
+3. Windows 95/98
+4. Windows CE
+
+WIN32s 
+Win32s jest najwcześniejszą platformą umożliwiającą uruchamianie 32-bitowych aplikacji windowsowych. Win32s jest jakby nakładką na 16-bitowy Windows 3.x, tłumaczącą 32-bitowe parametry funkcji na 16-bitowe i uruchamiającą odpowiadające im funkcje 16-bitowe (thunking). Widać, że Win32s nie rozszerza możliwości sytemu (poza obsługą wyjątków i ograniczoną implementacją plików odwzorowywanych w pamięci (memory-mapped files)), a większość, a większość 32-bitowych funkcji zostało zaimplementowanych jako tzw. stub functions, czyli funkcje, które nie wykonują żadnych działań, a tylko zwracają błąd. Za przykład może posłużyć funkcja CreateThread  wiadomo, że w 16-bitowy Windows nie obsługuje wątków, zatem funkcja ta po prostu zwraca NULL. Firma Microsoft stworzyła platformę Win32s aby umożliwić programistom pisanie 32-bitowych aplikacji zanim osiągalne będą inne platformy Win32. Chciano, aby w momencie pojawienia się na rynku systemu Windows NT, znajdowały się już w sprzedaży aplikacje, wykorzystujące możliwości tego systemu. W praktyce pomysł ten nie wypalił.
+
+Windows NT 
+Windows NT posiada najwięcej zaimplementowanych funkcji wewnętrznych. Ważną zaletą jest fakt, iż WinNT może pracować na komputerach zbudowanych w oparciu o różne procesory  np.: MIPS R400, DEC Alpha, czy Motorola PowerPC (i inne). Program napisany pod WinNT można łatwo skompilować na dowolną architekturę.
+
+Windows 95/98 
+Windows 95/98 jest 32-bitową platformą dla masowego odbiorcy i długo oczekiwanym następcą 16-bitowego Windows 3.x. Win95 posiada lepszą implementację Win32 API niż jego poprzednik. Ale z drugiej strony  implementacja ta jest okrojona względem platformy Windows NT. Czego m.in. Win95/98 nie posiada:
+  * Funkcje asynchronicznego We/Wy
+  * Funkcje debug
+  * Funkcje rejestrów
+  * Funkcje zabezpieczeń
+  * Funkcje zarządzania zdarzeniami 
+
+Windows CE 
+Windows CE jest to platforma stworzona na potrzeby małych urządzeń liczących (np. palmtopy). Urządzenia te są najczęściej zasilane z baterii, nie maja dysków, wyposażone są w 2?4 MB RAM. Wszystkie te cechy wymagają ograniczenia ilości zajmowanego przez system miejsca. Zaskakujący jest fakt, że Windows CE ma więcej możliwości, niż MS-DOS, czy Windows 3.1  posiada on obsługę wyjątków, bibliotek dynamicznych, rejestr, podzielne szeregowanie wątków (preemptive scheduling).
+
+Reasumując, na każdej z platform  Win32s, WinNT, Win95  zaimplementowane zostały wszystkie funkcje, ale niektóre po prosty zwracają błąd (lub NULL)  nie wykonują zamierzonych działań. Np. w Win95 funkcja CreateRemoteThread nie została w pełni zaimplementowana, ponieważ twórcy Win95 stwierdzili, że nie jest ona zbyt przydatna w tym systemie, a cały czas zajmowałaby pamięć. Jeśli np. system Win95 zainstalowany jest na komputerze wyposażonym w 4 MB RAM, to każdy bajt jest ważny. Twórcy Windows 95 musieli znaleźć kompromis między możliwościami systemu a wydajnością jednostek, na których będzie on zainstalowany.
+
+Dostęp do funkcji systemowych można uzyskać z poziomu różnych kompilatorów przeznaczonych dla środowiska Windows  - m.in. Delphi, Visual C++, C++ Builder, JBuilder.
+W niniejszej pracy skoncentrujemy się na programowaniu w Delphi (wersja 3).
+
+Dostępność funckji Win32 API z poziomu Delphi
+Delphi realizuje dostęp do funkcji sytemowych Windows poprzez odpowiednie moduły. Chcąc skorzystać z danej funkcji API należy znaleźć moduł, w którym zawarty jest jej nagłówek (lub definicja). Pliki, m których zawarte są takie nagłówki, to m. in.:
+* Windows.pas  zawiera najwięcej nagłówków i definicji funkcji; moduł ten jest standardowo dołączany do sekcji Uses plików tworzonych w Delphi,
+* ShellApi.pas  zawiera nagłówki m.in. takich funkcji jak: ShellExecute, ExtractIcon, FindExecutable, SHFileOperation, i wiele innych; nazwę tego i poniższych modułów należy ręcznie umieścić w sekcji Uses,
+* Winsock.pas  zawiera funkcje, typy i stałe związane z obsługą gniazd (m.in. socket, accept, bind, connect, send, inet_addr, inet_ntoa, ntohl, ntohs, htons, htonl)
+* Wininet.pas  zawiera funkcje, typy i prototypy dla Microsoft Windows Internet Extensions (FTP, HTTP, GOPHER,URL, i inne),
+* Winspool.pas  zawiera struktury i funkcje odpowiedzialne za obsługę drukowania
+Inne moduły to m. in. Ole2.pas, Olectl.pas, Nb30.pas, Oledlg.pas, Penwin.pas, Regstr.pas, Shellobj.pas, Winsvc.pas. Nagłówki funkcji API w modułach wskazują bibliotekę DLL, z której ma zostać pobrana definicja funkcji i  nazwę funkcji w tej bibliotece.
+
+ WĄTKI
+System Windows NT jest systemem wielowątkowym. Jeden proces może mieć uruchomionych wiele wątków o zadanych priorytetach. Wątek tworzymy za pomocą funkcji systemowej CreateThread, zawieszamy przy pomocy funkcji SuspendThread, wznawiamy poprze ResumeThread i kończymy wywołując funckję ExitThread lub TerminateThread. Można również zmieniać klasę priorytetów danego procesu. Służy do tego funkcja SetPriorityClass, natomiast przy pomocy funkcji GetPriorityClass można odczytać aktualną wartość klasy procesu. 
+
+Funkcja CreateThread
+
+HANDLE CreateThread(
+
+    LPSECURITY_ATTRIBUTES  lpThreadAttributes,
+       	// adres atrybutów bezpieczeństwa
+    DWORD  dwStackSize,		// początkowa wielkość stosu (B) 
+    LPTHREAD_START_ROUTINE  lpStartAddress,	
+       // adres funkcji wykonania wątku
+    LPVOID  lpParameter,		// argument dla nowego wątku
+    DWORD  dwCreationFlags,	// flagi tworzenia wątku
+    LPDWORD  lpThreadId 	// adres zwróconego identyfikatora wątku
+   );	
+
+Parametry wywołania funkcji to: 
+
+lpThreadAttributes
+Wskaźnik na strukturę SECURITY_ATTRIBUTES określającą atrybuty bezpieczeństwa wątku. Jeśli parametr ma wartość NULL, to wątek zostaje utworzony z domyślnym deksryptorem bezpieczeństwa.
+
+dwStackSize
+Określa rozmiar, w bajtach, stosu dla nowego wątku. Jeśli podana zostanie wartość 0, to stos dla wątku będzie tego samego rozmiaru, co stos dla głównego wątku procesu. Stos jest automatycznie alokowany w przestrzeni adresowej procesu i zwalniany prze zakończenu wątku. Jeśli występuje potrzeba, to wielkość stosu rośnie. Jeśli podana wielkość stosu jest  większa niż osiągalna pamięć, to funkcja nie wykona się poprawnie.
+
+lpStartAddress
+Wskaźnik do funkcji, która ma zostać wykonana przez wątek. Funkcja przyjmuje pojedynczy 32-bitowy argument  i zwraca również 32-bitowy argument.
+
+lpParameter
+Wskaźnik na pojedynczy 32-bitowy argument funkcji wykonywanej przez wątek.
+
+dwCreationFlags
+Określa dodatkowe flagi pomocne przy tworzeniu wątku. Jeśli parametr ma wartość CREATE_SUSPENDED, to wątek tworzony jest w stanie zawieszonym i nie będzie się wykonywał do momentu wywołania funkcji  ResumeThread. Jeśli parametr ma wartość 0, to wątek wywołuje wskazaną funkcję zaraz po utworzeniu.
+
+lpThreadId
+Wskaźnik na 32-bitową zmienną, do której wpisany zostanie identyfikator wątku.
+
+Zwracana wartość
+
+Jeśli funkcja zostanie wykonana poprawnie, to zwraca uchwyt (handle) do nowego wątku.
+Jeśli funkcja nie wykona się poprawnie, to zwracaną wartością jest NULL. Jeśli chcemy otrzymać rozszerzoną informację o błędzie należy wywołać funkcję systemową GetLastError.
+
+Uwagi dotyczące funkcji CreateThread
+Uchwyt do noweo wątku jest tworzony z pełnymi prawami dostępu. Jeśli nie podano żadnego deskryptora bezpieczeństwa, to uchwyt ten może być używany w każdej funkcji. Jeśli deskryptor zostanie wyszczegolniony, to wszelkie próby użycia uchwytu są poprzedzane sprawdzeniem praw dostepu. Wątek zaczyna wykonywanie od funkcji, której adres podany jest w parametrze lpStartAddress. Wartość zwracana przez tę funkcję służy do ukrytego wywołania funkcji ExitThread.
+Wątek jest zawsze tworzony z priorytetem normalnym, tzn o wartości 0 (THREAD_PRIORITY_NORMAL)
+Do uzyskania wartości priorytetu wątku służy funkcja systemowa GetThreadPriority, natomiast do ustawiania wartości priorytetu  - funckja SetThreadPriority.
+Utworzony wątek wykonuje się w przestrzeni adresowej procesu, który go utworzył.
+
+Funkcja ResumeThread
+
+Funkcja powoduje zmniejszenie wartości zawieszeń wątku. Jeśli wartość ta zostaje zmniejszona do zera, to wątek wznawia wykonywanie.
+ 
+DWORD ResumeThread(
+           HANDLE  hThread 	
+       // uchwyt do wątku, którego wykonanie ma zostać wznowione
+     );	
+
+Parametry
+Parametrem (hThread )wywołania funkcji jest uchwyt do wątku, którego wykonanie ma zostac wznowione. Aby funkcja mogła się wykonać, to uchwyt musi posiadać prawo dostępu THREAD_SUSPEND_RESUME.
+
+Zwracana wartość
+Jeśli funkcja wykona się poprawnie, to zwracana jest poprzednia wartość licznika zawieszeń wątku (previous suspend count). Błedne wykonanie funkcji powoduje zwrócenie wartości 0xFFFFFFFF.
+ 
+Uwagi dotyczące funkcji ResumeThread:
+Funkcja sprawdza licznik zawieszeń wątku. Jeśli ma on wartość 0, to wątek nie jest obecnie zawieszony. W przeciwnym przypadku wartość licznika zawieszeń zostaje zmniejszona o 1. Jeśli otrzymana wartość jest równa 0, to wykonanie wątku zostaje wznowione. 
+Jeśli zwrócona zostanie wartość 0, to wątek nie był zawieszony. Jeśli zwrócona zostanie wartość 1, to wątek był zawieszony, ale jego wykonywanie zostało wznowione. Jeśli zwrócona wartość jest większa od 1, to wątek pozostaje nadal zawieszony.
+
+Funkcja SuspendThread
+
+Funkcja powoduje zawieszenie wątku.
+
+DWORD SuspendThread(
+           HANDLE  hThread 	
+       // uchwyt do wątku, który ma zostać zawieszony
+     );	
+
+Parametry
+Parametrem (hThread )wywołania funkcji jest uchwyt do wątku, którego wykonanie ma zostac zawieszone. Aby funkcja mogła się wykonać, to uchwyt musi posiadać prawo dostępu THREAD_SUSPEND_RESUME.
+
+Zwracana wartość
+Jeśli funkcja wykona się poprawnie, to zwracana jest poprzednia wartość licznika zawieszeń wątku (previous suspend count). Błedne wykonanie funkcji powoduje zwrócenie wartości 0xFFFFFFFF.
+
+Uwagi dotyczące funkcji SuspendThread:
+Jeśli funkcja zostanie wykonana prawodłowo, to wskazywany przez uchwyt wątek zostaje zawieszony a licznik zawieszeń zostaje zwiększony o 1.
+Zawieszenie wątku powoduje zatrzymanie wykonywania funkcji wskazanej prze użytkownika.
+Każdy wątek posiada licznik zawieszeń, którego wartość nie może być większa niż określona przez stałą o nazwie MAXIMUM_SUSPEND_COUNT. Jeśli wartość licznika zawieszeń jest większa niż 0, to wątek jest zawieszony, w przeciwnym przypadku nie jest zawieszony i jest możliwy do wykonania. Wywołanie funkcji SuspendThread powoduje zwiększenie licznika zawieszeń wskazywanego przez uchwyt wątku o 1.
+
+Funkcja ExitThread
+
+Funkcja powoduje zakończenie wątku.
+
+VOID ExitThread(
+           DWORD  dwExitCode 	// kod zakończenia tego wątku
+   );	
+
+Parametry
+Parametrem (dwExitCode )wywołania funkcji jest wartość zakończenia wątku, który wywołał tę funkjcę. W celu uzyskania tej wartości należy wywołać funkcję GetExitCodeThread.
+
+Zwracana wartość
+Funkcja nie zwraca żadnej wartości.
+
+Uwagi dotyczące funkcji ExitThread:
+Funkcja ta jest preferowaną metodą wychodzenia z wątku. Wywołanie (jawne lub przez zakończenie funkcji wątku) funkcji powoduje dealokacje stosu wątku i jego zakończenie. Jeśli dany wątek jest ostatnim wątkiem danego procesu, to proces zostaje zakończony. Sygnalizowana jest zmiana stanu wątku. Odblokowywane są wszystkie wątki, które czekały na zakończenie tego wątku. Stan zakończenia wątku zmienia się ze stanu STILL_ACTIVE na wartośc reprezentowaną przez dxExitCode. Kończenie wątku nie powoduje zawsze zwolnienia pamięci zajmowanej przez obiekt wątku. Następuje to dopiero po zwolnieniu ostatniego uchwytu do tego obiektu.
+
+
+Funkcja TerminateThread
+
+Funkcja powoduje zakończenie wątku identyfikowanego przez dany uchwyt.
+
+BOOL TerminateThread(
+           HANDLE  hThread,	// uchwyt do wątku
+           DWORD  dwExitCode 	// wartość kodu wyjścia
+   );	
+
+Parametry
+
+hThread
+Identyfikuje wątek, który ma zostać zakończony. Uchwyt musi mieć prawa dostępu THREAD_TERMINATE.
+
+dwExitCode
+Określa wartość kodu wyjścia dla wątku. Do odczytania wartości kodu wyjścia należy użyć funkcji GetExitCodeThread.
+
+Zwracana wartość
+Poprawne wykonanie funkcji powoduje zwrócenie wartości TRUE, natomiast błędne wykonanie powoduje zwrócenie wartości FALSE. 
+
+Uwagi dotyczące funkcji TerminateThread:
+Funkcja jest używana do wymuszenia zakończenia danego wątku. Wywołanie funkcji powoduje, że docelowy wątek nie ma szans wykonania żadnych operacji użytkownika, jego stos zostaje zwolniony. Funkcji tej należy używać bardzo ostrożnie. Funkcję można wywoływać, jeśli dokładnie wiadomo, co w danym momencie robi wątek i można kontrolować operacje przez niego wykonywane. Co może spowodować wywołanie funkcji:
+* Jeśli wątek jest w sekcji krytycznej, to nie zostanie ona zwolniona.
+* Jeśli wątek wykonywał pewne wywołania kernel32 (jądro), to stan jądra dla jego procesu może nie być spójny.
+* Jeśli wątek zmieniał globalny stan dzielonej biblioteki dynamicznej (DLL), to jest stan może zostać zniszczony, co ma wpływ na działanie biblioteki u wszystkich używających jej użytkowników.
+
+Jedyny sposób, w jaki wątek może zabezpieczyć się przed wywołaniem na jego rzecz funkcji TerminateThread, jest kontrola praw dostepu do jego uchwytu. Uchwyt zwracany przy wywołaniu funkcji CreateThread i CreateProcess posiada prawo TERMINATE_THREAD, więc każdy, kto posiada jeden z tych uchwytów, może wywołać TerminateThread na rzecz tego wątku.
+Jeśli wątek, na rzecz którego wywoływana jest funkcja TerminateThread, jest ostatnim wątekiem danego procesu, to proces kończy działanie.
+Sygnalizowana jest zmiana stanu wątku. Odblokowywane są wszystkie wątki, które czekały na zakończenie tego wątku. Stan zakończenia wątku zmienia się ze stanu STILL_ACTIVE na wartośc reprezentowaną przez dxExitCode. Kończenie wątku nie powoduje zawsze zwolnienia pamięci zajmowanej przez obiekt wątku. Następuje to dopiero po zwolnieniu ostatniego uchwytu do tego obiektu.
+
+
+Funkcja GetThreadPriority
+Funkcja zwraca wartość priorytetu wątku identyfikowanego przez uchwyt.
+
+int GetThreadPriority(
+           		HANDLE  hThread 	// uchwyt do wątku
+   );	
+
+Parametry
+Parametrem (hThread )wywołania funkcji jest uchwyt do wątku, którego priorytet ma zostać odczytany. Aby funkcja mogła się wykonać, to uchwyt musi posiadać prawo dostępu THREAD_QUERY_INFORMATION.
+
+Zwracana wartość
+Jeśli funkcja zostanie wykonana poprawnie, to zwróci wartość odpowiadającą aktualnemu priorytetowi wyszczególnionego wątku.
+Jeśli wystapi błąd wykonania funkcji, to zostanie zwrócona wartość THREAD_PRIORITY_ERROR_RETURN. 
+
+Tabela 1. Możliwe wartośći priorytetów:
+Wartość priorytetu
+Znaczenie
+THREAD_PRIORITY_ABOVE_NORMAL
+Oznacza wartość większą o 1 od normalnej wartości priorytetu
+THREAD_PRIORITY_BELOW_NORMAL
+Oznacza wartość mniejszą o 1 od normalnej wartości priorytetu
+THREAD_PRIORITY_HIGHEST
+Oznacza wartość większą o 2 od normalnej wartości priorytetu
+THREAD_PRIORITY_IDLE
+Oznacza bazową wartość dla jednej z klas priorytetów (1 lub 16)
+THREAD_PRIORITY_LOWEST
+Oznacza wartość mniejszą o 2 od normalnej wartości priorytetu
+THREAD_PRIORITY_NORMAL
+Oznacza normalna wartość priorytetu
+THREAD_PRIORITY_TIME_CRITICAL
+Oznacza bazową wartość dla jednej z klas priorytetów (15 lub 31)
+
+Uwagi dotyczące funkcji GetThreadPriority
+Każdy wątek posiada bazowy poziom priorytetu determinowany wartość priorytetu i klasę priorytetu jego procesu. System operacyjny używa bazowy poziom priorytetu wszystkich wątków w celu wyznaczenia wątku, któremu przydzielony zostanie czas procesora. Wątki są uszeregowane w sposób round-robin (w kółko) na każdym z poziomów priorytetów i szeregowanie wątków na niższych poziomach będzie miało miejsce dopiero wtedy, gdy nie ma wykonywalnych wątków na wyższym poziomie.
+
+Funkcja SetThreadPriority
+Funkcja ustawia wartość priorytetu danego wątku. Wartośc ta razem z klasą priorytetu procesu określa bazowy poziom priorytetu wątku.
+
+ BOOL SetThreadPriority(
+           HANDLE  hThread,	// handle to the thread 
+           int  nPriority 		// thread priority level 
+   );	
+
+Parametry
+
+hThread
+Jest to uchwyt identyfikujący wątek. Uchwyt musi mieć prawa dostępu  THREAD_SET_INFORMATION.
+
+nPriority
+Określa wartość priorytetu dla wątku. Wartość tego może przyjąć jedną z podanych w tabeli 1.
+
+Zwracana wartość
+Poprawne wykonanie funkcji powoduje zwrócenie wartości TRUE, natomiast błędne wykonanie powoduje zwrócenie wartości FALSE. 
+
+Uwagi dotyczące funkcji SetThreadPriority
+Funkcja umożliwia ustawienie bazowego poziomu priorytetu względem klasy priorytetu procesu. Na przykład ustawienie priorytetu THREAD_PRIORITY_HIGHEST dla procesu z klasy IDLE_PRIORITY_CLASS powoduje ustawienie wartości bazowej priorytetu na 6.
+Dla procesów z klasy IDLE_PRIORITY_CLASS, NORMAL_PRIORITY_CLASS, i HIGH_PRIORITY_CLASS system dynamicznie zwiększa bazowy poziom priorytetu jeśli występują zdarzenia ważne dla wątku. Dla procesów z klasy REALTIME_PRIORITY_CLASS nie występuje dynamiczne zwiększanie bazowego poziomu priorytetu.
+Klasy procesów należy używać do rozróżnienia aplikacji czasu krytycznego, aplikacji o normalnych i niskich wymaganiach szeregowania. Wartości priorytetu wątków należy używać do rozróżnienia ważności poszczególnych zadań w danym procesie.
+Manipulowania priorytetami należy dokonywać bardzo ostrożnie. Wątki o bazowym poziomie priorytetu powyżej 11 mogą mieć wpływ na normalne działanie systemu operacyjnego. Używanie klasy REALTIME_PRIORITY_CLASS może spowodować np. zawieszenie myszki lub błędy zarządzaniu pamięcią podręczną.
+
+
+Funkcja GetPriorityClass
+Funkcja ta zwraca wartość klasy priorytetów dla danego procesu. Wartość ta razem z wartościa priorytetu danego wątku określa bazowy poziom priorytetu tego wątku.
+ 
+DWORD GetPriorityClass(
+           HANDLE  hProcess 	// uchwyt do procesu
+   );	
+
+Parmetry
+
+hProcess
+Parametr ten identyfikuje proces. Uchwyt musi mieć prawu dostepu PROCESS_QUERY_INFORMATION. Uchwyt do procesu można uzyskać wywołując bezargumentową funckję GetCurrentProcess()  (zwraca ona uchwyt do procesu)
+
+Zwracana wartość
+Przy pomyslnym wykonaniu, funkcja zwraca wartość klasy pruiorytetów procesu. 
+Jeśli funkcja zwróci 0, to znaczy, że nie wykonała się poprawnie.
+ 
+Tabela 2  Znaczenia wartości klas priorytetów
+Wartość klasy priorytetów
+Znaczenie
+HIGH_PRIORITY_CLASS
+Oznacza klasę procesów, które wykonują krytyczne w czasie zadania, wymagające natychmiastowego wykonania. Procesy z tej klasy szeregowane sa przed procesami klasy normalnej i idle. 
+IDLE_PRIORITY_CLASS
+Oznacza klasę procesów, których wątki wykonują się tylko podczas bezczynności systemu (idle). Szeregowane są na końcu. Przykładem może być Screen Saver.
+NORMAL_PRIORITY_CLASS
+Oznacza normalne procesy bez specjalnych wskazówek przy szeregowaniu
+REALTIME_PRIORITY_CLASS
+Oznacza klasę procesów o najwyższym priorytecie. Wykonywane sa one przed wszystkimi innymi procesami (nawet systemowymi)
+
+Uwagi dotyczące funkcji GetPriorityClass
+Każdy wątek posiada bazowy poziom priorytetu okreslony przez wartość priorytetu wątku i klasę priorytetów procesu. 
+
+Funkcja SetPriorityClass
+Funkcja ustawia wartość klasy priorytetów dla danego procesu. 
+
+BOOL SetPriorityClass(
+           HANDLE  hProcess,		// uchwyt do procesu
+           DWORD  fdwPriority 	// wartość klasy priorytetów 
+   );	
+
+Parametry
+
+hProcess
+Uchwyt identyfikujący proces. Musi on posiadać prawo dostępu PROCESS_SET_INFORMATION.
+
+fdwPriority
+Określa wartość klasy priorytetów. Może przyjąć jedną z wartości przedstawionych w Tabeli 2
+
+Zwracana wartość
+Jeśli funkcja wykona się prawidłowo, to zwróci wartość TRUE, w przeciwnym przypadku zwróci FALSE. 
+
+Tabela 3  Bazowe poziomy priorytetów dla danych klas priorytetów
+Klasa
+Priorytet bazowy
+HIGH_PRIORITY_CLASS
+13
+IDLE_PRIORITY_CLASS
+4
+NORMAL_PRIORITY_CLASS
+9 jeśli okno jest aktywne; 7 jeśli okno jest w tle
+REALTIME_PRIORITY_CLASS
+24
+
+Początkowa wartość klasy priorytetów może zostać wyszczególniona w wywołaniu funkcji CreateProcess . Domyślnie wartością tą jest NORMAL_PRIORITY_CLASS, chyba że proces macierzysty jest z klasy IDLE_PRIORITY_CLASS. W takim przypadku klasa priorytetów ma wartość IDLE_PRIORITY_CLASS.
+Tabela 4 pokazuje bazowe poziomy priorytetów dla każdej kombinacji klasy priorytetów procesu i wartość priorytetu wątku.
+
+Tabela 4 
+Poziom bazowy
+Klasa priorytetów
+Priorytet wątku
+1
+Idle, normal lub high
+THREAD_PRIORITY_IDLE
+2
+Idle
+THREAD_PRIORITY_LOWEST
+3
+Idle
+THREAD_PRIORITY_BELOW_NORMAL
+4
+Idle
+THREAD_PRIORITY_NORMAL
+5
+Normal w tle
+Idle
+THREAD_PRIORITY_LOWEST
+THREAD_PRIORITY_ABOVE_NORMAL
+6
+Normal w tle
+Idle
+THREAD_PRIORITY_BELOW_NORMAL
+THREAD_PRIORITY_HIGHEST
+7
+Normal aktywna
+Normal w tle
+THREAD_PRIORITY_LOWEST
+THREAD_PRIORITY_NORMAL
+8
+Normal aktywna
+Normal w tle
+THREAD_PRIORITY_BELOW_NORMAL
+THREAD_PRIORITY_ABOVE_NORMAL
+9
+Normal aktywna
+Normal w tle
+THREAD_PRIORITY_NORMAL
+THREAD_PRIORITY_HIGHEST
+10
+Normal aktywna
+THREAD_PRIORITY_ABOVE_NORMAL
+11
+High
+Normal aktywna
+THREAD_PRIORITY_LOWEST
+THREAD_PRIORITY_HIGHEST
+12
+High
+THREAD_PRIORITY_BELOW_NORMAL
+13
+High
+THREAD_PRIORITY_NORMAL
+14
+High
+THREAD_PRIORITY_ABOVE_NORMAL
+15
+Idle, normal, high
+High
+THREAD_PRIORITY_TIME_CRITICAL
+THREAD_PRIORITY_HIGHEST
+16
+Real-time
+THREAD_PRIORITY_IDLE
+22
+Real-time
+THREAD_PRIORITY_LOWEST
+23
+Real-time
+THREAD_PRIORITY_BELOW_NORMAL
+24
+Real-time
+THREAD_PRIORITY_NORMAL
+25
+Real-time
+THREAD_PRIORITY_ABOVE_NORMAL
+26
+Real-time
+THREAD_PRIORITY_HIGHEST
+31
+Real-time
+THREAD_PRIORITY_TIME_CRITICAL
+
+
+
+
+Uwaga:
+Jeśli chodzi o wykorzystywanie wątków z poziomu Delphi, to należy mieć na uwadze fakt, że wszelkie operacje wykonywane przez różne wątki na komponentach wizualnych (VCL) należy synchronizować. Dlatego też lepiej jest wykorzystywać oferowane przez Delphi obiekty typu TThread, które mają zaimplementowaną funkcję synchronizacji. Przykładowo, jeśli chcielibyśmy z różnych wątków zmieniać własność Caption obiektu Label1, to należałoby to wykonać w taki sposób:
+
+       Synchronize(UpdateCaption);
+
+gdzie procedura UpdateCaption powinna wyglądać następująco:
+
+       procedure Watek1.UpdateCaption;
+           begin
+             Label1.Caption := 'Zmienione przez Watek1';
+           end; 
+
+Opisany poniżej framgent nie zawiera funkcji synchronizacji, ponieważ nie wykorzystujemy obiektów typu TThread, a każdy wątek zmienia wartość innych komponentów. 
+
+
+
+Fragmenty przykładu napisanego w Delphi 3 (Ćwiczenie 1- Wątki)
+
+Var
+dwThreadId, dwThrdParam:DWORD;
+hThread:THANDLE ;
+PrevSuspendCount:DWORD;
+
+function ThreadFunc(lpdwParam:LPDWORD):dword;  //funkcja wykonywana przez wątek
+var
+i:integer;
+begin
+for i:=0 to 100000 do
+  form1.Label5.Caption:=inttostr(i);
+
+ThreadFunc:=0; //zwracana wartość  wykorzystywana przy kończeniu wątku
+end;
+{KOMENTARZ DO POWYŻSZEJ FUNKCJI
+Jest to funkcja, która zostanie wykonana przez wątek utworzony w poniższej procedurze.
+Działanie funkcji: odliczanie od 0 do 100000 wyświetlając za każdym razem wartość i w etykiecie Label5 an formularzu głównym (Form1). Ciało tej funkcji należy umieścić w sekcji implementation modułu programu (bez nagłówków w sekcji interface)}
+
+procedure TForm1.Button1Click(Sender: TObject);  //tworzenie wątku
+var
+priority:integer;
+begin
+dwThrdParam:=1;
+    hThread:= CreateThread(@NULL,0,@ThreadFunc,@dwThrdParam,CREATE_SUSPENDED,dwThreadId);
+
+    if (hThread = NULL) then
+        MessageDlg('Blad utworzenia wątku.',mterror,[mbOK],100)
+    else
+        label1.caption:=
+       'Utworzono wątek nr: '+inttostr(hThread)+', threadID='+inttostr(dwThreadId);
+end;
+{KOMENTARZ DO POWYŻSZEJ PROCEDURY
+Procedura tworzy wątek. Wartość zwracana przez funkcję CreateThread - Uchwyt do wątku  przypisywany jest zmiennej hThread.
+Parametry wywołania funkcji: 
+* @NULL  adres wartości NULL, tzn. przyjmujemy domyślne atrybuty bezpieczeństwa,
+* @ThreadFunc  adres funkcji, od której utworzony wątek rozpocznie wykonywanie
+* @dwThrdParam  adres parametru przekazywanego do funkcji ThreadFunc
+* CREATE_SUSPENDED  stała, oznaczająca, że tworzony wątek będzie zawieszony
+* DwThreadId  zmiennej tej zostanie przypisany identyfikator wątku}
+
+procedure TForm1.Button2Click(Sender: TObject);  //wznawianie wykonywania wątku
+begin
+PrevSuspendCount:=ResumeThread(hThread);
+
+label11.Caption:='Poprzednia wartość Licznika zawieszeń: '+inttostr(PrevSuspendCount);
+end;
+ {KOMENTARZ  wywoływana funkcja powoduje wznowienie wątku identyfikowanego przez uchwyt hThread ;wiadomo o tej funkcji, że zwraca poprzednią wartość licznika zawieszeń. Funkcja inttostr odpowiedzialna jest za konwersję wartości całkowitej integer do wartości typu string.}
+
+procedure TForm1.Button3Click(Sender: TObject);  //kończenie wątku
+begin
+     TerminateThread(hThread,1);
+     closehandle(hThread);
+end;
+{KOMENTARZ  pierwsza wywoływana funkcja powoduje zakończenie wątku identyfikowanego przez uchwyt hThread z kodem wyjścia 1. Druga funkcja odpowiedzialna jest za usunięcie z pamięci obiektu identyfikowanego przez uchwyt hThread}
+
+procedure TForm1.Button5Click(Sender: TObject);  //zawieszanie wykonywania wątku
+begin
+PrevSuspendCount:=SuspendThread(hThread);
+
+label11.Caption:='Poprzednia wartość Licznika zawieszeń: '+inttostr(PrevSuspendCount);
+end;
+  {KOMENTARZ  wywoływana funkcja powoduje zawieszenie wątku identyfikowanego przez uchwyt hThread ;wiadomo o tej funkcji, że zwraca poprzednią wartość licznika zawieszeń.}
+
+Ćwiczenie 2-Pliki  operacje na plikach (rozmiar pliku, atrybuty, ścieżka dostępu, kopiowanie, usuwanie), informacje o dyskach (ilość wolnego miejsca, informacje o strukturze dysku), inne informacje przydatne przy programowaniu w środowisku Windows.
+
+
+procedure TForm1.flb1Click(Sender: TObject);
+var
+fh:integer; //uchwyt do pliku
+begin
+if flb1.FileName<>'' then
+  begin
+    groupbox2.Enabled:=true;
+
+    fh:=FileOpen(flb1.FileName,OF_READ);
+    if fh=HFILE_ERROR then MessageDlg('Błąd otwarcia pliku '+flb1.filename,mtError, 
+       [mbOK],100)
+    else
+      begin
+        label14.Caption:=ExtractFileName(flb1.FileName);
+        label15.Caption:=ExtractFilePath(flb1.FileName);
+        label16.Caption:=inttostr(GetFileSize(fh,@null))+' B 
+       ('+floattostrf(round(10*GetFileSize(fh,@null)/1024)/10, ffgeneral,7,1)+' KB)';
+        if _lclose(fh)=HFILE_ERROR then MessageDlg('Błąd zamknięcia pliku '+ 
+       flb1.Filename, mtError, [mbOK],100);
+      end;
+    atrybuty:=GetFileAttributes(Pchar(flb1.filename));
+`//odczytanie atrybutów pliku
+    checkbox1.Checked:=(atrybuty and 
+       FILE_ATTRIBUTE_READONLY)=FILE_ATTRIBUTE_READONLY;
+    checkbox2.Checked:=(atrybuty and 
+       FILE_ATTRIBUTE_ARCHIVE)=FILE_ATTRIBUTE_ARCHIVE;
+    checkbox3.Checked:=(atrybuty and 
+       FILE_ATTRIBUTE_HIDDEN)=FILE_ATTRIBUTE_HIDDEN;
+    checkbox4.Checked:=(atrybuty and 
+       FILE_ATTRIBUTE_SYSTEM)=FILE_ATTRIBUTE_SYSTEM;
+    pb1.Repaint;
+  end
+else
+  begin
+    label14.Caption:='';
+    label15.Caption:='';
+    label16.Caption:='';
+  end;
+end;
+{KOMENTARZ  powyżej znajduje się ciało procedury, która jest wywoływana po wystąpieniu zdarzenia onClick obiektu FileListBox (o nazwie flb1). Następuje próba przypisania plikowi uchwytu (fh), który potrzebny będzie do odczytania rozmiaru pliku. Pozostałe informacje o pliku (nazwa pliku, ścieżka dostępu, atrybuty) można uzyskać na podstawie nazwy pliku, pobranej z właściwości FileName obiektu flb1.}
+
+procedure TForm1.FormShow(Sender: TObject);
+var
+  Buffer:array[0..MAX_PATH-1] of Char;
+  result:string;
+begin
+if flb1.FileName='' then groupBox2.Enabled:=false
+                    else groupBox2.Enabled:=true;
+
+SetString(Result, Buffer, GetCurrentDirectory(SizeOf(Buffer), Buffer));
+label18.caption:=Result;
+SetString(Result, Buffer,GetWindowsDirectory(buffer,sizeOf(buffer)));
+label20.Caption:=Result;
+SetString(Result, Buffer,GetSystemDirectory(buffer,sizeOf(buffer)));
+label22.Caption:=Result;
+SetString(Result, Buffer,GetTempPath(SizeOf(Buffer), Buffer));
+label24.Caption:=Result;
+end;
+{KOMENTARZ  powyżej znajduje się ciało procedury, wywoływanej przy pokazywaniu okna głównego (zdarzenie onShow). Pobierane są od systemu następujące informacje: ścieżka do katalogu bieżącego, ścieżka do katalogu systemowy Windows, ścieżka do katalogu SYSTEM, ścieżka do katalogu tymczasowego. Funkcja SetString powoduje przypisanie zmiennej Result n znaków, począwszy od znaku wskazywanego przez wartość drugiego argumentu wywołania funckji. Ilość znaków (n) określana jest przez trzeci argument funkcji. Każda z czterech powyższych funkcji (GetCurrentDirectory, GetWindowsDirectory, GetSystemDirectory i GetTempPath) zwraca ilość znaków, które zostały wpisane do zmiennej Buffer.}
+
+procedure TForm1.DriveComboBox1Change(Sender: TObject);
+var
+a,b,c,d:integer;
+begin
+if GetDiskFreeSpace(pchar(drivecombobox1.Drive+':\'),a,b,c,d) then
+  begin
+    groupbox3.Caption:='Informacje o dysku "'+drivecombobox1.drive+':"';
+    label9.Caption:=inttostr(a);
+    label10.Caption:=inttostr(b);
+    label11.Caption:=inttostr(c);
+    label12.Caption:=inttostr(d);
+    label13.Caption:=inttostr(a*b*c)+
+       ' B ('+floattostrf(round(((a*b*10)/1024)*(c/1024))/10,ffGeneral,5,1)+' MB)';
+  end;
+ 
+end;
+{KOMENTARZ  powyżej znajduje się ciało procedury, wywoływanej przy zmianie tekstu wyświetlanego w DriveComboBox1 (zdarzenie onChange). Kluczowe jest tutaj wywołanie funkcji GetDiskFreeSpace, która odczytuje dla danego dysku (pierwszy argument) następujące informacje: ilość sektorów na kluster (a), ilość bajtów w sektorze(b), ilość wolnych klustrów(b), ilość wszystkich klustrów. Mnożąc wartości a, b i c otrzymamy ilość wolnych bajtów. Ilość wolnego miejsca jest również wyświetlana w MB z dokładnością do 1/10 MB. Odpowiada za to fragment floattostrf(round(((a*b*10)/1024)*(c/1024))/10,ffGeneral,5,1)}
+
+procedure TForm1.UsunClick(Sender: TObject);
+begin
+if flb1.FileName<>'' 
+then
+  if MessageDlg('Czy chcesz usunąć plik '+flb1.fileName+' ?',mtConfirmation, 
+       [mbYes,mbNo],100)=mrYes 
+  then
+     if not DeleteFile(pchar(flb1.FileName)) then 
+       MessageDlg('Nie udało się usunąć pliku '+flb1.filename+' !',mtError,[mbOK],100);
+end;
+{KOMENTARZ  powyższy fragment kodu odpowiedzialny jest za usuwanie pliku, którego nazwa ukryta jest we własności FileName obiektu flb11 (FileListBox).}
+
+procedure TForm1.CheckBox1Click(Sender: TObject);
+begin
+if checkbox1.checked then atrybuty:=atrybuty or FILE_ATTRIBUTE_READONLY
+                     else atrybuty:=atrybuty and not FILE_ATTRIBUTE_READONLY;
+SetFileAttributes(pchar(flb1.filename),atrybuty);
+flb1.SetFocus;
+end;
+{KOMENTARZ  powyższa procedura odpowiada za ustawienie atrybutu Tylko-Do-Odczytu (ReadOnly) zgodnie ze stanem pola CheckBox1. Podobne procedury należy napisać dla pozostałych atrybutów.}
+
+
+Dla zaawansowanych 
+Przykłady programowania pod Windows w języku C. Proszę przeanalizować przykłady:
+* DocStats
+* SysInfo.
+
+
+
+2
+		 
+
+
+
+
