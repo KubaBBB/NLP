@@ -10,7 +10,7 @@ import operator
 import time
 
 path = 'C:/Users/BOLSON-PC/Desktop/studia/IT/PJN/NLP/lab7/data'
-authors = ['Szklarski', 'Dukaj', 'MacLean', 'Norton', 'McCaffrey', 'Bulyczow', 'Scott', 'Gibson']
+authors = ['Szklarski', 'Dukaj', 'MacLean', 'Sapkowski', 'McCaffrey', 'Bulyczow', 'Pilipiuk', 'Gibson']
 fileToCreateDict = 'odm.txt'
 
 
@@ -32,7 +32,7 @@ def to_basic_form(matchobj):
     else:
         return None
 
-def read_text_for_each_author(path):
+def read_text_and_preprocess(path):
     text_per_author = defaultdict(list)
     for file in os.listdir(path):
         for author in authors:
@@ -43,8 +43,7 @@ def read_text_for_each_author(path):
                     pre_text = re.sub(r'#\d+', '##', text)
                     pre_text = re.sub(r'\n', ' ', pre_text)
                     pre_text = re.sub(
-                        r'[§$#¨|\^\\,.\-\'\"()?:;+\/\d+&`!\[\]@<>%*~{}=\x9a\x96\x91\x84\x8c\x93\x9c\x9f\x92\x80\x94\x95°\x97]',
-                        '', pre_text)
+                        r'[§$#¨|\^\\,.\-\'\"()?:;+\/\d+&`!\[\]@<>%*~{}=\x9a\x96\x91\x84\x8c\x93\x9c\x9f\x92\x80\x86\x94\x95°\x97]','', pre_text)
                     pre_text = re.sub(r'   ', '  ', pre_text)
                     pre_text = re.sub(r'  ', ' ', pre_text)
                     text_per_author[author].append(pre_text)
@@ -77,8 +76,7 @@ def get_markov_models_dict(texts_per_author_basic_forms):
         for i in range(length_of_concatenated_texts):
             if i == length_of_concatenated_texts - 1:
                 break;
-            markov_models[author][(words_indices[concatenated_texts[i]], words_indices[concatenated_texts[i + 1]])] = (
-                    1 / words_counts[concatenated_texts[i]])
+            markov_models[author][(word_counter[concatenated_texts[i]], word_counter[concatenated_texts[i + 1]])] = (1/words_counts[concatenated_texts[i]])
     return markov_models
 
 def calculate_scores(texts_per_author_basic_forms, words_indices ):
@@ -96,34 +94,27 @@ def calculate_scores(texts_per_author_basic_forms, words_indices ):
             for i in range(length_of_chosen_book):
                 if i == length_of_chosen_book - 1:
                     break;
-                chosen_book_markov_model[(words_indices[chosen_book[i]], words_indices[chosen_book[i + 1]])] = (
-                        1 / words_counts[chosen_book[i]])
+                chosen_book_markov_model[(words_indices[chosen_book[i]], words_indices[chosen_book[i + 1]])] = (1/words_counts[chosen_book[i]])
             scores = defaultdict(int)
             for author in markov_models:
                 indices_to_compare = set(markov_models[author]) | set(chosen_book_markov_model)
                 for ind in indices_to_compare:
                     scores[author] += abs(chosen_book_markov_model[ind] - markov_models[author][ind])
             books_list.append(scores)
-            print("Chosen book's real author: " + real_author)
-            print("Differences in writing style:")
-
-            for a in scores:
-                print(a + ' <- ' + str(scores[a]))
-            print('')
         all_scores[real_author] = books_list
     return all_scores
 
 def calculate_metrics(all_scores):
     for real_author in all_scores:
-        good = 0
-        alls = 0
+        correct = 0
+        all_scores = 0
+        print('Skuteczność: ')
         for book in all_scores[real_author]:
             pred_author = min(book.items(), key=operator.itemgetter(1))[0]
-            #         print('real author: ' + ra + '   pred author:' + pred_author)
-            alls += 1
+            all_scores += 1
             if pred_author == real_author:
-                good += 1
-        print('Accuracy for ' + real_author + ' books: ' + str(good / alls))
+                correct += 1
+        print('Prawdziwy autor: ' + real_author + ' books: ' + str(correct / all_scores))
 
 
 if __name__ == '__main__':
@@ -131,20 +122,17 @@ if __name__ == '__main__':
 
     dictionary = create_dictionary(fullpath=os.path.join(path, fileToCreateDict))
 
-    text_per_author = read_text_for_each_author(path)
+    text_per_author = read_text_and_preprocess(path)
     texts_per_author_basic_forms = get_text_per_author_with_basic_forms(text_per_author, re.compile('\w+'))
-
     all_texts = get_all_texts(texts_per_author_basic_forms)
-
     cv = CountVectorizer(token_pattern='(?u)\\b\\w+\\b')
-
     cv_freq_matrix = cv.fit_transform(all_texts)
     distinct_words = cv.get_feature_names()
     number_of_distinct_words = cv_freq_matrix.shape[1]
-    words_indices = dict(zip(distinct_words, range(len(distinct_words))))
+    word_counter = dict(zip(distinct_words, range(len(distinct_words))))
 
     markov_models = get_markov_models_dict(texts_per_author_basic_forms)
-    all_scores = calculate_scores(texts_per_author_basic_forms, words_indices )
+    all_scores = calculate_scores(texts_per_author_basic_forms, word_counter)
 
     calculate_metrics(all_scores)
 
